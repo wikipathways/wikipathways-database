@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Lipoic acid metabolism" Organism="Mycobacterium tuberculosis" >
+  <Comment Source="WikiPathways-description">Source: [http://www.genome.jp/kegg-bin/show_pathway?mtu00785 KEGG Pathways].
+The lipoic acid metabolism is a subcategory of the "Metabolism of cofactors and vitamins".
+The salvage pathway is not understood for Mycobacterium tuberculosis, and therefore only the biosynthesis is described here.</Comment>
+  <Comment Source="WikiPathways-category">Metabolic Process</Comment>
+  <BiopaxRef>f1d</BiopaxRef>
+  <Attribute Key="ConversionDate" Value="20100629" />
+  <Attribute Key="KeggId" Value="path:mtu00785" />
+  <Graphics BoardWidth="645.0" BoardHeight="583.0" />
+  <DataNode TextLabel="Fatty acid biosynthesis" GraphId="c0807" Type="Pathway">
+    <Graphics CenterX="149.25" CenterY="125.0" Width="171.5" Height="64.5" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP1647" />
+  </DataNode>
+  <DataNode TextLabel="Protein N6-(octanoyl)lysine" GraphId="c6305" Type="Metabolite">
+    <Graphics CenterX="318.5" CenterY="351.0" Width="152.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="KEGG Compound" ID="C16236" />
+  </DataNode>
+  <DataNode TextLabel="Protein N6-(lipoyl)lysine" GraphId="c7323" Type="Metabolite">
+    <Graphics CenterX="318.5" CenterY="474.0" Width="141.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="KEGG Compound" ID="C16237" />
+  </DataNode>
+  <DataNode TextLabel="lipA" GraphId="e0be4" Type="GeneProduct">
+    <Comment Source="KeggConverter">Original kegg element: gene;1;mtu:Rv2218</Comment>
+    <Graphics CenterX="232.0" CenterY="266.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="TubercuList" ID="Rv2218" />
+  </DataNode>
+  <DataNode TextLabel="Lipoyl-[acp]" GraphId="e3560" Type="Metabolite">
+    <Graphics CenterX="149.0" CenterY="351.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="KEGG Compound" ID="C16239" />
+  </DataNode>
+  <DataNode TextLabel="lipB" GraphId="ef505" Type="GeneProduct">
+    <Comment Source="KeggConverter">Original kegg element: gene;8;mtu:Rv2217</Comment>
+    <Graphics CenterX="434.0" CenterY="274.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="2.3.1.181" />
+  </DataNode>
+  <DataNode TextLabel="Octanoyl-[acp]" GraphId="f0d17" Type="Metabolite">
+    <Graphics CenterX="149.0" CenterY="208.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="KEGG Compound" ID="C05752" />
+  </DataNode>
+  <Interaction GraphId="aa0f2">
+    <Comment Source="KeggConverter">rn:R07769</Comment>
+    <Graphics ConnectorType="Elbow" ZOrder="0" LineThickness="1.0">
+      <Point X="149.0" Y="361.0" GraphRef="e3560" RelX="0.0" RelY="1.0" />
+      <Point X="248.0" Y="474.0" GraphRef="c7323" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.2719841972617668" Shape="None" GraphId="e8205" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e9ca2">
+    <Comment Source="KeggConverter">rn:R07767</Comment>
+    <Graphics ZOrder="0" LineThickness="1.0">
+      <Point X="318.5" Y="361.0" GraphRef="c6305" RelX="0.0" RelY="1.0" />
+      <Point X="318.5" Y="464.0" GraphRef="c7323" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="e75cd" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c5a22">
+    <Comment Source="KeggConverter">rn:R07766</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="394.0" Y="274.0" GraphRef="ef505" RelX="-1.0" RelY="0.0" />
+      <Point X="318.5" Y="274.3806818181818" GraphRef="f7394" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id11fa1c85">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="149.25" Y="157.25" GraphRef="c0807" RelX="0.0" RelY="1.0" />
+      <Point X="149.0" Y="198.0" GraphRef="f0d17" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id40439c75">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="283.25" Y="484.0" GraphRef="c7323" RelX="-0.5" RelY="1.0" />
+      <Point X="166.5" Y="532.0" GraphRef="c2f91" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id413f0ebb">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="434.0" Y="284.0" GraphRef="ef505" RelX="0.0" RelY="1.0" />
+      <Point X="149.0" Y="418.66064981949455" GraphRef="e8205" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4b1dd2d6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="149.0" Y="218.0" GraphRef="f0d17" RelX="0.0" RelY="1.0" />
+      <Point X="149.0" Y="341.0" GraphRef="e3560" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="df96b" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7f6714d9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="192.0" Y="266.0" GraphRef="e0be4" RelX="-1.0" RelY="0.0" />
+      <Point X="149.0" Y="267.2" GraphRef="df96b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida83c9cd5">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="189.0" Y="208.0" GraphRef="f0d17" RelX="1.0" RelY="0.0" />
+      <Point X="318.5" Y="341.0" GraphRef="c6305" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.7462121212121212" Shape="None" GraphId="f7394" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida8fd0bee">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="232.0" Y="276.0" GraphRef="e0be4" RelX="0.0" RelY="1.0" />
+      <Point X="232.0" Y="393.0" />
+      <Point X="232.0" Y="397.6" />
+      <Point X="318.5" Y="402.2" GraphRef="e75cd" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cbfcc">
+    <Graphics ZOrder="32769" LineStyle="Broken" LineThickness="1.0">
+      <Point X="353.75" Y="484.0" />
+      <Point X="460.5" Y="533.0" GraphRef="a0dd4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="Glycene cleavage system (H protein)" GraphId="a0dd4">
+    <Graphics CenterX="460.5" CenterY="543.0" Width="309.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Oxo-acid dehydrogenaase complexes (E2 subunit)" GraphId="c2f91">
+    <Graphics CenterX="166.5" CenterY="542.0" Width="318.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lipoic acid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001063</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid biosynthetic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000029</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000058</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f1d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14700636</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assembly of the covalent linkage between lipoic acid and its cognate enzymes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chem Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhao X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miller JR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marletta MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cronan JE</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

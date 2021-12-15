@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Ophthalmate biosynthesis in hepatocytes" Version="20181220" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway visualises the mechanism of ophthalmate biosynthesis in hepatocytes. GSH can inhibits GCC; however when the cell is facing oxidative stress, GSH is consumed, and therefore activating GCS. This enhances the biosynthesis of ophthalmate, which is transported out of the cell over the hepatocellular membrane via MRP transporters. </Comment>
+  <BiopaxRef>a60</BiopaxRef>
+  <Graphics BoardWidth="422.0027563395809" BoardHeight="442.36879823594273" />
+  <DataNode TextLabel="MRP-transporter" GraphId="ab6da" Type="Protein">
+    <Graphics CenterX="295.3776185226021" CenterY="337.37596471885325" Width="112.25468577728759" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Cys" GraphId="c56d9" Type="Metabolite">
+    <Graphics CenterX="137.0" CenterY="91.0" Width="98.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q186474" />
+  </DataNode>
+  <DataNode TextLabel="GCS" GraphId="d4226" Type="Protein">
+    <Comment>aka Glutamate Cysteine Ligase (GCL) (EC 6.3.2.2), previously known as gamma-glutamylcysteine synthetase (GCS)</Comment>
+    <Graphics CenterX="216.0" CenterY="132.10253583241456" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="6.3.2.2" />
+  </DataNode>
+  <DataNode TextLabel="gamma-Glu-Cys" GraphId="a9161" Type="Metabolite">
+    <Graphics CenterX="137.0" CenterY="186.0" Width="98.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q288236" />
+  </DataNode>
+  <DataNode TextLabel="GSH" GraphId="b3e6b" Type="Metabolite">
+    <Comment>aka glutathione</Comment>
+    <Graphics CenterX="137.0" CenterY="273.0" Width="98.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q116907" />
+  </DataNode>
+  <DataNode TextLabel="2AB" GraphId="bdbde" Type="Metabolite">
+    <Comment>aka 2-aminobutyrate</Comment>
+    <Graphics CenterX="295.0" CenterY="91.0" Width="98.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q27104317" />
+  </DataNode>
+  <DataNode TextLabel="gamma-Glu-2AB" GraphId="a7f90" Type="Metabolite">
+    <Comment>aka gamma-Glutamyl-2-aminobutyrate</Comment>
+    <Graphics CenterX="295.0" CenterY="186.0" Width="98.0" Height="25.0" ZOrder="32772" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="78437958" />
+  </DataNode>
+  <DataNode TextLabel="ophthalmate" GraphId="f3452" Type="Metabolite">
+    <Comment>aka ophthalmic acid</Comment>
+    <Graphics CenterX="295.0" CenterY="273.0" Width="98.0" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="TTD Drug" ID="Q7098084" />
+  </DataNode>
+  <DataNode TextLabel="GS" GraphId="ff2fb" Type="Protein">
+    <Comment>aka Glutathione synthetase (GSS)</Comment>
+    <Graphics CenterX="216.0" CenterY="223.0" Width="90.0" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="6.3.2.3" />
+  </DataNode>
+  <DataNode TextLabel="ophthalmate" GraphId="aefde" Type="Metabolite">
+    <Comment>aka ophthalmic acid</Comment>
+    <Graphics CenterX="295.07717750826896" CenterY="399.86879823594273" Width="98.0" Height="25.0" ZOrder="32780" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q7098084" />
+  </DataNode>
+  <Interaction GraphId="id90fdc074">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="137.0" Y="198.5" GraphRef="a9161" RelX="0.0" RelY="1.0" />
+      <Point X="137.0" Y="260.5" GraphRef="b3e6b" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="a8b51" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida18834">
+    <Comment>TRANSPORT</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="295.0" Y="285.5" GraphRef="f3452" RelX="0.0" RelY="1.0" />
+      <Point X="295.3776185226021" Y="324.87596471885325" GraphRef="ab6da" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida5e3974f">
+    <BiopaxRef>e89</BiopaxRef>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="261.0" Y="132.10253583241456" GraphRef="d4226" RelX="1.0" RelY="0.0" />
+      <Point X="295.0" Y="131.5" GraphRef="d3d70" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idfa5c8d63">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="88.0" Y="273.0" GraphRef="b3e6b" RelX="-1.0" RelY="0.0" />
+      <Point X="68.0" Y="163.0" />
+      <Point X="142.0" Y="53.0" />
+      <Point X="216.0" Y="119.60253583241456" GraphRef="d4226" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idfaecfa06">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="137.0" Y="103.5" GraphRef="c56d9" RelX="0.0" RelY="1.0" />
+      <Point X="137.0" Y="173.5" GraphRef="a9161" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="f2262" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a6ed8">
+    <BiopaxRef>e89</BiopaxRef>
+    <BiopaxRef>bae</BiopaxRef>
+    <Graphics ZOrder="32774" LineThickness="1.0">
+      <Point X="295.0" Y="198.5" GraphRef="a7f90" RelX="0.0" RelY="1.0" />
+      <Point X="295.0" Y="260.5" GraphRef="f3452" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="b8e07" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f3a4b">
+    <BiopaxRef>e89</BiopaxRef>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics ZOrder="32775" LineStyle="Broken" LineThickness="1.0">
+      <Point X="295.0" Y="103.5" GraphRef="bdbde" RelX="0.0" RelY="1.0" />
+      <Point X="295.0" Y="173.5" GraphRef="a7f90" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="d3d70" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="eca69">
+    <Graphics ZOrder="32777" LineThickness="1.0">
+      <Point X="171.0" Y="132.10253583241456" GraphRef="d4226" RelX="-1.0" RelY="0.0" />
+      <Point X="137.0" Y="131.5" GraphRef="f2262" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cd9c8">
+    <BiopaxRef>e89</BiopaxRef>
+    <BiopaxRef>bae</BiopaxRef>
+    <Graphics ZOrder="32778" LineThickness="1.0">
+      <Point X="261.0" Y="223.0" GraphRef="ff2fb" RelX="1.0" RelY="0.0" />
+      <Point X="295.0" Y="223.3" GraphRef="b8e07" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="caee3">
+    <Graphics ZOrder="32779" LineThickness="1.0">
+      <Point X="171.0" Y="223.0" GraphRef="ff2fb" RelX="-1.0" RelY="0.0" />
+      <Point X="137.0" Y="223.3" GraphRef="a8b51" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="acb7e">
+    <Comment>TRANSPORT</Comment>
+    <Graphics ZOrder="32781" LineThickness="1.0">
+      <Point X="295.3776185226021" Y="349.87596471885325" GraphRef="ab6da" RelX="0.0" RelY="1.0" />
+      <Point X="295.07717750826896" Y="387.36879823594273" GraphRef="aefde" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Shape TextLabel=" hepatocyte" GraphId="e3c96">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="215.84702315325242" CenterY="189.93743109151046" Width="352.311466372657" Height="293.8770672546858" ZOrder="16384" FontSize="12" Valign="Bottom" Align="Left" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e89">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">637852</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synthesis of ophthalmic acid in liver and kidney in vivo.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1978</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlowski M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilk S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glutathione metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000134</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bae">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">447639</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glutathione synthetase. Purification from rat kidney and mapping of the substrate binding sites.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1979</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oppenheimer L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wellner VP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Griffith OW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meister A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000182</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a60">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16608839</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Differential metabolomics reveals ophthalmic acid as an oxidative stress biomarker indicating hepatic glutathione consumption.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soga T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baran R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suematsu M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ueno Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikeda S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sakurakawa T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kakazu Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ishikawa T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nishioka T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomita M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c74">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2895925</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On the active site thiol of gamma-glutamylcysteine synthetase: relationships to catalysis, inhibition, and regulation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang CS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore WR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meister A</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

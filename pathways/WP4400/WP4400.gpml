@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="FABP4 in ovarian cancer" Version="20181023" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Regulation of FABP4 in ovarian cancer. FABP4 (fatty acid binding protein) can substantially increase metastatic potential of ovarian cancer cells, and leads to more aggressive disease. Mir-409-3p negatively regulates FABP4 in ovarian cancer cells, and mir-409-3p is decreased in hypoxic conditions. Pink arrows indicates potential therapuetic therapeutic stratgeies; in Gharpure et al, DOPC nanoliposomes containing either miR-409-3p mimic or FABP4 siRNA was shown to inhibit tumor progression. 
+Description was adapted from Gharpure et al. </Comment>
+  <BiopaxRef>cf7</BiopaxRef>
+  <Graphics BoardWidth="907.0" BoardHeight="551.5"/>
+  <DataNode TextLabel="FABP4" GraphId="cce25" Type="GeneProduct">
+    <Graphics CenterX="293.5" CenterY="358.0" Width="63.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000170323"/>
+  </DataNode>
+  <DataNode TextLabel="MIR409" GraphId="d26ef" Type="Rna">
+    <Graphics CenterX="293.5" CenterY="233.0" Width="64.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="990099"/>
+    <Xref Database="Ensembl" ID="ENSG00000199107"/>
+  </DataNode>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="293.5" Y="245.5" GraphRef="d26ef" RelX="0.0" RelY="1.0"/>
+      <Point X="293.5" Y="345.5" GraphRef="cce25" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="293.5" Y="96.5" GraphRef="ecf0a" RelX="0.0" RelY="1.0"/>
+      <Point X="293.5" Y="220.5" GraphRef="d26ef" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0066">
+      <Point X="516.5" Y="232.5" GraphRef="d9a66" RelX="-1.0" RelY="0.0"/>
+      <Point X="325.0" Y="351.75" GraphRef="cce25" RelX="1.0" RelY="-0.5" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="293.5" Y="370.5" GraphRef="cce25" RelX="0.0" RelY="1.0"/>
+      <Point X="294.0" Y="496.5" GraphRef="ddb85" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="aec65">
+    <Graphics ZOrder="32772" LineThickness="1.0" Color="ff0066">
+      <Point X="516.5" Y="363.5" GraphRef="be356" RelX="-1.0" RelY="0.0"/>
+      <Point X="325.0" Y="364.25" GraphRef="cce25" RelX="1.0" RelY="0.5" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <GraphicalLine GraphId="aa89a" GroupRef="c0227">
+    <Graphics ZOrder="32773" LineThickness="1.0" Color="ff0066">
+      <Point X="594.0" Y="75.0"/>
+      <Point X="551.0" Y="75.25"/>
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Potential therapeutic strategies" GraphId="aa4b7" GroupRef="c0227">
+    <Graphics CenterX="696.5" CenterY="75.0" Width="189.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Aggressive disease" GraphId="ddb85">
+    <Graphics CenterX="294.0" CenterY="509.0" Width="126.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="mir-409-3p &#10;mimic" GraphId="eab5f" GroupRef="cfc14">
+    <Graphics CenterX="569.5" CenterY="237.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Hypoxia" GraphId="ecf0a">
+    <Graphics CenterX="293.5" CenterY="84.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="FABP4&#10;siRNA" GraphId="bb40a" GroupRef="b76a3">
+    <Graphics CenterX="569.5" CenterY="368.0" Width="90.0" Height="25.0" ZOrder="32771" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Shape TextLabel="Legend" GraphId="a95a4" GroupRef="c0227">
+    <Graphics CenterX="665.5" CenterY="68.5" Width="255.0" Height="71.0" ZOrder="16384" FontWeight="Bold" FontSize="12" Align="Left" ShapeType="Rectangle" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="Tumor cell" GraphId="af894">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="296.0" CenterY="297.5" Width="342.0" Height="305.0" ZOrder="16384" FontWeight="Bold" FontSize="12" Valign="Bottom" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ce409" GroupRef="cfc14">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle"/>
+    <Graphics CenterX="569.5" CenterY="232.5" Width="75.0" Height="75.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="c62ae" GroupRef="b76a3">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle"/>
+    <Graphics CenterX="569.5" CenterY="363.5" Width="75.0" Height="75.0" ZOrder="32770" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="c0227" Style="Group"/>
+  <Group GroupId="b76a3" GraphId="be356" Style="Group"/>
+  <Group GroupId="cfc14" GraphId="d9a66" Style="Group"/>
+  <Group GroupId="d567c" GraphId="d7327" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cf7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30050129</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FABP4 as a key determinant of metastatic potential of ovarian cancer.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Commun</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gharpure KM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pradeep S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sans M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rupaimoole R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu SY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bayraktar E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagaraja AS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mangala LS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haemmerle M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hu W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodriguez-Aguayo C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McGuire M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mak CSL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tran MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Villar-Prados A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pena GA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kondetimmanahalli R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nini R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koppula P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ram P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lopez-Berestein G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baggerly K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S Eberlin L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sood AK</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>ovarian cancer</bp:TERM><bp:ID>DOID:2394</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>microRNA pathway</bp:TERM><bp:ID>PW:0000808</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>cancer pathway</bp:TERM><bp:ID>PW:0000605</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

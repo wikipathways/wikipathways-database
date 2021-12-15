@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Model for regulation of MSMP expression in cancer cells and its proangiogenic role in ovarian tumors" Version="20181019" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Proposed model for regulation of MSMP expression in cancer cells under hypoxic conditions and the proangiogenic role of MSMP in ovarian tumors.
+
+The recruitment of the transcriptional repressor CTCF to the MSMP enhancer region is regulated by changes in H3 acetylation of the MSMP enhancer. In hypoxic conditions, the repressor-enhancer binding is disrupted, leading to increased expression of MSMP. Secretion of MSMP triggers MAPK signaling in endothelial cells (presumably via CCR2 signaling), which promotes angiogenesis. 
+
+This suggests that MSMP inhibition in combination with antiangiogenesis drugs (anti-VEGF) could be a new strategy to overcome resistance to antiangiogenesis therapy.
+
+Description adapted from Mitamura et al.</Comment>
+  <BiopaxRef>a27</BiopaxRef>
+  <Graphics BoardWidth="829.0" BoardHeight="587.0"/>
+  <DataNode TextLabel="MAPK Signaling" GraphId="cc697" Type="Pathway">
+    <Graphics CenterX="677.0" CenterY="227.0" Width="110.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e"/>
+    <Xref Database="WikiPathways" ID="WP382"/>
+  </DataNode>
+  <DataNode TextLabel="CCR2" GraphId="cfb00" Type="GeneProduct">
+    <Graphics CenterX="244.0" CenterY="130.0" Width="66.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000121807"/>
+  </DataNode>
+  <DataNode TextLabel="Angiogenesis" GraphId="fbde6" Type="Pathway">
+    <Graphics CenterX="677.0" CenterY="389.0" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e"/>
+    <Xref Database="WikiPathways" ID="WP1539"/>
+  </DataNode>
+  <DataNode TextLabel="MSMP" GraphId="d1da7" Type="GeneProduct">
+    <Graphics CenterX="478.0" CenterY="97.0" Width="66.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000215183"/>
+  </DataNode>
+  <DataNode TextLabel="CTCF" GraphId="fdaf6" Type="GeneProduct">
+    <Graphics CenterX="147.0" CenterY="254.0" Width="66.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000102974"/>
+  </DataNode>
+  <DataNode TextLabel="CCR2" GraphId="f027b" Type="GeneProduct">
+    <Graphics CenterX="677.0" CenterY="146.0" Width="66.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000121807"/>
+  </DataNode>
+  <DataNode TextLabel="MSMP" GraphId="f82fe" Type="GeneProduct">
+    <Graphics CenterX="302.0" CenterY="321.0" Width="66.0" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000215183"/>
+  </DataNode>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="147.0" Y="266.5" GraphRef="fdaf6" RelX="0.0" RelY="1.0"/>
+      <Point X="147.0" Y="308.5" GraphRef="c331b" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+      <Anchor Position="0.4" Shape="None" GraphId="c66f9"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="112.0" Y="283.0" GraphRef="b3123" RelX="1.0" RelY="0.0"/>
+      <Point X="147.0" Y="283.3" GraphRef="c66f9" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="677.0" Y="239.5" GraphRef="cc697" RelX="0.0" RelY="1.0"/>
+      <Point X="677.0" Y="376.5" GraphRef="fbde6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="511.0" Y="97.0" GraphRef="d1da7" RelX="1.0" RelY="0.0"/>
+      <Point X="677.0" Y="133.5" GraphRef="f027b" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="225.0" Y="321.0" GraphRef="ba295" RelX="1.0" RelY="0.0"/>
+      <Point X="269.0" Y="321.0" GraphRef="f82fe" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="677.0" Y="158.5" GraphRef="f027b" RelX="0.0" RelY="1.0"/>
+      <Point X="677.0" Y="214.5" GraphRef="cc697" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="335.0" Y="321.0" GraphRef="f82fe" RelX="1.0" RelY="0.0"/>
+      <Point X="478.0" Y="109.5" GraphRef="d1da7" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="e528d">
+    <Graphics ConnectorType="Elbow" ZOrder="32772" LineThickness="1.0">
+      <Point X="445.0" Y="97.0" GraphRef="d1da7" RelX="-1.0" RelY="0.0"/>
+      <Point X="244.0" Y="117.5" GraphRef="cfb00" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <GraphicalLine GroupRef="b470e">
+    <Graphics ZOrder="12288" LineThickness="2.0">
+      <Point X="64.0" Y="331.0"/>
+      <Point X="217.0" Y="331.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Hypoxia" GraphId="b3123">
+    <Graphics CenterX="82.5" CenterY="283.0" Width="59.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Enhancer" GraphId="c331b" GroupRef="b470e">
+    <Graphics CenterX="147.0" CenterY="321.0" Width="68.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle"/>
+  </Label>
+  <Shape TextLabel="Tumor cell" GraphId="ae571">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="223.5" CenterY="297.0" Width="409.0" Height="334.0" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="Nucleus" GraphId="eaca3">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="215.5" CenterY="305.5" Width="375.0" Height="201.0" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="Endothelial cell" GraphId="fa129">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="692.0" CenterY="224.0" Width="214.0" Height="150.0" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="b470e" GraphId="ba295" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a27">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29059175</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Induction of anti-VEGF therapy resistance by upregulated expression of microseminoprotein (MSMP).</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oncogene</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitamura T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pradeep S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McGuire M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu SY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ma S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hatakeyama H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyons YA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hisamatsu T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noh K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Villar-Prados A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodriguez-Aguayo C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hu W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lopez-Berestein G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coleman RL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sood AK</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>ovarian cancer</bp:TERM><bp:ID>DOID:2394</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>CC chemokine mediated signaling pathway</bp:TERM><bp:ID>PW:0000831</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>endothelial cell</bp:TERM><bp:ID>CL:0000115</bp:ID><bp:Ontology>Cell Type</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>cancer pathway</bp:TERM><bp:ID>PW:0000605</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

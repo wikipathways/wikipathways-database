@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Caloric restriction and aging" Version="20161102" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Caloric restriction leads to a decrease in the ATP/AMP ratio, thereby activating the key nutrient sensor of the body: AMPK. 
+AMPK then blocks mTOR function, as mTOR has an important role in regulating the balance between cell growth and autophagy, nutrient decrease leads to the induction of autophagy. 
+AMPK stimulates NAMPT function and PGC-1a release. NAMPT converts nicotinamide to nicotinamide mononucleotide for NAD+ synthesis. PGC-1a is the regulator of mitochondrial biosynthesis (increasing mitochondrial cell mass to produce more ATP) which thus will increase if more PGC-1a is released.
+Levels of NAD rise during caloric restriction leading to increased SIRT1 activity. SIRT1 blocks the Insulin/IGF-1 pathway. This is a very complex and paradoxal tissue, which need further investigation/research.
+Increased SIRT1 activity leads to activation of FOXO/p53 genes. FOXOs become phosphorylated by AKT and this may attenuate apoptotic stimuli and reduce antioxidative stress expression.
+In the end these effects result in increased stress resistance and improved lifespan and health span.
+
+Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP4191 CPTAC Assay Portal]</Comment>
+  <BiopaxRef>b45</BiopaxRef>
+  <Graphics BoardWidth="596.0" BoardHeight="491.0"/>
+  <DataNode TextLabel="mTOR" GraphId="ae933" Type="GeneProduct">
+    <Graphics CenterX="133.0" CenterY="170.0" Width="90.0" Height="25.0" ZOrder="32768" FillColor="ff9933" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000198793"/>
+  </DataNode>
+  <DataNode TextLabel="NAMPT" GraphId="d774e" Type="GeneProduct">
+    <Graphics CenterX="193.0" CenterY="243.0" Width="90.0" Height="25.0" ZOrder="32768" FillColor="99ccff" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000105835"/>
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="dc4c6" Type="Metabolite">
+    <Graphics CenterX="190.5" CenterY="70.0" Width="41.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:15422"/>
+  </DataNode>
+  <DataNode TextLabel="AMPK" GraphId="d5f05" Type="GeneProduct">
+    <Graphics CenterX="244.0" CenterY="170.0" Width="88.0" Height="25.0" ZOrder="32769" FillColor="ff9933" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000131791"/>
+  </DataNode>
+  <DataNode TextLabel="SIRT1" GraphId="a8491" Type="GeneProduct">
+    <Graphics CenterX="364.0" CenterY="170.0" Width="90.0" Height="25.0" ZOrder="32770" FillColor="ff9933" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000096717"/>
+  </DataNode>
+  <DataNode TextLabel="insulin/IGF1" GraphId="ab67f" Type="GeneProduct">
+    <Graphics CenterX="476.6138735420503" CenterY="170.0" Width="90.0" Height="25.0" ZOrder="32771" FillColor="ff9933" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000017427"/>
+  </DataNode>
+  <DataNode TextLabel="AMP" GraphId="ccf63" Type="Metabolite">
+    <Graphics CenterX="191.0" CenterY="117.0" Width="41.0" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:16027"/>
+  </DataNode>
+  <DataNode TextLabel="NAD" GraphId="c1e9e" Type="Metabolite">
+    <Graphics CenterX="422.5" CenterY="117.0" Width="57.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:13389"/>
+  </DataNode>
+  <DataNode TextLabel="PGC-1a" GraphId="cc388" Type="GeneProduct">
+    <Graphics CenterX="299.0" CenterY="244.0" Width="90.0" Height="25.0" ZOrder="32775" FillColor="99ccff" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000109819"/>
+  </DataNode>
+  <DataNode TextLabel="FOXO" GraphId="e2ddd" Type="GeneProduct" GroupRef="ed07e">
+    <Graphics CenterX="401.5" CenterY="233.0" Width="57.0" Height="25.0" ZOrder="32776" FillColor="99ccff" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000214295"/>
+  </DataNode>
+  <DataNode TextLabel="AKT" GraphId="be906" Type="GeneProduct">
+    <Graphics CenterX="516.0" CenterY="245.0" Width="90.0" Height="25.0" ZOrder="32777" FillColor="99ccff" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000142208"/>
+  </DataNode>
+  <DataNode TextLabel="p53" GraphId="a2bbf" Type="GeneProduct" GroupRef="ed07e">
+    <Graphics CenterX="401.5" CenterY="258.0" Width="57.0" Height="25.0" ZOrder="32778" FillColor="99ccff" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000141510"/>
+  </DataNode>
+  <Interaction GraphId="id10747b45">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="211.0" Y="70.0" GraphRef="dc4c6" RelX="1.0" RelY="0.0"/>
+      <Point X="254.95" Y="93.9" GraphRef="f1043" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id1127ecf2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="171.875" Y="344.0" GraphRef="ac4ab" RelX="0.5" RelY="1.0"/>
+      <Point X="241.5" Y="402.5" GraphRef="e2918" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id273e61d3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="200.0" Y="170.0" GraphRef="d5f05" RelX="-1.0" RelY="0.0"/>
+      <Point X="178.0" Y="170.0" GraphRef="ae933" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id50725c3c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="347.05" Y="93.9" GraphRef="f6b9b" RelX="0.0" RelY="0.0"/>
+      <Point X="394.0" Y="117.0" GraphRef="c1e9e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id50b9dd36">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="254.95" Y="93.9" GraphRef="f1043" RelX="0.0" RelY="0.0"/>
+      <Point X="211.5" Y="117.0" GraphRef="ccf63" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5d644df9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="409.0" Y="170.0" GraphRef="a8491" RelX="1.0" RelY="0.0"/>
+      <Point X="431.6138735420503" Y="170.0" GraphRef="ab67f" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id796a9d67">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="471.0" Y="245.0" GraphRef="be906" RelX="-1.0" RelY="0.0"/>
+      <Point X="438.0" Y="245.5" GraphRef="c49ff" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id79a0f241">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="516.0" Y="257.5" GraphRef="be906" RelX="0.0" RelY="1.0"/>
+      <Point X="133.0" Y="182.5" GraphRef="ae933" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id9b3f09ef">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="262.25" Y="51.5" GraphRef="fb52a" RelX="-0.5" RelY="1.0"/>
+      <Point X="244.0" Y="157.5" GraphRef="d5f05" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+      <Anchor Position="0.4" Shape="None" GraphId="f1043"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="b2329">
+    <Graphics ZOrder="32772" LineThickness="1.0">
+      <Point X="335.75" Y="51.5" GraphRef="fb52a" RelX="0.5" RelY="1.0"/>
+      <Point X="364.0" Y="157.5" GraphRef="a8491" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+      <Anchor Position="0.4" Shape="None" GraphId="f6b9b"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d574b">
+    <Graphics ZOrder="32779" LineThickness="1.0">
+      <Point X="222.0" Y="182.5" GraphRef="d5f05" RelX="-0.5" RelY="1.0"/>
+      <Point X="215.5" Y="230.5" GraphRef="d774e" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="aaf2f">
+    <Graphics ZOrder="32780" LineThickness="1.0">
+      <Point X="266.0" Y="182.5" GraphRef="d5f05" RelX="0.5" RelY="1.0"/>
+      <Point X="276.5" Y="231.5" GraphRef="cc388" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ff138">
+    <Graphics ZOrder="32781" LineThickness="1.0">
+      <Point X="341.5" Y="182.5" GraphRef="a8491" RelX="-0.5" RelY="1.0"/>
+      <Point X="321.5" Y="231.5" GraphRef="cc388" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ac490">
+    <Graphics ZOrder="32782" LineThickness="1.0">
+      <Point X="386.5" Y="182.5" GraphRef="a8491" RelX="0.5" RelY="1.0"/>
+      <Point X="401.5" Y="212.5" GraphRef="c49ff" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="be47f">
+    <Graphics ZOrder="32783" LineThickness="1.0">
+      <Point X="499.1138735420503" Y="182.5" GraphRef="ab67f" RelX="0.5" RelY="1.0"/>
+      <Point X="516.0" Y="232.5" GraphRef="be906" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+      <Anchor Position="0.4" Shape="None" GraphId="fb823"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="f613c">
+    <Graphics ZOrder="32786" LineThickness="1.0">
+      <Point X="110.5" Y="182.5" GraphRef="ae933" RelX="-0.5" RelY="1.0"/>
+      <Point X="111.0" Y="306.0" GraphRef="f747f" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d6028">
+    <Graphics ZOrder="32787" LineThickness="1.0">
+      <Point X="299.0" Y="256.5" GraphRef="cc388" RelX="0.0" RelY="1.0"/>
+      <Point X="299.0" Y="307.0" GraphRef="d2d3c" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ab5a0">
+    <Graphics ZOrder="32788" LineThickness="1.0">
+      <Point X="438.0" Y="262.0" GraphRef="c49ff" RelX="1.0" RelY="0.5"/>
+      <Point X="466.75" Y="302.0" GraphRef="d031e" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d959b">
+    <Graphics ZOrder="32789" LineThickness="1.0">
+      <Point X="302.75" Y="344.0" GraphRef="d2697" RelX="0.0" RelY="1.0"/>
+      <Point X="303.0" Y="402.5" GraphRef="e2918" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="a4631">
+    <Graphics ZOrder="32790" LineThickness="1.0">
+      <Point X="460.625" Y="344.0" GraphRef="dc40a" RelX="-0.5" RelY="1.0"/>
+      <Point X="364.5" Y="402.5" GraphRef="e2918" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="(+) Stress resistance&#10;(+) Lifespan and healthspan" GraphId="e2918">
+    <Graphics CenterX="303.0" CenterY="431.75" Width="246.0" Height="58.5" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="16" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Autophagy" GraphId="f747f">
+    <Graphics CenterX="137.0" CenterY="321.25" Width="104.0" Height="30.5" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="16" Valign="Middle" Color="ffffff"/>
+  </Label>
+  <Label TextLabel="Caloric restriction" GraphId="fb52a">
+    <Graphics CenterX="299.0" CenterY="37.25" Width="147.0" Height="28.5" ZOrder="28672" FillColor="990033" FontWeight="Bold" FontSize="16" Valign="Middle" Color="ffffff"/>
+  </Label>
+  <Label TextLabel="Mitochondrial&#10;biogenisis" GraphId="d2d3c">
+    <Graphics CenterX="299.0" CenterY="323.75" Width="114.0" Height="33.5" ZOrder="32784" FillColor="ffffff" FontWeight="Bold" FontSize="16" Valign="Middle" Color="ffffff"/>
+  </Label>
+  <Label TextLabel="Oxidative &#10;stress" GraphId="d031e">
+    <Graphics CenterX="496.5" CenterY="322.0" Width="119.0" Height="40.0" ZOrder="32785" FillColor="ffffff" FontWeight="Bold" FontSize="16" Valign="Middle" Color="ffffff"/>
+  </Label>
+  <Shape GraphId="c9fce">
+    <Graphics CenterX="299.0" CenterY="429.5" Width="257.5" Height="57.0" ZOrder="-8" FillColor="00cc33" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="d2697">
+    <Graphics CenterX="302.75" CenterY="323.75" Width="140.5" Height="40.5" ZOrder="-6" FillColor="9900ff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="dc40a">
+    <Graphics CenterX="495.75" CenterY="323.75" Width="140.5" Height="40.5" ZOrder="-4" FillColor="9900ff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ac4ab">
+    <Graphics CenterX="136.75" CenterY="323.75" Width="140.5" Height="40.5" ZOrder="-2" FillColor="9900ff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="e5cc9">
+    <Graphics CenterX="297.75" CenterY="36.75" Width="140.5" Height="40.5" ZOrder="16384" FillColor="990033" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="ed07e" GraphId="c49ff" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b45">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23746838</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The hallmarks of aging.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">López-Otín C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blasco MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partridge L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Serrano M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kroemer G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aging pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000651</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autophagy pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000278</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxidative stress response pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000378</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

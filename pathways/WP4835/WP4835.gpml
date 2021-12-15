@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Peroxiredoxin 2 induced ovarian failure" Version="20200217" Organism="Mus musculus">
+  <Comment Source="WikiPathways-description">This pathway summarizes the influence of reactive oxygen species on ovarian aging, ovarian failure and therefore female infertility. </Comment>
+  <BiopaxRef>b22</BiopaxRef>
+  <Graphics BoardWidth="1198.8504638671875" BoardHeight="611.5"/>
+  <DataNode TextLabel="Cytochrome c" GraphId="a1f8e" Type="Protein">
+    <Comment>Somatic</Comment>
+    <Graphics CenterX="634.0003662109375" CenterY="266.6666666666667" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P62897"/>
+  </DataNode>
+  <DataNode TextLabel="Reactive oxygen species " GraphId="a6f19" Type="Metabolite">
+    <Graphics CenterX="634.0" CenterY="48.00000000000001" Width="160.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:26523"/>
+  </DataNode>
+  <DataNode TextLabel="Estradiol-17beta" GraphId="b083e" Type="Metabolite">
+    <Graphics CenterX="302.5" CenterY="435.44361877441406" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:16469"/>
+  </DataNode>
+  <DataNode TextLabel="CYP11A1" GraphId="c4211" Type="Protein">
+    <Comment>Mitochondrial</Comment>
+    <Graphics CenterX="199.37115097045898" CenterY="273.75" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9QZ82"/>
+  </DataNode>
+  <DataNode TextLabel="3Beta-HSD" GraphId="cc2ba" Type="Protein">
+    <Graphics CenterX="199.37115097045898" CenterY="353.25" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="E9PXG7"/>
+  </DataNode>
+  <DataNode TextLabel="JNK" GraphId="cd5d4" Type="Protein">
+    <Graphics CenterX="634.0003662109375" CenterY="121.75000000000006" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSP00000023291"/>
+  </DataNode>
+  <DataNode TextLabel="Caspase-3" GraphId="d23ce" Type="Protein">
+    <Graphics CenterX="634.0003662109375" CenterY="325.33333333333326" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="A0A1B0GRX1"/>
+  </DataNode>
+  <DataNode TextLabel="Progesterone" GraphId="d8428" Type="Metabolite">
+    <Graphics CenterX="95.37115097045898" CenterY="435.44361877441406" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:17026"/>
+  </DataNode>
+  <DataNode TextLabel="StAR " GraphId="ea72e" Type="Protein">
+    <Comment>Mitichondrial</Comment>
+    <Comment>Type your comment here</Comment>
+    <Graphics CenterX="199.37115097045898" CenterY="187.25" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P51557"/>
+  </DataNode>
+  <DataNode TextLabel="Peroxiredoxin-2" GraphId="eb976" Type="Protein">
+    <Graphics CenterX="199.37115097045898" CenterY="93.33333333333333" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q61171"/>
+  </DataNode>
+  <DataNode TextLabel="Bax" GraphId="f41fa" Type="GeneProduct">
+    <Graphics CenterX="634.0003662109375" CenterY="209.66666666666666" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000003873"/>
+  </DataNode>
+  <DataNode TextLabel="PARP" GraphId="f4449" Type="Metabolite">
+    <Graphics CenterX="634.0003662109375" CenterY="382.66666666666634" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="ChEBI" ID="CHEBI:62913"/>
+  </DataNode>
+  <Interaction GraphId="id10124fd4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="634.0003662109375" Y="337.83333333333326" GraphRef="d23ce" RelX="0.0" RelY="1.0"/>
+      <Point X="634.0003662109375" Y="370.16666666666634" GraphRef="f4449" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id1418adc4">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="95.37115097045898" Y="447.94361877441406" GraphRef="d8428" RelX="0.0" RelY="1.0"/>
+      <Point X="201.0" Y="509.07273864746094" GraphRef="ebcbc" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id2cbd58c0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="221.87115097045898" Y="365.75" GraphRef="cc2ba" RelX="0.5" RelY="1.0"/>
+      <Point X="302.5" Y="422.94361877441406" GraphRef="b083e" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id2e6105e0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="996.8504638671875" Y="215.0" GraphRef="adf8b" RelX="0.0" RelY="1.0"/>
+      <Point X="996.8504638671875" Y="317.0" GraphRef="fe0fc" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3f71da5c">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="244.37115097045898" Y="87.08333333333333" GraphRef="eb976" RelX="1.0" RelY="-0.5"/>
+      <Point X="554.0" Y="48.00000000000001" GraphRef="a6f19" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id44d52bb5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="176.87115097045898" Y="365.75" GraphRef="cc2ba" RelX="-0.5" RelY="1.0"/>
+      <Point X="95.37115097045898" Y="422.94361877441406" GraphRef="d8428" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id4adee89e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="996.8504638671875" Y="345.5" GraphRef="fe0fc" RelX="0.0" RelY="1.0"/>
+      <Point X="995.8504638671875" Y="496.82273864746094" GraphRef="c024c" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id54382d09">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="589.0003662109375" Y="128.00000000000006" GraphRef="cd5d4" RelX="-1.0" RelY="0.5"/>
+      <Point X="244.37115097045898" Y="181.0" GraphRef="ea72e" RelX="1.0" RelY="-0.5" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id54a1040f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="199.37115097045898" Y="286.25" GraphRef="c4211" RelX="0.0" RelY="1.0"/>
+      <Point X="199.37115097045898" Y="340.75" GraphRef="cc2ba" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5d551692">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="679.0003662109375" Y="121.75000000000006" GraphRef="cd5d4" RelX="1.0" RelY="0.0"/>
+      <Point X="996.8504638671875" Y="183.0" GraphRef="adf8b" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5deb3406">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="903.8504638671875" Y="509.07273864746094" GraphRef="c024c" RelX="-1.0" RelY="0.0"/>
+      <Point X="678.0003662109375" Y="509.07273864746094" GraphRef="d8a87" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id634a73f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="634.0" Y="60.50000000000001" GraphRef="a6f19" RelX="0.0" RelY="1.0"/>
+      <Point X="634.0003662109375" Y="109.25000000000006" GraphRef="cd5d4" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id6fea2213">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="404.0" Y="509.07273864746094" GraphRef="ebcbc" RelX="1.0" RelY="0.0"/>
+      <Point X="588.0003662109375" Y="509.07273864746094" GraphRef="d8a87" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id747654a0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="872.0" Y="48.0" GraphRef="b1fd6" RelX="-1.0" RelY="0.0"/>
+      <Point X="714.0" Y="48.00000000000001" GraphRef="a6f19" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7b48ef25">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="634.0003662109375" Y="395.16666666666634" GraphRef="f4449" RelX="0.0" RelY="1.0"/>
+      <Point X="633.0003662109375" Y="496.57273864746094" GraphRef="d8a87" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id833ac72">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="634.0003662109375" Y="134.25000000000006" GraphRef="cd5d4" RelX="0.0" RelY="1.0"/>
+      <Point X="634.0003662109375" Y="197.16666666666666" GraphRef="f41fa" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id84d71cc8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="302.5" Y="447.94361877441406" GraphRef="b083e" RelX="0.0" RelY="1.0"/>
+      <Point X="302.5" Y="494.82273864746094" GraphRef="ebcbc" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida46367e5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="633.0003662109375" Y="521.5727386474609" GraphRef="d8a87" RelX="0.0" RelY="1.0"/>
+      <Point X="634.0003662109375" Y="556.5" GraphRef="e3dd9" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idaf9273b6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="634.0003662109375" Y="222.16666666666666" GraphRef="f41fa" RelX="0.0" RelY="1.0"/>
+      <Point X="634.0003662109375" Y="254.16666666666669" GraphRef="a1f8e" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idb838ec6d">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="995.8504638671875" Y="521.3227386474609" GraphRef="c024c" RelX="0.0" RelY="1.0"/>
+      <Point X="679.0003662109375" Y="569.0" GraphRef="e3dd9" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc2d6981b">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="302.5" Y="523.3227386474609" GraphRef="ebcbc" RelX="0.0" RelY="1.0"/>
+      <Point X="589.0003662109375" Y="569.0" GraphRef="e3dd9" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idceab5a06">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="634.0003662109375" Y="279.1666666666667" GraphRef="a1f8e" RelX="0.0" RelY="1.0"/>
+      <Point X="634.0003662109375" Y="312.83333333333326" GraphRef="d23ce" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ide447ff4a">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="244.37115097045898" Y="93.33333333333333" GraphRef="eb976" RelX="1.0" RelY="0.0"/>
+      <Point X="589.0003662109375" Y="121.75000000000006" GraphRef="cd5d4" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ideeb25a8a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="199.37115097045898" Y="199.75" GraphRef="ea72e" RelX="0.0" RelY="1.0"/>
+      <Point X="199.37115097045898" Y="261.25" GraphRef="c4211" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="The number of follicles and Corpora lutea declines" GraphId="adf8b">
+    <Graphics CenterX="996.8504638671875" CenterY="199.0" Width="333.0" Height="32.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Aging" GraphId="b1fd6">
+    <Graphics CenterX="917.0" CenterY="48.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Ovarian structural degeneration" GraphId="c024c">
+    <Graphics CenterX="995.8504638671875" CenterY="509.07273864746094" Width="184.0" Height="24.5" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Apoptosis" GraphId="d8a87">
+    <Graphics CenterX="633.0003662109375" CenterY="509.07273864746094" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Ovarian failure" GraphId="e3dd9">
+    <Graphics CenterX="634.0003662109375" CenterY="569.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Ovarian functional degeneration" GraphId="ebcbc">
+    <Graphics CenterX="302.5" CenterY="509.07273864746094" Width="203.0" Height="28.5" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Size of ovaries decline" GraphId="fe0fc">
+    <Graphics CenterX="996.8504638671875" CenterY="331.25" Width="344.0" Height="28.5" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="a9fb9">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Mitochondria"/>
+    <Graphics CenterX="491.0" CenterY="222.0" Width="200.0" Height="100.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Mitochondria" LineThickness="3.0" Color="c0c0c0" Rotation="3.1652103085947436"/>
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000003</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovarian dysfunction</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1414</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b22">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29778464</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peroxiredoxin 2 deficiency accelerates age-related ovarian failure through the reactive oxygen species-mediated JNK pathway in mice.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Free Radic Biol Med</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Park SJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim JH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee DG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee DS</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>c-Jun N-terminal kinases MAPK signaling pathway</bp:TERM><bp:ID>PW:0000313</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

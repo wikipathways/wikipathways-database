@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Somatroph axis (GH) and its relationship to dietary restriction and aging" Version="20171129" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">The somatotrophic axis in mammals comprises the growth hormone (GH), which is produced by the anterior pituitary, and its secondary mediator, insulin-like growth factor 1 (IGF-1). The intracellular signaling pathway of IGF-1 is the same as that elicited by insulin, which informs cells of the presence of glucose. For this reason, IGF-1 and insulin signaling are known as the insulin and IGF-1 signaling (IIS) pathway. Remarkably, the IIS pathway is the most conserved aging-controlling pathway in evolution, and among its multiple targets are the FOXO family of transcription factors and the mTOR complexes, which are also involved in aging and conserved through evolution. Genetic polymorphisms or mutations that reduce the functions of GH, IGF-1 receptor, insulin receptor, or downstream intracellular effectors such as AKT, mTOR, and FOXO have been linked to longevity. Molecules that favor aging are shown in orange, and molecules with anti-aging properties are shown in light green.
+
+Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP4186 CPTAC Assay Portal].</Comment>
+  <BiopaxRef>ece</BiopaxRef>
+  <Graphics BoardWidth="712.4583749999999" BoardHeight="596.5"/>
+  <DataNode TextLabel="FOXO" GraphId="ae825" Type="GeneProduct">
+    <Graphics CenterX="168.85000000000002" CenterY="351.0807499999999" Width="90.0" Height="25.0" ZOrder="32768" FillColor="00ff99" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000150907"/>
+  </DataNode>
+  <DataNode TextLabel="IGF-1" GraphId="bb264" Type="GeneProduct">
+    <Graphics CenterX="278.0" CenterY="132.0" Width="90.0" Height="25.0" ZOrder="32768" FillColor="ff9966" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000140443"/>
+  </DataNode>
+  <DataNode TextLabel="PTEN" GraphId="c5c3e" Type="Protein">
+    <Graphics CenterX="161.05552457734373" CenterY="200.0" Width="90.0" Height="25.0" ZOrder="32768" FillColor="00ff99" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000171862"/>
+  </DataNode>
+  <DataNode TextLabel="SIRT1" GraphId="cd394" Type="GeneProduct">
+    <Graphics CenterX="633.4583749999999" CenterY="269.0" Width="90.0" Height="25.0" ZOrder="32768" FillColor="00ff99" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000096717"/>
+  </DataNode>
+  <DataNode TextLabel="PI3K " GraphId="cf8ce" Type="Protein">
+    <Graphics CenterX="278.0" CenterY="200.0" Width="90.0" Height="25.0" ZOrder="32768" FillColor="ff9966" FontSize="12" Valign="Middle"/>
+    <Xref Database="NCBI Protein" ID="NP_006209.2"/>
+  </DataNode>
+  <DataNode TextLabel="GH" GraphId="d6a76" Type="Metabolite">
+    <Graphics CenterX="278.0" CenterY="61.0" Width="90.0" Height="25.0" ZOrder="32768" FillColor="ff9966" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:37845"/>
+  </DataNode>
+  <DataNode TextLabel="MTOR" GraphId="da955" Type="GeneProduct">
+    <Graphics CenterX="415.1176999999998" CenterY="354.0807499999999" Width="90.0" Height="25.0" ZOrder="32768" FillColor="ff9966" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000198793"/>
+  </DataNode>
+  <DataNode TextLabel="PGC-1 alpha" GraphId="eebfa" Type="Protein">
+    <Graphics CenterX="633.616" CenterY="350.0807499999999" Width="90.0" Height="25.0" ZOrder="32768" FillColor="00ff99" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q01711"/>
+  </DataNode>
+  <DataNode TextLabel="AKT" GraphId="ef536" Type="GeneProduct">
+    <Graphics CenterX="278.0" CenterY="270.0" Width="90.0" Height="25.0" ZOrder="32768" FillColor="ff9966" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000142208"/>
+  </DataNode>
+  <DataNode TextLabel="IGF and insuline signaling" GraphId="f5b19" Type="Pathway">
+    <Graphics CenterX="431.5" CenterY="91.0" Width="169.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e"/>
+    <Xref Database="WikiPathways" ID="WP2799"/>
+  </DataNode>
+  <DataNode TextLabel="AMPK" GraphId="fd3be" Type="Protein">
+    <Graphics CenterX="492.3857499999999" CenterY="270.0" Width="90.0" Height="25.0" ZOrder="32768" FillColor="00ff99" FontSize="12" Valign="Middle"/>
+    <Xref Database="Enzyme Nomenclature" ID="2.7.11.31"/>
+  </DataNode>
+  <Interaction GraphId="id125d7377">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="633.4583749999999" Y="281.5" GraphRef="cd394" RelX="0.0" RelY="1.0"/>
+      <Point X="633.616" Y="337.5807499999999" GraphRef="eebfa" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id28ab4c8c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="278.0" Y="144.5" GraphRef="bb264" RelX="0.0" RelY="1.0"/>
+      <Point X="278.0" Y="187.5" GraphRef="cf8ce" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id450d9e19">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="588.4583749999999" Y="269.0" GraphRef="cd394" RelX="-1.0" RelY="0.0"/>
+      <Point X="537.3857499999999" Y="270.0" GraphRef="fd3be" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id48f792b3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="599.0" Y="192.5" GraphRef="a476e" RelX="0.5" RelY="1.0"/>
+      <Point X="633.4583749999999" Y="256.5" GraphRef="cd394" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id51313552">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="168.85000000000002" Y="363.5807499999999" GraphRef="ae825" RelX="0.0" RelY="1.0"/>
+      <Point X="377.0" Y="475.75" GraphRef="b9086" RelX="-1.0" RelY="-0.5" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id68eacfd6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="278.0" Y="73.5" GraphRef="d6a76" RelX="0.0" RelY="1.0"/>
+      <Point X="278.0" Y="119.5" GraphRef="bb264" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+      <Anchor Position="0.4" Shape="None" GraphId="f7c1c"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7b33528">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="278.0" Y="212.5" GraphRef="cf8ce" RelX="0.0" RelY="1.0"/>
+      <Point X="278.0" Y="257.5" GraphRef="ef536" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id82dac71d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="633.616" Y="362.5807499999999" GraphRef="eebfa" RelX="0.0" RelY="1.0"/>
+      <Point X="467.0" Y="475.75" GraphRef="b9086" RelX="1.0" RelY="-0.5" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8bc2b7ff">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="447.3857499999999" Y="276.25" GraphRef="fd3be" RelX="-1.0" RelY="0.5"/>
+      <Point X="437.6176999999998" Y="341.5807499999999" GraphRef="da955" RelX="0.5" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida3a65c5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="537.0" Y="192.5" GraphRef="a476e" RelX="-0.5" RelY="1.0"/>
+      <Point X="492.3857499999999" Y="257.5" GraphRef="fd3be" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idb91995c9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="415.1176999999998" Y="366.5807499999999" GraphRef="da955" RelX="0.0" RelY="1.0"/>
+      <Point X="422.0" Y="469.5" GraphRef="b9086" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc17fd844">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="506.0" Y="180.0" GraphRef="a476e" RelX="-1.0" RelY="0.0"/>
+      <Point X="415.1176999999998" Y="341.5807499999999" GraphRef="da955" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc194dbe1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="347.0" Y="91.0" GraphRef="f5b19" RelX="-1.0" RelY="0.0"/>
+      <Point X="278.0" Y="91.9" GraphRef="f7c1c" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc51a3410">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="250.44212499999998" Y="279.46562499999993"/>
+      <Point X="168.85000000000002" Y="338.5807499999999" GraphRef="ae825" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc56675d7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="537.3857499999999" Y="263.75" GraphRef="fd3be" RelX="1.0" RelY="-0.5"/>
+      <Point X="588.4583749999999" Y="262.75" GraphRef="cd394" RelX="-1.0" RelY="-0.5" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc91c0061">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="568.0" Y="167.5" GraphRef="a476e" RelX="0.0" RelY="-1.0"/>
+      <Point X="323.0" Y="132.0" GraphRef="bb264" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf1d91ea7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="206.05552457734373" Y="200.0" GraphRef="c5c3e" RelX="1.0" RelY="0.0"/>
+      <Point X="233.0" Y="200.0" GraphRef="cf8ce" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf6d69c75">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="300.5" Y="282.5" GraphRef="ef536" RelX="0.5" RelY="1.0"/>
+      <Point X="392.6176999999998" Y="341.5807499999999" GraphRef="da955" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="Dietary Restriction" GraphId="a476e">
+    <Graphics CenterX="568.0" CenterY="180.0" Width="124.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Aging" GraphId="b9086">
+    <Graphics CenterX="422.0" CenterY="482.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">growth factor signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000168</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ece">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23746838</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The hallmarks of aging.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23746838</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The hallmarks of aging.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lopez C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blasco MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partridge L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Serrano M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kroemer G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aging pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000651</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

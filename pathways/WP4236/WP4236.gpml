@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Krebs cycle disorders" Version="20180221" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway shows an simplified version of the Krebs cycle (for more details see [https://www.wikipathways.org/index.php/Pathway:WP78] ), with 4 genetic diseases related to it.
+For succinyl-CoA synthetase deficiencies, relevant metabolic markers are depicted in light green.
+Patients with a mutation in the SUCLG1 might present a severe (fatal) form of mitochondrial encephalomyopathy.
+
+This pathway was inspired by Chapter 20 of the book of Blau (ISBN 3642403360 (978-3642403361)).</Comment>
+  <BiopaxRef>a65</BiopaxRef>
+  <Graphics BoardWidth="1114.7685185185196" BoardHeight="968.6339705728568" />
+  <DataNode TextLabel="NDPK" GraphId="a103d" Type="Protein">
+    <Comment>Nucleoside diphosphate kinase</Comment>
+    <Graphics CenterX="900.5228951255539" CenterY="633.8700147710482" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="2.7.4.6" />
+  </DataNode>
+  <DataNode TextLabel="SUCLA2" GraphId="af0dd" Type="Protein" GroupRef="e0d59">
+    <Graphics CenterX="210.0" CenterY="656.5" Width="66.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9P2R7" />
+  </DataNode>
+  <DataNode TextLabel="mtDNA synthesis" GraphId="b3aa0" Type="Pathway">
+    <Graphics CenterX="953.1095914174184" CenterY="926.018229832116" Width="128.33333333333354" Height="25.231481481481524" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP111" />
+  </DataNode>
+  <DataNode TextLabel="ADP-forming (A-SCS)" GraphId="d929b" Type="Protein" GroupRef="e0d59">
+    <Comment>SCS (succinyl-CoA syntethase)</Comment>
+    <Comment>For more info see: https://en.wikipedia.org/wiki/Succinyl_coenzyme_A_synthetase</Comment>
+    <Graphics CenterX="242.5" CenterY="630.25" Width="131.0" Height="27.5" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="6.2.1.5" />
+  </DataNode>
+  <DataNode TextLabel="alpha-ketoglutarate" GraphId="ea00e" Type="Metabolite">
+    <Graphics CenterX="410.5759069059724" CenterY="293.8991596638656" Width="113.7736625514403" Height="25.0" ZOrder="32839" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16810" />
+  </DataNode>
+  <DataNode TextLabel="Fumarate" GraphId="cd179" Type="Metabolite">
+    <Graphics CenterX="95.00000000000001" CenterY="328.0" Width="90.0" Height="25.0" ZOrder="32840" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:18012" />
+  </DataNode>
+  <DataNode TextLabel="E1-subunit" GraphId="eb774" Type="Protein" GroupRef="a92f4">
+    <Graphics CenterX="567.0" CenterY="264.0" Width="90.0" Height="25.0" ZOrder="32842" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q96HY7" />
+  </DataNode>
+  <DataNode TextLabel="GDP-forming(G-SCS)" GraphId="f7ad2" Type="Protein" GroupRef="ad85d">
+    <Comment>SCS (succinyl-CoA syntethase)</Comment>
+    <Comment>For more info see: https://en.wikipedia.org/wiki/Succinyl_coenzyme_A_synthetase</Comment>
+    <Graphics CenterX="238.0" CenterY="542.25" Width="120.0" Height="31.5" ZOrder="32843" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="6.2.1.4" />
+  </DataNode>
+  <DataNode TextLabel="FH" GraphId="ed4ac" Type="GeneProduct">
+    <Comment>Fumarate hydratase</Comment>
+    <Graphics CenterX="205.5" CenterY="277.0" Width="56.0" Height="25.0" ZOrder="32844" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2271" />
+  </DataNode>
+  <DataNode TextLabel="2-KGD complex" GraphId="fba33" Type="Protein" GroupRef="a92f4">
+    <Comment>Composed of 3 subunits</Comment>
+    <Comment>"Homodimer. The 2-oxoglutarate dehydrogenase (ODH) complex contains multiple copies of three enzymatic components: 2-oxoglutarate dehydrogenase (E1), dihydrolipoamide succinyltransferase (E2) and lipoamide dehydrogenase (E3) (By similarity)." [https://www.uniprot.org/uniprot/Q1B4V6]</Comment>
+    <Graphics CenterX="567.0" CenterY="239.0" Width="123.0" Height="25.0" ZOrder="32845" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q1B4V6" />
+  </DataNode>
+  <DataNode TextLabel="Oxaloacetate" GraphId="f24d7" Type="Metabolite">
+    <Comment>Not in original drawing, adapted from https://www.wikipathways.org/index.php/Pathway:WP78</Comment>
+    <Graphics CenterX="144.0" CenterY="201.0" Width="90.0" Height="25.0" ZOrder="32846" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q408658" />
+  </DataNode>
+  <DataNode TextLabel="Methylmalonyl-CoA" GraphId="dd70f" Type="Metabolite">
+    <Graphics CenterX="649.6714584828417" CenterY="404.3828883407305" Width="116.54185669686812" Height="25.0" ZOrder="32847" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB0001269" />
+  </DataNode>
+  <DataNode TextLabel="(S)-malate" GraphId="ef12e" Type="Metabolite">
+    <Comment>Not in original drawing, adapted from https://www.wikipathways.org/index.php/Pathway:WP78</Comment>
+    <Graphics CenterX="95.0" CenterY="271.0" Width="90.0" Height="25.0" ZOrder="32848" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q27104150" />
+  </DataNode>
+  <DataNode TextLabel="pyruvate" GraphId="dc2ec" Type="Metabolite">
+    <Graphics CenterX="201.56862745098027" CenterY="78.18767507002808" Width="90.0" Height="25.0" ZOrder="32849" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15361" />
+  </DataNode>
+  <DataNode TextLabel="lactate" GraphId="d485e" Type="Metabolite">
+    <Graphics CenterX="372.35945781562225" CenterY="78.18767507002808" Width="90.0" Height="25.0" ZOrder="32850" FillColor="ccffcc" FontSize="12" Valign="Middle" />
+    <Xref Database="ChEBI" ID="CHEBI:24996" />
+  </DataNode>
+  <DataNode TextLabel="Succinyl coenzyme A" GraphId="a34fe" Type="Metabolite">
+    <Graphics CenterX="410.57590690597243" CenterY="404.3828883407305" Width="135.3277310924369" Height="25.0" ZOrder="32851" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15380" />
+  </DataNode>
+  <DataNode TextLabel="Acetyl-CoA" GraphId="ce063" Type="Metabolite">
+    <Graphics CenterX="201.56862745098027" CenterY="145.37815126050424" Width="90.0" Height="25.0" ZOrder="32852" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q715317" />
+  </DataNode>
+  <DataNode TextLabel="ADP" GraphId="fbddb" Type="Metabolite">
+    <Graphics CenterX="312.6474903537624" CenterY="781.66868177262" Width="47.294980707524815" Height="25.0" ZOrder="32853" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16761" />
+  </DataNode>
+  <DataNode TextLabel="propionyl" GraphId="c6e15" Type="Metabolite">
+    <Graphics CenterX="836.1786824318469" CenterY="404.3828883407305" Width="90.0" Height="25.0" ZOrder="32854" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:26294" />
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="bdc90" Type="Metabolite">
+    <Graphics CenterX="117.30327639443175" CenterY="774.9651326186153" Width="45.393447211136504" Height="25.0" ZOrder="32855" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15422" />
+  </DataNode>
+  <DataNode TextLabel="METHYLMALONIC &#xA;ACID" GraphId="d6d31" Type="Metabolite">
+    <Graphics CenterX="590.8983211939474" CenterY="489.34101937084176" Width="124.84243263900248" Height="35.31796125831647" ZOrder="32856" FillColor="ccffcc" FontSize="12" Valign="Middle" />
+    <Xref Database="ChEBI" ID="CHEBI:30860" />
+  </DataNode>
+  <DataNode TextLabel="GTP" GraphId="f411a" Type="Metabolite">
+    <Graphics CenterX="173.0" CenterY="425.66868177261995" Width="48.0" Height="25.0" ZOrder="32857" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15996" />
+  </DataNode>
+  <DataNode TextLabel="citrate" GraphId="a1146" Type="Metabolite">
+    <Graphics CenterX="316.49111047668697" CenterY="202.03361344537797" Width="90.0" Height="25.0" ZOrder="32858" FillColor="ccffcc" FontSize="12" Valign="Middle" />
+    <Xref Database="ChEBI" ID="CHEBI:133748" />
+  </DataNode>
+  <DataNode TextLabel="succinate" GraphId="a65cd" Type="Metabolite">
+    <Graphics CenterX="95.00000000000001" CenterY="404.38288834073046" Width="90.0" Height="25.0" ZOrder="32859" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:30031" />
+  </DataNode>
+  <DataNode TextLabel="methylcitrate" GraphId="da0eb" Type="Metabolite">
+    <Comment>a.k.a. 2-methylcitric acid</Comment>
+    <Graphics CenterX="758.1378746617983" CenterY="489.18203874168347" Width="125.72607947291499" Height="25.0" ZOrder="32860" FillColor="ccffcc" FontSize="12" Valign="Middle" />
+    <Xref Database="Wikidata" ID="Q27104155" />
+  </DataNode>
+  <DataNode TextLabel="METHYLMALONYL CARNITINE &#xA;ESTER (C4DC)" GraphId="b7355" Type="Metabolite">
+    <Graphics CenterX="633.9934333049961" CenterY="543.9439435035883" Width="186.13168724279754" Height="33.211833435200234" ZOrder="32861" FillColor="ccffcc" FontSize="12" Valign="Middle" />
+    <Xref Database="HMDB" ID="HMDB0062785" />
+  </DataNode>
+  <DataNode TextLabel="SUCCINYL CARNITINE&#xA;ESTER (C4DC)" GraphId="c069d" Type="Metabolite">
+    <Graphics CenterX="548.6483745276919" CenterY="636.9439435035883" Width="186.13168724279754" Height="33.21183343520023" ZOrder="32862" FillColor="ccffcc" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="3-HYDROXYPROPIONATE" GraphId="f31fd" Type="Metabolite">
+    <Comment></Comment>
+    <Graphics CenterX="837.6557873062931" CenterY="543.9439435035883" Width="186.13168724279754" Height="33.21183343520023" ZOrder="32863" FillColor="ccffcc" FontSize="12" Valign="Middle" />
+    <Xref Database="Wikidata" ID="Q27101949" />
+  </DataNode>
+  <DataNode TextLabel="PROPIONYLCARNITINE (C3)" GraphId="d0bcb" Type="Metabolite">
+    <Comment>a.k.a. 2-methylcitric acid</Comment>
+    <Graphics CenterX="932.8453490985139" CenterY="489.18203874168347" Width="170.72607947291468" Height="25.0" ZOrder="32864" FillColor="ccffcc" FontSize="12" Valign="Middle" />
+    <Xref Database="Wikidata" ID="Q27103933" />
+  </DataNode>
+  <DataNode TextLabel="E2-subunit" GraphId="cdbcc" Type="Protein" GroupRef="a92f4">
+    <Graphics CenterX="567.0" CenterY="289.0" Width="90.0" Height="25.0" ZOrder="32865" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P36957" />
+  </DataNode>
+  <DataNode TextLabel="E3-subunit" GraphId="aa7c3" Type="Protein" GroupRef="a92f4">
+    <Graphics CenterX="567.0" CenterY="314.0" Width="90.0" Height="25.0" ZOrder="32866" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="O00330" />
+  </DataNode>
+  <DataNode TextLabel="SUCLG1" GraphId="f901c" Type="Protein" GroupRef="ad85d">
+    <Comment>Succinate-CoA ligase alpha-subunit</Comment>
+    <Graphics CenterX="210.5" CenterY="569.5" Width="63.0" Height="25.0" ZOrder="32874" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P53597" />
+  </DataNode>
+  <DataNode TextLabel="SUCLG2" GraphId="e30b3" Type="Protein" GroupRef="ad85d">
+    <Graphics CenterX="267.0" CenterY="569.5" Width="62.0" Height="25.0" ZOrder="32875" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q96I99" />
+  </DataNode>
+  <DataNode TextLabel="GDP" GraphId="fa732" Type="Metabolite">
+    <Graphics CenterX="277.6474903537624" CenterY="425.66868177261995" Width="56.705019292475185" Height="25.0" ZOrder="32877" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17552" />
+  </DataNode>
+  <DataNode TextLabel="SUCLG1" GraphId="c49e3" Type="Protein" GroupRef="e0d59">
+    <Graphics CenterX="275.5" CenterY="656.5" Width="65.0" Height="25.0" ZOrder="32883" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P53597" />
+  </DataNode>
+  <DataNode TextLabel="GDP-forming(G-SCS)" GraphId="d8e72" Type="Protein" GroupRef="f57f0">
+    <Comment>SCS (succinyl-CoA syntethase)</Comment>
+    <Comment>For more info see: https://en.wikipedia.org/wiki/Succinyl_coenzyme_A_synthetase</Comment>
+    <Graphics CenterX="1024.7685185185196" CenterY="582.4814814814822" Width="120.0" Height="31.5" ZOrder="32885" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="6.2.1.4" />
+  </DataNode>
+  <DataNode TextLabel="SUCLG1" GraphId="de55d" Type="Protein" GroupRef="f57f0">
+    <Comment>Succinate-CoA ligase alpha-subunit</Comment>
+    <Graphics CenterX="997.2685185185194" CenterY="609.7314814814822" Width="63.0" Height="25.0" ZOrder="32886" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P53597" />
+  </DataNode>
+  <DataNode TextLabel="SUCLG2" GraphId="c3c97" Type="Protein" GroupRef="f57f0">
+    <Graphics CenterX="1053.7685185185192" CenterY="609.7314814814822" Width="62.0" Height="25.0" ZOrder="32887" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q96I99" />
+  </DataNode>
+  <DataNode TextLabel="SUCLA2" GraphId="e7002" Type="Protein" GroupRef="edcb9">
+    <Graphics CenterX="731.6851851851852" CenterY="656.2314814814813" Width="66.0" Height="25.0" ZOrder="32889" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9P2R7" />
+  </DataNode>
+  <DataNode TextLabel="ADP-forming (A-SCS)" GraphId="b4312" Type="Protein" GroupRef="edcb9">
+    <Comment>SCS (succinyl-CoA syntethase)</Comment>
+    <Comment>For more info see: https://en.wikipedia.org/wiki/Succinyl_coenzyme_A_synthetase</Comment>
+    <Graphics CenterX="764.1851851851852" CenterY="629.9814814814813" Width="131.0" Height="27.5" ZOrder="32890" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="6.2.1.5" />
+  </DataNode>
+  <DataNode TextLabel="SUCLG1" GraphId="bf4cd" Type="Protein" GroupRef="edcb9">
+    <Graphics CenterX="797.1851851851852" CenterY="656.2314814814813" Width="65.0" Height="25.0" ZOrder="32891" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P53597" />
+  </DataNode>
+  <DataNode TextLabel="GDP-forming(G-SCS)" GraphId="de0ce" Type="Protein" GroupRef="bb6ec">
+    <Comment>SCS (succinyl-CoA syntethase)</Comment>
+    <Comment>For more info see: https://en.wikipedia.org/wiki/Succinyl_coenzyme_A_synthetase</Comment>
+    <Graphics CenterX="1015.1090869303576" CenterY="709.5925652387979" Width="120.0" Height="31.5" ZOrder="32892" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="6.2.1.4" />
+  </DataNode>
+  <DataNode TextLabel="SUCLG1" GraphId="de551" Type="Protein" GroupRef="bb6ec">
+    <Comment>Succinate-CoA ligase alpha-subunit</Comment>
+    <Graphics CenterX="987.6090869303575" CenterY="736.8425652387979" Width="63.0" Height="25.0" ZOrder="32893" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P53597" />
+  </DataNode>
+  <DataNode TextLabel="SUCLG2" GraphId="cfde2" Type="Protein" GroupRef="bb6ec">
+    <Graphics CenterX="1044.1090869303584" CenterY="736.8425652387979" Width="62.0" Height="25.0" ZOrder="32894" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q96I99" />
+  </DataNode>
+  <DataNode TextLabel="NDPK" GraphId="a7c17" Type="Protein" GroupRef="bb6ec">
+    <Comment>Nucleoside diphosphate kinase</Comment>
+    <Graphics CenterX="1015.1090869303576" CenterY="762.3425652387979" Width="90.0" Height="25.0" ZOrder="32895" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="2.7.4.6" />
+  </DataNode>
+  <DataNode TextLabel="SUCLA2" GraphId="deb33" Type="Protein" GroupRef="ed0fa">
+    <Graphics CenterX="732.6803025329613" CenterY="771.5981317358712" Width="66.0" Height="25.0" ZOrder="32896" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9P2R7" />
+  </DataNode>
+  <DataNode TextLabel="ADP-forming (A-SCS)" GraphId="a9e5c" Type="Protein" GroupRef="ed0fa">
+    <Comment>SCS (succinyl-CoA syntethase)</Comment>
+    <Comment>For more info see: https://en.wikipedia.org/wiki/Succinyl_coenzyme_A_synthetase</Comment>
+    <Graphics CenterX="765.1803025329613" CenterY="745.3481317358712" Width="131.0" Height="27.5" ZOrder="32897" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="6.2.1.5" />
+  </DataNode>
+  <DataNode TextLabel="SUCLG1" GraphId="cb365" Type="Protein" GroupRef="ed0fa">
+    <Graphics CenterX="798.1803025329613" CenterY="771.5981317358712" Width="65.0" Height="25.0" ZOrder="32898" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P53597" />
+  </DataNode>
+  <DataNode TextLabel="NDPK" GraphId="ab7a8" Type="Protein" GroupRef="ed0fa">
+    <Comment>Nucleoside diphosphate kinase</Comment>
+    <Graphics CenterX="764.6803025329613" CenterY="796.0981317358712" Width="90.0" Height="25.0" ZOrder="32900" FontSize="12" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="2.7.4.6" />
+  </DataNode>
+  <Interaction GraphId="id8d7c659d">
+    <BiopaxRef>d18</BiopaxRef>
+    <BiopaxRef>ba2</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="923.0228951255539" Y="646.3700147710482" GraphRef="a103d" RelX="0.5" RelY="1.0" />
+      <Point X="1016.9574048949275" Y="672.7322546974276" GraphRef="d5b82" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc326de55">
+    <BiopaxRef>d18</BiopaxRef>
+    <BiopaxRef>ba2</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1024.7685185185196" Y="634.2314814814822" GraphRef="cdef3" RelX="0.0" RelY="1.0" />
+      <Point X="1015.109086930358" Y="681.8425652387979" GraphRef="a7082" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Anchor Position="0.808651477294498" Shape="None" GraphId="d5b82" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc89af816">
+    <BiopaxRef>e84</BiopaxRef>
+    <BiopaxRef>d18</BiopaxRef>
+    <BiopaxRef>ba2</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="765.1803025329613" Y="820.5981317358712" GraphRef="c9a67" RelX="0.0" RelY="1.0" />
+      <Point X="921.026258084085" Y="913.4024890913753" GraphRef="b3aa0" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="abd3f">
+    <Graphics ZOrder="32795" LineThickness="1.0">
+      <Point X="274.0" Y="514.5" GraphRef="d8c56" RelX="0.5" RelY="-1.0" />
+      <Point X="279.46980681157174" Y="494.0" GraphRef="e27ec" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="eb07d">
+    <Graphics ZOrder="32798" LineThickness="1.0">
+      <Point X="493.5" Y="307.5" GraphRef="bafa6" RelX="-1.0" RelY="0.5" />
+      <Point X="410.57590690597243" Y="348.0" GraphRef="dbb34" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="eb734">
+    <Graphics ZOrder="32799" LineThickness="1.0">
+      <Point X="95.0" Y="258.5" GraphRef="ef12e" RelX="0.0" RelY="-1.0" />
+      <Point X="144.0" Y="213.5" GraphRef="f24d7" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fb1df">
+    <Graphics ZOrder="32800" LineThickness="1.0">
+      <Point X="177.5" Y="277.0" GraphRef="ed4ac" RelX="-1.0" RelY="0.0" />
+      <Point X="95.0" Y="302.7" GraphRef="f66a1" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e22f6">
+    <Graphics ZOrder="32802" LineThickness="1.0">
+      <Point X="279.46980681157174" Y="494.0" GraphRef="e27ec" RelX="0.0" RelY="0.0" />
+      <Point X="185.0" Y="438.16868177261995" GraphRef="f411a" RelX="0.5" RelY="1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a5522">
+    <Graphics ZOrder="32803" LineThickness="1.0">
+      <Point X="105.95491459164762" Y="762.4651326186153" GraphRef="bdc90" RelX="-0.5" RelY="-1.0" />
+      <Point X="200.0" Y="711.0" GraphRef="af896" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="abebf">
+    <Graphics ConnectorType="Elbow" ZOrder="32804" LineThickness="1.0">
+      <Point X="117.5" Y="416.88288834073046" GraphRef="a65cd" RelX="0.5" RelY="1.0" />
+      <Point X="220.20602067987699" Y="472.0" />
+      <Point X="322.91204135975397" Y="441.31644417036523" />
+      <Point X="342.91204135975397" Y="410.6328883407305" GraphRef="a34fe" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="e5685" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e4d52">
+    <Graphics ZOrder="32805" LineThickness="1.0">
+      <Point X="95.0" Y="315.5" GraphRef="cd179" RelX="0.0" RelY="-1.0" />
+      <Point X="95.0" Y="283.5" GraphRef="ef12e" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="f66a1" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f9b09">
+    <Graphics ZOrder="32806" LineThickness="1.0">
+      <Point X="291.8237451768812" Y="438.16868177261995" GraphRef="fa732" RelX="0.5" RelY="1.0" />
+      <Point X="279.46980681157174" Y="494.0" GraphRef="e27ec" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a7ed0">
+    <Graphics ZOrder="32809" LineThickness="1.0">
+      <Point X="281.25" Y="681.0" GraphRef="bfaa3" RelX="0.5" RelY="1.0" />
+      <Point X="298.0" Y="738.0" GraphRef="b17d5" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="be207">
+    <Graphics ZOrder="32810" LineThickness="1.0">
+      <Point X="189.0" Y="201.0" GraphRef="f24d7" RelX="1.0" RelY="0.0" />
+      <Point X="271.49111047668697" Y="202.03361344537797" GraphRef="a1146" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="c11de" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="df0eb">
+    <Graphics ConnectorType="Elbow" ZOrder="32811" LineThickness="1.0">
+      <Point X="376.7439741328632" Y="416.8828883407305" GraphRef="a34fe" RelX="-0.5" RelY="1.0" />
+      <Point X="235.8719870664316" Y="494.0" />
+      <Point X="95.0" Y="416.88288834073046" GraphRef="a65cd" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="e27ec" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f38a0">
+    <Graphics ZOrder="32813" LineThickness="1.0">
+      <Point X="202.0" Y="514.5" GraphRef="d8c56" RelX="-0.5" RelY="-1.0" />
+      <Point X="199.14139421204766" Y="472.0" GraphRef="e5685" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a7e6c">
+    <Graphics ConnectorType="Elbow" ZOrder="32814" LineThickness="1.0">
+      <Point X="72.5" Y="416.88288834073046" GraphRef="a65cd" RelX="-0.5" RelY="1.0" />
+      <Point X="241.53795345298622" Y="711.0" />
+      <Point X="410.57590690597243" Y="416.8828883407305" GraphRef="a34fe" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.45515761719790476" Shape="None" GraphId="af896" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b57fd">
+    <Graphics ZOrder="32815" LineThickness="1.0">
+      <Point X="478.2397724521909" Y="398.1328883407305" GraphRef="a34fe" RelX="1.0" RelY="-0.5" />
+      <Point X="591.4005301344076" Y="398.1328883407305" GraphRef="dd70f" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion" />
+      <Anchor Position="0.2284696155170233" Shape="None" GraphId="a223c" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e5f4e">
+    <Graphics ZOrder="32816" LineThickness="1.0">
+      <Point X="836.1786824318469" Y="416.8828883407305" GraphRef="c6e15" RelX="0.0" RelY="1.0" />
+      <Point X="837.655787306293" Y="527.3380267859882" GraphRef="f31fd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e954c">
+    <Graphics ZOrder="32817" LineThickness="1.0">
+      <Point X="521.9435736677116" Y="410.6328883407305" GraphRef="e0313" RelX="0.0" RelY="0.0" />
+      <Point X="502.1154527169925" Y="620.3380267859882" GraphRef="c069d" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="acb42">
+    <Graphics ZOrder="32818" LineThickness="1.0">
+      <Point X="591.4005301344076" Y="410.6328883407305" GraphRef="dd70f" RelX="-1.0" RelY="0.5" />
+      <Point X="478.2397724521909" Y="410.6328883407305" GraphRef="a34fe" RelX="1.0" RelY="0.5" ArrowHead="mim-conversion" />
+      <Anchor Position="0.6137901326336846" Shape="None" GraphId="e0313" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="eb630">
+    <Graphics ZOrder="32819" LineThickness="1.0">
+      <Point X="327.35945781562225" Y="84.43767507002808" GraphRef="d485e" RelX="-1.0" RelY="0.5" />
+      <Point X="246.56862745098027" Y="84.43767507002808" GraphRef="dc2ec" RelX="1.0" RelY="0.5" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d5dc4">
+    <Graphics ZOrder="32820" LineThickness="1.0">
+      <Point X="620.5359943086246" Y="416.8828883407305" GraphRef="dd70f" RelX="-0.5" RelY="1.0" />
+      <Point X="622.1089293536979" Y="471.6820387416835" GraphRef="d6d31" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fd671">
+    <Graphics ConnectorType="Elbow" ZOrder="32821" LineThickness="1.0">
+      <Point X="444.4078396790817" Y="416.8828883407305" GraphRef="a34fe" RelX="0.5" RelY="1.0" />
+      <Point X="237.20391983954084" Y="738.0" />
+      <Point X="30.000000000000007" Y="574.3164441703652" />
+      <Point X="50.00000000000001" Y="410.63288834073046" GraphRef="a65cd" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion" />
+      <Anchor Position="0.43173735159177945" Shape="None" GraphId="b17d5" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c7ee2">
+    <Graphics ConnectorType="Curved" ZOrder="32822" LineThickness="1.0">
+      <Point X="410.5759069059724" Y="306.3991596638656" GraphRef="ea00e" RelX="0.0" RelY="1.0" />
+      <Point X="410.57590690597243" Y="391.8828883407305" GraphRef="a34fe" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4866521498306279" Shape="None" GraphId="dbb34" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a77e3">
+    <Graphics ZOrder="32823" LineThickness="1.0">
+      <Point X="813.6786824318469" Y="416.8828883407305" GraphRef="c6e15" RelX="-0.5" RelY="1.0" />
+      <Point X="789.569394530027" Y="476.68203874168347" GraphRef="da0eb" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d1cb4">
+    <Graphics ZOrder="32824" LineThickness="1.0">
+      <Point X="678.8069226570587" Y="416.8828883407305" GraphRef="dd70f" RelX="0.5" RelY="1.0" />
+      <Point X="680.5263551156953" Y="527.3380267859882" GraphRef="b7355" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b9ddc">
+    <Graphics ZOrder="32825" LineThickness="1.0">
+      <Point X="791.1786824318469" Y="410.6328883407305" GraphRef="c6e15" RelX="-1.0" RelY="0.5" />
+      <Point X="707.9423868312757" Y="410.6328883407305" GraphRef="dd70f" RelX="1.0" RelY="0.5" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d841c">
+    <Graphics ZOrder="32826" LineThickness="1.0">
+      <Point X="324.47123553064364" Y="769.16868177262" GraphRef="fbddb" RelX="0.5" RelY="-1.0" />
+      <Point X="298.0" Y="738.0" GraphRef="b17d5" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cb1bb">
+    <Graphics ZOrder="32827" LineThickness="1.0">
+      <Point X="201.56862745098027" Y="90.68767507002808" GraphRef="dc2ec" RelX="0.0" RelY="1.0" />
+      <Point X="201.56862745098027" Y="132.87815126050424" GraphRef="ce063" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c87bb">
+    <Graphics ZOrder="32828" LineThickness="1.0">
+      <Point X="201.56862745098027" Y="157.87815126050424" GraphRef="ce063" RelX="0.0" RelY="1.0" />
+      <Point X="221.9964441906748" Y="201.41344537815118" GraphRef="c11de" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b093a">
+    <Graphics ZOrder="32829" LineThickness="1.0">
+      <Point X="95.0" Y="391.88288834073046" GraphRef="a65cd" RelX="0.0" RelY="-1.0" />
+      <Point X="95.0" Y="340.5" GraphRef="cd179" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a67f6">
+    <Graphics ZOrder="32830" LineThickness="1.0">
+      <Point X="858.6786824318469" Y="416.8828883407305" GraphRef="c6e15" RelX="0.5" RelY="1.0" />
+      <Point X="890.1638292302853" Y="476.68203874168347" GraphRef="d0bcb" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b9270">
+    <Graphics ZOrder="32831" LineThickness="1.0">
+      <Point X="298.0" Y="738.0" GraphRef="b17d5" RelX="0.0" RelY="0.0" />
+      <Point X="128.65163819721587" Y="762.4651326186153" GraphRef="bdc90" RelX="0.5" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a951c">
+    <Graphics ZOrder="32832" LineThickness="1.0">
+      <Point X="707.9423868312757" Y="398.1328883407305" GraphRef="dd70f" RelX="1.0" RelY="-0.5" />
+      <Point X="791.1786824318469" Y="398.1328883407305" GraphRef="c6e15" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c0bb6">
+    <Graphics ZOrder="32833" LineThickness="1.0">
+      <Point X="246.56862745098027" Y="71.93767507002808" GraphRef="dc2ec" RelX="1.0" RelY="-0.5" />
+      <Point X="327.35945781562225" Y="71.93767507002808" GraphRef="d485e" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e464f">
+    <Graphics ZOrder="32876" LineThickness="1.0">
+      <Point X="200.0" Y="711.0" GraphRef="af896" RelX="0.0" RelY="0.0" />
+      <Point X="300.8237451768812" Y="769.16868177262" GraphRef="fbddb" RelX="-0.5" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e8efc">
+    <Graphics ZOrder="32878" LineThickness="1.0">
+      <Point X="161.0" Y="438.16868177261995" GraphRef="f411a" RelX="-0.5" RelY="1.0" />
+      <Point X="199.14139421204766" Y="472.0" GraphRef="e5685" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c7032">
+    <Graphics ZOrder="32879" LineThickness="1.0">
+      <Point X="199.14139421204766" Y="472.0" GraphRef="e5685" RelX="0.0" RelY="0.0" />
+      <Point X="263.47123553064364" Y="438.16868177261995" GraphRef="fa732" RelX="-0.5" RelY="1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d54b9">
+    <Graphics ZOrder="32880" LineThickness="1.0">
+      <Point X="203.75" Y="681.0" GraphRef="bfaa3" RelX="-0.5" RelY="1.0" />
+      <Point X="200.0" Y="711.0" GraphRef="af896" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d5b5f">
+    <BiopaxRef>e84</BiopaxRef>
+    <BiopaxRef>d18</BiopaxRef>
+    <BiopaxRef>ba2</BiopaxRef>
+    <Graphics ZOrder="32899" LineThickness="1.0">
+      <Point X="764.1851851851852" Y="680.7314814814813" GraphRef="cf198" RelX="0.0" RelY="1.0" />
+      <Point X="765.1803025329613" Y="719.5981317358712" GraphRef="c9a67" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Anchor Position="0.6638624387538133" Shape="None" GraphId="cb169" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c7e95">
+    <BiopaxRef>e84</BiopaxRef>
+    <BiopaxRef>d18</BiopaxRef>
+    <BiopaxRef>ba2</BiopaxRef>
+    <Graphics ZOrder="32901" LineThickness="1.0">
+      <Point X="878.0228951255539" Y="646.3700147710482" GraphRef="a103d" RelX="-0.5" RelY="1.0" />
+      <Point X="764.8458062145261" Y="706.5335907055521" GraphRef="cb169" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ee670">
+    <BiopaxRef>d18</BiopaxRef>
+    <BiopaxRef>ba2</BiopaxRef>
+    <Graphics ZOrder="32903" LineThickness="1.0">
+      <Point X="1015.109086930358" Y="786.8425652387979" GraphRef="a7082" RelX="0.0" RelY="1.0" />
+      <Point X="985.1929247507518" Y="913.4024890913753" GraphRef="b3aa0" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a6153">
+    <Graphics ZOrder="32904" LineThickness="1.0">
+      <Point X="504.093567251462" Y="398.1328883407305" GraphRef="a223c" RelX="0.0" RelY="0.0" />
+      <Point X="502.1154527169925" Y="620.3380267859882" GraphRef="c069d" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="af5ff">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="320.0" Y="661.875" GraphRef="bfaa3" RelX="1.0" RelY="0.5" />
+      <Point X="686.6851851851852" Y="661.6064814814813" GraphRef="cf198" RelX="-1.0" RelY="0.5" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b4b03">
+    <Graphics ZOrder="32797" LineStyle="Broken" LineThickness="1.0">
+      <Point X="410.57590690597243" Y="348.0" GraphRef="dbb34" RelX="0.0" RelY="0.0" />
+      <Point X="510.70000000000005" Y="361.3500000000001" GraphRef="ab5e1" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bad2e">
+    <Comment>"[...]In most patient, the E2 subunit could be responsible for the "classic metabolic" presentation of 2-oxoglutaric aciduria" [Chapter 20, book of Blau]</Comment>
+    <Graphics ZOrder="32801" LineStyle="Broken" LineThickness="1.0">
+      <Point X="612.0" Y="314.0" GraphRef="aa7c3" RelX="1.0" RelY="0.0" />
+      <Point X="618.7" Y="355.1000000000001" GraphRef="ab5e1" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ce660">
+    <Comment>Clinically recognisable form of:
+deafness, onycho-osteodystrophy,
+thumbs and sensorineural deafness,
+is related to defect of E1 subunit.</Comment>
+    <Graphics ZOrder="32807" LineStyle="Broken" LineThickness="1.0">
+      <Point X="612.0" Y="264.0" GraphRef="eb774" RelX="1.0" RelY="0.0" />
+      <Point X="827.0" Y="183.75" GraphRef="a6107" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="dfb53">
+    <Graphics ZOrder="32808" LineStyle="Broken" LineThickness="1.0">
+      <Point X="95.0" Y="302.7" GraphRef="f66a1" RelX="0.0" RelY="0.0" />
+      <Point X="149.70605612998511" Y="317.26052437223035" GraphRef="ba8f7" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c67a2">
+    <Graphics ZOrder="32812" LineStyle="Broken" LineThickness="1.0">
+      <Point X="654.7" Y="367.6000000000001" GraphRef="ab5e1" RelX="1.0" RelY="0.0" />
+      <Point X="934.25" Y="251.0" GraphRef="da7d0" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c57d3">
+    <Graphics ConnectorType="Curved" ZOrder="32834" LineThickness="1.0">
+      <Point X="361.49111047668697" Y="202.03361344537797" GraphRef="a1146" RelX="1.0" RelY="0.0" />
+      <Point X="413.3613445378151" Y="220.5126050420167" />
+      <Point X="413.3613445378151" Y="238.99159663865544" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="beac4">
+    <Graphics ZOrder="32835" LineThickness="1.0">
+      <Point X="411.26050420168065" Y="242.14285714285714" />
+      <Point X="410.5759069059724" Y="281.3991596638656" GraphRef="ea00e" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d699a">
+    <Comment>Encephalopathic form is related 
+to E2 subunit deficiency</Comment>
+    <Graphics ZOrder="32869" LineStyle="Broken" LineThickness="1.0">
+      <Point X="612.0" Y="289.0" GraphRef="cdbcc" RelX="1.0" RelY="0.0" />
+      <Point X="827.0" Y="234.75" GraphRef="da7d0" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cb1eb">
+    <Graphics ZOrder="32881" LineStyle="Broken" LineThickness="1.0">
+      <Point X="179.0" Y="563.25" GraphRef="f901c" RelX="-1.0" RelY="-0.5" />
+      <Point X="153.0" Y="531.75" GraphRef="d933a" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="df641">
+    <Graphics ZOrder="32882" LineStyle="Broken" LineThickness="1.0">
+      <Point X="177.0" Y="650.25" />
+      <Point X="137.75" Y="639.0" GraphRef="b6487" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a7c6a">
+    <Graphics ZOrder="32902" LineStyle="Broken" LineThickness="1.0">
+      <Point X="310.0" Y="574.125" GraphRef="d8c56" RelX="1.0" RelY="0.5" />
+      <Point X="952.7685185185196" Y="574.6064814814822" GraphRef="cdef3" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Complex formation of &#xA;SCS with NDPK &#xA;is inprotant for &#xA;deoxyribonucleotide salvation, &#xA;which is needed for mtDNA &#xA;synthesis and integrity." GraphId="eb7d9">
+    <Graphics CenterX="908.1905283506491" CenterY="831.904049988884" Width="193.14814814814827" Height="93.51851851851916" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Relevant metabolic pathways,&#xA;illustrating the metabolic &#xA;effects of succinyl-CoA &#xA;sythethase deficiency" GraphId="fccbe">
+    <Graphics CenterX="320.5317577548003" CenterY="348.9937223042828" Width="162.48153618906886" Height="76.01550960118311" ZOrder="28672" FillColor="ccffcc" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="2-oxoglutaric aciduria" GraphId="ab5e1" Href="http://omim.org/2030740">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="582.7" CenterY="367.6000000000001" Width="144.0" Height="25.0" ZOrder="32836" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="In most patient, E2 subunit seems &#xA;responsible for &quot;classic metabolic&quot; &#xA;presentation of disease" GraphId="a8a68">
+    <Graphics CenterX="763.5" CenterY="286.0" Width="195.0" Height="62.0" ZOrder="32837" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Encephalopathic form is related &#xA;to E2 subunit deficiency" GraphId="b8036">
+    <Graphics CenterX="747.0" CenterY="222.0" Width="178.0" Height="25.0" ZOrder="32838" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="2-oxoglutaric aciduria:&#xA;encephalopathic form" GraphId="da7d0" Href="http://omim.org/2030740">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="898.5" CenterY="234.75" Width="143.0" Height="32.5" ZOrder="32867" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="2-oxoglutaric aciduria:&#xA;'DOOR syndrome&quot;" GraphId="a6107" Href="http://omim.org/2030740">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="898.5" CenterY="183.75" Width="143.0" Height="32.5" ZOrder="32868" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Clinically recognisable form of:&#xA;deafness, onycho-osteodystrophy,&#xA;thumbs and sensorineural deafness,&#xA;is related to defect of E1 subunit." GraphId="eb160">
+    <Graphics CenterX="726.5" CenterY="154.75" Width="209.0" Height="69.5" ZOrder="32870" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Fumarase &#xA;deficiency" GraphId="ba8f7" Href="http://omim.org/136850">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="192.20605612998511" CenterY="325.63552437223035" Width="85.0" Height="33.5" ZOrder="32871" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="SCS &#xA;deficiency&#xA;SUCLA2" GraphId="b6487" Href="http://omim.org/612073">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="118.5" CenterY="613.75" Width="77.0" Height="50.5" ZOrder="32872" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="SCS &#xA;deficiency&#xA;SUCLG1" GraphId="d933a" Href="http://omim.org/245400">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="117.5" CenterY="531.75" Width="71.0" Height="50.5" ZOrder="32873" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Group GroupId="c285b" GraphId="a2962" Style="Complex" />
+  <Group GroupId="bb6ec" GraphId="a7082" Style="Complex" />
+  <Group GroupId="c708b" GraphId="b8f8a" Style="Complex" />
+  <Group GroupId="a92f4" GraphId="bafa6" Style="Complex" />
+  <Group GroupId="e0d59" GraphId="bfaa3" Style="Complex" />
+  <Group GroupId="ed0fa" GraphId="c9a67" Style="Complex" />
+  <Group GroupId="f57f0" GraphId="cdef3" Style="Complex" />
+  <Group GroupId="edcb9" GraphId="cf198" Style="Complex" />
+  <Group GroupId="ad85d" GraphId="d8c56" Style="Complex" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mitochondrial encephalomyopathy</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:890</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d18">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8016083</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Characterization of nucleoside-diphosphate kinase from Pseudomonas aeruginosa: complex formation with succinyl-CoA synthetase.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kavanaugh-Black A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connolly DM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chugani SA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chakrabarty AM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e84">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1653609</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apparent ATP-linked succinate thiokinase activity and its relation to nucleoside diphosphate kinase in mitochondrial matrix preparations from rabbit.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1991</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kadrmas EF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ray PD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lambeth DO</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a65">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9783642403361</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physician's Guide to the Diagnosis, Treatment, and Follow-Up of Inherited Metabolic Diseases</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Springer-Verlag Berlin Heidelberg</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nenad Blau</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marinus Duran</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K Michael Gibson</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlo Dionisi-Vici.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ba2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11831846</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Localization and characterization of the mitochondrial isoform of the nucleoside diphosphate kinase in the pancreatic beta cell: evidence for its complexation with mitochondrial succinyl-CoA synthetase.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arch Biochem Biophys</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kowluru A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tannous M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen HQ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">citric acid cycle pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000026</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylmalonic acidemia</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14749</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fumaric aciduria pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0002098</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

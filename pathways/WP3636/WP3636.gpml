@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Turbo design of glycolysis" Data-Source="Converted from SBML" Organism="Saccharomyces cerevisiae">
+  <Comment Source="WikiPathways-description">Many catabolic pathways begin with an ATP-requiring activation step, after which further metabolism yields a surplus of ATP. Such a 'turbo' principle is useful but also contains an inherent risk. This is illustrated by a detailed kinetic analysis of glycolysis in a Saccharomyces cerevisiae mutant.
+The model has been converted to GPML using the PathSBML plugin from PathVIsio, importing the model BIOMD0000000253 from the BioModels Database directly. The layout has been improved manually.
+</Comment>
+  <BiopaxRef>f8e</BiopaxRef>
+  <Attribute Key="org.pathvisio.sbgn.language" Value="process description" />
+  <Graphics BoardWidth="709.5210970464153" BoardHeight="503.74085794655304" />
+  <DataNode TextLabel="ADP" GraphId="ADP" Type="Metabolite">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="simple chemical" />
+    <Graphics CenterX="235.5" CenterY="324.9704641350203" Width="109.0" Height="37.688466947960876" ZOrder="32768" FontName="Dialog" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="ChEBI" ID="CHEBI:16761" />
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="ATP" Type="Metabolite">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="simple chemical" />
+    <Graphics CenterX="235.5" CenterY="125.85196905766509" Width="109.0" Height="37.688466947960876" ZOrder="32768" FontName="Dialog" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="ChEBI" ID="CHEBI:15422" />
+  </DataNode>
+  <DataNode TextLabel="Fru 1,6 P2" GraphId="Fru16P2" Type="Metabolite">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="simple chemical" />
+    <Graphics CenterX="235.5" CenterY="454.8966244725726" Width="109.0" Height="37.688466947960876" ZOrder="32768" FontName="Dialog" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="HMDB" ID="HMDB0001058" />
+  </DataNode>
+  <DataNode TextLabel="Glc" GraphId="Glc" Type="Metabolite">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="simple chemical" />
+    <Graphics CenterX="434.5" CenterY="103.15576652601956" Width="109.0" Height="37.688466947960876" ZOrder="32768" FontName="Dialog" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="ChEBI" ID="CHEBI:17925" />
+  </DataNode>
+  <DataNode TextLabel="HMP" GraphId="HMP" Type="Metabolite">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="simple chemical" />
+    <Graphics CenterX="433.5" CenterY="273.8519690576652" Width="109.0" Height="37.688466947960876" ZOrder="32768" FontName="Dialog" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="ChEBI" ID="CHEBI:17665" />
+  </DataNode>
+  <DataNode TextLabel="Tre 6 P" GraphId="b021f" Type="Metabolite">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="simple chemical" />
+    <Graphics CenterX="625.0210970464153" CenterY="197.15576652601953" Width="109.0" Height="37.688466947960876" ZOrder="32783" FontName="Dialog" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="ChEBI" ID="CHEBI:18283" />
+  </DataNode>
+  <Interaction GraphId="id11c67633">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="181.0" Y="454.8966244725726" GraphRef="Fru16P2" RelX="-1.0" RelY="0.0" />
+      <Point X="118.81715893108276" Y="414.7313642756679" GraphRef="c78b8" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="WikiPathways" ID="lower" />
+  </Interaction>
+  <Interaction GraphId="id14ad4803">
+    <Attribute Key="org.pathvisio.sbgn.isPort" Value="true" />
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="335.5" Y="352.0478199718694" GraphRef="PFK" RelX="0.0" RelY="-2.5" />
+      <Point X="335.5" Y="364.0478199718694" GraphRef="PFK" RelX="0.0" RelY="-1.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="f52b9" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id20c84302">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="434.64873417721594" Y="220.84950773558285" GraphRef="e89a9" RelX="0.0" RelY="0.0" />
+      <Point X="433.5" Y="255.00773558368473" GraphRef="HMP" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="KEGG Reaction" ID="R02848" />
+  </Interaction>
+  <Interaction GraphId="id2f8cdcc4">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="78.81715893108276" Y="414.7313642756679" GraphRef="b4c9e" RelX="0.0" RelY="0.0" />
+      <Point X="45.90857946554138" Y="411.0" />
+      <Point X="13.0" Y="268.42598452883254" />
+      <Point X="181.0" Y="125.85196905766509" GraphRef="ATP" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="WikiPathways" ID="lower" />
+  </Interaction>
+  <Interaction GraphId="id35bbd1f7">
+    <Attribute Key="org.pathvisio.sbgn.isPort" Value="true" />
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="235.64873417721594" Y="241.84950773558285" GraphRef="ATPase" RelX="0.0" RelY="2.5" />
+      <Point X="235.64873417721594" Y="229.84950773558285" GraphRef="ATPase" RelX="0.0" RelY="1.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="ca877" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id41a423c0">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="262.75" Y="144.69620253164553" GraphRef="ATP" RelX="0.5" RelY="1.0" />
+      <Point X="335.5" Y="352.0478199718694" GraphRef="f52b9" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="KEGG Reaction" ID="R00756" />
+  </Interaction>
+  <Interaction GraphId="id6527f66">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="235.64873417721594" Y="241.84950773558285" GraphRef="ca877" RelX="0.0" RelY="0.0" />
+      <Point X="235.5" Y="306.1262306610398" GraphRef="ADP" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="Rhea" ID="13068" />
+  </Interaction>
+  <Interaction GraphId="id92e16ff0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="235.5" Y="144.69620253164553" GraphRef="ATP" RelX="0.0" RelY="1.0" />
+      <Point X="235.64873417721594" Y="201.84950773558285" GraphRef="c8f0d" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Rhea" ID="13068" />
+  </Interaction>
+  <Interaction GraphId="id934cbc39">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="434.5" Y="122.0" GraphRef="Glc" RelX="0.0" RelY="1.0" />
+      <Point X="434.64873417721594" Y="180.84950773558285" GraphRef="e8de0" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="KEGG Reaction" ID="R02848" />
+  </Interaction>
+  <Interaction GraphId="id9dc671dc">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="290.0" Y="125.85196905766509" GraphRef="ATP" RelX="1.0" RelY="0.0" />
+      <Point X="393.0" Y="153.35073839662397" />
+      <Point X="434.64873417721594" Y="180.84950773558285" GraphRef="e8de0" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="KEGG Reaction" ID="R02848" />
+  </Interaction>
+  <Interaction GraphId="ida58a270d">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="335.5" Y="391.0351617440199" GraphRef="a2140" RelX="0.0" RelY="0.0" />
+      <Point X="290.0" Y="454.8966244725726" GraphRef="Fru16P2" RelX="1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="KEGG Reaction" ID="R00756" />
+  </Interaction>
+  <Interaction GraphId="idab418b6e">
+    <Attribute Key="org.pathvisio.sbgn.isPort" Value="true" />
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="235.64873417721594" Y="201.84950773558285" GraphRef="ATPase" RelX="0.0" RelY="-2.5" />
+      <Point X="235.64873417721594" Y="213.84950773558285" GraphRef="ATPase" RelX="0.0" RelY="-1.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="c8f0d" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idafe1c53a">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="181.0" Y="324.9704641350203" GraphRef="ADP" RelX="-1.0" RelY="0.0" />
+      <Point X="118.81715893108276" Y="414.7313642756679" GraphRef="c78b8" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="WikiPathways" ID="lower" />
+  </Interaction>
+  <Interaction GraphId="idb69b4899">
+    <Attribute Key="org.pathvisio.sbgn.isPort" Value="true" />
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="118.81715893108276" Y="414.7313642756679" GraphRef="lower" RelX="2.5" RelY="0.0" />
+      <Point X="106.81715893108276" Y="414.7313642756679" GraphRef="lower" RelX="1.0" RelY="0.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="c78b8" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc9638ccd">
+    <Attribute Key="org.pathvisio.sbgn.isPort" Value="true" />
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="335.5" Y="392.0478199718694" GraphRef="PFK" RelX="0.0" RelY="2.5" />
+      <Point X="335.5" Y="380.0478199718694" GraphRef="PFK" RelX="0.0" RelY="1.0" />
+      <Anchor Position="0.08438818565412494" Shape="None" GraphId="a2140" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd7293e">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="433.5" Y="292.69620253164567" GraphRef="HMP" RelX="0.0" RelY="1.0" />
+      <Point X="335.5" Y="352.0478199718694" GraphRef="f52b9" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="KEGG Reaction" ID="R00756" />
+  </Interaction>
+  <Interaction GraphId="ideeca3d4b">
+    <Attribute Key="org.pathvisio.sbgn.isPort" Value="true" />
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="78.81715893108276" Y="414.7313642756679" GraphRef="lower" RelX="-2.5" RelY="0.0" />
+      <Point X="90.81715893108276" Y="414.7313642756679" GraphRef="lower" RelX="-1.0" RelY="0.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="b4c9e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d66a3">
+    <Graphics ZOrder="32779" LineThickness="1.0">
+      <Point X="488.0" Y="273.8519690576652" GraphRef="HMP" RelX="1.0" RelY="0.0" />
+      <Point X="552.0210970464153" Y="272.85196905766514" GraphRef="cf0cc" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="KEGG Reaction" ID="R02848" />
+  </Interaction>
+  <Interaction GraphId="cac72">
+    <Graphics ConnectorType="Curved" ZOrder="32780" LineThickness="1.0">
+      <Point X="568.0210970464153" Y="272.85196905766514" GraphRef="cf0cc" RelX="1.0" RelY="0.0" />
+      <Point X="625.0210970464153" Y="215.99999999999997" GraphRef="b021f" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="KEGG Reaction" ID="R02848" />
+  </Interaction>
+  <Interaction GraphId="db770">
+    <Graphics ZOrder="32782" LineThickness="1.0">
+      <Point X="570.5210970464153" Y="197.15576652601953" GraphRef="b021f" RelX="-1.0" RelY="0.0" />
+      <Point X="442.64873417721594" Y="200.84950773558285" GraphRef="a9355" RelX="1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a7f2a">
+    <Attribute Key="org.pathvisio.sbgn.isPort" Value="true" />
+    <Graphics ZOrder="32784" LineThickness="1.0">
+      <Point X="434.64873417721594" Y="220.84950773558285" GraphRef="a9355" RelX="0.0" RelY="2.5" />
+      <Point X="434.64873417721594" Y="208.84950773558285" GraphRef="a9355" RelX="0.0" RelY="1.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="e89a9" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c191a">
+    <Attribute Key="org.pathvisio.sbgn.isPort" Value="true" />
+    <Graphics ZOrder="32785" LineThickness="1.0">
+      <Point X="434.64873417721594" Y="180.84950773558285" GraphRef="a9355" RelX="0.0" RelY="-2.5" />
+      <Point X="434.64873417721594" Y="192.84950773558285" GraphRef="a9355" RelX="0.0" RelY="-1.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="e8de0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="" GraphId="ATPase">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="process" />
+    <Graphics CenterX="235.64873417721594" CenterY="221.84950773558285" Width="16.0" Height="16.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="" GraphId="PFK">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="process" />
+    <Graphics CenterX="335.5" CenterY="372.0478199718694" Width="16.0" Height="16.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="" GraphId="lower">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="process" />
+    <Graphics CenterX="98.81715893108276" CenterY="414.7313642756679" Width="16.0" Height="16.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="" GraphId="cf0cc">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="process" />
+    <Graphics CenterX="560.0210970464153" CenterY="272.85196905766514" Width="16.0" Height="16.0" ZOrder="32781" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="" GraphId="a9355">
+    <Attribute Key="org.pathvisio.sbgn.class" Value="process" />
+    <Graphics CenterX="434.64873417721594" CenterY="200.84950773558285" Width="16.0" Height="16.0" ZOrder="32786" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f8e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9612078</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The danger of metabolic pathways with turbo design.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trends Biochem Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teusink B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walsh MC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Dam K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westerhoff HV</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycolysis pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000640</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

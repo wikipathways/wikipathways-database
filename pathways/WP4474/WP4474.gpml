@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Circulating monocytes and cardiac macrophages in diastolic dysfunction" Version="20181109" Organism="Mus musculus">
+  <Comment Source="WikiPathways-description">This pathway is modeled based on fig 10 in [https://www.ncbi.nlm.nih.gov/pubmed/29339450 Hulsmans et al], and was developed in collaboration with Dr. Matthias Nahrendorf.
+
+Circulating monocytes and myocardial macrophage density are increased in diastolic dysfunction, and the macrophage expansion is partially driven by monocyte recruitment. Mechanistically, cardiac macrophages produce more IL-10 leading to autocrine activation toward a fibrogenic phenotype. A profibrotic macrophage subset secretes more Spp1 (OPN) and fewer proteases and MMPs, contributing to fibroblast activation, collagen deposition, and subsequently increased myocardial stiffness and diastolic dysfunction. (Description based on figure 10 legend).</Comment>
+  <Comment Source="WikiPathways-description">draft</Comment>
+  <BiopaxRef>c8d</BiopaxRef>
+  <Graphics BoardWidth="861.0" BoardHeight="645.5"/>
+  <DataNode TextLabel="Ccl2" GraphId="e8529" Type="GeneProduct" GroupRef="a182b">
+    <Graphics CenterX="279.0" CenterY="96.0" Width="48.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000035385"/>
+  </DataNode>
+  <DataNode TextLabel="Il10" GraphId="f62eb" Type="GeneProduct">
+    <Graphics CenterX="314.0" CenterY="318.89075630252086" Width="48.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000016529"/>
+  </DataNode>
+  <DataNode TextLabel="ROS" GraphId="faf9f" Type="Metabolite">
+    <Graphics CenterX="425.5" CenterY="146.0" Width="59.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:26523"/>
+  </DataNode>
+  <DataNode TextLabel="Spp1" GraphId="e4474" Type="GeneProduct">
+    <Graphics CenterX="437.5" CenterY="325.89075630252086" Width="55.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000029304"/>
+  </DataNode>
+  <DataNode TextLabel="ROS" GraphId="a0e49" Type="Metabolite">
+    <Graphics CenterX="575.5" CenterY="213.0" Width="41.0" Height="25.0" ZOrder="32775" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:26523"/>
+  </DataNode>
+  <DataNode TextLabel="ROS" GraphId="cbe4f" Type="Metabolite">
+    <Graphics CenterX="575.5" CenterY="509.0" Width="41.0" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:26523"/>
+  </DataNode>
+  <DataNode TextLabel="Il10" GraphId="ecbdb" Type="GeneProduct">
+    <Graphics CenterX="366.0" CenterY="256.89075630252086" Width="48.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000016529"/>
+  </DataNode>
+  <DataNode TextLabel="Ccr2" GraphId="b7ea4" Type="GeneProduct" GroupRef="a182b">
+    <Graphics CenterX="301.0" CenterY="71.0" Width="50.0" Height="25.0" ZOrder="32790" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000049103"/>
+  </DataNode>
+  <Interaction>
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="425.5" Y="133.5" GraphRef="faf9f" RelX="0.0" RelY="-1.0"/>
+      <Point X="425.5" Y="105.5" GraphRef="f7d5a" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id20579a2a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="596.0816065635479" Y="239.5017707256638" GraphRef="cf996" RelX="0.0" RelY="1.0"/>
+      <Point X="596.4177422100126" Y="492.0" GraphRef="ff46a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.7155167717755971" Shape="None" GraphId="fc9f4"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id491bcdcf">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="342.94957983193274" Y="416.8907563025215" GraphRef="f4331" RelX="1.0" RelY="0.0"/>
+      <Point X="596.322117256185" Y="420.1684886150914" GraphRef="fc9f4" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8dc22128">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="342.0" Y="256.89075630252086" GraphRef="ecbdb" RelX="-1.0" RelY="0.0"/>
+      <Point X="321.0999949130712" Y="286.89075630252074" GraphRef="d64ce" RelX="0.5" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id9bb7056c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="285.39999660871416" Y="363.89075630252086" GraphRef="d64ce" RelX="0.0" RelY="1.0"/>
+      <Point X="284.94957983193274" Y="404.3907563025215" GraphRef="f4331" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc0a204e5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="501.4177422100126" Y="544.2362891848172" GraphRef="e1c13" RelX="0.0" RelY="1.0"/>
+      <Point X="501.0" Y="590.5" GraphRef="af9a2" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="iddad3767a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="356.7999932174283" Y="325.3907563025208" GraphRef="d64ce" RelX="1.0" RelY="0.0"/>
+      <Point X="410.0" Y="325.89075630252086" GraphRef="e4474" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ide8612604">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="465.0" Y="325.89075630252086" GraphRef="e4474" RelX="1.0" RelY="0.0"/>
+      <Point X="596.322117256185" Y="420.1684886150914" GraphRef="fc9f4" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idedfc68b8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="307.1000010979558" Y="214.19998688083618" GraphRef="a1e2b" RelX="-0.5" RelY="1.0"/>
+      <Point X="285.39999660871416" Y="286.89075630252074" GraphRef="d64ce" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf9f9c3c3">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="338.0" Y="318.89075630252086" GraphRef="f62eb" RelX="1.0" RelY="0.0"/>
+      <Point X="378.0" Y="269.39075630252086" GraphRef="ecbdb" RelX="0.5" RelY="1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id83b2acf4">
+    <Graphics ZOrder="32789" LineThickness="1.0">
+      <Point X="346.0" Y="95.0" GraphRef="ef52f" RelX="0.0" RelY="1.0"/>
+      <Point X="326.2000021959115" Y="183.00000000000003" GraphRef="a1e2b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <GraphicalLine GraphId="idd714fab1" GroupRef="ad057">
+    <Graphics ZOrder="-5" LineThickness="2.0" Color="ff9999">
+      <Point X="351.0" Y="515.0"/>
+      <Point X="651.0" Y="517.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f7fa4" GroupRef="ad057">
+    <Graphics ZOrder="-4" LineThickness="2.0" Color="ff9999">
+      <Point X="325.0" Y="520.0"/>
+      <Point X="625.0" Y="522.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cce84" GroupRef="ad057">
+    <Graphics ZOrder="-3" LineThickness="2.0" Color="ff9999">
+      <Point X="339.0" Y="524.0"/>
+      <Point X="639.0" Y="526.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="add70" GroupRef="ad057">
+    <Graphics ZOrder="-2" LineThickness="2.0" Color="ff9999">
+      <Point X="349.0" Y="528.0"/>
+      <Point X="649.0" Y="530.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ee4a8">
+    <Graphics ZOrder="32780" LineThickness="2.0" Color="ff9999">
+      <Point X="359.0" Y="538.0"/>
+      <Point X="659.0" Y="540.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bb20b">
+    <Graphics ZOrder="32781" LineThickness="2.0" Color="ff9999">
+      <Point X="392.0" Y="533.0"/>
+      <Point X="692.0" Y="535.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f5ccd">
+    <Graphics ZOrder="32782" LineThickness="2.0" Color="ff9999">
+      <Point X="289.0" Y="542.0"/>
+      <Point X="589.0" Y="544.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a3dd7">
+    <Graphics ZOrder="32783" LineThickness="2.0" Color="ff9999">
+      <Point X="439.0" Y="547.0"/>
+      <Point X="739.0" Y="549.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Collagen deposition" GraphId="a4a91">
+    <Graphics CenterX="764.5" CenterY="535.0" Width="133.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Left ventricular&#10;diastolic dysfunction" GraphId="af9a2">
+    <Graphics CenterX="501.0" CenterY="603.0" Width="158.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Blood" GraphId="c3177">
+    <Graphics CenterX="758.0" CenterY="85.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Autocrine &#10;activation" GraphId="f2448">
+    <Graphics CenterX="411.5" CenterY="288.89075630252086" Width="73.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Decreased &#10;proteases / MMPs" GraphId="f4331">
+    <Graphics CenterX="284.94957983193274" CenterY="416.8907563025215" Width="116.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Fibroblast&#10;activation" GraphId="e40f0">
+    <Graphics CenterX="633.7478991596637" CenterY="355.1995798319328" Width="78.0" Height="33.5" ZOrder="32786" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Myocardium" GraphId="d5a20">
+    <Graphics CenterX="761.0" CenterY="199.0" Width="90.0" Height="25.0" ZOrder="32787" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Adhesion&#10;molecules" GraphId="f7d5a" GroupRef="a182b">
+    <Graphics CenterX="425.5" CenterY="90.25" Width="73.0" Height="30.5" ZOrder="32791" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Rectangle"/>
+  </Label>
+  <Shape TextLabel="Macrophage" GraphId="d64ce">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="285.39999660871416" CenterY="325.3907563025208" Width="142.79999321742832" Height="77.00000000000011" ZOrder="16384" FontSize="12" Valign="Middle" Align="Left" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="Endothelial cell" GraphId="ff78b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="258.79999999999995" CenterY="141.20000000000002" Width="156.79999999999995" Height="78.39999999999998" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="f7e1f">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="415.5999999999999" CenterY="141.20000000000002" Width="156.79999999999995" Height="78.39999999999998" ZOrder="32770" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="a95a3">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="572.3999999999999" CenterY="141.20000000000002" Width="156.79999999999995" Height="78.39999999999998" ZOrder="32771" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="Myofibroblast" GraphId="ff46a" GroupRef="ad057">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="596.4177422100126" CenterY="511.1407746203596" Width="162.83548442002504" Height="38.28154924071919" ZOrder="32772" FillColor="ffffff" FontSize="12" Valign="Middle" Align="Right" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="Fibroblast" GraphId="cf996">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="596.0816065635479" CenterY="214.2508853628318" Width="154.1632131270959" Height="50.501770725663945" ZOrder="32773" FontSize="12" Valign="Middle" Align="Right" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="b9ab7">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="729.1999999999998" CenterY="141.20000000000002" Width="156.79999999999995" Height="78.39999999999998" ZOrder="32778" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="c59ef">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="102.0" CenterY="141.20000000000002" Width="156.79999999999995" Height="78.39999999999998" ZOrder="32779" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ab8df" GroupRef="ad057">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="449.1856555351486" CenterY="524.6181445924086" Width="110.37131107029722" Height="23.236289184817227" ZOrder="32784" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="Monocyte" GraphId="ef52f" GroupRef="a182b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="346.0" CenterY="68.5" Width="88.0" Height="53.0" ZOrder="32785" FontSize="12" Valign="Middle" Align="Right" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="Monocyte" GraphId="a1e2b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="326.2000021959115" CenterY="198.5999934404181" Width="76.40000439182302" Height="31.199986880836153" ZOrder="32788" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="a182b" Style="Group"/>
+  <Group GroupId="ad057" GraphId="e1c13" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">macrophage</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000235</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000576</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiovascular system disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1287</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypertension</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10763</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">myofibroblast cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000186</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c8d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29339450</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiac macrophages promote diastolic dysfunction.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Exp Med</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hulsmans M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sager HB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roh JD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valero-Muñoz M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houstis NE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iwamoto Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilson RM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wojtkiewicz G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tricot B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Osborne MT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hung J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vinegoni C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naxerova K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sosnovik DE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zile MR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bradshaw AD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liao R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tawakol A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weissleder R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosenzweig A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swirski FK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sam F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nahrendorf M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intermediate monocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002393</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>monocyte</bp:TERM><bp:ID>CL:0000576</bp:ID><bp:Ontology>Cell Type</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>macrophage</bp:TERM><bp:ID>CL:0000235</bp:ID><bp:Ontology>Cell Type</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>cardiovascular system disease</bp:TERM><bp:ID>DOID:1287</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>myofibroblast cell</bp:TERM><bp:ID>CL:0000186</bp:ID><bp:Ontology>Cell Type</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>hypertension</bp:TERM><bp:ID>DOID:10763</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

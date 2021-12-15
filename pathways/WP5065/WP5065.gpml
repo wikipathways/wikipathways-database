@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="SARS-CoV-2 altering angiogenesis via NRP1" Version="20210217" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Mechanism of how the SARS-cov-2 virus is involved in altering angiogenesis and how NRP1 might play a role as an entry factor for the virus. </Comment>
+  <Graphics BoardWidth="949.5349999999986" BoardHeight="606.2525000000005"/>
+  <DataNode TextLabel="S2" GraphId="a43e4" Type="Protein">
+    <Graphics CenterX="487.7175000000002" CenterY="316.8730357142857" Width="80.0" Height="30.0" ZOrder="32768" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval"/>
+    <Xref Database="Wikidata" ID="Q106020384"/>
+  </DataNode>
+  <DataNode TextLabel="FURIN" GraphId="ab236" Type="GeneProduct">
+    <BiopaxRef>bac</BiopaxRef>
+    <BiopaxRef>e34</BiopaxRef>
+    <BiopaxRef>e47</BiopaxRef>
+    <Graphics CenterX="608.4774999999989" CenterY="220.67250000000033" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000140564"/>
+  </DataNode>
+  <DataNode TextLabel="Surface glycoprotein S" GraphId="b32ee" Type="Protein">
+    <Graphics CenterX="366.5812499999997" CenterY="149.75375000000034" Width="148.8375000000007" Height="35.65250000000001" ZOrder="32768" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P0DTC2"/>
+  </DataNode>
+  <DataNode TextLabel="NRP1" GraphId="b9e81" Type="GeneProduct">
+    <Graphics CenterX="534.1249999999998" CenterY="374.45750000000055" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000099250"/>
+  </DataNode>
+  <DataNode TextLabel="KDR" GraphId="be74d" Type="GeneProduct" GroupRef="f2297">
+    <Graphics CenterX="534.1249999999998" CenterY="510.9575000000004" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000128052"/>
+  </DataNode>
+  <DataNode TextLabel="S1" GraphId="c363c" Type="Protein">
+    <Graphics CenterX="380.5575" CenterY="374.4575000000006" Width="80.0" Height="30.0" ZOrder="32768" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval"/>
+    <Xref Database="Wikidata" ID="Q106020256"/>
+  </DataNode>
+  <DataNode TextLabel="ACE2" GraphId="d17ac" Type="GeneProduct">
+    <Graphics CenterX="533.0224999999998" CenterY="148.65125000000032" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000130234"/>
+  </DataNode>
+  <DataNode TextLabel="VEGFA" GraphId="ecd5d" Type="GeneProduct">
+    <Graphics CenterX="359.57047563805" CenterY="483.31406032482613" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000112715"/>
+  </DataNode>
+  <DataNode TextLabel="Angiogenesis" GraphId="f5b86" Type="Pathway">
+    <BiopaxRef>bac</BiopaxRef>
+    <BiopaxRef>b75</BiopaxRef>
+    <BiopaxRef>fe2</BiopaxRef>
+    <Graphics CenterX="705.1812499999999" CenterY="498.70000000000084" Width="130.8874999999991" Height="23.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Oval" Color="14961e"/>
+    <Xref Database="WikiPathways" ID="WP1993"/>
+  </DataNode>
+  <DataNode TextLabel="Membrane fusion" GraphId="f84bf" Type="Pathway">
+    <Graphics CenterX="705.1812499999997" CenterY="315.49607142857144" Width="133.1375000000005" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Oval" Color="14961e"/>
+    <Xref Database="Wikidata" ID="Q6556360"/>
+  </DataNode>
+  <DataNode TextLabel="NRP1" GraphId="c92a9" Type="GeneProduct" GroupRef="f2297">
+    <Graphics CenterX="534.1249999999998" CenterY="485.95750000000055" Width="90.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000099250"/>
+  </DataNode>
+  <Interaction GraphId="id19622e55">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="420.5575" Y="381.9575000000006" GraphRef="c363c" RelX="1.0" RelY="0.5"/>
+      <Point X="534.1249999999998" Y="416.75750000000056" GraphRef="c2f06" RelX="0.0" RelY="0.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id30105322">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="441.0000000000001" Y="149.7537500000003" GraphRef="b32ee" RelX="1.0" RelY="0.0"/>
+      <Point X="488.0224999999998" Y="148.65125000000032" GraphRef="d17ac" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id34540c1c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="527.7175000000002" Y="316.8730357142857" GraphRef="a43e4" RelX="1.0" RelY="0.0"/>
+      <Point X="638.6124999999995" Y="315.49607142857144" GraphRef="f84bf" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3790eadf">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="534.1249999999998" Y="386.95750000000055" GraphRef="b9e81" RelX="0.0" RelY="1.0"/>
+      <Point X="534.1249999999998" Y="461.45750000000055" GraphRef="e0e95" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+      <Anchor Position="0.4" Shape="None" GraphId="c2f06"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id43cd660f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="404.57047563805" Y="477.06406032482613" GraphRef="ecd5d" RelX="1.0" RelY="-0.5"/>
+      <Point X="511.6249999999998" Y="386.95750000000055" GraphRef="b9e81" RelX="-0.5" RelY="1.0" ArrowHead="mim-binding"/>
+      <Anchor Position="0.5974902314931949" Shape="None" GraphId="b7f6f"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id4e2d6c6e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="591.1249999999998" Y="498.4575000000005" GraphRef="e0e95" RelX="1.0" RelY="0.0"/>
+      <Point X="639.7375000000003" Y="498.70000000000084" GraphRef="f5b86" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id9a9099b7">
+    <BiopaxRef>e47</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="400.5575" Y="389.4575000000006" GraphRef="c363c" RelX="0.5" RelY="1.0"/>
+      <Point X="468.53450818146524" Y="423.2262707372906" GraphRef="b7f6f" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida9ef11ca">
+    <BiopaxRef>d75</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="420.5575" Y="374.4575000000006" GraphRef="c363c" RelX="1.0" RelY="0.0"/>
+      <Point X="489.1249999999998" Y="374.45750000000055" GraphRef="b9e81" RelX="-1.0" RelY="0.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idb065e73b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="563.4774999999989" Y="220.67250000000033" GraphRef="ab236" RelX="-1.0" RelY="0.0"/>
+      <Point X="376.0615732547827" Y="297.7337054159441" GraphRef="c4f7c" RelX="0.0" RelY="0.0" ArrowHead="mim-cleavage"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc047fb67">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="403.7906249999999" Y="167.58000000000033" GraphRef="b32ee" RelX="0.5" RelY="1.0"/>
+      <Point X="447.7175000000002" Y="309.3730357142857" GraphRef="a43e4" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.4" Shape="None" GraphId="a898d"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idcb5a79c6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="366.5812499999997" Y="167.58000000000033" GraphRef="b32ee" RelX="0.0" RelY="1.0"/>
+      <Point X="380.5575" Y="359.4575000000006" GraphRef="c363c" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.6783166625370018" Shape="None" GraphId="c4f7c"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf5f63b5b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="563.4774999999989" Y="220.67250000000033" GraphRef="ab236" RelX="-1.0" RelY="0.0"/>
+      <Point X="421.361375" Y="224.2972142857145" GraphRef="a898d" RelX="0.0" RelY="0.0" ArrowHead="mim-cleavage"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Shape TextLabel="Host cell" GraphId="f49b9">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="668.859147331786" CenterY="334.98250000000024" Width="244.64829466357435" Height="482.54000000000053" ZOrder="16384" FontWeight="Bold" FontSize="15" ShapeType="RoundedRectangle" LineThickness="3.0" Color="999999" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="SARS-CoV-2" GraphId="fb84f">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="242.9745533642691" CenterY="116.87321055684474" Width="133.28089327146165" Height="114.28142111368871" ZOrder="16384" FontWeight="Bold" FontSize="15" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Color="ff9933" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="f2297" GraphId="e0e95" Style="Complex"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d75">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32869019</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARS-CoV-2 Spike protein co-opts VEGF-A/Neuropilin-1 receptor signaling to induce analgesia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioRxiv</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moutal A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin LF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boinon L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gomez K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ran D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stratton HJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cai S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luo S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gonzalez KB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perez-Miller S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patwardhan A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ibrahim MM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khanna R</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bac">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33395426</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role of Neuropilin-1 in COVID-19.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLoS Pathog</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayi BS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leibowitz JA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Woods AT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ammon KA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu AE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raja A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e34">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33458558</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurobiology of SARS-CoV-2 interactions with the peripheral nervous system: implications for COVID-19 and pain.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pain Rep</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McFarland AJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yousuf MS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shiers S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Price TJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e47">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33442700</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuropilin-1 Assists SARS-CoV-2 Infection by Stimulating the Separation of Spike Protein Domains S1 and S2.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bioRxiv</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li ZL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buck M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b75">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33082294</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuropilin-1 is a host factor for SARS-CoV-2 infection.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daly JL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simonetti B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klein K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen KE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williamson MK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AntÃ³n-PlÃ¡garo C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shoemark DK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SimÃ³n-Gracia L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bauer M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hollandi R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greber UF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horvath P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sessions RB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helenius A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hiscox JA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teesalu T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matthews DA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davidson AD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins BM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cullen PJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yamauchi Y</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fe2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9529250</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuropilin-1 is expressed by endothelial and tumor cells as an isoform-specific receptor for vascular endothelial growth factor.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soker S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Takashima S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miao HQ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neufeld G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klagsbrun M</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>disease pathway</bp:TERM><bp:ID>PW:0000013</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>severe acute respiratory syndrome</bp:TERM><bp:ID>DOID:2945</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>COVID-19</bp:TERM><bp:ID>DOID:0080600</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

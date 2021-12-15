@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Vitamin B12 disorders" Version="20161102" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway depicts the metabolism of cobalamin (also known as cbl or Vit. B12) and related diseases (for a full overview of the B12 metabolism, see [https://www.wikipathways.org/index.php/Pathway:WP1533]).
+Vit. B12 is derived from food sources and thereafter metabolised for 2 reasons; 1. to methylate homocysteine to methionine, and 2. to convert methylmalonyl-CoA to succinyl-CoA.
+This pathway depicts 15 distinct diseases which are related to a malfunctioning in the absorption and transport section, or the intracellular processing of Cbl.
+However, the exact function of some proteins which have been linked to these diseases, remains unclear.
+Substitution of Vit. B12 is a therapeutic option for patients with  absorption and transport related diseases, however does not perform so well for patient with intracellular processing defects.
+
+This pathway was inspired by Chapter 13 of the book of Blau (ISBN 3642403360 (978-3642403361)).</Comment>
+  <BiopaxRef>ad1</BiopaxRef>
+  <Graphics BoardWidth="2103.2338883665648" BoardHeight="1083.5861358956759" />
+  <DataNode TextLabel="Methylmalonic Acid" GraphId="a16ae" Type="Metabolite">
+    <Graphics CenterX="1002.1177553144639" CenterY="1021.9716370524986" Width="123.31821929101395" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" Color="ff6600" />
+    <Xref Database="Wikidata" ID="Q239598" />
+  </DataNode>
+  <DataNode TextLabel="Hcy" GraphId="a93cf" Type="Metabolite" GroupRef="ad3e9">
+    <Comment>Hcy = homocysteine</Comment>
+    <Graphics CenterX="1479.9427901469176" CenterY="591.3333644069482" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q192466" />
+  </DataNode>
+  <DataNode TextLabel="cbLF" GraphId="a9cc2" Type="Protein" GroupRef="a367f">
+    <Graphics CenterX="1464.0998842278354" CenterY="316.3373599093775" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="2.1.1.133" />
+  </DataNode>
+  <DataNode TextLabel="NADP+" GraphId="aa6dd" Type="Metabolite" GroupRef="cf060">
+    <BiopaxRef>b2f</BiopaxRef>
+    <Graphics CenterX="1688.3437859849516" CenterY="715.9940209267547" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:18009" />
+  </DataNode>
+  <DataNode TextLabel="FAD" GraphId="aded0" Type="Metabolite">
+    <Comment>cofactor</Comment>
+    <Graphics CenterX="1672.1761092732054" CenterY="371.03481624757967" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16238" />
+  </DataNode>
+  <DataNode TextLabel="Adenosylcobalamin" GraphId="b5682" Type="Metabolite">
+    <Comment>biologically active form</Comment>
+    <Graphics CenterX="1121.3505111373504" CenterY="836.9292170675483" Width="153.45043904672548" Height="27.565764907209598" ZOrder="32768" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q47517602" />
+  </DataNode>
+  <DataNode TextLabel="2 * SAH" GraphId="b744b" Type="Metabolite" GroupRef="cf060">
+    <Comment>aka S-adenosyl-L-homocysteine</Comment>
+    <BiopaxRef>b2f</BiopaxRef>
+    <Graphics CenterX="1688.3437859849516" CenterY="740.9940209267548" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16680" />
+  </DataNode>
+  <DataNode TextLabel="FMN" GraphId="b74d8" Type="Metabolite">
+    <Comment>cofactor</Comment>
+    <Graphics CenterX="1672.1761092732052" CenterY="451.0348162475815" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17621" />
+  </DataNode>
+  <DataNode TextLabel="MMA" GraphId="c6aed" Type="Metabolite" GroupRef="ab7b7">
+    <Comment>MMA = methylmalonic acid</Comment>
+    <Graphics CenterX="1113.8127834729455" CenterY="591.2437910589497" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q239598" />
+  </DataNode>
+  <DataNode TextLabel="NADPH" GraphId="d58fa" Type="Metabolite">
+    <Graphics CenterX="1179.8077425737006" CenterY="406.4893617021272" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16474" />
+  </DataNode>
+  <DataNode TextLabel="2 * SAM" GraphId="d71cc" Type="Metabolite" GroupRef="f1037">
+    <Comment>aka S-adenosyl-L-methionine</Comment>
+    <BiopaxRef>b2f</BiopaxRef>
+    <Graphics CenterX="1688.3437859849516" CenterY="839.09773240467" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15414" />
+  </DataNode>
+  <DataNode TextLabel="Succinyl-CoA" GraphId="e04e4" Type="Metabolite">
+    <Graphics CenterX="1230.3061312419165" CenterY="896.6624861868747" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15380" />
+  </DataNode>
+  <DataNode TextLabel="MUT" GraphId="ea855" Type="Protein">
+    <Comment>aka methylmalonyl-CoA mutase or MCM</Comment>
+    <Graphics CenterX="1121.3505111373506" CenterY="943.6534177614848" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P22033" />
+  </DataNode>
+  <DataNode TextLabel="cbLD-II" GraphId="eb9b6" Type="Protein" GroupRef="ab7b7">
+    <Comment>aka cbLD-MMA</Comment>
+    <Graphics CenterX="1113.8127834729457" CenterY="566.2437910589499" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9H3L0" />
+  </DataNode>
+  <DataNode TextLabel="Methionine" GraphId="fb73a" Type="Metabolite">
+    <Graphics CenterX="1698.9176350014588" CenterY="896.6624861868745" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16811" />
+  </DataNode>
+  <DataNode TextLabel="MTHF" GraphId="fd5fe" Type="Metabolite">
+    <Comment>Aka methyltetrahydrofolate</Comment>
+    <Graphics CenterX="1443.5053038177205" CenterY="989.4824011452818" Width="90.0" Height="25.0" ZOrder="32768" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:25345" />
+  </DataNode>
+  <DataNode TextLabel="TC receptor" GraphId="a49f5" Type="Protein">
+    <Graphics CenterX="1395.0089751369267" CenterY="61.54188047398231" Width="90.0" Height="25.0" ZOrder="32770" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9NPF0" />
+  </DataNode>
+  <DataNode TextLabel="TC II" GraphId="b5090" Type="Protein">
+    <Comment>aka Transcobalamin 2</Comment>
+    <Graphics CenterX="515.5860838789798" CenterY="658.6329845318445" Width="66.95352132693576" Height="27.504420405007856" ZOrder="32772" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20062" />
+  </DataNode>
+  <DataNode TextLabel="HC" GraphId="e87eb" Type="Protein">
+    <Comment>aka haptocorrin or transcobalamin 1</Comment>
+    <Comment>Produced in saliva and stomach</Comment>
+    <Graphics CenterX="529.9943341785913" CenterY="130.56380910573182" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32778" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20061" />
+  </DataNode>
+  <DataNode TextLabel="CUBN" GraphId="b64ff" Type="Protein" GroupRef="a6ae6">
+    <Comment>aka cubilin</Comment>
+    <Graphics CenterX="555.6672397857543" CenterY="512.3888916990252" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32792" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="O60494" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="d38b6" Type="Metabolite" GroupRef="e68ea">
+    <Graphics CenterX="418.58692520349024" CenterY="196.4905932522262" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32794" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="d8720" Type="Metabolite">
+    <Graphics CenterX="418.58692520349024" CenterY="104.60146745265273" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32802" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="HC" GraphId="eb08d" Type="Protein" GroupRef="e68ea">
+    <Comment>aka haptocorrin or transcobalamin 1</Comment>
+    <Graphics CenterX="418.58692520349024" CenterY="223.99501365723404" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32804" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20061" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="c4ba3" Type="Metabolite">
+    <Graphics CenterX="418.5869252034902" CenterY="326.94233519567064" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32806" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="HC" GraphId="cbe1d" Type="Protein">
+    <Comment>aka haptocorrin or transcobalamin 1</Comment>
+    <Graphics CenterX="531.0447543466586" CenterY="293.6164464943582" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32808" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20061" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="fb388" Type="Metabolite" GroupRef="abc83">
+    <Graphics CenterX="418.58692520349024" CenterY="424.3922600918014" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32810" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="IF" GraphId="c82b0" Type="Protein">
+    <Comment>aka (gastric) intrinsic factor, transcobalamin III</Comment>
+    <Comment>Located in gastric parietal cells</Comment>
+    <Graphics CenterX="531.5699644306922" CenterY="348.2407992118911" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32812" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P27352" />
+  </DataNode>
+  <DataNode TextLabel="IF" GraphId="e31aa" Type="Protein" GroupRef="abc83">
+    <Comment>aka intrinsic factor</Comment>
+    <Graphics CenterX="418.58692520349024" CenterY="451.8966804968093" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32814" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P27352" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="de025" Type="Metabolite" GroupRef="ad01c">
+    <Graphics CenterX="418.58692520349024" CenterY="592.3402267722859" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32820" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="IF" GraphId="ac7e1" Type="Protein" GroupRef="ad01c">
+    <Comment>aka intrinsic factor</Comment>
+    <Graphics CenterX="418.58692520349024" CenterY="619.8446471772938" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32822" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P27352" />
+  </DataNode>
+  <DataNode TextLabel="AMN" GraphId="caae3" Type="Protein" GroupRef="a6ae6">
+    <Comment>aka amnionless</Comment>
+    <Graphics CenterX="555.6672397857543" CenterY="537.388891699025" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32824" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9BXJ7" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="d9069" Type="Metabolite" GroupRef="cbfa0">
+    <Graphics CenterX="486.9441468131929" CenterY="778.6278971362331" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32826" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="IF" GraphId="b2ad5" Type="Protein">
+    <Comment>aka intrinsic factor</Comment>
+    <Graphics CenterX="515.5860838789797" CenterY="699.7456940751977" Width="66.95352132693576" Height="27.504420405007856" ZOrder="32828" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P27352" />
+  </DataNode>
+  <DataNode TextLabel="TC II" GraphId="bdb61" Type="Protein" GroupRef="cbfa0">
+    <Comment>aka Transcobalamin 2</Comment>
+    <Graphics CenterX="486.9441468131929" CenterY="806.132317541241" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32834" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20062" />
+  </DataNode>
+  <DataNode TextLabel="HC" GraphId="ab45d" Type="Protein">
+    <Comment>aka haptocorrin or transcobalamin 1</Comment>
+    <Graphics CenterX="316.9642536694975" CenterY="658.6329845318446" Width="66.95352132693576" Height="27.504420405007856" ZOrder="32838" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20061" />
+  </DataNode>
+  <DataNode TextLabel="IF" GraphId="ab1d1" Type="Protein">
+    <Comment>aka intrinsic factor</Comment>
+    <Graphics CenterX="316.96425366949757" CenterY="699.7456940751977" Width="66.95352132693576" Height="27.504420405007856" ZOrder="32840" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P27352" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="c47eb" Type="Metabolite" GroupRef="ca28c">
+    <Graphics CenterX="352.51195276688617" CenterY="779.8076104769166" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32844" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="HC" GraphId="cde4f" Type="Protein" GroupRef="ca28c">
+    <Comment>aka haptocorrin or transcobalamin 1</Comment>
+    <Graphics CenterX="352.5119527668861" CenterY="807.3120308819246" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32846" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20061" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="abdea" Type="Metabolite" GroupRef="cefb5">
+    <Graphics CenterX="436.28649283356066" CenterY="936.4659280822748" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32850" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="HC" GraphId="d8dc5" Type="Protein" GroupRef="cefb5">
+    <Comment>aka haptocorrin or transcobalamin 1</Comment>
+    <Graphics CenterX="436.28649283356054" CenterY="963.9703484872828" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32852" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20061" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="f7270" Type="Metabolite" GroupRef="bf5d1">
+    <Graphics CenterX="570.1895210216489" CenterY="890.9156575299442" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32854" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="TC II" GraphId="c8481" Type="Protein" GroupRef="bf5d1">
+    <Comment>aka Transcobalamin 2</Comment>
+    <Graphics CenterX="570.1895210216489" CenterY="918.4200779349521" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32856" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20062" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="b1d5d" Type="Metabolite" GroupRef="cbc70">
+    <Graphics CenterX="1293.6451059679466" CenterY="137.0289661213286" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32860" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="TC II" GraphId="c628f" Type="Protein" GroupRef="cbc70">
+    <Comment>aka Transcobalamin 2</Comment>
+    <Graphics CenterX="1293.6451059679466" CenterY="164.5333865263359" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32862" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20062" />
+  </DataNode>
+  <DataNode TextLabel="TC receptor" GraphId="d905b" Type="Protein" GroupRef="cbc70">
+    <Comment>Aka CD320 receptor</Comment>
+    <Graphics CenterX="1293.6451059679466" CenterY="110.77675591882108" Width="90.0" Height="25.0" ZOrder="32864" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9NPF0" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="f4999" Type="Metabolite">
+    <Graphics CenterX="1293.6451059679466" CenterY="275.14284512488615" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32866" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="TC II" GraphId="aceba" Type="Protein">
+    <Comment>aka Transcobalamin 2</Comment>
+    <Graphics CenterX="1124.7980903009486" CenterY="195.8119768731957" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32868" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P20062" />
+  </DataNode>
+  <DataNode TextLabel="Cbl&#xA;(cyanocobalamin)" GraphId="e5566" Type="Metabolite">
+    <Comment>Cobalamin has been transformed to cyanocobalamin according to lit., before it can undergo conversion by cbLC.</Comment>
+    <Graphics CenterX="1294.3630244036376" CenterY="377.44082937962787" Width="112.74214042600381" Height="34.4607010086383" ZOrder="32870" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q27286306" />
+  </DataNode>
+  <DataNode TextLabel="Cbl&#xA;(cob(II)alamin)" GraphId="bbd13" Type="Metabolite">
+    <Comment>Should be cob(II)alamin according to literature</Comment>
+    <Graphics CenterX="1293.6451059679466" CenterY="505.93989919367056" Width="98.25573259214246" Height="34.4607010086383" ZOrder="32871" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16304" />
+  </DataNode>
+  <DataNode TextLabel="cbLJ" GraphId="b1156" Type="Protein" GroupRef="a367f">
+    <Graphics CenterX="1464.0998842278354" CenterY="341.3373599093775" Width="90.0" Height="25.0" ZOrder="32873" FontSize="14" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="2.1.1.131" />
+  </DataNode>
+  <DataNode TextLabel="cbLC" GraphId="a5081" Type="Protein">
+    <Comment>Gene is called MMAC</Comment>
+    <Graphics CenterX="1672.1761092732054" CenterY="413.7974143774587" Width="90.0" Height="25.0" ZOrder="32874" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9Y4U1" />
+  </DataNode>
+  <DataNode TextLabel="2 * Cbl&#xA;(cob(III)alamine)" GraphId="fe46c" Type="Metabolite">
+    <Comment>Compound is suspected to be cob(III)alamine, since reaction with cbLD should produce oxidised form of cob(II)alamin</Comment>
+    <Graphics CenterX="1558.0265179606813" CenterY="718.0053531894373" Width="98.25573259214251" Height="32.728340790651224" ZOrder="32876" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:28911" />
+  </DataNode>
+  <DataNode TextLabel="Cbl&#xA;(cob(III)alamine)" GraphId="beea6" Type="Metabolite">
+    <Comment>Compound is suspected to be cob(III)alamine, since reaction with cbLD should produce oxidised form of cob(II)alamin</Comment>
+    <Graphics CenterX="1152.5883442043164" CenterY="641.9433731249837" Width="98.25573259214251" Height="32.728340790651224" ZOrder="32878" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:28911" />
+  </DataNode>
+  <DataNode TextLabel="Cbl" GraphId="fb3ec" Type="Metabolite">
+    <Graphics CenterX="1121.350511137351" CenterY="716.0008276065244" Width="90.00000000000001" Height="27.504420405007863" ZOrder="32881" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q3329800" />
+  </DataNode>
+  <DataNode TextLabel="cbLB" GraphId="ab224" Type="Protein">
+    <Comment>gene: MMAB</Comment>
+    <Graphics CenterX="1208.1913297272508" CenterY="759.8663371237608" Width="90.0" Height="25.0" ZOrder="32882" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q96EY8" />
+  </DataNode>
+  <DataNode TextLabel="cbLA" GraphId="ed505" Type="Protein">
+    <Comment>Gene: MMAA</Comment>
+    <Graphics CenterX="1027.6472242037557" CenterY="759.8663371237608" Width="90.0" Height="25.0" ZOrder="32883" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q8IVH4" />
+  </DataNode>
+  <DataNode TextLabel="Methylmalonyl-CoA" GraphId="ea06d" Type="Metabolite">
+    <Graphics CenterX="1003.4780191232023" CenterY="896.6624861868743" Width="121.77658697444365" Height="25.0" ZOrder="32884" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16625" />
+  </DataNode>
+  <DataNode TextLabel="cbLD-I" GraphId="a67d8" Type="Protein" GroupRef="ad3e9">
+    <Comment>aka cbLD-Hcy</Comment>
+    <Graphics CenterX="1479.9427901469178" CenterY="566.3333644069482" Width="90.0" Height="25.0" ZOrder="32885" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9H3L0" />
+  </DataNode>
+  <DataNode TextLabel="cbLD" GraphId="dec6b" Type="Protein">
+    <Comment>"cblD protein might be responsible for branching of the cobalamin metabolism pathways to the cytosolic or mitochondrial compartments" Pubmed: 21114891</Comment>
+    <Comment>gene is called MMADHC</Comment>
+    <Graphics CenterX="1293.6451059679466" CenterY="569.8966536228817" Width="90.0" Height="25.0" ZOrder="32886" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9H3L0" />
+  </DataNode>
+  <DataNode TextLabel="Methylcobalamin" GraphId="dee4f" Type="Metabolite">
+    <Comment>biologically active forms</Comment>
+    <Comment>According to enzyme functionallity, becomes [methionine synthase]-cob(II)alamin</Comment>
+    <Graphics CenterX="1558.0265179606813" CenterY="835.6463346139426" Width="153.45043904672548" Height="27.56576490720957" ZOrder="32888" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:28115" />
+  </DataNode>
+  <DataNode TextLabel="cbLE" GraphId="c8768" Type="Protein">
+    <Comment>Gene is MTRR, protein aka methionine synthase reductase (MSR)</Comment>
+    <Comment>reductive regeneration of cob(I)alamin (vitamin B12) cofactor</Comment>
+    <Graphics CenterX="1688.3437859849516" CenterY="777.2192805552489" Width="90.0" Height="25.0" ZOrder="32889" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9UBK8" />
+  </DataNode>
+  <DataNode TextLabel="Homocysteine" GraphId="c1737" Type="Metabolite">
+    <Graphics CenterX="1399.5887529942777" CenterY="896.6624861868743" Width="123.31821929101395" Height="25.0" ZOrder="32890" FontSize="14" Valign="Middle" Color="ff6600" />
+    <Xref Database="Wikidata" ID="Q192466" />
+  </DataNode>
+  <DataNode TextLabel="THF" GraphId="a17a8" Type="Metabolite">
+    <Comment>Aka tetrahydrofolate</Comment>
+    <Graphics CenterX="1671.5240178493098" CenterY="989.4824011452822" Width="90.0" Height="25.0" ZOrder="32891" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:67016" />
+  </DataNode>
+  <DataNode TextLabel="cbLG" GraphId="e1cbe" Type="Protein">
+    <Comment>aka MS or methionine synthase for protein</Comment>
+    <Comment>Gene is called MTR, for methyltransferase</Comment>
+    <Graphics CenterX="1558.0265179606813" CenterY="957.8672696455759" Width="90.0" Height="25.0" ZOrder="32892" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q99707" />
+  </DataNode>
+  <DataNode TextLabel="coBM/cbLF" GraphId="f0e5d" Type="Protein">
+    <Graphics CenterX="1124.7980903009486" CenterY="309.7097006851758" Width="90.0" Height="25.0" ZOrder="32894" FontSize="14" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="2.1.1.133" />
+  </DataNode>
+  <DataNode TextLabel="cbLC" GraphId="f38a2" Type="Protein">
+    <Comment>Gene is called MMAC</Comment>
+    <Graphics CenterX="1672.1761092732054" CenterY="495.6155961956429" Width="90.0" Height="25.0" ZOrder="32896" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9Y4U1" />
+  </DataNode>
+  <DataNode TextLabel="cbLC" GraphId="fe21c" Type="Protein" GroupRef="f7918">
+    <Comment>Gene is called MMAC</Comment>
+    <Graphics CenterX="1418.6453387732904" CenterY="508.34286892291317" Width="90.0" Height="25.0" ZOrder="32897" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9Y4U1" />
+  </DataNode>
+  <DataNode TextLabel="cbLC" GraphId="e6515" Type="Protein" GroupRef="df4af">
+    <Comment>Gene is called MMAC</Comment>
+    <Graphics CenterX="1418.8986516646103" CenterY="426.94390715667" Width="90.0" Height="25.0" ZOrder="32898" FontSize="14" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9Y4U1" />
+  </DataNode>
+  <DataNode TextLabel="FAD" GraphId="cd63d" Type="Metabolite" GroupRef="df4af">
+    <Comment>cofactor</Comment>
+    <Graphics CenterX="1418.8986516646103" CenterY="401.94390715667" Width="90.0" Height="25.0" ZOrder="32899" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16238" />
+  </DataNode>
+  <DataNode TextLabel="FMN" GraphId="f27ea" Type="Metabolite" GroupRef="f7918">
+    <Comment>cofactor</Comment>
+    <Graphics CenterX="1418.6453387732904" CenterY="483.342868922913" Width="90.0" Height="25.0" ZOrder="32900" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17621" />
+  </DataNode>
+  <DataNode TextLabel="NADPH" GraphId="ea7fe" Type="Metabolite" GroupRef="f1037">
+    <BiopaxRef>b2f</BiopaxRef>
+    <Graphics CenterX="1688.3437859849516" CenterY="814.09773240467" Width="90.0" Height="25.0" ZOrder="32907" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16474" />
+  </DataNode>
+  <DataNode TextLabel="Cofactor" GraphId="ed6d0" Type="Metabolite" GroupRef="b7175">
+    <Comment></Comment>
+    <Graphics CenterX="2002.418292561246" CenterY="144.23776277445432" Width="89.99999999999999" Height="29.86111111111109" ZOrder="33069" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:28115" />
+  </DataNode>
+  <DataNode TextLabel="Protein in &#xA;Complex" GraphId="ee8e7" Type="Protein" GroupRef="b7175">
+    <Comment>5-methyltetrahydrofolate-homocysteine methyltransferase</Comment>
+    <Graphics CenterX="2002.418292561246" CenterY="116.80720721889958" Width="89.99999999999999" Height="29.86111111111109" ZOrder="33070" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000116984" />
+  </DataNode>
+  <Interaction GraphId="id1486aa92">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1338.6451059679466" Y="569.8966536228817" GraphRef="dec6b" RelX="1.0" RelY="0.0" />
+      <Point X="1364.0820928198723" Y="570.0405592361504" GraphRef="a2732" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id17e3bf05">
+    <Comment>cbLD promotes oxidation of cob(II)alamin</Comment>
+    <BiopaxRef>a5f</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1318.2090391159823" Y="523.1702496979897" GraphRef="bbd13" RelX="0.5" RelY="1.0" />
+      <Point X="1508.89865166461" Y="718.0053531894373" GraphRef="fe46c" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.28581058351300215" Shape="None" GraphId="f8d14" />
+      <Anchor Position="0.24056398820461125" Shape="None" GraphId="a2732" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1c7aacde">
+    <BiopaxRef>ce7</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1627.1761092732054" Y="371.03481624757967" GraphRef="aded0" RelX="-1.0" RelY="0.0" />
+      <Point X="1566.6651262297673" Y="414.0560114891432" GraphRef="a4a65" RelX="0.0" RelY="0.0" ArrowHead="mim-modification" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2351b624">
+    <Comment>Translocation outside the mitochondrion</Comment>
+    <Comment>Reaction possibly contains multiple steps (not clear from original drawing).</Comment>
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1003.4780191232023" Y="909.1624861868743" GraphRef="ea06d" RelX="0.0" RelY="1.0" />
+      <Point X="1002.1177553144639" Y="1009.4716370524986" GraphRef="a16ae" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3f58b65a">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1293.6451059679466" Y="68.15148901490687" GraphRef="be759" RelX="0.0" RelY="0.0" />
+      <Point X="1224.3577646770593" Y="68.79202731150275" GraphRef="fddb2" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id40d282e7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1121.3505111373506" Y="931.1534177614848" GraphRef="ea855" RelX="0.0" RelY="-1.0" />
+      <Point X="1121.1914169040108" Y="896.6624861868745" GraphRef="d46b5" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id45fded15">
+    <BiopaxRef>dba</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1407.0998842278354" Y="310.3373599093775" GraphRef="eb669" RelX="-1.0" RelY="-0.5" />
+      <Point X="1293.8608679166489" Y="310.3280677592418" GraphRef="c1074" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4cec09a9">
+    <BiopaxRef>ce7</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1627.1761092732054" Y="413.7974143774587" GraphRef="a5081" RelX="-1.0" RelY="0.0" />
+      <Point X="1475.8986516646103" Y="414.44390715667" GraphRef="dc424" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="a4a65" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4ea329bf">
+    <Comment>cbLF is related to transport out of lysosome.</Comment>
+    <BiopaxRef>a77</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1169.7980903009486" Y="309.7097006851758" GraphRef="f0e5d" RelX="1.0" RelY="0.0" />
+      <Point X="1293.8608679166489" Y="310.3280677592418" GraphRef="c1074" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4f610342">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1170.8127834729457" Y="578.7437910589498" GraphRef="c390c" RelX="1.0" RelY="0.0" />
+      <Point X="1205.4810465219175" Y="579.0811793600366" GraphRef="f0d21" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5d5fb079">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1464.0998842278354" Y="303.8373599093775" GraphRef="a9cc2" RelX="0.0" RelY="-1.0" />
+      <Point X="1464.3200711715097" Y="267.8786555615703" GraphRef="fec1c" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5f583273">
+    <Comment>"Catalyzes the transfer of a methyl group from methyl-cobalamin to homocysteine, yielding enzyme-bound cob(I)alamin and methionine. Subsequently, remethylates the cofactor using methyltetrahydrofolate" [https://www.uniprot.org/uniprot/Q99707]</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1558.0265179606813" Y="945.3672696455759" GraphRef="e1cbe" RelX="0.0" RelY="-1.0" />
+      <Point X="1558.2959641255604" Y="896.6624861868744" GraphRef="fc129" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6765ce3a">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="549.0628445424477" Y="658.6329845318446" GraphRef="b5090" RelX="1.0" RelY="0.0" />
+      <Point X="651.9762336928536" Y="659.314506047832" GraphRef="c4614" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id688d3ac6">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1293.8608679166489" Y="310.3280677592418" GraphRef="c1074" RelX="0.0" RelY="0.0" />
+      <Point X="1402.7010435850216" Y="305.29436331752964" />
+      <Point X="1419.3822821823073" Y="284.22344996930633" />
+      <Point X="1436.0635207795933" Y="267.8786555615703" GraphRef="fec1c" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id720e647a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1558.0265179606813" Y="849.4292170675474" GraphRef="dee4f" RelX="0.0" RelY="1.0" />
+      <Point X="1558.2959641255604" Y="896.6624861868744" GraphRef="fc129" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id766b33b6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1443.5053038177205" Y="976.9824011452818" GraphRef="fd5fe" RelX="0.0" RelY="-1.0" />
+      <Point X="1558.2959641255604" Y="896.6624861868744" GraphRef="fc129" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7c23354b">
+    <BiopaxRef>ce7</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1224.8077425737006" Y="406.4893617021272" GraphRef="d58fa" RelX="1.0" RelY="0.0" />
+      <Point X="1294.0655293931202" Y="433.6393190568442" GraphRef="be1fe" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7dbf888">
+    <Comment>transport outside of lysosome</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1293.6451059679466" Y="288.8950553273901" GraphRef="f4999" RelX="0.0" RelY="1.0" />
+      <Point X="1294.3630244036376" Y="360.2104788753087" GraphRef="e5566" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.30053824776698296" Shape="None" GraphId="c1074" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8e190f11">
+    <BiopaxRef>a77</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1361.8986516646103" Y="414.44390715667" GraphRef="dc424" RelX="-1.0" RelY="0.0" />
+      <Point X="1294.0655293931202" Y="433.6393190568442" GraphRef="be1fe" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id97a10327">
+    <BiopaxRef>b2f</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1635.3437859849516" Y="728.4940209267547" GraphRef="bc2e7" RelX="-1.0" RelY="0.0" />
+      <Point X="1558.0265179606813" Y="777.2795216741405" GraphRef="d94cc" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9e2d7192">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1121.350511137351" Y="729.7530378090282" GraphRef="fb3ec" RelX="0.0" RelY="1.0" />
+      <Point X="1121.3505111373504" Y="823.1463346139435" GraphRef="b5682" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.2561238976291128" Shape="None" GraphId="d5e4c" />
+      <Anchor Position="0.3856862934887016" Shape="None" GraphId="e764a" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida03b3e90">
+    <Comment>reductive regeneration of cob(I)alamin (vitamin B12) cofactor</Comment>
+    <BiopaxRef>b2f</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1558.0265179606813" Y="734.3695235847629" GraphRef="fe46c" RelX="0.0" RelY="1.0" />
+      <Point X="1558.0265179606813" Y="821.8634521603378" GraphRef="dee4f" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4904340082559338" Shape="None" GraphId="d94cc" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb1f7035">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="600.6672397857543" Y="512.3888916990252" GraphRef="b64ff" RelX="1.0" RelY="0.0" />
+      <Point X="648.0515678362314" Y="461.81052145368045" GraphRef="e8200" RelX="-1.0" RelY="0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbb023d4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1072.6472242037557" Y="753.6163371237608" GraphRef="ed505" RelX="1.0" RelY="-0.5" />
+      <Point X="1121.3505111373508" Y="753.6732929991357" GraphRef="d5e4c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbbe79aa">
+    <BiopaxRef>b2f</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1558.0265179606813" Y="777.2795216741405" GraphRef="d94cc" RelX="0.0" RelY="0.0" />
+      <Point X="1635.3437859849516" Y="826.59773240467" GraphRef="c3992" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbc82c43">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1461.2478626397847" Y="896.6624861868743" GraphRef="c1737" RelX="1.0" RelY="0.0" />
+      <Point X="1653.9176350014588" Y="896.6624861868745" GraphRef="fb73a" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5037017498707573" Shape="None" GraphId="fc129" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbdf5a015">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1294.0655293931202" Y="433.6393190568442" GraphRef="be1fe" RelX="0.0" RelY="0.0" />
+      <Point X="1230.6829047378785" Y="454.6905980498343" GraphRef="cf36c" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc842668b">
+    <BiopaxRef>e76</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="447.08692520349024" Y="645.5968573797979" GraphRef="db3ec" RelX="0.5" RelY="1.0" />
+      <Point X="486.9441468131929" Y="752.8756869337292" GraphRef="eabe2" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="cea11" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idcc431344">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1205.4810465219175" Y="579.0811793600366" GraphRef="f0d21" RelX="0.0" RelY="0.0" />
+      <Point X="1093.5238814189286" Y="492.90713658946277" GraphRef="a8fce" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd54e472a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1163.1913297272508" Y="766.1163371237608" GraphRef="ab224" RelX="-1.0" RelY="0.5" />
+      <Point X="1121.3505111373508" Y="765.7735522904062" GraphRef="e764a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd5bec0a4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1293.6451059679466" Y="223.7896684039578" GraphRef="cd214" RelX="0.0" RelY="0.0" />
+      <Point X="1169.7980903009486" Y="195.8119768731957" GraphRef="aceba" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide7a93891">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1216.4807189172118" Y="569.4113572166448" GraphRef="c01f8" RelX="0.0" RelY="0.0" />
+      <Point X="1234.1474660413846" Y="629.3598180811787" GraphRef="feab5" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idedb5d635">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1372.7101485483738" Y="578.8561843156965" GraphRef="f8d14" RelX="0.0" RelY="0.0" />
+      <Point X="1505.2607498696202" Y="666.7356153532281" GraphRef="bd975" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf0b6471a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1121.3505111373504" Y="850.712099521153" GraphRef="b5682" RelX="0.0" RelY="1.0" />
+      <Point X="1121.1914169040108" Y="896.6624861868745" GraphRef="d46b5" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf222bd73">
+    <Comment>Translocation into Mitochondrion</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1152.5883442043164" Y="658.3075435203093" GraphRef="beea6" RelX="0.0" RelY="1.0" />
+      <Point X="1121.350511137351" Y="702.2486174040205" GraphRef="fb3ec" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf5a1b953">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1064.366312610424" Y="896.6624861868743" GraphRef="ea06d" RelX="1.0" RelY="0.0" />
+      <Point X="1185.3061312419165" Y="896.6624861868747" GraphRef="e04e4" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4698626551337458" Shape="None" GraphId="d46b5" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idff9c62d1">
+    <BiopaxRef>b2f</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1643.3437859849516" Y="777.2192805552489" GraphRef="c8768" RelX="-1.0" RelY="0.0" />
+      <Point X="1558.0265179606813" Y="777.2795216741405" GraphRef="d94cc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc87a833f">
+    <Graphics ZOrder="12290" LineThickness="1.0">
+      <Point X="482.10932321551195" Y="651.7568794305927" GraphRef="b5090" RelX="-1.0" RelY="-0.5" />
+      <Point X="463.0298138473713" Y="688.5083892013704" GraphRef="cea11" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf8c23d0d">
+    <Comment>Cbl binds to HC</Comment>
+    <Graphics ZOrder="12292" LineThickness="1.0">
+      <Point X="418.58692520349024" Y="118.35367765515666" GraphRef="d8720" RelX="0.0" RelY="1.0" />
+      <Point X="418.58692520349024" Y="170.73838304972224" GraphRef="bcc55" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5282875467531749" Shape="None" GraphId="e14c0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide9523c3b">
+    <Comment>Cbl-TC II complex binds to TC receptor</Comment>
+    <Graphics ZOrder="12296" LineThickness="1.0">
+      <Point X="1350.0089751369267" Y="61.5418804739823" GraphRef="a49f5" RelX="-1.0" RelY="0.0" />
+      <Point X="1293.6451059679466" Y="68.15148901490687" GraphRef="be759" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf82ce25b">
+    <Graphics ZOrder="12298" LineThickness="1.0">
+      <Point X="350.4410143329654" Y="658.6329845318446" GraphRef="ab45d" RelX="1.0" RelY="0.0" />
+      <Point X="375.0569362288486" Y="688.9802745376438" GraphRef="e3b1e" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idcbeceaa">
+    <Graphics ZOrder="12300" LineThickness="1.0">
+      <Point X="381.0119527668861" Y="833.0642410844287" GraphRef="dc389" RelX="0.5" RelY="1.0" />
+      <Point X="407.7864928335606" Y="910.7137178797709" GraphRef="b48b7" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id79a330c8">
+    <Comment>Internalisation of Cbl-TC II complex, creates free Cbl</Comment>
+    <BiopaxRef>e76</BiopaxRef>
+    <Graphics ZOrder="12302" LineThickness="1.0">
+      <Point X="1293.6451059679466" Y="186.28559672883983" GraphRef="b7846" RelX="0.0" RelY="1.0" />
+      <Point X="1293.6451059679466" Y="261.3906349223822" GraphRef="f4999" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4993549377935421" Shape="None" GraphId="cd214" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf5499127">
+    <Comment>Transport of Cbl-TC II complex to tissues</Comment>
+    <BiopaxRef>e76</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12304" LineThickness="1.0">
+      <Point X="627.1895210216489" Y="924.4200779349522" GraphRef="eddb6" RelX="1.0" RelY="0.5" />
+      <Point X="819.8757763975156" Y="466.4106945069581" />
+      <Point X="1056.760441182731" Y="8.401311078964042" />
+      <Point X="1293.6451059679466" Y="28.401311078964042" GraphRef="a967a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5f5a148e">
+    <BiopaxRef>e76</BiopaxRef>
+    <Graphics ZOrder="12306" LineThickness="1.0">
+      <Point X="1293.6451059679466" Y="53.40131107896404" GraphRef="a967a" RelX="0.0" RelY="1.0" />
+      <Point X="1293.6451059679466" Y="90.2767559188211" GraphRef="b7846" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="be759" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5a32b6ba">
+    <Graphics ZOrder="12314" LineThickness="1.0">
+      <Point X="418.58692520349024" Y="275.1243843131095" GraphRef="ec6a2" RelX="0.0" RelY="0.0" />
+      <Point X="486.0447543466586" Y="293.6164464943582" GraphRef="cbe1d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc5646a7">
+    <Comment>In the duodenum, pancreatic enzymes degrade the Cbl-HC complex, releasing free Cbl</Comment>
+    <Graphics ZOrder="12318" LineThickness="1.0">
+      <Point X="418.58692520349024" Y="249.74722385973797" GraphRef="bcc55" RelX="0.0" RelY="1.0" />
+      <Point X="418.5869252034902" Y="313.1901249931667" GraphRef="c4ba3" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="ec6a2" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id674d60c4">
+    <Comment>Release from food proteins</Comment>
+    <Graphics ZOrder="12320" LineThickness="1.0">
+      <Point X="419.66675027297833" Y="61.5" GraphRef="ad4e7" RelX="0.0" RelY="1.0" />
+      <Point X="418.58692520349024" Y="90.8492572501488" GraphRef="d8720" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc50ea443">
+    <Comment>Uptake by epithelial cells in terminal ileum via receptor mediated endocytosis</Comment>
+    <BiopaxRef>e76</BiopaxRef>
+    <Graphics ZOrder="12322" LineThickness="1.0">
+      <Point X="418.58692520349024" Y="477.64889069931326" GraphRef="d803a" RelX="0.0" RelY="1.0" />
+      <Point X="418.58692520349024" Y="566.588016569782" GraphRef="db3ec" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.40153949883935264" Shape="None" GraphId="ad056" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9fe7f3f6">
+    <Graphics ZOrder="12340" LineThickness="1.0">
+      <Point X="484.9943341785913" Y="130.56380910573182" GraphRef="e87eb" RelX="-1.0" RelY="0.0" />
+      <Point X="418.58692520349024" Y="146.0278651554395" GraphRef="e14c0" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9b1d015a">
+    <Comment>Receptor mediated endocytosis</Comment>
+    <Graphics ZOrder="12342" LineThickness="1.0">
+      <Point X="483.0547170997289" Y="513.014996800277" GraphRef="fa78c" RelX="-1.0" RelY="0.0" />
+      <Point X="418.58692520349024" Y="513.3614627285514" GraphRef="ad056" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bb8a3">
+    <Graphics ZOrder="32816" LineThickness="1.0">
+      <Point X="418.5869252034902" Y="340.69454539817457" GraphRef="c4ba3" RelX="0.0" RelY="1.0" />
+      <Point X="418.58692520349024" Y="398.64004988929753" GraphRef="d803a" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5282875467531749" Shape="None" GraphId="c4cf9" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d5f0f">
+    <Graphics ZOrder="32818" LineThickness="1.0">
+      <Point X="486.56996443069215" Y="348.2407992118911" GraphRef="c82b0" RelX="-1.0" RelY="0.0" />
+      <Point X="418.58692520349024" Y="371.306433811165" GraphRef="c4cf9" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cb229">
+    <Graphics ZOrder="32830" LineThickness="1.0">
+      <Point X="463.0298138473713" Y="688.5083892013704" GraphRef="cea11" RelX="0.0" RelY="0.0" />
+      <Point X="482.10932321551184" Y="699.7456940751977" GraphRef="b2ad5" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f6da8">
+    <Graphics ZOrder="32842" LineThickness="1.0">
+      <Point X="390.08692520349024" Y="645.5968573797979" GraphRef="db3ec" RelX="-0.5" RelY="1.0" />
+      <Point X="352.5119527668861" Y="754.0554002744127" GraphRef="dc389" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="e3b1e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a1937">
+    <Graphics ZOrder="32848" LineThickness="1.0">
+      <Point X="375.0569362288486" Y="688.9802745376438" GraphRef="e3b1e" RelX="0.0" RelY="0.0" />
+      <Point X="350.44101433296544" Y="699.7456940751977" GraphRef="ab1d1" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bb5c2">
+    <Comment>Free Cbl enters the portal circulation, bound to transcobalamin</Comment>
+    <BiopaxRef>e76</BiopaxRef>
+    <Graphics ZOrder="32858" LineThickness="1.0">
+      <Point X="515.4441468131929" Y="831.8845277437451" GraphRef="eabe2" RelX="0.5" RelY="1.0" />
+      <Point X="541.6895210216489" Y="865.1634473274403" GraphRef="eddb6" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c4929">
+    <Comment>reductive dealkylation</Comment>
+    <BiopaxRef>ce7</BiopaxRef>
+    <Graphics ZOrder="32872" LineThickness="1.0">
+      <Point X="1294.3630244036376" Y="394.67117988394705" GraphRef="e5566" RelX="0.0" RelY="1.0" />
+      <Point X="1293.6451059679466" Y="488.7095486893513" GraphRef="bbd13" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4143855286721832" Shape="None" GraphId="be1fe" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cfe65">
+    <Comment>cbLD promotes oxidation of cob(II)alamin</Comment>
+    <BiopaxRef>a5f</BiopaxRef>
+    <Graphics ZOrder="32877" LineThickness="1.0">
+      <Point X="1269.081172819911" Y="523.1702496979897" GraphRef="bbd13" RelX="-0.5" RelY="1.0" />
+      <Point X="1152.5883442043164" Y="625.5792027296582" GraphRef="beea6" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5459574383575353" Shape="None" GraphId="f0d21" />
+      <Anchor Position="0.4515338371280457" Shape="None" GraphId="c01f8" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fbc57">
+    <Graphics ZOrder="32879" LineThickness="1.0">
+      <Point X="1422.9427901469176" Y="578.8333644069482" GraphRef="e30d5" RelX="-1.0" RelY="0.0" />
+      <Point X="1372.7101485483738" Y="578.8561843156965" GraphRef="f8d14" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cbce6">
+    <Graphics ZOrder="32887" LineThickness="1.0">
+      <Point X="1248.6451059679466" Y="569.8966536228817" GraphRef="dec6b" RelX="-1.0" RelY="0.0" />
+      <Point X="1216.4807189172118" Y="569.4113572166448" GraphRef="c01f8" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e0d84">
+    <Graphics ZOrder="32893" LineThickness="1.0">
+      <Point X="1558.2959641255604" Y="896.6624861868744" GraphRef="fc129" RelX="0.0" RelY="0.0" />
+      <Point X="1671.5240178493098" Y="976.9824011452822" GraphRef="a17a8" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e6038">
+    <BiopaxRef>a77</BiopaxRef>
+    <Graphics ZOrder="32901" LineThickness="1.0">
+      <Point X="1361.6453387732904" Y="495.84286892291306" GraphRef="f80ef" RelX="-1.0" RelY="0.0" />
+      <Point X="1294.0655293931202" Y="433.6393190568442" GraphRef="be1fe" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c2609">
+    <BiopaxRef>ce7</BiopaxRef>
+    <Graphics ZOrder="32902" LineThickness="1.0">
+      <Point X="1627.1761092732054" Y="495.6155961956429" GraphRef="f38a2" RelX="-1.0" RelY="0.0" />
+      <Point X="1475.6453387732904" Y="495.84286892291306" GraphRef="f80ef" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="e877c" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d8121">
+    <BiopaxRef>ce7</BiopaxRef>
+    <Graphics ZOrder="32903" LineThickness="1.0">
+      <Point X="1627.1761092732052" Y="451.0348162475815" GraphRef="b74d8" RelX="-1.0" RelY="0.0" />
+      <Point X="1566.5638010732393" Y="495.70650528655096" GraphRef="e877c" RelX="0.0" RelY="0.0" ArrowHead="mim-modification" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fcf63">
+    <Graphics ConnectorType="Elbow" ZOrder="32909" LineStyle="Broken" LineThickness="1.0">
+      <Point X="418.58692520349024" Y="513.3614627285514" GraphRef="ad056" RelX="0.0" RelY="0.0" />
+      <Point X="478.73633049817744" Y="481.7025044367949" />
+      <Point X="648.0515678362314" Y="450.0435461450385" GraphRef="e8200" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="daf17">
+    <Graphics ZOrder="32911" LineStyle="Broken" LineThickness="1.0">
+      <Point X="600.6672397857543" Y="537.388891699025" GraphRef="caae3" RelX="1.0" RelY="0.0" />
+      <Point X="648.0515678362312" Y="561.2777859032267" GraphRef="c2b93" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b36ee">
+    <Graphics ConnectorType="Elbow" ZOrder="32912" LineStyle="Broken" LineThickness="1.0">
+      <Point X="418.58692520349024" Y="513.3614627285514" GraphRef="ad056" RelX="0.0" RelY="0.0" />
+      <Point X="478.73633049817744" Y="549.0865996245311" />
+      <Point X="648.0515678362312" Y="584.8117365205107" GraphRef="c2b93" RelX="-1.0" RelY="0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a1b28">
+    <Graphics ZOrder="32916" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1248.6451059679466" Y="104.52675591882108" GraphRef="d905b" RelX="-1.0" RelY="-0.5" />
+      <Point X="1224.3577646770593" Y="68.79202731150275" GraphRef="fddb2" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fa008">
+    <Graphics ZOrder="32920" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1113.8127834729457" Y="541.7437910589499" GraphRef="c390c" RelX="0.0" RelY="-1.0" />
+      <Point X="1093.5238814189286" Y="492.90713658946277" GraphRef="a8fce" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a026e">
+    <Graphics ZOrder="32922" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1479.9427901469176" Y="615.8333644069482" GraphRef="e30d5" RelX="0.0" RelY="1.0" />
+      <Point X="1505.2607498696202" Y="666.7356153532281" GraphRef="bd975" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d72f9">
+    <Graphics ZOrder="32930" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1509.0998842278354" Y="335.0873599093775" GraphRef="b1156" RelX="1.0" RelY="-0.5" />
+      <Point X="1581.6416986464228" Y="335.40603629254997" GraphRef="e0506" RelX="-1.0" RelY="0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fc8b0">
+    <Graphics ConnectorType="Elbow" ZOrder="32931" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1293.8608679166489" Y="310.3280677592418" GraphRef="c1074" RelX="0.0" RelY="0.0" />
+      <Point X="1401.9963702359346" Y="341.27654364361763" />
+      <Point X="1505.9473096371369" Y="372.2250195279935" />
+      <Point X="1609.8982490383391" Y="349.50269647899165" GraphRef="e0506" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="a0e21">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="418.58692520349024" Y="371.306433811165" GraphRef="c4cf9" RelX="0.0" RelY="0.0" />
+      <Point X="351.66031631739827" Y="370.78473691053057" GraphRef="eea46" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="accbc">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1558.0265179606813" Y="777.2795216741405" GraphRef="d94cc" RelX="0.0" RelY="0.0" />
+      <Point X="1471.8712568455608" Y="777.8653326205521" GraphRef="dd71a" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b3978">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="283.48749300602964" Y="651.7568794305927" GraphRef="ab45d" RelX="-1.0" RelY="-0.5" />
+      <Point X="245.0" Y="399.0168592033684" />
+      <Point X="261.66031631739827" Y="146.27683897614418" GraphRef="c1c5c" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bab2c">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1121.3505111373508" Y="753.6732929991357" GraphRef="d5e4c" RelX="0.0" RelY="0.0" />
+      <Point X="1033.9594980471102" Y="808.7498332186763" GraphRef="b97e3" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bff4c">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1558.2959641255604" Y="896.6624861868744" GraphRef="fc129" RelX="0.0" RelY="0.0" />
+      <Point X="1471.8712568455608" Y="847.4673226703027" GraphRef="dfad8" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e0a02">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="418.58692520349024" Y="146.0278651554395" GraphRef="e14c0" RelX="0.0" RelY="0.0" />
+      <Point X="351.66031631739827" Y="146.27683897614418" GraphRef="c1c5c" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f28c8">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1121.3505111373508" Y="765.7735522904062" GraphRef="e764a" RelX="0.0" RelY="0.0" />
+      <Point X="1206.9551143871947" Y="808.7498332186763" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bb1f8">
+    <Graphics ZOrder="12294" LineStyle="Broken" LineThickness="1.0">
+      <Point X="125.94903988183009" Y="381.4725077623351" GraphRef="fa574" RelX="0.0" RelY="-1.0" />
+      <Point X="234.84013230429989" Y="238.2388169546414" GraphRef="c5102" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fdc15">
+    <Graphics ZOrder="32832" LineStyle="Broken" LineThickness="1.0">
+      <Point X="125.94903988183009" Y="469.304856359087" GraphRef="fa574" RelX="0.0" RelY="1.0" />
+      <Point X="234.84013230429989" Y="664.8471126543483" GraphRef="c5102" RelX="-1.0" RelY="0.5" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ee2be">
+    <Graphics ZOrder="32905" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1871.6489953663354" Y="603.499088062208" GraphRef="f9467" RelX="-1.0" RelY="-0.5" />
+      <Point X="1778.6347220458417" Y="415.7546584533619" GraphRef="e7dd3" RelX="1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b8a3e">
+    <Graphics ZOrder="32906" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1871.6489953663354" Y="647.4152623605838" GraphRef="f9467" RelX="-1.0" RelY="0.5" />
+      <Point X="1778.6347220458417" Y="840.9756434149045" GraphRef="e7dd3" RelX="1.0" RelY="0.5" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="dac35">
+    <Graphics ZOrder="32927" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1364.0820928198723" Y="570.0405592361504" GraphRef="a2732" RelX="0.0" RelY="0.0" />
+      <Point X="1353.1427458945086" Y="629.3598180811787" GraphRef="feab5" RelX="1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c480e">
+    <Graphics ZOrder="33054" LineThickness="1.0">
+      <Point X="1843.5431905237187" Y="232.46890846178417" />
+      <Point X="1917.543190523721" Y="232.46890846178417" ArrowHead="mim-conversion" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d7006">
+    <Graphics ZOrder="33055" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1844.8931661096565" Y="345.4689084617797" />
+      <Point X="1918.8931661096585" Y="345.4689084617797" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fdb7c">
+    <Graphics ZOrder="33056" LineThickness="1.0">
+      <Point X="1845.0579610315315" Y="305.4689084617812" />
+      <Point X="1919.0579610315335" Y="305.4689084617812" ArrowHead="mim-catalysis" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="dd8bf">
+    <Graphics ZOrder="33057" LineThickness="1.0">
+      <Point X="1843.0431905237187" Y="269.4689084617827" />
+      <Point X="1918.043190523721" Y="269.4689084617827" ArrowHead="mim-stimulation" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Lysosome" GraphId="a00f4">
+    <Graphics CenterX="1348.1674966985797" CenterY="236.59612326796335" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Intrinsic&#xA;Factor &#xA;Deficiency" GraphId="eea46" Href="https://omim.org/261000">
+    <Comment>alt. name: Congentical pernicious anaemia.</Comment>
+    <Comment>Abbr. IFD</Comment>
+    <Graphics CenterX="306.66031631739827" CenterY="370.78473691053057" Width="90.0" Height="47.06790123456793" ZOrder="28672" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Distribution via blood" GraphId="cc9f9">
+    <Graphics CenterX="727.9653721902835" CenterY="803.1744102259175" Width="253.47096502114266" Height="34.67682057380597" ZOrder="28674" FillColor="ffffff" FontSize="22" Valign="Middle" Color="990000" />
+  </Label>
+  <Label TextLabel="Ileal mucosal cells" GraphId="a2a78">
+    <Graphics CenterX="562.4707672283002" CenterY="625.3918495297806" Width="145.0584655433995" Height="25.0" ZOrder="28676" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="epithelial cells" GraphId="f1743">
+    <Graphics CenterX="316.96425366949757" CenterY="536.7921819941367" Width="90.0" Height="25.0" ZOrder="28678" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Tissue" GraphId="a967a">
+    <Graphics CenterX="1293.6451059679466" CenterY="40.90131107896404" Width="90.0" Height="25.0" ZOrder="28680" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Target cell" GraphId="d0c0f">
+    <Graphics CenterX="934.2818336950222" CenterY="184.83056782853387" Width="90.0" Height="25.0" ZOrder="28682" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Cubam receptor" GraphId="d881f" GroupRef="a6ae6">
+    <Comment>A complex of amnionless and cubilin forms the cubam receptor</Comment>
+    <Graphics CenterX="555.6672397857543" CenterY="487.388891699025" Width="121.22504537205087" Height="25.0" ZOrder="28684" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Absorption &#xA;and &#xA;transport" GraphId="fa574">
+    <Graphics CenterX="125.94903988183009" CenterY="425.38868206071106" Width="158.73707533235165" Height="87.83234859675181" ZOrder="28686" FillColor="ffffff" FontWeight="Bold" FontSize="22" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Dietary Cbl:&#xA;meat, milk, eggs, fish, and shellfish" GraphId="ad4e7">
+    <Graphics CenterX="419.66675027297833" CenterY="43.59246575342466" Width="277.10485561842756" Height="35.81506849315068" ZOrder="28688" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Mitochondrion" GraphId="c7f81">
+    <Graphics CenterX="978.6093793875029" CenterY="687.0319203044378" Width="116.46545175130996" Height="25.0" ZOrder="32880" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Cytosol" GraphId="ae1a4">
+    <Graphics CenterX="1720.8947694258536" CenterY="232.05066872250907" Width="90.0" Height="25.0" ZOrder="32895" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Intracellular&#xA;Metabolism" GraphId="f9467">
+    <Graphics CenterX="1951.0175330325112" CenterY="625.457175211396" Width="158.73707533235165" Height="87.83234859675181" ZOrder="32904" FillColor="ffffff" FontWeight="Bold" FontSize="22" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Cubilin&#xA;Deficiency" GraphId="e8200" Href="https://omim.org/261100">
+    <Comment>alt. name: Imerslun-Najman-Grasbeck syndrome (IGS) du to CUBN.</Comment>
+    <Graphics CenterX="693.0515678362314" CenterY="450.0435461450385" Width="90.0" Height="47.06790123456793" ZOrder="32908" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Amnionless&#xA;Deficiency" GraphId="c2b93" Href="https://omim.org/261100">
+    <Comment>alt. name: Imerslun-Najman-Grasbeck syndrome (IGS) du to AMN.</Comment>
+    <Graphics CenterX="693.0515678362312" CenterY="573.0447612118687" Width="90.0" Height="47.06790123456793" ZOrder="32910" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Haptocorrin&#xA;Deficiency" GraphId="c1c5c" Href="https://omim.org/193090">
+    <Comment>alt. name: TC I deficiency</Comment>
+    <Graphics CenterX="306.66031631739827" CenterY="146.27683897614418" Width="90.0" Height="47.06790123456793" ZOrder="32913" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Transcobalamin&#xA;Deficiency" GraphId="c4614" Href="https://omim.org/275350">
+    <Comment>alt. name: TC II deficiency</Comment>
+    <Graphics CenterX="696.9762336928536" CenterY="659.314506047832" Width="90.0" Height="47.06790123456793" ZOrder="32914" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Transcobalamin&#xA;Receptor&#xA;Defect" GraphId="fddb2" Href="https://omim.org/613646">
+    <Graphics CenterX="1179.3577646770593" CenterY="68.79202731150275" Width="90.0" Height="47.06790123456793" ZOrder="32915" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adenosylcobalamin&#xA;Synthesis Defect&#xA;cblA" GraphId="b97e3" Href="https://omim.org/251100">
+    <Comment>aka methylmalonic aciduria, cblA type</Comment>
+    <Graphics CenterX="977.4463972632775" CenterY="808.7498332186763" Width="113.02620156766535" Height="47.06790123456793" ZOrder="32917" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adenosylcobalamin&#xA;Synthesis Defect&#xA;cblB" GraphId="b6d0f" Href="https://omim.org/251110">
+    <Comment>aka methylmalonic aciduria, cblB type</Comment>
+    <Graphics CenterX="1263.4682151710274" CenterY="808.7498332186763" Width="113.02620156766535" Height="47.06790123456793" ZOrder="32918" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adenosylcobalamin&#xA;Synthesis Defect&#xA;cblD-MMA" GraphId="a8fce" Href="https://omim.org/277410">
+    <Comment>aka methylmalonic aciduria, cblD-MMA type</Comment>
+    <Graphics CenterX="1037.010780635096" CenterY="492.90713658946277" Width="113.02620156766535" Height="47.06790123456793" ZOrder="32919" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adenosylcobalamin&#xA;Synthesis Defect&#xA;cblD-HC" GraphId="bd975" Href="https://omim.org/277410">
+    <Comment>aka homocystinuria, cblD-HC type</Comment>
+    <Graphics CenterX="1561.7738506534529" CenterY="666.7356153532281" Width="113.02620156766535" Height="47.06790123456793" ZOrder="32921" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Methionine&#xA;Synthase Deficiency&#xA;cblG" GraphId="dfad8" Href="https://omim.org/250940">
+    <Comment>aka methylcobalamin deficiency, cblG type</Comment>
+    <Graphics CenterX="1415.358156061728" CenterY="847.4673226703027" Width="113.02620156766535" Height="47.06790123456793" ZOrder="32923" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Methionine&#xA;Synthase Deficiency&#xA;cblE" GraphId="dd71a" Href="https://omim.org/236270">
+    <Comment>aka methylcobalamin deficiency, cblE type</Comment>
+    <Graphics CenterX="1415.358156061728" CenterY="777.8653326205521" Width="113.02620156766535" Height="47.06790123456793" ZOrder="32924" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adenosylcobalamin&#xA;and methylcobalamin&#xA;Synthesis Defect&#xA;cblC" GraphId="cf36c" Href="https://omim.org/277400">
+    <Comment>aka methylmalonic aciduria and homocysteinuria, cblC type</Comment>
+    <Graphics CenterX="1174.1698039540458" CenterY="454.6905980498343" Width="113.02620156766535" Height="56.38664074576669" ZOrder="32925" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adenosylcobalamin&#xA;and methylcobalamin&#xA;Synthesis Defect&#xA;cblD-MMA/HC" GraphId="feab5" Href="https://omim.org/277410">
+    <Comment>aka methylmalonic aciduria and homocysteinuria, cblD type</Comment>
+    <Graphics CenterX="1293.6451059679464" CenterY="643.4564782676204" Width="118.99527985312369" Height="56.38664074576669" ZOrder="32926" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adenosylcobalamin&#xA;and methylcobalamin&#xA;Synthesis Defect&#xA;cblF" GraphId="fec1c" Href="https://omim.org/277380">
+    <Comment>aka methylmalonic aciduria and homocysteinuria, cblF type</Comment>
+    <Graphics CenterX="1464.3200711715097" CenterY="239.68533518868696" Width="113.02620156766535" Height="56.38664074576669" ZOrder="32928" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adenosylcobalamin&#xA;and methylcobalamin&#xA;Synthesis Defect&#xA;cblJ" GraphId="e0506">
+    <Comment>aka methylmalonic aciduria and homocysteinuria, cblJ type</Comment>
+    <Graphics CenterX="1638.1547994302555" CenterY="321.30937610610835" Width="113.02620156766535" Height="56.38664074576669" ZOrder="32929" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Disease" GraphId="aa08d">
+    <Graphics CenterX="1880.6838991644863" CenterY="78.92681097286737" Width="90.0" Height="25.0" ZOrder="33059" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Catalysis" GraphId="f8fa9">
+    <Graphics CenterX="2004.0579610315342" CenterY="305.4689084617818" Width="90.0" Height="25.0" ZOrder="33060" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Pathway" GraphId="a203f">
+    <Graphics CenterX="1880.6838991644863" CenterY="200.1540936469707" Width="90.0" Height="25.0" ZOrder="33061" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="009933" />
+  </Label>
+  <Label TextLabel="Stimulation" GraphId="af36c">
+    <Graphics CenterX="2004.0579610315342" CenterY="269.4685269920569" Width="90.0" Height="25.0" ZOrder="33062" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Protein" GraphId="db25b">
+    <Graphics CenterX="1880.6838991644863" CenterY="170.78372327660145" Width="90.0" Height="25.0" ZOrder="33063" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="Metabolite" GraphId="e10c4">
+    <Graphics CenterX="1880.6838991644863" CenterY="107.92681097286669" Width="90.0" Height="25.0" ZOrder="33064" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Conversion" GraphId="af047">
+    <Graphics CenterX="2004.0579610315342" CenterY="232.46852699205772" Width="90.0" Height="25.0" ZOrder="33065" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Connection &#xA;to disease&#xA;" GraphId="ae561">
+    <Graphics CenterX="2004.0579610315342" CenterY="345.4685269920537" Width="90.0" Height="25.0" ZOrder="33066" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Legend" GraphId="c3919">
+    <Graphics CenterX="1935.0579610315308" CenterY="43.85240080952907" Width="90.0" Height="25.0" ZOrder="33067" FillColor="ffffff" FontWeight="Bold" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Biomarker" GraphId="a6530">
+    <Graphics CenterX="1880.6838991644863" CenterY="138.7601443061992" Width="90.0" Height="25.0" ZOrder="33068" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="009999" />
+  </Label>
+  <Shape GraphId="e7dd3">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1320.5702059168093" CenterY="628.3651509341332" Width="916.1290322580649" Height="850.4419699230853" ZOrder="-11" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a3a46">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Organelle" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1301.9041515028498" CenterY="260.7954115241917" Width="187.90035587188598" Height="96.7971530249112" ZOrder="-9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bbdad">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Mitochondria" />
+    <Graphics CenterX="1114.938713297892" CenterY="827.9046543649465" Width="457.6271186440677" Height="323.83058532563916" ZOrder="-7" FontSize="12" Valign="Middle" ShapeType="Mitochondria" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c28db">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="412.70914482620356" CenterY="678.9788669954509" Width="298.40616175825056" Height="330.8927413764275" ZOrder="-5" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c5102">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="456.46078145986473" CenterY="451.54296480449483" Width="443.24129831112975" Height="853.2165913994137" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f1edb">
+    <Graphics CenterX="549.9279852935593" CenterY="907.515325838525" Width="406.94345780442393" Height="124.08654906284391" ZOrder="16386" FontSize="12" Valign="Middle" ShapeType="Arc" Color="990000" Rotation="5.807918387918681" />
+  </Shape>
+  <Shape GraphId="c3c36">
+    <Graphics CenterX="507.7021963495102" CenterY="780.3287482618969" Width="395.3998504889122" Height="124.08654906284391" ZOrder="32836" FontSize="12" Valign="Middle" ShapeType="Arc" Color="990000" Rotation="5.807918387918681" />
+  </Shape>
+  <Shape GraphId="ca1c2">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="1948.395924699045" CenterY="194.31265315914044" Width="249.67592733503912" Height="338.3125106053168" ZOrder="33058" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="cefb5" GraphId="b48b7" Style="Complex" />
+  <Group GroupId="cbc70" GraphId="b7846" Style="Group" />
+  <Group GroupId="cf060" GraphId="bc2e7" Style="Group" />
+  <Group GroupId="e68ea" GraphId="bcc55" Style="Complex" />
+  <Group GroupId="ab7b7" GraphId="c390c" Style="Complex" />
+  <Group GroupId="f1037" GraphId="c3992" Style="Group" />
+  <Group GroupId="e2035" GraphId="ceb33" Style="Complex" />
+  <Group GroupId="f8364" GraphId="cece0" Style="Complex" />
+  <Group GroupId="abc83" GraphId="d803a" Style="Complex" />
+  <Group GroupId="ad01c" GraphId="db3ec" Style="Complex" />
+  <Group GroupId="ca28c" GraphId="dc389" Style="Complex" />
+  <Group GroupId="df4af" GraphId="dc424" Style="Complex" />
+  <Group GroupId="ad3e9" GraphId="e30d5" Style="Complex" />
+  <Group GroupId="cbfa0" GraphId="eabe2" Style="Complex" />
+  <Group GroupId="a367f" GraphId="eb669" Style="Complex">
+    <Comment>Bifunctional enzyme, information comes from pubmed:11215515</Comment>
+    <BiopaxRef>dba</BiopaxRef>
+  </Group>
+  <Group GroupId="bf5d1" GraphId="eddb6" Style="Complex" />
+  <Group GroupId="b7175" GraphId="f286f" Style="Complex" />
+  <Group GroupId="f7918" GraphId="f80ef" Style="Complex" />
+  <Group GroupId="a6ae6" GraphId="fa78c" Style="Complex" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylmalonic aciduria and homocystinuria type cblF</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050717</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ad1">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9783642403361</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">'Physician's Guidee to the Diagnosis, Treatment, and Follow-Up of Inherited Metabolic Diseases</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blau, Nenad</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duran, Marinus</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibson, K. Michael</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dionisi-Vici, Carlo</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylmalonic acidemia</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14749</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eukaryotic cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000255</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a5f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26364851</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structure of Human B12 Trafficking Protein CblD Reveals Molecular Mimicry and Identifies a New Subfamily of Nitro-FMN Reductases.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yamada K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gherasim C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banerjee R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koutmos M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylmalonic aciduria and homocystinuria type cblC</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050715</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dba">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11215515</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biosynthesis of cobalamin (vitamin B12): a bacterial conundrum.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Mol Life Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raux E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schubert HL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warren MJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamin B12 deficiency</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050731</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylmalonic aciduria, cobalamin-related pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001811</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylmalonic acidemia cb1A type</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0060742</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ce7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19700356</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanism of vitamin B12-responsiveness in cblC methylmalonic aciduria with homocystinuria.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Genet Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Froese DS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Healy S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gravel RA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylmalonic acidemia cb1B type</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0060743</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e76">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21312325</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inborn errors of cobalamin absorption and metabolism.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Med Genet C Semin Med Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watkins D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosenblatt DS</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylmalonic aciduria and homocystinuria type cblD</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050716</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mitochondria dynamics pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001961</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b2f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17892308</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanism of coenzyme binding to human methionine synthase reductase revealed through the crystal structure of the FNR-like module and isothermal titration calorimetry.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochemistry</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolthers KR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lou X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toogood HS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leys D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scrutton NS</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metabolising cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000181</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methylmalonic aciduria due to methylmalonyl-CoA mutase deficiency</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0060740</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a77">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21114891</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genetic disorders of vitamin B12 metabolism: eight complementation groups--eight genes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expert Rev Mol Med</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Froese DS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gravel RA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cobalamin metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000397</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

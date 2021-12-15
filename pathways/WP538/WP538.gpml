@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Tyrosine biosynthesis" Organism="Saccharomyces cerevisiae">
+  <Comment Source="GenMAPP remarks">Based on http://pathway.yeastgenome.org/biocyc/</Comment>
+  <Comment Source="WikiPathways-category">Metabolic Process</Comment>
+  <Comment Source="WikiPathways-description">Biosynthesis of the aromatic amino acids tyrosine, phenylalanine, and tryptophan proceeds via a common pathway to chorismate, at which point the pathway branches(CITS:[Jones][1943992]).  One branch proceeds to tyrosine and phenylalanine, and the other to tryptophan (CITS:[Jones]).  The series of reactions to chorismate, called the shikimate pathway, and the series of reactions from chorismate to tryptophan have been found to be common to all eukaryotes and prokaryotes studied thus far (as reported in (CITS:[1943992])).  In contrast, there appears to be two separate routes for tyrosine and phenylalanine biosynthesis from chorismate, only one of which has been found in S. cerevisiae (CITS:[1943992]).  S. cerevisiae, similar to E. coli, synthesize tyrosine and phenylalanine via the intermediate 4-hydroxyphenylpyruvate and phenylpyruvate, respectively, whereas some other organisms synthesize them via arogenate (CITS:[1943992]).  Aromatic amino acid biosynthesis in S. cerevisiae is controlled by a combination of feedback inhibition, activation of enzyme activity, and regulation of enzyme synthesis (CITS:[Jones][1943992]).  The carbon flow through the pathways is regulated primarily at the initial step and the branching points by the terminal end-products. The initial step of chorismate biosynthesis can be catalyzed by two isoenzymes Aro3p or Aro4p, whereby Aro3p is inhibited by phenylalanine, and Aro4p by tyrosine (CITS:[Jones][1943992]).  The first step in the phenylalanine-tyrosine branch is feedback inhibited by tyrosine and activated by tryptophan, and the first step in the tryptophan branch is feedback inhibited by tryptophan (CITS:[1943992]).  The transcriptional activator GCN4 regulates most of the genes encoding for the aromatic amino acid biosynthetic enzymes; however, no GCN4 regulation was found for TYR1 of the tyrosine branch, ARO7 of the tyrosine and phenylalanine branch or TRP1 of the tryptophan branch, (CITS:[1943992]). 
+SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
+  <BiopaxRef>d9x</BiopaxRef>
+  <BiopaxRef>t71</BiopaxRef>
+  <Graphics BoardWidth="867.5577737447065" BoardHeight="367.36388384754986"/>
+  <DataNode TextLabel="L-tyrosine" GraphId="ad1" Type="Metabolite">
+    <Graphics CenterX="615.8847549909252" CenterY="253.03690260133095" Width="82.33333333333333" Height="19.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:17895"/>
+  </DataNode>
+  <DataNode TextLabel="NADPH" GraphId="b03" Type="Metabolite" GroupRef="db096">
+    <Graphics CenterX="446.37023593466415" CenterY="161.1857229280096" Width="63.333333333333336" Height="19.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="CAS" ID="53-57-6"/>
+  </DataNode>
+  <DataNode TextLabel="NADP" GraphId="b2495" Type="Metabolite">
+    <Graphics CenterX="361.42921960072596" CenterY="121.24546279491832" Width="47.722323049001794" Height="18.852087114337436" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:44409"/>
+  </DataNode>
+  <DataNode TextLabel="chorismate" GraphId="b74" Type="Metabolite">
+    <Graphics CenterX="46.666666666666664" CenterY="83.33333333333333" Width="90.33333333333333" Height="19.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:29748"/>
+  </DataNode>
+  <DataNode TextLabel="TYR1" GraphId="b77" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="TYR1"/>
+    <Graphics CenterX="399.09255898366604" CenterY="50.94373865698731" Width="40.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="SGD" ID="S000000370"/>
+  </DataNode>
+  <DataNode TextLabel="p-hydroxyphenylpyruvate" GraphId="c38b5" Type="Metabolite">
+    <Graphics CenterX="615.8847549909253" CenterY="82.57713248638835" Width="147.54083484573465" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:36242"/>
+  </DataNode>
+  <DataNode TextLabel="CO2" GraphId="d654d" Type="Metabolite" GroupRef="db096">
+    <Graphics CenterX="445.36751361161487" CenterY="139.19010889292184" Width="48.62976406533569" Height="20.66696914700545" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:16526"/>
+  </DataNode>
+  <DataNode TextLabel="2-oxoglutarate" GraphId="e21ea" Type="Metabolite">
+    <Graphics CenterX="708.7114337568056" CenterY="196.81261343012716" Width="90.0" Height="21.574410163339387" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:16810"/>
+  </DataNode>
+  <DataNode TextLabel="ARO9" GraphId="e5c" Type="GeneProduct" GroupRef="bacc2">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ARO9"/>
+    <Graphics CenterX="566.424682395644" CenterY="143.94434361766486" Width="40.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="SGD" ID="S000001179"/>
+  </DataNode>
+  <DataNode TextLabel="ARO7" GraphId="e6a" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ARO7"/>
+    <Graphics CenterX="139.4071385359952" CenterY="53.66606170598911" Width="40.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="SGD" ID="S000006264"/>
+  </DataNode>
+  <DataNode TextLabel="prephenate" GraphId="ea2" Type="Metabolite">
+    <Graphics CenterX="256.6666666666667" CenterY="83.33333333333333" Width="92.33333333333333" Height="19.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:29934"/>
+  </DataNode>
+  <DataNode TextLabel="L-Glutamate" GraphId="f18" Type="Metabolite">
+    <Graphics CenterX="702.129461584996" CenterY="118.18511796733213" Width="95.33333333333333" Height="19.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:16015"/>
+  </DataNode>
+  <DataNode TextLabel="ARO8" GraphId="f1b" Type="GeneProduct" GroupRef="bacc2">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ARO8"/>
+    <Graphics CenterX="566.424682395644" CenterY="163.94434361766486" Width="40.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="SGD" ID="S000003170"/>
+  </DataNode>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="594.424682395644" Y="153.94434361766486" GraphRef="faff1" RelX="1.0" RelY="0.0"/>
+      <Point X="615.8847549909253" Y="154.46104053236542" GraphRef="ba1e8" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="399.09255898366604" Y="60.94373865698731" GraphRef="b77" RelX="0.0" RelY="1.0"/>
+      <Point X="398.54573502722326" Y="83.03085299455533" GraphRef="db246" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="139.4071385359952" Y="63.66606170598911" GraphRef="e6a" RelX="0.0" RelY="1.0"/>
+      <Point X="139.3" Y="83.33333333333333" GraphRef="ee7bb" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="361.4292196007259" Y="111.8194192377496" GraphRef="b2495" RelX="0.0" RelY="-1.0"/>
+      <Point X="403.899727767695" Y="80.7622504537205"/>
+      <Point X="446.37023593466415" Y="120.85662431941913" GraphRef="d67f0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="654.4627949183293" Y="118.18511796733213" GraphRef="f18" RelX="-1.0" RelY="0.0"/>
+      <Point X="610.7078039927404" Y="157.49886569872965"/>
+      <Point X="663.7114337568056" Y="196.81261343012716" GraphRef="e21ea" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id663de136">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="302.83333333333337" Y="83.33333333333333" GraphRef="ea2" RelX="1.0" RelY="0.0"/>
+      <Point X="542.1143375680581" Y="82.57713248638835" GraphRef="c38b5" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4" Shape="None" GraphId="db246"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id78c1aa47">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="615.8847549909253" Y="95.07713248638835" GraphRef="c38b5" RelX="0.0" RelY="1.0"/>
+      <Point X="615.8847549909253" Y="243.53690260133095" GraphRef="ad1" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4" Shape="None" GraphId="ba1e8"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idba5cbea4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="91.83333333333333" Y="83.33333333333333" GraphRef="b74" RelX="1.0" RelY="0.0"/>
+      <Point X="210.5" Y="83.33333333333333" GraphRef="ea2" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4" Shape="None" GraphId="ee7bb"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Group GroupId="db096" GraphId="d67f0" Style="Group"/>
+  <Group GroupId="bacc2" GraphId="faff1" Style="Group"/>
+  <InfoBox CenterX="5.0" CenterY="201.66666666666666"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tyrosine biosynthetic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001283</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d9x">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9491082</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phenylalanine- and tyrosine-auxotrophic mutants of Saccharomyces cerevisiae impaired in transamination.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Gen Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Urrestarazu A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vissers S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iraqui I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grenson M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="t71">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1943992</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aromatic amino acid biosynthesis in the yeast Saccharomyces cerevisiae: a model system for the regulation of a eukaryotic biosynthetic pathway.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microbiol Rev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1991</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Braus GH</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

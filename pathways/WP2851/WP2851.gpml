@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Ethylene signaling pathway" Version="20140930" Organism="Arabidopsis thaliana">
+  <Comment Source="WikiPathways-description"> Ethylene signal transduction and the control of juvenile to adult phase transitions in the leaf. The pathway for ethylene signal transduction involves positive and negative regulators that culminate in transcriptional regulation by the EIN3-like family of transcription factors. Among the ethylene-responsive genes are some that encode additional transcription factors such as those of the ethylene response factor (ERF) and ethylene response DNA-binding factor (EDF) families. The pharmacological agents aminoethoxyvinylglycine (AVG) and silver can be used to inhibit ethylene responses through their ability to target ethylene biosynthesis or the receptors, respectively. One effect of ethylene is to stimulate the juvenile to adult phase transition of leaves. The transcription factor FUS3 negatively regulates the effects of ethylene on this developmental process.</Comment>
+  <BiopaxRef>d8b</BiopaxRef>
+  <Graphics BoardWidth="525.8823529411761" BoardHeight="714.8739495798327" />
+  <DataNode TextLabel="C2H4" GraphId="ab0a3" Type="Metabolite">
+    <Graphics CenterX="268.86554621848705" CenterY="64.49579831932773" Width="134.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:18153" />
+  </DataNode>
+  <DataNode TextLabel="EIN4" GraphId="b77b1" Type="GeneProduct" GroupRef="e9b6e">
+    <Graphics CenterX="268.86554621848705" CenterY="242.81512605041962" Width="97.22689075630217" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="AT3G04580" />
+  </DataNode>
+  <DataNode TextLabel="AVG" GraphId="b7df7" Type="Metabolite">
+    <Graphics CenterX="455.8823529411761" CenterY="64.49579831932773" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="6436272" />
+  </DataNode>
+  <DataNode TextLabel="EIN2" GraphId="bd9a2" Type="GeneProduct">
+    <Graphics CenterX="268.86554621848705" CenterY="394.52941176470637" Width="134.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="AT5G03280" />
+  </DataNode>
+  <DataNode TextLabel="ETR2" GraphId="c3ca6" Type="GeneProduct" GroupRef="e9b6e">
+    <Graphics CenterX="268.8655462184871" CenterY="222.81512605041962" Width="97.22689075630215" Height="19.99999999999999" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="AT3G23150" />
+  </DataNode>
+  <DataNode TextLabel="ERS2" GraphId="d7a49" Type="GeneProduct" GroupRef="e9b6e">
+    <Graphics CenterX="268.8655462184871" CenterY="262.81512605041956" Width="97.22689075630215" Height="20.00000000000002" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="AT1G04310" />
+  </DataNode>
+  <DataNode TextLabel="FUS3" GraphId="e1aaf" Type="GeneProduct">
+    <Graphics CenterX="69.37815126050421" CenterY="269.49579831932766" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="AT3G26790" />
+  </DataNode>
+  <DataNode TextLabel="ERS1" GraphId="f17cf" Type="GeneProduct" GroupRef="e9b6e">
+    <Graphics CenterX="268.8655462184871" CenterY="202.81512605041974" Width="97.22689075630215" Height="19.99999999999999" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="AT2G40940" />
+  </DataNode>
+  <DataNode TextLabel="CTR1" GraphId="f67b2" Type="GeneProduct">
+    <Graphics CenterX="268.86554621848705" CenterY="327.23529411764764" Width="134.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="AT5G03730" />
+  </DataNode>
+  <DataNode TextLabel="Silver" GraphId="fd9da" Type="Metabolite">
+    <Graphics CenterX="455.8823529411761" CenterY="212.47058823529449" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49468" />
+  </DataNode>
+  <DataNode TextLabel="ETR1" GraphId="c1295" Type="GeneProduct" GroupRef="e9b6e">
+    <Graphics CenterX="268.8655462184871" CenterY="182.81512605041974" Width="97.22689075630215" Height="19.99999999999999" ZOrder="32771" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="AT1G66340" />
+  </DataNode>
+  <Interaction GraphId="id1e30a8ce">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="268.8655462184885" Y="280.81512605041956" GraphRef="cce69" RelX="0.0" RelY="1.0" />
+      <Point X="268.86554621848705" Y="317.23529411764764" GraphRef="f67b2" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id39fb382a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="69.37815126050421" Y="259.49579831932766" GraphRef="e1aaf" RelX="0.0" RelY="-1.0" />
+      <Point X="235.36554621848705" Y="74.49579831932773" GraphRef="ab0a3" RelX="-0.5" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id482409b7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="268.86554621848705" Y="485.9159663865549" GraphRef="e8062" RelX="0.0" RelY="1.0" />
+      <Point X="268.86554621848705" Y="542.2100840336129" GraphRef="b7717" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6fec375e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="268.86554621848705" Y="584.2100840336129" GraphRef="b7717" RelX="0.0" RelY="1.0" />
+      <Point X="268.865546218487" Y="626.0504201680674" GraphRef="dbd6d" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8907a8ff">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="415.8823529411761" Y="212.47058823529449" GraphRef="fd9da" RelX="-1.0" RelY="0.0" />
+      <Point X="353.5882352941186" Y="212.8151260504197" GraphRef="cce69" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida40c7f14">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="69.37815126050421" Y="279.49579831932766" GraphRef="e1aaf" RelX="0.0" RelY="1.0" />
+      <Point X="235.36554621848705" Y="542.2100840336129" GraphRef="b7717" RelX="-0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb7503d2e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="415.8823529411761" Y="64.49579831932773" GraphRef="b7df7" RelX="-1.0" RelY="0.0" />
+      <Point X="335.86554621848705" Y="64.49579831932773" GraphRef="ab0a3" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbb35e028">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="268.86554621848705" Y="337.23529411764764" GraphRef="f67b2" RelX="0.0" RelY="1.0" />
+      <Point X="268.86554621848705" Y="384.52941176470637" GraphRef="bd9a2" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide68cd630">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="268.86554621848705" Y="74.49579831932773" GraphRef="ab0a3" RelX="0.0" RelY="1.0" />
+      <Point X="268.8655462184885" Y="144.81512605041985" GraphRef="cce69" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf4d85dab">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="268.86554621848705" Y="404.52941176470637" GraphRef="bd9a2" RelX="0.0" RelY="1.0" />
+      <Point X="268.86554621848705" Y="443.9159663865549" GraphRef="e8062" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="Juventile to adult&#xA;phase transition" GraphId="dbd6d">
+    <Graphics CenterX="268.865546218487" CenterY="655.4621848739499" Width="208.06722689075616" Height="58.82352941176538" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="18" Valign="Middle" Color="999999" />
+  </Label>
+  <Label TextLabel="Ethylene receptors" GraphId="ef9cd" GroupRef="e9b6e">
+    <Graphics CenterX="268.8655462184885" CenterY="162.81512605041985" Width="153.4453781512603" Height="20.0" ZOrder="28672" FillColor="ffffff" FontName="Dialog" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="EIN3-like&#xA;transcription factors" GraphId="e8062">
+    <Graphics CenterX="268.86554621848705" CenterY="464.9159663865549" Width="134.0" Height="42.0" ZOrder="32769" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="ERF and EDF&#xA;transcription factors" GraphId="b7717">
+    <Graphics CenterX="268.86554621848705" CenterY="563.2100840336129" Width="134.0" Height="42.0" ZOrder="32770" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Group GroupId="e9b6e" GraphId="cce69">
+    <BiopaxRef>de2</BiopaxRef>
+  </Group>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000003</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d8b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22348804</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethylene and the regulation of plant development.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BMC Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schaller GE</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="de2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9800203</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ethylene-receptor family from Arabidopsis: structure and function.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philos Trans R Soc Lond B Biol Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bleecker AB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esch JJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hall AE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RodrÃ­guez FI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Binder BM</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

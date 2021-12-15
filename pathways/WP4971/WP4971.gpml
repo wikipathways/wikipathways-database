@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Phosphoinositides metabolism" Version="20190617" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Phosphatidylinositols are a family of lipids under the phosphatidylglyceride class. This pathway specifies several metabolic conversions between PIP, PIP2, PIP3 and other metabolites. Phosphorylation sites on the individual metabolites are drawn as states, with the location added as a number.
+
+The main interactions within this pathway are based on Figure 1 of [https://doi.org/10.1038/nmeth867 Rusten et al], annotated with biochemical interaction database [https://www.rhea-db.org/ Rhea], and diseases (depicted in pink) with corresponding [https://www.omim.org/ OMIM-identifiers.]. Dashed lines depict proposed interactions which have not been characterised (yet)</Comment>
+  <BiopaxRef>c9f</BiopaxRef>
+  <Graphics BoardWidth="1963.9468852222822" BoardHeight="740.7384122509876"/>
+  <DataNode TextLabel="PI-3 kinase III" GraphId="c377a" Type="Protein" GroupRef="fa70c">
+    <Graphics CenterX="682.4644549763027" CenterY="503.72376438727224" Width="90.0" Height="25.0" ZOrder="28672" FontSize="12" Valign="Middle" Color="404040"/>
+    <Xref Database="Enzyme Nomenclature" ID="2.7.1.137"/>
+  </DataNode>
+  <DataNode TextLabel="PIP-5 kinase alpha" GraphId="a33c5" Type="Protein" GroupRef="cf919">
+    <Graphics CenterX="880.4337470081012" CenterY="203.6557899770618" Width="123.26245199939561" Height="29.16031944992194" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q99755"/>
+  </DataNode>
+  <DataNode TextLabel="PtdIns(5)P" GraphId="a87e2" Type="Metabolite">
+    <Comment>aka phosphatidylinositol 5-phosphate</Comment>
+    <Comment>phosphorylated on position 1 and 5; position 1 connected to DAG.</Comment>
+    <Comment>Localization: Nucleus</Comment>
+    <Comment>Function: Apoptosis</Comment>
+    <Graphics CenterX="496.22955650060794" CenterY="125.66654874068738" Width="108.901397326853" Height="36.22177555444241" ZOrder="32768" FontSize="12" Valign="Middle" Color="0033cc"/>
+    <Xref Database="ChEBI" ID="CHEBI:57795"/>
+  </DataNode>
+  <DataNode TextLabel="DAG" GraphId="aacdc" Type="Metabolite">
+    <Comment>Diacylglycerol</Comment>
+    <Graphics CenterX="1159.9703991870927" CenterY="141.20960716595712" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0033cc"/>
+    <Xref Database="ChEBI" ID="CHEBI:17815"/>
+  </DataNode>
+  <DataNode TextLabel="4-phosphatase" GraphId="ad866" Type="Protein" GroupRef="c9ac5">
+    <Comment>From [https://www.qmul.ac.uk/sbcs/iubmb/enzyme/EC3/1/3/78.html and https://enzyme.expasy.org/EC/3.1.3.78] :"Two pathways exist in mammalian cells to degrade 1-phosphatidyl-1D-myo-inositol 4,5-bisphosphate [PtdIns(4,5)P2] [2]. One is catalysed by this enzyme... The enzyme from human is specific for PtdIns(4,5)P2 as substrate, as it cannot use PtdIns(3,4,5)P3, PtdIns(3,4)P2, PtdIns(3,5)P2, PtdIns5P, PtdIns4P or PtdIns3P [2].In humans, the enzyme is localized to late endosomal/lysosomal membranes [2]." [2]: [PMID: 16365287]</Comment>
+    <BiopaxRef>b64</BiopaxRef>
+    <Graphics CenterX="714.3458054726555" CenterY="209.52797836860887" Width="101.08654504281765" Height="25.14028716118553" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Enzyme Nomenclature" ID="3.1.3.78"/>
+  </DataNode>
+  <DataNode TextLabel="PTEN" GraphId="af3a9" Type="Protein">
+    <BiopaxRef>a01</BiopaxRef>
+    <Graphics CenterX="948.6567392245389" CenterY="437.81059920138847" Width="89.99999999999999" Height="29.471394189815527" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P60484"/>
+  </DataNode>
+  <DataNode TextLabel="SACM1L" GraphId="b30e5" Type="Protein">
+    <Comment>Annotation based on Uniprot " Can also catalyze the hydrolysis of phosphatidylinositol 3-phosphate (PtdIns3P)" and EC.3.1.3.64</Comment>
+    <Graphics CenterX="412.035260736627" CenterY="497.99826104058803" Width="58.296969182847796" Height="25.00000000000001" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9NTJ5"/>
+  </DataNode>
+  <DataNode TextLabel="PIP-4 kinase" GraphId="bbb05" Type="Protein" GroupRef="e9176">
+    <Comment>According to Rhea, this is the EC class.</Comment>
+    <Graphics CenterX="674.2776775451672" CenterY="43.94953301775395" Width="86.2877006238658" Height="25.758379563861347" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Enzyme Nomenclature" ID="2.7.1.149"/>
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="cdf54" Type="Metabolite">
+    <Graphics CenterX="583.1194989844281" CenterY="500.1819566689232" Width="45.677048070412994" Height="20.624576844956263" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:30616"/>
+  </DataNode>
+  <DataNode TextLabel="PLCB2" GraphId="cea18" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1527.4535966316787" CenterY="114.64448793215945" Width="116.14093959731551" Height="25.00000000000001" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q00722"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR1" GraphId="d2648" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="241.33495469209942" CenterY="255.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="999900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q13613"/>
+  </DataNode>
+  <DataNode TextLabel="H2O" GraphId="d4216" Type="Metabolite">
+    <Graphics CenterX="422.1837453280508" CenterY="539.0731572725356" Width="46.56739811912204" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:15377"/>
+  </DataNode>
+  <DataNode TextLabel="PIKfyve" GraphId="d4d9b" Type="Protein">
+    <Graphics CenterX="326.74297213663766" CenterY="411.8332673247098" Width="66.51405572672468" Height="26.333465350580354" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9Y2I7"/>
+  </DataNode>
+  <DataNode TextLabel="PLCH1" GraphId="de989" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1875.8764154236244" CenterY="89.64448793215936" Width="116.14093959731551" Height="24.999999999999993" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q4KWH8"/>
+  </DataNode>
+  <DataNode TextLabel="Phosphate" GraphId="dfdac" Type="Metabolite">
+    <Graphics CenterX="390.18374532805086" CenterY="383.2878996582216" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:43474"/>
+  </DataNode>
+  <DataNode TextLabel="PI3K-C2α" GraphId="e7002" Type="Protein" GroupRef="b4bb6">
+    <Graphics CenterX="741.1850384659348" CenterY="410.384511957363" Width="72.31390464974041" Height="25.000000000000057" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O00443"/>
+  </DataNode>
+  <DataNode TextLabel="PTEN" GraphId="e7975" Type="Protein">
+    <Graphics CenterX="1053.8231250821714" CenterY="187.15891228276627" Width="72.94223338269899" Height="26.989227058662216" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P60484"/>
+  </DataNode>
+  <DataNode TextLabel="PLCG1" GraphId="e95dc" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1643.5945362289947" CenterY="89.64448793215936" Width="116.14093959731551" Height="24.999999999999993" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P19174"/>
+  </DataNode>
+  <DataNode TextLabel="MTM1" GraphId="ec36c" Type="Protein">
+    <Comment>aka Myotubularin; gene name given in Fig. 1 of [PMID:16554828].</Comment>
+    <Graphics CenterX="412.8995649717177" CenterY="449.6868189281978" Width="58.296969182847796" Height="25.00000000000001" ZOrder="32768" FontSize="12" Valign="Middle" Color="999900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q13496"/>
+  </DataNode>
+  <DataNode TextLabel="OCRL" GraphId="f5232" Type="Protein">
+    <Graphics CenterX="1108.6729962282636" CenterY="230.51961166900452" Width="89.99999999999999" Height="29.471394189815527" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q01968"/>
+  </DataNode>
+  <DataNode TextLabel="PLCB1" GraphId="f677d" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1527.453596631679" CenterY="89.64448793215936" Width="116.14093959731551" Height="24.999999999999993" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9NQ66"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CG" GraphId="f6874" Type="Protein" GroupRef="ae369">
+    <Graphics CenterX="1315.7338039776512" CenterY="163.49235870459535" Width="72.31390464974044" Height="23.855618725263255" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P48736"/>
+  </DataNode>
+  <DataNode TextLabel="PtdIns(4,5)P2" GraphId="f6b50" Type="Metabolite">
+    <Comment>phosphatidylinositol 4,5-bisphosphate</Comment>
+    <Comment>Localization: Plasma membrane, Nucleus</Comment>
+    <Comment>Function: Endocytosis, cytoskeletal dynamics</Comment>
+    <Graphics CenterX="945.6594770981905" CenterY="125.66654874068735" Width="108.901397326853" Height="36.22177555444241" ZOrder="32768" FontSize="12" Valign="Middle" Color="0033cc"/>
+    <Xref Database="ChEBI" ID="CHEBI:58456"/>
+  </DataNode>
+  <DataNode TextLabel="PI-3 kinase I" GraphId="feee2" Type="Protein" GroupRef="ae369">
+    <Graphics CenterX="1351.8907563025214" CenterY="139.7058823529413" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Enzyme Nomenclature" ID="2.7.1.137"/>
+  </DataNode>
+  <DataNode TextLabel="PIP4P1" GraphId="fefff" Type="Protein" GroupRef="c9ac5">
+    <Graphics CenterX="714.345805472658" CenterY="234.66826552979484" Width="101.0865450428176" Height="25.140287161185512" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q86T03"/>
+  </DataNode>
+  <DataNode TextLabel="SHIP (1)" GraphId="ff2c6" Type="Protein">
+    <Comment>EC:3.1.3.86. Annotated based on caption of Fig. 1 [PMID:16554828] and "Src homology 2 (SH2) domain containing inositol polyphosphate 5-phosphatase 1 (SHIP1)" [https://en.wikipedia.org/wiki/INPP5D]</Comment>
+    <BiopaxRef>a0c</BiopaxRef>
+    <Graphics CenterX="1402.1493732304898" CenterY="392.4614557395647" Width="90.00000000000006" Height="29.471394189815516" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q92835"/>
+  </DataNode>
+  <DataNode TextLabel="PIP-5 kinase gamma" GraphId="d670c" Type="Protein" GroupRef="cf919">
+    <Comment>"PIP5Kγ, has three splicing variance; PIP5Kγ635, PIP5γ661, and PIP5Kγ687, making it one of the key regulators for producing PI(4,5)P2" [https://en.wikipedia.org/wiki/Phosphatidylinositol-4-phosphate_5-_kinases_(PIP5K)_in_neuronal_development]</Comment>
+    <Graphics CenterX="880.4337470081012" CenterY="261.9764288769057" Width="123.26245199939561" Height="29.16031944992194" ZOrder="32772" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O60331"/>
+  </DataNode>
+  <DataNode TextLabel="PIP4K2A" GraphId="d2ce4" Type="Protein" GroupRef="e9176">
+    <Comment/>
+    <Graphics CenterX="760.5653781690331" CenterY="43.94953301775395" Width="86.28770062386583" Height="25.758379563861347" ZOrder="32779" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P48426"/>
+  </DataNode>
+  <DataNode TextLabel="PIP4K2C" GraphId="c0fb3" Type="Protein" GroupRef="e9176">
+    <Comment/>
+    <Graphics CenterX="674.2776775451674" CenterY="69.70791258161526" Width="86.28770062386583" Height="25.758379563861347" ZOrder="32780" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q8TBX8"/>
+  </DataNode>
+  <DataNode TextLabel="PIP4K2B" GraphId="bc33d" Type="Protein" GroupRef="e9176">
+    <Comment/>
+    <Graphics CenterX="760.565378169033" CenterY="69.70791258161526" Width="86.28770062386583" Height="25.758379563861347" ZOrder="32781" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P78356"/>
+  </DataNode>
+  <DataNode TextLabel="PtdIns(3,5)P2" GraphId="b20cc" Type="Metabolite">
+    <Comment>phosphorylated on position 1, 3 and 5; position 1 connected to DAG.</Comment>
+    <Comment>Localization: Endosomes</Comment>
+    <Comment>Function: Osmotic stress responses, signaling, vacuole homeostasis</Comment>
+    <Graphics CenterX="114.13271876489414" CenterY="235.59783321434622" Width="108.901397326853" Height="36.22177555444241" ZOrder="32784" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:57923"/>
+  </DataNode>
+  <DataNode TextLabel="PtdIns" GraphId="e1f13" Type="Metabolite">
+    <Comment>phosphorylated on position 1; position 1 connected to DAG.</Comment>
+    <Graphics CenterX="496.22955650060794" CenterY="347.89576527097756" Width="108.901397326853" Height="36.22177555444241" ZOrder="32788" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:57880"/>
+  </DataNode>
+  <DataNode TextLabel="PtdIns(3)P" GraphId="adfe2" Type="Metabolite">
+    <Comment>phosphorylated on position 1 and 3; position 1 connected to DAG.</Comment>
+    <Comment>Localization: Endosomes</Comment>
+    <Comment>Function: Endocytic membrane traffic, autophagy, phagosome maturation</Comment>
+    <Graphics CenterX="496.22955650060794" CenterY="604.9100358992574" Width="108.901397326853" Height="36.22177555444241" ZOrder="32793" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:58088"/>
+  </DataNode>
+  <DataNode TextLabel="PtdIns(3,4)P2" GraphId="a6246" Type="Metabolite">
+    <Comment>phosphorylated on position 1, 3 and 4; position 1 connected to DAG.</Comment>
+    <Comment>Localization: Plasma membrane</Comment>
+    <Comment>Function: Signaling, phagocyte oxidase, cytoskeletal dynamics</Comment>
+    <Graphics CenterX="1018.5818386450583" CenterY="604.9100358992574" Width="108.901397326853" Height="36.22177555444241" ZOrder="32798" FontSize="12" Valign="Middle" Color="0033cc"/>
+    <Xref Database="ChEBI" ID="CHEBI:57658"/>
+  </DataNode>
+  <DataNode TextLabel="PtdIns(4)P" GraphId="d61d9" Type="Metabolite">
+    <Comment>phosphorylated on position 1 and 4; position 1 connected to DAG.</Comment>
+    <Comment>Localization: Golgi</Comment>
+    <Comment>Function: Golgi-to-PM traffic</Comment>
+    <Graphics CenterX="1018.5818386450583" CenterY="347.8957652709775" Width="108.90139732685307" Height="36.22177555444238" ZOrder="32803" FontSize="12" Valign="Middle" Color="0033cc"/>
+    <Xref Database="ChEBI" ID="CHEBI:58178"/>
+  </DataNode>
+  <DataNode TextLabel="PtdIns(3,4,5)P3" GraphId="a6b7e" Type="Metabolite">
+    <Comment>phosphorylated on position 1, 3, 4 and 5; position 1 connected to DAG.</Comment>
+    <Comment>Localization: Plasma membrane</Comment>
+    <Comment>Function: Signaling, cytoskeletal dynamics</Comment>
+    <Graphics CenterX="1444.6642966569852" CenterY="270.3104000227852" Width="108.901397326853" Height="36.22177555444241" ZOrder="32808" FontSize="12" Valign="Middle" Color="0033cc"/>
+    <Xref Database="ChEBI" ID="CHEBI:57836"/>
+  </DataNode>
+  <DataNode TextLabel="Ins(1,4,5)P3" GraphId="ffdf6" Type="Metabolite">
+    <Comment>phosphorylated on position 1,4 and 5.</Comment>
+    <Graphics CenterX="1245.1122594687506" CenterY="81.57175232818572" Width="108.901397326853" Height="36.22177555444241" ZOrder="32813" FontSize="12" Valign="Middle" Color="0033cc"/>
+    <Xref Database="ChEBI" ID="CHEBI:203600"/>
+  </DataNode>
+  <DataNode TextLabel="PIP4P2" GraphId="d8f04" Type="Protein" GroupRef="c9ac5">
+    <Graphics CenterX="714.345805472658" CenterY="259.8085526909804" Width="101.0865450428176" Height="25.140287161185512" ZOrder="32815" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q8N4L2"/>
+  </DataNode>
+  <DataNode TextLabel="PIP-5 kinase beta" GraphId="cd2c1" Type="Protein" GroupRef="cf919">
+    <Graphics CenterX="880.4337470081012" CenterY="232.81610942698373" Width="123.26245199939561" Height="29.16031944992194" ZOrder="32816" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O14986"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CB" GraphId="c5ebd" Type="Protein" GroupRef="ae369">
+    <Graphics CenterX="1388.0477086273918" CenterY="163.49235870459535" Width="72.31390464974044" Height="23.855618725263255" ZOrder="32817" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P42338"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CA" GraphId="d75a3" Type="Protein" GroupRef="ae369">
+    <Graphics CenterX="1315.733803977651" CenterY="187.3479774298586" Width="72.31390464974044" Height="23.855618725263255" ZOrder="32818" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P42336"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CD" GraphId="d5b68" Type="Protein" GroupRef="ae369">
+    <Graphics CenterX="1388.0477086273913" CenterY="187.3479774298586" Width="72.31390464974044" Height="23.855618725263255" ZOrder="32819" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O00329"/>
+  </DataNode>
+  <DataNode TextLabel="Phospholipase C" GraphId="a104e" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1661.7832486994535" CenterY="35.661399983363836" Width="116.14093959731555" Height="25.0" ZOrder="32820" FontSize="12" Valign="Middle"/>
+    <Xref Database="Enzyme Nomenclature" ID="3.1.4.11"/>
+  </DataNode>
+  <DataNode TextLabel="PLCB3" GraphId="f3dce" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1527.453596631679" CenterY="139.64448793215905" Width="116.14093959731551" Height="24.999999999999993" ZOrder="32821" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q01970"/>
+  </DataNode>
+  <DataNode TextLabel="PLCB4" GraphId="f81cf" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1527.4535966316787" CenterY="164.64448793215902" Width="116.14093959731551" Height="25.00000000000001" ZOrder="32822" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q15147"/>
+  </DataNode>
+  <DataNode TextLabel="PLCG2" GraphId="ca6d3" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1643.5945362289942" CenterY="114.64448793215945" Width="116.14093959731551" Height="25.00000000000001" ZOrder="32824" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P16885"/>
+  </DataNode>
+  <DataNode TextLabel="PLCE1" GraphId="be0a1" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1643.5945362289942" CenterY="164.64448793215902" Width="116.14093959731551" Height="25.00000000000001" ZOrder="32826" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9P212"/>
+  </DataNode>
+  <DataNode TextLabel="PLCD1" GraphId="eccb2" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1759.7354758263102" CenterY="89.64448793215936" Width="116.14093959731551" Height="24.999999999999993" ZOrder="32828" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P51178"/>
+  </DataNode>
+  <DataNode TextLabel="PLCD3" GraphId="c83ca" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1759.7354758263098" CenterY="114.64448793215945" Width="116.14093959731551" Height="25.00000000000001" ZOrder="32829" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q8N3E9"/>
+  </DataNode>
+  <DataNode TextLabel="PLCD4" GraphId="f9b36" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1759.7354758263102" CenterY="139.64448793215905" Width="116.14093959731551" Height="24.999999999999993" ZOrder="32830" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9BRC7"/>
+  </DataNode>
+  <DataNode TextLabel="PLCH2" GraphId="a446a" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1875.8764154236242" CenterY="114.64448793215934" Width="116.14093959731551" Height="25.00000000000001" ZOrder="32833" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O75038"/>
+  </DataNode>
+  <DataNode TextLabel="PLCZ1" GraphId="fcea9" Type="Protein" GroupRef="fdefd">
+    <Graphics CenterX="1875.8764154236242" CenterY="164.6444879321593" Width="116.14093959731551" Height="25.00000000000001" ZOrder="32834" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q86YW0"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CG" GraphId="afb36" Type="Protein" GroupRef="c9b19">
+    <Graphics CenterX="1131.2789057950301" CenterY="360.67793786734995" Width="72.31390464974044" Height="23.855618725263255" ZOrder="32836" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P48736"/>
+  </DataNode>
+  <DataNode TextLabel="PI-3 kinase I" GraphId="df0be" Type="Protein" GroupRef="c9b19">
+    <Graphics CenterX="1131.2789057950301" CenterY="336.25012850471825" Width="90.0" Height="25.0" ZOrder="32837" FontSize="12" Valign="Middle"/>
+    <Xref Database="Enzyme Nomenclature" ID="2.7.1.137"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CB" GraphId="acf95" Type="Protein" GroupRef="c9b19">
+    <Graphics CenterX="1131.2789057950301" CenterY="384.53355659261325" Width="72.31390464974044" Height="23.855618725263255" ZOrder="32838" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P42338"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CA" GraphId="f59ab" Type="Protein" GroupRef="c9b19">
+    <Graphics CenterX="1131.2789057950301" CenterY="408.3891753178765" Width="72.31390464974044" Height="23.855618725263255" ZOrder="32839" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P42336"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CD" GraphId="e8925" Type="Protein" GroupRef="c9b19">
+    <Graphics CenterX="1131.2789057950301" CenterY="432.24479404313973" Width="72.31390464974044" Height="23.855618725263255" ZOrder="32840" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O00329"/>
+  </DataNode>
+  <DataNode TextLabel="PIP-5 kinase alpha" GraphId="b94a6" Type="Protein" GroupRef="abe76">
+    <Graphics CenterX="1254.510337843648" CenterY="276.1271246891428" Width="123.26245199939561" Height="29.16031944992194" ZOrder="32842" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q99755"/>
+  </DataNode>
+  <DataNode TextLabel="PIP-5 kinase gamma" GraphId="dafb8" Type="Protein" GroupRef="abe76">
+    <Comment>"PIP5Kγ, has three splicing variance; PIP5Kγ635, PIP5γ661, and PIP5Kγ687, making it one of the key regulators for producing PI(4,5)P2" [https://en.wikipedia.org/wiki/Phosphatidylinositol-4-phosphate_5-_kinases_(PIP5K)_in_neuronal_development]</Comment>
+    <Graphics CenterX="1254.510337843648" CenterY="334.447763588986" Width="123.26245199939561" Height="29.16031944992194" ZOrder="32843" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O60331"/>
+  </DataNode>
+  <DataNode TextLabel="PIP-5 kinase beta" GraphId="d699a" Type="Protein" GroupRef="abe76">
+    <Graphics CenterX="1254.510337843648" CenterY="305.2874441390644" Width="123.26245199939561" Height="29.16031944992194" ZOrder="32844" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O14986"/>
+  </DataNode>
+  <DataNode TextLabel="4-phosphatase" GraphId="a39d8" Type="Protein" GroupRef="f8397">
+    <Comment>From [https://www.qmul.ac.uk/sbcs/iubmb/enzyme/EC3/1/3/78.html and https://enzyme.expasy.org/EC/3.1.3.78] :"Two pathways exist in mammalian cells to degrade 1-phosphatidyl-1D-myo-inositol 4,5-bisphosphate [PtdIns(4,5)P2] [2]. One is catalysed by this enzyme... The enzyme from human is specific for PtdIns(4,5)P2 as substrate, as it cannot use PtdIns(3,4,5)P3, PtdIns(3,4)P2, PtdIns(3,5)P2, PtdIns5P, PtdIns4P or PtdIns3P [2].In humans, the enzyme is localized to late endosomal/lysosomal membranes [2]." [2]: [PMID: 16365287]</Comment>
+    <Graphics CenterX="776.8668138760095" CenterY="647.887694348024" Width="101.08654504281765" Height="25.14028716118553" ZOrder="32846" FontSize="12" Valign="Middle"/>
+    <Xref Database="Enzyme Nomenclature" ID="3.1.3.78"/>
+  </DataNode>
+  <DataNode TextLabel="PIP4P1" GraphId="d0a81" Type="Protein" GroupRef="f8397">
+    <Graphics CenterX="776.8668138760183" CenterY="673.0279815092098" Width="101.0865450428176" Height="25.140287161185512" ZOrder="32847" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q86T03"/>
+  </DataNode>
+  <DataNode TextLabel="PIP4P2" GraphId="d2933" Type="Protein" GroupRef="f8397">
+    <Graphics CenterX="776.8668138760183" CenterY="698.1682686703949" Width="101.0865450428176" Height="25.140287161185512" ZOrder="32848" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q8N4L2"/>
+  </DataNode>
+  <DataNode TextLabel="PIP-4 kinase" GraphId="e958d" Type="Protein" GroupRef="a91af">
+    <Comment>According to Rhea, this is the EC class.</Comment>
+    <Graphics CenterX="837.3199394073846" CenterY="398.3456754358408" Width="86.2877006238658" Height="25.758379563861347" ZOrder="32849" FontSize="12" Valign="Middle"/>
+    <Xref Database="Enzyme Nomenclature" ID="2.7.1.149"/>
+  </DataNode>
+  <DataNode TextLabel="PIP4K2A" GraphId="a8754" Type="Protein" GroupRef="a91af">
+    <Comment/>
+    <Graphics CenterX="837.3199394073847" CenterY="424.10405499970216" Width="86.28770062386583" Height="25.758379563861347" ZOrder="32850" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P48426"/>
+  </DataNode>
+  <DataNode TextLabel="PIP4K2C" GraphId="a1ff2" Type="Protein" GroupRef="a91af">
+    <Comment/>
+    <Graphics CenterX="837.3199394073848" CenterY="449.8624345635635" Width="86.28770062386583" Height="25.758379563861347" ZOrder="32851" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q8TBX8"/>
+  </DataNode>
+  <DataNode TextLabel="PIP4K2B" GraphId="e4e59" Type="Protein" GroupRef="a91af">
+    <Comment/>
+    <Graphics CenterX="837.3199394073847" CenterY="475.6208141274248" Width="86.28770062386583" Height="25.758379563861347" ZOrder="32852" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P78356"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR10" GraphId="a71bd" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="365.8177133127887" CenterY="305.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32853" FontSize="12" Valign="Middle" Color="ff9900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9NXD2"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR11" GraphId="bf78e" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="303.576334002444" CenterY="280.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32854" FontSize="12" Valign="Middle" Color="ff9900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="A4FU01"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR12" GraphId="f2dbf" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="303.576334002444" CenterY="305.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32855" FontSize="12" Valign="Middle" Color="ff9900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9C0I1"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR2" GraphId="b9b0f" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="241.33495469209942" CenterY="280.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32856" FontSize="12" Valign="Middle" Color="999900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q13614"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR3" GraphId="e0f6d" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="365.8177133127887" CenterY="255.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32857" FontSize="12" Valign="Middle" Color="999900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q13615"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR4" GraphId="c6bab" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="428.05909262313344" CenterY="280.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32858" FontSize="12" Valign="Middle" Color="ff9900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9NYA4"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR6" GraphId="ac829" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="428.05909262313344" CenterY="255.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32859" FontSize="12" Valign="Middle" Color="999900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9Y217"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR7" GraphId="cff95" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="241.33495469209942" CenterY="305.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32860" FontSize="12" Valign="Middle" Color="999900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q9Y216"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR8" GraphId="a4e60" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="365.8177133127887" CenterY="280.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32861" FontSize="12" Valign="Middle" Color="999900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q96EF0"/>
+  </DataNode>
+  <DataNode TextLabel="MTMR9" GraphId="df6b2" Type="Protein" GroupRef="ad3fc">
+    <Graphics CenterX="303.576334002444" CenterY="255.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32862" FontSize="12" Valign="Middle" Color="ff9900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q96QG7"/>
+  </DataNode>
+  <DataNode TextLabel="SBF2" GraphId="cdcd2" Type="Protein" GroupRef="ad3fc">
+    <Comment>aka Myotubularin-related protein 13</Comment>
+    <Graphics CenterX="365.8177133127888" CenterY="330.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32863" FontSize="12" Valign="Middle" Color="ff9900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q86WG5"/>
+  </DataNode>
+  <DataNode TextLabel="SBF1" GraphId="c83a8" Type="Protein" GroupRef="ad3fc">
+    <Comment>aka Myotubularin-related protein 5</Comment>
+    <Graphics CenterX="303.576334002444" CenterY="330.96764084228016" Width="62.2413793103447" Height="25.0" ZOrder="32864" FontSize="12" Valign="Middle" Color="ff9900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O95248"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CG" GraphId="f36df" Type="Protein" GroupRef="e98cd">
+    <Graphics CenterX="578.3163145519092" CenterY="406.0539052110927" Width="72.31390464974041" Height="25.000000000000057" ZOrder="32867" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P48736"/>
+  </DataNode>
+  <DataNode TextLabel="PI-3 kinase I" GraphId="b1586" Type="Protein" GroupRef="e98cd">
+    <Graphics CenterX="614.876910354207" CenterY="381.62609584846086" Width="90.0" Height="25.0" ZOrder="32868" FontSize="12" Valign="Middle"/>
+    <Xref Database="Enzyme Nomenclature" ID="2.7.1.137"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CB" GraphId="bfd86" Type="Protein" GroupRef="e98cd">
+    <Graphics CenterX="578.3163145519092" CenterY="430.4817145737244" Width="72.31390464974044" Height="23.855618725263255" ZOrder="32869" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P42338"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CA" GraphId="a7b48" Type="Protein" GroupRef="e98cd">
+    <Graphics CenterX="650.6302192016497" CenterY="406.0539052110926" Width="72.31390464974042" Height="25.00000000000005" ZOrder="32870" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P42336"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3CD" GraphId="fd920" Type="Protein" GroupRef="e98cd">
+    <Graphics CenterX="650.6302192016495" CenterY="430.48171457372433" Width="72.31390464974042" Height="23.85561872526327" ZOrder="32871" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O00329"/>
+  </DataNode>
+  <DataNode TextLabel="PI-3 kinase II" GraphId="a0d34" Type="Protein" GroupRef="b4bb6">
+    <Comment>See also https://en.wikipedia.org/wiki/Class_II_PI_3-kinases</Comment>
+    <Graphics CenterX="741.1850384659347" CenterY="385.38451195735803" Width="90.0" Height="25.0" ZOrder="32872" FontSize="12" Valign="Middle"/>
+    <Xref Database="Enzyme Nomenclature" ID="2.7.1.154"/>
+  </DataNode>
+  <DataNode TextLabel="PI3K-C2β" GraphId="ad0ce" Type="Protein" GroupRef="b4bb6">
+    <Graphics CenterX="741.1850384659348" CenterY="435.3845119573631" Width="72.31390464974041" Height="25.000000000000057" ZOrder="32873" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O00750"/>
+  </DataNode>
+  <DataNode TextLabel="PI3K-C2γ" GraphId="f3cad" Type="Protein" GroupRef="b4bb6">
+    <Graphics CenterX="741.1850384659346" CenterY="460.38451195736263" Width="72.31390464974041" Height="25.000000000000057" ZOrder="32874" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="O75747"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3C3" GraphId="c79cb" Type="Protein" GroupRef="fa70c">
+    <Graphics CenterX="682.4644549763028" CenterY="529.4505085733189" Width="63.60465116279076" Height="26.453488372093048" ZOrder="32876" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q8NEB9"/>
+  </DataNode>
+  <DataNode TextLabel="PIK3R4" GraphId="e1e70" Type="Protein" GroupRef="fa70c">
+    <BiopaxRef>dbb</BiopaxRef>
+    <Graphics CenterX="682.4644549763028" CenterY="555.9039969454119" Width="63.60465116279076" Height="26.453488372093048" ZOrder="32877" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q99570"/>
+  </DataNode>
+  <DataNode TextLabel="ADP" GraphId="d67e4" Type="Metabolite" GroupRef="a7921">
+    <Graphics CenterX="583.1194989844281" CenterY="552.8359851049432" Width="45.677048070412994" Height="20.624576844956263" ZOrder="32878" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:456216"/>
+  </DataNode>
+  <DataNode TextLabel="H+" GraphId="fb3ed" Type="Metabolite" GroupRef="a7921">
+    <Graphics CenterX="583.1194989844281" CenterY="573.4605619498996" Width="45.677048070412994" Height="20.624576844956263" ZOrder="32879" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:15378"/>
+  </DataNode>
+  <DataNode TextLabel="MTM1" GraphId="fcc50" Type="Protein">
+    <Comment>aka Myotubularin; gene name given in Fig. 1 of [PMID:16554828].</Comment>
+    <Graphics CenterX="429.18374532805086" CenterY="198.6868189281978" Width="90.0" Height="25.0" ZOrder="32885" FontSize="12" Valign="Middle" Color="999900"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q13496"/>
+  </DataNode>
+  <State GraphRef="f6b50" TextLabel="P1" GraphId="ba89c">
+    <Graphics RelX="-0.4487233413252298" RelY="-1.0" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="a87e2" TextLabel="P5" GraphId="c7d9b">
+    <Graphics RelX="1.0" RelY="1.0" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="a87e2" TextLabel="P1" GraphId="deede">
+    <Graphics RelX="-0.4127105585652423" RelY="-0.9999999999999971" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="f6b50" TextLabel="P4" GraphId="e3424">
+    <Graphics RelX="0.25113040265982056" RelY="0.9999999999999996" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="f6b50" TextLabel="P5" GraphId="f63db">
+    <Graphics RelX="1.0" RelY="1.0" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="b20cc" TextLabel="P1" GraphId="af720">
+    <Graphics RelX="-0.4127105585652423" RelY="-0.9999999999999971" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="b20cc" TextLabel="P5" GraphId="dcefc">
+    <Graphics RelX="1.0" RelY="1.0" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="b20cc" TextLabel="P3" GraphId="e4ec2">
+    <Graphics RelX="-0.9668259449904325" RelY="0.9260837954415596" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="e1f13" TextLabel="P1" GraphId="b2fee">
+    <Graphics RelX="-0.4127105585652423" RelY="-0.9999999999999971" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="adfe2" TextLabel="P3" GraphId="e0f87">
+    <Graphics RelX="-0.9668259449904325" RelY="0.9260837954415596" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="adfe2" TextLabel="P1" GraphId="f2ae8">
+    <Graphics RelX="-0.4127105585652423" RelY="-0.9999999999999971" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="a6246" TextLabel="P4" GraphId="c0be4">
+    <Graphics RelX="0.21592468534900733" RelY="1.0" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="a6246" TextLabel="P1" GraphId="f1309">
+    <Graphics RelX="-0.4127105585652423" RelY="-0.9999999999999971" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="a6246" TextLabel="P3" GraphId="fe393">
+    <Graphics RelX="-0.9668259449904325" RelY="0.9260837954415596" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="d61d9" TextLabel="P4" GraphId="a1b92">
+    <Graphics RelX="0.21824892819367414" RelY="1.0" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="d61d9" TextLabel="P1" GraphId="cce7e">
+    <Graphics RelX="-0.4127105585652423" RelY="-0.9999999999999971" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="a6b7e" TextLabel="P3" GraphId="b56f0">
+    <Graphics RelX="-0.9668259449904325" RelY="0.9260837954415596" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="a6b7e" TextLabel="P4" GraphId="d8748">
+    <Graphics RelX="0.2737983321809992" RelY="1.0" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="a6b7e" TextLabel="P5" GraphId="e096e">
+    <Graphics RelX="1.0" RelY="1.0" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="a6b7e" TextLabel="P1" GraphId="e9231">
+    <Graphics RelX="-0.4127105585652423" RelY="-0.9999999999999971" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="ffdf6" TextLabel="P1" GraphId="d2d3a">
+    <Graphics RelX="-0.4127105585652423" RelY="-0.9999999999999971" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="ffdf6" TextLabel="P5" GraphId="d9a41">
+    <Graphics RelX="1.0" RelY="1.0" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="ffdf6" TextLabel="P4" GraphId="df8c9">
+    <Graphics RelX="0.1517152544661762" RelY="1.0" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <Interaction GraphId="id1329b9e0">
+    <BiopaxRef>a01</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="714.3458054726567" Y="188.9578347880161" GraphRef="da968" RelX="0.0" RelY="-1.0"/>
+      <Point X="716.0310108941258" Y="125.66654874068736" GraphRef="bdbe8" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id16059930">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1444.6642966569852" Y="288.4212878000064" GraphRef="a6b7e" RelX="0.0" RelY="1.0"/>
+      <Point X="1073.0325373084847" Y="613.9654797878679" GraphRef="a6246" RelX="1.0" RelY="0.5" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.4" Shape="None" GraphId="eb48d"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="25529"/>
+  </Interaction>
+  <Interaction GraphId="id258f298a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1390.2135979935588" Y="270.3104000227852" GraphRef="a6b7e" RelX="-1.0" RelY="0.0"/>
+      <Point X="1000.110175761617" Y="125.66654874068735" GraphRef="f6b50" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.5732424485549562" Shape="None" GraphId="c2cd0"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="21294"/>
+  </Interaction>
+  <Interaction GraphId="id25f4d717">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1018.5818386450583" Y="329.7848774937563" GraphRef="d61d9" RelX="0.0" RelY="-1.0"/>
+      <Point X="945.6594770981906" Y="143.77743651790854" GraphRef="f6b50" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.5015650011823897" Shape="None" GraphId="a6804"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="14427"/>
+  </Interaction>
+  <Interaction GraphId="id27fd394c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1045.8071879767715" Y="366.0066530481987" GraphRef="d61d9" RelX="0.5" RelY="1.0"/>
+      <Point X="1045.8071879767715" Y="586.7991481220361" GraphRef="a6246" RelX="0.5" RelY="-1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.4" Shape="None" GraphId="deff4"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="18375"/>
+  </Interaction>
+  <Interaction GraphId="id35bfcae2">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="1461.383126833021" Y="57.6571719705627" GraphRef="d1094" RelX="-1.0" RelY="-0.5"/>
+      <Point X="1454.4535966316787" Y="43.54720070389607"/>
+      <Point X="1249.4293858152912" Y="29.437229437229437"/>
+      <Point X="1044.4051749989037" Y="81.57175232818572" GraphRef="dde6b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id36ffbc3f">
+    <BiopaxRef>a6d</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="717.4215278571002" Y="90.58710236354594" GraphRef="f4855" RelX="0.0" RelY="1.0"/>
+      <Point X="721.1660657486916" Y="116.61110485207676" GraphRef="f26b1" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3934985d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1090.2942417735208" Y="187.15891228276627" GraphRef="e7975" RelX="1.0" RelY="0.0"/>
+      <Point X="1166.5897570436525" Y="187.39440454541648" GraphRef="c2cd0" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id44a279d0">
+    <Comment>The addition of a third phosphate to obtain PtdIns(4,5)P2 can be performed by two enzymes, which either add the phosphate at the D4 or D5 position in the inositol ring. This last phosphorylation step is depending on where the second phosphphate is located (D5 or D4 repectively). Rephrased from [PMID: 9367159]: "The type I enzyme PIP-4-kinase phosphorylates PtdIns-4-P at the D-5 position (of the inositol ring).The type II enzyme however ( abundant in some tissues), phosphorylates PtdIns-5-P at the D-4 position, and thus should be considered as a 4-OH kinase, or PIP(4)K." </Comment>
+    <BiopaxRef>a6d</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="550.6802551640344" Y="116.61110485207678" GraphRef="a87e2" RelX="1.0" RelY="-0.5"/>
+      <Point X="891.2087784347641" Y="116.61110485207675" GraphRef="f6b50" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.5006506032069337" Shape="None" GraphId="f26b1"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="12281"/>
+  </Interaction>
+  <Interaction GraphId="id47e580a6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="993.6567392245389" Y="437.8105992013884" GraphRef="af3a9" RelX="1.0" RelY="0.0"/>
+      <Point X="1018.5818386450583" Y="477.2283848743418" GraphRef="c39c6" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id503e90bf">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1073.0325373084847" Y="595.8545920106467" GraphRef="a6246" RelX="1.0" RelY="-0.5"/>
+      <Point X="1417.438947325272" Y="288.4212878000064" GraphRef="a6b7e" RelX="-0.5" RelY="1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.41340659160547316" Shape="None" GraphId="fc9c9"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="25530"/>
+  </Interaction>
+  <Interaction GraphId="id54810803">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="435.18374532805086" Y="377.0378996582216" GraphRef="dfdac" RelX="1.0" RelY="-0.5"/>
+      <Point X="496.22955650060794" Y="478.50751242003537" GraphRef="b6429" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id563f655a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="837.3199394073847" Y="377.4664856539101" GraphRef="f9450" RelX="0.0" RelY="-1.0"/>
+      <Point X="837.2103718214491" Y="356.95120915958813" GraphRef="aa2e3" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id579a5cd1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="326.74297213663766" Y="425.0" GraphRef="d4d9b" RelX="0.0" RelY="1.0"/>
+      <Point X="310.72040220826653" Y="458.99624360301493" GraphRef="a7540" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5eb0532e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="534.1593622270391" Y="405.7678098924084" GraphRef="d9ede" RelX="-1.0" RelY="0.0"/>
+      <Point X="496.22955650060794" Y="478.50751242003537" GraphRef="b6429" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5f48fbe">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="964.1311399816318" Y="604.9100358992573" GraphRef="a6246" RelX="-1.0" RelY="0.0"/>
+      <Point X="550.6802551640344" Y="604.9100358992573" GraphRef="adfe2" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.4616749156042946" Shape="None" GraphId="ea7d8"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="17194"/>
+  </Interaction>
+  <Interaction GraphId="id6c3340b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1078.2789057950301" Y="383.9613659552448" GraphRef="dea4a" RelX="-1.0" RelY="0.0"/>
+      <Point X="1045.8071879767715" Y="454.32365107773364" GraphRef="deff4" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7170c556">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="964.1311399816318" Y="356.9512091595881" GraphRef="d61d9" RelX="-1.0" RelY="0.5"/>
+      <Point X="550.6802551640344" Y="356.9512091595882" GraphRef="e1f13" RelX="1.0" RelY="0.5" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.3069790701165785" Shape="None" GraphId="aa2e3"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="55653"/>
+  </Interaction>
+  <Interaction GraphId="id741db54d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="168.58341742832067" Y="235.59783321434622" GraphRef="b20cc" RelX="1.0" RelY="0.0"/>
+      <Point X="441.7788578371815" Y="134.72199262929797" GraphRef="a87e2" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.6379700199501245" Shape="None" GraphId="a19f6"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id798f0010">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="688.1850384659347" Y="451.8845119573615" GraphRef="cf038" RelX="-1.0" RelY="0.5"/>
+      <Point X="563.5208711433756" Y="465.19601218869843"/>
+      <Point X="496.22955650060794" Y="478.50751242003537" GraphRef="b6429" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7ccaa0ad">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="837.3199394073847" Y="496.50000390935554" GraphRef="f9450" RelX="0.0" RelY="1.0"/>
+      <Point X="836.3612238297176" Y="595.8545920106467" GraphRef="c3a63" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id88e07046">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="523.4549058323212" Y="143.77743651790857" GraphRef="a87e2" RelX="0.5" RelY="1.0"/>
+      <Point X="523.4549058323212" Y="329.78487749375637" GraphRef="e1f13" RelX="0.5" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8a3aba31">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1000.110175761617" Y="116.61110485207675" GraphRef="f6b50" RelX="1.0" RelY="-0.5"/>
+      <Point X="1390.2135979935588" Y="261.25495613417456" GraphRef="a6b7e" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.3247937649587224" Shape="None" GraphId="a2fc1"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="21293"/>
+  </Interaction>
+  <Interaction GraphId="id8c9035b0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="550.6802551640344" Y="338.84032138236694" GraphRef="e1f13" RelX="1.0" RelY="-0.5"/>
+      <Point X="964.1311399816318" Y="338.84032138236694" GraphRef="d61d9" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.39000835682980756" Shape="None" GraphId="e0980"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="55654"/>
+  </Interaction>
+  <Interaction GraphId="id8e1e9e6b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="334.69702365761646" Y="212.46764084228016" GraphRef="d51c9" RelX="0.0" RelY="-1.0"/>
+      <Point X="342.87391799624464" Y="171.24207118381742" GraphRef="a19f6" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id949592bc">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="714.3458054726567" Y="280.3786962715732" GraphRef="da968" RelX="0.0" RelY="1.0"/>
+      <Point X="711.9295553815756" Y="338.84032138236694" GraphRef="e0980" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id97188e21">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="523.4549058323212" Y="366.00665304819876" GraphRef="e1f13" RelX="0.5" RelY="1.0"/>
+      <Point X="523.4549058323212" Y="586.7991481220361" GraphRef="adfe2" RelX="0.5" RelY="-1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.7370543837106861" Shape="None" GraphId="d59c9"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="12710"/>
+  </Interaction>
+  <Interaction GraphId="id9bdbb488">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="496.22955650060794" Y="366.00665304819876" GraphRef="e1f13" RelX="0.0" RelY="1.0"/>
+      <Point X="496.22955650060794" Y="586.7991481220361" GraphRef="adfe2" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.5095320804912963" Shape="None" GraphId="b6429"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="12318"/>
+  </Interaction>
+  <Interaction GraphId="id9da4df60">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1254.510337843648" Y="357.027923313947" GraphRef="a6f36" RelX="0.0" RelY="1.0"/>
+      <Point X="1215.412417400602" Y="468.75963757091733" GraphRef="fc9c9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida71271cc">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="469.0042071688947" Y="449.5599187542316" GraphRef="a54c9" RelX="0.0" RelY="0.0"/>
+      <Point X="435.18374532805086" Y="383.2878996582216" GraphRef="dfdac" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idb4f9a2fd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1271.5768516527808" Y="163.24083457271576" GraphRef="f7393" RelX="-1.0" RelY="0.0"/>
+      <Point X="1126.8133349916116" Y="163.59052588811883" GraphRef="a2fc1" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idb76ba86a">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="972.8848264299038" Y="107.55566096346615" GraphRef="f6b50" RelX="0.5" RelY="-1.0"/>
+      <Point X="1190.6615608053241" Y="81.57175232818572" GraphRef="ffdf6" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.4" Shape="None" GraphId="dde6b"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="33180"/>
+  </Interaction>
+  <Interaction GraphId="idbb285b02">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="442.0480495631416" Y="449.6868189281978" GraphRef="ec36c" RelX="1.0" RelY="0.0"/>
+      <Point X="469.0042071688947" Y="449.5599187542316" GraphRef="a54c9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idbd109e69">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="441.1837453280509" Y="497.99826104058803" GraphRef="b30e5" RelX="1.0" RelY="0.0"/>
+      <Point X="469.0042071688947" Y="498.4821500925011" GraphRef="b7a3d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc6bff518">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="550.6802551640344" Y="595.8545920106467" GraphRef="adfe2" RelX="1.0" RelY="-0.5"/>
+      <Point X="964.1311399816318" Y="595.8545920106467" GraphRef="a6246" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.6909671236807664" Shape="None" GraphId="c3a63"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="17195"/>
+  </Interaction>
+  <Interaction GraphId="idcd7f92b3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="950.064973007799" Y="232.81610942698376" GraphRef="b8d3e" RelX="1.0" RelY="0.0"/>
+      <Point X="982.0065342895809" Y="236.49005514077194" GraphRef="a6804" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idce77ef5b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="650.6621293949074" Y="529.4505085733189" GraphRef="c79cb" RelX="-1.0" RelY="0.0"/>
+      <Point X="523.4549058323212" Y="528.7427294327906" GraphRef="d59c9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idda7a54c1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1044.4051749989037" Y="81.57175232818572" GraphRef="dde6b" RelX="0.0" RelY="0.0"/>
+      <Point X="1159.9703991870927" Y="128.70960716595712" GraphRef="aacdc" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="33180"/>
+  </Interaction>
+  <Interaction GraphId="iddb6948f0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="776.8668138760139" Y="627.3175507674312" GraphRef="c6a79" RelX="0.0" RelY="-1.0"/>
+      <Point X="773.2512376269466" Y="604.9100358992573" GraphRef="ea7d8" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="iddfa2f862">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="469.0042071688947" Y="586.7991481220361" GraphRef="adfe2" RelX="-0.5" RelY="-1.0"/>
+      <Point X="469.0042071688947" Y="366.00665304819876" GraphRef="e1f13" RelX="-0.5" RelY="1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.6215756080020247" Shape="None" GraphId="a54c9"/>
+      <Anchor Position="0.4" Shape="None" GraphId="b7a3d"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="12317"/>
+  </Interaction>
+  <Interaction GraphId="ide21e0126">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="467.1797822783058" Y="281.96764084228016" GraphRef="d51c9" RelX="1.0" RelY="0.0"/>
+      <Point X="469.0042071688947" Y="449.5599187542316" GraphRef="a54c9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ideba742b7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="560.2809749492214" Y="500.18195666892325" GraphRef="cdf54" RelX="-1.0" RelY="0.0"/>
+      <Point X="523.4549058323212" Y="528.7427294327906" GraphRef="d59c9" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ided0890cb">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1357.1493732304898" Y="392.4614557395647" GraphRef="ff2c6" RelX="-1.0" RelY="0.0"/>
+      <Point X="1296.011592917585" Y="418.63896459515104" GraphRef="eb48d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf1ccf22b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1063.6729962282636" Y="230.51961166900452" GraphRef="f5232" RelX="-1.0" RelY="0.0"/>
+      <Point X="1007.0209184959295" Y="230.85041379712737" GraphRef="c65de" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf46796ac">
+    <Comment>"PTEN protein acts as a phosphatase to dephosphorylate phosphatidylinositol (3,4,5)-trisphosphate (PtdIns (3,4,5)P3 or PIP3)." [https://en.wikipedia.org/wiki/PTEN_(gene)]</Comment>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1018.5818386450583" Y="586.7991481220361" GraphRef="a6246" RelX="0.0" RelY="-1.0"/>
+      <Point X="1018.5818386450583" Y="366.0066530481987" GraphRef="d61d9" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.49626126653920744" Shape="None" GraphId="c39c6"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="18374"/>
+  </Interaction>
+  <Interaction GraphId="idf5b5da68">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="445.46744438761186" Y="532.8231572725356" GraphRef="d4216" RelX="1.0" RelY="-0.5"/>
+      <Point X="469.0042071688947" Y="449.5599187542316" GraphRef="a54c9" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idfb679763">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="972.8848264299038" Y="143.77743651790854" GraphRef="f6b50" RelX="0.5" RelY="1.0"/>
+      <Point X="1045.8071879767715" Y="329.7848774937563" GraphRef="d61d9" RelX="0.5" RelY="-1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.46811555936907306" Shape="None" GraphId="c65de"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="14426"/>
+  </Interaction>
+  <Interaction GraphId="idfb8ce1eb">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="441.7788578371815" Y="595.8545920106467" GraphRef="adfe2" RelX="-1.0" RelY="-0.5"/>
+      <Point X="114.13271876489415" Y="253.70872099156742" GraphRef="b20cc" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.4" Shape="None" GraphId="a7540"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="13610"/>
+  </Interaction>
+  <Interaction GraphId="bc391">
+    <BiopaxRef>b64</BiopaxRef>
+    <Graphics ZOrder="32769" LineThickness="1.0">
+      <Point X="891.2087784347641" Y="125.66654874068735" GraphRef="f6b50" RelX="-1.0" RelY="0.0"/>
+      <Point X="550.6802551640344" Y="125.66654874068738" GraphRef="a87e2" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.5144290582711839" Shape="None" GraphId="bdbe8"/>
+    </Graphics>
+    <Xref Database="Rhea" ID="12282"/>
+  </Interaction>
+  <Interaction GraphId="c8434">
+    <Graphics ZOrder="32865" LineThickness="1.0">
+      <Point X="496.22955650060794" Y="478.50751242003537" GraphRef="b6429" RelX="0.0" RelY="0.0"/>
+      <Point X="445.46744438761186" Y="545.3231572725356" GraphRef="d4216" RelX="1.0" RelY="0.5" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="a591b">
+    <Graphics ZOrder="32880" LineThickness="1.0">
+      <Point X="523.4549058323212" Y="528.7427294327906" GraphRef="d59c9" RelX="0.0" RelY="0.0"/>
+      <Point X="552.2809749492214" Y="563.1482735274215" GraphRef="f3636" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ffbc0">
+    <Graphics ZOrder="32881" LineStyle="Broken" LineThickness="1.0">
+      <Point X="496.22955650060794" Y="329.78487749375637" GraphRef="e1f13" RelX="0.0" RelY="-1.0"/>
+      <Point X="496.22955650060794" Y="143.77743651790857" GraphRef="a87e2" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="e2161">
+    <Graphics ZOrder="32882" LineStyle="Broken" LineThickness="1.0">
+      <Point X="441.7788578371815" Y="125.66654874068738" GraphRef="a87e2" RelX="-1.0" RelY="0.0"/>
+      <Point X="168.58341742832067" Y="226.54238932573563" GraphRef="b20cc" RelX="1.0" RelY="-0.5" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="bc89b">
+    <Graphics ZOrder="32883" LineThickness="1.0">
+      <Point X="384.18374532805086" Y="198.6868189281978" GraphRef="fcc50" RelX="-1.0" RelY="0.0"/>
+      <Point X="342.87391799624464" Y="171.24207118381742" GraphRef="a19f6" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="e0fdb">
+    <Graphics ZOrder="32884" LineStyle="Broken" LineThickness="1.0">
+      <Point X="86.90736943318089" Y="253.70872099156742" GraphRef="b20cc" RelX="-0.5" RelY="1.0"/>
+      <Point X="441.7788578371815" Y="613.9654797878679" GraphRef="adfe2" RelX="-1.0" RelY="0.5" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <GraphicalLine GraphId="cbab2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1007.0209184959295" Y="230.85041379712737" GraphRef="c65de" RelX="0.0" RelY="0.0"/>
+      <Point X="1079.8224331926888" Y="278.6392405063289" GraphRef="fffc2" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="id2ddcb487">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="992.4405570352586" Y="306.15472809693654" GraphRef="fea7e" RelX="0.0" RelY="1.0"/>
+      <Point X="996.1094603854078" Y="319.78487749375637" GraphRef="cce7e" RelX="0.0" RelY="-1.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="id53836e2e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="465.3997407087292" Y="87.78738115816763" GraphRef="cb0cf" RelX="0.0" RelY="1.0"/>
+      <Point X="473.7571782409575" Y="97.55566096346622" GraphRef="deede" RelX="0.0" RelY="-1.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="id8ea18bf6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1423.3457359458184" Y="227.02162286075003" GraphRef="b5566" RelX="0.0" RelY="1.0"/>
+      <Point X="1422.1919183973348" Y="242.19951224556405" GraphRef="e9231" RelX="0.0" RelY="-1.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="idb0670b43">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="477.2964994122105" Y="306.1547280969364" GraphRef="aaacf" RelX="0.0" RelY="1.0"/>
+      <Point X="473.7571782409575" Y="319.7848774937564" GraphRef="b2fee" RelX="0.0" RelY="-1.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="idf0f9ba93">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="968.0083952816691" Y="570.3625055231544" GraphRef="a3211" RelX="0.0" RelY="1.0"/>
+      <Point X="996.1094603854078" Y="576.7991481220363" GraphRef="f1309" RelX="0.0" RelY="-1.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="idfe391501">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="480.0185882477448" Y="567.3805905349334" GraphRef="ceff6" RelX="0.0" RelY="1.0"/>
+      <Point X="473.7571782409575" Y="576.7991481220363" GraphRef="f2ae8" RelX="0.0" RelY="-1.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="adf33">
+    <Graphics ZOrder="32783" LineThickness="1.0">
+      <Point X="922.2450302506478" Y="87.78738115816763" GraphRef="db56d" RelX="0.0" RelY="1.0"/>
+      <Point X="921.2261776564445" Y="97.55566096346614" GraphRef="ba89c" RelX="0.0" RelY="-1.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d2037">
+    <Graphics ZOrder="32787" LineThickness="1.0">
+      <Point X="91.33705317928161" Y="195.26326580120562" GraphRef="ca657" RelX="0.0" RelY="1.0"/>
+      <Point X="91.6603405052437" Y="207.4869454371251" GraphRef="af720" RelX="0.0" RelY="-1.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b9a53">
+    <Graphics ZOrder="32887" LineThickness="1.0">
+      <Point X="469.0042071688947" Y="449.5599187542316" GraphRef="a54c9" RelX="0.0" RelY="0.0"/>
+      <Point X="263.0215658696703" Y="553.6855368026252" GraphRef="a7eae" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ea4b8">
+    <Graphics ZOrder="32889" LineThickness="1.0">
+      <Point X="210.2142650369271" Y="280.96764084228016" GraphRef="b9b0f" RelX="-1.0" RelY="0.0"/>
+      <Point X="104.86122831692458" Y="395.1481481481482" GraphRef="a6058" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="aa25f">
+    <Graphics ZOrder="32891" LineThickness="1.0">
+      <Point X="310.72040220826653" Y="458.99624360301493" GraphRef="a7540" RelX="0.0" RelY="0.0"/>
+      <Point X="183.55250820440858" Y="481.5096108766994" GraphRef="baa62" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="MTMRs" GraphId="ad35e" GroupRef="ad3fc">
+    <Comment>Annotations based on: Rhea links to enzymes from UniProt [https://uniprot.org/uniprot/?query=reviewed%3Ayes+and+annotation%3A%28type%3A%22catalytic+activity%22+rhea%3A12316%29&amp;sort=score],
+Node border in yellow; additional proteins from [https://en.wikipedia.org/wiki/Myotubularin], Node Border in orange.</Comment>
+    <Graphics CenterX="334.3349546920994" CenterY="232.96764084228016" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" Color="404040"/>
+  </Label>
+  <Label TextLabel="DAG" GraphId="cb0cf">
+    <Graphics CenterX="465.3997407087292" CenterY="78.94446845289538" Width="47.59291270527227" Height="17.68582541054451" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" Color="ff6666"/>
+  </Label>
+  <Label TextLabel="Beta isotypes:" GraphId="f7d4d" GroupRef="fdefd">
+    <Graphics CenterX="1527.4535966316787" CenterY="64.64448793215936" Width="116.14093959731551" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Oculocerebrorenal &#10;syndrome of Lowe" GraphId="fffc2" Href="https://www.omim.org/entry/309000">
+    <Graphics CenterX="1111.8178621659658" CenterY="293.32805907172974" Width="127.98171589310846" Height="29.377637130801638" ZOrder="28672" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff"/>
+  </Label>
+  <Label TextLabel="DAG" GraphId="db56d">
+    <Graphics CenterX="922.2450302506478" CenterY="78.94446845289538" Width="47.59291270527227" Height="17.68582541054451" ZOrder="32782" FillColor="ffffff" FontSize="12" Valign="Middle" Color="ff6666"/>
+  </Label>
+  <Label TextLabel="DAG" GraphId="ca657">
+    <Graphics CenterX="91.33705317928161" CenterY="186.42035309593336" Width="47.59291270527227" Height="17.68582541054451" ZOrder="32786" FillColor="ffffff" FontSize="12" Valign="Middle" Color="ff6666"/>
+  </Label>
+  <Label TextLabel="DAG" GraphId="aaacf">
+    <Graphics CenterX="477.2964994122105" CenterY="297.31181539166414" Width="47.59291270527227" Height="17.68582541054451" ZOrder="32792" FillColor="ffffff" FontSize="12" Valign="Middle" Color="ff6666"/>
+  </Label>
+  <Label TextLabel="DAG" GraphId="ceff6">
+    <Graphics CenterX="480.0185882477448" CenterY="558.5376778296612" Width="47.59291270527227" Height="17.68582541054451" ZOrder="32797" FillColor="ffffff" FontSize="12" Valign="Middle" Color="ff6666"/>
+  </Label>
+  <Label TextLabel="DAG" GraphId="a3211">
+    <Graphics CenterX="968.0083952816691" CenterY="561.5195928178821" Width="47.59291270527227" Height="17.68582541054451" ZOrder="32802" FillColor="ffffff" FontSize="12" Valign="Middle" Color="ff6666"/>
+  </Label>
+  <Label TextLabel="DAG" GraphId="fea7e">
+    <Graphics CenterX="992.4405570352586" CenterY="297.31181539166425" Width="47.59291270527227" Height="17.68582541054451" ZOrder="32807" FillColor="ffffff" FontSize="12" Valign="Middle" Color="ff6666"/>
+  </Label>
+  <Label TextLabel="DAG" GraphId="b5566">
+    <Graphics CenterX="1423.3457359458184" CenterY="218.17871015547777" Width="47.59291270527227" Height="17.68582541054451" ZOrder="32812" FillColor="ffffff" FontSize="12" Valign="Middle" Color="ff6666"/>
+  </Label>
+  <Label TextLabel="Gamma isotypes:" GraphId="b263e" GroupRef="fdefd">
+    <Graphics CenterX="1643.5945362289942" CenterY="64.64448793215936" Width="116.14093959731551" Height="25.0" ZOrder="32823" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Epsilon isotype:" GraphId="d2b18" GroupRef="fdefd">
+    <Graphics CenterX="1643.5945362289947" CenterY="139.64448793215905" Width="116.14093959731551" Height="24.999999999999993" ZOrder="32825" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Delta isotypes:" GraphId="d96c7" GroupRef="fdefd">
+    <Graphics CenterX="1759.7354758263093" CenterY="64.64448793215936" Width="116.14093959731551" Height="25.0" ZOrder="32827" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Eta isotypes:" GraphId="bf80b" GroupRef="fdefd">
+    <Graphics CenterX="1875.8764154236244" CenterY="64.64448793215936" Width="116.14093959731551" Height="25.0" ZOrder="32831" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Zeta isotype:" GraphId="b4512" GroupRef="fdefd">
+    <Graphics CenterX="1875.8764154236244" CenterY="139.64448793215934" Width="116.14093959731551" Height="24.999999999999993" ZOrder="32832" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="myotubular &#10;myopathy" GraphId="a7eae" Href="https://omim.org/entry/310400">
+    <BiopaxRef>b03</BiopaxRef>
+    <Graphics CenterX="263.0215658696703" CenterY="568.3743553680259" Width="127.98171589310846" Height="29.377637130801638" ZOrder="32886" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff"/>
+  </Label>
+  <Label TextLabel="Charcot-Marie-Tooth &#10;type 4B syndrome" GraphId="a6058" Href="https://omim.org/entry/601382">
+    <BiopaxRef>c41</BiopaxRef>
+    <Graphics CenterX="104.86122831692458" CenterY="412.27314814814815" Width="142.59282700421954" Height="34.249999999999886" ZOrder="32888" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff"/>
+  </Label>
+  <Label TextLabel="Francois-Neetens fleck &#10;corneal dystrophy" GraphId="baa62" Href="https://omim.org/entry/121850">
+    <BiopaxRef>bac</BiopaxRef>
+    <Graphics CenterX="183.55250820440858" CenterY="496.19842944210023" Width="156.456868260669" Height="29.377637130801638" ZOrder="32890" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff"/>
+  </Label>
+  <Group GroupId="abe76" GraphId="a6f36" Style="Group"/>
+  <Group GroupId="c7121" GraphId="b3d27" Style="Complex"/>
+  <Group GroupId="cf919" GraphId="b8d3e" Style="Group"/>
+  <Group GroupId="f8397" GraphId="c6a79" Style="Group"/>
+  <Group GroupId="b4bb6" GraphId="cf038" Style="Group"/>
+  <Group GroupId="fa70c" GraphId="d01f4" Style="Complex">
+    <Comment>More details on the complex (known for yeast) can be found on the COmplex portal: https://www.ebi.ac.uk/complexportal/complex/CPX-1881</Comment>
+  </Group>
+  <Group GroupId="fdefd" GraphId="d1094" Style="Group"/>
+  <Group GroupId="ad3fc" GraphId="d51c9" Style="Group"/>
+  <Group GroupId="e98cd" GraphId="d9ede" Style="Group"/>
+  <Group GroupId="c9ac5" GraphId="da968" Style="Group"/>
+  <Group GroupId="c9b19" GraphId="dea4a" Style="Group"/>
+  <Group GroupId="a7921" GraphId="f3636" Style="Group"/>
+  <Group GroupId="e9176" GraphId="f4855" Style="Group"/>
+  <Group GroupId="ae369" GraphId="f7393" Style="Group"/>
+  <Group GroupId="a91af" GraphId="f9450" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c9f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16554828</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analyzing phosphoinositides and their interacting proteins.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Methods</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rusten TE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stenmark H</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dbb">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18215151</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The regulation and function of Class III PI3Ks:novel roles for Vps34.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Backer JM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="be3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31035587</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phosphatidylinositol 5 Phosphate (PI5P): From Behind the Scenes to the Front (Nuclear) Stage.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Int J Mol Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poli A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zaurito AE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abdul-Hamid S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiume R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faenza I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Divecha N</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a0c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10716940</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structure, function, and biology of SHIP proteins.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes Dev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rohrschneider LR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fuller JF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolf I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucas DM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b64">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16365287</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16365287</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The identification and characterization of two phosphatidylinositol-4,5-bisphosphate 4-phosphatases.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ungewickell A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hugge C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kisseleva M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chang SC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zou J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feng Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galyov EE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilson M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Majerus PW</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a6d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9367159</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A new pathway for synthesis of phosphatidylinositol-4,5-bisphosphate.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rameh LE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tolias KF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duckworth BC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cantley LC</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oculocerebrorenal syndrome</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1056</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphatidylinositol metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0002417</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a01">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29056325</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PTEN Regulates PI(3,4)P&lt;sub&gt;2&lt;/sub&gt;Signaling Downstream of Class I PI3K.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malek M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kielkowska A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chessa T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anderson KE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barneda D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pir P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nakanishi H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eguchi S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koizumi A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sasaki J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juvin V</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kiselev VY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niewczas I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gray A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valayer A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spensberger D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imbert M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Felisbino S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Habuchi T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beinke S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cosulich S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Novère N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sasaki T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clark J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hawkins PT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephens LR</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c41">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10802647</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charcot-Marie-Tooth type 4B is caused by mutations in the gene encoding myotubularin-related protein-2.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bolino A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muglia M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conforti FL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LeGuern E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salih MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georgiou DM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christodoulou K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hausmanowa-Petrusewicz I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandich P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schenone A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gambardella A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bono F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quattrone A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Devoto M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monaco AP</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b03">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8640223</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gene mutated in X-linked myotubular myopathy definesa new putative tyrosine phosphatase family conserved in yeast.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laporte J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hu LJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kretz C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandel JL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kioschis P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coy JF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klauck SM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poustka A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dahl N</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bac">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15902656</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutations in PIP5K3 are associated with François-Neetens mouchetée fleck corneal dystrophy.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Hum Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiab L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiao X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Munier FL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zografos L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frueh BE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sergeev Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rubin B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meallet MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forster RK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hejtmancik JF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schorderet DF</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>Charcot-Marie-Tooth disease type 4B1</bp:TERM><bp:ID>DOID:0110191</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>Fleck corneal dystrophy</bp:TERM><bp:ID>DOID:0060448</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>centronuclear myopathy</bp:TERM><bp:ID>DOID:14717</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

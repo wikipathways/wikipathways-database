@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="miRNA biogenesis" Version="20121022" Author="Susan Coort" Last-Modified="10/16/2013" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">microRNA biogenesis + an example of a miRBase entry.
+As an example immature hsa-mir-146a is shown
+ 
+Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP2338 CPTAC Assay Portal].</Comment>
+  <Comment Source="WikiPathways-category">Molecular Function</Comment>
+  <BiopaxRef>dc4</BiopaxRef>
+  <BiopaxRef>ad1</BiopaxRef>
+  <Graphics BoardWidth="1041.9386002255528" BoardHeight="601.6652168525341"/>
+  <DataNode TextLabel="RAN" GraphId="b31ef" Type="GeneProduct" GroupRef="e7d7e">
+    <Graphics CenterX="485.6547824238438" CenterY="316.757181430941" Width="32.208588957055156" Height="28.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="5901"/>
+  </DataNode>
+  <DataNode TextLabel="XPO5" GraphId="c29d9" Type="GeneProduct" GroupRef="e7d7e">
+    <Graphics CenterX="501.91452407270253" CenterY="289.39069892633705" Width="64.10628357344706" Height="28.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000124571"/>
+  </DataNode>
+  <DataNode TextLabel="GTP" GraphId="c57c3" Type="Metabolite" GroupRef="e7d7e">
+    <Graphics CenterX="517.8156853164335" CenterY="316.8229815667874" Width="31.796698867286068" Height="28.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB0001440"/>
+  </DataNode>
+  <DataNode TextLabel="DROSHA" GraphId="c6f64" Type="GeneProduct" GroupRef="d1efe">
+    <Graphics CenterX="221.2253771073647" CenterY="297.72029443095096" Width="66.0" Height="28.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000113360"/>
+  </DataNode>
+  <DataNode TextLabel="DICER1" GraphId="e00ce" Type="GeneProduct">
+    <Graphics CenterX="687.4309956773599" CenterY="282.9581076475818" Width="55.0" Height="28.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000100697"/>
+  </DataNode>
+  <DataNode TextLabel="DGCR8" GraphId="aabce" Type="GeneProduct" GroupRef="d1efe">
+    <Graphics CenterX="221.2253771073647" CenterY="324.6347283116769" Width="66.0" Height="28.0" ZOrder="32769" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000128191"/>
+  </DataNode>
+  <DataNode TextLabel="DICER1" GraphId="d91e6" Type="GeneProduct" GroupRef="f66ab">
+    <Graphics CenterX="674.7016221467569" CenterY="391.75377545081477" Width="55.0" Height="28.0" ZOrder="32778" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000100697"/>
+  </DataNode>
+  <DataNode TextLabel="TRBP" GraphId="f545c" Type="Protein" GroupRef="f66ab">
+    <Graphics CenterX="674.7016221467569" CenterY="418.82448252152165" Width="55.0" Height="28.0" ZOrder="32779" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q15633"/>
+  </DataNode>
+  <GraphicalLine GraphId="aca89">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0">
+      <Point X="589.865351288307" Y="361.1847243797222" GraphRef="de115" RelX="0.0" RelY="1.0"/>
+      <Point X="556.2206364659057" Y="501.611863313991"/>
+      <Point X="522.5759216435044" Y="541.1255052859697" GraphRef="dc401" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b2667">
+    <Graphics ZOrder="12288" LineThickness="2.0">
+      <Point X="221.0" Y="236.0"/>
+      <Point X="221.2253771073647" Y="271.72029443095096" GraphRef="ded01" RelX="0.0" RelY="-1.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b5ba4">
+    <Graphics ZOrder="12288" LineThickness="2.0">
+      <Point X="164.0" Y="233.0" GraphRef="a6110" RelX="1.0" RelY="0.0"/>
+      <Point X="261.8849906566993" Y="233.93379769679245" GraphRef="aec7c" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c43a1">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0">
+      <Point X="589.865351288307" Y="361.1847243797222" GraphRef="de115" RelX="0.0" RelY="1.0"/>
+      <Point X="645.0064195163227" Y="500.9671179883946"/>
+      <Point X="700.1474877443383" Y="537.7052408946442" GraphRef="f2c62" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c5146" GroupRef="cea53">
+    <Graphics ZOrder="12288" LineThickness="2.0">
+      <Point X="602.0" Y="260.0"/>
+      <Point X="603.0" Y="317.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c74af">
+    <Graphics ZOrder="12288" LineThickness="2.0">
+      <Point X="118.34075723830733" Y="115.296"/>
+      <Point X="287.34075723830733" Y="115.296"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d0649">
+    <Graphics ZOrder="12288" LineThickness="2.0">
+      <Point X="589.9419729206963" Y="404.9000644745326"/>
+      <Point X="635.2016221467569" Y="405.2891289861682" GraphRef="b8049" RelX="-1.0" RelY="0.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e13d3">
+    <Graphics ZOrder="12288" LineThickness="2.0">
+      <Point X="603.0" Y="283.0"/>
+      <Point X="659.9309956773599" Y="282.9581076475818" GraphRef="e00ce" RelX="-1.0" RelY="0.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e2c0f">
+    <Graphics ZOrder="12288" LineThickness="2.0">
+      <Point X="175.93389592123768" Y="124.33192686357243"/>
+      <Point X="119.0" Y="220.5" GraphRef="a6110" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f5324">
+    <Graphics ZOrder="12288" LineThickness="2.0">
+      <Point X="391.8217031423808" Y="233.93379769679245" GraphRef="aec7c" RelX="1.0" RelY="0.0"/>
+      <Point X="543.0" Y="232.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fa9ba">
+    <Graphics ZOrder="12288" LineThickness="2.0">
+      <Point X="501.75907690237113" Y="263.39069892633705" GraphRef="aafd7" RelX="0.0" RelY="-1.0"/>
+      <Point X="501.79277786694274" Y="234.30154079106467"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d953e">
+    <Graphics ZOrder="16385" LineThickness="2.0">
+      <Point X="118.34075723830733" Y="121.296"/>
+      <Point X="287.34075723830733" Y="121.296"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="af51a">
+    <Graphics ZOrder="33020" LineThickness="2.0" Color="0000cc">
+      <Point X="290.8191778898556" Y="243.48493754607162"/>
+      <Point X="360.79605745793054" Y="244.3894552599446"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e22fd" GroupRef="a9492">
+    <Graphics ZOrder="33022" LineThickness="2.0" Color="ff0000">
+      <Point X="296.4353395060171" Y="223.4564468689271"/>
+      <Point X="360.1112321268542" Y="223.4992898975414"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ffce0" GroupRef="a9492">
+    <Graphics ZOrder="33028" LineThickness="2.0" Color="0000cc">
+      <Point X="300.9413771722041" Y="233.98046840398382"/>
+      <Point X="300.98862377309496" Y="243.41362096847584"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ae642" GroupRef="a9492">
+    <Graphics ZOrder="33030" LineThickness="2.0" Color="ff0000">
+      <Point X="300.9694232924897" Y="223.51718804665492"/>
+      <Point X="301.01666989338054" Y="232.95034061114683"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a6706" GroupRef="a9492">
+    <Graphics ZOrder="33031" LineThickness="2.0" Color="0000cc">
+      <Point X="296.9183170288566" Y="233.59145491229992"/>
+      <Point X="296.96556362974746" Y="243.02460747679194"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="dcabc" GroupRef="a9492">
+    <Graphics ZOrder="33032" LineThickness="2.0" Color="0000cc">
+      <Point X="292.58363332676777" Y="233.82881160539532"/>
+      <Point X="292.6308799276586" Y="243.26196416988736"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="dabcf" GroupRef="a9492">
+    <Graphics ZOrder="33033" LineThickness="2.0" Color="0000cc">
+      <Point X="304.60503147780156" Y="233.90464000468867"/>
+      <Point X="304.6522780786924" Y="243.33779256918072"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d1d2f" GroupRef="a9492">
+    <Graphics ZOrder="33034" LineThickness="2.0" Color="ff0000">
+      <Point X="304.63307759808714" Y="223.44135964735977"/>
+      <Point X="304.680324198978" Y="232.87451221185168"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d8f63" GroupRef="a9492">
+    <Graphics ZOrder="33035" LineThickness="2.0" Color="0000cc">
+      <Point X="315.3321531148643" Y="234.14043516413543"/>
+      <Point X="315.37939971575514" Y="243.57358772862747"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="be6ad" GroupRef="a9492">
+    <Graphics ZOrder="33036" LineThickness="2.0" Color="ff0000">
+      <Point X="315.3601992351499" Y="223.67715480680653"/>
+      <Point X="315.4074458360407" Y="233.11030737129843"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cd46d" GroupRef="a9492">
+    <Graphics ZOrder="33037" LineThickness="2.0" Color="0000cc">
+      <Point X="308.29673190368777" Y="234.16848128442285"/>
+      <Point X="308.3439785045786" Y="243.60163384891487"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a7903" GroupRef="a9492">
+    <Graphics ZOrder="33038" LineThickness="2.0" Color="ff0000">
+      <Point X="308.32477802397335" Y="223.70520092709395"/>
+      <Point X="308.3720246248642" Y="233.13835349158586"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a062f" GroupRef="a9492">
+    <Graphics ZOrder="33039" LineThickness="2.0" Color="0000cc">
+      <Point X="311.7526371701253" Y="234.19652740470934"/>
+      <Point X="311.79988377101614" Y="243.62967996920142"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bf27c" GroupRef="a9492">
+    <Graphics ZOrder="33040" LineThickness="2.0" Color="ff0000">
+      <Point X="311.7806832904109" Y="223.73324704738044"/>
+      <Point X="311.8279298913017" Y="233.16639961187238"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="eefc5" GroupRef="a9492">
+    <Graphics ZOrder="33041" LineThickness="2.0" Color="0000cc">
+      <Point X="325.8515257127661" Y="234.2723558040018"/>
+      <Point X="325.89877231365693" Y="243.7055083684938"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="db04d" GroupRef="a9492">
+    <Graphics ZOrder="33042" LineThickness="2.0" Color="ff0000">
+      <Point X="325.87957183305167" Y="223.8090754466729"/>
+      <Point X="325.9268184339425" Y="233.2422280111648"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="efe2f" GroupRef="a9492">
+    <Graphics ZOrder="33043" LineThickness="2.0" Color="0000cc">
+      <Point X="332.1120430078733" Y="234.30040192428882"/>
+      <Point X="332.15928960876414" Y="243.73355448878095"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f52bc" GroupRef="a9492">
+    <Graphics ZOrder="33044" LineThickness="2.0" Color="ff0000">
+      <Point X="332.1400891281589" Y="223.83712156695992"/>
+      <Point X="332.1873357290497" Y="233.27027413145183"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b7308" GroupRef="a9492">
+    <Graphics ZOrder="33045" LineThickness="2.0" Color="0000cc">
+      <Point X="328.8161045015883" Y="234.12069900541485"/>
+      <Point X="328.86335110247916" Y="243.5538515699068"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d2461" GroupRef="a9492">
+    <Graphics ZOrder="33046" LineThickness="2.0" Color="ff0000">
+      <Point X="328.8441506218739" Y="223.65741864808598"/>
+      <Point X="328.89139722276474" Y="233.09057121257783"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c919d" GroupRef="a9492">
+    <Graphics ZOrder="33047" LineThickness="2.0" Color="0000cc">
+      <Point X="360.0065064959803" Y="234.4603686844424"/>
+      <Point X="360.05375309687116" Y="243.89352124893452"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d710c" GroupRef="a9492">
+    <Graphics ZOrder="33048" LineThickness="2.0" Color="ff0000">
+      <Point X="360.0345526162659" Y="223.9970883271136"/>
+      <Point X="360.08179921715674" Y="233.43024089160542"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c0872" GroupRef="a9492">
+    <Graphics ZOrder="33049" LineThickness="2.0" Color="0000cc">
+      <Point X="340.0345526162661" Y="234.32844804457514"/>
+      <Point X="340.08179921715697" Y="243.76160060906727"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="aaf50" GroupRef="a9492">
+    <Graphics ZOrder="33050" LineThickness="2.0" Color="ff0000">
+      <Point X="340.0625987365517" Y="223.86516768724624"/>
+      <Point X="340.10984533744255" Y="233.29832025173815"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d6bb2" GroupRef="a9492">
+    <Graphics ZOrder="33051" LineThickness="2.0" Color="0000cc">
+      <Point X="343.49045788270354" Y="234.25261964528121"/>
+      <Point X="343.5377044835944" Y="243.68577220977343"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b01a6" GroupRef="a9492">
+    <Graphics ZOrder="33052" LineThickness="2.0" Color="ff0000">
+      <Point X="343.5185040029891" Y="223.78933928795232"/>
+      <Point X="343.56575060387996" Y="233.22249185244422"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bc73b" GroupRef="a9492">
+    <Graphics ZOrder="33053" LineThickness="2.0" Color="0000cc">
+      <Point X="347.4657357470431" Y="234.38454028514866"/>
+      <Point X="347.5129823479339" Y="243.81769284964076"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d2769" GroupRef="a9492">
+    <Graphics ZOrder="33054" LineThickness="2.0" Color="ff0000">
+      <Point X="347.49378186732866" Y="223.92125992781988"/>
+      <Point X="347.5410284682195" Y="233.3544124923117"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a7924" GroupRef="a9492">
+    <Graphics ZOrder="33055" LineThickness="2.0" Color="0000cc">
+      <Point X="351.23326457222316" Y="234.41258640543518"/>
+      <Point X="351.280511173114" Y="243.84573896992725"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cd7fe" GroupRef="a9492">
+    <Graphics ZOrder="33056" LineThickness="2.0" Color="ff0000">
+      <Point X="351.26131069250874" Y="223.9493060481062"/>
+      <Point X="351.3085572933996" Y="233.38245861259819"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d5275" GroupRef="a9492">
+    <Graphics ZOrder="33057" LineThickness="2.0" Color="0000cc">
+      <Point X="355.20854243656373" Y="234.4406325257218"/>
+      <Point X="355.2557890374546" Y="243.87378509021391"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="dd905" GroupRef="a9492">
+    <Graphics ZOrder="33058" LineThickness="2.0" Color="ff0000">
+      <Point X="355.2365885568493" Y="223.97735216839294"/>
+      <Point X="355.28383515774016" Y="233.41050473288485"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c577e">
+    <Graphics ZOrder="33227" LineThickness="2.0" Color="0000cc">
+      <Point X="567.0989973611654" Y="246.39273896451115"/>
+      <Point X="637.0758769292402" Y="247.29725667838414"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cb60f">
+    <Graphics ZOrder="33229" LineThickness="2.0" Color="ff0000">
+      <Point X="572.7151589773268" Y="226.36424828736665"/>
+      <Point X="636.3910515981638" Y="226.40709131598095"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fb415">
+    <Graphics ZOrder="33235" LineThickness="2.0" Color="0000cc">
+      <Point X="577.221196643514" Y="236.88826982242338"/>
+      <Point X="577.2684432444048" Y="246.3214223869154"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c948f">
+    <Graphics ZOrder="33237" LineThickness="2.0" Color="ff0000">
+      <Point X="577.2492427637995" Y="226.42498946509448"/>
+      <Point X="577.2964893646904" Y="235.8581420295864"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d2804">
+    <Graphics ZOrder="33238" LineThickness="2.0" Color="0000cc">
+      <Point X="573.1981365001664" Y="236.49925633073948"/>
+      <Point X="573.2453831010572" Y="245.9324088952315"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fe584">
+    <Graphics ZOrder="33239" LineThickness="2.0" Color="0000cc">
+      <Point X="568.8634527980776" Y="236.73661302383488"/>
+      <Point X="568.9106993989684" Y="246.16976558832692"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a01ec">
+    <Graphics ZOrder="33240" LineThickness="2.0" Color="0000cc">
+      <Point X="580.8848509491114" Y="236.81244142312823"/>
+      <Point X="580.9320975500023" Y="246.24559398762028"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="efb1f">
+    <Graphics ZOrder="33241" LineThickness="2.0" Color="ff0000">
+      <Point X="580.912897069397" Y="226.34916106579934"/>
+      <Point X="580.9601436702878" Y="235.78231363029124"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d2682">
+    <Graphics ZOrder="33242" LineThickness="2.0" Color="0000cc">
+      <Point X="591.611972586174" Y="237.048236582575"/>
+      <Point X="591.6592191870649" Y="246.481389147067"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d1b2c">
+    <Graphics ZOrder="33243" LineThickness="2.0" Color="ff0000">
+      <Point X="591.6400187064596" Y="226.5849562252461"/>
+      <Point X="591.6872653073505" Y="236.018108789738"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ee217">
+    <Graphics ZOrder="33244" LineThickness="2.0" Color="0000cc">
+      <Point X="584.5765513749976" Y="237.07628270286241"/>
+      <Point X="584.6237979758885" Y="246.5094352673544"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c8c26">
+    <Graphics ZOrder="33245" LineThickness="2.0" Color="ff0000">
+      <Point X="584.6045974952832" Y="226.61300234553352"/>
+      <Point X="584.651844096174" Y="236.04615491002542"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c8a89">
+    <Graphics ZOrder="33246" LineThickness="2.0" Color="0000cc">
+      <Point X="588.032456641435" Y="237.1043288231489"/>
+      <Point X="588.0797032423259" Y="246.53748138764095"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ded8a">
+    <Graphics ZOrder="33247" LineThickness="2.0" Color="ff0000">
+      <Point X="588.0605027617206" Y="226.64104846582"/>
+      <Point X="588.1077493626115" Y="236.07420103031194"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c6c88">
+    <Graphics ZOrder="33248" LineThickness="2.0" Color="0000cc">
+      <Point X="602.1313451840759" Y="237.18015722244135"/>
+      <Point X="602.1785917849668" Y="246.61330978693334"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="dd4a8">
+    <Graphics ZOrder="33249" LineThickness="2.0" Color="ff0000">
+      <Point X="602.1593913043615" Y="226.71687686511245"/>
+      <Point X="602.2066379052524" Y="236.15002942960436"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a5e16">
+    <Graphics ZOrder="33250" LineThickness="2.0" Color="0000cc">
+      <Point X="608.391862479183" Y="237.20820334272838"/>
+      <Point X="608.4391090800739" Y="246.64135590722051"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c5401">
+    <Graphics ZOrder="33251" LineThickness="2.0" Color="ff0000">
+      <Point X="608.4199085994686" Y="226.74492298539948"/>
+      <Point X="608.4671552003595" Y="236.1780755498914"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cf98d">
+    <Graphics ZOrder="33252" LineThickness="2.0" Color="0000cc">
+      <Point X="605.0959239728982" Y="237.0285004238544"/>
+      <Point X="605.143170573789" Y="246.46165298834634"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fa00e">
+    <Graphics ZOrder="33253" LineThickness="2.0" Color="ff0000">
+      <Point X="605.1239700931837" Y="226.56522006652554"/>
+      <Point X="605.1712166940746" Y="235.9983726310174"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a9253">
+    <Graphics ZOrder="33254" LineThickness="2.0" Color="0000cc">
+      <Point X="636.2863259672899" Y="237.36817010288195"/>
+      <Point X="636.3335725681808" Y="246.80132266737408"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d6482">
+    <Graphics ZOrder="33255" LineThickness="2.0" Color="ff0000">
+      <Point X="636.3143720875755" Y="226.90488974555316"/>
+      <Point X="636.3616186884664" Y="236.33804231004498"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fc1bf">
+    <Graphics ZOrder="33256" LineThickness="2.0" Color="0000cc">
+      <Point X="616.3143720875759" Y="237.2362494630147"/>
+      <Point X="616.3616186884667" Y="246.66940202750683"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ffb12">
+    <Graphics ZOrder="33257" LineThickness="2.0" Color="ff0000">
+      <Point X="616.3424182078614" Y="226.7729691056858"/>
+      <Point X="616.3896648087523" Y="236.2061216701777"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ced5d">
+    <Graphics ZOrder="33258" LineThickness="2.0" Color="0000cc">
+      <Point X="619.7702773540133" Y="237.16042106372078"/>
+      <Point X="619.8175239549041" Y="246.59357362821297"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e9ee8">
+    <Graphics ZOrder="33259" LineThickness="2.0" Color="ff0000">
+      <Point X="619.7983234742989" Y="226.69714070639188"/>
+      <Point X="619.8455700751897" Y="236.13029327088378"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f8c2d">
+    <Graphics ZOrder="33260" LineThickness="2.0" Color="0000cc">
+      <Point X="623.7455552183528" Y="237.29234170358822"/>
+      <Point X="623.7928018192437" Y="246.72549426808033"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fa8a9">
+    <Graphics ZOrder="33261" LineThickness="2.0" Color="ff0000">
+      <Point X="623.7736013386384" Y="226.82906134625944"/>
+      <Point X="623.8208479395292" Y="236.26221391075126"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bfca7">
+    <Graphics ZOrder="33262" LineThickness="2.0" Color="0000cc">
+      <Point X="627.5130840435329" Y="237.32038782387474"/>
+      <Point X="627.5603306444237" Y="246.75354038836682"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ad3fb">
+    <Graphics ZOrder="33263" LineThickness="2.0" Color="ff0000">
+      <Point X="627.5411301638185" Y="226.85710746654576"/>
+      <Point X="627.5883767647093" Y="236.29026003103775"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d766c">
+    <Graphics ZOrder="33264" LineThickness="2.0" Color="0000cc">
+      <Point X="631.4883619078735" Y="237.34843394416137"/>
+      <Point X="631.5356085087643" Y="246.78158650865348"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d9aca">
+    <Graphics ZOrder="33265" LineThickness="2.0" Color="ff0000">
+      <Point X="631.516408028159" Y="226.8851535868325"/>
+      <Point X="631.5636546290499" Y="236.3183061513244"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d8654" GroupRef="cea53">
+    <Graphics ZOrder="33269" LineThickness="2.0" Color="0000cc">
+      <Point X="564.8488361748338" Y="345.3675938968132"/>
+      <Point X="634.8257157429088" Y="346.27211161068624"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a30e8">
+    <Graphics ZOrder="33271" LineThickness="2.0" Color="ff0000">
+      <Point X="570.4649977909953" Y="325.3391032196687"/>
+      <Point X="634.1408904118324" Y="325.381946248283"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f448d" GroupRef="cea53">
+    <Graphics ZOrder="33277" LineThickness="2.0" Color="0000cc">
+      <Point X="574.9710354571823" Y="335.86312475472545"/>
+      <Point X="575.0182820580732" Y="345.29627731921744"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cef5f" GroupRef="cea53">
+    <Graphics ZOrder="33279" LineThickness="2.0" Color="ff0000">
+      <Point X="575.2805829179505" Y="325.3998443973965"/>
+      <Point X="575.3278295188413" Y="334.83299696188845"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e8cc1" GroupRef="cea53">
+    <Graphics ZOrder="33280" LineThickness="2.0" Color="0000cc">
+      <Point X="570.9479753138348" Y="335.47411126304155"/>
+      <Point X="570.9952219147257" Y="344.9072638275336"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b31bc" GroupRef="cea53">
+    <Graphics ZOrder="33281" LineThickness="2.0" Color="0000cc">
+      <Point X="566.6132916117459" Y="335.71146795613697"/>
+      <Point X="566.6605382126368" Y="345.144620520629"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f0b44" GroupRef="cea53">
+    <Graphics ZOrder="33282" LineThickness="2.0" Color="0000cc">
+      <Point X="578.6346897627799" Y="335.7872963554303"/>
+      <Point X="578.6819363636707" Y="345.2204489199223"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e0b16" GroupRef="cea53">
+    <Graphics ZOrder="33283" LineThickness="2.0" Color="ff0000">
+      <Point X="578.944237223548" Y="325.3240159981014"/>
+      <Point X="578.9914838244389" Y="334.75716856259334"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fde15" GroupRef="cea53">
+    <Graphics ZOrder="33284" LineThickness="2.0" Color="0000cc">
+      <Point X="589.3618113998426" Y="336.023091514877"/>
+      <Point X="589.4090580007335" Y="345.45624407936907"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f2820" GroupRef="cea53">
+    <Graphics ZOrder="33285" LineThickness="2.0" Color="ff0000">
+      <Point X="589.6713588606108" Y="325.55981115754815"/>
+      <Point X="589.7186054615016" Y="334.9929637220401"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="efc0e" GroupRef="cea53">
+    <Graphics ZOrder="33286" LineThickness="2.0" Color="0000cc">
+      <Point X="582.3263901886661" Y="336.0511376351645"/>
+      <Point X="582.3736367895569" Y="345.48429019965647"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f26ff" GroupRef="cea53">
+    <Graphics ZOrder="33287" LineThickness="2.0" Color="ff0000">
+      <Point X="582.6359376494343" Y="325.58785727783555"/>
+      <Point X="582.6831842503251" Y="335.0210098423275"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cec86" GroupRef="cea53">
+    <Graphics ZOrder="33288" LineThickness="2.0" Color="0000cc">
+      <Point X="585.7822954551036" Y="336.07918375545097"/>
+      <Point X="585.8295420559945" Y="345.5123363199431"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f70f8" GroupRef="cea53">
+    <Graphics ZOrder="33289" LineThickness="2.0" Color="ff0000">
+      <Point X="586.0918429158718" Y="325.61590339812204"/>
+      <Point X="586.1390895167626" Y="335.04905596261403"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="eb4ff" GroupRef="cea53">
+    <Graphics ZOrder="33290" LineThickness="2.0" Color="0000cc">
+      <Point X="599.8811839977443" Y="336.1550121547434"/>
+      <Point X="599.9284305986351" Y="345.58816471923546"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d2bf1" GroupRef="cea53">
+    <Graphics ZOrder="33291" LineThickness="2.0" Color="ff0000">
+      <Point X="600.1907314585125" Y="325.6917317974145"/>
+      <Point X="600.2379780594033" Y="335.1248843619064"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cf113" GroupRef="cea53">
+    <Graphics ZOrder="33292" LineThickness="2.0" Color="0000cc">
+      <Point X="606.1417012928516" Y="336.1830582750304"/>
+      <Point X="606.1889478937425" Y="345.6162108395226"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ea81f" GroupRef="cea53">
+    <Graphics ZOrder="33293" LineThickness="2.0" Color="ff0000">
+      <Point X="606.1697474131372" Y="325.71977791770155"/>
+      <Point X="606.216994014028" Y="335.1529304821935"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f8fc3" GroupRef="cea53">
+    <Graphics ZOrder="33294" LineThickness="2.0" Color="0000cc">
+      <Point X="602.8457627865666" Y="336.0033553561565"/>
+      <Point X="602.8930093874575" Y="345.4365079206484"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fb59e" GroupRef="cea53">
+    <Graphics ZOrder="33295" LineThickness="2.0" Color="ff0000">
+      <Point X="603.1553102473348" Y="325.5400749988276"/>
+      <Point X="603.2025568482256" Y="334.9732275633195"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cf3a8" GroupRef="cea53">
+    <Graphics ZOrder="33296" LineThickness="2.0" Color="0000cc">
+      <Point X="634.0361647809585" Y="336.343025035184"/>
+      <Point X="634.0834113818494" Y="345.77617759967615"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="af1e8" GroupRef="cea53">
+    <Graphics ZOrder="33297" LineThickness="2.0" Color="ff0000">
+      <Point X="634.0642109012441" Y="325.87974467785523"/>
+      <Point X="634.111457502135" Y="335.31289724234705"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d8d6d" GroupRef="cea53">
+    <Graphics ZOrder="33298" LineThickness="2.0" Color="0000cc">
+      <Point X="614.0642109012445" Y="336.21110439531674"/>
+      <Point X="614.1114575021353" Y="345.6442569598089"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b354d" GroupRef="cea53">
+    <Graphics ZOrder="33299" LineThickness="2.0" Color="ff0000">
+      <Point X="614.09225702153" Y="325.74782403798787"/>
+      <Point X="614.1395036224209" Y="335.1809766024798"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ddf6b" GroupRef="cea53">
+    <Graphics ZOrder="33300" LineThickness="2.0" Color="0000cc">
+      <Point X="617.5201161676819" Y="336.1352759960228"/>
+      <Point X="617.5673627685727" Y="345.56842856051503"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="eeff2" GroupRef="cea53">
+    <Graphics ZOrder="33301" LineThickness="2.0" Color="ff0000">
+      <Point X="617.5481622879674" Y="325.67199563869394"/>
+      <Point X="617.5954088888583" Y="335.1051482031859"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cbfbf" GroupRef="cea53">
+    <Graphics ZOrder="33302" LineThickness="2.0" Color="0000cc">
+      <Point X="621.4953940320214" Y="336.2671966358903"/>
+      <Point X="621.5426406329123" Y="345.7003492003824"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cb732" GroupRef="cea53">
+    <Graphics ZOrder="33303" LineThickness="2.0" Color="ff0000">
+      <Point X="621.523440152307" Y="325.8039162785615"/>
+      <Point X="621.5706867531978" Y="335.23706884305335"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a36fe" GroupRef="cea53">
+    <Graphics ZOrder="33304" LineThickness="2.0" Color="0000cc">
+      <Point X="625.2629228572015" Y="336.2952427561768"/>
+      <Point X="625.3101694580923" Y="345.7283953206689"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e76f9" GroupRef="cea53">
+    <Graphics ZOrder="33305" LineThickness="2.0" Color="ff0000">
+      <Point X="625.2909689774871" Y="325.8319623988478"/>
+      <Point X="625.3382155783779" Y="335.26511496333984"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a9fae" GroupRef="cea53">
+    <Graphics ZOrder="33306" LineThickness="2.0" Color="0000cc">
+      <Point X="629.2382007215421" Y="336.32328887646344"/>
+      <Point X="629.2854473224329" Y="345.75644144095554"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d4e07" GroupRef="cea53">
+    <Graphics ZOrder="33307" LineThickness="2.0" Color="ff0000">
+      <Point X="629.2662468418276" Y="325.86000851913457"/>
+      <Point X="629.3134934427185" Y="335.2931610836265"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b90d1">
+    <Graphics ZOrder="33323" LineThickness="2.0" Color="ff0000">
+      <Point X="490.6951703781257" Y="552.573722857739"/>
+      <Point X="554.3710629989627" Y="552.6165658863532"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bc09d">
+    <Graphics ZOrder="33325" LineThickness="2.0" Color="ff0000">
+      <Point X="495.5107555050808" Y="552.6344640354667"/>
+      <Point X="495.55800210597164" Y="562.0676165999587"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cb95f">
+    <Graphics ZOrder="33326" LineThickness="2.0" Color="ff0000">
+      <Point X="499.1744098106783" Y="552.5586356361716"/>
+      <Point X="499.22165641156914" Y="561.9917882006636"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d5629">
+    <Graphics ZOrder="33327" LineThickness="2.0" Color="ff0000">
+      <Point X="509.90153144774104" Y="552.7944307956184"/>
+      <Point X="509.9487780486319" Y="562.2275833601103"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a0bb8">
+    <Graphics ZOrder="33328" LineThickness="2.0" Color="ff0000">
+      <Point X="502.8661102365645" Y="552.8224769159058"/>
+      <Point X="502.91335683745535" Y="562.2556294803977"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d1397">
+    <Graphics ZOrder="33329" LineThickness="2.0" Color="ff0000">
+      <Point X="506.32201550300204" Y="552.8505230361923"/>
+      <Point X="506.3692621038929" Y="562.2836756006843"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c52c2">
+    <Graphics ZOrder="33330" LineThickness="2.0" Color="ff0000">
+      <Point X="520.4209040456427" Y="552.9263514354848"/>
+      <Point X="520.4681506465336" Y="562.3595039999767"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="acd59">
+    <Graphics ZOrder="33331" LineThickness="2.0" Color="ff0000">
+      <Point X="526.3999200002675" Y="552.9543975557718"/>
+      <Point X="526.4471666011583" Y="562.3875501202638"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ce05a">
+    <Graphics ZOrder="33332" LineThickness="2.0" Color="ff0000">
+      <Point X="523.385482834465" Y="552.7746946368978"/>
+      <Point X="523.4327294353559" Y="562.2078472013898"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f9329">
+    <Graphics ZOrder="33333" LineThickness="2.0" Color="ff0000">
+      <Point X="534.3224296086603" Y="552.9824436760581"/>
+      <Point X="534.3696762095511" Y="562.41559624055"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a3d5f">
+    <Graphics ZOrder="33334" LineThickness="2.0" Color="ff0000">
+      <Point X="537.7783348750977" Y="552.9066152767642"/>
+      <Point X="537.8255814759885" Y="562.3397678412562"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e4fce">
+    <Graphics ZOrder="33335" LineThickness="2.0" Color="ff0000">
+      <Point X="541.7536127394372" Y="553.0385359166318"/>
+      <Point X="541.8008593403281" Y="562.4716884811236"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c8bf4">
+    <Graphics ZOrder="33336" LineThickness="2.0" Color="ff0000">
+      <Point X="545.5211415646173" Y="553.066582036918"/>
+      <Point X="545.5683881655082" Y="562.4997346014101"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="afcf1">
+    <Graphics ZOrder="33337" LineThickness="2.0" Color="ff0000">
+      <Point X="549.4964194289579" Y="553.0946281572049"/>
+      <Point X="549.5436660298487" Y="562.5277807216968"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bbfd3">
+    <Graphics ZOrder="33357" LineThickness="2.0" Color="0000cc">
+      <Point X="665.3260960447259" Y="557.5976612691408"/>
+      <Point X="735.3029756128009" Y="558.5021789830138"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d62ee">
+    <Graphics ZOrder="33360" LineThickness="2.0" Color="0000cc">
+      <Point X="675.4482953270744" Y="548.0931921270529"/>
+      <Point X="675.4955419279653" Y="557.526344691545"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f262c">
+    <Graphics ZOrder="33361" LineThickness="2.0" Color="0000cc">
+      <Point X="671.425235183727" Y="547.7041786353691"/>
+      <Point X="671.4724817846178" Y="557.1373311998611"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="db972">
+    <Graphics ZOrder="33362" LineThickness="2.0" Color="0000cc">
+      <Point X="667.090551481638" Y="547.9415353284645"/>
+      <Point X="667.1377980825289" Y="557.3746878929566"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b7ab9">
+    <Graphics ZOrder="33363" LineThickness="2.0" Color="0000cc">
+      <Point X="679.111949632672" Y="548.0173637277578"/>
+      <Point X="679.1591962335629" Y="557.4505162922499"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a6cb4">
+    <Graphics ZOrder="33364" LineThickness="2.0" Color="0000cc">
+      <Point X="689.8390712697347" Y="548.2531588872046"/>
+      <Point X="689.8863178706256" Y="557.6863114516966"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f65ba">
+    <Graphics ZOrder="33365" LineThickness="2.0" Color="0000cc">
+      <Point X="682.8036500585582" Y="548.281205007492"/>
+      <Point X="682.8508966594491" Y="557.714357571984"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="dcb12">
+    <Graphics ZOrder="33366" LineThickness="2.0" Color="0000cc">
+      <Point X="686.2595553249957" Y="548.3092511277785"/>
+      <Point X="686.3068019258866" Y="557.7424036922706"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c4395">
+    <Graphics ZOrder="33367" LineThickness="2.0" Color="0000cc">
+      <Point X="700.3584438676364" Y="548.385079527071"/>
+      <Point X="700.4056904685273" Y="557.818232091563"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bd812">
+    <Graphics ZOrder="33368" LineThickness="2.0" Color="0000cc">
+      <Point X="706.6189611627437" Y="548.4131256473579"/>
+      <Point X="706.6662077636346" Y="557.8462782118501"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fbb7f">
+    <Graphics ZOrder="33369" LineThickness="2.0" Color="0000cc">
+      <Point X="703.3230226564588" Y="548.233422728484"/>
+      <Point X="703.3702692573496" Y="557.666575292976"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="be1cf">
+    <Graphics ZOrder="33370" LineThickness="2.0" Color="0000cc">
+      <Point X="734.5134246508507" Y="548.5730924075115"/>
+      <Point X="734.5606712517415" Y="558.0062449720036"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cd495">
+    <Graphics ZOrder="33371" LineThickness="2.0" Color="0000cc">
+      <Point X="714.5414707711366" Y="548.4411717676443"/>
+      <Point X="714.5887173720274" Y="557.8743243321364"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="caacc">
+    <Graphics ZOrder="33372" LineThickness="2.0" Color="0000cc">
+      <Point X="717.997376037574" Y="548.3653433683503"/>
+      <Point X="718.0446226384648" Y="557.7984959328426"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a5a7b">
+    <Graphics ZOrder="33373" LineThickness="2.0" Color="0000cc">
+      <Point X="721.9726539019135" Y="548.4972640082178"/>
+      <Point X="722.0199005028044" Y="557.9304165727099"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e56d6">
+    <Graphics ZOrder="33374" LineThickness="2.0" Color="0000cc">
+      <Point X="725.7401827270936" Y="548.5253101285043"/>
+      <Point X="725.7874293279845" Y="557.9584626929964"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fcba4">
+    <Graphics ZOrder="33375" LineThickness="2.0" Color="0000cc">
+      <Point X="729.7154605914342" Y="548.5533562487909"/>
+      <Point X="729.762707192325" Y="557.9865088132831"/>
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Mature sequence hsa-miR-146a-5p &#10;Accession: MIMAT0000449&#10;Previous: hsa-miR-146;hsa-miR-146a" GraphId="d3cd9">
+    <Graphics CenterX="359.0277208258865" CenterY="477.3186158537448" Width="295.1136018584898" Height="66.88272036626688" ZOrder="-10" FillColor="ffffff" FontWeight="Bold" FontSize="13" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ff0000"/>
+  </Label>
+  <Label TextLabel="Mature sequence hsa-miR-146a-3p&#10;Accession: MIMAT0004608&#10;Previous: hsa-miR-146a*&#10;&#10;" GraphId="caa6b" GroupRef="a979a">
+    <Graphics CenterX="864.3817992963079" CenterY="478.8883332560499" Width="295.1136018584898" Height="66.88272036626688" ZOrder="-8" FillColor="ffffff" FontWeight="Bold" FontSize="13" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ff0000"/>
+  </Label>
+  <Label TextLabel="Stem-loop sequence hsa-mir-146a &#10;Accession: MI0000477 &#10;Previous: hsa-mir-146" GraphId="e716f">
+    <Graphics CenterX="610.825550932347" CenterY="167.01278875456228" Width="295.1136018584898" Height="66.88272036626688" ZOrder="-4" FillColor="ffffff" FontWeight="Bold" FontSize="13" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ff0000"/>
+  </Label>
+  <Label TextLabel="pri-miRNAs" GraphId="a6110">
+    <Graphics CenterX="119.0" CenterY="233.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle"/>
+  </Label>
+  <Label TextLabel="Label" GraphId="af623">
+    <Graphics CenterX="239.0" CenterY="244.0" Width="128.0" Height="0.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="pre-miRNA" GraphId="cd80e">
+    <Graphics CenterX="712.5554683826009" CenterY="232.66529715282218" Width="105.51209144804415" Height="21.256611263752834" ZOrder="28672" FillColor="ffffff" FontSize="13" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Transcription" GraphId="d5a1a">
+    <Graphics CenterX="217.0703234880452" CenterY="145.37613019891523" Width="98.0" Height="21.256611263752863" ZOrder="28672" FillColor="ffffff" FontSize="13" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="RNA polymerase II" GraphId="e6c91">
+    <Graphics CenterX="226.5" CenterY="168.0" Width="131.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle"/>
+  </Label>
+  <Label TextLabel="Nucleus" GraphId="fb9e3">
+    <Graphics CenterX="104.24191651969466" CenterY="305.4512051734278" Width="77.0" Height="15.0" ZOrder="28673" FillColor="ffffff" FontWeight="Bold" FontSize="15" Valign="Middle" Color="009900"/>
+  </Label>
+  <Label TextLabel="Cytoplasm" GraphId="bceab">
+    <Graphics CenterX="821.8033947583481" CenterY="271.41866175567833" Width="114.5270349154708" Height="26.83732351135666" ZOrder="32771" FillColor="ffffff" FontWeight="Bold" FontSize="15" Valign="Middle" Color="009900"/>
+  </Label>
+  <Label TextLabel="miRNA duplex" GraphId="bf5c3">
+    <Graphics CenterX="719.5465127528946" CenterY="331.0897815014293" Width="122.13055526902014" Height="21.256611263752863" ZOrder="32945" FillColor="ffffff" FontSize="13" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="DNA" GraphId="b994b">
+    <Graphics CenterX="309.83916379654" CenterY="118.5736823120767" Width="78.5296277593077" Height="21.256611263752863" ZOrder="32974" FillColor="ffffff" FontSize="13" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="pre-miRNA" GraphId="d8c16">
+    <Graphics CenterX="334.3504753673293" CenterY="206.9385732065951" Width="86.70095073465862" Height="21.256611263752863" ZOrder="33018" FillColor="ffffff" FontSize="13" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="5'" GraphId="a38e4" GroupRef="a9492">
+    <Graphics CenterX="283.8849906566993" CenterY="224.06552736460438" Width="28.0" Height="15.0" ZOrder="33025" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="3'" GraphId="b9c64" GroupRef="a9492">
+    <Graphics CenterX="283.8849906566993" CenterY="243.80206802898056" Width="28.0" Height="15.0" ZOrder="33029" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="3'" GraphId="f806f" GroupRef="e300b">
+    <Graphics CenterX="656.2752120835871" CenterY="553.2052408946442" Width="28.0" Height="15.0" ZOrder="33150" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="5'" GraphId="e5a2d" GroupRef="e300b">
+    <Graphics CenterX="744.0197634050894" CenterY="553.2052408946442" Width="28.0" Height="15.0" ZOrder="33180" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="5'" GraphId="a474c" GroupRef="f7ef5">
+    <Graphics CenterX="483.7461941482054" CenterY="556.6255052859697" Width="28.0" Height="15.0" ZOrder="33188" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="3'" GraphId="df32a" GroupRef="f7ef5">
+    <Graphics CenterX="561.4056491388034" CenterY="556.6255052859697" Width="28.0" Height="15.0" ZOrder="33223" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="5'" GraphId="dee93">
+    <Graphics CenterX="560.1648101280094" CenterY="226.97332878304394" Width="28.0" Height="15.0" ZOrder="33232" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="3'" GraphId="ce9e8">
+    <Graphics CenterX="560.1648101280094" CenterY="246.70986944742012" Width="28.0" Height="15.0" ZOrder="33236" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="5'" GraphId="ab951" GroupRef="cea53">
+    <Graphics CenterX="557.9146489416775" CenterY="325.94818371534603" Width="28.0" Height="15.0" ZOrder="33274" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="3'" GraphId="aa9c4" GroupRef="cea53">
+    <Graphics CenterX="557.9146489416775" CenterY="345.6847243797222" Width="28.0" Height="15.0" ZOrder="33278" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="f9495">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="223.61202674562867" CenterY="229.0367543699818" Width="421.4969916920136" Height="310.9489153951755" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="9.452739716010089E-4"/>
+  </Shape>
+  <Shape GraphId="bb7ec" GroupRef="a9492">
+    <Graphics CenterX="336.0375490464657" CenterY="223.60212732706748" Width="7.867632000315074" Height="5.6111528894544165" ZOrder="33019" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Color="ff0000" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ebc81" GroupRef="a9492">
+    <Graphics CenterX="369.96930804179453" CenterY="233.55785401783703" Width="27.7047902011725" Height="28.47072394952454" ZOrder="33021" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="b404a">
+    <Graphics CenterX="320.59722134985196" CenterY="243.89108089078167" Width="10.434571911959218" Height="7.0573263145716965" ZOrder="33023" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Color="0000cc" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="c1804" GroupRef="a9492">
+    <Graphics CenterX="335.9541063557815" CenterY="224.95238048475323" Width="7.606187505341343" Height="3.1743447826795044" ZOrder="33024" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="b807e" GroupRef="a9492">
+    <Graphics CenterX="358.8072780942171" CenterY="234.00777655936935" Width="5.958234511482564" Height="19.845407069694705" ZOrder="33026" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ddf86">
+    <Graphics CenterX="320.6520662005495" CenterY="242.03161920968836" Width="10.229230157678483" Height="4.263953944459018" ZOrder="33027" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="e76fd">
+    <Graphics CenterX="612.3173685177754" CenterY="226.50992874550758" Width="7.867632000315074" Height="5.6111528894544165" ZOrder="33226" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Color="ff0000" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="e83e9">
+    <Graphics CenterX="646.2491275131042" CenterY="236.4656554362766" Width="27.7047902011725" Height="28.47072394952454" ZOrder="33228" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="c48e4">
+    <Graphics CenterX="596.8770408211618" CenterY="246.79888230922123" Width="10.434571911959218" Height="7.0573263145716965" ZOrder="33230" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Color="0000cc" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ab57b">
+    <Graphics CenterX="612.2339258270912" CenterY="227.8601819031928" Width="7.606187505341343" Height="3.1743447826795044" ZOrder="33231" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="a4750">
+    <Graphics CenterX="635.0870975655267" CenterY="236.9155779778089" Width="5.958234511482564" Height="19.845407069694705" ZOrder="33233" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="f08f6">
+    <Graphics CenterX="596.9318856718594" CenterY="244.93942062812846" Width="10.229230157678483" Height="4.263953944459018" ZOrder="33234" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="c2fd8">
+    <Graphics CenterX="610.0672073314439" CenterY="325.48478367780933" Width="7.867632000315074" Height="5.6111528894544165" ZOrder="33268" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Color="ff0000" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="b57ac" GroupRef="cea53">
+    <Graphics CenterX="594.6268796348303" CenterY="345.7737372415233" Width="10.434571911959218" Height="7.0573263145716965" ZOrder="33272" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Color="0000cc" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ea655">
+    <Graphics CenterX="609.9837646407598" CenterY="326.83503683549486" Width="7.606187505341343" Height="3.1743447826795044" ZOrder="33273" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="e4278" GroupRef="cea53">
+    <Graphics CenterX="632.8369363791953" CenterY="335.8904329101108" Width="5.958234511482564" Height="19.845407069694705" ZOrder="33275" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="f7e50" GroupRef="cea53">
+    <Graphics CenterX="594.681724485528" CenterY="343.91427556043" Width="10.229230157678483" Height="4.263953944459018" ZOrder="33276" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="acb9f">
+    <Graphics CenterX="530.2973799185742" CenterY="552.7194033158796" Width="7.867632000315074" Height="5.6111528894544165" ZOrder="33322" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Color="ff0000" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="cf8cd">
+    <Graphics CenterX="530.4280290669875" CenterY="561.7425133176866" Width="5.958234511482564" Height="19.845407069694705" ZOrder="33324" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="b5cd2">
+    <Graphics CenterX="695.1041395047224" CenterY="558.0038046138609" Width="10.434571911959218" Height="7.0573263145716965" ZOrder="33358" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="2.0" Color="0000cc" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="d3caa">
+    <Graphics CenterX="695.1589843554201" CenterY="556.1443429327576" Width="10.229230157678483" Height="4.263953944459018" ZOrder="33359" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="ffffff" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="e7d7e" GraphId="aafd7" Style="Complex"/>
+  <Group GroupId="a9492" GraphId="aec7c" Style="Group"/>
+  <Group GroupId="f66ab" GraphId="b8049" Style="Complex"/>
+  <Group GroupId="f7ef5" GraphId="dc401" Style="Group"/>
+  <Group GroupId="cea53" GraphId="de115" Style="Group"/>
+  <Group GroupId="d1efe" GraphId="ded01" Style="Complex"/>
+  <Group GroupId="bbb84" GraphId="e2d25" Style="Group"/>
+  <Group GroupId="fe332" GraphId="efb0e" Style="Group"/>
+  <Group GroupId="e300b" GraphId="f2c62" Style="Group"/>
+  <Group GroupId="a979a" GraphId="f66e3" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ad1">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21177881</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Widespread regulatory activity of vertebrate microRNA* species.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RNA</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang JS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phillips MD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betel D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mu P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ventura A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siepel AC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen KC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lai EC</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microRNA pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000808</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dc4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16111679</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MicroRNA function in animal development.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEBS Lett</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wienholds E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plasterk RH</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

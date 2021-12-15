@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Conversion of angiotensinogen to angiotensin II " Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway depicts the conversion of Angiotensinogen to Angiotensin II by enzymes of the Renin-Angiotensin-System (RAS) and Nonrenin-Angiotensin-System (NRAS). 
+The NRAS pathway includes both direct and indirect conversion. </Comment>
+  <BiopaxRef>a41</BiopaxRef>
+  <Graphics BoardWidth="548.8343895408266" BoardHeight="381.0840083496343"/>
+  <DataNode TextLabel="CMA1" GraphId="f10d3" Type="Protein">
+    <Graphics CenterX="306.72516912135643" CenterY="256.90118286486984" Width="90.0" Height="25.0" ZOrder="32804" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P23946"/>
+  </DataNode>
+  <DataNode TextLabel="Angiotensinogen" GraphId="feba2" Type="Metabolite">
+    <Graphics CenterX="195.0750226533636" CenterY="97.02781523526956" Width="90.0" Height="25.0" ZOrder="32805" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:2720"/>
+  </DataNode>
+  <DataNode TextLabel="CTSG" GraphId="ba517" Type="Protein">
+    <Graphics CenterX="306.72516912135643" CenterY="220.49437637496086" Width="90.0" Height="25.0" ZOrder="32806" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P08311"/>
+  </DataNode>
+  <DataNode TextLabel="ACE" GraphId="f65c7" Type="GeneProduct">
+    <Graphics CenterX="83.93134244941365" CenterY="220.49437637496086" Width="90.0" Height="25.0" ZOrder="32807" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000159640"/>
+  </DataNode>
+  <DataNode TextLabel="human angiotensin II" GraphId="bb607" Type="Metabolite">
+    <Graphics CenterX="195.07502265336382" CenterY="296.8695247722693" Width="129.68539770478827" Height="25.0" ZOrder="32808" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:2719"/>
+  </DataNode>
+  <DataNode TextLabel="CTSG" GraphId="de835" Type="Protein">
+    <Graphics CenterX="468.1293044597023" CenterY="188.58628377503996" Width="90.0" Height="25.0" ZOrder="32809" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P08311"/>
+  </DataNode>
+  <DataNode TextLabel="CTSD&#10;" GraphId="f1858" Type="Protein">
+    <Graphics CenterX="306.72516912135643" CenterY="132.31004840451618" Width="90.0" Height="25.0" ZOrder="32810" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="A0A1B0GV23"/>
+  </DataNode>
+  <DataNode TextLabel="Angiotensin I" GraphId="f7067" Type="Metabolite">
+    <Graphics CenterX="195.0750226533636" CenterY="178.94312983756478" Width="90.0" Height="25.0" ZOrder="32811" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:2718"/>
+  </DataNode>
+  <DataNode TextLabel="REN" GraphId="bcc22" Type="Protein">
+    <Graphics CenterX="83.93134244941365" CenterY="132.49999523231708" Width="90.0" Height="25.0" ZOrder="32812" FontSize="12" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="A0A1B0GUZ2"/>
+  </DataNode>
+  <Interaction GraphId="d8a09">
+    <Graphics ZOrder="32791" LineThickness="1.0">
+      <Point X="261.72516912135643" Y="256.90118286486984" GraphRef="f10d3" RelX="-1.0" RelY="0.0"/>
+      <Point X="195.07502265336376" Y="257.692635179868" GraphRef="d9dc6" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d3d99">
+    <Graphics ZOrder="32792" LineThickness="1.0">
+      <Point X="423.1293044597023" Y="188.58628377503996" GraphRef="de835" RelX="-1.0" RelY="0.0"/>
+      <Point X="386.7796622606539" Y="188.83121932255477" GraphRef="e8ac6" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="deb83">
+    <Graphics ZOrder="32793" LineThickness="1.0">
+      <Point X="261.72516912135643" Y="220.49437637496086" GraphRef="ba517" RelX="-1.0" RelY="0.0"/>
+      <Point X="195.07502265336367" Y="220.8901025324599" GraphRef="efc75" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="c316c">
+    <Graphics ConnectorType="Segmented" ZOrder="32794" LineThickness="1.0">
+      <Point X="240.0750226533636" Y="97.02781523526956" GraphRef="feba2" RelX="1.0" RelY="0.0"/>
+      <Point X="385.870400621159" Y="96.63208907777056"/>
+      <Point X="387.849031408654" Y="297.2652509297691"/>
+      <Point X="259.917721505758" Y="296.8695247722693" GraphRef="bb607" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.5017162759581909" Shape="None" GraphId="e8ac6"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ed3a4">
+    <Graphics ZOrder="32795" LineThickness="1.0">
+      <Point X="128.93134244941365" Y="220.49437637496086" GraphRef="f65c7" RelX="1.0" RelY="0.0"/>
+      <Point X="195.07502265336367" Y="220.8901025324599" GraphRef="efc75" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="aa4d2">
+    <Graphics ZOrder="32796" LineThickness="1.0">
+      <Point X="261.72516912135643" Y="132.31004840451618" GraphRef="f1858" RelX="-1.0" RelY="0.0"/>
+      <Point X="195.0750226533636" Y="132.29394107618765" GraphRef="dc657" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d5c9b">
+    <Graphics ZOrder="32797" LineThickness="1.0">
+      <Point X="128.93134244941365" Y="132.49999523231708" GraphRef="bcc22" RelX="1.0" RelY="0.0"/>
+      <Point X="195.0750226533636" Y="132.29394107618765" GraphRef="dc657" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="fa188">
+    <Graphics ZOrder="32798" LineThickness="1.0">
+      <Point X="195.0750226533636" Y="191.44312983756478" GraphRef="f7067" RelX="0.0" RelY="1.0"/>
+      <Point X="195.07502265336382" Y="284.3695247722693" GraphRef="bb607" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.31688491429788346" Shape="None" GraphId="efc75"/>
+      <Anchor Position="0.7129245182582832" Shape="None" GraphId="d9dc6"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="dd617">
+    <Graphics ZOrder="32799" LineThickness="1.0">
+      <Point X="195.0750226533636" Y="109.52781523526956" GraphRef="feba2" RelX="0.0" RelY="1.0"/>
+      <Point X="195.0750226533636" Y="166.44312983756478" GraphRef="f7067" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.4" Shape="None" GraphId="dc657"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="NRAS pathway&#10;" GraphId="ea8a4">
+    <Graphics CenterX="306.72516912135643" CenterY="323.38317732470387" Width="90.0" Height="25.0" ZOrder="32802" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="RAS pathway" GraphId="df41c">
+    <Graphics CenterX="83.93134244941365" CenterY="322.9874511672046" Width="90.0" Height="25.0" ZOrder="32803" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="f93a3">
+    <Graphics CenterX="112.1736257893424" CenterY="202.23883620875574" Width="165.12208151958845" Height="297.6903442817571" ZOrder="32800" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="f6777">
+    <Graphics CenterX="356.93025420248057" CenterY="202.23883620875574" Width="323.808270676692" Height="296.89889196675915" ZOrder="32801" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0"/>
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a41">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9814470</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human adipose tissue expresses angiotensinogen and enzymes required for its conversion to angiotensin II.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Endocrinol Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karlsson C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindell K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ottosson M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sjöström L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlsson B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlsson LM</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>angiotensin II signaling pathway</bp:TERM><bp:ID>PW:0000244</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

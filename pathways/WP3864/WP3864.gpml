@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Robo4 and VEGF signaling pathways crosstalk" Version="20160719" Organism="Mus musculus">
+  <Comment Source="WikiPathways-description">This pathway is based on Figure 2 of "Robo4: a guidance receptor that regulates angiogenesis." (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2637482/). The gene Robo4 plays a role in regulating vascular stability in mice. Robo4 inhibits the gene Notch1, which regulates tip cell formation, in order to create more tip cells. Robo4 also inhibits cell migration, decreasing vessel complexity. The combination of Slit2 and Robo4 inhibits the activation of Src by VEGF-165 and VEGFR2. This inhibition reduces vascular leakage of Evans Blue from retinal blood vessels. More experimentation is necessary to determine whether Robo4 will inhibit other members of the Src family. </Comment>
+  <BiopaxRef>bb0</BiopaxRef>
+  <Graphics BoardWidth="558.0" BoardHeight="457.0"/>
+  <DataNode TextLabel="Robo4" GraphId="ad17e" Type="GeneProduct">
+    <Graphics CenterX="156.49498997996008" CenterY="143.3186372745491" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000032125"/>
+  </DataNode>
+  <DataNode TextLabel="Slit2" GraphId="b955c" Type="GeneProduct">
+    <Graphics CenterX="156.24298597194388" CenterY="72.42735470941884" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000031558"/>
+  </DataNode>
+  <DataNode TextLabel="VEGFR2" GraphId="bb178" Type="GeneProduct">
+    <Graphics CenterX="332.25" CenterY="143.25" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000062960"/>
+  </DataNode>
+  <DataNode TextLabel="Rac1" GraphId="bbf12" Type="GeneProduct">
+    <Graphics CenterX="332.25" CenterY="300.75" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000001847"/>
+  </DataNode>
+  <DataNode TextLabel="Vegfa" GraphId="c98ea" Type="GeneProduct">
+    <Graphics CenterX="332.0" CenterY="69.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000023951"/>
+  </DataNode>
+  <DataNode TextLabel="Src" GraphId="e9a5f" Type="GeneProduct">
+    <Graphics CenterX="332.8276553106236" CenterY="224.48697394789556" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSMUSG00000027646"/>
+  </DataNode>
+  <Interaction GraphId="id14447c5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="332.8276553106236" Y="234.48697394789556" GraphRef="e9a5f" RelX="0.0" RelY="1.0"/>
+      <Point X="332.25" Y="290.75" GraphRef="bbf12" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8f6175b1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="332.25" Y="153.25" GraphRef="bb178" RelX="0.0" RelY="1.0"/>
+      <Point X="332.8276553106236" Y="214.48697394789556" GraphRef="e9a5f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4" Shape="None" GraphId="a2fea"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id9cf5d153">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="332.25" Y="310.75" GraphRef="bbf12" RelX="0.0" RelY="1.0"/>
+      <Point X="439.0" Y="364.0" GraphRef="ea02d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida7aa2972">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="332.25" Y="310.75" GraphRef="bbf12" RelX="0.0" RelY="1.0"/>
+      <Point X="250.0" Y="362.0" GraphRef="e7330" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc600851e">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="156.49498997996008" Y="153.3186372745491" GraphRef="ad17e" RelX="0.0" RelY="1.0"/>
+      <Point X="332.48106212424943" Y="177.74478957915824" GraphRef="a2fea" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc96ead42">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="156.24298597194388" Y="82.42735470941884" GraphRef="b955c" RelX="0.0" RelY="1.0"/>
+      <Point X="156.49498997996008" Y="133.3186372745491" GraphRef="ad17e" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ideee2e4f0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="332.0" Y="79.0" GraphRef="c98ea" RelX="0.0" RelY="1.0"/>
+      <Point X="332.25" Y="133.25" GraphRef="bb178" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="Angiogenesis" GraphId="e7330">
+    <Graphics CenterX="250.0" CenterY="372.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Permeability" GraphId="ea02d">
+    <Graphics CenterX="439.0" CenterY="373.5" Width="80.0" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="b417d">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="291.0" CenterY="285.0" Width="474.0" Height="284.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notch signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000204</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000004</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bb0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19270536</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robo4: a guidance receptor that regulates angiogenesis.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Adh Migr</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weitzman M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bayley EB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naik UP</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

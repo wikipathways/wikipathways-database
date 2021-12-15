@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Activation of NLRP3 inflammasome by SARS-CoV-2" Version="20200331" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Orf3a from SARS-CoV has been shown to bind TRAF3 and activate the NLRP3 inflammasome. The activation occurs at two points. First, by ubiquinating NF-kB (p105) to stimulate its proteolytic processing into mature NF-kB (p50), which can then go on to promote the transcription of pro-IL-1B together with RELA (p65). And second, by ubiquitinating ASC (PYCARD) in the NLRP3 inflammasome, which leads to its degradtion and the activation of caspase-1 (CASP1) that goes on to catalyze the production of mature IL-1B, leading to a cytokine storm. While Orf3a of SARS-CoV-2 only has 72.7% sequence identity with that of SARS-CoV, the TRAF3 binding motif PxQxS is 100% conserved (https://alexanderpico.github.io/SARS-CoV-2_Alignments/#Orf3a). Chloroquine, a multi-functional antiviral, decreases the production of IL-1B by affecting "the processing of primary transcripts in the nucleus, the transport of processed mRNA to the cytosol, and the degradation of mRNA." (Jang 2006)</Comment>
+  <BiopaxRef>a0e</BiopaxRef>
+  <Graphics BoardWidth="556.0" BoardHeight="350.0"/>
+  <DataNode TextLabel="chloroquine" GraphId="d8fdf" Type="Metabolite">
+    <Graphics CenterX="217.51814882032676" CenterY="172.41379310344834" Width="80.39019963702361" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff"/>
+    <Xref Database="Wikidata" ID="Q422438"/>
+  </DataNode>
+  <DataNode TextLabel="TRAF3" GraphId="efb77" Type="GeneProduct" GroupRef="c9cd8">
+    <Graphics CenterX="256.0" CenterY="84.0" Width="55.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000131323"/>
+  </DataNode>
+  <DataNode TextLabel="NLRP3" GraphId="e1fdf" Type="GeneProduct" GroupRef="d81f8">
+    <Graphics CenterX="402.0" CenterY="70.0" Width="55.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000162711"/>
+  </DataNode>
+  <DataNode TextLabel="RELA" GraphId="fe12b" Type="GeneProduct" GroupRef="f10a1">
+    <Graphics CenterX="127.0" CenterY="159.0" Width="55.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000173039"/>
+  </DataNode>
+  <DataNode TextLabel="NFKB1" GraphId="dc151" Type="GeneProduct" GroupRef="f10a1">
+    <Graphics CenterX="72.0" CenterY="159.0" Width="55.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000109320"/>
+  </DataNode>
+  <DataNode TextLabel="NFKB1 p105" GraphId="ae8f7" Type="GeneProduct">
+    <Graphics CenterX="94.5" CenterY="79.0" Width="93.0" Height="25.0" ZOrder="32772" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000109320"/>
+  </DataNode>
+  <DataNode TextLabel="Orf3a" GraphId="dc9ef" Type="Protein" GroupRef="c9cd8">
+    <Graphics CenterX="256.0" CenterY="109.0" Width="50.0" Height="25.0" ZOrder="32773" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="Oval"/>
+    <Xref Database="RefSeq" ID="YP_009724391"/>
+  </DataNode>
+  <DataNode TextLabel="IL1B" GraphId="b860a" Type="GeneProduct">
+    <Graphics CenterX="458.0" CenterY="256.0" Width="55.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000125538"/>
+  </DataNode>
+  <DataNode TextLabel="pro-IL1B" GraphId="a1e57" Type="GeneProduct">
+    <Graphics CenterX="335.75" CenterY="256.0" Width="70.5" Height="25.0" ZOrder="32775" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000125538"/>
+  </DataNode>
+  <DataNode TextLabel="pro-IL1B" GraphId="d3559" Type="Rna">
+    <Graphics CenterX="199.75" CenterY="256.0" Width="70.5" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" Color="660099"/>
+    <Xref Database="Ensembl" ID="ENSG00000125538"/>
+  </DataNode>
+  <DataNode TextLabel="ASC" GraphId="bbb80" Type="GeneProduct" GroupRef="d81f8">
+    <Graphics CenterX="402.0" CenterY="95.0" Width="55.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000103490"/>
+  </DataNode>
+  <DataNode TextLabel="CASP1" GraphId="b43c2" Type="GeneProduct">
+    <Graphics CenterX="402.0" CenterY="204.0" Width="55.0" Height="25.0" ZOrder="32778" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000137752"/>
+  </DataNode>
+  <DataNode TextLabel="pro-CASP1" GraphId="a2318" Type="GeneProduct" GroupRef="d81f8">
+    <Graphics CenterX="402.0" CenterY="120.0" Width="80.5" Height="25.0" ZOrder="32779" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000137752"/>
+  </DataNode>
+  <State GraphRef="ae8f7" TextLabel="Ub" GraphId="a2e2a">
+    <Graphics RelX="1.0" RelY="-0.04" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="bbb80" TextLabel="Ub" GraphId="b9f3a">
+    <Graphics RelX="-1.0" RelY="0.1" Width="20.0" Height="20.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <Interaction GraphId="id38c72c84">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="402.0" Y="216.5" GraphRef="b43c2" RelX="0.0" RelY="1.0"/>
+      <Point X="402.0" Y="256.0" GraphRef="c26dd" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3a35678b">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="295.5" Y="96.5" GraphRef="b6589" RelX="1.0" RelY="0.0"/>
+      <Point X="402.0" Y="162.0" GraphRef="ab90e" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id56c2671f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="71.25" Y="91.5" GraphRef="ae8f7" RelX="-0.5" RelY="1.0"/>
+      <Point X="72.0" Y="146.5" GraphRef="dc151" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.4" Shape="None" GraphId="d4cfb"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7ef1c6cf">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="402.0" Y="132.5" GraphRef="a2318" RelX="0.0" RelY="1.0"/>
+      <Point X="402.0" Y="191.5" GraphRef="b43c2" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.5" Shape="None" GraphId="ab90e"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida869b531">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="216.5" Y="78.0" GraphRef="b6589" RelX="-1.0" RelY="-0.5"/>
+      <Point X="151.0" Y="78.5" GraphRef="a2e2a" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idaa5a11ed">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="235.0" Y="256.0" GraphRef="d3559" RelX="1.0" RelY="0.0"/>
+      <Point X="300.5" Y="256.0" GraphRef="a1e57" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idad3dc034">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="216.5" Y="78.0" GraphRef="b6589" RelX="-1.0" RelY="-0.5"/>
+      <Point X="71.55" Y="113.5" GraphRef="d4cfb" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idb1ca554">
+    <BiopaxRef>df0</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0033">
+      <Point X="217.51814882032676" Y="182.41379310344834" GraphRef="d8fdf" RelX="0.0" RelY="1.0"/>
+      <Point X="217.375" Y="243.5" GraphRef="d3559" RelX="0.5" RelY="-1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ide57d0b2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="295.5" Y="96.5" GraphRef="b6589" RelX="1.0" RelY="0.0"/>
+      <Point X="364.5" Y="96.25" GraphRef="b9f3a" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ide9837dad">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="99.5" Y="183.5" GraphRef="d72a0" RelX="0.0" RelY="1.0"/>
+      <Point X="164.5" Y="256.0" GraphRef="d3559" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ed3f9">
+    <Graphics ZOrder="32780" LineThickness="1.0">
+      <Point X="371.0" Y="256.0" GraphRef="a1e57" RelX="1.0" RelY="0.0"/>
+      <Point X="430.5" Y="256.0" GraphRef="b860a" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.5210084033613446" Shape="None" GraphId="c26dd"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <GraphicalLine>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="73.33533293341333" Y="270.54589082183566"/>
+      <Point X="125.52489502099581" Y="270.24595080983806"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a0e04">
+    <Graphics ZOrder="32782" LineThickness="1.0">
+      <Point X="72.68746250749857" Y="256.25074985003073"/>
+      <Point X="124.87702459508115" Y="255.95080983803314"/>
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Cytokine Storm" GraphId="bbe37">
+    <Graphics CenterX="457.0" CenterY="284.0" Width="138.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontStyle="Italic" FontSize="12" Valign="Middle" Color="6600cc"/>
+  </Label>
+  <Label TextLabel="IL1B" GraphId="c5afe">
+    <Graphics CenterX="99.58017676767679" CenterY="263.26754385964864" Width="35.0" Height="15.0" ZOrder="28672" FillColor="ffffff" FontStyle="Italic" FontSize="10" Valign="Middle" ShapeType="Rectangle"/>
+  </Label>
+  <Label TextLabel="Nucleus" GraphId="cdd3c">
+    <Graphics CenterX="136.27992633517516" CenterY="303.25352977286667" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="666666"/>
+  </Label>
+  <Shape GraphId="b8ab3">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="136.75" CenterY="260.25" Width="244.5" Height="119.5" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="c9cd8" GraphId="b6589" Style="Complex"/>
+  <Group GroupId="f10a1" GraphId="d72a0" Style="Complex"/>
+  <Group GroupId="d81f8" GraphId="f1f54" Style="Complex"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interleukin-1 signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000883</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000004</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">viral infectious disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:934</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a0e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31034780</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Severe acute respiratory syndrome coronavirus ORF3a protein activates the NLRP3 inflammasome by promoting TRAF3-dependent ubiquitination of ASC.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FASEB J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siu KL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yuen KS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Castaño-Rodriguez C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ye ZW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yeung ML</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fung SY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yuan S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chan CP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yuen KY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enjuanes L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin DY</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">severe acute respiratory syndrome</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2945</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="df0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16418198</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chloroquine inhibits production of TNF-alpha, IL-1beta and IL-6 from lipopolysaccharide-stimulated human monocytes/macrophages by different modes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rheumatology (Oxford)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jang CH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Choi JH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Byun MS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jue DM</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>COVID-19</bp:TERM><bp:ID>DOID:0080600</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>
