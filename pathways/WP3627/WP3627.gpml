@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Gut-liver indole metabolism " Data-Source="WikiPathways" Version="WP3627_r119388" Author="user | Egonw | Khanspers | Mkutmon | Eweitz" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Dietary tryptophane is metabolised by the gut microbiome to indole and IPA which reaches the human blood system. Indole is further metabolized into indoxyl sulfate which also reached the blood.</Comment>
+  <BiopaxRef>d3f</BiopaxRef>
+  <Graphics BoardWidth="907.6444887439736" BoardHeight="529.0" />
+  <DataNode TextLabel="indoxyl" GraphId="a1c11" Type="Metabolite">
+    <Graphics CenterX="801.0" CenterY="247.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17840" />
+  </DataNode>
+  <DataNode TextLabel="IPA" GraphId="aa46d" Type="Metabolite">
+    <Graphics CenterX="223.0" CenterY="329.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:43580" />
+  </DataNode>
+  <DataNode TextLabel="tryptophanase" GraphId="c2d11" Type="GeneProduct">
+    <Graphics CenterX="199.0" CenterY="199.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="4.1.99.1" />
+  </DataNode>
+  <DataNode TextLabel="sulfotransferase" GraphId="c8b7a" Type="GeneProduct">
+    <Graphics CenterX="701.8609831029174" CenterY="305.6989247311828" Width="103.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="indole" GraphId="dfda2" Type="Metabolite">
+    <Graphics CenterX="106.0" CenterY="279.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16881" />
+  </DataNode>
+  <DataNode TextLabel="dietary&#xA;tryptophan" GraphId="f2d0d" Type="Metabolite">
+    <Graphics CenterX="106.0" CenterY="134.5" Width="82.0" Height="33.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:27897" />
+  </DataNode>
+  <DataNode TextLabel="CYP2E1" GraphId="f7b19" Type="GeneProduct">
+    <Graphics CenterX="691.0" CenterY="200.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000130649" />
+  </DataNode>
+  <DataNode TextLabel="indole" GraphId="a9db4" Type="Metabolite">
+    <Graphics CenterX="461.0" CenterY="155.0" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16881" />
+  </DataNode>
+  <DataNode TextLabel="indole" GraphId="b2018" Type="Metabolite">
+    <Graphics CenterX="603.0" CenterY="248.0" Width="80.0" Height="20.0" ZOrder="32770" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16881" />
+  </DataNode>
+  <DataNode TextLabel="IPA" GraphId="ff98a" Type="Metabolite">
+    <Graphics CenterX="465.0" CenterY="328.0" Width="80.0" Height="20.0" ZOrder="32771" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:43580" />
+  </DataNode>
+  <DataNode TextLabel="indoxyl sulfate" GraphId="ebdc8" Type="Metabolite">
+    <Graphics CenterX="803.0" CenterY="374.0" Width="80.0" Height="20.0" ZOrder="32772" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:43355" />
+  </DataNode>
+  <DataNode TextLabel="indoxyl sulfate" GraphId="e70f6" Type="Metabolite">
+    <Graphics CenterX="463.0" CenterY="394.0" Width="80.0" Height="20.0" ZOrder="32773" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:43355" />
+  </DataNode>
+  <Interaction GraphId="id14d637fe">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="801.0" Y="257.0" GraphRef="a1c11" RelX="0.0" RelY="1.0" />
+      <Point X="803.0" Y="364.0" GraphRef="ebdc8" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4638001594173103" Shape="None" GraphId="adfb3" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id16a530d0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="690.2" Y="247.6" GraphRef="daa1e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="691.0" Y="210.0" GraphRef="f7b19" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2a2a40f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="146.0" Y="279.0" GraphRef="dfda2" RelX="1.0" RelY="0.0" />
+      <Point X="421.0" Y="155.0" GraphRef="a9db4" RelX="-1.0" RelY="0.0" ArrowHead="mim-translocation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id92cc91db">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="106.0" Y="151.0" GraphRef="f2d0d" RelX="0.0" RelY="1.0" />
+      <Point X="106.0" Y="269.0" GraphRef="dfda2" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="a398b" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9d000f1a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="146.0" Y="279.0" GraphRef="dfda2" RelX="1.0" RelY="0.0" />
+      <Point X="183.0" Y="329.0" GraphRef="aa46d" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbdf66e04">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="763.0" Y="374.0" GraphRef="ebdc8" RelX="-1.0" RelY="0.0" />
+      <Point X="503.0" Y="394.0" GraphRef="e70f6" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idcad00256">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="159.0" Y="199.0" GraphRef="c2d11" RelX="-1.0" RelY="0.0" />
+      <Point X="106.0" Y="198.2" GraphRef="a398b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd75cad3a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="643.0" Y="248.0" GraphRef="b2018" RelX="1.0" RelY="0.0" />
+      <Point X="761.0" Y="247.0" GraphRef="a1c11" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="daa1e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddf31c619">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="263.0" Y="329.0" GraphRef="aa46d" RelX="1.0" RelY="0.0" />
+      <Point X="425.0" Y="328.0" GraphRef="ff98a" RelX="-1.0" RelY="0.0" ArrowHead="mim-translocation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddfa826dd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="501.0" Y="155.0" GraphRef="a9db4" RelX="1.0" RelY="0.0" />
+      <Point X="563.0" Y="248.0" GraphRef="b2018" RelX="-1.0" RelY="0.0" ArrowHead="mim-translocation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide4680084">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="753.3609831029174" Y="305.6989247311828" GraphRef="c8b7a" RelX="1.0" RelY="0.0" />
+      <Point X="801.9276003188346" Y="306.6266170576522" GraphRef="adfb3" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="idfb97b22d">
+    <Graphics ZOrder="-8" LineThickness="2.0" Color="999999">
+      <Point X="511.0" Y="61.0" />
+      <Point X="510.0" Y="498.0" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="de152">
+    <Graphics ZOrder="-5" LineThickness="2.0" Color="999999">
+      <Point X="403.0" Y="62.0" />
+      <Point X="402.0" Y="499.0" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Blood" GraphId="cd87f">
+    <Graphics CenterX="459.31336405529953" CenterY="80.77112135176651" Width="80.0" Height="20.0" ZOrder="28673" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Gut lumen" GraphId="d5c33">
+    <Graphics CenterX="366.0721966205837" CenterY="82.0" Width="80.0" Height="20.0" ZOrder="28674" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Food" GraphId="c0269">
+    <Graphics CenterX="105.0" CenterY="82.0" Width="80.0" Height="20.0" ZOrder="28676" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="be3ea">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="364.25" CenterY="291.25" Width="33.5" Height="113.5" ZOrder="-7" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ae30b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="363.25" CenterY="165.25" Width="33.5" Height="113.5" ZOrder="-6" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="&#xA;Gut bacteria   " GraphId="a3e6a">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="179.5" CenterY="301.25" Width="255.0" Height="123.5" ZOrder="-3" FontWeight="Bold" FontSize="14" Align="Right" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="&#xA;Liver   " GraphId="e8173">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="708.5879743132178" CenterY="282.83703083741773" Width="338.11302886151157" Height="266.40760680242965" ZOrder="-2" FontWeight="Bold" FontSize="14" Align="Right" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ea8c9">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="366.25" CenterY="423.25" Width="33.5" Height="113.5" ZOrder="16385" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d3f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19234110</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metabolomics analysis reveals large effects of gut microflora on mammalian blood metabolites.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

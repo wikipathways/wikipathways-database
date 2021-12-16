@@ -1,261 +1,250 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="PDGFR-alpha and STMN1 cooperate to exacerbate cytotoxic effects of vinblastine" Version="20181019" Organism="Mus musculus">
-  <Comment Source="WikiPathways-description">Stathmin (SMTMN1) normally binds to alpha-beta tubulin heterodimers, but this process is negatively regulated by phosphorylation. In this way phosphorylated Stathmin indirectly promotes polymerization. PDGFRα dephosphorylates STMN1, which leads to increased tubulin depolymerization. Vinblastine inhibits polymerization, effectively resulting in depolymerization. During mitosis, this triggers the defense mechanism "spindle assembly checkpoint" (SAC), which and results in either apoptosis or mitotic slippage.</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="PDGFR-alpha and STMN1 cooperate to exacerbate cytotoxic effects of vinblastine" Data-Source="WikiPathways" Version="WP4398_r117929" Author="user | Khanspers | Egonw | Eweitz" Organism="Mus musculus">
+  <Comment Source="WikiPathways-description">Stathmin (SMTMN1) normally binds to alpha-beta tubulin heterodimers, but this process is negatively regulated by phosphorylation. In this way phosphorylated Stathmin indirectly promotes polymerization. PDGFRa dephosphorylates STMN1, which leads to increased tubulin depolymerization. Vinblastine inhibits polymerization, effectively resulting in depolymerization. During mitosis, this triggers the defense mechanism "spindle assembly checkpoint" (SAC), which and results in either apoptosis or mitotic slippage.</Comment>
   <BiopaxRef>e8f</BiopaxRef>
-  <Graphics BoardWidth="841.0" BoardHeight="428.0"/>
+  <Graphics BoardWidth="841.0" BoardHeight="428.0" />
   <DataNode TextLabel="Pdgfra" GraphId="a5747" Type="GeneProduct">
-    <Graphics CenterX="778.5" CenterY="258.0" Width="65.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
-    <Xref Database="Ensembl" ID="ENSMUSG00000029231"/>
+    <Graphics CenterX="778.5" CenterY="258.0" Width="65.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSMUSG00000029231" />
   </DataNode>
   <DataNode TextLabel="Vinblastine" GraphId="da045" Type="Metabolite">
-    <Graphics CenterX="381.0" CenterY="257.0" Width="74.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
-    <Xref Database="ChEBI" ID="CHEBI:27375"/>
+    <Graphics CenterX="381.0" CenterY="257.0" Width="74.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:27375" />
   </DataNode>
   <DataNode TextLabel="Stmn1" GraphId="e06fe" Type="GeneProduct" GroupRef="cbea0">
-    <Graphics CenterX="673.0" CenterY="320.0" Width="68.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
-    <Xref Database="Ensembl" ID="ENSMUSG00000028832"/>
+    <Graphics CenterX="673.0" CenterY="320.0" Width="68.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSMUSG00000028832" />
   </DataNode>
   <DataNode TextLabel="Stmn1" GraphId="f4370" Type="GeneProduct">
-    <Graphics CenterX="683.0" CenterY="207.0" Width="68.0" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle"/>
-    <Xref Database="Ensembl" ID="ENSMUSG00000028832"/>
+    <Graphics CenterX="683.0" CenterY="207.0" Width="68.0" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSMUSG00000028832" />
   </DataNode>
   <State GraphRef="f4370" TextLabel="P" GraphId="e7ba2">
     <Comment>parent=P54227; position=Ser25; ptm=p; direction=u</Comment>
-    <Graphics RelX="1.0" RelY="-0.84" Width="15.0" Height="15.0" ShapeType="Oval"/>
-    <Xref Database="" ID=""/>
+    <Graphics RelX="1.0" RelY="-0.84" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="f4370" TextLabel="P" GraphId="f5fb0">
     <Comment>parent=P54227; position=Ser38; ptm=p; direction=u</Comment>
-    <Graphics RelX="1.0" RelY="0.92" Width="15.0" Height="15.0" ShapeType="Oval"/>
-    <Xref Database="" ID=""/>
+    <Graphics RelX="1.0" RelY="0.92" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
   </State>
-  <Interaction>
+  <Interaction GraphId="id115470bf">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="159.0" Y="307.5" GraphRef="c7585" RelX="0.0" RelY="-1.0"/>
-      <Point X="224.5" Y="239.5" GraphRef="c24ec" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+      <Point X="392.0" Y="320.0" GraphRef="dc648" RelX="-1.0" RelY="0.0" />
+      <Point X="251.0" Y="320.0" GraphRef="c7585" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID=""/>
+    <Xref Database="" ID="" />
   </Interaction>
-  <Interaction>
+  <Interaction GraphId="id396cd97b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="392.0" Y="320.0" GraphRef="dc648" RelX="-1.0" RelY="0.0"/>
-      <Point X="251.0" Y="320.0" GraphRef="c7585" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Point X="451.5" Y="307.5" GraphRef="dc648" RelX="0.0" RelY="-1.0" />
+      <Point X="451.5" Y="167.5" GraphRef="a27a5" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.3607142857142857" Shape="None" GraphId="b3ceb" />
+      <Anchor Position="0.7178571428571429" Shape="None" GraphId="e6e91" />
     </Graphics>
-    <Xref Database="" ID=""/>
+    <Xref Database="" ID="" />
   </Interaction>
-  <Interaction>
+  <Interaction GraphId="id573f3a79">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="451.5" Y="307.5" GraphRef="dc648" RelX="0.0" RelY="-1.0"/>
-      <Point X="451.5" Y="167.5" GraphRef="a27a5" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
-      <Anchor Position="0.3607142857142857" Shape="None" GraphId="b3ceb"/>
-      <Anchor Position="0.7178571428571429" Shape="None" GraphId="e6e91"/>
+      <Point X="159.0" Y="307.5" GraphRef="c7585" RelX="0.0" RelY="-1.0" />
+      <Point X="224.5" Y="239.5" GraphRef="c24ec" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID=""/>
+    <Xref Database="" ID="" />
   </Interaction>
-  <Interaction>
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="418.0" Y="257.0" GraphRef="da045" RelX="1.0" RelY="0.0"/>
-      <Point X="451.5" Y="257.0" GraphRef="b3ceb" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition"/>
-    </Graphics>
-    <Xref Database="" ID=""/>
-  </Interaction>
-  <Interaction>
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="511.0" Y="320.0" GraphRef="dc648" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
-      <Point X="639.0" Y="320.0" GraphRef="e06fe" RelX="-1.0" RelY="0.0"/>
-    </Graphics>
-    <Xref Database="" ID=""/>
-  </Interaction>
-  <Interaction>
+  <Interaction GraphId="id8bfabbe5">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="649.0" Y="207.0" GraphRef="f4370" RelX="-1.0" RelY="0.0"/>
-      <Point X="451.5" Y="207.0" GraphRef="e6e91" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Point X="649.0" Y="207.0" GraphRef="f4370" RelX="-1.0" RelY="0.0" />
+      <Point X="451.5" Y="207.0" GraphRef="e6e91" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID=""/>
+    <Xref Database="" ID="" />
   </Interaction>
-  <Interaction>
+  <Interaction GraphId="id9ea38533">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="683.0" Y="219.5" GraphRef="f4370" RelX="0.0" RelY="1.0"/>
-      <Point X="683.0" Y="299.5" GraphRef="ab213" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
-      <Anchor Position="0.48214285714285715" Shape="None" GraphId="ff524"/>
+      <Point X="683.0" Y="219.5" GraphRef="f4370" RelX="0.0" RelY="1.0" />
+      <Point X="683.0" Y="299.5" GraphRef="ab213" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.48214285714285715" Shape="None" GraphId="ff524" />
     </Graphics>
-    <Xref Database="" ID=""/>
+    <Xref Database="" ID="" />
   </Interaction>
-  <Interaction>
+  <Interaction GraphId="idbd05813b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="746.0" Y="258.0" GraphRef="a5747" RelX="-1.0" RelY="0.0"/>
-      <Point X="683.0" Y="258.07142857142856" GraphRef="ff524" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+      <Point X="418.0" Y="257.0" GraphRef="da045" RelX="1.0" RelY="0.0" />
+      <Point X="451.5" Y="257.0" GraphRef="b3ceb" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
-    <Xref Database="" ID=""/>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc37854db">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="746.0" Y="258.0" GraphRef="a5747" RelX="-1.0" RelY="0.0" />
+      <Point X="683.0" Y="258.07142857142856" GraphRef="ff524" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide896bed4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="511.0" Y="320.0" GraphRef="dc648" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="639.0" Y="320.0" GraphRef="e06fe" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a7355">
     <Graphics ZOrder="32771" LineThickness="1.0">
-      <Point X="159.0" Y="307.5" GraphRef="c7585" RelX="0.0" RelY="-1.0"/>
-      <Point X="93.5" Y="239.5" GraphRef="fbfd0" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+      <Point X="159.0" Y="307.5" GraphRef="c7585" RelX="0.0" RelY="-1.0" />
+      <Point X="93.5" Y="239.5" GraphRef="fbfd0" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID=""/>
+    <Xref Database="" ID="" />
   </Interaction>
   <Label TextLabel="Polymerization" GraphId="a27a5">
-    <Graphics CenterX="451.5" CenterY="155.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+    <Graphics CenterX="451.5" CenterY="155.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="Spindle assembly checkpoint&#10;(SAC)" GraphId="c7585">
-    <Graphics CenterX="159.0" CenterY="320.0" Width="184.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  <Label TextLabel="Spindle assembly checkpoint&#xA;(SAC)" GraphId="c7585">
+    <Graphics CenterX="159.0" CenterY="320.0" Width="184.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Mitotic slippage" GraphId="c24ec">
-    <Graphics CenterX="224.5" CenterY="227.0" Width="113.0" Height="25.0" ZOrder="32769" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+    <Graphics CenterX="224.5" CenterY="227.0" Width="113.0" Height="25.0" ZOrder="32769" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Apoptosis" GraphId="fbfd0">
-    <Graphics CenterX="93.5" CenterY="227.0" Width="77.0" Height="25.0" ZOrder="32770" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+    <Graphics CenterX="93.5" CenterY="227.0" Width="77.0" Height="25.0" ZOrder="32770" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Depolymerization" GraphId="dc648">
-    <Graphics CenterX="451.5" CenterY="320.0" Width="119.0" Height="25.0" ZOrder="32772" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+    <Graphics CenterX="451.5" CenterY="320.0" Width="119.0" Height="25.0" ZOrder="32772" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Shape GraphId="aaebc" GroupRef="b9e10">
-    <Graphics CenterX="385.0" CenterY="105.0" Width="18.0" Height="18.0" ZOrder="16384" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="385.0" CenterY="105.0" Width="18.0" Height="18.0" ZOrder="16384" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="f5201">
-    <Graphics CenterX="459.0" CenterY="111.0" Width="122.0" Height="24.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0"/>
+    <Graphics CenterX="459.0" CenterY="111.0" Width="122.0" Height="24.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0" />
   </Shape>
   <Shape GraphId="ad53d" GroupRef="b9e10">
-    <Graphics CenterX="403.0" CenterY="105.0" Width="18.0" Height="18.0" ZOrder="32775" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="403.0" CenterY="105.0" Width="18.0" Height="18.0" ZOrder="32775" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="a66f3" GroupRef="b9e10">
-    <Graphics CenterX="395.0" CenterY="115.0" Width="18.0" Height="18.0" ZOrder="32776" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="395.0" CenterY="115.0" Width="18.0" Height="18.0" ZOrder="32776" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="f05e5" GroupRef="b9e10">
-    <Graphics CenterX="413.0" CenterY="115.0" Width="18.0" Height="18.0" ZOrder="32777" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="413.0" CenterY="115.0" Width="18.0" Height="18.0" ZOrder="32777" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="e1b1d" GroupRef="b9e10">
-    <Graphics CenterX="421.0" CenterY="104.0" Width="18.0" Height="18.0" ZOrder="32778" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="421.0" CenterY="104.0" Width="18.0" Height="18.0" ZOrder="32778" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="aa149" GroupRef="b9e10">
-    <Graphics CenterX="439.0" CenterY="104.0" Width="18.0" Height="18.0" ZOrder="32779" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="439.0" CenterY="104.0" Width="18.0" Height="18.0" ZOrder="32779" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="c3f0c" GroupRef="b9e10">
-    <Graphics CenterX="431.0" CenterY="114.0" Width="18.0" Height="18.0" ZOrder="32780" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="431.0" CenterY="114.0" Width="18.0" Height="18.0" ZOrder="32780" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="aeead" GroupRef="b9e10">
-    <Graphics CenterX="449.0" CenterY="114.0" Width="18.0" Height="18.0" ZOrder="32781" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="449.0" CenterY="114.0" Width="18.0" Height="18.0" ZOrder="32781" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="e66db" GroupRef="b9e10">
-    <Graphics CenterX="456.0" CenterY="103.0" Width="18.0" Height="18.0" ZOrder="32782" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="456.0" CenterY="103.0" Width="18.0" Height="18.0" ZOrder="32782" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="e762c" GroupRef="b9e10">
-    <Graphics CenterX="474.0" CenterY="103.0" Width="18.0" Height="18.0" ZOrder="32783" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="474.0" CenterY="103.0" Width="18.0" Height="18.0" ZOrder="32783" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="d5f40" GroupRef="b9e10">
-    <Graphics CenterX="466.0" CenterY="113.0" Width="18.0" Height="18.0" ZOrder="32784" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="466.0" CenterY="113.0" Width="18.0" Height="18.0" ZOrder="32784" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="ce42d" GroupRef="b9e10">
-    <Graphics CenterX="484.0" CenterY="113.0" Width="18.0" Height="18.0" ZOrder="32785" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="484.0" CenterY="113.0" Width="18.0" Height="18.0" ZOrder="32785" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="a86b2" GroupRef="b9e10">
-    <Graphics CenterX="490.0" CenterY="103.0" Width="18.0" Height="18.0" ZOrder="32786" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="490.0" CenterY="103.0" Width="18.0" Height="18.0" ZOrder="32786" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="e6617" GroupRef="b9e10">
-    <Graphics CenterX="508.0" CenterY="103.0" Width="18.0" Height="18.0" ZOrder="32787" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="508.0" CenterY="103.0" Width="18.0" Height="18.0" ZOrder="32787" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="e6011" GroupRef="b9e10">
-    <Graphics CenterX="500.0" CenterY="113.0" Width="18.0" Height="18.0" ZOrder="32788" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="500.0" CenterY="113.0" Width="18.0" Height="18.0" ZOrder="32788" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="da333" GroupRef="b9e10">
-    <Graphics CenterX="518.0" CenterY="113.0" Width="18.0" Height="18.0" ZOrder="32789" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="518.0" CenterY="113.0" Width="18.0" Height="18.0" ZOrder="32789" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="d290d">
-    <Graphics CenterX="392.0" CenterY="357.0" Width="18.0" Height="18.0" ZOrder="32791" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="392.0" CenterY="357.0" Width="18.0" Height="18.0" ZOrder="32791" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="d9902">
-    <Graphics CenterX="466.0" CenterY="363.0" Width="122.0" Height="24.0" ZOrder="32792" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0"/>
+    <Graphics CenterX="466.0" CenterY="363.0" Width="122.0" Height="24.0" ZOrder="32792" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0" />
   </Shape>
   <Shape GraphId="b601b">
-    <Graphics CenterX="410.0" CenterY="357.0" Width="18.0" Height="18.0" ZOrder="32793" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="410.0" CenterY="357.0" Width="18.0" Height="18.0" ZOrder="32793" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="dee35">
-    <Graphics CenterX="402.0" CenterY="367.0" Width="18.0" Height="18.0" ZOrder="32794" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="402.0" CenterY="367.0" Width="18.0" Height="18.0" ZOrder="32794" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="f4849">
-    <Graphics CenterX="420.0" CenterY="367.0" Width="18.0" Height="18.0" ZOrder="32795" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="420.0" CenterY="367.0" Width="18.0" Height="18.0" ZOrder="32795" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="c658a">
-    <Graphics CenterX="428.0" CenterY="356.0" Width="18.0" Height="18.0" ZOrder="32796" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="428.0" CenterY="356.0" Width="18.0" Height="18.0" ZOrder="32796" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="ea511">
-    <Graphics CenterX="446.0" CenterY="356.0" Width="18.0" Height="18.0" ZOrder="32797" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="446.0" CenterY="356.0" Width="18.0" Height="18.0" ZOrder="32797" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="f5cbc">
-    <Graphics CenterX="438.0" CenterY="366.0" Width="18.0" Height="18.0" ZOrder="32798" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="438.0" CenterY="366.0" Width="18.0" Height="18.0" ZOrder="32798" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="a0205">
-    <Graphics CenterX="456.0" CenterY="366.0" Width="18.0" Height="18.0" ZOrder="32799" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="456.0" CenterY="366.0" Width="18.0" Height="18.0" ZOrder="32799" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="e5d73">
-    <Graphics CenterX="463.0" CenterY="355.0" Width="18.0" Height="18.0" ZOrder="32800" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="463.0" CenterY="355.0" Width="18.0" Height="18.0" ZOrder="32800" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="f96a2">
-    <Graphics CenterX="481.0" CenterY="355.0" Width="18.0" Height="18.0" ZOrder="32801" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="481.0" CenterY="355.0" Width="18.0" Height="18.0" ZOrder="32801" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="c146c">
-    <Graphics CenterX="473.0" CenterY="365.0" Width="18.0" Height="18.0" ZOrder="32802" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="473.0" CenterY="365.0" Width="18.0" Height="18.0" ZOrder="32802" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="d9be2">
-    <Graphics CenterX="491.0" CenterY="365.0" Width="18.0" Height="18.0" ZOrder="32803" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="491.0" CenterY="365.0" Width="18.0" Height="18.0" ZOrder="32803" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="d5290" GroupRef="cbea0">
-    <Graphics CenterX="654.0" CenterY="336.0" Width="18.0" Height="18.0" ZOrder="32804" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="654.0" CenterY="336.0" Width="18.0" Height="18.0" ZOrder="32804" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="f8026" GroupRef="cbea0">
-    <Graphics CenterX="672.0" CenterY="336.0" Width="18.0" Height="18.0" ZOrder="32805" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="672.0" CenterY="336.0" Width="18.0" Height="18.0" ZOrder="32805" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="ba324">
-    <Graphics CenterX="521.0" CenterY="389.0" Width="18.0" Height="18.0" ZOrder="32806" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="521.0" CenterY="389.0" Width="18.0" Height="18.0" ZOrder="32806" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="fb432">
-    <Graphics CenterX="539.0" CenterY="389.0" Width="18.0" Height="18.0" ZOrder="32807" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="539.0" CenterY="389.0" Width="18.0" Height="18.0" ZOrder="32807" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="fd7f5" GroupRef="cbea0">
-    <Graphics CenterX="700.0" CenterY="335.0" Width="18.0" Height="18.0" ZOrder="32808" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="700.0" CenterY="335.0" Width="18.0" Height="18.0" ZOrder="32808" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="da26f" GroupRef="cbea0">
-    <Graphics CenterX="718.0" CenterY="335.0" Width="18.0" Height="18.0" ZOrder="32809" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="718.0" CenterY="335.0" Width="18.0" Height="18.0" ZOrder="32809" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="e9050">
-    <Graphics CenterX="577.7647058823529" CenterY="371.18487394958044" Width="18.0" Height="18.0" ZOrder="32810" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="577.7647058823529" CenterY="371.18487394958044" Width="18.0" Height="18.0" ZOrder="32810" FillColor="666666" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
   <Shape GraphId="cfd03">
-    <Graphics CenterX="595.7647058823529" CenterY="371.18487394958044" Width="18.0" Height="18.0" ZOrder="32811" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0"/>
+    <Graphics CenterX="595.7647058823529" CenterY="371.18487394958044" Width="18.0" Height="18.0" ZOrder="32811" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
-  <Group GroupId="b9e10" Style="Group"/>
-  <Group GroupId="cbea0" GraphId="ab213" Style="Group"/>
-  <Group GroupId="c0e96" Style="Group"/>
-  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Group GroupId="b9e10" Style="Group" />
+  <Group GroupId="c0e96" Style="Group" />
+  <Group GroupId="cbea0" GraphId="ab213" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glioblastoma multiforme</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3068</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell cycle pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001317</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e8f">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30082792</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A PDGFRα-driven mouse model of glioblastoma reveals a stathmin1-mediated mechanism of sensitivity to vinblastine.</bp:TITLE>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A PDGFRa-driven mouse model of glioblastoma reveals a stathmin1-mediated mechanism of sensitivity to vinblastine.</bp:TITLE>
       <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Commun</bp:SOURCE>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jun HJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appleman VA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu HJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rose CM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pineda JJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yeo AT</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delcuze B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee C</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gyuris A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhu H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Woolfenden S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bronisz A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nakano I</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiocca EA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bronson RT</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ligon KL</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarkaria JN</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gygi SP</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michor F</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitchison TJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charest A</bp:AUTHORS>
     </bp:PublicationXref>
-  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>glioblastoma multiforme</bp:TERM><bp:ID>DOID:3068</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>cell cycle pathway</bp:TERM><bp:ID>PW:0001317</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+  </Biopax>
 </Pathway>

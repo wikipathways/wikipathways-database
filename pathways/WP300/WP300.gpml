@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Histone modifications" Organism="Mus musculus">
-  <Comment Source="WikiPathways-category">Cellular Process</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Histone modifications" Data-Source="WikiPathways" Version="WP300_r71890" Author="user | Michiel | MaintBot | AlexanderPico | MartijnVanIersel | Christine Chichester | Mkutmon" Organism="Mus musculus">
   <Graphics BoardWidth="765.0" BoardHeight="211.0" />
-  <DataNode TextLabel="HAT1" GraphId="aee" Type="GeneProduct">
-    <Graphics CenterX="511.0" CenterY="159.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="Entrez Gene" ID="107435" />
-  </DataNode>
   <DataNode TextLabel="HDAC1" GraphId="a80" Type="GeneProduct" GroupRef="f0d">
     <Graphics CenterX="509.0" CenterY="96.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="433759" />
+  </DataNode>
+  <DataNode TextLabel="HAT1" GraphId="aee" Type="GeneProduct">
+    <Graphics CenterX="511.0" CenterY="159.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="107435" />
   </DataNode>
   <DataNode TextLabel="HDAC2" GraphId="b0b" Type="GeneProduct" GroupRef="f0d">
     <Graphics CenterX="509.0" CenterY="116.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -22,27 +21,6 @@
     <Graphics CenterX="266.0" CenterY="169.0" Width="80.0" Height="24.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="110147" />
   </DataNode>
-  <Interaction GraphId="cebc6">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="638.25" Y="149.0" GraphRef="de8" RelX="-0.5" RelY="-1.0" />
-      <Point X="557.0" Y="106.0" GraphRef="d0f" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="bcbf2">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="412.0" Y="159.0" GraphRef="dbb" RelX="1.0" RelY="0.0" />
-      <Point X="470.0" Y="159.0" GraphRef="aee" RelX="-1.025" RelY="0.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="e8fae">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="551.0" Y="159.0" GraphRef="aee" RelX="1.0" RelY="0.0" />
-      <Point X="606.0" Y="159.0" GraphRef="de8" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
   <Interaction GraphId="abffc">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="218.0" Y="159.0" GraphRef="d34" RelX="-1.0" RelY="0.0" />
@@ -57,6 +35,13 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <Interaction GraphId="bcbf2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="412.0" Y="159.0" GraphRef="dbb" RelX="1.0" RelY="0.0" />
+      <Point X="470.0" Y="159.0" GraphRef="aee" RelX="-1.025" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Interaction GraphId="c3a9a">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="365.0" Y="159.0" GraphRef="dbb" RelX="-1.0" RelY="0.0" />
@@ -64,17 +49,31 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <Interaction GraphId="cebc6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="638.25" Y="149.0" GraphRef="de8" RelX="-0.5" RelY="-1.0" />
+      <Point X="557.0" Y="106.0" GraphRef="d0f" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e8fae">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="551.0" Y="159.0" GraphRef="aee" RelX="1.0" RelY="0.0" />
+      <Point X="606.0" Y="159.0" GraphRef="de8" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Label TextLabel="Methylated histone" GraphId="b65">
     <Graphics CenterX="103.0" CenterY="159.0" Width="140.0" Height="17.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="11" Valign="Middle" Color="0000ff" />
-  </Label>
-  <Label TextLabel="Acetylated histone" GraphId="de8">
-    <Graphics CenterX="670.5" CenterY="159.0" Width="129.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="11" Valign="Middle" Color="0000ff" />
   </Label>
   <Label TextLabel="Histone" GraphId="dbb">
     <Graphics CenterX="388.5" CenterY="159.0" Width="47.0" Height="21.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="11" Valign="Middle" Color="0000ff" />
   </Label>
-  <Group GroupId="fa9" GraphId="d34" />
+  <Label TextLabel="Acetylated histone" GraphId="de8">
+    <Graphics CenterX="670.5" CenterY="159.0" Width="129.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="11" Valign="Middle" Color="0000ff" />
+  </Label>
   <Group GroupId="f0d" GraphId="d0f" />
+  <Group GroupId="fa9" GraphId="d34" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
