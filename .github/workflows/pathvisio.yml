@@ -1,3 +1,9 @@
+name: pathvisio
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # runs at 12:00 UTC everyday
+
 steps:
 - uses: actions/checkout@v2
 - uses: actions/setup-java@v2
