@@ -4,7 +4,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'pathways/*/*-refs.tsv'
+      - 'wikipathways-database/pathways/*/*.md'
+      - 'wikipathways-database/pathways/*/*-bibliography.tsv'
+      - 'wikipathways-database/pathways/*/*-datanodes.tsv'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
