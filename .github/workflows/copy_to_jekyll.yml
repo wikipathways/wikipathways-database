@@ -2,11 +2,8 @@ name: Copy files to jekyll repo
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'wikipathways-database/pathways/*/*.md'
-      - 'wikipathways-database/pathways/*/*-bibliography.tsv'
-      - 'wikipathways-database/pathways/*/*-datanodes.tsv'
+  schedule:
+    - cron: '*/10 * * * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
