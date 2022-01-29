@@ -35,9 +35,9 @@ jobs:
           cp wikipathways-database/pathways/*/*.md wikipathways.github.io/_pathways/
           cp wikipathways-database/pathways/*/*-bibliography.tsv wikipathways.github.io/_data/
           cp wikipathways-database/pathways/*/*-datanodes.tsv wikipathways.github.io/_data/
-          cd wikipathways-database
-          git add wikipathways.github.io/_pathways/*.md
-          git add wikipathways.github.io/_data/*.tsv
+          cd wikipathways.github.io
+          git add _pathways/*.md
+          git add _data/*.tsv
           if git diff --exit-code --staged; then
               echo "No changes"
           else
