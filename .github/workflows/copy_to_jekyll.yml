@@ -28,6 +28,11 @@ jobs:
           submodules: true
           fetch-depth: 0
 
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+
       - name: Commit report
         run: |
           git config --global user.name 'GitHub Action'
@@ -38,7 +43,7 @@ jobs:
           cd wikipathways.github.io
           git add _pathways/*.md
           git add _data/*.tsv
-          if git diff --exit-code --staged; then
+          if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
               git commit -m 'Update tsv and md files'
