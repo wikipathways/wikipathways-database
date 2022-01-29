@@ -27,6 +27,7 @@ jobs:
           path: wikipathways.github.io
           submodules: true
           fetch-depth: 0
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1
