@@ -3,14 +3,14 @@ name: Copy files to jekyll repo
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '14 3 * * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  pubmed:
+  copy_to_jekyll:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
