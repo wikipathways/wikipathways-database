@@ -2,8 +2,6 @@ name: Create pathway frontmatter
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '*/10 * * * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
