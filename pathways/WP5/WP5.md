@@ -14,7 +14,7 @@ description: 'The androgen receptor is a member of the nuclear receptor family o
   Its ligands include testosterone, dehydroepiandrosterone and androstenedione. Stimulation
   of the receptor activates the SMAD signaling module.  Source: http://www.netpath.org/pathways?path_id=NetPath_4'
 github-authors: []
-last-edited: '2021-05-16'
+last-edited: 2021-05-16
 ontology tags:
 - PW:0000170
 organisms:
