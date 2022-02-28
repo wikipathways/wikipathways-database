@@ -5,13 +5,6 @@ from io import BytesIO
 import sys
 
 
-# TODO: should we do the mappings here or in the .info file?
-info_to_frontmatter = {
-    'ID': 'wpid',
-    'Species': 'organisms',
-    'Date': 'last-edited',
-}
-
 info_fp = sys.argv[1]
 if not info_fp:
     raise Exception('No info_fp provided')
@@ -23,14 +16,10 @@ post = frontmatter.loads('---\n---')
 with open(info_fp) as f:
     for line in f:
         key, value = line.strip().split(': ', 1)
-        if key in info_to_frontmatter:
-            key = info_to_frontmatter[key]
-        else:
-            key = key.lower()
 
         if key == 'authors':
             value = [v.strip() for v in value.split('|')]
-        elif key == 'ontology tags':
+        elif key == 'ontology-ids':
             # TODO: we don't want the IDs; instead we want this:
             # annotations:
             #   - value: angiotensin signaling pathway
@@ -52,10 +41,10 @@ with open('./wikipathways-database/pathways/WP554/WP554-datanodes.tsv') as f:
     for line in reader:
         datanode_labels.add(line['Label'])
 
-# TODO: fill in the following
-if not post['title']:
-    post['title'] = ''
+# TODO: read this in from the old file, if it exists
 post['communities'] = []
+
+# TODO: Tina will add this.
 post['github-authors'] = []
 
 post['redirect_from'] = [
