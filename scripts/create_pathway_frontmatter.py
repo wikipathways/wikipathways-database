@@ -1,6 +1,8 @@
 import csv
+from datetime import date
 import frontmatter
 from io import BytesIO
+import sys
 
 
 # TODO: should we do the mappings here or in the .info file?
@@ -10,8 +12,11 @@ info_to_frontmatter = {
     'Date': 'last-edited',
 }
 
+info_fp = sys.argv[1]
+if not info_fp:
+    raise Exception('No info_fp provided')
 # TODO: detect the file that changed; don't hardcode this.
-info_fp = './wikipathways-database/pathways/WP5/WP5.info'
+#info_fp = './wikipathways-database/pathways/WP5/WP5.info'
 
 # TODO: is there a better way to create an empty post object?
 post = frontmatter.loads('---\n---')
@@ -32,8 +37,10 @@ with open(info_fp) as f:
             #     type: Pathway Ontology
             value = [v.strip() for v in value.split(',')]
         elif key == 'last-edited':
-            # 20210601215335 -> 2021-06-01
-            value = '-'.join([value[0:4], value[4:6], value[6:8]])
+            # 20210601215335 -> datetime.date(2021, 6, 1)
+            value = date(int(value[0:4]), int(value[4:6]), int(value[6:8]))
+            # 20210601215335 -> 2021-06-01 -> datetime.date(2021, 6, 1)
+            #value = date.fromisoformat('-'.join([value[0:4], value[4:6], value[6:8]]))
         elif key == 'organisms':
             value = [value]
 
@@ -46,7 +53,8 @@ with open('./wikipathways-database/pathways/WP554/WP554-datanodes.tsv') as f:
         datanode_labels.add(line['Label'])
 
 # TODO: fill in the following
-post['title'] = ''
+if not post['title']:
+    post['title'] = ''
 post['communities'] = []
 post['github-authors'] = []
 
