@@ -1,0 +1,138 @@
+name: Perform the work required to keep things up-to-date in response to a GPML file being added, edited or deleted
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'pathways/*/*.gpml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+      - run: sh ./scripts/pathvisio/pathvisio.sh -v
+          
+  pubmed:
+    runs-on: ubuntu-20.04
+    needs: metadata
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12.x'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - working-directory: scripts/generate-references
+        run: |
+          npm install
+          node index.js
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/*/*-bibliography.tsv
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Update formatted references'
+              git push
+          fi
+          
+  frontmatter:
+    runs-on: ubuntu-20.04
+    needs: metadata
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+
+      - name: Create pathway frontmatter
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - run: python scripts/create_pathway_frontmatter.py
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/*/*.md
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Update frontmatter .md files'
+              git push
+          fi
+          
+  copy-to-site-repo:
+    runs-on: ubuntu-20.04
+    needs: [metadata, pubmed, frontmatter]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          
+      - name: Checkout jekyll repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways.github.io
+          path: wikipathways.github.io
+          submodules: true
+          fetch-depth: 0
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cp wikipathways-database/pathways/*/*.md wikipathways.github.io/_pathways/
+          cp wikipathways-database/pathways/*/*-bibliography.tsv wikipathways.github.io/_data/
+          cp wikipathways-database/pathways/*/*-datanodes.tsv wikipathways.github.io/_data/
+          cd wikipathways.github.io
+          git add _pathways/*.md
+          git add _data/*.tsv
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git commit -m 'Update tsv and md files'
+              git push
+          fi
