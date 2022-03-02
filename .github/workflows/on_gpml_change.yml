@@ -87,6 +87,7 @@ jobs:
         with:
           python-version: '3.x'
       - run: |
+          pip install python-frontmatter
           for f in "./wikipathways-database/pathways/*/*.info"; do
             python scripts/create_pathway_frontmatter.py "$f"
           done

@@ -30,7 +30,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-      - run: python ./scripts/update_frontmatter_communities.py
+      - run: |
+          pip install python-frontmatter
+          python ./scripts/update_frontmatter_communities.py
 
       - name: Commit report
         run: |
