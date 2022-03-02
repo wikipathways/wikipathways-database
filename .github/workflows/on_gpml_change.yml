@@ -20,7 +20,12 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '8'
-      - run: sh ./scripts/pathvisio/pathvisio.sh -v
+      - run: |
+          wget https://github.com/PathVisio/pathvisio/releases/download/v3.3.0/pathvisio_bin-3.3.0.zip
+          unzip pathvisio_bin-3.3.0.zip
+          sh ./pathvisio-3.3.0/pathvisio.sh -v
+          # TODO: change this to use https://github.com/wikipathways/meta-data-action
+          # instead of pathvisio. Currently just a placeholder to show a java program.
           
   pubmed:
     runs-on: ubuntu-20.04
