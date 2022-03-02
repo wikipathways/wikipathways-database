@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Airway smooth muscle cell contraction" Data-Source="WikiPathways" Version="WP4962_r115210" Author="user | Angelcymak | Khanspers" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">Signal transduction pathways involved in airway smooth muscle cell contraction. Based on [https://www.resmedjournal.com/article/S0954-6111(08)00096-6/fulltext figure 1 from Belaia et al.].</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Airway smooth muscle cell contraction" Data-Source="WikiPathways" Version="WP4962_r120588" Author="[Angelcymak, Khanspers, Eweitz]" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Signal transduction pathways involved in airway smooth muscle cell contraction. 
+
+Based on [https://www.resmedjournal.com/article/S0954-6111(08)00096-6/fulltext figure 1 from Belaia et al.].</Comment>
   <BiopaxRef>de3</BiopaxRef>
   <Graphics BoardWidth="1021.0" BoardHeight="694.0" />
   <DataNode TextLabel="MYLK" GraphId="a29ce" Type="GeneProduct" GroupRef="dddaf">
@@ -42,20 +44,20 @@
   </DataNode>
   <DataNode TextLabel="VGCC" GraphId="d1858" Type="Complex" GroupRef="c9923">
     <Comment>voltage-operated Ca2+ channels</Comment>
-    <Graphics CenterX="702.0003662109375" CenterY="108.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="790.0003662109375" CenterY="97.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="DAG" GraphId="d67c5" Type="Metabolite">
     <Graphics CenterX="454.5" CenterY="217.0" Width="56.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:18035" />
   </DataNode>
-  <DataNode TextLabel="ITPR3 (IP3R)" GraphId="dc55b" Type="GeneProduct">
-    <Comment />
+  <DataNode TextLabel="ITPR3" GraphId="dc55b" Type="GeneProduct">
+    <Comment></Comment>
     <Graphics CenterX="704.0" CenterY="351.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000096433" />
   </DataNode>
   <DataNode TextLabel="MLCP" GraphId="dd60e" Type="GeneProduct">
-    <Graphics CenterX="451.5" CenterY="542.0" Width="73.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="451.5" CenterY="523.0" Width="73.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000213639" />
   </DataNode>
   <DataNode TextLabel="GDI" GraphId="e7f48" Type="GeneProduct" GroupRef="ea6e1">
@@ -108,18 +110,18 @@
     <Graphics CenterX="812.0" CenterY="398.75" Width="58.0" Height="23.5" ZOrder="32774" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
-  <DataNode TextLabel="RYR" GraphId="c00fc" Type="Protein">
+  <DataNode TextLabel="RYR" GraphId="c00fc" Type="GeneProduct">
     <Graphics CenterX="809.0" CenterY="354.75" Width="58.0" Height="29.5" ZOrder="32776" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000196218" />
   </DataNode>
   <DataNode TextLabel="SOCC" GraphId="bc43c" Type="Complex" GroupRef="c9923">
     <Comment>store-operated Ca2+ channels</Comment>
-    <Graphics CenterX="702.0003662109375" CenterY="133.0" Width="90.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="790.0003662109375" CenterY="122.0" Width="90.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="ROCC" GraphId="e97aa" Type="Complex" GroupRef="c9923">
     <Comment>receptor-operated Ca2+ channels</Comment>
-    <Graphics CenterX="702.0003662109375" CenterY="158.0" Width="90.0" Height="25.0" ZOrder="32778" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="790.0003662109375" CenterY="147.0" Width="90.0" Height="25.0" ZOrder="32778" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Ca2+" GraphId="d132b" Type="Metabolite">
@@ -237,7 +239,8 @@
   <Interaction GraphId="id540889af">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
       <Point X="493.0" Y="311.75" GraphRef="fe039" RelX="1.0" RelY="0.0" />
-      <Point X="451.5" Y="570.9" GraphRef="c1fae" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point X="547.0" Y="431.725" />
+      <Point X="451.5" Y="573.0" GraphRef="c1fae" RelX="0.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -289,9 +292,9 @@
   </Interaction>
   <Interaction GraphId="id81b6bf5d">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="451.5" Y="554.5" GraphRef="dd60e" RelX="0.0" RelY="1.0" />
+      <Point X="451.5" Y="535.5" GraphRef="dd60e" RelX="0.0" RelY="1.0" />
       <Point X="451.5" Y="595.5" GraphRef="ff550" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.4" Shape="None" GraphId="c1fae" />
+      <Anchor Position="0.625" Shape="None" GraphId="c1fae" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -325,7 +328,7 @@
   </Interaction>
   <Interaction GraphId="ida5e9e99b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="649.0003662109375" Y="133.0" GraphRef="b7bd8" RelX="-1.0" RelY="0.0" />
+      <Point X="737.0003662109375" Y="122.0" GraphRef="b7bd8" RelX="-1.0" RelY="0.0" />
       <Point X="701.0003662109375" Y="122.9" GraphRef="c9663" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -347,7 +350,7 @@
   <Interaction GraphId="idc23064d5">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
       <Point X="336.5" Y="562.5" GraphRef="a897b" RelX="0.0" RelY="1.0" />
-      <Point X="451.5" Y="570.9" GraphRef="c1fae" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point X="451.5" Y="573.0" GraphRef="c1fae" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -418,13 +421,13 @@
     <Xref Database="" ID="" />
   </Interaction>
   <Label TextLabel="Ca2+ channels" GraphId="aaa57">
-    <Graphics CenterX="634.0003662109375" CenterY="85.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="791.0003662109375" CenterY="73.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="autophosphorylation" GraphId="b6685">
     <Graphics CenterX="254.5" CenterY="491.0" Width="131.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="GEFs" GraphId="ba758">
-    <Comment>guanine nucleotide exchange factors</Comment>
+    <Comment>guanine nucleotide exchange factors </Comment>
     <Graphics CenterX="298.0" CenterY="251.0" Width="54.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Beta agonists" GraphId="bddcc">
@@ -440,7 +443,7 @@
     <Graphics CenterX="193.0" CenterY="132.0" Width="66.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="aka CP-17" GraphId="fd8d3" GroupRef="e6c8b">
-    <Graphics CenterX="454.5" CenterY="330.0" Width="73.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="454.5" CenterY="334.0" Width="73.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Label" GraphId="ffdd9">
     <Graphics CenterX="929.0" CenterY="93.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
@@ -458,7 +461,7 @@
   <Group GroupId="d5d44" GraphId="a77cf" Style="Group" />
   <Group GroupId="bbc4b" GraphId="a897b" Style="Group" />
   <Group GroupId="e6c8b" GraphId="b090f" Style="Group" />
-  <Group GroupId="c9923" GraphId="b7bd8" Style="Group" />
+  <Group GroupId="c9923" GraphId="b7bd8" Style="Group" TextLabel="Ca2+ channels" />
   <Group GroupId="f9d04" GraphId="bb301" Style="Group" />
   <Group GroupId="dddaf" GraphId="c9327" Style="Group" />
   <Group GroupId="afd69" GraphId="e5cc3" Style="Group" />
@@ -482,14 +485,25 @@
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="de3">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18579364</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18579364</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
       <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular mechanisms underlying airway smooth muscle contraction and proliferation: implications for asthma.</bp:TITLE>
       <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Respir Med</bp:SOURCE>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pelaia G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renda T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gallelli L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vatrella A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Busceti MT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agati S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caputi M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cazzola M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maselli R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marsico SA</bp:AUTHORS>
     </bp:PublicationXref>
   </Biopax>
 </Pathway>
+

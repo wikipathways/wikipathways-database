@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Pantothenate biosynthesis III" Data-Source="WikiPathways" Version="WP3026_r118231" Author="[Anwesha, Eweitz]" Maintainer="Amoss, Kindra" Organism="Oryza sativa">
+  <Comment Source="WikiPathways-description">Developed by Gramene.org
+
+Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
+  <Attribute Key="reactome_id" Value="1119568" />
+  <Graphics BoardWidth="421.0" BoardHeight="323.0" />
+  <DataNode TextLabel="PanK" GraphId="ae102" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="196820" />
+    <Graphics CenterX="186.5" CenterY="255.0" Width="109.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:7916" />
+  </DataNode>
+  <DataNode TextLabel="b-Ala" GraphId="c2326" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="73590" />
+    <Graphics CenterX="304.5" CenterY="136.5" Width="77.0" Height="27.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16958" />
+  </DataNode>
+  <DataNode TextLabel="pantoyl lactone" GraphId="cb095" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1131168" />
+    <Graphics CenterX="185.0" CenterY="145.0" Width="110.0" Height="36.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16719" />
+  </DataNode>
+  <DataNode TextLabel="2-oxopantoyl lactone" GraphId="dd12f" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1132212" />
+    <Graphics CenterX="185.5" CenterY="42.0" Width="115.0" Height="44.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:18395" />
+  </DataNode>
+  <DataNode TextLabel="H+" GraphId="dee8a" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="70106" />
+    <Graphics CenterX="63.0" CenterY="87.0" Width="36.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15378" />
+  </DataNode>
+  <DataNode TextLabel="pantoate--beta-alanine&#xA;ligase&#xA;(LOC_OS03G63490.1)" GraphId="df9bc" Type="Protein">
+    <Comment Source="Reactome">Facilitates the conversion of beta-alanine and L-pantoate into pantothenate.</Comment>
+    <Attribute Key="reactome_id" Value="1126091" />
+    <Graphics CenterX="304.5" CenterY="207.0" Width="129.0" Height="64.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="O24210" />
+  </DataNode>
+  <DataNode TextLabel="NADPH" GraphId="e08bd" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29364" />
+    <Graphics CenterX="66.5" CenterY="44.0" Width="63.0" Height="32.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16474" />
+  </DataNode>
+  <DataNode TextLabel="NADP+" GraphId="fe32e" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29366" />
+    <Graphics CenterX="71.0" CenterY="129.0" Width="72.0" Height="32.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:18009" />
+  </DataNode>
+  <Interaction GraphId="aee7d">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="266.0" Y="136.0" GraphRef="c2326" RelX="-1.0" RelY="-0.037037037037037035" />
+      <Point X="185.0" Y="189.0" GraphRef="b35ec" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120140" />
+  </Interaction>
+  <Interaction GraphId="bb974">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="185.0" Y="163.0" GraphRef="cb095" RelX="0.0" RelY="1.0" />
+      <Point X="185.0" Y="189.0" GraphRef="b35ec" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120140" />
+  </Interaction>
+  <Interaction GraphId="bbe07">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="97.0" Y="44.0" GraphRef="e08bd" RelX="0.9682539682539683" RelY="0.0" />
+      <Point X="184.0" Y="79.0" GraphRef="e2627" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120235" />
+  </Interaction>
+  <Interaction GraphId="bec53">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="185.0" Y="237.0" GraphRef="ebfac" RelX="0.0" RelY="0.4800000000000182" />
+      <Point X="186.0" Y="240.0" GraphRef="ae102" RelX="-0.009174311926605505" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120140" />
+  </Interaction>
+  <Interaction GraphId="c0efc">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="81.0" Y="87.0" GraphRef="dee8a" RelX="1.0" RelY="0.0" />
+      <Point X="184.0" Y="79.0" GraphRef="e2627" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120235" />
+  </Interaction>
+  <Interaction GraphId="c85d4">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="184.0" Y="109.0" GraphRef="da610" RelX="0.0" RelY="0.29999999999999716" />
+      <Point X="107.0" Y="129.0" GraphRef="fe32e" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120235" />
+  </Interaction>
+  <Interaction GraphId="ca0b5">
+    <Comment Source="Reactome">Pantoyl lactone is combined with Beta-alanine by Pantoate--beta-alanine ligase to create pantothenate.</Comment>
+    <Attribute Key="reactome_id" Value="1120140" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="185.0" Y="189.0" />
+      <Point X="185.0" Y="237.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="b35ec" />
+      <Anchor Position="0.99" Shape="None" GraphId="ebfac" />
+      <Anchor Position="0.5" Shape="None" GraphId="b1228" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120140" />
+  </Interaction>
+  <Interaction GraphId="d0fb1">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="240.0" Y="207.0" GraphRef="df9bc" RelX="-1.0" RelY="0.0" />
+      <Point X="185.0" Y="237.0" GraphRef="b1228" RelX="0.0" RelY="24.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120140" />
+  </Interaction>
+  <Interaction GraphId="d9600">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="185.0" Y="64.0" GraphRef="dd12f" RelX="-0.008695652173913044" RelY="1.0" />
+      <Point X="184.0" Y="79.0" GraphRef="e2627" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120235" />
+  </Interaction>
+  <Interaction GraphId="f32a9">
+    <Comment Source="Reactome">2-oxopantoyl lactone is converted into pantoyl lactone by enzymatic activity of an unknown gene product.</Comment>
+    <Attribute Key="reactome_id" Value="1120235" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="184.0" Y="79.0" />
+      <Point X="184.0" Y="109.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="e2627" />
+      <Anchor Position="0.99" Shape="None" GraphId="da610" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120235" />
+  </Interaction>
+  <Interaction GraphId="f7591">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="184.0" Y="109.0" GraphRef="da610" RelX="0.0" RelY="0.29999999999999716" />
+      <Point X="185.0" Y="127.0" GraphRef="cb095" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120235" />
+  </Interaction>
+  <Label TextLabel="cytosol" GraphId="cf3fc" GroupRef="bbb5f">
+    <Graphics CenterX="329.0" CenterY="33.5" Width="64.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="f5dba" GroupRef="bbb5f">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="197.5" CenterY="148.5" Width="387.0" Height="289.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="bbb5f" GraphId="c47e8" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax />
+</Pathway>
+

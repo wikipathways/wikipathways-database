@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Coumarin biosynthesis (via 2-coumarate)" Data-Source="WikiPathways" Version="WP3102_r118179" Author="[Anwesha, Susan, Eweitz]" Organism="Zea mays">
+  <Comment Source="WikiPathways-description">This event has been computationally inferred from an event that has been demonstrated in another species.&lt;p&gt;The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.&lt;p&gt;Details of projection methods and parameters may be found &lt;a href="/projection.html"&gt;here.&lt;/a&gt;&lt;p&gt;
+
+Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
+  <Attribute Key="reactome_id" Value="5406629" />
+  <Graphics BoardWidth="389.0" BoardHeight="734.0" />
+  <DataNode TextLabel="H2O" GraphId="a6ef3" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29356" />
+    <Graphics CenterX="93.5" CenterY="480.0" Width="51.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15377" />
+  </DataNode>
+  <DataNode TextLabel="GRMZM2G118003" GraphId="a90a7" Type="Protein">
+    <Attribute Key="reactome_id" Value="5405928" />
+    <Graphics CenterX="272.5" CenterY="511.5" Width="139.0" Height="61.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="MaizeGDB" ID="GRMZM2G118003" />
+  </DataNode>
+  <DataNode TextLabel="coumarinic&#xA;acid-beta-D-glucoside" GraphId="dc362" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1131568" />
+    <Graphics CenterX="177.0" CenterY="436.0" Width="124.0" Height="58.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:62251" />
+  </DataNode>
+  <DataNode TextLabel="beta-D-glucose" GraphId="eb0ba" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1131490" />
+    <Graphics CenterX="86.0" CenterY="542.0" Width="114.0" Height="44.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:4167" />
+  </DataNode>
+  <DataNode TextLabel="coumarinate" GraphId="fd28a" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1131682" />
+    <Graphics CenterX="177.0" CenterY="578.0" Width="104.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:62223" />
+  </DataNode>
+  <Interaction GraphId="a2532">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="177.0" Y="538.0" GraphRef="c94dc" RelX="0.0" RelY="0.5" />
+      <Point X="177.0" Y="563.0" GraphRef="fd28a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405930" />
+  </Interaction>
+  <Interaction GraphId="b82f8">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="118.0" Y="480.0" GraphRef="a6ef3" RelX="0.9607843137254902" RelY="0.0" />
+      <Point X="177.0" Y="488.0" GraphRef="fc417" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405930" />
+  </Interaction>
+  <Interaction GraphId="c2594">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="177.0" Y="465.0" GraphRef="dc362" RelX="0.0" RelY="1.0" />
+      <Point X="177.0" Y="488.0" GraphRef="fc417" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405930" />
+  </Interaction>
+  <Interaction GraphId="df51e">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="177.0" Y="538.0" GraphRef="c94dc" RelX="0.0" RelY="0.5" />
+      <Point X="143.0" Y="542.0" GraphRef="eb0ba" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405930" />
+  </Interaction>
+  <Interaction GraphId="e2a74">
+    <Comment Source="Reactome">This event has been computationally inferred from an event that has been demonstrated in another species.&lt;p&gt;The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.&lt;p&gt;Details of projection methods and parameters may be found &lt;a href="/projection.html"&gt;here.&lt;/a&gt;&lt;p&gt;</Comment>
+    <Attribute Key="reactome_id" Value="5405930" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="177.0" Y="488.0" />
+      <Point X="177.0" Y="538.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="fc417" />
+      <Anchor Position="0.99" Shape="None" GraphId="c94dc" />
+      <Anchor Position="0.5" Shape="None" GraphId="c5903" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405930" />
+  </Interaction>
+  <Interaction GraphId="f088a">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="203.0" Y="511.0" GraphRef="a90a7" RelX="-1.0" RelY="-0.01639344262295082" />
+      <Point X="177.0" Y="538.0" GraphRef="c5903" RelX="0.0" RelY="25.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405930" />
+  </Interaction>
+  <Label TextLabel="cytosol" GraphId="c34c0" GroupRef="fecee">
+    <Graphics CenterX="306.0" CenterY="672.5" Width="64.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="edbc7" GroupRef="fecee">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="181.5" CenterY="354.0" Width="355.0" Height="700.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="fecee" GraphId="bb6d9" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stilbene, coumarine and lignin biosynthetic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000150</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>
+

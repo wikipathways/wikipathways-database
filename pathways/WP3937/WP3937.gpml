@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Microglia pathogen phagocytosis pathway" Data-Source="WikiPathways" Version="WP3937_r117158" Author="user | Khanspers | DeSl | MaintBot | Eweitz" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">Pathogens are recognized by complement C1q or immunoglobulin (IgG) that bind to microglia complement receptors (e.g., ITGAM/ITGB2) or Fc-receptors (e.g., FCGR1) that signal via the immunoreceptor tyrosine-based activation motif (ITAM)-containing adaptor molecules TYROBP or FCER1G, respectively. Alternatively, pathogens are directly recognized by classical innate immune receptors (e.g., TREM2) that require the interaction with TYROBP for further signaling. This pathway was converted from the original human pathway to mouse. Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP3937 CPTAC Assay Portal]</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Microglia pathogen phagocytosis pathway" Data-Source="WikiPathways" Version="WP3937_r120792" Author="[Khanspers, DeSl, MaintBot, Eweitz, Ddigles, AlexanderPico]" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Pathogens are recognized by complement C1q or immunoglobulin (IgG) that bind to microglia complement receptors (e.g., ITGAM/ITGB2) or Fc-receptors (e.g., FCGR1) that signal via the immunoreceptor tyrosine-based activation motif (ITAM)-containing adaptor molecules TYROBP or FCER1G, respectively. Alternatively, pathogens are directly recognized by classical innate immune receptors (e.g., TREM2) that require the interaction with TYROBP for further signaling.
+
+Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP3937 CPTAC Assay Portal]</Comment>
   <Comment Source="HomologyMapper">This pathway was inferred from Mus musculus pathway "Microglia Pathogen Phagocytosis Pathway", WP3626 revision 87399, with a 94.0% conversion rate.</Comment>
   <BiopaxRef>f4f</BiopaxRef>
   <Graphics BoardWidth="1112.0" BoardHeight="665.0" />
@@ -63,7 +65,7 @@
   </DataNode>
   <DataNode TextLabel="FCGR1A" GraphId="f4098" Type="GeneProduct">
     <Comment Source="HomologyMapper">Homology Mapping from Mus musculus to Homo sapiens: Original ID = En:ENSMUSG00000015947</Comment>
-    <Graphics CenterX="400.0" CenterY="220.0" Width="52.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="391.0" CenterY="219.0" Width="52.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000150337" />
   </DataNode>
   <DataNode TextLabel="ITGAM" GraphId="ffaf8" Type="GeneProduct" GroupRef="f82bd">
@@ -76,7 +78,7 @@
     <Graphics CenterX="475.0" CenterY="193.0" Width="54.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000095970" />
   </DataNode>
-  <DataNode TextLabel="Trem3" GraphId="bef2c" Type="GeneProduct" GroupRef="f3006">
+  <DataNode TextLabel="TREM3" GraphId="bef2c" Type="GeneProduct" GroupRef="f3006">
     <Comment Source="HomologyMapper">No homologues found for original id En:ENSMUSG00000041754</Comment>
     <Graphics CenterX="475.0" CenterY="213.0" Width="54.0" Height="20.0" ZOrder="32770" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
@@ -138,7 +140,7 @@
   </DataNode>
   <DataNode TextLabel="NCKAP1L" GraphId="e2518" Type="GeneProduct">
     <Comment Source="HomologyMapper">Homology Mapping from Mus musculus to Homo sapiens: Original ID = En:ENSMUSG00000022488</Comment>
-    <Graphics CenterX="655.5" CenterY="452.0" Width="49.0" Height="22.0" ZOrder="32783" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="655.5" CenterY="452.0" Width="60.0" Height="22.0" ZOrder="32783" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000123338" />
   </DataNode>
   <DataNode TextLabel="ARPC1B" GraphId="dd45f" Type="GeneProduct">
@@ -429,7 +431,7 @@
   <Interaction GraphId="idcd2541a5">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
       <Point X="753.5" Y="405.0" GraphRef="a08b0" RelX="0.0" RelY="1.0" />
-      <Point X="680.0" Y="452.0" GraphRef="e2518" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="685.5" Y="452.0" GraphRef="e2518" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -487,7 +489,7 @@
   <Interaction GraphId="a7463">
     <Graphics ZOrder="32805" LineThickness="1.0">
       <Point X="492.0" Y="555.5" GraphRef="b816f" RelX="-1.0" RelY="0.0" />
-      <Point X="445.0" Y="555.5" GraphRef="b63c6" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="451.0" Y="555.5" GraphRef="b63c6" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -508,25 +510,29 @@
   <Interaction GraphId="af710">
     <Graphics ZOrder="32808" LineStyle="Broken" LineThickness="1.0">
       <Point X="441.75" Y="102.0" GraphRef="d0c19" RelX="-0.5" RelY="1.0" />
-      <Point X="400.0" Y="210.0" GraphRef="f4098" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="391.0" Y="209.0" GraphRef="f4098" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Label TextLabel="Pik3" GraphId="b1956" GroupRef="bbc2b">
     <Graphics CenterX="141.0" CenterY="182.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="009999" />
   </Label>
-  <Label TextLabel="Actin  reorganization" GraphId="b816f">
+  <Label TextLabel="Actin&#xA;reorganization" GraphId="b816f">
     <Graphics CenterX="537.5" CenterY="555.5" Width="91.0" Height="29.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Microglia" GraphId="e8810">
     <Graphics CenterX="666.0" CenterY="621.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="16" Valign="Middle" Color="999999" />
   </Label>
   <Label TextLabel="Oxidative burst" GraphId="fe718">
-    <Graphics CenterX="927.0" CenterY="192.0" Width="80.0" Height="30.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="927.0" CenterY="192.0" Width="100.0" Height="30.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="Phagocytosis migration" GraphId="b63c6">
-    <Graphics CenterX="401.0" CenterY="555.5" Width="88.0" Height="37.0" ZOrder="32804" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  <Label TextLabel="Phagocytosis&#xA;migration" GraphId="b63c6">
+    <Graphics CenterX="401.0" CenterY="555.5" Width="100.0" Height="37.0" ZOrder="32804" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
+  <Shape GraphId="fdfaf">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="658.0" CenterY="407.5" Width="848.0" Height="455.0" ZOrder="-2" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
   <Shape TextLabel="Vesicle" GraphId="a357b">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="927.5" CenterY="445.5" Width="65.0" Height="51.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
@@ -536,10 +542,6 @@
   </Shape>
   <Shape GraphId="ee897">
     <Graphics CenterX="138.0" CenterY="290.0" Width="86.0" Height="242.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Rectangle" LineThickness="2.0" Color="009999" Rotation="0.0" />
-  </Shape>
-  <Shape GraphId="fdfaf">
-    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
-    <Graphics CenterX="658.0" CenterY="407.5" Width="848.0" Height="455.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Group GroupId="d3138" GraphId="a08b0" Style="Group" />
   <Group GroupId="f05af" GraphId="b60aa" Style="Group" />
@@ -561,6 +563,11 @@
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">innate immune response pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000234</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alzheimer disease pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000015</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
@@ -570,6 +577,43 @@
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000015</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f4f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23622250</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integrated systems approach identifies genetic nodes and networks in late-onset Alzheimer's disease.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaiteri C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bodea LG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McElwee J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Podtelezhnikov AA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xie T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tran L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dobrin R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fluder E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clurman B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melquist S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narayanan M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suver C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shah H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mahajan M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gillis T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mysore J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MacDonald ME</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lamb JR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bennett DA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molony C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stone DJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gudnason V</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Myers AJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schadt EE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neumann H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emilsson V</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">innate immune response pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000234</bp:ID>
@@ -580,17 +624,6 @@
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000129</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">innate immune response pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000234</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f4f">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23622250</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integrated systems approach identifies genetic nodes and networks in late-onset Alzheimer's disease.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
-    </bp:PublicationXref>
   </Biopax>
 </Pathway>
+

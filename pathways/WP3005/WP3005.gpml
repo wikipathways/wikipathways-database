@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Gentiodelphin biosynthesis" Data-Source="WikiPathways" Version="WP3005_r118222" Author="[Anwesha, Eweitz]" Organism="Zea mays">
+  <Comment Source="WikiPathways-description">This event has been computationally inferred from an event that has been demonstrated in another species.&lt;p&gt;The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.&lt;p&gt;Details of projection methods and parameters may be found &lt;a href="/projection.html"&gt;here.&lt;/a&gt;&lt;p&gt;
+
+Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
+  <Attribute Key="reactome_id" Value="5406625" />
+  <Graphics BoardWidth="718.0" BoardHeight="696.0" />
+  <DataNode TextLabel="UDP-Glc" GraphId="b12eb" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29410" />
+    <Graphics CenterX="176.0" CenterY="103.0" Width="70.0" Height="32.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:18066" />
+  </DataNode>
+  <DataNode TextLabel="UDP" GraphId="b36cb" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="110096" />
+    <Graphics CenterX="431.5" CenterY="173.0" Width="61.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17659" />
+  </DataNode>
+  <DataNode TextLabel="Anthocyanin&#xA;5-O-glucosyltransferase" GraphId="d0d47" Type="Protein">
+    <Attribute Key="reactome_id" Value="5405652" />
+    <Graphics CenterX="420.5" CenterY="123.0" Width="123.0" Height="50.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Reactome" ID="5405652" />
+  </DataNode>
+  <DataNode TextLabel="delphinidin-3-O-beta-D-glucoside" GraphId="e4477" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1130970" />
+    <Graphics CenterX="319.0" CenterY="50.0" Width="124.0" Height="58.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:31463" />
+  </DataNode>
+  <DataNode TextLabel="" GraphId="e45ca" Type="Metabolite">
+    <Graphics CenterX="0.0" CenterY="0.0" Width="0.0" Height="0.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Interaction GraphId="b00ed">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="211.0" Y="103.0" GraphRef="b12eb" RelX="1.0" RelY="0.0" />
+      <Point X="319.0" Y="102.0" GraphRef="ccc93" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405654" />
+  </Interaction>
+  <Interaction GraphId="c3423">
+    <Comment Source="Reactome">This event has been computationally inferred from an event that has been demonstrated in another species.&lt;p&gt;The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.&lt;p&gt;Details of projection methods and parameters may be found &lt;a href="/projection.html"&gt;here.&lt;/a&gt;&lt;p&gt;</Comment>
+    <Attribute Key="reactome_id" Value="5405654" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="319.0" Y="102.0" />
+      <Point X="319.0" Y="148.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="ccc93" />
+      <Anchor Position="0.99" Shape="None" GraphId="df91d" />
+      <Anchor Position="0.5" Shape="None" GraphId="ebfb5" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405654" />
+  </Interaction>
+  <Interaction GraphId="c6ef3">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="319.0" Y="148.0" GraphRef="df91d" RelX="0.0" RelY="0.46000000000000796" />
+      <Point X="319.0" Y="172.0" GraphRef="e45ca" RelX="319.0" RelY="172.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405654" />
+  </Interaction>
+  <Interaction GraphId="cef45">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="319.0" Y="79.0" GraphRef="e4477" RelX="0.0" RelY="1.0" />
+      <Point X="319.0" Y="102.0" GraphRef="ccc93" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405654" />
+  </Interaction>
+  <Interaction GraphId="cfd76">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="359.0" Y="123.0" GraphRef="d0d47" RelX="-1.0" RelY="0.0" />
+      <Point X="319.0" Y="148.0" GraphRef="ebfb5" RelX="0.0" RelY="23.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405654" />
+  </Interaction>
+  <Interaction GraphId="d1686">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="319.0" Y="148.0" GraphRef="df91d" RelX="0.0" RelY="0.46000000000000796" />
+      <Point X="401.0" Y="173.0" GraphRef="b36cb" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5405654" />
+  </Interaction>
+  <Label TextLabel="cytosol" GraphId="d0ffc" GroupRef="d427b">
+    <Graphics CenterX="91.0" CenterY="626.5" Width="64.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="a0d76" GroupRef="d427b">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="346.0" CenterY="335.0" Width="684.0" Height="662.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="d427b" GraphId="c73c1" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax />
+</Pathway>
+

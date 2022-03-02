@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Oryzalexin A-F biosynthesis" Data-Source="WikiPathways" Version="WP3097_r118284" Author="[Anwesha, Eweitz]" Organism="Zea mays">
+  <Comment Source="WikiPathways-description">This event has been computationally inferred from an event that has been demonstrated in another species.&lt;p&gt;The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.&lt;p&gt;Details of projection methods and parameters may be found &lt;a href="/projection.html"&gt;here.&lt;/a&gt;&lt;p&gt;
+
+Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
+  <Attribute Key="reactome_id" Value="5406500" />
+  <Graphics BoardWidth="688.0" BoardHeight="687.0" />
+  <DataNode TextLabel="PPi" GraphId="a72ae" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="4655227" />
+    <Graphics CenterX="305.0" CenterY="179.0" Width="34.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29888" />
+  </DataNode>
+  <DataNode TextLabel="ent-sandaracopimaradiene" GraphId="a99f0" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1131436" />
+    <Graphics CenterX="384.0" CenterY="216.5" Width="146.0" Height="53.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:50061" />
+  </DataNode>
+  <DataNode TextLabel="Homologues of&#xA;ent-sandaracopimaradiene&#xA;synthase&#xA;(LOC_OS12G30824.1)" GraphId="b7e35" Type="Protein">
+    <Attribute Key="reactome_id" Value="5402529" />
+    <Graphics CenterX="529.5" CenterY="143.0" Width="141.0" Height="68.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Reactome" ID="5402529" />
+  </DataNode>
+  <DataNode TextLabel="ent-copalyl&#xA;diphosphate" GraphId="bff40" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="4836000" />
+    <Graphics CenterX="382.0" CenterY="92.0" Width="90.0" Height="44.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:28151" />
+  </DataNode>
+  <Interaction GraphId="b9c65">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="384.0" Y="163.0" GraphRef="d6255" RelX="0.01999999999998181" RelY="0.46000000000000796" />
+      <Point X="322.0" Y="179.0" GraphRef="a72ae" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5402531" />
+  </Interaction>
+  <Interaction GraphId="bb4a9">
+    <Comment Source="Reactome">This event has been computationally inferred from an event that has been demonstrated in another species.&lt;p&gt;The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.&lt;p&gt;Details of projection methods and parameters may be found &lt;a href="/projection.html"&gt;here.&lt;/a&gt;&lt;p&gt;</Comment>
+    <Attribute Key="reactome_id" Value="5402531" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="382.0" Y="117.0" />
+      <Point X="384.0" Y="163.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="c0f67" />
+      <Anchor Position="0.99" Shape="None" GraphId="d6255" />
+      <Anchor Position="0.5" Shape="None" GraphId="e4737" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5402531" />
+  </Interaction>
+  <Interaction GraphId="bdb6d">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="382.0" Y="114.0" GraphRef="bff40" RelX="0.0" RelY="1.0" />
+      <Point X="382.0" Y="117.0" GraphRef="c0f67" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5402531" />
+  </Interaction>
+  <Interaction GraphId="c1abe">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="384.0" Y="163.0" GraphRef="d6255" RelX="0.01999999999998181" RelY="0.46000000000000796" />
+      <Point X="384.0" Y="190.0" GraphRef="a99f0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5402531" />
+  </Interaction>
+  <Interaction GraphId="f21c6">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="459.0" Y="143.0" GraphRef="b7e35" RelX="-1.0" RelY="0.0" />
+      <Point X="384.0" Y="163.0" GraphRef="e4737" RelX="1.0" RelY="23.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5402531" />
+  </Interaction>
+  <Label TextLabel="plastid stroma" GraphId="de016" GroupRef="cf79b">
+    <Graphics CenterX="576.0" CenterY="74.5" Width="110.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="cytosol" GraphId="ed091" GroupRef="e9453">
+    <Graphics CenterX="618.0" CenterY="33.5" Width="64.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="a5df6" GroupRef="e9453">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="331.0" CenterY="330.5" Width="654.0" Height="653.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c8a13" GroupRef="cf79b">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="331.0" CenterY="340.0" Width="610.0" Height="590.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="cf79b" GraphId="c872c" Style="Group" />
+  <Group GroupId="e9453" GraphId="fb0a1" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax />
+</Pathway>
+

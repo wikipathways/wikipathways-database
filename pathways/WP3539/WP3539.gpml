@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="WikiPathways Tutorial: demo_step3" Data-Source="WikiPathways" Version="WP3539_r106739" Author="[Khanspers, AlexanderPico, MaintBot]" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway is part of the WikiPathways video tutorial: http://wikipathways.org/index.php/Help:Tutorial</Comment>
+  <Graphics BoardWidth="701.0" BoardHeight="334.0" />
+  <DataNode TextLabel="Statin" GraphId="a1903" Type="Metabolite">
+    <Graphics CenterX="285.5" CenterY="106.0" Width="59.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB0005022" />
+  </DataNode>
+  <DataNode TextLabel="SOAT1" GraphId="ac34a" Type="GeneProduct">
+    <Graphics CenterX="531.0" CenterY="222.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000057252" />
+  </DataNode>
+  <DataNode TextLabel="Cholesterol ester" GraphId="ad01d" Type="Metabolite">
+    <Graphics CenterX="631.0" CenterY="266.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="KEGG Compound" ID="C02530" />
+  </DataNode>
+  <DataNode TextLabel="Mevalonate" GraphId="b23a1" Type="Metabolite">
+    <Graphics CenterX="155.0" CenterY="212.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB0059629" />
+  </DataNode>
+  <DataNode TextLabel="Squalene" GraphId="b9fde" Type="Metabolite">
+    <Graphics CenterX="280.5" CenterY="266.0" Width="65.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB0000256" />
+  </DataNode>
+  <DataNode TextLabel="HMG-CoA" GraphId="bb4d4" Type="Metabolite">
+    <Graphics CenterX="155.0" CenterY="126.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB0001375" />
+  </DataNode>
+  <DataNode TextLabel="HMGCR" GraphId="d17f9" Type="GeneProduct">
+    <Graphics CenterX="274.5" CenterY="162.0" Width="63.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000113161" />
+  </DataNode>
+  <DataNode TextLabel="FDFT1" GraphId="eb7f4" Type="GeneProduct">
+    <Graphics CenterX="149.0" CenterY="294.0" Width="52.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000079459" />
+  </DataNode>
+  <DataNode TextLabel="Cholesterol" GraphId="ebb9e" Type="Metabolite">
+    <Graphics CenterX="452.0" CenterY="266.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB0000067" />
+  </DataNode>
+  <DataNode TextLabel="SQLE" GraphId="fb50d" Type="GeneProduct">
+    <Graphics CenterX="352.5" CenterY="219.0" Width="57.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000104549" />
+  </DataNode>
+  <Interaction GraphId="id21ca51a1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="155.0" Y="136.0" GraphRef="bb4d4" RelX="0.0" RelY="1.0" />
+      <Point X="155.0" Y="202.0" GraphRef="b23a1" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="da3cc" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3fe92baa">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="cc0000">
+      <Point X="256.0" Y="106.0" GraphRef="a1903" RelX="-1.0" RelY="0.0" />
+      <Point X="207.8" Y="162.16" GraphRef="f3dc8" RelX="0.0" RelY="0.0" ArrowHead="TBar" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4593aa8d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="313.0" Y="266.0" GraphRef="b9fde" RelX="1.0" RelY="0.0" />
+      <Point X="412.0" Y="266.0" GraphRef="ebb9e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="dd498" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4de3f57f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="492.0" Y="266.0" GraphRef="ebb9e" RelX="1.0" RelY="0.0" />
+      <Point X="591.0" Y="266.0" GraphRef="ad01d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="a2ec3" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5404dff0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="531.0" Y="232.0" GraphRef="ac34a" RelX="0.0" RelY="1.0" />
+      <Point X="531.6" Y="266.0" GraphRef="a2ec3" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id59c0cc47">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="352.5" Y="229.0" GraphRef="fb50d" RelX="0.0" RelY="1.0" />
+      <Point X="352.6" Y="266.0" GraphRef="dd498" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida67354b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="243.0" Y="162.0" GraphRef="d17f9" RelX="-1.0" RelY="0.0" />
+      <Point X="155.0" Y="162.4" GraphRef="da3cc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Anchor Position="0.4" Shape="None" GraphId="f3dc8" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbbc3940">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="149.0" Y="284.0" GraphRef="eb7f4" RelX="0.0" RelY="-1.0" />
+      <Point X="182.1314811008511" Y="254.28318761713473" GraphRef="fd9fc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddfff04aa">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="155.0" Y="222.0" GraphRef="b23a1" RelX="0.0" RelY="1.0" />
+      <Point X="248.0" Y="266.0" GraphRef="b9fde" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="fd9fc" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f4f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9106493</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsomal triglyceride transfer protein.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wetterau JR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin MC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamil H</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+

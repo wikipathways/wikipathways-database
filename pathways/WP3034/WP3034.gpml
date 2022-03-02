@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Phenylalanine biosynthesis I" Data-Source="WikiPathways" Version="WP3034_r118235" Author="[Anwesha, Eweitz]" Maintainer="Amoss, Kindra" Organism="Oryza sativa">
+  <Comment Source="WikiPathways-description">Developed by Gramene.org
+
+Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
+  <Attribute Key="reactome_id" Value="1119389" />
+  <Graphics BoardWidth="438.0" BoardHeight="477.0" />
+  <DataNode TextLabel="L-Glu" GraphId="a4a11" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29404" />
+    <Graphics CenterX="76.5" CenterY="285.0" Width="69.0" Height="34.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16015" />
+  </DataNode>
+  <DataNode TextLabel="CO2" GraphId="a7639" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="113528" />
+    <Graphics CenterX="76.5" CenterY="235.0" Width="51.0" Height="32.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16526" />
+  </DataNode>
+  <DataNode TextLabel="prephenate&#xA;dehydratase" GraphId="bb86a" Type="Protein">
+    <Comment Source="Reactome">Facilitates the conversion of prephenate to phenylpyruvate.</Comment>
+    <Attribute Key="reactome_id" Value="1121902" />
+    <Graphics CenterX="325.5" CenterY="177.0" Width="85.0" Height="50.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Reactome" ID="1121902" />
+  </DataNode>
+  <DataNode TextLabel="chorismate mutase" GraphId="c2e75" Type="Protein">
+    <Comment Source="Reactome">Facilitates the conversion of chorismate to prephenate.</Comment>
+    <Attribute Key="reactome_id" Value="1121881" />
+    <Graphics CenterX="325.0" CenterY="80.0" Width="122.0" Height="36.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Reactome" ID="1121881" />
+  </DataNode>
+  <DataNode TextLabel="H2O" GraphId="cace1" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29356" />
+    <Graphics CenterX="76.5" CenterY="193.5" Width="53.0" Height="29.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15377" />
+  </DataNode>
+  <DataNode TextLabel="2OG" GraphId="e4cdc" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29406" />
+    <Graphics CenterX="76.0" CenterY="361.0" Width="54.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:30915" />
+  </DataNode>
+  <DataNode TextLabel="L-Phe" GraphId="efa9b" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29502" />
+    <Graphics CenterX="190.5" CenterY="383.0" Width="107.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17295" />
+  </DataNode>
+  <DataNode TextLabel="CRSM" GraphId="f1144" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="964856" />
+    <Graphics CenterX="190.0" CenterY="40.5" Width="58.0" Height="29.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17333" />
+  </DataNode>
+  <DataNode TextLabel="prephenate" GraphId="f52d5" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1132336" />
+    <Graphics CenterX="190.5" CenterY="130.0" Width="95.0" Height="34.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16666" />
+  </DataNode>
+  <DataNode TextLabel="aromatic-amino-acid&#xA;transaminase" GraphId="fa915" Type="Protein">
+    <Comment Source="Reactome">Facilitates the conversion of phenylpyruvate to L-phenylalanine.</Comment>
+    <Attribute Key="reactome_id" Value="1122023" />
+    <Graphics CenterX="325.0" CenterY="319.0" Width="118.0" Height="50.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Reactome" ID="1122023" />
+  </DataNode>
+  <DataNode TextLabel="phenylpyruvate" GraphId="ff268" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1131987" />
+    <Graphics CenterX="190.5" CenterY="255.0" Width="109.0" Height="44.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:30851" />
+  </DataNode>
+  <Interaction GraphId="a41ff">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="190.0" Y="277.0" GraphRef="ff268" RelX="-0.009174311926605505" RelY="1.0" />
+      <Point X="190.0" Y="295.0" GraphRef="d9f70" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120808" />
+  </Interaction>
+  <Interaction GraphId="a699b">
+    <Comment Source="Reactome">Chorismate is converted to prephenate by enzymatic activity of chorismate mutase.</Comment>
+    <Attribute Key="reactome_id" Value="1120205" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="190.0" Y="58.0" />
+      <Point X="190.0" Y="110.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="db79f" />
+      <Anchor Position="0.99" Shape="None" GraphId="ede12" />
+      <Anchor Position="0.5" Shape="None" GraphId="dca50" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120205" />
+  </Interaction>
+  <Interaction GraphId="acd15">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="110.0" Y="285.0" GraphRef="a4a11" RelX="0.9710144927536232" RelY="0.0" />
+      <Point X="190.0" Y="295.0" GraphRef="d9f70" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120808" />
+  </Interaction>
+  <Interaction GraphId="b2dd6">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="190.0" Y="351.0" GraphRef="e415b" RelX="0.0" RelY="0.5600000000000023" />
+      <Point X="190.0" Y="368.0" GraphRef="efa9b" RelX="-0.009345794392523364" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120808" />
+  </Interaction>
+  <Interaction GraphId="b57b6">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="189.0" Y="207.0" GraphRef="d8ceb" RelX="-0.009999999999990905" RelY="0.5699999999999932" />
+      <Point X="101.0" Y="235.0" GraphRef="a7639" RelX="0.9607843137254902" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120285" />
+  </Interaction>
+  <Interaction GraphId="bbd22">
+    <Comment Source="Reactome">Prephenate is converted to phenylpyruvate by enzymatic activity of prephenate dehydratase.</Comment>
+    <Attribute Key="reactome_id" Value="1120285" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="190.0" Y="150.0" />
+      <Point X="189.0" Y="207.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="c36c3" />
+      <Anchor Position="0.99" Shape="None" GraphId="d8ceb" />
+      <Anchor Position="0.5" Shape="None" GraphId="f0c40" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120285" />
+  </Interaction>
+  <Interaction GraphId="bf877">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="190.0" Y="351.0" GraphRef="e415b" RelX="0.0" RelY="0.5600000000000023" />
+      <Point X="103.0" Y="361.0" GraphRef="e4cdc" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120808" />
+  </Interaction>
+  <Interaction GraphId="c1503">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="189.0" Y="207.0" GraphRef="d8ceb" RelX="-0.009999999999990905" RelY="0.5699999999999932" />
+      <Point X="190.0" Y="233.0" GraphRef="ff268" RelX="-0.009174311926605505" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120285" />
+  </Interaction>
+  <Interaction GraphId="c42ff">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="190.0" Y="147.0" GraphRef="f52d5" RelX="-0.010526315789473684" RelY="1.0" />
+      <Point X="190.0" Y="150.0" GraphRef="c36c3" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120285" />
+  </Interaction>
+  <Interaction GraphId="c4617">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="266.0" Y="319.0" GraphRef="fa915" RelX="-1.0" RelY="0.0" />
+      <Point X="190.0" Y="351.0" GraphRef="fb508" RelX="0.0" RelY="28.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120808" />
+  </Interaction>
+  <Interaction GraphId="cd3ff">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="283.0" Y="177.0" GraphRef="bb86a" RelX="-1.0" RelY="0.0" />
+      <Point X="189.0" Y="207.0" GraphRef="f0c40" RelX="-0.5" RelY="28.5" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120285" />
+  </Interaction>
+  <Interaction GraphId="cd5b4">
+    <Comment Source="Reactome">Phenylpyruvate is converted to L-phenylalanine by enzymatic activity of aromatic amino acid transferase.</Comment>
+    <Attribute Key="reactome_id" Value="1120808" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="190.0" Y="295.0" />
+      <Point X="190.0" Y="351.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="d9f70" />
+      <Anchor Position="0.99" Shape="None" GraphId="e415b" />
+      <Anchor Position="0.5" Shape="None" GraphId="fb508" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120808" />
+  </Interaction>
+  <Interaction GraphId="daf4b">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="190.0" Y="110.0" GraphRef="ede12" RelX="0.0" RelY="0.5200000000000102" />
+      <Point X="190.0" Y="113.0" GraphRef="f52d5" RelX="-0.010526315789473684" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120205" />
+  </Interaction>
+  <Interaction GraphId="dd74d">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="264.0" Y="80.0" GraphRef="c2e75" RelX="-1.0" RelY="0.0" />
+      <Point X="190.0" Y="110.0" GraphRef="dca50" RelX="0.0" RelY="26.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120205" />
+  </Interaction>
+  <Interaction GraphId="ef7c5">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="190.0" Y="54.0" GraphRef="f1144" RelX="0.0" RelY="0.9310344827586207" />
+      <Point X="190.0" Y="58.0" GraphRef="db79f" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120205" />
+  </Interaction>
+  <Interaction GraphId="f65c8">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="189.0" Y="207.0" GraphRef="d8ceb" RelX="-0.009999999999990905" RelY="0.5699999999999932" />
+      <Point X="102.0" Y="193.0" GraphRef="cace1" RelX="0.9622641509433962" RelY="-0.034482758620689655" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120285" />
+  </Interaction>
+  <Label TextLabel="cytosol" GraphId="d96d0" GroupRef="c7dba">
+    <Graphics CenterX="49.0" CenterY="417.5" Width="64.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="da8a8" GroupRef="c7dba">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="206.0" CenterY="225.5" Width="404.0" Height="443.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="c7dba" GraphId="b83b2" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax />
+</Pathway>
+

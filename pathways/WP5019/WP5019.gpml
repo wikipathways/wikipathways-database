@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Acetogenesis" Data-Source="WikiPathways" Version="WP5019_r113882" Author="user | Larsgw | Khanspers" Organism="Acetobacterium woodii">
-  <Comment Source="WikiPathways-description">Acetogenesis from H2 and CO2 in Acetobacterium woodii</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Acetogenesis" Data-Source="WikiPathways" Version="WP5019_r120854" Author="[Larsgw, Khanspers, DeSl]" Organism="Acetobacterium woodii">
+  <Comment Source="WikiPathways-description">Acetogenesis from H2 and CO2 in Acetobacterium woodii, based on Figure 3 from Diender et al (2015) [PMID:26635746]. This pathway model shows both proposed theoretical pathways of CO conversion to acetate, as well as the acetogenic metabolism driven by CO co-fermented with formate. Two large complexes are involved in this process (top right corner): 1. the RnF complex (sodium ion transport outside of the cell membrane) 2. the ATPase complex (sodium ion translocation to inner cell membrane). </Comment>
+  <BiopaxRef>afe</BiopaxRef>
   <Graphics BoardWidth="1889.0522478736332" BoardHeight="1442.4031007751937" />
   <DataNode TextLabel="formate" GraphId="a4940" Type="Metabolite">
     <Graphics CenterX="478.39286480084183" CenterY="249.25455139528427" Width="189.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -693,7 +694,7 @@
       <Point X="1238.9951655946518" Y="590.7943690072949" GraphRef="f1eb8" RelX="0.0" RelY="1.0" />
       <Point X="1339.042428848196" Y="610.7943690072949" />
       <Point X="1439.0896921017404" Y="692.1326843658035" />
-      <Point X="1276.5749373868637" Y="773.470999724312" GraphRef="eade0" RelX="0.0" RelY="0.0" />
+      <Point X="1276.5749373868637" Y="773.470999724312" GraphRef="eade0" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -721,6 +722,21 @@
   <Group GroupId="f55e0" GraphId="e2095" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="afe">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26635746</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathways and Bioenergetics of Anaerobic Carbon Monoxide Fermentation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Front Microbiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diender M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stams AJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sousa DZ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon fixation pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000057</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
@@ -728,3 +744,4 @@
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
+

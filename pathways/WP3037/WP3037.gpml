@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cytosolic glycolysis" Data-Source="WikiPathways" Version="WP3037_r118207" Author="[Anwesha, Susan, Eweitz]" Organism="Zea mays">
+  <Comment Source="WikiPathways-description">This event has been computationally inferred from an event that has been demonstrated in another species.&lt;p&gt;The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.&lt;p&gt;Details of projection methods and parameters may be found &lt;a href="/projection.html"&gt;here.&lt;/a&gt;&lt;p&gt;
+
+Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
+  <Attribute Key="reactome_id" Value="5406557" />
+  <Graphics BoardWidth="835.0" BoardHeight="887.0" />
+  <DataNode TextLabel="H+" GraphId="a7769" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="70106" />
+    <Graphics CenterX="482.0" CenterY="626.0" Width="36.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15378" />
+  </DataNode>
+  <DataNode TextLabel="1,3-Bisphospho-D-glycerate" GraphId="aa354" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29800" />
+    <Graphics CenterX="574.5" CenterY="671.0" Width="135.0" Height="44.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16001" />
+  </DataNode>
+  <DataNode TextLabel="Homologues of&#xA;glyceraldehyde-3-phosphate&#xA;dehydrogenase&#xA;(LOC_OS08G03290.1)" GraphId="b108e" Type="Protein">
+    <Attribute Key="reactome_id" Value="5403276" />
+    <Graphics CenterX="409.5" CenterY="784.5" Width="141.0" Height="71.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Reactome" ID="5403276" />
+  </DataNode>
+  <DataNode TextLabel="GA3P" GraphId="beb27" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29578" />
+    <Graphics CenterX="320.0" CenterY="671.0" Width="48.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29052" />
+  </DataNode>
+  <DataNode TextLabel="NAD+" GraphId="df1da" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29360" />
+    <Graphics CenterX="357.5" CenterY="711.0" Width="53.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15846" />
+  </DataNode>
+  <DataNode TextLabel="NADH" GraphId="df329" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="73473" />
+    <Graphics CenterX="482.5" CenterY="711.0" Width="53.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16908" />
+  </DataNode>
+  <DataNode TextLabel="Pi" GraphId="f53ac" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29372" />
+    <Graphics CenterX="357.0" CenterY="626.0" Width="26.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:18367" />
+  </DataNode>
+  <Interaction GraphId="a5ebf">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="357.0" Y="696.0" GraphRef="df1da" RelX="-0.018867924528301886" RelY="-1.0" />
+      <Point X="377.0" Y="672.0" GraphRef="f08d3" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5403278" />
+  </Interaction>
+  <Interaction GraphId="aa1c0">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="444.0" Y="671.0" GraphRef="cbb95" RelX="0.6699999999999591" RelY="-0.009999999999990905" />
+      <Point X="507.0" Y="671.0" GraphRef="aa354" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5403278" />
+  </Interaction>
+  <Interaction GraphId="b01c1">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="344.0" Y="671.0" GraphRef="beb27" RelX="1.0" RelY="0.0" />
+      <Point X="377.0" Y="672.0" GraphRef="f08d3" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5403278" />
+  </Interaction>
+  <Interaction GraphId="b224e">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="357.0" Y="641.0" GraphRef="f53ac" RelX="0.0" RelY="1.0" />
+      <Point X="377.0" Y="672.0" GraphRef="f08d3" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5403278" />
+  </Interaction>
+  <Interaction GraphId="d1c34">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="444.0" Y="671.0" GraphRef="cbb95" RelX="0.6699999999999591" RelY="-0.009999999999990905" />
+      <Point X="456.0" Y="711.0" GraphRef="df329" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5403278" />
+  </Interaction>
+  <Interaction GraphId="e4ef1">
+    <Comment Source="Reactome">This event has been computationally inferred from an event that has been demonstrated in another species.&lt;p&gt;The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.&lt;p&gt;Details of projection methods and parameters may be found &lt;a href="/projection.html"&gt;here.&lt;/a&gt;&lt;p&gt;</Comment>
+    <Attribute Key="reactome_id" Value="5403278" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="377.0" Y="672.0" />
+      <Point X="444.0" Y="671.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="f08d3" />
+      <Anchor Position="0.99" Shape="None" GraphId="cbb95" />
+      <Anchor Position="0.5" Shape="None" GraphId="db799" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5403278" />
+  </Interaction>
+  <Interaction GraphId="ec71d">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="444.0" Y="671.0" GraphRef="cbb95" RelX="0.6699999999999591" RelY="-0.009999999999990905" />
+      <Point X="482.0" Y="641.0" GraphRef="a7769" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5403278" />
+  </Interaction>
+  <Interaction GraphId="f2630">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="409.0" Y="749.0" GraphRef="b108e" RelX="-0.0070921985815602835" RelY="-1.0" />
+      <Point X="444.0" Y="671.0" GraphRef="db799" RelX="33.5" RelY="-0.5" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5403278" />
+  </Interaction>
+  <Label TextLabel="cytosol" GraphId="fa2c1" GroupRef="a1913">
+    <Graphics CenterX="55.0" CenterY="826.5" Width="64.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="d3532" GroupRef="a1913">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="407.5" CenterY="434.0" Width="795.0" Height="846.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="a1913" GraphId="cbfe3" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycolysis pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000640</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>
+

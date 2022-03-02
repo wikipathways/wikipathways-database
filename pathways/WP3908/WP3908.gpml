@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="WikiPathways Academy: met-1-second" Data-Source="WikiPathways" Version="WP3908_r106759" Author="[Khanspers, AlexanderPico, MaintBot]" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Do not modify or delete. This pathway is part of the collection of content used by [https://wikipathways.github.io/academy/ WikiPathways Academy].</Comment>
+  <BiopaxRef>ec9</BiopaxRef>
+  <BiopaxRef>d9b</BiopaxRef>
+  <BiopaxRef>e32</BiopaxRef>
+  <BiopaxRef>c8f</BiopaxRef>
+  <BiopaxRef>ea9</BiopaxRef>
+  <BiopaxRef>cdc</BiopaxRef>
+  <BiopaxRef>e73</BiopaxRef>
+  <Graphics BoardWidth="445.0" BoardHeight="217.25644257703044" />
+  <DataNode TextLabel="HMGCS1" GraphId="b21" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="HMGCS1 | 3-hydroxy-3-methylglutaryl-Coenzyme A ..." />
+    <Graphics CenterX="284.393625796039" CenterY="135.82560623193865" Width="90.00000000000001" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="3157" />
+  </DataNode>
+  <DataNode TextLabel="HMG-CoA" GraphId="e89f4" Type="Metabolite">
+    <Graphics CenterX="370.0" CenterY="174.75644257703044" Width="90.00000000000001" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB0001375" />
+  </DataNode>
+  <DataNode TextLabel="Acetyl-CoA" GraphId="fb3" Type="Metabolite">
+    <Graphics CenterX="370.0" CenterY="99.0" Width="90.00000000000001" Height="25.00000000000001" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="CAS" ID="72-89-9" />
+  </DataNode>
+  <Interaction GraphId="a94b2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="370.0" Y="111.5" GraphRef="fb3" RelX="0.0" RelY="1.0" />
+      <Point X="370.0" Y="162.25644257703044" GraphRef="e89f4" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.49535226917334824" Shape="None" GraphId="cb45c" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idaba74c6a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="329.393625796039" Y="135.82560623193865" GraphRef="b21" RelX="1.0" RelY="0.0" />
+      <Point X="370.0" Y="136.64231900569877" GraphRef="cb45c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="8.333333333333334" CenterY="5.0" />
+  <Biopax />
+</Pathway>
+

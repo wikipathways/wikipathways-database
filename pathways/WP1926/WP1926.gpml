@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Transport of glycerol from adipocytes to liver by aquaporins" Data-Source="WikiPathways" Version="WP1926_r116663" Author="[MaintBot, Khanspers, ReactomeTeam, Anwesha, Fehrhart, Eweitz]" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Triglycerides stored in adipocytes are hydrolyzed to yield fatty acids and glycerol. The glycerol is passively transported out of the adipocyte and into the bloodstream by Aquaporin-7 (AQP7) located in the plasma membrane of adipocytes. Glycerol in the bloodstream is passively transported into liver cells by AQP9 located in the plasma membrane of hepatocytes. Once inside the liver cell the glycerol is a substrate for gluconeogenesis.
+ View original pathway at [http://www.reactome.org/PathwayBrowser/#DIAGRAM=432030 Reactome].</Comment>
+  <Comment Source="Reactome-Converter">Pathway is converted from Reactome ID: 432030</Comment>
+  <Comment Source="Reactome-version">Reactome version: 75</Comment>
+  <Comment Source="Reactome Author">Reactome Author: May, Bruce</Comment>
+  <BiopaxRef>c98</BiopaxRef>
+  <BiopaxRef>f74</BiopaxRef>
+  <Attribute Key="reactome_id" Value="432030" />
+  <Graphics BoardWidth="962.0" BoardHeight="501.0" />
+  <DataNode TextLabel="glycerol" GraphId="b008a" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="extracellular region" />
+    <Graphics CenterX="522.0" CenterY="367.5" Width="202.0" Height="51.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17754" />
+  </DataNode>
+  <DataNode TextLabel="AQP7 " GraphId="b8c20" Type="Protein" GroupRef="d99ca">
+    <Attribute Key="cellular_location" Value="plasma membrane" />
+    <Attribute Key="complex_id" Value="R-HSA-432243" />
+    <Attribute Key="copies_num" Value="4" />
+    <Graphics CenterX="100.0" CenterY="421.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="O14520" />
+  </DataNode>
+  <DataNode TextLabel="Glycerol" GraphId="ce698" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="704.0" CenterY="132.0" Width="110.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17754" />
+  </DataNode>
+  <DataNode TextLabel="Glycerol" GraphId="ceeba" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="336.0" CenterY="125.5" Width="116.0" Height="31.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17754" />
+  </DataNode>
+  <DataNode TextLabel="AQP9 tetramer" GraphId="d122c" Type="Complex">
+    <Comment Source="Reactome">The formation of homotetramers by Aquaporin-9 (AQP9) is inferred from rat AQP9 and from human AQP1, AQP2, AQP3, AQP4, and AQP5.</Comment>
+    <BiopaxRef>aac</BiopaxRef>
+    <Attribute Key="cellular_location" Value="plasma membrane" />
+    <Graphics CenterX="777.0" CenterY="263.0" Width="108.0" Height="54.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="Hexagon" Color="a52a2a" />
+    <Xref Database="Reactome" ID="R-HSA-432249" />
+  </DataNode>
+  <DataNode TextLabel="AQP7 tetramer" GraphId="e5a1c" Type="Complex">
+    <Comment Source="Reactome">The formation of homotetramers by Aquaporin-7 (AQP7) is inferred from human AQP1, AQP2, AQP3, AQP4, and AQP5.</Comment>
+    <Attribute Key="cellular_location" Value="plasma membrane" />
+    <Graphics CenterX="266.0" CenterY="263.0" Width="108.0" Height="54.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="Hexagon" Color="a52a2a" />
+    <Xref Database="Reactome" ID="R-HSA-432243" />
+  </DataNode>
+  <DataNode TextLabel="AQP9 " GraphId="fbdd4" Type="Protein" GroupRef="dd417">
+    <Attribute Key="cellular_location" Value="plasma membrane" />
+    <Attribute Key="complex_id" Value="R-HSA-432249" />
+    <Attribute Key="copies_num" Value="4" />
+    <Graphics CenterX="240.0" CenterY="461.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="O43315" />
+  </DataNode>
+  <Interaction GraphId="a5257">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="522.0" Y="342.0" GraphRef="b008a" RelX="0.0" RelY="-1.0" />
+      <Point X="559.0" Y="339.0" GraphRef="f17bc" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-432049" />
+  </Interaction>
+  <Interaction GraphId="a6367">
+    <Comment Source="Reactome">Aquaporin-9 (AQP9) passively transports water, glycerol, urea, and some other small neutral solutes across the plasma membrane according to the osmotic gradient. AQP9 is expressed in the sinusoidal plasma membrane in the liver facing the portal vein where it is believed to be responsible for glycerol uptake as part of gluconeogenesis. AQP9 is also expressed in glia, neurons, and peripheral leukocytes.</Comment>
+    <BiopaxRef>fd1</BiopaxRef>
+    <BiopaxRef>c6d</BiopaxRef>
+    <BiopaxRef>e34</BiopaxRef>
+    <BiopaxRef>eed</BiopaxRef>
+    <BiopaxRef>a1f</BiopaxRef>
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="559.0" Y="339.0" />
+      <Point X="700.0" Y="150.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="f17bc" />
+      <Anchor Position="0.99" Shape="None" GraphId="f6465" />
+      <Anchor Position="0.5" Shape="None" GraphId="d1138" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-432049" />
+  </Interaction>
+  <Interaction GraphId="a7b6b">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="483.0" Y="339.0" GraphRef="bc9ae" RelX="1.4399999999999977" RelY="1.9499999999999886" />
+      <Point X="522.0" Y="342.0" GraphRef="b008a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-432074" />
+  </Interaction>
+  <Interaction GraphId="c3187">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="336.0" Y="140.0" GraphRef="ceeba" RelX="0.0" RelY="0.9354838709677419" />
+      <Point X="339.0" Y="144.0" GraphRef="c32b0" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-432074" />
+  </Interaction>
+  <Interaction GraphId="cf629">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="266.0" Y="236.0" GraphRef="e5a1c" RelX="0.0" RelY="-1.0" />
+      <Point X="366.0" Y="263.0" GraphRef="abae2" RelX="-45.0" RelY="21.5" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-432074" />
+  </Interaction>
+  <Interaction GraphId="d2e12">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="723.0" Y="263.0" GraphRef="d122c" RelX="-1.0" RelY="0.0" />
+      <Point X="676.0" Y="262.0" GraphRef="d1138" RelX="46.5" RelY="17.5" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-432049" />
+  </Interaction>
+  <Interaction GraphId="e01fe">
+    <Comment Source="Reactome">Aquaporin-7 (AQP7) passively transports glycerol and water across the plasma membrane according to the osmotic gradient. AQP7 is expressed in adipocytes under the direct control of the PPARG and RXRA nuclear receptors. Expression of AQP7 correlates with release of glycerol from adipocytes. AQP7 is seen to translocate from the nuclear periphery to the plasma membrane during adrenaline-stimulated lipolysis. In rat AQP7 also transports urea.</Comment>
+    <BiopaxRef>daf</BiopaxRef>
+    <BiopaxRef>ebd</BiopaxRef>
+    <BiopaxRef>bd7</BiopaxRef>
+    <BiopaxRef>daa</BiopaxRef>
+    <BiopaxRef>a1f</BiopaxRef>
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="339.0" Y="144.0" />
+      <Point X="483.0" Y="339.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="c32b0" />
+      <Anchor Position="0.99" Shape="None" GraphId="bc9ae" />
+      <Anchor Position="0.5" Shape="None" GraphId="abae2" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-432074" />
+  </Interaction>
+  <Interaction GraphId="e5e5d">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="700.0" Y="150.0" GraphRef="f6465" RelX="1.4099999999999682" RelY="-1.8899999999999864" />
+      <Point X="704.0" Y="147.0" GraphRef="ce698" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-432049" />
+  </Interaction>
+  <Label TextLabel="hepatocyte" GraphId="c49c3">
+    <Graphics CenterX="828.5" CenterY="98.5" Width="103.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="cytosol" GraphId="d656d" GroupRef="a1cb3">
+    <Graphics CenterX="149.0" CenterY="227.5" Width="64.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="cytosol" GraphId="e1588" GroupRef="d7e1d">
+    <Graphics CenterX="881.0" CenterY="230.5" Width="64.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="adipocyte" GraphId="fee56">
+    <Graphics CenterX="202.0" CenterY="98.0" Width="142.0" Height="34.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="b19f4" GroupRef="d7e1d">
+    <Graphics CenterX="750.0" CenterY="153.0" Width="364.0" Height="228.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e1722" GroupRef="a1cb3">
+    <Graphics CenterX="292.0" CenterY="155.0" Width="380.0" Height="226.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="a1cb3" GraphId="a61ef" Style="Group" />
+  <Group GroupId="d7e1d" GraphId="c95bf" Style="Group" />
+  <Group GroupId="d99ca" GraphId="cac2f" Style="Complex">
+    <Attribute Key="complex_id" Value="R-HSA-432243" />
+  </Group>
+  <Group GroupId="dd417" GraphId="f8bf4" Style="Complex">
+    <Attribute Key="complex_id" Value="R-HSA-432249" />
+  </Group>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c98">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19096781</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of aquaporin-7 and aquaporin-9 in glycerol metabolism; involvement in obesity.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maeda N, Hibuse T, Funahashi T.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ebd">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11952783</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human aquaporin adipose (AQPap) gene. Genomic structure, promoter analysis and functional mutation.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kondo H, Shimomura I, Kishida K, Kuriyama H, Makino Y, Nishizawa H, Matsuda M, Maeda N, Nagaretani H, Kihara S, Kurachi Y, Nakamura T, Funahashi T, Matsuzawa Y.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fat cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000136</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aac">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17239399</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projection map of aquaporin-9 at 7 A resolution.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viadiu H, Gonen T, Walz T.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a1f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17961083</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A current view of the mammalian aquaglyceroporins.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rojek A, Praetorius J, Frøkiaer J, Nielsen S, Fenton RA.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e34">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18762715</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional characterization of human aquaporin 9 as a facilitative glycerol carrier.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ohgusu Y, Ohta KY, Ishii M, Katano T, Urano K, Watanabe J, Inoue K, Yuasa H.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gluconeogenesis pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000641</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ghrelin secreting cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0005018</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="daf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9405233</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular cloning and expression of a novel human aquaporin from adipose tissue with glycerol permeability.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuriyama H, Kawamoto S, Ishida N, Ohno I, Mita S, Matsuzawa Y, Matsubara K, Okubo K.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transport pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000103</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000182</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c6d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19590626</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Altered aquaporin 9 expression and localization in human hepatocellular carcinoma.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Padma S, Smeltz AM, Banks PM, Iannitti DA, McKillop IH.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eed">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10564231</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional and molecular characterization of the human neutral solute channel aquaporin-9.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tsukaguchi H, Weremowicz S, Morton CC, Hediger MA.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bd7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18555844</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comparison of messenger RNA distribution for 60 proteins in fat cells vs the nonfat cells of human omental adipose tissue.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fain JN, Buehrer B, Bahouth SW, Tichansky DS, Madan AK.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f74">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16764946</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquaporin-7 and glycerol permeability as novel obesity drug-target pathways.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frühbeck G, Catalán V, Gómez-Ambrosi J, Rodríguez A.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fd1">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11027599</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immunolocalization of AQP9 in liver, epididymis, testis, spleen, and brain.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elkjaer M, Vajda Z, Nejsum LN, Kwon T, Jensen UB, Amiry-Moghaddam M, Frøkiaer J, Nielsen S.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="daa">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16325777</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Differential expression of aquaporin 7 in adipose tissue of lean and obese high fat consumers.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marrades MP, Milagro FI, Martínez JA, Moreno-Aliaga MJ.</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Benzyl sulfide biodegradation" Data-Source="WikiPathways" Version="WP5131_r120234" Author="[Egonw, Khanspers, Eweitz]" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Pathway from Figure 1 from Tam et al. which references the EnviPath pathway at https://envipath.org/package/32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/pathway/9508ba2f-26d2-422c-888d-da2de9fe6aca</Comment>
+  <BiopaxRef>ee1</BiopaxRef>
+  <Graphics BoardWidth="545.3697478991597" BoardHeight="504.63865546218494" />
+  <DataNode TextLabel="benzyl sulfide" GraphId="c3384" Type="Metabolite">
+    <Graphics CenterX="267.8697478991596" CenterY="84.88865546218487" Width="93.0" Height="93.5" ZOrder="32768" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" />
+    <Xref Database="InChIKey" ID="LUFPJJNWMYZRQE-UHFFFAOYSA-N" />
+  </DataNode>
+  <DataNode TextLabel="dibenzyl&#xA;disulfide" GraphId="ee2e6" Type="Metabolite">
+    <Graphics CenterX="468.86974789915973" CenterY="427.88865546218494" Width="93.0" Height="93.5" ZOrder="32769" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" />
+    <Xref Database="InChIKey" ID="GVPWHKZIJBODOX-UHFFFAOYSA-N" />
+  </DataNode>
+  <DataNode TextLabel="benzyl thiol" GraphId="e6528" Type="Metabolite">
+    <Graphics CenterX="468.86974789915973" CenterY="238.88865546218477" Width="93.0" Height="93.5" ZOrder="32770" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" />
+    <Xref Database="InChIKey" ID="UENWRTRMUIOCKN-UHFFFAOYSA-N" />
+  </DataNode>
+  <DataNode TextLabel="benzaldehyde" GraphId="f66f8" Type="Metabolite">
+    <Graphics CenterX="267.8697478991596" CenterY="238.88865546218477" Width="93.0" Height="93.5" ZOrder="32771" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" />
+    <Xref Database="InChIKey" ID="HUMNYLRZRPPJDN-UHFFFAOYSA-N" />
+  </DataNode>
+  <DataNode TextLabel="dibenzyl&#xA;sulfoxide" GraphId="edb8b" Type="Metabolite">
+    <Graphics CenterX="82.86974789915968" CenterY="238.88865546218477" Width="93.0" Height="93.5" ZOrder="32772" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" />
+    <Xref Database="InChIKey" ID="HTMQZWFSTJVJEQ-UHFFFAOYSA-N" />
+  </DataNode>
+  <DataNode TextLabel="dibenzyl&#xA;solfone" GraphId="b7731" Type="Metabolite">
+    <Graphics CenterX="82.86974789915968" CenterY="427.88865546218494" Width="93.0" Height="93.5" ZOrder="32773" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" />
+    <Xref Database="InChIKey" ID="AWHNUHMUCGRKRA-UHFFFAOYSA-N" />
+  </DataNode>
+  <Interaction GraphId="id2b497e43">
+    <Graphics ZOrder="12288" LineThickness="3.0">
+      <Point X="365.2378309391014" Y="158.7784879254603" GraphRef="ae2fc" RelX="0.0" RelY="0.0" />
+      <Point X="314.3697478991596" Y="215.51365546218477" GraphRef="f66f8" RelX="1.0" RelY="-0.5" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ideb2889a">
+    <Graphics ZOrder="12288" LineThickness="3.0">
+      <Point X="314.3697478991596" Y="108.26365546218489" GraphRef="c3384" RelX="1.0" RelY="0.5" />
+      <Point X="422.36974789915973" Y="215.51365546218477" GraphRef="e6528" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4710007688883493" Shape="None" GraphId="ae2fc" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="dcb29">
+    <Graphics ZOrder="32774" LineThickness="3.0">
+      <Point X="82.86974789915968" Y="285.6386554621848" GraphRef="edb8b" RelX="0.0" RelY="1.0" />
+      <Point X="82.86974789915968" Y="381.13865546218494" GraphRef="b7731" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4710007688883493" Shape="None" GraphId="d9700" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ac43f">
+    <Graphics ZOrder="32775" LineThickness="3.0">
+      <Point X="221.36974789915962" Y="108.26365546218489" GraphRef="c3384" RelX="-1.0" RelY="0.5" />
+      <Point X="129.36974789915968" Y="215.51365546218477" GraphRef="edb8b" RelX="1.0" RelY="-0.5" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4710007688883493" Shape="None" GraphId="fc076" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cf8b0">
+    <Graphics ConnectorType="Curved" ZOrder="32776" LineThickness="3.0">
+      <Point X="422.36974789915973" Y="404.51365546218494" GraphRef="ee2e6" RelX="-1.0" RelY="-0.5" />
+      <Point X="379.36974789915973" Y="333.38865546218483" />
+      <Point X="422.36974789915973" Y="262.2636554621848" GraphRef="e6528" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion" />
+      <Anchor Position="0.49214659685863876" Shape="Circle" GraphId="c0d81" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e4f41">
+    <Graphics ConnectorType="Curved" ZOrder="32777" LineThickness="3.0">
+      <Point X="515.3697478991597" Y="404.51365546218494" GraphRef="ee2e6" RelX="1.0" RelY="-0.5" ArrowHead="mim-conversion" />
+      <Point X="563.3697478991596" Y="333.38865546218483" />
+      <Point X="515.3697478991597" Y="262.2636554621848" GraphRef="e6528" RelX="1.0" RelY="0.5" />
+      <Anchor Position="0.46654553313891833" Shape="Circle" GraphId="e509b" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xenobiotics biodegradation pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000107</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ee1">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34479624</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Holistic evaluation of biodegradation pathway prediction: assessing multi-step reactions and intermediate products.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Cheminform</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tam JYC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorsbach T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schmidt S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wicker JS</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+

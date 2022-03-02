@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Iron metabolism disorders" Data-Source="WikiPathways" Version="WP5172_r121671" Author="[AmauryPelzer, EmiliaAgasi]" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway was inspired by Chapter 40 of the book of Blau (ISBN 3642403360 (978-3642403361)).
+
+Intestinal iron is reduced by an cytochrome b reductase 1 (CYBRD1) and transported into intestinal cells by the divalent metal transporter SLC11A2 (or DMT1). Inside cells, iron is stored as ferritin (FT). On the basolateral side, iron leaves the epithelium via a basolateral transporter, SLC40A1 (or IREG1), followed by oxidation through the action of hephaestin (Heph), a membrane-bound ceruloplasmin-like multicopper ferroxidase. Iron-loaded transferrin (Fe2-Tf) binds to the transferrin receptor (TfRC) on the surface of cells. The receptor-transferrin complex, localized in clathrin-coated pits (TTTT), is invaginated and forms endosomes. These specialized endosomes acquire a low internal pH due to the action of a proton pump (not shown). This leads to the dissociation of the iron from transferrin. Iron can be converted into its ferrous form by the metalloreductase STEAP3 and then leave the endosomes via SLC11A2. Apo-transferrin and transferrin receptors recycle to the plasma membrane for reuse. This iron uptake mechanism is found in most cell types, including enterocyte precursor cells. Excess iron can leave at least some cell types via SLC40A1 and can be converted to its ferric form by ceruloplasmin (CP), a non-membrane multicopper ferroxidase. Hereditary hemochromatosis results from mutations in HFE. HFE forms a heterodimer with β2-microglobulin, and some mutations that lead to hemochromatosis interrupt this interaction and thus lead to excess iron accumulation. Defects in a second transferrin receptor, TfR2, have recently been implicated in type 3 hemochromatosis. Hepcidin (HAMP) modulates cellular iron export through ferroportin (SLC40A1) by internalizing it into vesicles when the iron concentration is high. HFE, TfR2 and HJV are Hepcidin regulators which are mutated in hereditary hemochromatosis.</Comment>
+  <BiopaxRef>a87</BiopaxRef>
+  <Graphics BoardWidth="1580.6516877971274" BoardHeight="1425.6603050021522" />
+  <DataNode TextLabel="?" GraphId="a13da">
+    <Graphics CenterX="1381.2133050920804" CenterY="1087.7067467949335" Width="33.384902840059645" Height="23.66890881913298" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="STEAP3" GraphId="a4620" Type="GeneProduct">
+    <BiopaxRef>aca</BiopaxRef>
+    <Graphics CenterX="198.12652286045784" CenterY="1066.8306296328956" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000115107" />
+  </DataNode>
+  <DataNode TextLabel="TFR2" GraphId="ae721" Type="GeneProduct">
+    <BiopaxRef>ad5</BiopaxRef>
+    <Graphics CenterX="928.5100399994433" CenterY="767.7573083503188" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000106327" />
+  </DataNode>
+  <DataNode TextLabel="CP" GraphId="b1856" Type="GeneProduct">
+    <BiopaxRef>ec0</BiopaxRef>
+    <Graphics CenterX="505.2507098502484" CenterY="1383.1603050021522" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000047457" />
+  </DataNode>
+  <DataNode TextLabel="FTL" GraphId="b21ae" Type="GeneProduct" GroupRef="c621f">
+    <Comment>Ferritin light chain</Comment>
+    <Graphics CenterX="194.60602855631942" CenterY="399.7871871653596" Width="79.32310946589106" Height="48.219940341555834" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000087086" />
+  </DataNode>
+  <DataNode TextLabel="BCS1L" GraphId="c1b54" Type="GeneProduct">
+    <Graphics CenterX="1381.4482687551542" CenterY="1169.1646743610872" Width="56.559356966199424" Height="22.758862324814604" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000074582" />
+  </DataNode>
+  <DataNode TextLabel="HJV" GraphId="c950c" Type="GeneProduct">
+    <BiopaxRef>ad5</BiopaxRef>
+    <Graphics CenterX="672.1565535177974" CenterY="770.0404133731498" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000168509" />
+  </DataNode>
+  <DataNode TextLabel="HAMP" GraphId="ceb6a" Type="GeneProduct">
+    <BiopaxRef>ad5</BiopaxRef>
+    <Graphics CenterX="761.3563876308696" CenterY="609.5873977955317" Width="81.21399176954779" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000105697" />
+  </DataNode>
+  <DataNode TextLabel="HFE" GraphId="d85c0" Type="GeneProduct" GroupRef="b829a">
+    <BiopaxRef>b30</BiopaxRef>
+    <Graphics CenterX="518.802783605727" CenterY="764.7573083503188" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000010704" />
+  </DataNode>
+  <DataNode TextLabel="SLC11A2" GraphId="f4fd7" Type="GeneProduct">
+    <Comment>This is called "DMT1" in the book but it is actually SLC11A2 (ENSG00000110911, coding for P49281) as mentioned in the article.</Comment>
+    <BiopaxRef>e2f</BiopaxRef>
+    <Graphics CenterX="494.0" CenterY="267.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000110911" />
+  </DataNode>
+  <DataNode TextLabel="TF" GraphId="f6619" Type="GeneProduct">
+    <Graphics CenterX="157.95077597801912" CenterY="646.5525217251347" Width="90.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091513" />
+  </DataNode>
+  <DataNode TextLabel="TFRC" GraphId="ce3d1" Type="GeneProduct" GroupRef="b829a">
+    <Comment>This is named "transferrin receptor (TfR)" in the book or TFR1 but the gene name for this protein is TFRC (ENSG00000072274, P02786).</Comment>
+    <BiopaxRef>e6e</BiopaxRef>
+    <Graphics CenterX="428.8027836057265" CenterY="764.7573083503188" Width="90.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000072274" />
+  </DataNode>
+  <DataNode TextLabel="SLC40A1" GraphId="a3bc7" Type="GeneProduct">
+    <Comment>This is called IREG1 the book but it is actually called SLC40A1 (Q9NP59) as mentioned in the article. It is also called FPN1 (ferroportin 1).</Comment>
+    <BiopaxRef>aca</BiopaxRef>
+    <Graphics CenterX="553.3076074972437" CenterY="510.8004410143318" Width="90.0" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138449" />
+  </DataNode>
+  <DataNode TextLabel="HEPH" GraphId="bafaf" Type="GeneProduct">
+    <Graphics CenterX="368.3076074972437" CenterY="510.8004410143318" Width="90.0" Height="25.0" ZOrder="32778" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000089472" />
+  </DataNode>
+  <DataNode TextLabel="CYBRD1" GraphId="d132f" Type="GeneProduct">
+    <Comment>This is mentioned in the book as "an unknown ferric reductase (FR) but it is actually cytochrome b reductase 1 (CYBRD1, ENSG00000071967) as mentioned in the articles linked here.</Comment>
+    <Comment>+ Does FR include DMT1 (divalent metal transporter)?</Comment>
+    <BiopaxRef>d2f</BiopaxRef>
+    <BiopaxRef>aca</BiopaxRef>
+    <Graphics CenterX="260.0" CenterY="266.0" Width="90.0" Height="25.0" ZOrder="32782" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000071967" />
+  </DataNode>
+  <DataNode TextLabel="TF" GraphId="cd652" Type="GeneProduct" GroupRef="a3a8e">
+    <Graphics CenterX="446.7274939340725" CenterY="658.9225578151892" Width="90.0" Height="25.0" ZOrder="32798" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091513" />
+  </DataNode>
+  <DataNode TextLabel="TF" GraphId="b9955" Type="GeneProduct" GroupRef="aff90">
+    <Graphics CenterX="196.36865821188138" CenterY="728.7589914218565" Width="90.0" Height="25.0" ZOrder="32806" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091513" />
+  </DataNode>
+  <DataNode TextLabel="TFRC" GraphId="b18d9" Type="GeneProduct" GroupRef="aff90">
+    <Comment>This is named "transferrin receptor (TfR)" in the book or TFR1 but the gene name for this protein is TFRC (ENSG00000072274, P02786).</Comment>
+    <BiopaxRef>e6e</BiopaxRef>
+    <Graphics CenterX="196.36865821188138" CenterY="753.7589914218565" Width="90.0" Height="25.0" ZOrder="32812" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000072274" />
+  </DataNode>
+  <DataNode TextLabel="TF" GraphId="d953e" Type="GeneProduct" GroupRef="f010e">
+    <Graphics CenterX="196.2238283902319" CenterY="944.2126182773052" Width="90.0" Height="25.0" ZOrder="32816" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091513" />
+  </DataNode>
+  <DataNode TextLabel="TFRC" GraphId="a82dc" Type="GeneProduct" GroupRef="f010e">
+    <Comment>This is named "transferrin receptor (TfR)" in the book or TFR1 but the gene name for this protein is TFRC (ENSG00000072274, P02786).</Comment>
+    <BiopaxRef>e6e</BiopaxRef>
+    <Graphics CenterX="196.2238283902319" CenterY="919.2126182773053" Width="90.0" Height="25.0" ZOrder="32822" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000072274" />
+  </DataNode>
+  <DataNode TextLabel="TF" GraphId="b79a8" Type="GeneProduct" GroupRef="adaa4">
+    <Graphics CenterX="401.7500744941216" CenterY="943.8810519781821" Width="90.0" Height="25.0" ZOrder="32826" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091513" />
+  </DataNode>
+  <DataNode TextLabel="TFRC" GraphId="ce3b2" Type="GeneProduct" GroupRef="adaa4">
+    <Comment>This is named "transferrin receptor (TfR)" in the book or TFR1 but the gene name for this protein is TFRC (ENSG00000072274, P02786).</Comment>
+    <BiopaxRef>e6e</BiopaxRef>
+    <Graphics CenterX="401.7500744941216" CenterY="918.8810519781821" Width="90.0" Height="25.0" ZOrder="32832" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000072274" />
+  </DataNode>
+  <DataNode TextLabel="SLC11A2" GraphId="b5162" Type="GeneProduct">
+    <Comment>This is called DMT1 (or NRAMP2) in the book but the correct name is SLC11A2 (ENSG00000110911).</Comment>
+    <BiopaxRef>aca</BiopaxRef>
+    <Graphics CenterX="238.10953982879153" CenterY="1149.0455137590454" Width="90.0" Height="25.0" ZOrder="32836" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000110911" />
+  </DataNode>
+  <DataNode TextLabel="SLC40A1" GraphId="a77eb" Type="GeneProduct">
+    <Graphics CenterX="529.3487156295053" CenterY="387.5394937399804" Width="90.0" Height="25.0" ZOrder="32844" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138449" />
+  </DataNode>
+  <DataNode TextLabel="SLC40A1" GraphId="c7a20" Type="GeneProduct">
+    <Comment>This is called IREG1 the book but it is actually called SLC40A1 (Q9NP59) as mentioned in the article. It is also called FPN1 (ferroportin 1).</Comment>
+    <BiopaxRef>aca</BiopaxRef>
+    <Graphics CenterX="271.3076074972437" CenterY="1277.8004410143317" Width="90.0" Height="25.0" ZOrder="32846" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138449" />
+  </DataNode>
+  <DataNode TextLabel="?" GraphId="f2b51">
+    <Graphics CenterX="1383.0690975349366" CenterY="1004.9540933655376" Width="33.384902840059645" Height="23.66890881913298" ZOrder="32899" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="PANK2" GraphId="f23a7" Type="GeneProduct">
+    <Graphics CenterX="1382.379843363564" CenterY="1249.2388705688377" Width="56.559356966199424" Height="22.758862324814604" ZOrder="32903" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000125779" />
+  </DataNode>
+  <DataNode TextLabel="FTH1" GraphId="ffba7" Type="GeneProduct" GroupRef="c621f">
+    <Graphics CenterX="194.61077844311373" CenterY="351.9226805379664" Width="79.84031936127752" Height="47.50907291323064" ZOrder="32905" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000167996" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="a12aa" Type="Metabolite">
+    <Graphics CenterX="268.5205848370781" CenterY="382.0812581075678" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32907" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe2+" GraphId="fc152" Type="Metabolite">
+    <Graphics CenterX="356.9090339701389" CenterY="189.49714473263916" Width="30.403264812576708" Height="31.61245465538151" ZOrder="32911" FontSize="12" Valign="Middle" ShapeType="Oval" Color="000099" />
+    <Xref Database="ChEBI" ID="CHEBI:29033" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="a493d" Type="Metabolite">
+    <Graphics CenterX="167.74214172330517" CenterY="189.48644772832665" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32912" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe2+" GraphId="d99fd" Type="Metabolite">
+    <Graphics CenterX="356.9289940499791" CenterY="326.24365171866725" Width="30.403264812576708" Height="31.61245465538151" ZOrder="32913" FontSize="12" Valign="Middle" ShapeType="Oval" Color="000099" />
+    <Xref Database="ChEBI" ID="CHEBI:29033" />
+  </DataNode>
+  <DataNode TextLabel="Fe2+" GraphId="d2588" Type="Metabolite">
+    <Graphics CenterX="459.57515345298486" CenterY="436.3933725336204" Width="30.403264812576708" Height="31.61245465538151" ZOrder="32914" FontSize="12" Valign="Middle" ShapeType="Oval" Color="000099" />
+    <Xref Database="ChEBI" ID="CHEBI:29033" />
+  </DataNode>
+  <DataNode TextLabel="Fe2+" GraphId="cde2d" Type="Metabolite">
+    <Graphics CenterX="459.59511353282363" CenterY="577.6551494216712" Width="30.403264812576708" Height="31.61245465538151" ZOrder="32915" FontSize="12" Valign="Middle" ShapeType="Oval" Color="000099" />
+    <Xref Database="ChEBI" ID="CHEBI:29033" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="c9d07" Type="Metabolite">
+    <Graphics CenterX="276.37906522534433" CenterY="578.2332545564961" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32916" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="ad42c" Type="Metabolite">
+    <Graphics CenterX="401.3307273879061" CenterY="993.448142659076" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32917" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="cedf5" Type="Metabolite">
+    <Graphics CenterX="400.77409308775253" CenterY="1028.4591892681483" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32918" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe2+" GraphId="a2537" Type="Metabolite">
+    <Graphics CenterX="402.1650880875316" CenterY="1113.3009314615688" Width="30.403264812576708" Height="31.61245465538151" ZOrder="32919" FontSize="12" Valign="Middle" ShapeType="Oval" Color="000099" />
+    <Xref Database="ChEBI" ID="CHEBI:29033" />
+  </DataNode>
+  <DataNode TextLabel="Fe2+" GraphId="f7cdc" Type="Metabolite">
+    <Graphics CenterX="403.2592356702287" CenterY="1208.5426617414682" Width="30.403264812576708" Height="31.61245465538151" ZOrder="32920" FontSize="12" Valign="Middle" ShapeType="Oval" Color="000099" />
+    <Xref Database="ChEBI" ID="CHEBI:29033" />
+  </DataNode>
+  <DataNode TextLabel="Fe2+" GraphId="fe2e4" Type="Metabolite">
+    <Graphics CenterX="403.0811186218831" CenterY="1319.0515675938852" Width="30.403264812576708" Height="31.61245465538151" ZOrder="32921" FontSize="12" Valign="Middle" ShapeType="Oval" Color="000099" />
+    <Xref Database="ChEBI" ID="CHEBI:29033" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="abc13" Type="Metabolite">
+    <Graphics CenterX="614.3364340546714" CenterY="1318.357408097664" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32922" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="c119e" Type="Metabolite">
+    <Graphics CenterX="152.05016689433694" CenterY="899.1224429135259" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32923" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="bd1dd" Type="Metabolite">
+    <Graphics CenterX="140.34019309170694" CenterY="919.0122635430155" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32924" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="c3a53" Type="Metabolite">
+    <Graphics CenterX="489.9915446998931" CenterY="631.7472118635573" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32925" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="c383e" Type="Metabolite">
+    <Graphics CenterX="501.6335808246877" CenterY="654.0624827995175" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32926" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="e4293" Type="Metabolite">
+    <Graphics CenterX="141.0588681810097" CenterY="722.8802167896644" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32927" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <DataNode TextLabel="Fe3+" GraphId="ba81d" Type="Metabolite">
+    <Graphics CenterX="158.44803074258581" CenterY="707.428656855346" Width="29.564486830153914" Height="28.656221616712003" ZOrder="32928" FontSize="12" Valign="Middle" ShapeType="Oval" Color="cc0000" />
+    <Xref Database="ChEBI" ID="CHEBI:29034" />
+  </DataNode>
+  <Interaction GraphId="id1746dfa1">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="761.3563876308694" Y="597.0873977955317" GraphRef="ceb6a" RelX="0.0" RelY="-1.0" />
+      <Point X="541.1569364809374" Y="448.4677337809499" GraphRef="ae8e1" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Anchor Position="0.542969096055119" Shape="None" GraphId="ce918" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id18d1f89a">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1364.5208536720506" Y="1087.7067467949335" GraphRef="a13da" RelX="-1.0" RelY="0.0" />
+      <Point X="1289.4723214346775" Y="1086.7854293754754" GraphRef="aa58e" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id197b1852">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="541.302783605727" Y="752.2573083503188" GraphRef="d85c0" RelX="0.5" RelY="-1.0" />
+      <Point X="720.7493917460956" Y="615.8373977955317" GraphRef="ceb6a" RelX="-1.0" RelY="0.5" ArrowHead="mim-necessary-stimulation" />
+      <Anchor Position="0.4274984538423341" Shape="None" GraphId="b63df" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2276ee69">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="383.8027836057265" Y="758.5073083503188" GraphRef="ce3d1" RelX="-1.0" RelY="-0.5" />
+      <Point X="335.18395964519607" Y="699.2071312578561" GraphRef="b16c2" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2a7a086d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="316.3076074972437" Y="1271.5504410143317" GraphRef="c7a20" RelX="1.0" RelY="-0.5" />
+      <Point X="403.1943282687804" Y="1253.0994420244037" GraphRef="a319d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id350f4ecc">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="277.66146316044046" Y="646.6005361611565" GraphRef="f4ad9" RelX="0.0" RelY="0.0" />
+      <Point X="147.71767059281208" Y="572.8447889268531" GraphRef="b4f3a" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id36a0a5ad">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="672.1565535177974" Y="757.5404133731498" GraphRef="c950c" RelX="0.0" RelY="-1.0" />
+      <Point X="741.0528896884825" Y="622.0873977955317" GraphRef="ceb6a" RelX="-0.5" RelY="1.0" ArrowHead="mim-necessary-stimulation" />
+      <Anchor Position="0.5383357322656814" Shape="None" GraphId="ee938" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id38847dc7">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="709.2459131006658" Y="684.6212150445781" GraphRef="ee938" RelX="0.0" RelY="0.0" />
+      <Point X="731.6733166787037" Y="700.8859118409686" GraphRef="ffcca" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3d0940c9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="234.5309381237525" Y="351.9226805379664" GraphRef="ffba7" RelX="1.0" RelY="0.0" />
+      <Point X="268.5205848370781" Y="351.44032921810697" GraphRef="e7b5d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Rhea" ID="RHEA:11148" />
+  </Interaction>
+  <Interaction GraphId="id3f96aca7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="293.17806891868895" Y="891.206497208599" GraphRef="dc443" RelX="0.0" RelY="1.0" />
+      <Point X="294.26524055269084" Y="931.5639401688853" GraphRef="e217e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4091ab31">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="356.9289940499791" Y="342.049879046358" GraphRef="d99fd" RelX="0.0" RelY="1.0" />
+      <Point X="408.252073751482" Y="381.2375249500998" />
+      <Point X="459.57515345298486" Y="420.58714520592963" GraphRef="d2588" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id446bf858">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="402.1650880875316" Y="1129.1071587892595" GraphRef="a2537" RelX="0.0" RelY="1.0" />
+      <Point X="403.2592356702287" Y="1192.7364344137775" GraphRef="f7cdc" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.3302195143796861" Shape="None" GraphId="ee160" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id48094f4a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="403.2592356702287" Y="1224.348889069159" GraphRef="f7cdc" RelX="0.0" RelY="1.0" />
+      <Point X="403.0811186218831" Y="1303.2453402661945" GraphRef="fe2e4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.3644086967035211" Shape="None" GraphId="a319d" />
+    </Graphics>
+    <Xref Database="Rhea" ID="28487" />
+  </Interaction>
+  <Interaction GraphId="id492737dd">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="196.36865821188138" Y="778.2589914218565" GraphRef="b3cb0" RelX="0.0" RelY="1.0" />
+      <Point X="196.2238283902319" Y="894.7126182773052" GraphRef="a0302" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-917807.2" />
+  </Interaction>
+  <Interaction GraphId="id4eaf3fd0">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="429.72401233363445" Y="851.8088433701816" GraphRef="e4a0f" RelX="0.0" RelY="0.0" />
+      <Point X="23.0" Y="794.0929342035002" />
+      <Point X="23.0" Y="736.3770250368188" />
+      <Point X="23.0" Y="691.4647733809768" />
+      <Point X="112.95077597801912" Y="646.5525217251347" GraphRef="f6619" RelX="-1.0" RelY="0.0" ArrowHead="mim-modification" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id500fa3b">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="553.3076074972437" Y="498.3004410143318" GraphRef="a3bc7" RelX="0.0" RelY="-1.0" />
+      <Point X="529.3487156295053" Y="400.0394937399804" GraphRef="a77eb" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.507146619442264" Shape="None" GraphId="ae8e1" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id518c3835">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="505.2507098502484" Y="1370.6603050021522" GraphRef="b1856" RelX="0.0" RelY="-1.0" />
+      <Point X="506.37613756798004" Y="1318.7142234377843" GraphRef="a1d32" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id573f9e35">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="618.0159311329858" Y="693.9380075148379" GraphRef="b63df" RelX="0.0" RelY="0.0" />
+      <Point X="618.2150439738891" Y="616.9226922274363" GraphRef="b2423" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5cdf7bc7">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="341.72736164369076" Y="326.24365171866725" GraphRef="d99fd" RelX="-1.0" RelY="0.0" />
+      <Point X="268.5205848370781" Y="367.75314729921183" GraphRef="a12aa" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.8577985690988063" Shape="None" GraphId="e7b5d" />
+    </Graphics>
+    <Xref Database="Rhea" ID="11149" />
+  </Interaction>
+  <Interaction GraphId="id66dd2fb0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="418.28275102817145" Y="1319.0515675938852" GraphRef="fe2e4" RelX="1.0" RelY="0.0" />
+      <Point X="599.5541906395945" Y="1318.3574080976637" GraphRef="abc13" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4859749926885739" Shape="None" GraphId="a1d32" />
+    </Graphics>
+    <Xref Database="Rhea" ID="28487" />
+  </Interaction>
+  <Interaction GraphId="id6d212071">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1353.1685902720542" Y="1169.1646743610872" GraphRef="c1b54" RelX="-1.0" RelY="0.0" />
+      <Point X="1291.2510957246632" Y="1169.2816924546976" GraphRef="d3ed5" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id875c38e1">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1354.100164880464" Y="1249.2388705688377" GraphRef="f23a7" RelX="-1.0" RelY="0.0" />
+      <Point X="1322.9252362328825" Y="1249.3147062205383" GraphRef="acd89" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id89b9b831">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="709.7186700767263" Y="448.4677337809499" GraphRef="ce918" RelX="0.0" RelY="0.0" />
+      <Point X="740.3303544908547" Y="392.7393688524145" GraphRef="e04da" RelX="-1.0" RelY="0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idab1a21c1">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="268.5205848370781" Y="396.4093689159238" GraphRef="a12aa" RelX="0.0" RelY="1.0" />
+      <Point X="444.3735210466965" Y="436.3933725336204" GraphRef="d2588" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="Rhea" ID="11150" />
+  </Interaction>
+  <Interaction GraphId="idb5657482">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="276.37906522534433" Y="592.5613653648522" GraphRef="c9d07" RelX="0.0" RelY="1.0" />
+      <Point X="277.66146316044046" Y="646.6005361611565" GraphRef="f4ad9" RelX="0.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb8d8dff8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="283.1095398287915" Y="1149.0455137590454" GraphRef="b5162" RelX="1.0" RelY="0.0" />
+      <Point X="402.5263969709496" Y="1150.118787286319" GraphRef="ee160" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idcd066efa">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="430.2500744941216" Y="894.3810519781821" GraphRef="d1e2a" RelX="0.5" RelY="-1.0" />
+      <Point X="428.8027836057265" Y="777.2573083503188" GraphRef="ce3d1" RelX="0.0" RelY="1.0" ArrowHead="mim-modification" />
+      <Anchor Position="0.36348059999913307" Shape="None" GraphId="e4a0f" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idcdae0195">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="864.3913774059233" Y="699.489344128404" GraphRef="f04cb" RelX="0.0" RelY="0.0" />
+      <Point X="911.2009377852751" Y="660.2494325881074" GraphRef="b446a" RelX="-1.0" RelY="0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide831d0e6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="243.12652286045784" Y="1066.8306296328956" GraphRef="a4620" RelX="1.0" RelY="0.0" />
+      <Point X="401.53965228372914" Y="1072.8965069901042" GraphRef="f3773" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida46f9064">
+    <Graphics ZOrder="12292" LineThickness="1.0">
+      <Point X="253.2238283902319" Y="931.7126182773052" GraphRef="a0302" RelX="1.0" RelY="0.0" />
+      <Point X="344.7500744941216" Y="931.3810519781821" GraphRef="d1e2a" RelX="-1.0" RelY="0.0" ArrowHead="mim-modification" />
+      <Anchor Position="0.4" Shape="None" GraphId="cba5e" />
+      <Anchor Position="0.4484114001121996" Shape="None" GraphId="e217e" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-917835.1" />
+  </Interaction>
+  <Interaction GraphId="id15b1591b">
+    <Graphics ZOrder="12296" LineThickness="1.0">
+      <Point X="294.26524055269084" Y="931.5639401688853" GraphRef="e217e" RelX="0.0" RelY="0.0" />
+      <Point X="386.54848397282916" Y="993.448142659076" GraphRef="ad42c" RelX="-1.0" RelY="0.0" ArrowHead="mim-modification" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-917835.1" />
+  </Interaction>
+  <Interaction GraphId="id1fad2559">
+    <Graphics ZOrder="12298" LineThickness="1.0">
+      <Point X="294.26524055269084" Y="931.5639401688853" GraphRef="e217e" RelX="0.0" RelY="0.0" />
+      <Point X="385.9918496726756" Y="1028.4591892681483" GraphRef="cedf5" RelX="-1.0" RelY="0.0" ArrowHead="mim-modification" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-917835.1" />
+  </Interaction>
+  <Interaction GraphId="ida3641399">
+    <Graphics ZOrder="12302" LineThickness="1.0">
+      <Point X="202.95077597801912" Y="646.5525217251347" GraphRef="f6619" RelX="1.0" RelY="0.0" />
+      <Point X="389.7274939340725" Y="646.6725578151892" GraphRef="a8a82" RelX="-1.0" RelY="-0.5" ArrowHead="mim-binding" />
+      <Anchor Position="0.2614924013420408" Shape="None" GraphId="c41f3" />
+      <Anchor Position="0.4" Shape="None" GraphId="f4ad9" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-917888.2" />
+  </Interaction>
+  <Interaction GraphId="idec3dec6b">
+    <Graphics ZOrder="12304" LineThickness="1.0">
+      <Point X="389.7274939340725" Y="671.1725578151892" GraphRef="a8a82" RelX="-1.0" RelY="0.5" />
+      <Point X="253.36865821188138" Y="741.2589914218565" GraphRef="b3cb0" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+      <Anchor Position="0.4" Shape="None" GraphId="b16c2" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-917987.1" />
+  </Interaction>
+  <Interaction GraphId="id60a813a7">
+    <Graphics ZOrder="12306" LineThickness="1.0">
+      <Point X="444.3934811265353" Y="577.6551494216712" GraphRef="cde2d" RelX="-1.0" RelY="0.0" />
+      <Point X="291.1613086404213" Y="578.2332545564961" GraphRef="c9d07" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.48776308632248994" Shape="None" GraphId="a7742" />
+    </Graphics>
+    <Xref Database="Rhea" ID="11149" />
+  </Interaction>
+  <Interaction GraphId="id5d3f45b7">
+    <Graphics ZOrder="12308" LineThickness="1.0">
+      <Point X="368.3076074972437" Y="523.3004410143318" GraphRef="bafaf" RelX="0.0" RelY="1.0" />
+      <Point X="369.6524837508082" Y="577.9371277664524" GraphRef="a7742" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-917933.2" />
+  </Interaction>
+  <Interaction GraphId="id861a9b5b">
+    <Graphics ZOrder="12310" LineThickness="1.0">
+      <Point X="508.3076074972437" Y="517.0504410143318" GraphRef="a3bc7" RelX="-1.0" RelY="0.5" />
+      <Point X="459.58816022632243" Y="523.6514122998129" GraphRef="fe3c7" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idaa317a87">
+    <Graphics ZOrder="12312" LineThickness="1.0">
+      <Point X="182.52438513838212" Y="189.48644772832665" GraphRef="a493d" RelX="1.0" RelY="0.0" />
+      <Point X="341.70740156385057" Y="189.49714473263916" GraphRef="fc152" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.49019607843137253" Shape="None" GraphId="f324c" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-917805.3" />
+  </Interaction>
+  <Interaction GraphId="id8ccd1e4a">
+    <Graphics ZOrder="12316" LineThickness="1.0">
+      <Point X="459.57515345298486" Y="452.1995998613111" GraphRef="d2588" RelX="0.0" RelY="1.0" />
+      <Point X="459.59511353282363" Y="561.8489220939805" GraphRef="cde2d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.6516393442622951" Shape="None" GraphId="fe3c7" />
+    </Graphics>
+    <Xref Database="Rhea" ID="28487" />
+  </Interaction>
+  <Interaction GraphId="idb392ff51">
+    <Graphics ZOrder="12318" LineThickness="1.0">
+      <Point X="260.0" Y="253.5" GraphRef="d132f" RelX="0.0" RelY="-1.0" />
+      <Point X="260.5552755430235" Y="189.4916913578916" GraphRef="f324c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb176a9fd">
+    <Graphics ZOrder="32788" LineThickness="1.0">
+      <Point X="356.9090339701389" Y="205.3033720603299" GraphRef="fc152" RelX="0.0" RelY="1.0" />
+      <Point X="356.9289940499791" Y="310.4374243909765" GraphRef="d99fd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.25" Shape="None" GraphId="ff4e7" />
+    </Graphics>
+    <Xref Database="Rhea" ID="29581" />
+  </Interaction>
+  <Interaction GraphId="id884bddae">
+    <Graphics ZOrder="32790" LineThickness="1.0">
+      <Point X="449.0" Y="260.75" GraphRef="f4fd7" RelX="-1.0" RelY="-0.5" />
+      <Point X="356.91402399009894" Y="231.58688514299155" GraphRef="ff4e7" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a941b">
+    <Graphics ZOrder="32838" LineThickness="1.0">
+      <Point X="906.0100399994433" Y="755.2573083503188" GraphRef="ae721" RelX="-0.5" RelY="-1.0" />
+      <Point X="801.9633835156433" Y="615.8373977955317" GraphRef="ceb6a" RelX="1.0" RelY="0.5" ArrowHead="mim-necessary-stimulation" />
+      <Anchor Position="0.4" Shape="None" GraphId="f04cb" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b92fa">
+    <Graphics ZOrder="32900" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1366.3766461149069" Y="1004.9540933655376" GraphRef="f2b51" RelX="-1.0" RelY="0.0" />
+      <Point X="1288.4409313001477" Y="1005.0365504517085" GraphRef="e260d" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4961dfef">
+    <Graphics ZOrder="32929" LineThickness="1.0">
+      <Point X="400.77409308775253" Y="1042.7873000765044" GraphRef="cedf5" RelX="0.0" RelY="1.0" />
+      <Point X="402.1650880875316" Y="1097.494704133878" GraphRef="a2537" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5503680430901683" Shape="None" GraphId="f3773" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-917811.1" />
+  </Interaction>
+  <GraphicalLine GraphId="d35c0">
+    <Graphics ZOrder="-8" LineStyle="Broken" LineThickness="1.0">
+      <Point X="-4.0" Y="292.0" />
+      <Point X="1134.0" Y="292.0" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e5233">
+    <Graphics ZOrder="32834" LineStyle="Broken" LineThickness="1.0">
+      <Point X="2.0" Y="91.0" />
+      <Point X="1138.0" Y="91.0" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e2cc2">
+    <Graphics ZOrder="32879" LineThickness="1.0">
+      <Point X="1201.442959508314" Y="240.570262366598" />
+      <Point X="1275.442959508317" Y="240.570262366598" ArrowHead="mim-conversion" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fbfcc">
+    <Graphics ZOrder="32880" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1202.7929350942518" Y="353.5702623665982" />
+      <Point X="1276.7929350942545" Y="353.5702623665982" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d528c">
+    <Graphics ZOrder="32881" LineThickness="1.0">
+      <Point X="1202.9577300161268" Y="313.5702623665982" />
+      <Point X="1276.9577300161295" Y="313.5702623665982" ArrowHead="mim-catalysis" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ae0d4">
+    <Graphics ZOrder="32882" LineThickness="1.0">
+      <Point X="1200.942959508314" Y="277.57026236659823" />
+      <Point X="1275.942959508317" Y="277.57026236659823" ArrowHead="mim-necessary-stimulation" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e9d13">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics ZOrder="32893" LineThickness="1.0">
+      <Point X="1202.9163918843747" Y="391.5538014612481" />
+      <Point X="1276.9163918843774" Y="391.5538014612481" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Dissociation" GraphId="a8efc">
+    <Graphics CenterX="384.90892139017467" CenterY="842.4839110897905" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Iron metabolism disorders outside of this pathway:" GraphId="adb0d">
+    <Graphics CenterX="1282.5288540807942" CenterY="938.9942291838427" Width="287.37427864797957" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Hereditary&#xA;Hemochromatosis&#xA;(type 1)" GraphId="b2423" Href="https://omim.org/entry/235200">
+    <Graphics CenterX="588.201863334304" CenterY="589.2649567045323" Width="120.05272255834052" Height="55.315471045807925" ZOrder="28672" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Apical side" GraphId="b26f3">
+    <Graphics CenterX="183.51378169790496" CenterY="292.0738699007718" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Associated with hepatic&#xA;iron accumulation due&#xA;to liver fibrosis" GraphId="c98cc">
+    <Graphics CenterX="1481.8138701588614" CenterY="1003.7732639847676" Width="137.67563527653164" Height="62.57473841554496" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Blood" GraphId="d3d26">
+    <Graphics CenterX="988.7738571327852" CenterY="450.8110204402341" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="18" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Intestine" GraphId="d52c1">
+    <Graphics CenterX="987.7826086956513" CenterY="183.86956521739125" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="18" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Low pH" GraphId="dc443">
+    <Graphics CenterX="293.17806891868895" CenterY="878.706497208599" Width="90.0" Height="25.0" ZOrder="28672" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="Storage" GraphId="fab60">
+    <Graphics CenterX="299.36496271159456" CenterY="339.98049227200124" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Basal side" GraphId="d1148">
+    <Graphics CenterX="183.51378169790496" CenterY="473.8026460859961" Width="90.0" Height="25.0" ZOrder="28674" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Hereditary&#xA;Hemochromatosis&#xA;(type 2a)" GraphId="ffcca" Href="https://omim.org/entry/602390">
+    <Graphics CenterX="791.699677957874" CenterY="714.7147796024205" Width="120.05272255834052" Height="55.315471045807925" ZOrder="32839" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Hereditary&#xA;Hemochromatosis&#xA;(type 2b)" GraphId="e04da" Href="https://omim.org/entry/613313">
+    <Graphics CenterX="800.356715770025" CenterY="378.91050109096255" Width="120.05272255834052" Height="55.315471045807925" ZOrder="32840" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Hereditary&#xA;Hemochromatosis&#xA;(type 3)" GraphId="b446a" Href="https://omim.org/entry/604250">
+    <Graphics CenterX="971.2272990644453" CenterY="646.4205648266554" Width="120.05272255834052" Height="55.315471045807925" ZOrder="32841" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Atransferrinemia" GraphId="b4f3a" Href="https://omim.org/entry/209300">
+    <Graphics CenterX="87.69130931364182" CenterY="572.8447889268531" Width="120.05272255834052" Height="55.315471045807925" ZOrder="32842" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Disease" GraphId="c2804">
+    <Graphics CenterX="1240.1577422231562" CenterY="138.056971462038" Width="90.0" Height="25.0" ZOrder="32884" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Catalysis" GraphId="d67fe">
+    <Graphics CenterX="1361.9577300161302" CenterY="313.5702623665982" Width="90.0" Height="25.0" ZOrder="32885" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Necessary&#xA;Stimulation" GraphId="e9312">
+    <Graphics CenterX="1361.9577300161302" CenterY="277.5698808968719" Width="90.0" Height="25.0" ZOrder="32887" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Gene" GraphId="e9ed5">
+    <Graphics CenterX="1240.1577422231562" CenterY="199.61552985630928" Width="90.0" Height="25.0" ZOrder="32888" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="Metabolite" GraphId="ec43d">
+    <Graphics CenterX="1240.1577422231562" CenterY="167.05697146203795" Width="90.0" Height="25.0" ZOrder="32889" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Conversion" GraphId="c6216">
+    <Graphics CenterX="1361.9577300161302" CenterY="240.5698808968711" Width="90.0" Height="25.0" ZOrder="32890" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Connection &#xA;to disease&#xA;" GraphId="a4d91">
+    <Graphics CenterX="1361.9577300161302" CenterY="353.5698808968716" Width="90.0" Height="25.0" ZOrder="32891" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Legend" GraphId="a8028">
+    <Graphics CenterX="1292.9577300161268" CenterY="102.98256129869873" Width="90.0" Height="25.0" ZOrder="32892" FillColor="ffffff" FontWeight="Bold" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Internalization" GraphId="df540">
+    <Graphics CenterX="1362.081186806253" CenterY="391.55341999152154" Width="90.0" Height="25.0" ZOrder="32894" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Neonatal&#xA;hemochromatosis" GraphId="e260d" Href="https://www.omim.org/entry/231100">
+    <Graphics CenterX="1228.4145700209774" CenterY="1005.0365504517086" Width="120.05272255834052" Height="55.315471045807925" ZOrder="32895" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Pulmonary&#xA;hemosiderosis" GraphId="aa58e" Href="https://www.omim.org/entry/178550">
+    <BiopaxRef>a54</BiopaxRef>
+    <Graphics CenterX="1229.4459601555072" CenterY="1086.7854293754754" Width="120.05272255834052" Height="55.315471045807925" ZOrder="32896" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="GRACILE&#xA;syndrome" GraphId="d3ed5" Href="https://www.omim.org/entry/603358">
+    <Comment>Also: Fellman disease </Comment>
+    <Graphics CenterX="1231.224734445493" CenterY="1169.2816924546976" Width="120.05272255834052" Height="55.315471045807925" ZOrder="32897" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Neurodegeneration with &#xA;brain iron&#xA;accumulation 1 " GraphId="acd89" Href="https://www.omim.org/entry/234200">
+    <Comment>Also:  Pantothenate kinase-associated neurodegeneration (PKAN) </Comment>
+    <BiopaxRef>bea</BiopaxRef>
+    <Graphics CenterX="1235.9147280394038" CenterY="1249.3147062205383" Width="174.02101638695814" Height="57.54857997010467" ZOrder="32898" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Associated with hemosiderin&#xA;accumulation in macrophages&#xA;due to repeated bleeding in&#xA;alveoli" GraphId="b0624">
+    <Graphics CenterX="1480.7885675391344" CenterY="1088.5116795303559" Width="137.67563527653164" Height="62.57473841554496" ZOrder="32901" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Mutation results in&#xA;deficiency of mitochondrial&#xA;complex III important in&#xA;the respiratory chain" GraphId="eef35">
+    <Graphics CenterX="1480.2722378422927" CenterY="1171.2341048751218" Width="137.67563527653164" Height="62.57473841554496" ZOrder="32902" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Reduces CoA and&#xA;4′-phosphopantetheine&#xA;levels" GraphId="aea90">
+    <Graphics CenterX="1480.2722378422918" CenterY="1248.7279218578108" Width="137.67563527653164" Height="62.57473841554496" ZOrder="32904" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape TextLabel="most cell types, including enterocyte precursor cells" GraphId="b2c01">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="553.6442538952213" CenterY="1023.5171275207206" Width="952.072222803165" Height="508.96574495855884" ZOrder="-10" FillColor="cccccc" FontSize="16" Valign="Bottom" Align="Right" ShapeType="RoundedRectangle" LineThickness="3.0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Intestinal epithelial cell" GraphId="f4feb">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="381.52114002557903" CenterY="391.3256232184784" Width="543.4814018076452" Height="244.07662624035282" ZOrder="-6" FillColor="cccccc" FontSize="16" Valign="Bottom" Align="Left" ShapeType="RoundedRectangle" LineThickness="3.0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Endosome" GraphId="a6e16">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="352.9984135435418" CenterY="1003.4511667243901" Width="357.3963181812312" Height="388.6368219399076" ZOrder="-2" FillColor="ccccff" FontSize="12" Valign="Bottom" ShapeType="Oval" LineThickness="3.0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Vesicle" GraphId="ced66">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="525.4691689008034" CenterY="354.9778820375335" Width="141.19749776586212" Height="76.46067917783739" ZOrder="16384" FillColor="ccccff" FontSize="12" ShapeType="Oval" LineThickness="3.0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a2ddf">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="1296.1768658185908" CenterY="249.1391639464838" Width="224.5" Height="331.351301736662" ZOrder="32883" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="f010e" GraphId="a0302" Style="Complex" />
+  <Group GroupId="bf5df" GraphId="a665b" Style="Complex" />
+  <Group GroupId="a3a8e" GraphId="a8a82" Style="Complex" />
+  <Group GroupId="b829a" GraphId="af723" Style="Complex" />
+  <Group GroupId="aff90" GraphId="b3cb0" Style="Complex">
+    <Comment>Localized in clathrin-coated pits (TTTT)</Comment>
+  </Group>
+  <Group GroupId="ec258" GraphId="c3c19" Style="Complex" />
+  <Group GroupId="c621f" GraphId="c9ffe" Style="Complex">
+    <BiopaxRef>fef</BiopaxRef>
+  </Group>
+  <Group GroupId="adaa4" GraphId="d1e2a" Style="Complex" />
+  <Group GroupId="b18d0" GraphId="e0adb" Style="Complex" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hemochromatosis type 2A</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0111027</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a54">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32644388</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Idiopathic Pulmonary Hemosiderosis</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pubmed.ncbi.nlm.nih.gov/32644388/</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kilian LaFreniere</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vikas Gupta</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iron homeostasis pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000590</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aca">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28303071</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Regulation of Iron Absorption and Homeostasis.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clin Biochem Rev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wallace DF</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d2f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17729393</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular mechanisms involved in intestinal iron absorption.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World J Gastroenterol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sharp P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Srai SK</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">native cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000003</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inborn error of metal metabolism pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001816</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a87">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physician's Guide to the Diagnosis, Treatment, and Follow-Up of Inherited Metabolic Diseases, Chapter 40</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN 978-3-642-40337-8</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physician's Guide to the Diagnosis, Treatment, and Follow-Up of Inherited Metabolic Diseases, Chapter 40.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN 978-3-642-40337-8</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blau, N.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duran, M.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibson, K.M.</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dionisi-Vici, C.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hemochromatosis type 1</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0111029</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hemochromatosis type 2B</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0111032</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a75">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23001032</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The catalytic center of ferritin regulates iron storage via Fe(II)-Fe(III) displacement</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pubmed.ncbi.nlm.nih.gov/23001032/</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kourosh Honarmand Ebrahimi</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eckhard Bill</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter-Leon Hagedoorn</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilfred R Hagen</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000004</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hemochromatosis type 3</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0111030</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enterocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000584</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iron metabolism disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2351</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fef">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33244127</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cryo-EM structures and functional characterization of homo- and heteropolymers of human ferritin variants</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pubmed.ncbi.nlm.nih.gov/33244127/</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jose Irimia-Dominguez</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen Sun</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kunpeng Li</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barry B Muhoberac</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grace I Hallinan</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Holly J Garringer</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bernardino Ghetti</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wen Jiang</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruben Vidal</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inborn error of metabolism pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001589</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ad5">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19907144</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role of hepcidin in iron metabolism.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acta Haematol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nemeth E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ganz T</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atransferrinemia</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050649</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered iron homeostasis pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001831</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iron uptake pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0002631</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ec0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29737252</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Does Ceruloplasmin Defend Against Neurodegenerative Diseases?</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curr Neuropharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang XP</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e6e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26642240</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A missense mutation in TFRC, encoding transferrin receptor 1, causes combined immunodeficiency.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jabara HH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boyden SE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chou J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramesh N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Massaad MJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benson H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bainter W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fraulino D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rahimov F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sieff C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu ZJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alshemmari SH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al-Ramadi BK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al-Dhekri H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arnaout R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abu-Shukair M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vatsayan A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silver E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahuja S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davies EG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sola-Visner M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ohsumi TK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrews NC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notarangelo LD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fleming MD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al-Herz W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kunkel LM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geha RS</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e2f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15849611</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slc11a2 is required for intestinal iron absorption and erythropoiesis but dispensable in placenta and liver.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gunshin H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fujiwara Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Custodio AO</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direnzo C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robine S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrews NC</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inherited metabolic disorder</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:655</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b30">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26456104</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HFE gene: Structure, function, mutations, and associated iron abnormalities.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edwards CQ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acton RT</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bea">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33952316</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Down regulation of the expression of mitochondrial phosphopantetheinyl-proteins in pantothenate kinase-associated neurodegeneration: pathophysiological consequences and therapeutic perspectives</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pubmed.ncbi.nlm.nih.gov/33952316/</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mónica Álvarez-Córdoba</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marta Talaverón-Rey</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Irene Villalón-García</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suleva Povea-Cabello</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan M Suárez-Rivero</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alejandra Suárez-Carrillo</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manuel Munuera-Cabeza</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joaquín J Salas</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">José A Sánchez-Alcázar</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="IAA biosynthesis II" Data-Source="WikiPathways" Version="WP3002_r118281" Author="[Anwesha, Eweitz]" Organism="Oryza sativa">
+  <Comment Source="WikiPathways-description">Developed by Gramene.org
+
+Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
+  <Attribute Key="reactome_id" Value="1119580" />
+  <Graphics BoardWidth="559.0" BoardHeight="442.0" />
+  <DataNode TextLabel="IAA-amino acid&#xA;hydrolase" GraphId="a7e7b" Type="Protein">
+    <Comment Source="Reactome">Catalyzes the convertion of indole-3-acetyl-ala into indole-3-acetate OR converts indole-3-acetyl-leu into indole-3-acetate.</Comment>
+    <Attribute Key="reactome_id" Value="2685726" />
+    <Graphics CenterX="279.0" CenterY="198.0" Width="116.0" Height="36.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Reactome" ID="2685726" />
+  </DataNode>
+  <DataNode TextLabel="H2O" GraphId="b9364" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29356" />
+    <Graphics CenterX="275.5" CenterY="127.0" Width="99.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15377" />
+  </DataNode>
+  <DataNode TextLabel="L-Leu" GraphId="b9df4" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29588" />
+    <Graphics CenterX="441.0" CenterY="304.0" Width="110.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15603" />
+  </DataNode>
+  <DataNode TextLabel="indole-3-acetate" GraphId="bc5b9" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1131161" />
+    <Graphics CenterX="274.5" CenterY="297.0" Width="113.0" Height="44.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16411" />
+  </DataNode>
+  <DataNode TextLabel="indole-3-acetyl-ala" GraphId="c8a38" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1130570" />
+    <Graphics CenterX="171.5" CenterY="58.0" Width="135.0" Height="44.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:71672" />
+  </DataNode>
+  <DataNode TextLabel="Ala" GraphId="eb35d" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="29432" />
+    <Graphics CenterX="118.0" CenterY="293.0" Width="104.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16977" />
+  </DataNode>
+  <DataNode TextLabel="indole-3-acetyl-leu" GraphId="f2467" Type="Metabolite">
+    <Attribute Key="reactome_id" Value="1131005" />
+    <Graphics CenterX="384.5" CenterY="56.0" Width="135.0" Height="44.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:71675" />
+  </DataNode>
+  <Interaction GraphId="a35a6">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="171.0" Y="80.0" GraphRef="c8a38" RelX="-0.007407407407407408" RelY="1.0" />
+      <Point X="171.0" Y="125.0" GraphRef="e583f" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1119777" />
+  </Interaction>
+  <Interaction GraphId="afed0">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="226.0" Y="127.0" GraphRef="b9364" RelX="-1.0" RelY="0.0" />
+      <Point X="171.0" Y="125.0" GraphRef="e583f" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1119777" />
+  </Interaction>
+  <Interaction GraphId="b68cd">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="171.0" Y="247.0" GraphRef="ea2f4" RelX="0.0" RelY="1.2199999999999989" />
+      <Point X="218.0" Y="297.0" GraphRef="bc5b9" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1119777" />
+  </Interaction>
+  <Interaction GraphId="b86a6">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="383.0" Y="259.0" GraphRef="fda81" RelX="0.0" RelY="1.3199999999999932" />
+      <Point X="330.0" Y="297.0" GraphRef="bc5b9" RelX="0.9823008849557522" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120261" />
+  </Interaction>
+  <Interaction GraphId="ba37e">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="337.0" Y="198.0" GraphRef="a7e7b" RelX="1.0" RelY="0.0" />
+      <Point X="383.0" Y="259.0" GraphRef="c5cc0" RelX="0.0" RelY="66.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120261" />
+  </Interaction>
+  <Interaction GraphId="c0e8a">
+    <Comment Source="Reactome">Indole-3-acetyl-leu is converted into indole-3-acetate by enzymatic ativity of IAA-amino acid hydrolase.</Comment>
+    <Attribute Key="reactome_id" Value="1120261" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="383.0" Y="127.0" />
+      <Point X="383.0" Y="259.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="df031" />
+      <Anchor Position="0.99" Shape="None" GraphId="fda81" />
+      <Anchor Position="0.5" Shape="None" GraphId="c5cc0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120261" />
+  </Interaction>
+  <Interaction GraphId="cccb9">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="324.0" Y="127.0" GraphRef="b9364" RelX="0.9797979797979798" RelY="0.0" />
+      <Point X="383.0" Y="127.0" GraphRef="df031" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120261" />
+  </Interaction>
+  <Interaction GraphId="d3994">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="384.0" Y="78.0" GraphRef="f2467" RelX="-0.007407407407407408" RelY="1.0" />
+      <Point X="383.0" Y="127.0" GraphRef="df031" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120261" />
+  </Interaction>
+  <Interaction GraphId="d3a6f">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="221.0" Y="198.0" GraphRef="a7e7b" RelX="-1.0" RelY="0.0" />
+      <Point X="171.0" Y="247.0" GraphRef="a19b9" RelX="0.0" RelY="61.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1119777" />
+  </Interaction>
+  <Interaction GraphId="d4143">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="171.0" Y="247.0" GraphRef="ea2f4" RelX="0.0" RelY="1.2199999999999989" />
+      <Point X="170.0" Y="293.0" GraphRef="eb35d" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1119777" />
+  </Interaction>
+  <Interaction GraphId="e049a">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="383.0" Y="259.0" GraphRef="fda81" RelX="0.0" RelY="1.3199999999999932" />
+      <Point X="386.0" Y="304.0" GraphRef="b9df4" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1120261" />
+  </Interaction>
+  <Interaction GraphId="edeb5">
+    <Comment Source="Reactome">Indole-3-acetyl-ala is converted into indole-3-acetate by enzymatic ativity of IAA-amino acid hydrolase.</Comment>
+    <Attribute Key="reactome_id" Value="1119777" />
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="171.0" Y="125.0" />
+      <Point X="171.0" Y="247.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="e583f" />
+      <Anchor Position="0.99" Shape="None" GraphId="ea2f4" />
+      <Anchor Position="0.5" Shape="None" GraphId="a19b9" />
+    </Graphics>
+    <Xref Database="Reactome" ID="1119777" />
+  </Interaction>
+  <Label TextLabel="cytosol" GraphId="f73b3" GroupRef="f6adb">
+    <Graphics CenterX="82.0" CenterY="159.5" Width="64.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="a2c4c" GroupRef="f6adb">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="269.5" CenterY="211.0" Width="519.0" Height="402.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="f6adb" GraphId="f49ce" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax />
+</Pathway>
+

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Protein repair" Data-Source="WikiPathways" Version="WP3800_r114843" Author="[ReactomeTeam, Ryanmiller]" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Reactive oxygen species (ROS) such as H2O2, superoxide anions and hydroxyl radicals interact with molecules in the cell causing damage that impairs cellular functions. Although cells have mechanisms to destroy ROS and repair the damage caused by ROS, it is considered to be a major factor in age-related diseases and the ageing process (Zhang &amp; Weissbach 2008, Kim et al. 2014). ROS-scavenging systems include enzymes such as peroxiredoxins, superoxide dismutases, catalases and glutathione peroxidases exist to minimise the potential damage. &lt;br&gt;&lt;br&gt;ROS reactions can also cause specific modifications to amino acid side chains that result in structural changes to proteins/enzymes. Methionine (Met) and cysteine (Cys) can be oxidised by ROS to sulfoxide and further oxidised to sulfone derivatives. Both free Met and protein-based Met are readily oxidized to form methionine sulphoxide (MetO) (Brot &amp; Weissbach 1991). Many proteins have been demonstrated to undergo such oxidation and as a consequence have altered function (Levine et al. 2000). Sulphoxide formation can be reversed by the action of the methionine sulphoxide reductase system (MSR) which catalyses the reduction of MetO to Met (Brot et al. 1981). This repair uses one ROS equivalent, so MSR proteins can act as catalytic antioxidants, removing ROS (Levine et al. 1996). Methionine oxidation results in a mixture of methionine (S)-S- and (R)-S-oxides of methionine, diastereomers which are reduced by MSRA and MSRB, respectively. MSRA can reduce both free and protein-based methionine-(S)-S-oxide, whereas MSRB is specific for protein-based methionine-(R)-S-oxide. Mammals typically have only one gene encoding MSRA, but at least three genes encoding MSRBs (Hansel et al. 2005). Although structurally distinct, MRSA and MRSB share a common three-step catalytic mechanism. In the first step, the MSR catalytic cysteine residue interacts with the MetO substrate, which leads to product release and formation of the sulfenic acid. In the second step, an intramolecular disulfide bridge is formed between the catalytic cysteine and the regenerating cysteine. In the final step, the disulfide bridge is reduced by an electron donor, the NADPH-dependent thioredoxin/TR system, leading to the regeneration of the MSR active site (Boschi-Muller et al. 2008).&lt;br&gt;&lt;br&gt;Beta-linked isoaspartyl (isoAsp) peptide bonds can arise spontaneously via succinimide-linked deamidation of asparagine (Asn) or dehydration of aspartate (Asp). Protein-L-isoaspartate (D-aspartate) O-methyltransferase (PCMT1, PIMT EC 2.1.1.77) transfers the methyl group from S-adenosyl-L-methionine (AdoMet) to the alpha side-chain carboxyl group of L-isoaspartyl and D-aspartatyl amino acids. The resulting methyl ester undergoes spontaneous transformation to L-succinimide, which spontaneously hydrolyses to generates L-aspartyl residues or L-isoaspartyl residues (Knorre et al. 2009). This repair process helps to maintain overall protein integrity.
+ View original pathway at [http://www.reactome.org/PathwayBrowser/#DIAGRAM=5676934 Reactome].</Comment>
+  <Comment Source="Reactome-Converter">Pathway is converted from Reactome ID: 5676934</Comment>
+  <Comment Source="Reactome-version">Reactome version: 75</Comment>
+  <Comment Source="Reactome Author">Reactome Author: Jupe, Steve</Comment>
+  <BiopaxRef>a49</BiopaxRef>
+  <Attribute Key="reactome_id" Value="5676934" />
+  <Graphics BoardWidth="762.0" BoardHeight="705.0" />
+  <DataNode TextLabel="L-Asp,isoAsp" GraphId="a22fa" Type="Complex">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="249.5" CenterY="399.0" Width="89.0" Height="22.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="a52a2a" />
+    <Xref Database="Reactome" ID="R-ALL-5687535" />
+  </DataNode>
+  <DataNode TextLabel="L-Asn " GraphId="a392c" Type="Metabolite" GroupRef="c2d28">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-ALL-5687524" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="240.0" CenterY="615.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:58048" />
+  </DataNode>
+  <DataNode TextLabel="L-Asp " GraphId="a8ab4" Type="Metabolite" GroupRef="c73b4">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-ALL-5687535" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="380.0" CenterY="595.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29991" />
+  </DataNode>
+  <DataNode TextLabel="MetOO" GraphId="ab981" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="631.5" CenterY="117.5" Width="141.0" Height="27.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:21363" />
+  </DataNode>
+  <DataNode TextLabel="H2O" GraphId="b03d6" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="624.0" CenterY="47.0" Width="42.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15377" />
+  </DataNode>
+  <DataNode TextLabel="L-Arg " GraphId="b34ad" Type="Metabolite" GroupRef="c2d28">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-ALL-5687524" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="240.0" CenterY="595.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:32682" />
+  </DataNode>
+  <DataNode TextLabel="L-methionine (R)-S-oxide " GraphId="b4476" Type="Metabolite" GroupRef="a9747">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-ALL-5676943" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="520.0" CenterY="655.0" Width="100.0" Height="40.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49032" />
+  </DataNode>
+  <DataNode TextLabel="L-methionine (S)-S-oxide " GraphId="b6338" Type="Metabolite" GroupRef="a9747">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-ALL-5676943" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="520.0" CenterY="615.0" Width="100.0" Height="40.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49031" />
+  </DataNode>
+  <DataNode TextLabel="TXN" GraphId="bddc2" Type="Protein">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="434.0" CenterY="308.0" Width="34.0" Height="22.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P10599" />
+  </DataNode>
+  <DataNode TextLabel="L-Arg,L-Asn" GraphId="ca7ec" Type="Complex">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="95.0" CenterY="400.0" Width="84.0" Height="22.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="a52a2a" />
+    <Xref Database="Reactome" ID="R-ALL-5687524" />
+  </DataNode>
+  <DataNode TextLabel="isoAsp " GraphId="cb363" Type="Metabolite" GroupRef="b90df">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-ALL-5687535" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="660.0" CenterY="615.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:85309" />
+  </DataNode>
+  <DataNode TextLabel="AdoMet" GraphId="cf29f" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="336.5" CenterY="451.0" Width="61.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15414" />
+  </DataNode>
+  <DataNode TextLabel="L-Asp,isoAsp" GraphId="d3374" Type="Complex">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="655.5" CenterY="397.0" Width="89.0" Height="22.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="a52a2a" />
+    <Xref Database="Reactome" ID="R-ALL-5687535" />
+  </DataNode>
+  <DataNode TextLabel="L-Asp " GraphId="d4865" Type="Metabolite" GroupRef="b90df">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-ALL-5687535" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="660.0" CenterY="595.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29991" />
+  </DataNode>
+  <DataNode TextLabel="isoAsp " GraphId="dff27" Type="Metabolite" GroupRef="c73b4">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-ALL-5687535" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="380.0" CenterY="615.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:85309" />
+  </DataNode>
+  <DataNode TextLabel="AdoHcy" GraphId="e2347" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="493.5" CenterY="447.0" Width="61.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16680" />
+  </DataNode>
+  <DataNode TextLabel="MSRB3 " GraphId="e37d1" Type="Protein" GroupRef="c0e19">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-HSA-5676939" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="100.0" CenterY="635.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q8IXL7" />
+  </DataNode>
+  <DataNode TextLabel="L-Met" GraphId="e5b0f" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="98.5" CenterY="172.0" Width="51.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:57844" />
+  </DataNode>
+  <DataNode TextLabel="2xHC-TXN" GraphId="e943f" Type="Protein">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="111.5" CenterY="309.0" Width="77.0" Height="24.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P10599" />
+  </DataNode>
+  <DataNode TextLabel="MSRA" GraphId="ea253" Type="Protein">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="250.5" CenterY="171.0" Width="43.0" Height="22.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9UJ68" />
+  </DataNode>
+  <DataNode TextLabel="MSRB2 " GraphId="ec334" Type="Protein" GroupRef="c0e19">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-HSA-5676939" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="100.0" CenterY="615.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9Y3D2" />
+  </DataNode>
+  <DataNode TextLabel="isoAsp" GraphId="ee835" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="340.0" CenterY="399.0" Width="56.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:85309" />
+  </DataNode>
+  <DataNode TextLabel="H2O" GraphId="eea3d" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="297.0" CenterY="100.0" Width="42.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15377" />
+  </DataNode>
+  <DataNode TextLabel="L-methionine&#xA;(R)-S-oxide" GraphId="ef55a" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="562.0" CenterY="231.0" Width="182.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49032" />
+  </DataNode>
+  <DataNode TextLabel="MSRBs" GraphId="f6ffd" Type="Complex">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="291.0" CenterY="199.0" Width="50.0" Height="22.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="a52a2a" />
+    <Xref Database="Reactome" ID="R-HSA-5676939" />
+  </DataNode>
+  <DataNode TextLabel="H2O2" GraphId="f83b5" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="98.0" CenterY="60.0" Width="50.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16240" />
+  </DataNode>
+  <DataNode TextLabel="MSRB1 " GraphId="f8786" Type="Protein" GroupRef="c0e19">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Attribute Key="complex_id" Value="R-HSA-5676939" />
+    <Attribute Key="copies_num" Value="1" />
+    <Graphics CenterX="100.0" CenterY="595.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9NZV6" />
+  </DataNode>
+  <DataNode TextLabel="MetAsp" GraphId="f8abc" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="494.5" CenterY="397.0" Width="61.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:31882" />
+  </DataNode>
+  <DataNode TextLabel="L-methionine&#xA;(S)-S-oxide" GraphId="fa961" Type="Metabolite">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="432.0" CenterY="198.0" Width="164.0" Height="28.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49031" />
+  </DataNode>
+  <DataNode TextLabel="MetO" GraphId="fd62e" Type="Complex">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="464.5" CenterY="131.0" Width="41.0" Height="22.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="a52a2a" />
+    <Xref Database="Reactome" ID="R-ALL-5676943" />
+  </DataNode>
+  <DataNode TextLabel="PCMT1" GraphId="fd92d" Type="Protein">
+    <Attribute Key="cellular_location" Value="cytosol" />
+    <Graphics CenterX="406.0" CenterY="383.0" Width="50.0" Height="22.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P22061" />
+  </DataNode>
+  <Interaction GraphId="a2eb0">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="238.0" Y="131.0" GraphRef="b34f6" RelX="0.6999999999999886" RelY="0.0" />
+      <Point X="276.0" Y="100.0" GraphRef="eea3d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676912" />
+  </Interaction>
+  <Interaction GraphId="a31a5">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="238.0" Y="131.0" GraphRef="b34f6" RelX="0.6999999999999886" RelY="0.0" />
+      <Point X="444.0" Y="131.0" GraphRef="fd62e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676912" />
+  </Interaction>
+  <Interaction GraphId="a5356">
+    <Comment Source="Reactome">Beta-linked isoaspartyl (isoAsp) peptide bonds can arise spontaneously via succinimide-linked deamidation of asparagine (Asn) or dehydration of aspartate (Asp). The peptide bond becomes linked through the beta-carboxyl group of the Asp or Asn side-chain, leaving the alpha-carboxyl group of the original peptide bond free. The symmetry of the resulting succinimide intermediate leads to two possible products, either aspartate or isoaspartate, which is an atypical beta-amino acid. The mechanism favours approximately 7:3 the 'iso' form (Bornstein &amp; Balian 1977, Aswad 1984, Murray &amp; Clarke 1984, Di Donato et al. 1986). Formation of the succinimidyl intermediate and its cleavage occur spontaneously. The propensity to form isoaspartyl linkages depends on the residues flanking the asparaginyl site, with small resdiues such as Gly favouring linkage formation, as well as on the local conformation and flexibility of the polypeptide chain (Clarke 1987, Galletti et al. 1989).&lt;br&gt;&lt;br&gt;These reactions are a significant source of protein damage under physiological conditions and represent both a mechanism that can usefully determine the lifetime of a protein (Robinson et al. 1970) and a component of the pathological process of ageing (Clarke 2003).</Comment>
+    <BiopaxRef>a48</BiopaxRef>
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="143.0" Y="398.0" />
+      <Point X="199.0" Y="398.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="bf1fa" />
+      <Anchor Position="0.99" Shape="None" GraphId="a6337" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5685345" />
+  </Interaction>
+  <Interaction GraphId="a7a05">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="417.0" Y="308.0" GraphRef="bddc2" RelX="-1.0" RelY="0.0" />
+      <Point X="349.0" Y="242.0" GraphRef="b2862" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676940" />
+  </Interaction>
+  <Interaction GraphId="a9d08">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="559.0" Y="63.0" GraphRef="a05cc" RelX="0.5900000000000318" RelY="0.00999999999999801" />
+      <Point X="603.0" Y="47.0" GraphRef="b03d6" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676926" />
+  </Interaction>
+  <Interaction GraphId="ab431">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="350.0" Y="198.0" GraphRef="fa961" RelX="-1.0" RelY="0.0" />
+      <Point X="349.0" Y="242.0" GraphRef="b2862" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676940" />
+  </Interaction>
+  <Interaction GraphId="ab5bd">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="605.0" Y="397.0" GraphRef="db8e6" RelX="0.7699999999999818" RelY="0.0" />
+      <Point X="611.0" Y="397.0" GraphRef="d3374" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5687520" />
+  </Interaction>
+  <Interaction GraphId="adf60">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="123.0" Y="172.0" GraphRef="e5b0f" RelX="0.9607843137254902" RelY="0.0" />
+      <Point X="168.0" Y="131.0" GraphRef="ae0b2" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676912" />
+  </Interaction>
+  <Interaction GraphId="af839">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="434.0" Y="423.0" GraphRef="b4c90" RelX="0.4900000000000091" RelY="0.0" />
+      <Point X="463.0" Y="447.0" GraphRef="e2347" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676966" />
+  </Interaction>
+  <Interaction GraphId="b0583">
+    <Comment Source="Reactome">The major oxidation product of protein-bound methionine is methionine sulfoxide. This can be further oxidised to methionine sulfone (Nielsen et al. 1985). </Comment>
+    <BiopaxRef>cb3</BiopaxRef>
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="500.0" Y="62.0" />
+      <Point X="559.0" Y="63.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="b45e1" />
+      <Anchor Position="0.99" Shape="None" GraphId="a05cc" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676926" />
+  </Interaction>
+  <Interaction GraphId="b8bdf">
+    <Comment Source="Reactome">Methionine Sulfoxide Reductase A (MSRA) is a peptide-methionine-(S)-S-oxide reductase (1.8.4.11.) (Kim &amp; Gladyshev 2007, Sreekumar et al. 2011) that can reduce both free and protein-based methionine-(S)-S-oxide (Brot et al. 1981, Boschi-Muller et al. 2008). It has been implicated in processes ranging from protection of cells against oxidative damage to the maintenance of cellular homeostasis, prevention of disease and extension of longevity (Kim &amp; Gladyshev 2007, Brennan &amp; Kantorow 2009). MRSA has little or no target specificity and is therefore likely to act on surface-exposed methionine sulphoxide residues of many proteins (Weissbach et al. 2002, Kantorow et al. 2012).</Comment>
+    <BiopaxRef>cbe</BiopaxRef>
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="349.0" Y="242.0" />
+      <Point X="171.0" Y="242.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="b2862" />
+      <Anchor Position="0.99" Shape="None" GraphId="b05f3" />
+      <Anchor Position="0.5" Shape="None" GraphId="dd20a" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676940" />
+  </Interaction>
+  <Interaction GraphId="b9e98">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="434.0" Y="423.0" GraphRef="b4c90" RelX="0.4900000000000091" RelY="0.0" />
+      <Point X="464.0" Y="397.0" GraphRef="f8abc" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676966" />
+  </Interaction>
+  <Interaction GraphId="bb8c4">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="524.0" Y="397.0" GraphRef="f8abc" RelX="0.9672131147540983" RelY="0.0" />
+      <Point X="528.0" Y="397.0" GraphRef="fc7d2" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5687520" />
+  </Interaction>
+  <Interaction GraphId="c0384">
+    <Comment Source="Reactome">Methionine Sulfoxide Reductase B (MSRBs) are able to reduce methyl-(R)-S-oxide to methionine (Grimaud et al. 2001). They are specific for the reduction of protein-based methyl-(R)-S-oxide, reducing free methyl-(R)-S-oxide with very low efficiency (Lee et al. 2009). Mammals have at least 3 MSRB genes (Kryukov et al. 1999, Huang et al. 1999, Jung et al. 2002, Kim &amp; Gladyshev 2004). They are ubiquitously expressed, no clear substrate specificities are known, all three contain a zinc atom and can use thioredoxin as an in vivo reducing agent (Kim &amp; Gladyshev 2007).</Comment>
+    <BiopaxRef>d47</BiopaxRef>
+    <BiopaxRef>c7d</BiopaxRef>
+    <BiopaxRef>b49</BiopaxRef>
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="397.0" Y="256.0" />
+      <Point X="169.0" Y="256.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="a8fdb" />
+      <Anchor Position="0.99" Shape="None" GraphId="a575f" />
+      <Anchor Position="0.5" Shape="None" GraphId="f4e69" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676917" />
+  </Interaction>
+  <Interaction GraphId="c5991">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="406.0" Y="394.0" GraphRef="fd92d" RelX="0.0" RelY="1.0" />
+      <Point X="407.0" Y="422.0" GraphRef="ecf9c" RelX="-2.5" RelY="-1.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676966" />
+  </Interaction>
+  <Interaction GraphId="cab1d">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="434.0" Y="297.0" GraphRef="bddc2" RelX="0.0" RelY="-1.0" />
+      <Point X="397.0" Y="256.0" GraphRef="a8fdb" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676917" />
+  </Interaction>
+  <Interaction GraphId="cbf0c">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="366.0" Y="451.0" GraphRef="cf29f" RelX="0.9672131147540983" RelY="0.0" />
+      <Point X="385.0" Y="423.0" GraphRef="ba899" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676966" />
+  </Interaction>
+  <Interaction GraphId="d43af">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="368.0" Y="399.0" GraphRef="ee835" RelX="1.0" RelY="0.0" />
+      <Point X="385.0" Y="423.0" GraphRef="ba899" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676966" />
+  </Interaction>
+  <Interaction GraphId="d6289">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="171.0" Y="242.0" GraphRef="b05f3" RelX="-1.7800000000000011" RelY="0.0" />
+      <Point X="123.0" Y="172.0" GraphRef="e5b0f" RelX="0.9607843137254902" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676940" />
+  </Interaction>
+  <Interaction GraphId="d6847">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="316.0" Y="199.0" GraphRef="f6ffd" RelX="1.0" RelY="0.0" />
+      <Point X="292.0" Y="255.0" GraphRef="f4e69" RelX="9.0" RelY="-1.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676917" />
+  </Interaction>
+  <Interaction GraphId="d6c55">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="123.0" Y="60.0" GraphRef="f83b5" RelX="1.0" RelY="0.0" />
+      <Point X="500.0" Y="62.0" GraphRef="b45e1" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676926" />
+  </Interaction>
+  <Interaction GraphId="dbbee">
+    <Comment Source="Reactome">The methyl ester produced by the action of PCMT1 on L-isoaspartyl and D-aspartatyl amino acids subsequently undergoes spontaneous transformation to L-succinimide, which further spontaneously hydrolyses to generates L-aspartyl residues or L-isoaspartyl residues (Murray &amp; Clarke 1986, Johnson et al. 1987, Galletti et al. 1988, Lowenson &amp; Clarke 1992). This repair process helps to maintain overall protein integrity. When PCMT1 is not present in cells, the abnormal aspartyl residues accumulate. Pcmt1 knockout mice exhibit fatal progressive epilepsy (Yamamoto et al. 1998).</Comment>
+    <BiopaxRef>a48</BiopaxRef>
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="528.0" Y="397.0" />
+      <Point X="605.0" Y="397.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="fc7d2" />
+      <Anchor Position="0.99" Shape="None" GraphId="db8e6" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5687520" />
+  </Interaction>
+  <Interaction GraphId="dbf47">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="464.0" Y="120.0" GraphRef="fd62e" RelX="-0.024390243902439025" RelY="-1.0" />
+      <Point X="500.0" Y="62.0" GraphRef="b45e1" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676926" />
+  </Interaction>
+  <Interaction GraphId="de1b6">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="169.0" Y="256.0" GraphRef="a575f" RelX="-2.280000000000001" RelY="0.0" />
+      <Point X="123.0" Y="172.0" GraphRef="e5b0f" RelX="0.9607843137254902" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676917" />
+  </Interaction>
+  <Interaction GraphId="e58d1">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="171.0" Y="242.0" GraphRef="b05f3" RelX="-1.7800000000000011" RelY="0.0" />
+      <Point X="149.0" Y="309.0" GraphRef="e943f" RelX="0.974025974025974" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676940" />
+  </Interaction>
+  <Interaction GraphId="e7a62">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="199.0" Y="398.0" GraphRef="a6337" RelX="0.5600000000000023" RelY="0.0" />
+      <Point X="205.0" Y="399.0" GraphRef="a22fa" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5685345" />
+  </Interaction>
+  <Interaction GraphId="e89fc">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="559.0" Y="63.0" GraphRef="a05cc" RelX="0.5900000000000318" RelY="0.00999999999999801" />
+      <Point X="561.0" Y="117.0" GraphRef="ab981" RelX="-1.0" RelY="-0.037037037037037035" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676926" />
+  </Interaction>
+  <Interaction GraphId="e8bc4">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="471.0" Y="231.0" GraphRef="ef55a" RelX="-1.0" RelY="0.0" />
+      <Point X="397.0" Y="256.0" GraphRef="a8fdb" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676917" />
+  </Interaction>
+  <Interaction GraphId="e9121">
+    <Comment Source="Reactome">Methionine can be oxidised by naturally-occurring reactive oxygen species (ROS) such as hydrogen peroxide (H2O2) to form methionine sulfoxide (MetO), and by further oxidation to a methyl sulfone derivative (MetOO). Oxidation of methionine results in a mixture of the diastereomers methionine-(S)-S-oxide and methionine-(R)-S-oxide (Lavine 1947, Kim et al. 2014).</Comment>
+    <BiopaxRef>d89</BiopaxRef>
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="168.0" Y="131.0" />
+      <Point X="238.0" Y="131.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="ae0b2" />
+      <Anchor Position="0.99" Shape="None" GraphId="b34f6" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676912" />
+  </Interaction>
+  <Interaction GraphId="ee653">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="123.0" Y="60.0" GraphRef="f83b5" RelX="1.0" RelY="0.0" />
+      <Point X="168.0" Y="131.0" GraphRef="ae0b2" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676912" />
+  </Interaction>
+  <Interaction GraphId="f1cd1">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="169.0" Y="256.0" GraphRef="a575f" RelX="-2.280000000000001" RelY="0.0" />
+      <Point X="149.0" Y="309.0" GraphRef="e943f" RelX="0.974025974025974" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676917" />
+  </Interaction>
+  <Interaction GraphId="f4f45">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="137.0" Y="400.0" GraphRef="ca7ec" RelX="1.0" RelY="0.0" />
+      <Point X="143.0" Y="398.0" GraphRef="bf1fa" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5685345" />
+  </Interaction>
+  <Interaction GraphId="fb7e9">
+    <Comment Source="Reactome">Protein-L-isoaspartate (D-aspartate) O-methyltransferase (PCMT1, PIMT EC 2.1.1.77) transfers the methyl group from S-adenosyl-L-methionine (AdoMet) to the alpha side-chain carboxyl group of L-isoaspartyl and D-aspartatyl amino acids (Murray &amp; Clarke 1986, Johnson et al. 1987, Galletti et al. 1988, Lowenson &amp; Clarke 1992, The resulting methyl ester (MetAsp) undergoes spontaneous transformation to L-succinimide, which spontaneously hydrolyses to generates L-aspartyl residues or L-isoaspartyl residues. This repair process helps to maintain overall protein integrity. When PCMT1 is not present in cells, the abnormal aspartyl residues accumulate. Pcmt1 knockout mice exhibit fatal progressive epilepsy (Yamamoto et al. 1998).</Comment>
+    <BiopaxRef>a98</BiopaxRef>
+    <BiopaxRef>a6e</BiopaxRef>
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="385.0" Y="423.0" />
+      <Point X="434.0" Y="423.0" />
+      <Anchor Position="0.0" Shape="None" GraphId="ba899" />
+      <Anchor Position="0.99" Shape="None" GraphId="b4c90" />
+      <Anchor Position="0.5" Shape="None" GraphId="ecf9c" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676966" />
+  </Interaction>
+  <Interaction GraphId="ffacc">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="271.0" Y="171.0" GraphRef="ea253" RelX="0.9534883720930233" RelY="0.0" />
+      <Point X="252.0" Y="241.0" GraphRef="dd20a" RelX="-8.0" RelY="-1.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="R-HSA-5676940" />
+  </Interaction>
+  <Label TextLabel="cytosol" GraphId="a22aa" GroupRef="b4736">
+    <Graphics CenterX="58.0" CenterY="495.5" Width="64.0" Height="33.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="acf42" GroupRef="b4736">
+    <Graphics CenterX="371.5" CenterY="267.5" Width="721.0" Height="519.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="a9747" GraphId="a082c">
+    <Attribute Key="complex_id" Value="R-ALL-5676943" />
+  </Group>
+  <Group GroupId="c0e19" GraphId="d211f">
+    <Attribute Key="complex_id" Value="R-HSA-5676939" />
+  </Group>
+  <Group GroupId="c73b4" GraphId="da757">
+    <Attribute Key="complex_id" Value="R-ALL-5687535" />
+  </Group>
+  <Group GroupId="b4736" GraphId="e4013" Style="Group" />
+  <Group GroupId="c2d28" GraphId="e5435">
+    <Attribute Key="complex_id" Value="R-ALL-5687524" />
+  </Group>
+  <Group GroupId="b90df" GraphId="e5c42">
+    <Attribute Key="complex_id" Value="R-ALL-5687535" />
+  </Group>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cbe">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10452521</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular cloning and functional expression of a human peptide methionine sulfoxide reductase (hMsrA).</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuschel L, Hansel A, Schönherr R, Weissbach H, Brot N, Hoshi T, Heinemann SH.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d89">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20259080</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The formation, resolution, and optical properties of the diastereoisomeric sulfoxides derived from L-methionine.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LAVINE TF.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cb3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3933547</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactions of proteins with oxidizing lipids. 1. Analytical measurements of lipid oxidation and of amino acid losses in a whey protein-methyl linolenate model system.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nielsen HK, Löliger J, Hurrell RF.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a6e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7592526</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Characterization of three cDNAs encoding two isozymes of an isoaspartyl protein carboxyl methyltransferase from human erythroid leukemia cells.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Takeda R, Mizobuchi M, Murao K, Sato M, Takahara J.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a98">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3624258</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partial repair of deamidation-damaged calmodulin by protein carboxyl methyltransferase.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnson BA, Langmack EL, Aswad DW.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a49">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23648414</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methionine oxidation and reduction in proteins.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim G, Weiss SJ, Levine RL.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d47">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10567350</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New mammalian selenocysteine-containing proteins identified with an algorithm that searches for selenocysteine insertion sequence elements.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kryukov GV, Kryukov VM, Gladyshev VN.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c7d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10375640</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identification, expression and chromosome localization of a human gene encoding a novel protein with similarity to the pilB family of transcriptional factors (pilin) and to bacterial peptide methionine sulfoxide reductases.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang W, Escribano J, Sarfarazi M, Coca-Prados M.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peptide and protein metabolic process</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001756</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b49">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12220640</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activity, tissue distribution and site-directed mutagenesis of a human peptide methionine sulfoxide reductase of type B: hCBS1.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jung S, Hansel A, Kasperczyk H, Hoshi T, Heinemann SH.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a48">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3440704</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propensity for spontaneous succinimide formation from aspartyl and asparaginyl residues in cellular proteins.</bp:TITLE>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clarke S.</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+

@@ -1,51 +1,81 @@
-Label	Type	ID	Database	
-LCK	GeneProduct	ENSBTAG00000012695	Ensembl
-ZAP70	GeneProduct	ENSBTAG00000005892	Ensembl
-PIP2	Metabolite	HMDB0010059	HMDB
-LAT / SLP-76 scaffold complex	Protein		
-PIP3	Metabolite	HMDB0010147	HMDB
-PLCG1	GeneProduct	ENSBTAG00000017584	Ensembl
-ITK	Protein	ENSBTAG00000000306	Ensembl
-AKT1	GeneProduct	ENSBTAG00000017636	Ensembl
-PRKCA	GeneProduct	ENSBTAG00000001061	Ensembl
-PTPN6	GeneProduct	ENSBTAG00000020294	Ensembl
-P13K	Protein		
-Ca2+	Metabolite	HMDB0000464	HMDB
-Bcl-xL	Protein		
-Erk	Protein		
-NFKB1	GeneProduct	ENSBTAG00000020270	Ensembl
-AP-1 	Protein		
-NFATC2	Protein	ENSBTAG00000018270	Ensembl
-RASA1	GeneProduct	ENSBTAG00000009565	Ensembl
-Ras-GTP	Protein		
-DAG	Metabolite	HMDB0007223	HMDB
-IP3	Metabolite	HMDB0001059	HMDB
-Calmodulin	Protein		
-RASGRP1	GeneProduct	ENSBTAG00000021872	Ensembl
-IL2	GeneProduct	ENSBTAG00000020883	Ensembl
-PPP3CA	GeneProduct	ENSBTAG00000016005	Ensembl
-NFKBIA	Protein	ENSBTAG00000016683	Ensembl
-IKK complex	GeneProduct		
-PTEN	Protein	ENSBTAG00000009498	Ensembl
-PDK1	GeneProduct	ENSBTAG00000016836	Ensembl
-Ras-GDP	Protein		
-PIP2	Metabolite	HMDB0010059	HMDB
-MHC peptide	Complex		
-B7-1/ B7-2	Complex		
-B7-1/ B7-2	Complex		
-PD-L1	Complex		
-NFATC2	Protein	ENSBTAG00000018270	Ensembl
-CSNK1A1	GeneProduct	ENSBTAG00000005326	Ensembl
-GSK3A	GeneProduct	ENSBTAG00000020756	Ensembl
-GSK3B	GeneProduct	ENSBTAG00000048057	Ensembl
-DYRK1A	GeneProduct	ENSBTAG00000001771	Ensembl
-DYRK2	GeneProduct	ENSBTAG00000007256	Ensembl
-NRON	GeneProduct	ENSBTAG00000044315	Ensembl
-FYN	GeneProduct	ENSBTAG00000011851	Ensembl
-TCRA	GeneProduct		
-TCRB	GeneProduct		
-CD8A	GeneProduct	ENSBTAG00000021141	Ensembl
-CD8B	GeneProduct	ENSBTAG00000008956	Ensembl
-CD28	GeneProduct	ENSBTAG00000007445	Ensembl
-CTLA4	GeneProduct	ENSBTAG00000013170	Ensembl
-PDCD1	GeneProduct	ENSBTAG00000011543	Ensembl
+Label	Type	ID	Database	Comment
+LCK	GeneProduct	ENSBTAG00000012695	Ensembl	Cytoplasmic tyrosine kinase - Lck in its inactive state is bound to CD4/CD8 cytoplasmic tail and it's terminal tyrosine is phosphorylated. Dephosphorylation of this amino acid (by tyrosine phosphotase CD45 -- CD4/CD8 binding its ligand) causes a conformations change in LcK and it becomes an active tyrosine kinase.
+
+LcK is activated when the extracellular part of CD8 binds its (MHC:peptide) ligand. Lck is a Src family kinase that is constitutively expressed. It phosphorylates all TCR ITAMS.
+
+Rephosphorylation of this carboxyl-terminal tyrosine by Csk returns Lck to the inactive state.
+
+Basically, Lck is bound to CD8. When CD8 binds MHC:peptide, Lck gets activated and can phosphorylate nearby ITAMs.</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:3932
+ZAP70	GeneProduct	ENSBTAG00000005892	Ensembl	ZAP-70 is kinase that becomes activated after phosphorylation. It contains to tandem SH2 domains that bind to phosphorylated ITAMs on the TCR complex cytoplasmic tails. 
+
+It docks at the TCR (requires both ITAM positions to be phosphorylated), is then phosphorylated by Lck, and then recruits other signaling proteins.
+
+</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:7535
+PIP2	Metabolite	HMDB0010059	HMDB	PIP2 is a membrane lipid. 
+LAT / SLP-76 scaffold complex	Protein			Linker for Activation of T cells - LAT is a transmembrane scaffold protein. It can be phosphorylated by Zap-70.
+
+This scaffold includes LAT, SLP-76, Grb2, SOS, GADS
+PIP3	Metabolite	HMDB0010147	HMDB	PIP3 is a membrane lipid generated from PIP2 by the enzyme P13K. PIP3 has a PH binding domain that can be recognized by PLC-g, Itk, and Atk.
+PLCG1	GeneProduct	ENSBTAG00000017584	Ensembl	PLC-g is a phospholipase, a class of enzymes that cleave phospholipids just before the phosphate group.
+
+PLC-g is initially brought to the plasma membrane by binding of its PH domain to membrane lipid PIP3. PLC-g then binds to LAT and SLP-76 and can be activated by Itk mediated phosphorylation.
+
+PLC-g ultimately produces 3 different second messangers to activate 3 paths leading to different TFs that lead to IL-2 transcription</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:5335
+ITK	Protein	ENSBTAG00000000306	Ensembl	Itk is a membrane associated tryosine kinase. It binds to phosphorylated LAT and SLP-76 scafflods. From here is activates PLC-g by phosphorylation</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:3702
+AKT1	GeneProduct	ENSBTAG00000017636	Ensembl	Akt is a serine/threonine-specific protein kinase that plays a key role in many cellular processes such as glucose metabolism, apoptosis, cell proliferation, transcription, and cell migration.
+
+Akt is recruited to the membrane by PIP3. Here Akt can be activated / phosphorylated (indirectly) by P13K and can then phosphorylate a variety of downstream pathways. Noteably, Akt promotes cell survival by inhibiting the cell death pathway and stimulates cell metabolism by increasing the utilization of glucose.</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:207
+PRKCA	GeneProduct	ENSBTAG00000001061	Ensembl	Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:5578
+PTPN6	GeneProduct	ENSBTAG00000020294	Ensembl	SHP-1/2 are tyrosine phosphatases. Here, SHP removes phosphates from PIP3 reverting it back to PIP2. (reverses the work of tyrosine kinase P13K)
+
+SHP is recruited to the PD-1 cytoplasmic tail when PD-1 ITIMs are phosphorylated.</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:5777
+P13K	Protein			P13K converts membrane lipid PIP2 to PIP3 by adding a phosphate. P13K activity is dependent upon CD28 co-stimulation because P13K can bind to phosphorylated ITIMs on CD28.
+
+PI3K can also bind ICOS
+Ca2+	Metabolite	HMDB0000464	HMDB	Calcium ions are second messengers, small-molecule biochemical mediators. Calcium is released from the ER by IP3. It diffuses throughough the cell enabling the signal to activate a variety of taget proteins. A certain calcium ion concentration must be acheived before targets can be activated.
+Bcl-xL	Protein			Bcl-xL is a transmembrane protein in the mitochondria. It is a anti-apoptosis protein because it prevents release of cytochrome c from the mitochondria.
+Erk	Protein			Erk is MAP kinase that is phosphorylated by MAPKK, Mek. SHP's and PP2A may also dephosphorylate Erk to some extent.
+NFKB1	GeneProduct	ENSBTAG00000020270	Ensembl	</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:4790
+AP-1 	Protein			A heterodimeric protein composed of proteins belonging to the c-Fos, c-Jun, ATF and JDP families
+NFATC2	Protein	ENSBTAG00000018270	Ensembl	</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:4773
+RASA1	GeneProduct	ENSBTAG00000009565	Ensembl	Ras-GAP rapidly downregulates the activity of Ras by converting its bound GTP to GDP</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:5921
+Ras-GTP	Protein			Ras is a small G protein of GTPase. It is located in the membrane, and it acts as a molecular switch. It is inactive when bound to GDP, but becomes active when GDP is switched for GTP. Binding the GTP induces a conformational change in Ras thus enabling it to bind to and do other things.
+DAG	Metabolite	HMDB0007223	HMDB	Produced from PIP2 cleaveage by PLC-g.
+
+DAG is a membrane protein which can now recruit other signaling molecules to the membrane by serving as a binding target. 
+IP3	Metabolite	HMDB0001059	HMDB	IP3 is generated when PLC-g cleaves PIP2.
+
+IP3 is a second messanger that diffuses into the cytosol and binds to IP3 receptors on the ER therey opening calcium channels.
+Calmodulin	Protein			Calmodulin is a calcium binding protein. Binding Ca ions induces a conformational change allowing calmodulin to bind to and regulate a variety of effector proteins.</br>No homologues found for original id L:801
+RASGRP1	GeneProduct	ENSBTAG00000021872	Ensembl	RasGRP binds to DAG in the membrane where it can activate Ras</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:10125
+IL2	GeneProduct	ENSBTAG00000020883	Ensembl	All three TFs (NFAT, AP-1, and NFkB) a needed to initiate IL-2 transcription.</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:3558
+PPP3CA	GeneProduct	ENSBTAG00000016005	Ensembl	Calcineurin is a protein phosphatase that acts on NFAT. </br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:5530
+NFKBIA	Protein	ENSBTAG00000016683	Ensembl	IkB is an inhibitory protein which when bound to NFkB holds it in an inactive state.</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = S:P25963
+IKK complex	GeneProduct			IKK is a complex of serine kinases. It phosphorylates IkB, stimulating IkB's ubiquitination which targets IkB for degradation by the proteasome.
+PTEN	Protein	ENSBTAG00000009498	Ensembl	Phosphatase and tensin homolog - PTEN is constitutively expressed and is a PIP3 phosphatase.</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:5728
+PDK1	GeneProduct	ENSBTAG00000016836	Ensembl	Phosphoinositide-dependent kinase-1: recruited to the membrane by docking at PIP3 and phosphorylates/activates Akt</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:5163
+Ras-GDP	Protein			Ras is a small G protein of GTPase. It is located in the membrane, and it acts as a molecular switch. It is inactive when bound to GDP, but becomes active when GDP is switched for GTP. Binding the GTP induces a conformational change in Ras thus enabling it to bind to and do other things.
+PIP2	Metabolite	HMDB0010059	HMDB	PIP2 is a membrane lipid.
+MHC peptide	Complex			
+B7-1/ B7-2	Complex			
+B7-1/ B7-2	Complex			
+PD-L1	Complex			
+NFATC2	Protein	ENSBTAG00000018270	Ensembl	</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:4773
+CSNK1A1	GeneProduct	ENSBTAG00000005326	Ensembl	Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:1452
+GSK3A	GeneProduct	ENSBTAG00000020756	Ensembl	Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:2931
+GSK3B	GeneProduct	ENSBTAG00000048057	Ensembl	Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:2932
+DYRK1A	GeneProduct	ENSBTAG00000001771	Ensembl	Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:1859
+DYRK2	GeneProduct	ENSBTAG00000007256	Ensembl	Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:8445
+NRON	GeneProduct	ENSBTAG00000044315	Ensembl	NRON is a long non-coding RNA</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = En:ENSG00000253079
+FYN	GeneProduct	ENSBTAG00000011851	Ensembl	Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:2534
+TCRA	GeneProduct			
+TCRB	GeneProduct			
+CD8A	GeneProduct	ENSBTAG00000021141	Ensembl	CD8 co-receptor - alpha subunit</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:925
+CD8B	GeneProduct	ENSBTAG00000008956	Ensembl	CD8 co-receptor - beta subunit</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:926
+CD28	GeneProduct	ENSBTAG00000007445	Ensembl	CD28 is a co-stimulatory surface receptor. It bind B7-1 and B7-2. After CD28 binds its ligand, it is phosphorylated by Lck. The effect of this phosphorylation activates P13K to generate PIP3 which recruits Itk to the cell membrane where Lck can phosphorylate it. Then Itk-P can recruit PLC-g</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:940
+CTLA4	GeneProduct	ENSBTAG00000013170	Ensembl	Expression is enhanced by IL-2.
+Function is controlled largely by regulation of its surface expression. Initially CTLA-4 is in the intracellular membrane but moves to the cell surface after T-cell receptor signaling.
+When CTLA-4 cytoplasmic tail is NOT phosphorylated it binds to AP-2 (clathrin adapter molecule) and is removed from the surface. When the tail is phosphorylated AP-2 cannot bind and CTLA-4 is expressed on the surface.
+CTLA-4 competes with CD28 for B7 ligand, and it has a higher affinity of B7 in part because CTLA-4 binds B7 in a dimer.
+CTLA-4 interfers with the formation of lipid rafts, TCR:ZAP70 microclusters, and central supramolecular activation complex.</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:1493
+PDCD1	GeneProduct	ENSBTAG00000011543	Ensembl	PD-1 is repressed by pro-inflammatry cytokines. It's ligand, PD-L1, is constitutively expressed on T-cells. PD-1 contains a ITIM (immunoreceptor tyrosine-based inhibitory motif) in its cytoplasmic tail. When this ITIM is phosphorylated, it recruits either of 2 inhibitory phosphatases called SHP</br>Homology Mapping from Homo sapiens to Bos taurus: Original ID = L:5133
