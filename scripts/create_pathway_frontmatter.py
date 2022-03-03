@@ -3,9 +3,16 @@ from datetime import date
 import frontmatter
 from frontmatter.default_handlers import YAMLHandler
 from io import BytesIO
+import json
 from pathlib import Path
 import sys
 
+
+annotations_types = {
+    'PW': 'Pathway Ontology',
+    'CL': 'Cell Type Ontology',
+    'DOID': 'Disease Ontology',
+}
 
 info_f = sys.argv[1]
 if not info_f:
@@ -23,27 +30,58 @@ else:
     # TODO: is there a better way to create an empty post object?
     post = frontmatter.loads('---\n---')
 
+post = frontmatter.loads('---\n---')
+
 with open(info_f) as f:
     for line in f:
+        if not line.strip():
+            continue
+        elif line.strip()[-1] == ':':
+            key = line.strip()[:-2]
+            if key in ['description']:
+                post[key] = ''
+
+            continue
+
         key, value = line.strip().split(': ', 1)
 
         if key == 'authors':
-            value = [v.strip() for v in value.split('|')]
+            post[key] = [v.strip() for v in value[1:-1].split(',')]
         elif key == 'ontology-ids':
-            # TODO: we don't want the IDs; instead we want this:
             # annotations:
             #   - value: angiotensin signaling pathway
             #     type: Pathway Ontology
-            value = [v.strip() for v in value.split(',')]
+            annotations = []
+            for ontology_id in value.split(','):
+                datasource, id_number = ontology_id.strip().split(':', 1)
+                annotation = dict()
+                annotation['type'] = annotations_types[datasource]
+                with open('./wikipathways-database/annotations/' + datasource + '.csv') as f:
+                    reader = csv.DictReader(f, quoting=csv.QUOTE_NONE)
+                    for l in reader:
+                        if l['Class ID'] == 'http://purl.obolibrary.org/obo/' + datasource + '_' + id_number:
+                            annotation['value'] = l['Preferred Label']
+                            annotations.append(annotation)
+                            break
+            post['annotations'] = annotations
         elif key == 'last-edited':
             # 20210601215335 -> datetime.date(2021, 6, 1)
-            value = date(int(value[0:4]), int(value[4:6]), int(value[6:8]))
-            # 20210601215335 -> 2021-06-01 -> datetime.date(2021, 6, 1)
-            #value = date.fromisoformat('-'.join([value[0:4], value[4:6], value[6:8]]))
+            post[key] = date(int(value[0:4]), int(value[4:6]), int(value[6:8]))
         elif key == 'organisms':
-            value = [value]
+            post[key] = [value]
+        else:
+            post[key] = value
 
-        post[key] = value
+if not 'title' in post:
+    post['title'] = ''
+if not 'description' in post:
+    post['description'] = ''
+
+datanode_labels = set()
+with open('./wikipathways-database/pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
+    reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
+    for line in reader:
+        datanode_labels.add(line['Label'])
 
 datanode_labels = set()
 with open('./wikipathways-database/pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
@@ -57,7 +95,7 @@ with open('./wikipathways-database/pathways/' + wpid + '/' + wpid + '-datanodes.
 post['redirect_from'] = [
     '/index.php/Pathway:' + wpid,
     '/instance/' + wpid,
-    '/instance/' + wpid + '_r' + post['revision'],
+    #'/instance/' + wpid + '_r' + post['revision'],
 ]
 
 post['seo'] = 'CreativeWork'
