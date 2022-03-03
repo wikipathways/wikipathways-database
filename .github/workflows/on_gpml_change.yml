@@ -1,10 +1,12 @@
-name: Perform the work required to keep things up-to-date in response to a GPML file being added, edited or deleted
+name: When GPML file added, edited or deleted, run updates
 
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     paths:
-      - 'pathways/*/*.gpml'
+      - pathways/**/*.gpml
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
@@ -14,15 +16,30 @@ jobs:
   metadata:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup java
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+        
+      - name: Setup Java
         uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
           java-version: '8'
-      - run: |
+          
+      - name: Install deps
+        run: |
           wget https://github.com/PathVisio/pathvisio/releases/download/v3.3.0/pathvisio_bin-3.3.0.zip
           unzip pathvisio_bin-3.3.0.zip
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/pathvisio-3.3.0
+          key: ${{ runner.os }}-java-${{ hashFiles('pathvisio.jar') }}
+          restore-keys: |
+            ${{ runner.os }}-java-
+            
+      - name: Demo step for a demo job showing use of Java
+        run: |
           sh ./pathvisio-3.3.0/pathvisio.sh -v
           # TODO: change this to use https://github.com/wikipathways/meta-data-action
           # instead of pathvisio. Currently just a placeholder to show a java program.
@@ -82,15 +99,23 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
 
-      - name: Create pathway frontmatter
+      - name: Setup Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-      - run: |
+          
+      - name: Install deps
+        run: |
           pip install python-frontmatter
-          for f in "./wikipathways-database/pathways/*/*.info"; do
+          
+      - name: Create pathway frontmatter
+        run: |        
+          shopt -s nullglob
+          pwd 
+          for f in "./wikipathways-database/pathways/"**/*".info"; do
             python scripts/create_pathway_frontmatter.py "$f"
           done
+          shopt -u nullglob
 
       - name: Commit report
         run: |
