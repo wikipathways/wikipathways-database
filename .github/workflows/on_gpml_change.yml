@@ -90,7 +90,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          path: wikipathways-database
           submodules: true
           fetch-depth: 0
 
@@ -112,7 +111,7 @@ jobs:
         run: |        
           shopt -s nullglob
           pwd 
-          for f in "./wikipathways-database/pathways/"**/*".info"; do
+          for f in "./pathways/"**/*".info"; do
             python scripts/create_pathway_frontmatter.py "$f"
           done
           shopt -u nullglob
