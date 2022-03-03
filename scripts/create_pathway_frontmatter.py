@@ -30,20 +30,14 @@ else:
     # TODO: is there a better way to create an empty post object?
     post = frontmatter.loads('---\n---')
 
-post = frontmatter.loads('---\n---')
-
 with open(info_f) as f:
     for line in f:
-        if not line.strip():
+        try:
+            key, value = line.strip().split(': ', 1)
+        except Exception:
+            print("create_pathway_frontmatter.py error - Failed to parse .info file line: " + line)
+            print(info_fp)
             continue
-        elif line.strip()[-1] == ':':
-            key = line.strip()[:-2]
-            if key in ['description']:
-                post[key] = ''
-
-            continue
-
-        key, value = line.strip().split(': ', 1)
 
         if key == 'authors':
             post[key] = [v.strip() for v in value[1:-1].split(',')]
