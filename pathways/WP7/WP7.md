@@ -27,36 +27,36 @@ schema-jsonld:
     name: WikiPathways
   description: ''
   keywords:
-  - L-cysteine
+  - MET3
+  - MET6
   - STR2
+  - adenosine-3',5'-bisphosphate
+  - homocysteine
+  - MET14
+  - NADPH
   - L-methionine
-  - Coenzyme A
-  - ECM17
-  - MET2
-  - CYS3
-  - acetyl-CoA
   - L-serine
   - phosphate
-  - homoserine
-  - MET17
-  - adenosine-3',5'-bisphosphate
-  - STR3
-  - MET14
-  - 3 NADPH
-  - cystathionine
-  - MET10
-  - homocysteine
-  - MET3
-  - pyrophosphate
-  - ATP
-  - acetate
-  - ADP
-  - SAM1
-  - MET6
   - CYS4
+  - ADP
   - MET16
+  - CYS3
+  - SAM1
+  - homoserine
+  - MET2
+  - 3 NADPH
+  - L-cysteine
+  - ECM17
+  - STR3
+  - pyrophosphate
+  - acetate
+  - Coenzyme A
+  - MET17
+  - ATP
+  - cystathionine
+  - acetyl-CoA
+  - MET10
   - SAM2
-  - NADPH
   license: CC0
   name: Sulfur amino acid biosynthesis
 seo: CreativeWork

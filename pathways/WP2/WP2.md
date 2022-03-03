@@ -72,23 +72,23 @@ schema-jsonld:
     ARO7 of the tyrosine and phenylalanine branch, or TRP1 of the tryptophan branch,
     (CITS:[1943992]).  SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html'
   keywords:
-  - 2 pyruvate
-  - BAT1
-  - H2O
-  - NADP
-  - ILV6
-  - BAT2
-  - 2-aceto-lactate
-  - 2-keto-isovalerate
-  - ILV3
-  - ILV2
-  - H+
-  - L-glutamate
   - CO2
-  - L-valine
-  - 2-oxoglutarate
+  - NADP
+  - 2-keto-isovalerate
+  - 2 pyruvate
   - NADPH
+  - ILV6
+  - ILV2
+  - ILV3
+  - BAT1
+  - L-glutamate
+  - H+
+  - BAT2
+  - H2O
+  - 2-oxoglutarate
+  - L-valine
   - 2,3-dihydroxy-isovalerate
+  - 2-aceto-lactate
   license: CC0
   name: Valine biosynthesis
 seo: CreativeWork

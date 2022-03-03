@@ -46,34 +46,34 @@ schema-jsonld:
     [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikipedia.org/wiki/Statin
     Wikipedia]'
   keywords:
-  - Cholesterol
-  - Apoc2
-  - Ldlr
-  - Apoe
-  - Abca1
-  - Apoc1
-  - Cetp
-  - Apoa4
-  - Mttp
-  - Scarb1
-  - Lcat
-  - Free FA
-  - Statin
-  - Lrp1
-  - Phospholipid
   - Dgat1
-  - Cholic acid
-  - Soat1
-  - Pltp
-  - Cyp7a1
-  - Hmgcr
+  - Abca1
+  - Statin
+  - Ldlr
   - Apoa1
-  - Lipc
-  - Acetyl-CoA
-  - Apoc3
-  - Triglycerides
+  - Lcat
   - Lpl
+  - Apoe
+  - Apoc3
+  - Cetp
   - Cholesterol Ester
+  - Apoc2
+  - Cyp7a1
+  - Scarb1
+  - Phospholipid
+  - Free FA
+  - Lrp1
+  - Mttp
+  - Pltp
+  - Acetyl-CoA
+  - Apoc1
+  - Apoa4
+  - Hmgcr
+  - Cholic acid
+  - Lipc
+  - Cholesterol
+  - Triglycerides
+  - Soat1
   license: CC0
   name: Statin pathway
 seo: CreativeWork

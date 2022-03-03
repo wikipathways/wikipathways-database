@@ -57,19 +57,19 @@ schema-jsonld:
     a target for antifungal drugs (CITS: [9092515])(CITS: [15578972]).  SOURCE: SGD
     pathways, http://pathway.yeastgenome.org/server.html'
   keywords:
-  - phosphate
+  - PSG1
+  - CHO1
   - CHO2
   - L-serine
-  - L-1-phosphatidyl-ethanolamine
-  - pyrophosphate
-  - PSD2
   - CDS1
   - PSD1
-  - PSG1
-  - glycerol
+  - L-1-phosphatidyl-ethanolamine
+  - PSD2
+  - phosphate
   - OPI3
-  - CHO1
+  - glycerol
   - CRD1
+  - pyrophosphate
   license: CC0
   name: Phospholipid biosynthesis
 seo: CreativeWork

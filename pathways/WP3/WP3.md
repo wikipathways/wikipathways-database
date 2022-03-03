@@ -90,25 +90,25 @@ schema-jsonld:
     (6-HITC) — a sulphoraphane analogue from Japanese horseradish wasabi — stimulates
     nuclear translocation of NRF2, which subsequently activates ARE.
   keywords:
-  - MAF
-  - SLC7A11
-  - C/EBP-beta
-  - Curcumin
-  - GSTA2
-  - 6-HITC
-  - GCLM
   - NRF2
-  - Sulforaphane
-  - ERK
-  - GCLC
-  - HO-1
-  - JNK
-  - PKC
-  - Caffeic acid phenethyl ester
-  - NQO1
-  - KEAP1
   - P38
+  - GSTA2
+  - C/EBP-beta
+  - Caffeic acid phenethyl ester
+  - HO-1
+  - 6-HITC
+  - ERK
+  - JNK
+  - KEAP1
+  - MAF
+  - Sulforaphane
+  - GCLC
+  - Curcumin
+  - GCLM
+  - PKC
+  - NQO1
   - PI3K
+  - SLC7A11
   license: CC0
   name: Transcriptional activation by NRF2 in response to phytochemicals
 seo: CreativeWork

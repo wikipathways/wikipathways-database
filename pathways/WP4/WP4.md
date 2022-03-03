@@ -107,19 +107,19 @@ schema-jsonld:
     datanodes which can be annotated with database entries. Feel free to edit anything
     on this page. (updated) Making another description update to test.
   keywords:
-  - MMPéa
-  - AKAP2
-  - Alpha-D-Glucose
-  - MIR338
   - Substrate é
+  - AKAP2
+  - MIR338
   - TP53
+  - MMPéa
   - Calcium
+  - Alpha-D-Glucose
+  - D-Glucose
+  - BRCA1
   - ADP
   - ATP
   - TCA Cycle
   - BRCA2
-  - BRCA1
-  - D-Glucose
   license: CC0
   name: Sandbox pathway test
 seo: CreativeWork

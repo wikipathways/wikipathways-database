@@ -24,30 +24,30 @@ schema-jsonld:
     name: WikiPathways
   description: ''
   keywords:
+  - Akt1
+  - Shc1
+  - Il9
+  - Irs2
   - Map2k1
-  - Pik3r1
   - Grb2
+  - Vcp
+  - Mapk1
+  - Socs3
   - Stat5b
   - Il2rg
-  - Stat1
-  - Irs2
-  - Il9
-  - Shc1
-  - Jak3
-  - Ptpn11
-  - Socs3
   - Jak1
-  - Akt1
-  - Mapk1
+  - Ptpn11
   - Irs1
-  - Vcp
-  - Map2k2
   - TYK2
-  - Stat3
+  - Jak3
   - Mapk3
-  - Stat5a
   - Il9r
+  - Map2k2
   - Kat5
+  - Stat3
+  - Stat5a
+  - Stat1
+  - Pik3r1
   license: CC0
   name: IL-9 signaling pathway
 seo: CreativeWork
