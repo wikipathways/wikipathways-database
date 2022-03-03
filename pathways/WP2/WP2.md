@@ -1,0 +1,97 @@
+---
+annotations:
+- type: Pathway Ontology
+  value: valine biosynthetic pathway
+authors:
+- M.Braymer
+- MaintBot
+- Egonw
+- Ddigles
+- Eweitz
+- Mkutmon
+description: 'Biosynthesis of the aromatic amino acids tyrosine, phenylalanine, and
+  tryptophan proceeds via a common pathway to chorismate, at which point the pathway
+  branches(CITS:[Jones][1943992]).  One branch proceeds to tyrosine and phenylalanine,
+  and the other to tryptophan (CITS:[Jones]).  The series of reactions to chorismate,
+  called the shikimate pathway, and the series of reactions from chorismate to tryptophan
+  have been found to be common to all eukaryotes and prokaryotes studied thus far
+  (as reported in (CITS:[1943992])).  In contrast, there appear to be two separate
+  routes for tyrosine and phenylalanine biosynthesis from chorismate, only one of
+  which has been found in S. cerevisiae (CITS:[1943992]).  S. cerevisiae, similar
+  to E. coli, synthesize tyrosine and phenylalanine via the intermediate 4-hydroxyphenylpyruvate
+  and phenylpyruvate, respectively, whereas some other organisms synthesize them via
+  arogenate (CITS:[1943992]).  Aromatic amino acid biosynthesis in S. cerevisiae is
+  controlled by a combination of feedback inhibition, activation of enzyme activity,
+  and regulation of enzyme synthesis (CITS:[Jones][1943992]).  The carbon flow through
+  the pathways is regulated primarily at the initial step and the branching points
+  by the terminal end-products. The initial step of chorismate biosynthesis can be
+  catalyzed by two isoenzymes Aro3p or Aro4p, whereby Aro3p is inhibited by phenylalanine,
+  and Aro4p by tyrosine (CITS:[Jones][1943992]).  The first step in the phenylalanine-tyrosine
+  branch is feedback inhibited by tyrosine and activated by tryptophan, and the first
+  step in the tryptophan branch is feedback inhibited by tryptophan (CITS:[1943992]).  The
+  transcriptional activator GCN4 regulates most of the genes encoding for the aromatic
+  amino acid biosynthetic enzymes; however, no GCN4 regulation was found for TYR1
+  of the tyrosine branch, ARO7 of the tyrosine and phenylalanine branch, or TRP1 of
+  the tryptophan branch, (CITS:[1943992]).  SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html'
+last-edited: 2021-06-03
+organisms:
+- Saccharomyces cerevisiae
+redirect_from:
+- /index.php/Pathway:WP2
+- /instance/WP2
+schema-jsonld:
+- '@context': https://schema.org/
+  '@id': https://wikipathways.github.io/pathways/WP2.html
+  '@type': Dataset
+  creator:
+    '@type': Organization
+    name: WikiPathways
+  description: 'Biosynthesis of the aromatic amino acids tyrosine, phenylalanine,
+    and tryptophan proceeds via a common pathway to chorismate, at which point the
+    pathway branches(CITS:[Jones][1943992]).  One branch proceeds to tyrosine and
+    phenylalanine, and the other to tryptophan (CITS:[Jones]).  The series of reactions
+    to chorismate, called the shikimate pathway, and the series of reactions from
+    chorismate to tryptophan have been found to be common to all eukaryotes and prokaryotes
+    studied thus far (as reported in (CITS:[1943992])).  In contrast, there appear
+    to be two separate routes for tyrosine and phenylalanine biosynthesis from chorismate,
+    only one of which has been found in S. cerevisiae (CITS:[1943992]).  S. cerevisiae,
+    similar to E. coli, synthesize tyrosine and phenylalanine via the intermediate
+    4-hydroxyphenylpyruvate and phenylpyruvate, respectively, whereas some other organisms
+    synthesize them via arogenate (CITS:[1943992]).  Aromatic amino acid biosynthesis
+    in S. cerevisiae is controlled by a combination of feedback inhibition, activation
+    of enzyme activity, and regulation of enzyme synthesis (CITS:[Jones][1943992]).  The
+    carbon flow through the pathways is regulated primarily at the initial step and
+    the branching points by the terminal end-products. The initial step of chorismate
+    biosynthesis can be catalyzed by two isoenzymes Aro3p or Aro4p, whereby Aro3p
+    is inhibited by phenylalanine, and Aro4p by tyrosine (CITS:[Jones][1943992]).  The
+    first step in the phenylalanine-tyrosine branch is feedback inhibited by tyrosine
+    and activated by tryptophan, and the first step in the tryptophan branch is feedback
+    inhibited by tryptophan (CITS:[1943992]).  The transcriptional activator GCN4
+    regulates most of the genes encoding for the aromatic amino acid biosynthetic
+    enzymes; however, no GCN4 regulation was found for TYR1 of the tyrosine branch,
+    ARO7 of the tyrosine and phenylalanine branch, or TRP1 of the tryptophan branch,
+    (CITS:[1943992]).  SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html'
+  keywords:
+  - 2 pyruvate
+  - BAT1
+  - H2O
+  - NADP
+  - ILV6
+  - BAT2
+  - 2-aceto-lactate
+  - 2-keto-isovalerate
+  - ILV3
+  - ILV2
+  - H+
+  - L-glutamate
+  - CO2
+  - L-valine
+  - 2-oxoglutarate
+  - NADPH
+  - 2,3-dihydroxy-isovalerate
+  license: CC0
+  name: Valine biosynthesis
+seo: CreativeWork
+title: Valine biosynthesis
+wpid: WP2
+---
