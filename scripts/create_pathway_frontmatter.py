@@ -22,7 +22,7 @@ info_fp = Path(info_f)
 wpid = info_fp.stem
 
 
-frontmatter_fp = Path('./wikipathways-database/pathways/' + wpid + '/' + wpid + '.md')
+frontmatter_fp = Path('./pathways/' + wpid + '/' + wpid + '.md')
 frontmatter_f = str(frontmatter_fp)
 if frontmatter_fp.exists():
     post = frontmatter.load(frontmatter_f, handler=YAMLHandler())
@@ -56,7 +56,7 @@ with open(info_f) as f:
                 datasource, id_number = ontology_id.strip().split(':', 1)
                 annotation = dict()
                 annotation['type'] = annotations_types[datasource]
-                with open('./wikipathways-database/annotations/' + datasource + '.csv') as f:
+                with open('./annotations/' + datasource + '.csv') as f:
                     reader = csv.DictReader(f, quoting=csv.QUOTE_NONE)
                     for l in reader:
                         if l['Class ID'] == 'http://purl.obolibrary.org/obo/' + datasource + '_' + id_number:
@@ -78,13 +78,13 @@ if not 'description' in post:
     post['description'] = ''
 
 datanode_labels = set()
-with open('./wikipathways-database/pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
+with open('./pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
     reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
     for line in reader:
         datanode_labels.add(line['Label'])
 
 datanode_labels = set()
-with open('./wikipathways-database/pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
+with open('./pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
     reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
     for line in reader:
         datanode_labels.add(line['Label'])
