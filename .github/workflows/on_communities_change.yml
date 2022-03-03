@@ -19,7 +19,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          path: wikipathways-database
           submodules: true
           fetch-depth: 0
 
@@ -38,7 +37,9 @@ jobs:
           pip install python-frontmatter
           
       - name: Update communities in frontmatter .md files
-        run: |        
+        run: |
+          pwd
+          ls
           python ./scripts/update_frontmatter_communities.py
 
       - name: Commit report
