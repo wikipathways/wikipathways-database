@@ -1,8 +1,12 @@
 ---
 annotations:
-- type: Pathway Ontology
-  value: '"nuclear factor'
-- type: Pathway Ontology
+- id: PW:0000369
+  parent: regulatory pathway
+  type: Pathway Ontology
+  value: nuclear factor, erythroid 2 like 2 signaling pathway
+- id: PW:0000378
+  parent: regulatory pathway
+  type: Pathway Ontology
   value: oxidative stress response pathway
 authors:
 - Hubert
@@ -53,6 +57,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP3
 - /instance/WP3
+revision: null
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP3.html
@@ -90,25 +95,25 @@ schema-jsonld:
     (6-HITC) — a sulphoraphane analogue from Japanese horseradish wasabi — stimulates
     nuclear translocation of NRF2, which subsequently activates ARE.
   keywords:
-  - NRF2
-  - P38
-  - GSTA2
+  - 6-HITC
   - C/EBP-beta
   - Caffeic acid phenethyl ester
-  - HO-1
-  - 6-HITC
+  - Curcumin
   - ERK
+  - GCLC
+  - GCLM
+  - GSTA2
+  - HO-1
   - JNK
   - KEAP1
   - MAF
-  - Sulforaphane
-  - GCLC
-  - Curcumin
-  - GCLM
-  - PKC
   - NQO1
+  - NRF2
+  - P38
   - PI3K
+  - PKC
   - SLC7A11
+  - Sulforaphane
   license: CC0
   name: Transcriptional activation by NRF2 in response to phytochemicals
 seo: CreativeWork

@@ -1,6 +1,8 @@
 ---
 annotations:
-- type: Pathway Ontology
+- id: PW:0000170
+  parent: signaling pathway
+  type: Pathway Ontology
   value: epidermal growth factor/neuregulin signaling pathway
 authors:
 - A.Pandey
@@ -20,6 +22,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP5
 - /instance/WP5
+revision: null
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP5.html
@@ -33,183 +36,183 @@ schema-jsonld:
     Its ligands include testosterone, dehydroepiandrosterone and androstenedione.
     Stimulation of the receptor activates the SMAD signaling module.  Source: http://www.netpath.org/pathways?path_id=NetPath_4'
   keywords:
-  - Grb7
-  - Map2k3
-  - PTPN5
-  - Ap2a1
-  - WASL
-  - Grb14
-  - Pik3r1
-  - Rac1
-  - Cblc
-  - Cebpb
-  - Jak1
-  - Hip1
-  - Pik3cb
-  - Raf1
-  - Ptk2b
-  - Plcg2
-  - Stat1
-  - Elk4
-  - Map3k3
-  - Shoc2
-  - Reps2
-  - Plec1
-  - PRKAR1A
-  - Cblb
-  - Ralb
-  - Egf
-  - Krt18
-  - Stat2
-  - Pxn
-  - Spry2
-  - Pik3r2
-  - Jund
-  - Vav2
-  - Cav2
-  - Map2k2
-  - Pik3cd
-  - Stat5b
-  - Pik3cg
-  - Socs1
-  - Tcfcp2l2
-  - Vav1
-  - Errfi1
-  - Sin3a
-  - Eps15
-  - Ptpn11
-  - Map3k4
-  - Foxo1
-  - Map3k2
-  - Nck2
-  - Git1
-  - Shc1
-  - Bcar1
-  - Tnip1
-  - Casp9
-  - Sh3bgrl
-  - Prkd1
-  - Usp6nl
-  - Atf1
-  - Mcf2
-  - Gab1
-  - Pld1
-  - Zfp259
-  - Hras
+  - APPL
+  - Abi1
   - Akt1
+  - Ap2a1
+  - Appl2
+  - Araf
+  - Arf4
+  - Asap1
+  - Atf1
+  - Bcar1
+  - CDC42
+  - CEACAM1
+  - Camk2a
+  - Casp9
+  - Cav1
+  - Cav2
+  - Cbl
+  - Cblb
+  - Cblc
+  - Cebpa
+  - Cebpb
+  - Creb1
+  - Crk
+  - Crkl
+  - Csk
+  - Ctnnd1
+  - Dnm1
   - Dok2
-  - Pik3r3
-  - Smad3
-  - Jun
   - Dusp1
+  - Eef1a2l1
+  - Egf
+  - Egfr
+  - Elf3
+  - Elk1
+  - Elk4
+  - Epn1
+  - Eppk1
+  - Eps15
+  - Eps15l1
+  - Eps8
+  - Errfi1
+  - Fos
+  - Foxo1
+  - Gab1
+  - Gab2
+  - Git1
+  - Gja1
+  - Grb10
+  - Grb14
+  - Grb2
+  - Grb7
+  - HIST3H3
+  - Hat1
+  - Hdac1
+  - Hip1
+  - Hras
+  - Htt
+  - Inppl1
+  - Itch
+  - Jak1
+  - Jak2
+  - Jun
+  - Jund
+  - Kras
+  - Krt17
+  - Krt18
+  - Krt7
   - Krt8
-  - Src
+  - MAPK7
+  - Map2k1
+  - Map2k2
+  - Map2k3
+  - Map2k5
+  - Map2k7
+  - Map3k1
+  - Map3k14
+  - Map3k2
+  - Map3k3
+  - Map3k4
+  - Mapk1
+  - Mapk14
+  - Mapk3
+  - Mapk8
+  - Mcf2
+  - Mta2
+  - Myc
+  - Nck1
+  - Nck2
+  - Ndufa13
+  - Nras
+  - PIK3CA
+  - PRKAR1A
+  - PTPN5
+  - Pak1
+  - Pebp1
+  - Pik3c2b
+  - Pik3cb
+  - Pik3cd
+  - Pik3cg
+  - Pik3r1
+  - Pik3r2
+  - Pik3r3
   - Pitpna
   - Pkn2
-  - Eppk1
-  - Mapk3
-  - Asap1
-  - Snca
-  - Plscr1
-  - Cbl
-  - Nras
-  - Gab2
-  - Myc
-  - Ralgds
-  - Rps6ka2
-  - Socs3
-  - Fos
-  - Ptk6
-  - Pak1
-  - WNK1
-  - Rbbp7
-  - Eps8
-  - Csk
-  - Dnm1
-  - Stat3
-  - Gja1
-  - Vav3
-  - Map3k1
-  - Tnk2
-  - Prkcb
-  - Hat1
-  - Smad2
-  - Ptpn6
-  - Krt17
-  - Egfr
-  - Sh3gl3
-  - Rps6ka1
-  - Hdac1
-  - Sh3kbp1
-  - Camk2a
-  - Grb10
-  - Itch
-  - Grb2
-  - Snrpd2
-  - Araf
-  - Rasa1
-  - Kras
-  - Ptpn12
-  - Krt7
-  - Elk1
-  - Mapk8
-  - Mapk14
-  - Map2k1
-  - Eps15l1
-  - Elf3
   - Plcg1
-  - CDC42
-  - Nck1
-  - Prkci
-  - Map2k7
-  - Ctnnd1
-  - Eef1a2l1
-  - Map2k5
-  - Inppl1
-  - Ywhab
-  - Prkcg
-  - Stxbp1
+  - Plcg2
+  - Pld1
   - Pld2
-  - Arf4
-  - SOS2
-  - HIST3H3
-  - Ripk1
-  - CEACAM1
-  - Cebpa
-  - Crk
-  - Sp1
-  - Ralbp1
-  - Crkl
-  - Cav1
-  - PIK3CA
-  - Tgif1
-  - APPL
-  - Htt
-  - Jak2
-  - Prkcz
+  - Plec1
+  - Plscr1
   - Prkca
-  - Creb1
-  - Sos1
-  - Appl2
+  - Prkcb
+  - Prkcg
+  - Prkci
+  - Prkcz
+  - Prkd1
+  - Ptk2b
+  - Ptk6
+  - Ptpn11
+  - Ptpn12
+  - Ptpn6
   - Ptprr
-  - MAPK7
-  - Rps6ka5
-  - Sh3gl2
-  - Rgs16
-  - Rfxank
-  - Pebp1
-  - Stat5a
-  - Sh2d3c
-  - Map3k14
+  - Pxn
   - Rab5a
-  - Mta2
-  - Abi1
-  - Mapk1
-  - Ndufa13
-  - Epn1
-  - Pik3c2b
+  - Rac1
+  - Raf1
+  - Ralb
+  - Ralbp1
+  - Ralgds
+  - Rasa1
+  - Rbbp7
   - Reps1
+  - Reps2
+  - Rfxank
+  - Rgs16
+  - Ripk1
+  - Rps6ka1
+  - Rps6ka2
   - Rps6ka3
+  - Rps6ka5
+  - SOS2
+  - Sh2d3c
+  - Sh3bgrl
+  - Sh3gl2
+  - Sh3gl3
+  - Sh3kbp1
+  - Shc1
+  - Shoc2
+  - Sin3a
+  - Smad2
+  - Smad3
+  - Snca
+  - Snrpd2
+  - Socs1
+  - Socs3
+  - Sos1
+  - Sp1
+  - Spry2
+  - Src
+  - Stat1
+  - Stat2
+  - Stat3
+  - Stat5a
+  - Stat5b
+  - Stxbp1
+  - Tcfcp2l2
+  - Tgif1
+  - Tnip1
+  - Tnk2
+  - Usp6nl
+  - Vav1
+  - Vav2
+  - Vav3
+  - WASL
+  - WNK1
+  - Ywhab
+  - Zfp259
   license: CC0
   name: EGFR1 signaling pathway
 seo: CreativeWork

@@ -1,6 +1,8 @@
 ---
 annotations:
-- type: Pathway Ontology
+- id: PW:0000354
+  parent: classic metabolic pathway
+  type: Pathway Ontology
   value: glycerophospholipid metabolic pathway
 authors:
 - M.Braymer
@@ -32,6 +34,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP9
 - /instance/WP9
+revision: null
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP9.html
@@ -57,18 +60,18 @@ schema-jsonld:
     a target for antifungal drugs (CITS: [9092515])(CITS: [15578972]).  SOURCE: SGD
     pathways, http://pathway.yeastgenome.org/server.html'
   keywords:
-  - PSG1
+  - CDS1
   - CHO1
   - CHO2
-  - L-serine
-  - CDS1
-  - PSD1
-  - L-1-phosphatidyl-ethanolamine
-  - PSD2
-  - phosphate
-  - OPI3
-  - glycerol
   - CRD1
+  - L-1-phosphatidyl-ethanolamine
+  - L-serine
+  - OPI3
+  - PSD1
+  - PSD2
+  - PSG1
+  - glycerol
+  - phosphate
   - pyrophosphate
   license: CC0
   name: Phospholipid biosynthesis

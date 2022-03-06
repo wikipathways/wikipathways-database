@@ -1,6 +1,8 @@
 ---
 annotations:
-- type: Pathway Ontology
+- id: PW:0001285
+  parent: classic metabolic pathway
+  type: Pathway Ontology
   value: valine biosynthetic pathway
 authors:
 - M.Braymer
@@ -39,6 +41,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP2
 - /instance/WP2
+revision: null
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP2.html
@@ -72,23 +75,23 @@ schema-jsonld:
     ARO7 of the tyrosine and phenylalanine branch, or TRP1 of the tryptophan branch,
     (CITS:[1943992]).  SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html'
   keywords:
-  - CO2
-  - NADP
-  - 2-keto-isovalerate
   - 2 pyruvate
-  - NADPH
-  - ILV6
-  - ILV2
-  - ILV3
-  - BAT1
-  - L-glutamate
-  - H+
-  - BAT2
-  - H2O
-  - 2-oxoglutarate
-  - L-valine
   - 2,3-dihydroxy-isovalerate
   - 2-aceto-lactate
+  - 2-keto-isovalerate
+  - 2-oxoglutarate
+  - BAT1
+  - BAT2
+  - CO2
+  - H+
+  - H2O
+  - ILV2
+  - ILV3
+  - ILV6
+  - L-glutamate
+  - L-valine
+  - NADP
+  - NADPH
   license: CC0
   name: Valine biosynthesis
 seo: CreativeWork

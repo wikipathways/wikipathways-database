@@ -1,10 +1,16 @@
 ---
 annotations:
-- type: Pathway Ontology
+- id: PW:0000724
+  parent: drug pathway
+  type: Pathway Ontology
   value: statin drug pathway
-- type: Pathway Ontology
+- id: PW:0001933
+  parent: disease pathway
+  type: Pathway Ontology
   value: hypercholesterolemia pathway
-- type: Disease Ontology
+- id: DOID:1287
+  parent: null
+  type: Disease Ontology
   value: cardiovascular system disease
 authors:
 - Nsalomonis
@@ -31,6 +37,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP1
 - /instance/WP1
+revision: null
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP1.html
@@ -46,34 +53,34 @@ schema-jsonld:
     [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikipedia.org/wiki/Statin
     Wikipedia]'
   keywords:
-  - Dgat1
   - Abca1
-  - Statin
-  - Ldlr
+  - Acetyl-CoA
   - Apoa1
-  - Lcat
-  - Lpl
-  - Apoe
-  - Apoc3
-  - Cetp
-  - Cholesterol Ester
+  - Apoa4
+  - Apoc1
   - Apoc2
+  - Apoc3
+  - Apoe
+  - Cetp
+  - Cholesterol
+  - Cholesterol Ester
+  - Cholic acid
   - Cyp7a1
-  - Scarb1
-  - Phospholipid
+  - Dgat1
   - Free FA
+  - Hmgcr
+  - Lcat
+  - Ldlr
+  - Lipc
+  - Lpl
   - Lrp1
   - Mttp
+  - Phospholipid
   - Pltp
-  - Acetyl-CoA
-  - Apoc1
-  - Apoa4
-  - Hmgcr
-  - Cholic acid
-  - Lipc
-  - Cholesterol
-  - Triglycerides
+  - Scarb1
   - Soat1
+  - Statin
+  - Triglycerides
   license: CC0
   name: Statin pathway
 seo: CreativeWork

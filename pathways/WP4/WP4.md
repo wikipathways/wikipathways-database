@@ -1,28 +1,52 @@
 ---
 annotations:
-- type: Pathway Ontology
+- id: PW:0001310
+  parent: classic metabolic pathway
+  type: Pathway Ontology
   value: abscisic acid biosynthetic pathway
-- type: Disease Ontology
+- id: DOID:344
+  parent: null
+  type: Disease Ontology
   value: obsolete disease of biological process
-- type: Disease Ontology
+- id: DOID:344
+  parent: null
+  type: Disease Ontology
   value: obsolete disease of biological process
-- type: Disease Ontology
+- id: DOID:344
+  parent: null
+  type: Disease Ontology
   value: obsolete disease of biological process
-- type: Disease Ontology
+- id: DOID:344
+  parent: null
+  type: Disease Ontology
   value: obsolete disease of biological process
-- type: Disease Ontology
+- id: DOID:344
+  parent: null
+  type: Disease Ontology
   value: obsolete disease of biological process
-- type: Disease Ontology
+- id: DOID:344
+  parent: null
+  type: Disease Ontology
   value: obsolete disease of biological process
-- type: Disease Ontology
+- id: DOID:344
+  parent: null
+  type: Disease Ontology
   value: obsolete disease of biological process
-- type: Disease Ontology
+- id: DOID:344
+  parent: null
+  type: Disease Ontology
   value: obsolete disease of biological process
-- type: Disease Ontology
+- id: DOID:344
+  parent: null
+  type: Disease Ontology
   value: obsolete disease of biological process
-- type: Pathway Ontology
+- id: PW:0000125
+  parent: signaling pathway
+  type: Pathway Ontology
   value: G protein mediated signaling pathway
-- type: Disease Ontology
+- id: DOID:344
+  parent: null
+  type: Disease Ontology
   value: obsolete disease of biological process
 authors:
 - Thomas
@@ -96,6 +120,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP4
 - /instance/WP4
+revision: null
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP4.html
@@ -107,19 +132,19 @@ schema-jsonld:
     datanodes which can be annotated with database entries. Feel free to edit anything
     on this page. (updated) Making another description update to test.
   keywords:
-  - Substrate é
-  - AKAP2
-  - MIR338
-  - TP53
-  - MMPéa
-  - Calcium
-  - Alpha-D-Glucose
-  - D-Glucose
-  - BRCA1
   - ADP
+  - AKAP2
   - ATP
-  - TCA Cycle
+  - Alpha-D-Glucose
+  - BRCA1
   - BRCA2
+  - Calcium
+  - D-Glucose
+  - MIR338
+  - MMPéa
+  - Substrate é
+  - TCA Cycle
+  - TP53
   license: CC0
   name: Sandbox pathway test
 seo: CreativeWork

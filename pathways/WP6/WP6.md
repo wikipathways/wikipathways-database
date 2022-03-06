@@ -1,6 +1,8 @@
 ---
 annotations:
-- type: Pathway Ontology
+- id: PW:0000286
+  parent: signaling pathway
+  type: Pathway Ontology
   value: integrin mediated signaling pathway
 authors:
 - 169.230.77.174
@@ -21,6 +23,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP6
 - /instance/WP6
+revision: null
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP6.html
@@ -33,110 +36,110 @@ schema-jsonld:
     (ECM). They also play a role in cell signaling and thereby define cellular shape,
     mobility, and regulate the cell cycle.  Source: [[wikipedia:Integrins|Wikipedia]]'
   keywords:
-  - Itga8
-  - Mapk12
-  - Mylk2
-  - Rac3
-  - Tln1
-  - Itgax
-  - Capn9
-  - Akt2
-  - Itga10
-  - Cav3
-  - Mapk7
-  - Itgae
-  - Vcl
-  - Itga5
-  - Itgb5
-  - Map2k3
-  - Itgad
-  - Capn5
-  - Csk
-  - Capn6
-  - Rho
-  - Itgb7
-  - Arhgef7
-  - MYO-P
-  - Vasp
-  - Map2k2
-  - p110
+  - Actn1
   - Akt1
-  - Git2
-  - Tns1
-  - Pik3r2
-  - Sepp1
-  - Sos1
-  - Mapk6
-  - Rap1b
-  - Itgb3
-  - Bcar1
-  - Map2k5
-  - Mapk1
-  - Rac2
-  - Itgav
-  - Pak4
-  - Map2k1
-  - Braf
-  - Itga2
-  - Itga2b
-  - Ilk
+  - Akt2
   - Akt3
-  - Itgb2
-  - Itga6
-  - Ptk2
-  - Capns1
-  - Itgb4
-  - Itgam
-  - Itga9
-  - Shc1
-  - Mapk10
-  - Capn10
-  - Itga1
-  - Pdpk1
-  - Rock2
-  - PI5K
-  - Pak2
-  - Dock1
+  - Araf
+  - Arhgef7
+  - Bcar1
+  - Braf
   - Capn1
-  - Rapgef1
-  - Pxn
+  - Capn10
+  - Capn11
   - Capn2
-  - Pak3
-  - Vav3
+  - Capn3
+  - Capn5
+  - Capn6
+  - Capn7
+  - Capn9
+  - Capns1
+  - Cav1
   - Cav2
-  - Myo
+  - Cav3
   - Cdc42
   - Crk
-  - Capn3
-  - Map2k6
-  - Itga11
-  - Actn1
-  - Capn7
-  - Itgb6
-  - Cav1
-  - Araf
-  - Vav2
-  - Itga7
+  - Csk
+  - Dock1
   - Fyn
-  - Mapk4
-  - Itga4
-  - Itga3
-  - Rap1a
-  - Itgb1
-  - Zyx
-  - Src
-  - Itgal
-  - Itgb8
-  - Capn11
-  - Pak1
-  - Rac1
+  - Git2
   - Grb2
-  - Shc3
-  - Rock1
-  - Pak6
   - Hras1
-  - Sorbs1
+  - Ilk
+  - Itga1
+  - Itga10
+  - Itga11
+  - Itga2
+  - Itga2b
+  - Itga3
+  - Itga4
+  - Itga5
+  - Itga6
+  - Itga7
+  - Itga8
+  - Itga9
+  - Itgad
+  - Itgae
+  - Itgal
+  - Itgam
+  - Itgav
+  - Itgax
+  - Itgb1
+  - Itgb2
+  - Itgb3
+  - Itgb4
+  - Itgb5
+  - Itgb6
+  - Itgb7
+  - Itgb8
+  - MYO-P
+  - Map2k1
+  - Map2k2
+  - Map2k3
+  - Map2k5
+  - Map2k6
+  - Mapk1
+  - Mapk10
+  - Mapk12
+  - Mapk4
+  - Mapk6
+  - Mapk7
+  - Mylk2
+  - Myo
+  - PI5K
+  - Pak1
+  - Pak2
+  - Pak3
+  - Pak4
+  - Pak6
+  - Pdpk1
+  - Pik3r2
+  - Ptk2
+  - Pxn
+  - Rac1
+  - Rac2
+  - Rac3
   - Raf1
+  - Rap1a
+  - Rap1b
+  - Rapgef1
+  - Rho
+  - Rock1
+  - Rock2
+  - Sepp1
+  - Shc1
+  - Shc3
+  - Sorbs1
+  - Sos1
+  - Src
+  - Tln1
+  - Tns1
+  - Vasp
+  - Vav2
+  - Vav3
+  - Vcl
+  - Zyx
+  - p110
   license: CC0
   name: Integrin-mediated cell adhesion
 seo: CreativeWork
