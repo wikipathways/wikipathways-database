@@ -67,7 +67,8 @@ def get_annotation_details(iri):
 
 def parse_parent_parent_iri(raw_parent_iri):
     parent_iris = []
-    for parent_iri in raw_parent_iri.strip().split('|'):
+    for raw_parent_iri in raw_parent_iri.strip().split('|'):
+        parent_iri = raw_parent_iri.strip()
         datasource = get_datasource(parent_iri)
         if datasource in SUPPORTED_DATASOURCES:
             parent_iris.append(parent_iri)
@@ -100,7 +101,7 @@ if not info_f:
     raise Exception('No info_f provided')
 
 info_fp = Path(info_f)
-wpid = info_fp.stem
+wpid = (info_fp.stem).replace('-metadata', '')
 
 
 frontmatter_fp = Path('./pathways/' + wpid + '/' + wpid + '.md')
@@ -128,42 +129,48 @@ with open(info_f) as f:
         if key == 'authors':
             parsed_metadata[key] = [v.strip() for v in value[1:-1].split(',')]
         elif key == 'ontology-ids':
-            parsed_metadata['ontology-ids'] = value.split(',')
+            parsed_metadata['ontology-ids'] = [v.strip() for v in value.split(',')]
         elif key == 'organisms':
             parsed_metadata[key] = [value]
         else:
             parsed_metadata[key] = value
 
+if not 'title' in parsed_metadata:
+    parsed_metadata['title'] = ''
+if not 'description' in parsed_metadata:
+    parsed_metadata['description'] = ''
+if not 'revision' in parsed_metadata:
+    parsed_metadata['revision'] = None
+
+metadata_fp = Path('./pathways/' + wpid + '/' + wpid + '-metadata.json')
+with open(metadata_fp, 'w') as f:
+    json.dump(parsed_metadata, f, indent=2)
+
 for key, value in parsed_metadata.items():
-        if key == 'ontology-ids':
-            annotations = []
-            for ontology_id in value:
-                datasource, id_number = ontology_id.strip().split(':', 1)
+    if key == 'ontology-ids':
+        annotations = []
+        for ontology_id in value:
+            datasource, id_number = ontology_id.split(':', 1)
 
-                annotation = {
-                        'id': ontology_id,
-                        'type': ANNOTION_TYPE_BY_NAMESPACE[datasource]
-                        }
+            annotation = {
+                    'id': ontology_id,
+                    'type': ANNOTION_TYPE_BY_NAMESPACE[datasource]
+                    }
 
-                annotations.append(annotation)
+            annotations.append(annotation)
 
-                iri = 'http://purl.obolibrary.org/obo/' + datasource + '_' + id_number
-                annotation_details = get_annotation_details(iri)
-                if annotation_details:
-                    annotation['value'] = annotation_details['Preferred Label']
-                    annotation['parent'] = get_parent_annotation_preferred_label(iri)
+            iri = 'http://purl.obolibrary.org/obo/' + datasource + '_' + id_number
+            annotation_details = get_annotation_details(iri)
+            if annotation_details:
+                annotation['value'] = annotation_details['Preferred Label']
+                annotation['parent'] = get_parent_annotation_preferred_label(iri)
 
-            post['annotations'] = annotations
-        elif key == 'last-edited':
-            # 20210601215335 -> datetime.date(2021, 6, 1)
-            post[key] = date(int(value[0:4]), int(value[4:6]), int(value[6:8]))
-        else:
-            post[key] = value
-
-if not 'title' in post:
-    post['title'] = ''
-if not 'description' in post:
-    post['description'] = ''
+        post['annotations'] = annotations
+    elif key == 'last-edited':
+        # 20210601215335 -> datetime.date(2021, 6, 1)
+        post[key] = date(int(value[0:4]), int(value[4:6]), int(value[6:8]))
+    else:
+        post[key] = value
 
 datanode_labels = set()
 with open('./pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
@@ -178,7 +185,7 @@ post['redirect_from'] = [
     '/index.php/Pathway:' + wpid,
     '/instance/' + wpid,
 ]
-if 'revision' in post:
+if 'revision' in post and (not post['revision'] is None):
     post['redirect_from'].append(
             '/instance/' + wpid + '_r' + post['revision']
             )
