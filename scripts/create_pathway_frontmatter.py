@@ -112,6 +112,11 @@ else:
     post = frontmatter.loads('---\n---')
 
 with open(info_f) as f:
+    # TODO: once Tina update the metadata file to use JSON, we can
+    # just use the following line and delete the rest of this block.
+    #parsed_metadata = json.load(f)
+
+    parsed_metadata = {}
     for line in f:
         try:
             key, value = line.strip().split(': ', 1)
@@ -121,10 +126,18 @@ with open(info_f) as f:
             continue
 
         if key == 'authors':
-            post[key] = [v.strip() for v in value[1:-1].split(',')]
+            parsed_metadata[key] = [v.strip() for v in value[1:-1].split(',')]
         elif key == 'ontology-ids':
+            parsed_metadata['ontology-ids'] = value.split(',')
+        elif key == 'organisms':
+            parsed_metadata[key] = [value]
+        else:
+            parsed_metadata[key] = value
+
+for key, value in parsed_metadata.items():
+        if key == 'ontology-ids':
             annotations = []
-            for ontology_id in value.split(','):
+            for ontology_id in value:
                 datasource, id_number = ontology_id.strip().split(':', 1)
 
                 annotation = {
@@ -144,8 +157,6 @@ with open(info_f) as f:
         elif key == 'last-edited':
             # 20210601215335 -> datetime.date(2021, 6, 1)
             post[key] = date(int(value[0:4]), int(value[4:6]), int(value[6:8]))
-        elif key == 'organisms':
-            post[key] = [value]
         else:
             post[key] = value
 
@@ -153,12 +164,6 @@ if not 'title' in post:
     post['title'] = ''
 if not 'description' in post:
     post['description'] = ''
-
-datanode_labels = set()
-with open('./pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
-    reader = csv.DictReader(f, delimiter="\t")
-    for line in reader:
-        datanode_labels.add(line['Label'])
 
 datanode_labels = set()
 with open('./pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
@@ -188,7 +193,7 @@ post['schema-jsonld'] = [{
     'description': post['description'],
     'license': 'CC0',
     'creator': {'@type': 'Organization', 'name': 'WikiPathways'},
-    'keywords': list(datanode_labels),
+    'keywords': sorted(datanode_labels),
 }]
 
 with open(frontmatter_f, 'wb') as f:
