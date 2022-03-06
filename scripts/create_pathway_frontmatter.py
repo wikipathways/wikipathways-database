@@ -142,10 +142,6 @@ if not 'description' in parsed_metadata:
 if not 'revision' in parsed_metadata:
     parsed_metadata['revision'] = None
 
-metadata_fp = Path('./pathways/' + wpid + '/' + wpid + '-metadata.json')
-with open(metadata_fp, 'w') as f:
-    json.dump(parsed_metadata, f, indent=2)
-
 for key, value in parsed_metadata.items():
     if key == 'ontology-ids':
         annotations = []
