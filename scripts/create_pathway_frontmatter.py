@@ -5,14 +5,95 @@ from frontmatter.default_handlers import YAMLHandler
 from io import BytesIO
 import json
 from pathlib import Path
+import re
 import sys
 
 
-annotations_types = {
-    'PW': 'Pathway Ontology',
-    'CL': 'Cell Type Ontology',
-    'DOID': 'Disease Ontology',
-}
+ANNOTION_TYPE_BY_NAMESPACE = {
+        'PW': 'Pathway Ontology',
+        'CL': 'Cell Type Ontology',
+        'DOID': 'Disease Ontology',
+        }
+
+PARENT_ANNOTATION_IRIS_BY_DATASOURCE = {
+        'PW': set([
+            'http://purl.obolibrary.org/obo/PW_0000002',
+            'http://purl.obolibrary.org/obo/PW_0000003',
+            'http://purl.obolibrary.org/obo/PW_0000004',
+            'http://purl.obolibrary.org/obo/PW_0000013',
+            'http://purl.obolibrary.org/obo/PW_0000754'
+            ]),
+        'DOID': set([
+            'http://purl.obolibrary.org/obo/DOID_0014667',
+            'http://purl.obolibrary.org/obo/DOID_0050117',
+            'http://purl.obolibrary.org/obo/DOID_14566',
+            'http://purl.obolibrary.org/obo/DOID_150',
+            'http://purl.obolibrary.org/obo/DOID_630'
+            ]),
+        'CL': set([
+            'http://purl.obolibrary.org/obo/CL_0000003',
+            'http://purl.obolibrary.org/obo/CL_0000034',
+            'http://purl.obolibrary.org/obo/CL_0000064',
+            'http://purl.obolibrary.org/obo/CL_0000255',
+            'http://purl.obolibrary.org/obo/CL_0000445',
+            'http://purl.obolibrary.org/obo/CL_0000520',
+            'http://purl.obolibrary.org/obo/CL_0000548',
+            'http://purl.obolibrary.org/obo/CL_0000627',
+            'http://purl.obolibrary.org/obo/CL_0007001'
+            ])
+        }
+
+SUPPORTED_DATASOURCES = set([
+    'PW',
+    'DOID',
+    'CL',
+    ])
+
+DATASOURCE_RE = re.compile(r'http://purl.obolibrary.org/obo/([A-Z]+)_\d+')
+
+
+def get_datasource(iri):
+    m = DATASOURCE_RE.fullmatch(iri)
+    if m:
+        return m.group(1)
+
+def get_annotation_details(iri):
+    datasource = get_datasource(iri)
+    with open('./annotations/' + datasource + '.csv') as f:
+        reader = csv.DictReader(f)
+        for l in reader:
+            if l['Class ID'] == iri:
+                return l
+
+def parse_parent_parent_iri(raw_parent_iri):
+    parent_iris = []
+    for parent_iri in raw_parent_iri.strip().split('|'):
+        datasource = get_datasource(parent_iri)
+        if datasource in SUPPORTED_DATASOURCES:
+            parent_iris.append(parent_iri)
+    return parent_iris
+
+# TODO: what's the difference between the key 'Parents' and
+# the key 'http://data.bioontology.org/metadata/treeView'?
+def get_parent_annotation_preferred_label(parent_iri, child_iri = ''):
+    datasource = get_datasource(parent_iri)
+
+    if (not parent_iri) or (parent_iri == child_iri):
+        return None
+
+    if parent_iri in PARENT_ANNOTATION_IRIS_BY_DATASOURCE[datasource]:
+        annotation_details = get_annotation_details(parent_iri)
+        return annotation_details['Preferred Label']
+
+    annotation_details = get_annotation_details(parent_iri)
+
+    for grandparent_iri in parse_parent_parent_iri(annotation_details['Parents']):
+        preferred_label = get_parent_annotation_preferred_label(
+                grandparent_iri,
+                parent_iri)
+        if preferred_label:
+            return preferred_label 
+
 
 info_f = sys.argv[1]
 if not info_f:
@@ -42,21 +123,23 @@ with open(info_f) as f:
         if key == 'authors':
             post[key] = [v.strip() for v in value[1:-1].split(',')]
         elif key == 'ontology-ids':
-            # annotations:
-            #   - value: angiotensin signaling pathway
-            #     type: Pathway Ontology
             annotations = []
             for ontology_id in value.split(','):
                 datasource, id_number = ontology_id.strip().split(':', 1)
-                annotation = dict()
-                annotation['type'] = annotations_types[datasource]
-                with open('./annotations/' + datasource + '.csv') as f:
-                    reader = csv.DictReader(f, quoting=csv.QUOTE_NONE)
-                    for l in reader:
-                        if l['Class ID'] == 'http://purl.obolibrary.org/obo/' + datasource + '_' + id_number:
-                            annotation['value'] = l['Preferred Label']
-                            annotations.append(annotation)
-                            break
+
+                annotation = {
+                        'id': ontology_id,
+                        'type': ANNOTION_TYPE_BY_NAMESPACE[datasource]
+                        }
+
+                annotations.append(annotation)
+
+                iri = 'http://purl.obolibrary.org/obo/' + datasource + '_' + id_number
+                annotation_details = get_annotation_details(iri)
+                if annotation_details:
+                    annotation['value'] = annotation_details['Preferred Label']
+                    annotation['parent'] = get_parent_annotation_preferred_label(iri)
+
             post['annotations'] = annotations
         elif key == 'last-edited':
             # 20210601215335 -> datetime.date(2021, 6, 1)
@@ -73,13 +156,13 @@ if not 'description' in post:
 
 datanode_labels = set()
 with open('./pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
-    reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
+    reader = csv.DictReader(f, delimiter="\t")
     for line in reader:
         datanode_labels.add(line['Label'])
 
 datanode_labels = set()
 with open('./pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
-    reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
+    reader = csv.DictReader(f, delimiter="\t")
     for line in reader:
         datanode_labels.add(line['Label'])
 
@@ -89,8 +172,11 @@ with open('./pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
 post['redirect_from'] = [
     '/index.php/Pathway:' + wpid,
     '/instance/' + wpid,
-    #'/instance/' + wpid + '_r' + post['revision'],
 ]
+if 'revision' in post:
+    post['redirect_from'].append(
+            '/instance/' + wpid + '_r' + post['revision']
+            )
 
 post['seo'] = 'CreativeWork'
 
