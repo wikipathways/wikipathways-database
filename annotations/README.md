@@ -25,16 +25,16 @@ Run the following commands:
 
 ```
 #Pathway Ontology
-wget -O pw/pw.csv.gz 'https://data.bioontology.org/ontologies/PW/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb&download_format=csv'
-gunzip pw/pw.csv.gz
+wget -O PW.csv.gz 'https://data.bioontology.org/ontologies/PW/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb&download_format=csv'
+gunzip PW.csv.gz
 
 #Disease
-wget -O doid/doid.csv.gz 'https://data.bioontology.org/ontologies/DOID/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb&download_format=csv'
-gunzip doid/doid.csv.gz
+wget -O DOID.csv.gz 'https://data.bioontology.org/ontologies/DOID/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb&download_format=csv'
+gunzip DOID.csv.gz
 
 #Cell Type
-wget -O cl/cl.csv.gz 'https://data.bioontology.org/ontologies/CL/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb&download_format=csv'
-gunzip cl/cl.csv.gz
+wget -O CL.csv.gz 'https://data.bioontology.org/ontologies/CL/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb&download_format=csv'
+gunzip CL.csv.gz
 
 # TODO: Make a GitHub action do this quarterly
 ```
