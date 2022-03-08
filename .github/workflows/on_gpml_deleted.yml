@@ -18,7 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
-      all: ${{ steps.changes.outputs.all}}
       gpml: ${{ steps.changes.outputs.gpml }}
     steps:
         # Make sure we have some code to diff.
@@ -30,10 +29,11 @@ jobs:
         id: changes
         # Set outputs using the command.
         run: |
-          echo "GPML files deleted between github.event.before ${{ github.event.before }} and github.sha ${{ github.sha }} (now)"
+          echo "GPML files deleted between github.event.before ${{ github.event.before }} and github.sha ${{ github.sha }} (latest)"
           #echo "github.event.after ${{ github.event.after }}"
-          git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.sha }} | grep .gpml$
-          echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRTD ${{ github.event.before }} ${{ github.sha }} | xargs)"
+          if git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.sha }} | grep .gpml$; then
+            git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.sha }} | grep .gpml$
+          fi
           echo "::set-output name=gpml::$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.sha }} | grep .gpml$ | xargs)"
           
   sync-site-repo:
