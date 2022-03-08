@@ -28,14 +28,14 @@ jobs:
         id: changes
         # Set outputs using the command.
         run: |
-          echo "::set-output name=all::$(git diff --name-only --diff-filter=D ${{ github.event.push.base.sha }} ${{ github.sha }} | xargs)"
+          echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRTD ${{ github.event.push.base.sha }} ${{ github.sha }} | xargs)"
           echo "::set-output name=gpml::$(git diff --name-only --diff-filter=D ${{ github.event.push.base.sha }} ${{ github.sha }} | grep .gpml$ | xargs)"
           
   sync-site-repo:
     runs-on: ubuntu-latest
     needs: deleted-files
     # only run there are changed files
-    if: ${{needs.deleted-files.outputs.gpml}}
+    #if: ${{needs.deleted-files.outputs.gpml}}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -60,6 +60,9 @@ jobs:
 
       - name: Commit report
         run: |
+          echo 'all'
+          echo ${{needs.deleted-files.outputs.all}}
+          echo 'deleted gpmls'
           echo ${{needs.deleted-files.outputs.gpml}}
           #git config --global user.name 'GitHub Action'
           #git config --global user.email 'action@github.com'
