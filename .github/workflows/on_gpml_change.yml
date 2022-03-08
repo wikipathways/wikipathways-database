@@ -223,7 +223,9 @@ jobs:
           git config --global user.email 'action@github.com'
           cp wikipathways-database/pathways/*/*.md wikipathways.github.io/_pathways/
           cp wikipathways-database/pathways/*/*-bibliography.tsv wikipathways.github.io/_data/
-          cp wikipathways-database/pathways/*/*-datanodes.tsv wikipathways.github.io/_data/
+          # Disabling WPx-datanodes.tsv until this issue is closed:
+          # https://github.com/wikipathways/meta-data-action/issues/1
+          #cp wikipathways-database/pathways/*/*-datanodes.tsv wikipathways.github.io/_data/
           cd wikipathways.github.io
           git add _pathways/*.md
           git add _data/*.tsv
