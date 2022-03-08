@@ -30,9 +30,11 @@ jobs:
         id: changes
         # Set outputs using the command.
         run: |
-          echo "GPML files added/changed between github.event.before ${{ github.event.before }} and github.sha ${{ github.sha }} (now)"
+          echo "GPML files deleted between github.event.before ${{ github.event.before }} and github.sha ${{ github.sha }} (latest)"
           #echo "github.event.after ${{ github.event.after }}"
-          git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep .gpml$
+          if git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep .gpml$; then
+            git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep .gpml$
+          fi
           echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | xargs)"
           echo "::set-output name=gpml::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep .gpml$ | xargs)"
   
