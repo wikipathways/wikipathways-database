@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # from https://dev.to/scienta/get-changed-files-in-github-actions-1p36
+  # inspired by https://dev.to/scienta/get-changed-files-in-github-actions-1p36
   deleted-files:
     runs-on: ubuntu-latest
     # Map a step output to a job output
@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: deleted-files
     # only run there are changed files
-    #if: ${{needs.deleted-files.outputs.gpml}}
+    if: ${{needs.deleted-files.outputs.gpml}}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -70,28 +70,28 @@ jobs:
 
       - name: Commit report
         run: |
-          echo 'test output:'
-          echo ${{needs.deleted-files.outputs.test}}
-          echo 'shas output:'
-          echo ${{needs.deleted-files.outputs.shas}}
-          echo 'all:'
-          echo ${{needs.deleted-files.outputs.all}}
-          echo 'deleted gpmls:'
-          echo ${{needs.deleted-files.outputs.gpml}}
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd wikipathways.github.io
           for f in ${{needs.deleted-files.outputs.gpml}}; do
-            echo "$f"
-          done
-          #git config --global user.name 'GitHub Action'
-          #git config --global user.email 'action@github.com'
-          #cp wikipathways-database/pathways/*/*.md wikipathways.github.io/_pathways/
-          #cp wikipathways-database/pathways/*/*-bibliography.tsv wikipathways.github.io/_data/
-          #cp wikipathways-database/pathways/*/*-datanodes.tsv wikipathways.github.io/_data/
-          #cd wikipathways.github.io
-          #git add _pathways/*.md
-          #git add _data/*.tsv
-          #if git diff --exit-code --staged > /dev/null; then
-          #    echo "No changes"
-          #else
-          #    git commit -m 'Update tsv and md files'
-          #    git push
-          #fi
+            echo "file path: $f"
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "deleting $wpid from wikipathways.github.io"
+            if [ -e _pathways/"$wpid".md ]; then
+              git rm _pathways/"$wpid".md
+            fi
+            if [ -e _data/"$wpid"-bibliography.tsv ]; then
+              git rm v/"$wpid"-bibliography.tsv
+            fi
+            if [ -e _data/"$wpid"-datanodes.tsv ]; then
+              git rm v/"$wpid"-datanodes.tsv
+            fi
+          done          
+          git add _pathways/*.md
+          git add _data/*.tsv
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git commit -m 'Remove deleted tsv and md file(s)'
+              git push
+          fi
