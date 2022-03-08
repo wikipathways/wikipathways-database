@@ -30,9 +30,9 @@ jobs:
         id: changes
         # Set outputs using the command.
         run: |
-          echo "github.event.before: ${{ github.event.before }}"
-          echo "github.event.after ${{ github.event.after }}"
-          echo "github.sha: ${{ github.sha }}"
+          echo "Files changed between github.event.before: ${{ github.event.before }} and now github.sha: ${{ github.sha }}"
+          #echo "github.event.after ${{ github.event.after }}"
+          git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | xargs)
           echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | xargs)"
           echo "::set-output name=gpml::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep .gpml$ | xargs)"
   
@@ -68,9 +68,8 @@ jobs:
           # Change this to use https://github.com/wikipathways/meta-data-action
           # instead of pathvisio. 
           for f in ${{needs.changed-files.outputs.gpml}}; do
-            echo "changed gpml file path: $f"
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
-            echo "generating info and datanode files for $wpid"
+            echo "generating info and datanode files for $wpid ($f)"
             sh ./pathvisio-3.3.0/pathvisio.sh -v
           done
           
@@ -141,9 +140,8 @@ jobs:
       - name: Create pathway frontmatter
         run: |        
           for f in ${{needs.changed-files.outputs.gpml}}; do
-            echo "changed gpml file path: $f"
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
-            echo "generating frontmatter .md file for $wpid"
+            echo "generating frontmatter file for $wpid"
             json_info_f=./pathways/"$wpid"/"$wpid"-info.json
             old_info_f=./pathways/"$wpid"/"$wpid".info
             if [ -e "$json_info_f" ]; then
