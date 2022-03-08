@@ -39,7 +39,7 @@ jobs:
   sync-site-repo:
     runs-on: ubuntu-latest
     needs: deleted-files
-    # only run there are changed files
+    # only run if there are deleted files
     if: ${{needs.deleted-files.outputs.gpml}}
     steps:
       - name: Checkout
