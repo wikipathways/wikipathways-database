@@ -161,7 +161,7 @@ for key, value in parsed_metadata.items():
 
 datanode_labels = set()
 with open('./pathways/' + wpid + '/' + wpid + '-datanodes.tsv') as f:
-    reader = csv.DictReader(f, delimiter="\t")
+    reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
     for line in reader:
         datanode_labels.add(line['Label'])
 
