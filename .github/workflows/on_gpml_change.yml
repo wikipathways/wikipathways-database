@@ -32,7 +32,7 @@ jobs:
         run: |
           echo "Files changed between github.event.before: ${{ github.event.before }} and now github.sha: ${{ github.sha }}"
           #echo "github.event.after ${{ github.event.after }}"
-          git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | xargs)
+          git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }}
           echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | xargs)"
           echo "::set-output name=gpml::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep .gpml$ | xargs)"
   
