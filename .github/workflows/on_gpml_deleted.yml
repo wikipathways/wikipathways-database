@@ -26,6 +26,8 @@ jobs:
         # Make sure we have some code to diff.
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Get changed files
         id: changes
         # Set outputs using the command.
@@ -33,9 +35,9 @@ jobs:
           echo "::set-output name=test::hello"
           echo "::set-output name=shas::${{ github.event.base.sha }} ${{ github.sha }}"
           #echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRTD ${{ github.event.push.before }} ${{ github.event.push.after }} | xargs)"
-          #echo "${{ github }}"
-          #echo "${{ github.event }}"
-          echo "${{ github.event.before }} vs. ${{ github.event.after }} vs. ${{ github.sha }}"
+          echo "github.event.before: ${{ github.event.before }}"
+          echo "github.event.after ${{ github.event.after }}"
+          echo "github.sha: ${{ github.sha }}"
           echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRTD ${{ github.event.before }} ${{ github.sha }} | xargs)"
           echo "::set-output name=gpml::$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.sha }} | grep .gpml$ | xargs)"
           
