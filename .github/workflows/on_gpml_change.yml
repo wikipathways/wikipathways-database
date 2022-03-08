@@ -1,4 +1,4 @@
-name: GPML added or edited. Process updates to sync.
+name: Handle GPML changes
 
 on:
   workflow_dispatch:
@@ -14,12 +14,15 @@ concurrency:
 
 jobs:
   # inspired by https://dev.to/scienta/get-changed-files-in-github-actions-1p36
-  changed-files:
+  changed-gpmls:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
-      #all: ${{ steps.changes.outputs.all}}
-      gpml: ${{ steps.changes.outputs.gpml }}
+      added-modified: ${{ steps.changes.outputs.AM }}
+      copied: ${{ steps.changes.outputs.C }}
+      deleted: ${{ steps.changes.outputs.D }}
+      renamed: ${{ steps.changes.outputs.R }}
+      type-changed: ${{ steps.changes.outputs.T }}
     steps:
         # Make sure we have some code to diff.
       - name: Checkout repository
@@ -30,19 +33,43 @@ jobs:
         id: changes
         # Set outputs using the command.
         run: |
-          echo "GPML files deleted between github.event.before ${{ github.event.before }} and github.sha ${{ github.sha }} (latest)"
-          #echo "github.event.after ${{ github.event.after }}"
-          if git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep .gpml$; then
-            git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep .gpml$
+          echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
+          
+          echo "::set-output name=added-modified::$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'added or modified:'
+            git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
           fi
-          #echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | xargs)"
-          echo "::set-output name=gpml::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep .gpml$ | xargs)"
-  
+          
+          echo "::set-output name=copied::$(git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'copied:'
+            git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+
+          echo "::set-output name=deleted::$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'deleted:'
+            git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+            
+          echo "::set-output name=renamed::$(git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'renamed:'
+            git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+          
+          echo "::set-output name=type-changed::$(git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'type changed:'
+            git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+          
   metadata:
     runs-on: ubuntu-latest
-    needs: changed-files
-    # only run if there are changed files
-    if: ${{needs.changed-files.outputs.gpml}}
+    needs: changed-gpmls
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
       - name: Checkout wikipathways-database repo
         uses: actions/checkout@v2
@@ -71,17 +98,17 @@ jobs:
           # TODO: this is currently just a placeholder to show a java program.
           # Change this to use https://github.com/wikipathways/meta-data-action
           # instead of pathvisio. 
-          for f in ${{needs.changed-files.outputs.gpml}}; do
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating info and datanode files for $wpid ($f)"
             sh ./pathvisio-3.3.0/pathvisio.sh -v
           done
           
   pubmed:
-    # only run if there are changed files
-    if: ${{needs.changed-files.outputs.gpml}}
     runs-on: ubuntu-20.04
-    needs: changed-files
+    needs: changed-gpmls
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -121,7 +148,7 @@ jobs:
           
   frontmatter:
     runs-on: ubuntu-20.04
-    needs: [changed-files, metadata]
+    needs: [changed-gpmls, metadata]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -145,7 +172,7 @@ jobs:
           
       - name: Create pathway frontmatter
         run: |        
-          for f in ${{needs.changed-files.outputs.gpml}}; do
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating frontmatter file for $wpid"
             json_info_f=./pathways/"$wpid"/"$wpid"-info.json
@@ -172,9 +199,9 @@ jobs:
               git push
           fi
           
-  sync-site-repo:
-    runs-on: ubuntu-20.04
-    needs: [metadata, pubmed, frontmatter]
+  sync-site-repo-added-modified:
+    runs-on: ubuntu-latest
+    needs: [changed-gpmls, metadata, pubmed, frontmatter]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -210,6 +237,62 @@ jobs:
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
+              git pull
               git commit -m 'Update tsv and md files'
+              git push
+          fi
+          
+  sync-site-repo-deleted:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were deleted
+    if: ${{needs.changed-gpmls.outputs.deleted}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          
+      - name: Checkout jekyll repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways.github.io
+          path: wikipathways.github.io
+          submodules: true
+          fetch-depth: 0
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd wikipathways.github.io
+          for f in ${{needs.changed-gpmls.outputs.deleted}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "deleting $wpid from wikipathways.github.io"
+            if [ -e _pathways/"$wpid".md ]; then
+              git rm _pathways/"$wpid".md
+            fi
+            if [ -e _data/"$wpid"-bibliography.tsv ]; then
+              git rm _data/"$wpid"-bibliography.tsv
+            fi
+            if [ -e _data/"$wpid"-datanodes.tsv ]; then
+              git rm _data/"$wpid"-datanodes.tsv
+            fi
+          done          
+          git add _pathways/*.md
+          git add _data/*.tsv
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Remove deleted tsv and md file(s)'
               git push
           fi
