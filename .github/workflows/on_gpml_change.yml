@@ -18,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
-      added-modified: ${{ steps.changes.outputs.AM }}
-      copied: ${{ steps.changes.outputs.C }}
-      deleted: ${{ steps.changes.outputs.D }}
-      renamed: ${{ steps.changes.outputs.R }}
-      type-changed: ${{ steps.changes.outputs.T }}
+      added-modified: ${{ steps.changes.outputs.added-modified }}
+      copied: ${{ steps.changes.outputs.copied }}
+      deleted: ${{ steps.changes.outputs.deleted }}
+      renamed: ${{ steps.changes.outputs.renamed }}
+      type-changed: ${{ steps.changes.outputs.type-changed }}
     steps:
         # Make sure we have some code to diff.
       - name: Checkout repository
@@ -36,34 +36,34 @@ jobs:
           echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
           
           echo "::set-output name=added-modified::$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
-          #if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
-          #  echo 'added or modified:'
-          #  git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
-          #fi
+          if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'added or modified:'
+            git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
           
           echo "::set-output name=copied::$(git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
-          #if git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
-          #  echo 'copied:'
-          #  git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
-          #fi
+          if git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'copied:'
+            git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
 
           echo "::set-output name=deleted::$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
-          #if git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
-          #  echo 'deleted:'
-          #  git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
-          #fi
+          if git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'deleted:'
+            git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
             
           echo "::set-output name=renamed::$(git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
-          #if git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
-          #  echo 'renamed:'
-          #  git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
-          #fi
+          if git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'renamed:'
+            git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
           
           echo "::set-output name=type-changed::$(git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
-          #if git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
-          #  echo 'type changed:'
-          #  git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
-          #fi
+          if git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'type changed:'
+            git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
           
   metadata:
     runs-on: ubuntu-latest
