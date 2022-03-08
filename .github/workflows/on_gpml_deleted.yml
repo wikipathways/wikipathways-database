@@ -33,6 +33,8 @@ jobs:
           echo "::set-output name=test::hello"
           echo "::set-output name=shas::${{ github.event.push.base.sha }} ${{ github.sha }}"
           #echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRTD ${{ github.event.push.before }} ${{ github.event.push.after }} | xargs)"
+          echo "${{ github }}"
+          echo "${{ github.event }}"
           echo "${{ github.event.push.before }} vs. ${{ github.event.push.after }} vs. ${{ github.sha }}"
           echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRTD ${{ github.event.push.before }} ${{ github.sha }} | xargs)"
           echo "::set-output name=gpml::$(git diff --name-only --diff-filter=D ${{ github.event.push.before }} ${{ github.sha }} | grep .gpml$ | xargs)"
