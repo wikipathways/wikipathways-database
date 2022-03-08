@@ -76,10 +76,10 @@ jobs:
               git rm _pathways/"$wpid".md
             fi
             if [ -e _data/"$wpid"-bibliography.tsv ]; then
-              git rm v/"$wpid"-bibliography.tsv
+              git rm _data/"$wpid"-bibliography.tsv
             fi
             if [ -e _data/"$wpid"-datanodes.tsv ]; then
-              git rm v/"$wpid"-datanodes.tsv
+              git rm _data/"$wpid"-datanodes.tsv
             fi
           done          
           git add _pathways/*.md
