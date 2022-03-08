@@ -20,8 +20,6 @@ jobs:
     outputs:
       all: ${{ steps.changes.outputs.all}}
       gpml: ${{ steps.changes.outputs.gpml }}
-      shas: ${{ steps.changes.outputs.shas }}
-      test: ${{ steps.changes.outputs.test }}
     steps:
         # Make sure we have some code to diff.
       - name: Checkout repository
@@ -32,12 +30,9 @@ jobs:
         id: changes
         # Set outputs using the command.
         run: |
-          echo "::set-output name=test::hello"
-          echo "::set-output name=shas::${{ github.event.base.sha }} ${{ github.sha }}"
-          #echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRTD ${{ github.event.push.before }} ${{ github.event.push.after }} | xargs)"
-          echo "github.event.before: ${{ github.event.before }}"
-          echo "github.event.after ${{ github.event.after }}"
-          echo "github.sha: ${{ github.sha }}"
+          echo "Files changed between github.event.before: ${{ github.event.before }} and now github.sha: ${{ github.sha }}"
+          #echo "github.event.after ${{ github.event.after }}"
+          git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }}
           echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRTD ${{ github.event.before }} ${{ github.sha }} | xargs)"
           echo "::set-output name=gpml::$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.sha }} | grep .gpml$ | xargs)"
           
