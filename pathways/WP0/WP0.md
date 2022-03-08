@@ -35,12 +35,12 @@ last-edited: 2021-05-23
 organisms:
 - Mus musculus
 redirect_from:
-- /index.php/Pathway:WP1
-- /instance/WP1
+- /index.php/Pathway:WP0
+- /instance/WP0
 revision: null
 schema-jsonld:
 - '@context': https://schema.org/
-  '@id': https://wikipathways.github.io/pathways/WP1.html
+  '@id': https://wikipathways.github.io/pathways/WP0.html
   '@type': Dataset
   creator:
     '@type': Organization
