@@ -22,7 +22,6 @@ jobs:
       copied: ${{ steps.changes.outputs.copied }}
       deleted: ${{ steps.changes.outputs.deleted }}
       renamed: ${{ steps.changes.outputs.renamed }}
-      type-changed: ${{ steps.changes.outputs.type-changed }}
     steps:
         # Make sure we have some code to diff.
       - name: Checkout repository
@@ -57,12 +56,6 @@ jobs:
           if git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
             echo 'renamed:'
             git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
-          fi
-          
-          echo "::set-output name=type-changed::$(git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
-          if git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
-            echo 'type changed:'
-            git diff --name-only --diff-filter=T ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
           fi
           
   metadata:
