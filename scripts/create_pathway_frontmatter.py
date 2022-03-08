@@ -9,51 +9,36 @@ import re
 import sys
 
 
+DATASOURCE_RE = re.compile(r'http://purl.obolibrary.org/obo/([A-Z]+)_\d+')
+WPID_RE = re.compile(r'.*(WP\d+).*')
+
 ANNOTION_TYPE_BY_NAMESPACE = {
         'PW': 'Pathway Ontology',
         'CL': 'Cell Type Ontology',
         'DOID': 'Disease Ontology',
         }
 
-PARENT_ANNOTATION_IRIS_BY_DATASOURCE = {
-        'PW': set([
-            'http://purl.obolibrary.org/obo/PW_0000002',
-            'http://purl.obolibrary.org/obo/PW_0000003',
-            'http://purl.obolibrary.org/obo/PW_0000004',
-            'http://purl.obolibrary.org/obo/PW_0000013',
-            'http://purl.obolibrary.org/obo/PW_0000754'
-            ]),
-        'DOID': set([
-            'http://purl.obolibrary.org/obo/DOID_0014667',
-            'http://purl.obolibrary.org/obo/DOID_0050117',
-            'http://purl.obolibrary.org/obo/DOID_14566',
-            'http://purl.obolibrary.org/obo/DOID_150',
-            'http://purl.obolibrary.org/obo/DOID_630'
-            ]),
-        'CL': set([
-            'http://purl.obolibrary.org/obo/CL_0000003',
-            'http://purl.obolibrary.org/obo/CL_0000034',
-            'http://purl.obolibrary.org/obo/CL_0000064',
-            'http://purl.obolibrary.org/obo/CL_0000255',
-            'http://purl.obolibrary.org/obo/CL_0000445',
-            'http://purl.obolibrary.org/obo/CL_0000520',
-            'http://purl.obolibrary.org/obo/CL_0000548',
-            'http://purl.obolibrary.org/obo/CL_0000627',
-            'http://purl.obolibrary.org/obo/CL_0007001'
-            ])
-        }
+parent_annotation_iris_by_datasource = {}
+with open('./annotations/top_parent_terms.json') as f:
+    top_parent_terms = json.load(f)
+    for datasource,ontology_ids in top_parent_terms.items():
+        if not datasource in parent_annotation_iris_by_datasource:
+            parent_annotation_iris_by_datasource[datasource] = set()
+        iris = parent_annotation_iris_by_datasource[datasource]
+        for ontology_id in ontology_ids:
+            datasource, id_number = ontology_id.split(':', 1)
+            iris.add('http://purl.obolibrary.org/obo/' + datasource + '_' + id_number)
 
-SUPPORTED_DATASOURCES = set([
-    'PW',
-    'DOID',
-    'CL',
-    ])
-
-DATASOURCE_RE = re.compile(r'http://purl.obolibrary.org/obo/([A-Z]+)_\d+')
+supported_datasources = set(parent_annotation_iris_by_datasource.keys())
 
 
 def get_datasource(iri):
     m = DATASOURCE_RE.fullmatch(iri)
+    if m:
+        return m.group(1)
+
+def get_wpid(input_str):
+    m = WPID_RE.match(input_str)
     if m:
         return m.group(1)
 
@@ -70,7 +55,7 @@ def parse_parent_parent_iri(raw_parent_iri):
     for raw_parent_iri in raw_parent_iri.strip().split('|'):
         parent_iri = raw_parent_iri.strip()
         datasource = get_datasource(parent_iri)
-        if datasource in SUPPORTED_DATASOURCES:
+        if datasource in supported_datasources:
             parent_iris.append(parent_iri)
     return parent_iris
 
@@ -82,7 +67,7 @@ def get_parent_annotation_preferred_label(parent_iri, child_iri = ''):
     if (not parent_iri) or (parent_iri == child_iri):
         return None
 
-    if parent_iri in PARENT_ANNOTATION_IRIS_BY_DATASOURCE[datasource]:
+    if parent_iri in parent_annotation_iris_by_datasource[datasource]:
         annotation_details = get_annotation_details(parent_iri)
         return annotation_details['Preferred Label']
 
@@ -101,8 +86,11 @@ if not info_f:
     raise Exception('No info_f provided')
 
 info_fp = Path(info_f)
-wpid = (info_fp.stem).replace('-metadata', '')
-
+# TODO: will Tina name these files WPx-info.json or WPx-metadata.json?
+# remove the replace step for whichever one isn't relevant.
+wpid = get_wpid(info_fp.stem)
+if not wpid:
+    raise Exception('Cannot extract WikiPathways ID from ' + info_f)
 
 frontmatter_fp = Path('./pathways/' + wpid + '/' + wpid + '.md')
 frontmatter_f = str(frontmatter_fp)
@@ -113,27 +101,28 @@ else:
     post = frontmatter.loads('---\n---')
 
 with open(info_f) as f:
-    # TODO: once Tina update the metadata file to use JSON, we can
-    # just use the following line and delete the rest of this block.
-    #parsed_metadata = json.load(f)
+    if info_fp.suffix == '.json':
+        # TODO: once Tina update the metadata file to use JSON, we can
+        # just use the following line and delete the rest of this block.
+        parsed_metadata = json.load(f)
+    else:
+        parsed_metadata = {}
+        for line in f:
+            try:
+                key, value = line.strip().split(': ', 1)
+            except Exception:
+                print("create_pathway_frontmatter.py error - Failed to parse .info file line: " + line)
+                print(info_fp)
+                continue
 
-    parsed_metadata = {}
-    for line in f:
-        try:
-            key, value = line.strip().split(': ', 1)
-        except Exception:
-            print("create_pathway_frontmatter.py error - Failed to parse .info file line: " + line)
-            print(info_fp)
-            continue
-
-        if key == 'authors':
-            parsed_metadata[key] = [v.strip() for v in value[1:-1].split(',')]
-        elif key == 'ontology-ids':
-            parsed_metadata['ontology-ids'] = [v.strip() for v in value.split(',')]
-        elif key == 'organisms':
-            parsed_metadata[key] = [value]
-        else:
-            parsed_metadata[key] = value
+            if key == 'authors':
+                parsed_metadata[key] = [v.strip() for v in value[1:-1].split(',')]
+            elif key == 'ontology-ids':
+                parsed_metadata['ontology-ids'] = [v.strip() for v in value.split(',')]
+            elif key == 'organisms':
+                parsed_metadata[key] = [value]
+            else:
+                parsed_metadata[key] = value
 
 if not 'title' in parsed_metadata:
     parsed_metadata['title'] = ''
@@ -159,7 +148,9 @@ for key, value in parsed_metadata.items():
             annotation_details = get_annotation_details(iri)
             if annotation_details:
                 annotation['value'] = annotation_details['Preferred Label']
-                annotation['parent'] = get_parent_annotation_preferred_label(iri)
+                parent = get_parent_annotation_preferred_label(iri)
+                if parent:
+                    annotation['parent'] = parent
 
         post['annotations'] = annotations
     elif key == 'last-edited':
