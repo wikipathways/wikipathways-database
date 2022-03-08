@@ -9,7 +9,7 @@ annotations:
   type: Pathway Ontology
   value: hypercholesterolemia pathway
 - id: DOID:1287
-  parent: null
+  parent: cardiovascular system disease
   type: Disease Ontology
   value: cardiovascular system disease
 authors:
