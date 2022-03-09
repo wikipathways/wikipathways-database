@@ -99,7 +99,7 @@ jobs:
           
   pubmed:
     runs-on: ubuntu-20.04
-    needs: changed-gpmls
+    needs: [changed-gpmls, metadata]
     # only run if gpmls were added or modified
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
