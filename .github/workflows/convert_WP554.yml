@@ -24,6 +24,7 @@ jobs:
           mv pathvisio-3.3.0/pathvisio.jar ./
           mv pathvisio-3.3.0/pathvisio.sh pathvisio
           chmod +x pathvisio
+          pathvisio -v
 
       - name: Cache Java dependencies
         uses: actions/cache@v2
@@ -55,9 +56,9 @@ jobs:
       - name: Convert GPML to JSON and SVG
         working-directory: scripts/generate-svgs
         run: |
-          echo 'pwd'
-          pwd
-          echo 'ls'
-          ls
-          echo 'convert'
+          rm ../../pathways/WP554/WP554.{json,svg}
           ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml ../../pathways/WP554/WP554.svg
+          ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml
+          echo 'ls -lisha ../../pathways/WP554/'
+          ls -lisha ../../pathways/WP554/
+
