@@ -56,7 +56,12 @@ jobs:
       - name: Convert GPML to JSON and SVG
         working-directory: scripts/generate-svgs
         run: |
-          rm ../../pathways/WP554/WP554.{json,svg}
+          for f in ../../pathways/WP554/WP554.{json,svg}; do 
+            echo "$f"; 
+            if [ -e "$f" ]; then
+              rm "$f"
+            fi
+          done
           ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml ../../pathways/WP554/WP554.svg
           ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml
           echo 'ls -lisha ../../pathways/WP554/'
