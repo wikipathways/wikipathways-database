@@ -45,13 +45,13 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install NPM deps
-	working-directory: scripts/generate-svgs
+        working-directory: scripts/generate-svgs
         run: |
           npm install
             
       - name: Demo step for a demo job showing use of Java
-	working-directory: scripts/generate-svgs
+        working-directory: scripts/generate-svgs
         run: |
-	  pwd
-	  ls
-	  ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml ../../pathways/WP554.svg
+          pwd
+          ls
+          ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml ../../pathways/WP554.svg
