@@ -193,6 +193,7 @@ jobs:
           fi
 
   json-svg:
+    needs: [changed-gpmls, metadata]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout wikipathways-database repo
