@@ -37,8 +37,8 @@ error_exit() {
 trap error_exit ERR
 trap cleanup EXIT INT QUIT TERM
 
-# to run locally installed npm pkgs from command line
-PATH=$(npm bin):$PATH
+# to run locally installed npm pkgs and other scripts from command line
+PATH=./:"$(npm bin)":$PATH
 
 # TODO: fix these in pvjs instead of here
 fix_pvjs_bugs() {
@@ -254,10 +254,10 @@ elif [[ "$ext_out" =~ ^(json|jsonld)$ ]]; then
        < "$path_out.b4bridgedb.json" > "$path_out"
 
     # Add Wikidata ids
-    add_wd_ids "$path_out"
+    "$SCRIPT_DIR/add_wd_ids" "$path_out"
 
     # Add HGNC Symbols, without the "HGNC:" namespace prefixed
-    add_hgnc_symbols "$path_out"
+    "$SCRIPT_DIR/add_hgnc_symbols" "$path_out"
   fi
 
 elif [[ "$ext_out" =~ ^(svg|pvjssvg)$ ]]; then
@@ -315,7 +315,7 @@ r /dev/stdin
 		  "$path_out"
 
     sed -i '/<style.*>/{
-r '"$SCRIPT_DIR/../plain.css"'
+r '"$SCRIPT_DIR/plain.css"'
 }' "$path_out"
 
     #############################
@@ -329,7 +329,7 @@ r '"$SCRIPT_DIR/../plain.css"'
 		  "$path_out_dark_pvjssvg"
 
     sed -i '/<style.*>/{
-r '"$SCRIPT_DIR/../dark.css"'
+r '"$SCRIPT_DIR/dark.css"'
 }' "$path_out_dark_pvjssvg"
 
   else
