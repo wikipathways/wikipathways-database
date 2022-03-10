@@ -253,21 +253,13 @@ elif [[ "$ext_out" =~ ^(json|jsonld)$ ]]; then
         ChEBI P683 Ensembl P594 "Entrez Gene" P351 HGNC P353 HMDB P2057 Wikidata \
        < "$path_out.b4bridgedb.json" > "$path_out"
 
-    echo '$path_out'
-    echo "$path_out"
-    echo 'ls258'
-    ls
-    echo 'ls ../../pathways/WP554*'
-    ls ../../pathways/WP554*
-    node "$SCRIPT_DIR/add_wd_ids" "$path_out"
-    node ./add_wd_ids "$path_out"
-    add_wd_ids "$path_out"
-    ./add_wd_ids "$path_out"
     # Add Wikidata ids
-    "$SCRIPT_DIR/add_wd_ids" "$path_out"
+    #"$SCRIPT_DIR/add_wd_ids" "$path_out"
+    add_wd_ids "$path_out"
 
     # Add HGNC Symbols, without the "HGNC:" namespace prefixed
-    "$SCRIPT_DIR/add_hgnc_symbols" "$path_out"
+    #"$SCRIPT_DIR/add_hgnc_symbols" "$path_out"
+    add_hgnc_symbols "$path_out"
   fi
 
 elif [[ "$ext_out" =~ ^(svg|pvjssvg)$ ]]; then
