@@ -19,12 +19,16 @@ jobs:
       - name: Install Java deps
         working-directory: scripts/generate-svgs
         run: |
+          sudo apt-get install -y xvfb
           wget https://github.com/PathVisio/pathvisio/releases/download/v3.3.0/pathvisio_bin-3.3.0.zip
           unzip pathvisio_bin-3.3.0.zip
           mv pathvisio-3.3.0/pathvisio.jar ./
           mv pathvisio-3.3.0/pathvisio.sh pathvisio
           chmod +x pathvisio
           ./pathvisio -v
+          xvfb-run ./pathvisio -v
+          xvfb-run ./pathvisio ../../WP554/WP554.gpml ./WP1243_69897.owl
+          ls -lisha
 
       - name: Cache Java dependencies
         uses: actions/cache@v2
@@ -63,7 +67,7 @@ jobs:
             fi
           done
           ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml ../../pathways/WP554/WP554.svg
-          ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml
+          #./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml
           echo 'ls -lisha ../../pathways/WP554/'
           ls -lisha ../../pathways/WP554/
 
