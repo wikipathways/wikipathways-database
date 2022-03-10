@@ -12,6 +12,7 @@ const pathwayFile = process.argv[2];
 if (!pathwayFile) {
   throw new Error("Must specify a pathway");
 }
+console.log(`pathwayFile: ${pathwayFile}`)
 const { pathway, entitiesById } = JSON.parse(fs.readFileSync(pathwayFile));
 const pathwayId = pathway.id;
 
