@@ -193,7 +193,7 @@ jobs:
           fi
 
   json-svg:
-    needs: [changed-gpmls, metadata]
+    needs: [changed-gpmls]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout wikipathways-database repo
@@ -224,12 +224,18 @@ jobs:
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating JSON and SVG files for $wpid"
-            for d in ../../pathways/"$wpid"/"$wpid".{json,svg}; do 
-              if [ -e "$d" ]; then
-                rm "$d"
+            for old_f in ../../pathways/"$wpid"/"$wpid".{json,svg}; do 
+              if [ -e "$old_f" ]; then
+                rm "$old_f"
               fi
             done
             ./gpmlconverter --id "$wpid" ../../pathways/"$wpid"/"$wpid".gpml ../../pathways/"$wpid"/"$wpid".svg
+            # pretty print the JSON
+            for json_f in ../../pathways/"$wpid"/"$wpid".json; do
+              mv "$json_f" "$json_f".tmp.json 
+              jq -S . "$json_f".tmp.json >"$json_f"
+              rm "$json_f".tmp.json
+            done
           done
 
       - name: Commit report
