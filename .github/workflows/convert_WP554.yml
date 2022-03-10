@@ -46,10 +46,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install NPM deps
+      - name: Install NPM and other deps
         working-directory: scripts/generate-svgs
         run: |
           npm install
+          sudo apt-get install -y xmlstarlet
             
       - name: Demo step for a demo job showing use of Java
         working-directory: scripts/generate-svgs
