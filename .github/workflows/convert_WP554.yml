@@ -52,13 +52,12 @@ jobs:
           npm install
           sudo apt-get install -y xmlstarlet
             
-      - name: Demo step for a demo job showing use of Java
+      - name: Convert GPML to JSON and SVG
         working-directory: scripts/generate-svgs
         run: |
           echo 'pwd'
           pwd
           echo 'ls'
           ls
-          echo 'ls'
-          ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml ../../pathways/WP554.svg
-          ./add_wd_ids
+          echo 'convert'
+          ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml ../../pathways/WP554/WP554.svg
