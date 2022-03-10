@@ -1,0 +1,211 @@
+#!/usr/bin/env bash
+
+# see https://stackoverflow.com/a/246128/5354298
+get_script_dir() { echo "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"; }
+SCRIPT_DIR=$(get_script_dir)
+LATEST_GPML_VERSION="2013a"
+
+cleanup() {
+  echo "done" > /dev/null
+}
+
+# Based on http://linuxcommand.org/lc3_wss0140.php
+# and https://codeinthehole.com/tips/bash-error-reporting/
+PROGNAME=$(basename $0)
+error_exit() {
+#	----------------------------------------------------------------
+#	Function for exit due to fatal program error
+#		Accepts 1 argument:
+#			string containing descriptive error message
+#	----------------------------------------------------------------
+
+
+  #echo "${PROGNAME}: ${1:-"Unknown Error"}" 1>&2
+  if [ ! "$1" ]; then
+    echo "${PROGNAME}: Unknown Error" 1>&2
+    read line file <<<$(caller)
+    echo "An error occurred in line $line of file $file:" 1>&2
+    sed "${line}q;d" "$file" 1>&2
+  else
+    echo "${PROGNAME}: $1" 1>&2
+  fi
+
+  cleanup
+  exit 1
+}
+
+trap error_exit ERR
+trap cleanup EXIT INT QUIT TERM
+
+TOP_OPTS=$(getopt -o hv: --long help,version:,id:,pathway-version: \
+             -n 'gpml2' -- "$@")
+if [ $? != 0 ] ; then error_exit "Error: Failed to parse options." ; fi
+# NOTE: keep the quotes
+eval set -- "$TOP_OPTS"
+
+HELP=false
+VERSION=false
+while true; do
+  case "$1" in
+    -h | --help ) HELP=true; shift ;;
+    -v | --version ) VERSION=true; shift ;;
+    -- ) shift; break ;;
+    * ) break ;;
+  esac
+done
+
+if [ $VERSION == true ]; then
+  jq '.version' "$SCRIPT_DIR/../extension.json"
+  exit 0
+elif [ $HELP == true ]; then
+  echo 'usage: metabolite-patterns-uri --version'
+  echo '       metabolite-patterns-uri --help'
+  echo '       metabolite-patterns-uri <input> [output]'
+  echo ' '
+  echo 'metabolite-patterns-uri WP1.json'
+  exit 0
+fi
+
+json_f="$1"
+
+if [ ! -f "$json_f" ]; then
+  error_exit "Missing file '"$json_f"'"
+fi
+
+dir_out=$(dirname "$json_f")
+base_out=$(basename -- "$json_f")
+ext_out="${base_out##*.}"
+stub_out="${base_out%.*}"
+
+css_out="$dir_out/$stub_out.metabolite-patterns-uri.css"
+svg_out="$dir_out/$stub_out.metabolite-patterns-uri.svg"
+
+if [ -s "$svg_out" ] && [ -s "$css_out" ]; then
+  #echo "$svg_out & $stub_out.metabolite-patterns.css already exist. To overwrite, delete them & try again."
+  exit 0
+fi
+
+# If only one of them exists, we'll recreate both
+if [ -s "$svg_out" ]; then rm "$svg_out"; fi
+if [ -s "$css_out" ]; then rm "$css_out"; fi
+
+echo '<svg><defs></defs></svg>' > "$svg_out"
+
+jq -r '[.entitiesById[] | select(.type | contains(["Metabolite"]))] | unique_by(.type)[] | [.xrefDataSource, .xrefIdentifier, [.type[] | select(startswith("wikidata:"))][0], [.type[] | select(startswith("hmdb:") and length == 14)][0]] | @tsv' "$json_f" | \
+ while IFS=$'\t' read -r data_source identifier wikidata_id hmdb_id; do
+  wikidata_identifier=$(echo "$wikidata_id" | sed 's/wikidata://');
+  bridgedb_request_uri="http://webservice.bridgedb.org/Human/attributes/$data_source/$identifier?attrName=SMILES"
+  if [ -z "$data_source" ] || [ -z "$identifier" ]; then
+    echo "Missing Xref data source and/or identifier in $stub_out";
+    continue;
+  fi
+
+  smiles=$(curl -Ls "$bridgedb_request_uri")
+  bridgedb_request_status=$?
+
+  if [ "$bridgedb_request_status" != 0 ] || [ -z "$smiles" ] || [[ "$smiles" =~ 'The server has not found anything matching the request URI' ]]; then
+#    if [ "$bridgedb_request_status" != 0 ]; then
+#      echo "Failed to get SMILES string for $stub_out:$data_source:$identifier from $bridgedb_request_uri (status code: $bridgedb_request_status)";
+#    elif [ -z "$smiles" ]; then
+#      echo "Failed to get SMILES string for $stub_out:$data_source:$identifier from $bridgedb_request_uri (nothing returned)";
+#    elif [[ "$smiles" =~ 'The server has not found anything matching the request URI' ]]; then
+#      echo "Failed to get SMILES string for $stub_out:$data_source:$identifier from $bridgedb_request_uri";
+#      echo '(The server has not found anything matching the request URI)'
+#    fi
+
+    # If the DataSource and Identifier specified don't get us a SMILES string,
+    # it could be because BridgeDb doesn't support queries for that DataSource.
+    # For example, WP396_97382 has a DataNode with PubChem-compound:3081372,
+    # http://webservice.bridgedb.org/Human/attributes/PubChem-compound/3081372?attrName=SMILES
+    # doesn't return anything. However, that DataNode can be mapped to HMDB:HMDB61196, and
+    # the url http://webservice.bridgedb.org/Human/attributes/HMDB/HMDB61196
+    # does return a SMILES string.
+    # Note that BridgeDb currently requires us to use the 5 digit HMDB identifier,
+    # even though there is another format that uses more digits.
+
+    if [ ! -z "$hmdb_id" ]; then
+      hmdb_identifier="HMDB"${hmdb_id:(-5)};
+      bridgedb_request_uri_orig="$bridgedb_request_uri"
+      bridgedb_request_uri="http://webservice.bridgedb.org/Human/attributes/HMDB/$hmdb_identifier?attrName=SMILES"
+      #echo "Trying alternate bridgedb_request_uri: $bridgedb_request_uri"
+      smiles=$(curl -Ls "$bridgedb_request_uri")
+      bridgedb_request_status=$?
+      if [ "$bridgedb_request_status" != 0 ]; then
+        echo "Failed to get SMILES string for $stub_out:$data_source:$identifier from both $bridgedb_request_uri_orig and alternate $bridgedb_request_uri (status code: $bridgedb_request_status)";
+        continue;
+      elif [ -z "$smiles" ]; then
+        echo "Failed to get SMILES string for $stub_out:$data_source:$identifier from both $bridgedb_request_uri_orig and alternate $bridgedb_request_uri (nothing returned)";
+        continue;
+      elif [[ "$smiles" =~ 'The server has not found anything matching the request URI' ]]; then
+        echo "Failed to get SMILES string for $stub_out:$data_source:$identifier from both $bridgedb_request_uri_orig and alternate $bridgedb_request_uri";
+        echo '(The server has not found anything matching the request URI)'
+        continue;
+      fi
+    else
+      continue;
+    fi
+  fi
+
+  smiles_url_encoded=$(echo "$smiles" | jq -Rr '@uri')
+  cdkdepict_url="https://tools.wmflabs.org/pathway-viewer/simolecule/?smi=$smiles_url_encoded&abbr=on&hdisp=bridgehead&showtitle=false&zoom=1.0&annotate=none"
+
+  cat >> "$css_out" <<EOF
+[typeof~="wikidata:$wikidata_identifier"]:hover > .Icon {
+  cursor: default;
+  fill: url(#Pattern$wikidata_identifier);
+  transform-box: fill-box;
+  transform: scale(2, 3);
+  transform-origin: 50% 50%;
+}
+[typeof~="wikidata:$wikidata_identifier"]:hover > .Text {
+  font-size: 0px;
+}
+EOF
+  
+  #  "$css_out" <<EOF
+#[typeof~=wikidata:$wikidata_identifier]:hover > .Icon {
+#  cursor: default;
+#  fill: url(#Pattern$wikidata_identifier);
+#  transform-box: fill-box;
+#  transform: scale(2, 3);
+#  transform-origin: 50% 50%;
+#}
+#[typeof~=wikidata:$wikidata_identifier]:hover > .Text {
+#  font-size: 0px;
+#}
+#EOF
+  
+  # TODO: do we want to disable the clip-path on hover?
+  #[typeof~=wikidata:$wikidata_identifier]:hover > .Icon {
+  #  clip-path: unset;
+  #  rx: unset;
+  #  ry: unset;
+  #  cursor: default;
+  #  fill: url(#Pattern$wikidata_identifier);
+  #  transform-box: fill-box;
+  #  transform: scale(2, 3);
+  #  transform-origin: 50% 50%;
+  #}
+  
+  #  "transform-box: fill-box" is needed for FF.
+  #  https://bugzilla.mozilla.org/show_bug.cgi?id=1209061
+
+  xmlstarlet ed -L \
+                    -s "/svg/defs" -t elem -n "pattern" -v "" \
+      		    --var prevpattern '$prev' \
+                    -s '$prevpattern' -t elem -n "image" -v "" \
+      		    --var previmage '$prev' \
+                    -i '$prevpattern' -t attr -n "id" -v "Pattern$wikidata_identifier" \
+                    -i '$prevpattern' -t attr -n "width" -v "100%" \
+                    -i '$prevpattern' -t attr -n "height" -v "100%" \
+                    -i '$prevpattern' -t attr -n "patternContentUnits" -v "objectBoundingBox" \
+                    -i '$prevpattern' -t attr -n "preserveAspectRatio" -v "none" \
+                    -i '$prevpattern' -t attr -n "viewBox" -v "0 0 1 1" \
+                    -i '$previmage' -t attr -n "width" -v "1" \
+                    -i '$previmage' -t attr -n "height" -v "1" \
+                    -i '$previmage' -t attr -n "href" -v "$cdkdepict_url" \
+                    -i '$previmage' -t attr -n "preserveAspectRatio" -v "none" \
+  		  "$svg_out"
+done
+ 
+exit 0

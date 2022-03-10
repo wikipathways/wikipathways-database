@@ -1,0 +1,70 @@
+#!/usr/bin/node
+
+const Rx = require("rx-extra");
+const fs = require("fs");
+const path = require("path");
+
+const pathwayFile = process.argv[2];
+if (!pathwayFile) {
+  throw new Error("Must specify a pathway");
+}
+const { pathway, entitiesById } = JSON.parse(fs.readFileSync(pathwayFile));
+const pathwayId = pathway.id;
+
+// DataNodes with HGNC symbols
+Object.values(entitiesById).filter(
+  entityById =>
+    entityById.type.indexOf("DataNode") > -1 &&
+    entityById.type.filter(type => type.indexOf("HGNC:") > -1).length > -1 &&
+    entityById.xrefDataSource &&
+    entityById.xrefIdentifier
+)
+.forEach(function(entityById) {
+  const updatedType = entityById.type
+  .reduce((acc, t) => {
+    // only add t if it's not already present
+    if (acc.indexOf(t) === -1) {
+      acc.push(t);
+    }
+
+    // is t a value like "HGNC:PPARG"?
+    if (t.indexOf("HGNC:") === 0) {
+      // get "PPARG" from "HGNC:PPARG"?
+      const hgncSymbol = t.replace(/^HGNC:/, "");
+
+      // only add HGNC symbol if it's not already present
+      if (acc.indexOf(hgncSymbol) === -1) {
+        acc.push(hgncSymbol);
+      }
+    }
+
+    return acc;
+  }, []);
+
+  entityById.type = updatedType;
+});
+
+const parsedPath = path.parse(pathwayFile);
+
+fs.rename(
+        pathwayFile,
+        path.join(parsedPath.dir, parsedPath.name + ".b4hgnc.json"),
+        function(err) {
+          if (err) {
+            console.error(`Error adding HGNC symbol:
+    ${errString}
+    ${__filename}`);
+          }
+          fs.writeFile(
+            pathwayFile,
+            JSON.stringify({ pathway, entitiesById }),
+            function(err) {
+              if (err) {
+                console.error(`Error adding HGNC symbol:
+    ${errString}
+    ${__filename}`);
+              }
+            }
+          );
+        }
+);

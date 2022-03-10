@@ -1,0 +1,57 @@
+name: Convert WP554 (test)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+        
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+          
+      - name: Install Java deps
+	working-directory: scripts/generate-svgs
+        run: |
+          wget https://github.com/PathVisio/pathvisio/releases/download/v3.3.0/pathvisio_bin-3.3.0.zip
+          unzip pathvisio_bin-3.3.0.zip
+          mv pathvisio_bin-3.3.0/* ./
+
+      - name: Cache Java dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/pathvisio-3.3.0
+          key: ${{ runner.os }}-java-${{ hashFiles('pathvisio.jar') }}
+          restore-keys: |
+            ${{ runner.os }}-java-
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12.x'
+
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install NPM deps
+	working-directory: scripts/generate-svgs
+        run: |
+          npm install
+            
+      - name: Demo step for a demo job showing use of Java
+	working-directory: scripts/generate-svgs
+        run: |
+	  pwd
+	  ls
+	  ./gpmlconverter --id WP554 ../../pathways/WP554/WP554.gpml ../../pathways/WP554.svg

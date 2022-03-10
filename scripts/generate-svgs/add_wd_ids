@@ -1,0 +1,256 @@
+#!/usr/bin/node
+
+const { exec, execSync, spawn } = require("child_process");
+const bridgedb2wdprop = require("./bridgedb2wdprop.json");
+const bridgedb2EntityIdentified = require("./bridgedb2entity_identified.json");
+const Rx = require("rx-extra");
+const fs = require("fs");
+const path = require("path");
+const _ = require("lodash");
+
+const pathwayFile = process.argv[2];
+if (!pathwayFile) {
+  throw new Error("Must specify a pathway");
+}
+const { pathway, entitiesById } = JSON.parse(fs.readFileSync(pathwayFile));
+const pathwayId = pathway.id;
+
+const rxSpawn = function(cmd, args) {
+  const subprocess = spawn(cmd, args);
+
+  const stdout$ = Rx.Observable.fromNodeReadableStream(subprocess.stdout);
+  const stderr$ = Rx.Observable.fromNodeReadableStream(subprocess.stderr);
+
+  subprocess.stdin.end();
+
+  return Rx.Observable.merge(stdout$, stderr$).map(x => x.toString());
+};
+
+const wdRx = function(argsString) {
+  const cmd = `wd ${argsString}`;
+  const args = argsString.split(" ");
+  return rxSpawn("wd", args)
+    .mergeMap(function(stdout) {
+      if (stdout.trim() === "no result found") {
+        //console.warn(`wdRx warning: no result found for '${cmd}'`);
+        //return Rx.Observable.empty();
+        return Rx.Observable.of(null);
+      } else if (Math.min(stdout.indexOf("["), stdout.indexOf("{")) === 0) {
+        return Rx.Observable.of(JSON.parse(stdout));
+      } else if (stdout) {
+        //return Rx.Observable.of(stdout.replace('\n', ''));
+        return Rx.Observable.of(stdout.trim());
+      } else {
+        console.error(
+          `wdRx warning: unexpected stdout '${stdout}' in ${__filename}`
+        );
+        //return Rx.Observable.empty();
+        return Rx.Observable.of(null);
+      }
+    })
+    .catch((err, caught) => {
+      const errString =
+        typeof err.toString !== "undefined"
+          ? err.toString().replace(/(\r|\n|\r\n)$/, "")
+          : String(err);
+      console.error(`Error in wdRx for command '${cmd}':
+    ${errString}
+    ${__filename}`);
+      //return Rx.Observable.empty();
+      return Rx.Observable.of(null);
+    });
+};
+
+// DataNodes that don't have Wikidata ids already
+const dataNodes = Object.values(entitiesById).filter(
+  entityById =>
+    entityById.type.indexOf("DataNode") > -1 &&
+    entityById.type.filter(type => type.indexOf("Wikidata:") > -1).length ===
+      0 &&
+    entityById.xrefDataSource &&
+    entityById.xrefIdentifier
+);
+
+const idsByDataSource = dataNodes.reduce(
+  (acc, { xrefDataSource, xrefIdentifier }) => {
+    if (!(xrefDataSource in acc)) {
+      acc[xrefDataSource] = [xrefIdentifier];
+    } else {
+      if (!(xrefIdentifier in acc[xrefDataSource])) {
+        acc[xrefDataSource].push(xrefIdentifier);
+      }
+    }
+    return acc;
+  },
+  {}
+);
+
+const xrefs = Object.entries(idsByDataSource).reduce((acc, [key, value]) => {
+  const wdprop = bridgedb2wdprop[key];
+  if (!wdprop) {
+    console.error(
+      ["wikidata_property_missing", pathwayId, key]
+        .map(row => `"${row}"`)
+        .join("\t")
+    );
+    return acc;
+  }
+  const ids = value;
+  acc.push({ bridgeDbDataSource: key, ids, wdprop });
+  return acc;
+}, []);
+
+Rx.Observable.from(xrefs)
+  .concatMap(function({ bridgeDbDataSource, wdprop, ids }) {
+    return wdRx(`convert ${wdprop} ${ids.join(" ")}`)
+      .concatMap(parsed => {
+        if (typeof parsed === "object") {
+          return Rx.Observable.pairs(parsed).map(([id, wditems]) => {
+            return { id, wditems };
+          });
+        } else {
+          return Rx.Observable.from(ids).map(function(id) {
+            return { id, wditems: [] };
+          });
+        }
+      })
+      .concatMap(function({ id, wditems }) {
+        if (wditems.length > 0) {
+          return Rx.Observable.of({ bridgeDbDataSource, wdprop, id, wditems });
+        } else {
+          return wdRx(`query -p ${wdprop} -o ${id}`).map(wditem => {
+            let wditems = [];
+            if (wditem) {
+              wditems.push(wditem);
+            }
+            return { bridgeDbDataSource, id, wdprop, wditems };
+          });
+        }
+      });
+    /* Commented this section out, but it tries to get Wikidata entries by name.
+          .concatMap(function({id, wditems}) {
+            if (wditems.length > 0) {
+		    return Rx.Observable.of({bridgeDbDataSource, wdprop, id, wditems});
+	    } else {
+		    console.warn("Getting names");
+		    const names = _.uniq(dataNodes.filter(dataNode => {
+		      return dataNode.xrefDataSource == bridgeDbDataSource &&
+		      dataNode.xrefIdentifier == id
+		    })
+		    .map(dataNode => dataNode.textContent));
+
+		    console.warn(names);
+
+            	if (names.length > 0) {
+		    return Rx.Observable.from(names)
+		    .concatMap(function(name) {
+			return wdRx(`id ${name}`);
+		    })
+		    .first()
+			.map(wditem => {
+			  let wditems = [];
+			  if (wditem) {
+			    wditems.push(wditem);
+			  }
+			  return {bridgeDbDataSource, id, wdprop, wditems};
+			});
+		} else {
+		    return Rx.Observable.of({bridgeDbDataSource, wdprop, id, wditems});
+		}
+	  }
+	})
+	//*/
+  })
+  /*
+  .catch((err, caught) => {
+    const errString = typeof err.toString !== "undefined" ? err.toString().replace(/(\r|\n|\r\n)$/, '') : String(err)
+    console.error(`Error converting BridgeDb/WikiPathways identifier to Wikidata item:
+    ${errString}
+    ${__filename}`);
+    return caught.onErrorResumeNext();
+  })
+  //*/
+  .do(function({ bridgeDbDataSource, id, wdprop, wditems }) {
+    const xrefField = `${bridgeDbDataSource}:${id}`;
+    if (wditems.length > 1) {
+      console.error(
+        ["wikidata_ambiguous_mapping", pathwayId, xrefField, wditems.join(",")]
+          .map(row => `"${row}"`)
+          .join("\t")
+      );
+    } else if (wditems.length === 0) {
+      console.error(
+        ["wikidata_mapping_failed", pathwayId, xrefField]
+          .map(row => `"${row}"`)
+          .join("\t")
+      );
+    }
+    if (wditems.length > 0) {
+      if (bridgedb2EntityIdentified[bridgeDbDataSource] === "metabolite") {
+        wditems.forEach(wditem => {
+          console.warn(
+            ["potential_new_bridgedb_entry", pathwayId, xrefField, wditem]
+              .map(row => `"${row}"`)
+              .join("\t")
+          );
+        });
+      }
+    }
+  })
+  .mergeMap(function({ bridgeDbDataSource, id, wdprop, wditems }) {
+    return Rx.Observable.from(wditems).map(function(wditem) {
+      return { bridgeDbDataSource, id, wdprop, wditem };
+    });
+  })
+  .subscribe(
+    function({ bridgeDbDataSource, id, wditem }) {
+      dataNodes
+        .filter(dataNode => {
+          return (
+            dataNode.xrefDataSource == bridgeDbDataSource &&
+            dataNode.xrefIdentifier == id
+          );
+        })
+        .forEach(function(dataNode) {
+          const dataNodeType = dataNode.type;
+          const wikidataTypeConventionalName = `Wikidata:${wditem}`;
+          if (dataNodeType.indexOf(wikidataTypeConventionalName) == -1) {
+            dataNode.type.push(wikidataTypeConventionalName);
+          }
+        });
+    },
+    err => {
+      const errString =
+        typeof err.toString !== "undefined"
+          ? err.toString().replace(/(\r|\n|\r\n)$/, "")
+          : String(err);
+      console.error(`Error converting BridgeDb/WikiPathways identifier to Wikidata item:
+    ${errString}
+    ${__filename}`);
+    },
+    () => {
+      const parsedPath = path.parse(pathwayFile);
+      fs.rename(
+        pathwayFile,
+        path.join(parsedPath.dir, parsedPath.name + ".b4wd.json"),
+        function(err) {
+          if (err) {
+            console.error(`Error converting BridgeDb/WikiPathways identifier to Wikidata item:
+    ${errString}
+    ${__filename}`);
+          }
+          fs.writeFile(
+            pathwayFile,
+            JSON.stringify({ pathway, entitiesById }),
+            function(err) {
+              if (err) {
+                console.error(`Error converting BridgeDb/WikiPathways identifier to Wikidata item:
+    ${errString}
+    ${__filename}`);
+              }
+            }
+          );
+        }
+      );
+    }
+  );
