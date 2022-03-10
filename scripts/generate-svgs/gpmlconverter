@@ -257,6 +257,8 @@ elif [[ "$ext_out" =~ ^(json|jsonld)$ ]]; then
     echo "$path_out"
     echo 'ls258'
     ls
+    echo 'ls ../../pathways/WP554*'
+    ls ../../pathways/WP554*
     node "$SCRIPT_DIR/add_wd_ids" "$path_out"
     node ./add_wd_ids "$path_out"
     add_wd_ids "$path_out"
