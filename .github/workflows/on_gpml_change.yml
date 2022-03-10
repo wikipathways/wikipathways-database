@@ -224,11 +224,11 @@ jobs:
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating JSON and SVG files for $wpid"
             for d in ../../pathways/"$wpid"/"$wpid".{json,svg}; do 
-	      if [ -e "$d" ]; then
-	        rm "$d"
+              if [ -e "$d" ]; then
+                rm "$d"
               fi
-	    done
-	    ./gpmlconverter --id "$wpid" ../../pathways/"$wpid"/"$wpid".gpml ../../pathways/"$wpid"/"$wpid".svg
+            done
+            ./gpmlconverter --id "$wpid" ../../pathways/"$wpid"/"$wpid".gpml ../../pathways/"$wpid"/"$wpid".svg
           done
 
       - name: Commit report
