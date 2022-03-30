@@ -75,6 +75,8 @@ jobs:
           
       - name: Install deps
         run: |
+          # TODO: update to down load meta-data-action-0.0.1-jar-with-dependencies.jar
+          #       instead of pathvisio. If unzip isn't needed, get rid of that line.
           wget https://github.com/PathVisio/pathvisio/releases/download/v3.3.0/pathvisio_bin-3.3.0.zip
           unzip pathvisio_bin-3.3.0.zip
 
@@ -94,7 +96,9 @@ jobs:
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating info and datanode files for $wpid ($f)"
-            sh ./pathvisio-3.3.0/pathvisio.sh -v
+            # TODO: is the following correct? What authentication key is needed?
+            #       enable this once it's ready.
+            #java -jar meta-data-action-0.0.1-jar-with-dependencies.jar "${{ secrets.ACTIONS_DEPLOY_KEY }}" wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F)
           done
           
   pubmed:
