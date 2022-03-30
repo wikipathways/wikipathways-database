@@ -77,13 +77,13 @@ jobs:
         run: |
           wget https://github.com/wikipathways/meta-data-action/releases/download/v0.0.1/meta-data-action-0.0.1-jar-with-dependencies.jar
 
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/
-          key: ${{ runner.os }}-java-${{ hashFiles('meta-data-action-0.0.1-jar-with-dependencies.jar') }}
-          restore-keys: |
-            ${{ runner.os }}-java-
+      #- name: Cache dependencies
+      #  uses: actions/cache@v2
+      #  with:
+      #    path: ~/
+      #    key: ${{ runner.os }}-java-${{ hashFiles('meta-data-action-0.0.1-jar-with-dependencies.jar') }}
+      #    restore-keys: |
+      #      ${{ runner.os }}-java-
             
       - name: Generate info and datanode files
         run: |
@@ -91,8 +91,21 @@ jobs:
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating info and datanode files for $wpid ($f)"
             # TODO: Is the following correct? Is the authentication key correct?
-            java -jar meta-data-action-0.0.1-jar-with-dependencies.jar ${{ secrets.ACTIONS_DEPLOY_KEY }} wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F)
+            java -jar meta-data-action-0.0.1-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F)
           done
+          
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/WP*/WP*.{json,tsv}
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update metadata files'
+              git push
+          fi
           
   pubmed:
     runs-on: ubuntu-20.04
