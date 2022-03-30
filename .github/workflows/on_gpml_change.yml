@@ -111,8 +111,7 @@ jobs:
     runs-on: ubuntu-20.04
     needs: [changed-gpmls, metadata]
     # only run if gpmls were added or modified
-    #if: ${{needs.changed-gpmls.outputs.added-modified}}
-    if: ${{needs.changed-gpmls.outputs.deleted}}
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -153,7 +152,6 @@ jobs:
   frontmatter:
     runs-on: ubuntu-20.04
     needs: [changed-gpmls, metadata]
-    if: ${{needs.changed-gpmls.outputs.deleted}}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -206,7 +204,6 @@ jobs:
 
   json-svg:
     needs: [changed-gpmls]
-    if: ${{needs.changed-gpmls.outputs.deleted}}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout wikipathways-database repo
@@ -275,7 +272,6 @@ jobs:
   sync-site-repo-added-modified:
     runs-on: ubuntu-latest
     needs: [changed-gpmls, metadata, pubmed, frontmatter]
-    if: ${{needs.changed-gpmls.outputs.deleted}}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
