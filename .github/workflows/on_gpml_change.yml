@@ -91,7 +91,7 @@ jobs:
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating info and datanode files for $wpid ($f)"
             # TODO: Is the following correct? Is the authentication key correct?
-            java -jar meta-data-action-0.0.1-jar-with-dependencies.jar "${{ secrets.ACTIONS_DEPLOY_KEY }}" wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F)
+            java -jar meta-data-action-0.0.1-jar-with-dependencies.jar ${{ secrets.ACTIONS_DEPLOY_KEY }} wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F)
           done
           
   pubmed:
