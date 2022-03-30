@@ -80,8 +80,8 @@ jobs:
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ~/pathvisio-3.3.0
-          key: ${{ runner.os }}-java-${{ hashFiles('pathvisio.jar') }}
+          path: ~/
+          key: ${{ runner.os }}-java-${{ hashFiles('meta-data-action-0.0.1-jar-with-dependencies.jar') }}
           restore-keys: |
             ${{ runner.os }}-java-
             
