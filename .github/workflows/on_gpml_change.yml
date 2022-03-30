@@ -75,10 +75,7 @@ jobs:
           
       - name: Install deps
         run: |
-          # TODO: download load meta-data-action-0.0.1-jar-with-dependencies.jar
-          #       instead of pathvisio. If unzip isn't needed, get rid of that line.
-          wget https://github.com/PathVisio/pathvisio/releases/download/v3.3.0/pathvisio_bin-3.3.0.zip
-          unzip pathvisio_bin-3.3.0.zip
+          wget https://github.com/wikipathways/meta-data-action/releases/download/v0.0.1/meta-data-action-0.0.1-jar-with-dependencies.jar
 
       - name: Cache dependencies
         uses: actions/cache@v2
