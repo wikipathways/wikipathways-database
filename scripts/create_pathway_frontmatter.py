@@ -155,7 +155,7 @@ for key, value in parsed_metadata.items():
         post['annotations'] = annotations
     elif key == 'last-edited':
         # 20210601215335 -> datetime.date(2021, 6, 1)
-        post[key] = date(int(value[0:4]), int(value[4:6]), int(value[6:8]))
+        post[key] = date(int(value[0:4]), int(value[5:7]), int(value[9:10]))
     else:
         post[key] = value
 
