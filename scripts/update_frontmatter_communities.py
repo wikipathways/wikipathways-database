@@ -23,6 +23,10 @@ for p in communities_p.glob('**/*.txt'):
 
 for wpid, communities in communities_by_wpid.items():
     frontmatter_p = repo_dir.joinpath('pathways/' + wpid + '/' + wpid + '.md')
+    
+    if not frontmatter_p.exists():
+        print(f"{frontmatter_p} does not exist, but {wpid} is in communities directory")
+        continue
 
     post = frontmatter.load(str(frontmatter_p), handler=YAMLHandler())
     post['communities'] = list(communities)
