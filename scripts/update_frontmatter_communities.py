@@ -7,11 +7,12 @@ from pathlib import Path
 import sys
 
 
-communities_fp = Path('./wikipathways-database/communities/')
+repo_dir = Path('./')
+communities_p = repo_dir.joinpath('communities/')
 
 communities_by_wpid = dict()
 
-for p in communities_fp.glob('**/*.txt'):
+for p in communities_p.glob('**/*.txt'):
     community = p.stem
     with p.open() as f:
         for wpid in f.read().splitlines():
@@ -21,10 +22,10 @@ for p in communities_fp.glob('**/*.txt'):
             communities_by_wpid[wpid].add(community)
 
 for wpid, communities in communities_by_wpid.items():
-    frontmatter_f = './wikipathways-database/pathways/' + wpid + '/' + wpid + '.md'
+    frontmatter_p = repo_dir.joinpath('pathways/' + wpid + '/' + wpid + '.md')
 
-    post = frontmatter.load(frontmatter_f, handler=YAMLHandler())
+    post = frontmatter.load(str(frontmatter_p), handler=YAMLHandler())
     post['communities'] = list(communities)
 
-    with open(frontmatter_f, 'wb') as f:
+    with frontmatter_p.open('w') as f:
         frontmatter.dump(post, f)
