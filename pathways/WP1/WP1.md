@@ -25,6 +25,8 @@ authors:
 - Egonw
 - Ddigles
 - Eweitz
+communities:
+- TEST
 description: 'Statins inhibit endogenous cholesterol production by competitive inhibition
   of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion of HMG-CoA to
   mevalonate, an early rate-limiting step in cholesterol synthesis. This pathway delineates
