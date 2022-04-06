@@ -27,5 +27,5 @@ for wpid, communities in communities_by_wpid.items():
     post = frontmatter.load(str(frontmatter_p), handler=YAMLHandler())
     post['communities'] = list(communities)
 
-    with frontmatter_p.open('w') as f:
+    with frontmatter_p.open('wb') as f:
         frontmatter.dump(post, f)
