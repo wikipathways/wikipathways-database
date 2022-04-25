@@ -8,28 +8,35 @@ import sys
 
 
 repo_dir = Path('./')
-communities_p = repo_dir.joinpath('communities/')
 
 communities_by_wpid = dict()
 
-for p in communities_p.glob('**/*.txt'):
+for p in repo_dir.joinpath('communities/').glob('**/*.txt'):
     community = p.stem
     with p.open() as f:
         for wpid in f.read().splitlines():
             if not wpid in communities_by_wpid:
-                communities_by_wpid[wpid] = set()
+                communities_by_wpid[wpid] = list()
 
-            communities_by_wpid[wpid].add(community)
+            communities_by_wpid[wpid].append(community)
 
-for wpid, communities in communities_by_wpid.items():
-    frontmatter_p = repo_dir.joinpath('pathways/' + wpid + '/' + wpid + '.md')
+wpids = set()
+for p in repo_dir.joinpath('pathways/').glob('WP*/WP*.md'):
+    wpid = p.stem
+    wpids.add(wpid)
+
+    post = frontmatter.load(str(p), handler=YAMLHandler())
     
-    if not frontmatter_p.exists():
-        print(f"{frontmatter_p} does not exist, but {wpid} is in communities directory")
-        continue
+    old_communities = post.get('communities', list())
+    new_communities = communities_by_wpid.get(wpid, list())
+    
+    if old_communities != new_communities:
+        print(f"updating {wpid} communities from {old_communities} to {new_communities}")
+        post['communities'] = new_communities
+        with p.open('wb') as f:
+            frontmatter.dump(post, f)      
 
-    post = frontmatter.load(str(frontmatter_p), handler=YAMLHandler())
-    post['communities'] = list(communities)
-
-    with frontmatter_p.open('wb') as f:
-        frontmatter.dump(post, f)
+# wpids specified in ./communities without corresponding wpids in ./pathways
+non_existent_wpids = set(communities_by_wpid.keys()) - wpids
+if non_existent_wpids:
+    print(f"wpids in ./communities but not in ./pathways: {non_existent_wpids}")
