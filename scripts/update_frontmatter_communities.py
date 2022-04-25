@@ -11,7 +11,7 @@ repo_dir = Path('./')
 
 communities_by_wpid = dict()
 
-for p in repo_dir.joinpath('communities/').glob('**/*.txt'):
+for p in sorted(repo_dir.joinpath('communities/').glob('**/*.txt')):
     community = p.stem
     with p.open() as f:
         for wpid in f.read().splitlines():
