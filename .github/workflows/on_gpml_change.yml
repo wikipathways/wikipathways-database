@@ -247,6 +247,7 @@ jobs:
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating JSON and SVG files for $wpid"
+            mkdir ../../../wikipathways-downstream/pathways/"$wpid"
             
             for old_f in ../../../wikipathways-downstream/pathways/"$wpid"/"$wpid".{json,svg}; do 
               if [ -e "$old_f" ]; then
