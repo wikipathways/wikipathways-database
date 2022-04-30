@@ -213,11 +213,11 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Checkout downstream repo
+      - name: Checkout assets repo
         uses: actions/checkout@v2
         with:
-          repository: wikipathways/wikipathways-downstream
-          path: wikipathways-downstream
+          repository: wikipathways/wikipathways-assets
+          path: wikipathways-assets
           submodules: true
           fetch-depth: 0
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
@@ -247,23 +247,23 @@ jobs:
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating JSON and SVG files for $wpid"
-            mkdir ../../../wikipathways-downstream/pathways/"$wpid"
+            mkdir ../../../wikipathways-assets/pathways/"$wpid"
             
-            for old_f in ../../../wikipathways-downstream/pathways/"$wpid"/"$wpid".{json,svg}; do 
+            for old_f in ../../../wikipathways-assets/pathways/"$wpid"/"$wpid".{json,svg}; do 
               if [ -e "$old_f" ]; then
                 rm "$old_f"
               fi
             done
             
-            ./gpmlconverter --id "$wpid" ../../pathways/"$wpid"/"$wpid".gpml ../../../wikipathways-downstream/pathways/"$wpid"/"$wpid".svg
+            ./gpmlconverter --id "$wpid" ../../pathways/"$wpid"/"$wpid".gpml ../../../wikipathways-assets/pathways/"$wpid"/"$wpid".svg
             
             # delete intermediate JSON files
-            rm ../../../wikipathways-downstream/pathways/"$wpid"/"$wpid".json.b4bridgedb.json
-            rm ../../../wikipathways-downstream/pathways/"$wpid"/"$wpid".b4wd.json
-            rm ../../../wikipathways-downstream/pathways/"$wpid"/"$wpid".b4hgnc.json
+            rm ../../../wikipathways-assets/pathways/"$wpid"/"$wpid".json.b4bridgedb.json
+            rm ../../../wikipathways-assets/pathways/"$wpid"/"$wpid".b4wd.json
+            rm ../../../wikipathways-assets/pathways/"$wpid"/"$wpid".b4hgnc.json
             
             # pretty print the JSON
-            for json_f in ../../../wikipathways-downstream/pathways/"$wpid"/"$wpid".json; do
+            for json_f in ../../../wikipathways-assets/pathways/"$wpid"/"$wpid".json; do
               mv "$json_f" "$json_f".tmp.json 
               jq -S . "$json_f".tmp.json >"$json_f"
               rm "$json_f".tmp.json
@@ -274,7 +274,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          cd wikipathways-downstream
+          cd wikipathways-assets
           git add pathways/WP*/WP*.{json,svg}
           if git diff --exit-code --staged; then
               echo "No changes"
