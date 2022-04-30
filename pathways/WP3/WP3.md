@@ -52,6 +52,7 @@ description: Based on [http://www.nature.com/nrc/journal/v3/n10/fig_tab/nrc1189_
   (6-HITC) — a sulphoraphane analogue from Japanese horseradish wasabi — stimulates
   nuclear translocation of NRF2, which subsequently activates ARE.
 last-edited: 2021-10-15
+ndex: e285ccb0-8b61-11eb-9e72-0ac135e8bacf
 organisms:
 - Homo sapiens
 redirect_from:
