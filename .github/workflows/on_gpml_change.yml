@@ -206,13 +206,6 @@ jobs:
     needs: [changed-gpmls]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v2
-        with:
-          path: wikipathways-database
-          submodules: true
-          fetch-depth: 0
-
       - name: Checkout assets repo
         uses: actions/checkout@v2
         with:
@@ -222,6 +215,9 @@ jobs:
           fetch-depth: 0
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
       
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
         with:
