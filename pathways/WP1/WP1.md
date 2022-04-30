@@ -84,8 +84,8 @@ schema-jsonld:
   - Statin
   - Triglycerides
   license: CC0
-  name: Statin pathway Test
+  name: Statin Pathway Test
 seo: CreativeWork
-title: Statin pathway Test
+title: Statin Pathway Test
 wpid: WP1
 ---
