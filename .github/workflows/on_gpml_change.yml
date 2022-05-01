@@ -217,6 +217,10 @@ jobs:
       
       - name: Checkout wikipathways-database repo
         uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
@@ -232,18 +236,18 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install deps
-        working-directory: scripts/generate-svgs
+        working-directory: wikipathways-database/scripts/generate-svgs
         run: |
           npm install
           sudo apt-get install -y xmlstarlet
             
       - name: Convert GPML to JSON and SVG
-        working-directory: scripts/generate-svgs
+        working-directory: wikipathways-database/scripts/generate-svgs
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating JSON and SVG files for $wpid"
-            mkdir ../../../../wikipathways-assets/wikipathways-assets/pathways/"$wpid"
+            mkdir wikipathways-assets/pathways/"$wpid"
             
             for old_f in ../../pathways/"$wpid"/"$wpid".{json,svg}; do 
               if [ -e "$old_f" ]; then
@@ -251,15 +255,15 @@ jobs:
               fi
             done
             
-            ./gpmlconverter --id "$wpid" ../../pathways/"$wpid"/"$wpid".gpml ../../../../wikipathways-assets/wikipathways-assets/pathways/"$wpid"/"$wpid".svg
+            ./gpmlconverter --id "$wpid" ../../pathways/"$wpid"/"$wpid".gpml wikipathways-assets/wikipathways-assets/pathways/"$wpid"/"$wpid".svg
             
             # delete intermediate JSON files
-            rm ../../../../wikipathways-assets/wikipathways-assets/pathways/"$wpid"/"$wpid".json.b4bridgedb.json
-            rm ../../../../wikipathways-assets/wikipathways-assets/pathways/"$wpid"/"$wpid".b4wd.json
-            rm ../../../../wikipathways-assets/wikipathways-assets/pathways/"$wpid"/"$wpid".b4hgnc.json
+            rm wikipathways-assets/wikipathways-assets/pathways/"$wpid"/"$wpid".json.b4bridgedb.json
+            rm wikipathways-assets/wikipathways-assets/pathways/"$wpid"/"$wpid".b4wd.json
+            rm wikipathways-assets/wikipathways-assets/pathways/"$wpid"/"$wpid".b4hgnc.json
             
             # pretty print the JSON
-            for json_f in ../../../../wikipathways-assets/wikipathways-assets/pathways/"$wpid"/"$wpid".json; do
+            for json_f in wikipathways-assets/wikipathways-assets/pathways/"$wpid"/"$wpid".json; do
               mv "$json_f" "$json_f".tmp.json 
               jq -S . "$json_f".tmp.json >"$json_f"
               rm "$json_f".tmp.json
