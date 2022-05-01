@@ -157,7 +157,7 @@ for key, value in parsed_metadata.items():
         if len(value) == 8: # 20210601
             post[key] = date(int(value[0:4]), int(value[4:6]), int(value[6:8]))
         elif len(value) == 10: #2020-06-01
-            post[key] = value
+            post[key] = date(int(value[0:4]), int(value[5:7]), int(value[8:10]))
         else:
             raise Exception('Unexpected date value: ' + value)
     else:
