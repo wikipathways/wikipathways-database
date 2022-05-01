@@ -312,6 +312,12 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
+
+          # TODO: it appears we're not getting the latest w/out this. Why?
+          cd wikipathways-database
+          git pull
+          cd ..
+
           cp wikipathways-database/pathways/*/*.md wikipathways.github.io/_pathways/
           cp wikipathways-database/pathways/*/*-bibliography.tsv wikipathways.github.io/_data/
           # Disabling WPx-datanodes.tsv until this issue is closed:
