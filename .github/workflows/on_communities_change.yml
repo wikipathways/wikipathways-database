@@ -21,6 +21,7 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
+          ref: main
 
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1
@@ -62,6 +63,7 @@ jobs:
           path: wikipathways-database
           submodules: true
           fetch-depth: 0
+          ref: main
           
       - name: Checkout jekyll repo
         uses: actions/checkout@v2
@@ -70,6 +72,7 @@ jobs:
           path: wikipathways.github.io
           submodules: true
           fetch-depth: 0
+          ref: main
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
       - name: Install SSH Client 🔑
@@ -81,14 +84,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          
-          # TODO: it appears we're not getting the latest w/out this. Why?
-          cd wikipathways-database
-          git pull
-          cd ..
-          
           cp wikipathways-database/pathways/*/*.md wikipathways.github.io/_pathways/
-          
           cd wikipathways.github.io
           git add _pathways/*.md
           if git diff --exit-code --staged > /dev/null; then
