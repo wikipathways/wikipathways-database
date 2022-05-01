@@ -28,6 +28,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          ref: main
       - name: Get changed files
         id: changes
         # Set outputs using the command.
@@ -66,6 +67,9 @@ jobs:
     steps:
       - name: Checkout wikipathways-database repo
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
         
       - name: Setup Java
         uses: actions/setup-java@v2
@@ -117,6 +121,7 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
@@ -158,6 +163,7 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
+          ref: main
 
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1
@@ -213,6 +219,7 @@ jobs:
           path: wikipathways-assets
           submodules: true
           fetch-depth: 0
+          ref: main
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
       
       - name: Checkout wikipathways-database repo
@@ -221,6 +228,7 @@ jobs:
           path: wikipathways-database
           submodules: true
           fetch-depth: 0
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
@@ -293,6 +301,7 @@ jobs:
           path: wikipathways-database
           submodules: true
           fetch-depth: 0
+          ref: main
           
       - name: Checkout jekyll repo
         uses: actions/checkout@v2
@@ -301,6 +310,7 @@ jobs:
           path: wikipathways.github.io
           submodules: true
           fetch-depth: 0
+          ref: main
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
       - name: Install SSH Client 🔑
@@ -346,6 +356,7 @@ jobs:
           path: wikipathways-database
           submodules: true
           fetch-depth: 0
+          ref: main
           
       - name: Checkout jekyll repo
         uses: actions/checkout@v2
@@ -354,6 +365,7 @@ jobs:
           path: wikipathways.github.io
           submodules: true
           fetch-depth: 0
+          ref: main
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
       - name: Install SSH Client 🔑
