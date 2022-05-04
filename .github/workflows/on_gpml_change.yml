@@ -251,8 +251,8 @@ jobs:
             
       - name: Convert GPML to JSON and SVG
         run: |
-          DB_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-database"
-          AS_PATH="/home/runner/work/wikipathways-assets/wikipathways-assets/wikipathways-assets"
+          DB_PATH="${{ github.workspace }}/wikipathways-database"
+          AS_PATH="${{ github.workspace }}/wikipathways-assets"
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating JSON and SVG files for $wpid"
