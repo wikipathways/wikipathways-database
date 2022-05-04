@@ -256,7 +256,7 @@ jobs:
             echo "generating JSON and SVG files for $wpid"
             mkdir -p wikipathways-assets/pathways/"$wpid"
             
-            for old_f in wikipathways-database/pathways/"$wpid"/"$wpid".{json,svg}; do 
+            for old_f in wikipathways-assets/pathways/"$wpid"/"$wpid".{json,svg}; do 
               if [ -e "$old_f" ]; then
                 rm "$old_f"
               fi
