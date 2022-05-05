@@ -285,7 +285,9 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          cd $AS_PATH
+          pwd
+          cd wikipathways-assets
+          pwd
           git add pathways/WP*/WP*.{json,svg}
           if git diff --exit-code --staged; then
               echo "No changes"
