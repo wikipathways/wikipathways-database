@@ -133,6 +133,10 @@ while :; do
   esac
 done
 
+echo $ID
+echo $path_in
+echo $path_out
+
 if [ $VERSION == true ]; then
   jq '.version' "$SCRIPT_DIR/../extension.json"
   exit 0
