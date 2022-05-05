@@ -109,24 +109,24 @@ invert_filter() {
   fi
 }
 
-# Not sure what I based this on, but it's similar to this one:
-# https://gist.github.com/cosimo/3760587
-TOP_OPTS=$(getopt -o hv: --long help,version:,id:,pathway-version: \
-             -n 'gpmlconverter' -- "$@")
-if [ $? != 0 ] ; then error_exit "Error: Failed to parse options." ; fi
-# NOTE: keep the quotes
-eval set -- "$TOP_OPTS"
 
-HELP=false
+# Simiplified arg handilng:
+# http://mywiki.wooledge.org/BashFAQ/035
+
 VERSION=false
 ID=
 PATHWAY_VERSION=
-while true; do
+path_in=
+path_out=
+
+while :; do
   case "$1" in
     -h | --help ) HELP=true; shift ;;
     -v | --version ) VERSION=true; shift ;;
     --id ) ID="$2"; shift 2 ;;
     --pathway-version ) PATHWAY_VERSION="$2"; shift 2 ;;
+    -i | --path-in ) path_in="$2"; shift 2 ;;
+    -o | --path-out ) path_out="$2"; shift 2 ;;
     -- ) shift; break ;;
     * ) break ;;
   esac
@@ -138,16 +138,13 @@ if [ $VERSION == true ]; then
 elif [ $HELP == true ]; then
   echo 'usage: gpmlconverter --version'
   echo '       gpmlconverter --help'
-  echo '       gpmlconverter [--id] [--pathway-version] <input> [output] [scale=100]'
+  echo '       gpmlconverter [--id] [--pathway-version] -i <input> [-o output] [scale=100]'
   echo '           If no output specified, all supported formats generated, as siblings of input.'
   echo '           "scale" is only valid for conversions to PNG format.'
   echo ' '
   echo 'examples on example data WP1243_69897.gpml:'
   exit 0
 fi
-
-path_in="$1"
-path_out="$2"
 
 if [ ! -f "$path_in" ]; then
   error_exit "Missing file '"$path_in"'"
@@ -175,11 +172,11 @@ fi
 if [ -z "$path_out" ]; then
   for format in json pvjssvg svg owl pdf png pwf txt; do
     out_f="$dir_in/$stub_in.$format"
-    #"$SCRIPT_DIR/gpmlconverter" --id "$ID" --pathway-version "$PATHWAY_VERSION" "$path_in" "$out_f";
+    #"$SCRIPT_DIR/gpmlconverter" --id "$ID" --pathway-version "$PATHWAY_VERSION" -i "$path_in" -o "$out_f";
 
-    #"$SCRIPT_DIR/gpmlconverter" --id "$ID" --pathway-version "$PATHWAY_VERSION" "$path_in" "$out_f" || exit 1;
+    #"$SCRIPT_DIR/gpmlconverter" --id "$ID" --pathway-version "$PATHWAY_VERSION" -i "$path_in" -o "$out_f" || exit 1;
 
-    if ! "$SCRIPT_DIR/gpmlconverter" --id "$ID" --pathway-version "$PATHWAY_VERSION" "$path_in" "$out_f" ; then
+    if ! "$SCRIPT_DIR/gpmlconverter" --id "$ID" --pathway-version "$PATHWAY_VERSION" -i "$path_in" -o "$out_f" ; then
       echo "  Failed to complete the following conversion:" 1>&2;
       echo "    $SCRIPT_DIR/gpmlconverter \\" 1>&2;
       echo "    --id $ID \\" 1>&2;
@@ -280,7 +277,7 @@ elif [[ "$ext_out" =~ ^(svg|pvjssvg)$ ]]; then
 #  third_extension_out="${second_ext_out%.*}"
 
   json_f="$dir_out/$bare_stub_out.json"
-  "$SCRIPT_DIR/gpmlconverter" --id "$ID" --pathway-version "$PATHWAY_VERSION" "$path_in" "$json_f"
+  "$SCRIPT_DIR/gpmlconverter" --id "$ID" --pathway-version "$PATHWAY_VERSION" -i "$path_in" -o "$json_f"
 
   metabolite_patterns_css_f="$dir_out/$bare_stub_out.metabolite-patterns-uri.css"
   metabolite_patterns_svg_f="$dir_out/$bare_stub_out.metabolite-patterns-uri.svg"

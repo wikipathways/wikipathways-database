@@ -266,7 +266,7 @@ jobs:
             done
             
             cd "$DB_PATH/scripts/generate-svgs"
-            ./gpmlconverter --id "$wpid" $DB_PATH/pathways/"$wpid"/"$wpid".gpml $AS_PATH/pathways/"$wpid"/"$wpid".svg
+            ./gpmlconverter --id "$wpid" -i $DB_PATH/pathways/"$wpid"/"$wpid".gpml -o $AS_PATH/pathways/"$wpid"/"$wpid".svg
             
             # delete intermediate JSON files
             rm $AS_PATH/pathways/"$wpid"/"$wpid".json.b4bridgedb.json
