@@ -212,6 +212,14 @@ jobs:
     needs: [changed-gpmls]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          ref: main
+
       - name: Checkout assets repo
         uses: actions/checkout@v2
         with:
@@ -221,19 +229,6 @@ jobs:
           fetch-depth: 0
           ref: main
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-
-      - name: Install SSH Client 🔑
-        uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-      
-      - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v2
-        with:
-          path: wikipathways-database
-          submodules: true
-          fetch-depth: 0
-          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
@@ -290,9 +285,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          pwd
           cd wikipathways-assets
-          pwd
           git add pathways/WP*/WP*.{json,svg}
           if git diff --exit-code --staged; then
               echo "No changes"
