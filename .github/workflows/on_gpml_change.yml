@@ -220,7 +220,12 @@ jobs:
           submodules: true
           fetch-depth: 0
           ref: main
-          ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
       
       - name: Checkout wikipathways-database repo
         uses: actions/checkout@v2
