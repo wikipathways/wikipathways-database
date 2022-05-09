@@ -168,7 +168,7 @@ jobs:
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1
         with:
-          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io rep 
 
       - name: Setup Python
         uses: actions/setup-python@v2
@@ -220,6 +220,11 @@ jobs:
           fetch-depth: 0
           ref: main
 
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_ASSETS_KEY }} ## for push into wp-assets repo
+
       - name: Checkout assets repo
         uses: actions/checkout@v2
         with:
@@ -228,7 +233,7 @@ jobs:
           submodules: true
           fetch-depth: 0
           ref: main
-          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
 
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
@@ -320,7 +325,7 @@ jobs:
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1
         with:
-          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io repo
 
       - name: Commit report
         run: |
@@ -369,7 +374,7 @@ jobs:
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1
         with:
-          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io rep 
 
       - name: Commit report
         run: |
