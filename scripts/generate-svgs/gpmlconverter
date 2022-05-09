@@ -65,51 +65,6 @@ fix_pvjs_bugs() {
 #  done
 }
 
-
-
-# see https://www.reddit.com/r/bash/comments/8ucx8a/can_you_use_bash_scripting_to_calculate_the/
-invert_color() {
-  color="$1"
-
-  case "$color" in
-        none)
-            echo 'none'
-            ;;
-         
-        transparent)
-            echo 'transparent'
-            ;;
-         
-        black)
-            echo 'white'
-            ;;
-         
-        white)
-            echo 'black'
-            ;;
-         
-        *)
-  	    printf -v color '#%06X' $((0x${color#\#} ^ 0xFFFFFF))
-	    echo "$color"
-  esac
-}
-
-invert_filter() {
-  filter_value_in=$1
-  from_color=$(echo "$filter_value_in" | sed 's/^url[(]#kaavio\(.*\)to\(.*\)filter[)]$/\1/')
-  to_color=$(echo "$filter_value_in" | sed 's/^url[(]#kaavio\(.*\)to\(.*\)filter[)]$/\2/')
-  # The check below is to handle a non-color case like: url(#kaaviodoubletrue0filter)
-  if [ "$filter_value_in" == "$from_color" ] || [ "$filter_value_in" == "$to_color" ]; then
-    echo "$filter_value_in"
-  else
-    inverted_from_color=$(invert_color $from_color)
-    # TODO: we actually want to keep the to_color, don't we?
-    #inverted_to_color=$(invert_color $to_color)
-    echo "url(#kaavio"$inverted_from_color"to"$to_color"filter)"
-  fi
-}
-
-
 # Simiplified arg handilng:
 # http://mywiki.wooledge.org/BashFAQ/035
 
@@ -322,20 +277,6 @@ r /dev/stdin
 r '"$SCRIPT_DIR/plain.css"'
 }' "$path_out"
 
-    #############################
-    # SVG > .dark.pvjssvg
-    #############################
-    path_out_dark_pvjssvg="$dir_out/$bare_stub_out.dark.pvjssvg"
-    cat "$path_out" | xmlstarlet ed -O -N svg='http://www.w3.org/2000/svg' \
-  		  -u "/svg:svg/svg:style/text()" \
-  		  -v "
-" > \
-		  "$path_out_dark_pvjssvg"
-
-    sed -i '/<style.*>/{
-r '"$SCRIPT_DIR/dark.css"'
-}' "$path_out_dark_pvjssvg"
-
   else
     #############################
     # SVG > .svg
@@ -516,134 +457,6 @@ r /dev/stdin
     done
     
     mv "$path_out_tmp" "$path_out"
-
-    #############################
-    # SVG > .dark.svg
-    #############################
-    path_out_dark_svg="$dir_out/$bare_stub_out.dark.svg"
-
-    # Invert colors and filters
-  
-    cat "$path_out" | xmlstarlet ed -N svg='http://www.w3.org/2000/svg' \
-  		  -u "/svg:svg/@color" \
-		  -v "white" \
-		  -u "/svg:svg/svg:g/@color" \
-		  -v "white" > \
-		  "$path_out_dark_svg"
-
-    for attr in "color" "fill" "stroke"; do
-      el_count=$(xmlstarlet sel -N svg='http://www.w3.org/2000/svg' -t -v "count(/svg:svg/svg:g//*[@$attr])" "$path_out_dark_svg")
-      for i in $(seq $el_count); do
-        color=$(xmlstarlet sel -N svg='http://www.w3.org/2000/svg' -t -v "(/svg:svg/svg:g//*[@$attr])[$i]/@$attr" "$path_out_dark_svg");
-        inverted_color=$(invert_color $color)
-        xmlstarlet ed -L -N svg='http://www.w3.org/2000/svg' \
-    		      -u "(/svg:svg/svg:g//*[@$attr])[$i]/@$attr" \
-		      -v "$inverted_color" \
-		      "$path_out_dark_svg";
-      done
-    done
-
-    el_count=$(xmlstarlet sel -N svg='http://www.w3.org/2000/svg' -t -v "count(/svg:svg/svg:g//*[@filter])" "$path_out_dark_svg")
-    for i in $(seq $el_count); do
-      filter_value=$(xmlstarlet sel -N svg='http://www.w3.org/2000/svg' -t -v "(/svg:svg/svg:g//*[@filter])[$i]/@filter" "$path_out_dark_svg");
-      inverted_filter_value=$(invert_filter $filter_value)
-      xmlstarlet ed -L -N svg='http://www.w3.org/2000/svg' \
-  		    -u "(/svg:svg/svg:g//*[@filter])[$i]/@filter" \
-		    -v "$inverted_filter_value" \
-		    "$path_out_dark_svg";
-    done
-  
-    # clip-path needed because rx and ry don't work in FF or Safari
-    xmlstarlet ed -L -N svg='http://www.w3.org/2000/svg' \
-  		  -u "/svg:svg/svg:g/svg:rect[contains(@class,'Icon')]/@fill" \
-		  -v "#3d3d3d" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'Edge')]/svg:path/@stroke-width" \
-		  -v "1.1px" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupGroup')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "transparent" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupGroup')]/*[contains(@class,'Icon')]/@stroke-width" \
-		  -v "0px" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupComplex')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "#B4B464" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupComplex')]/*[contains(@class,'Icon')]/@fill-opacity" \
-		  -v "0.1" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupComplex')]/*[contains(@class,'Icon')]/@stroke" \
-		  -v "#808080" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupNone')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "#B4B464" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupNone')]/*[contains(@class,'Icon')]/@fill-opacity" \
-		  -v "0.1" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupNone')]/*[contains(@class,'Icon')]/@stroke" \
-		  -v "#808080" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupPathway')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "#008000" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupPathway')]/*[contains(@class,'Icon')]/@fill-opacity" \
-		  -v "0.05" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'GroupPathway')]/*[contains(@class,'Icon')]/@stroke" \
-		  -v "#808080" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'CellularComponent')]/*[contains(@class,'Icon')]/@color" \
-		  -v "red" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'CellularComponent')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "pink" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'CellularComponent')]/*[contains(@class,'Icon')]/@fill-opacity" \
-		  -v "0.05" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'CellularComponent')]/*[contains(@class,'Icon')]/@stroke" \
-		  -v "orange" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'Label')]/*[contains(@class,'Icon')]/@color" \
-		  -v "transparent" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'Label')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "none" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'Label')]/*[contains(@class,'Icon')]/@fill-opacity" \
-		  -v "0" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'Label')]/*[contains(@class,'Icon')]/@stroke" \
-		  -v "none" \
-		  -i "/svg:svg/svg:g//svg:g[contains(@class,'DataNode')]/*[contains(@class,'Icon')]" -t attr -n "clip-path" -v "url(#ClipPathRoundedRectangle)" \
-                  -i "/svg:svg/svg:g//svg:g[contains(@class,'DataNode')]/*[contains(@class,'Icon')]" -t attr -n "rx" -v "15px" \
-                  -i "/svg:svg/svg:g//svg:g[contains(@class,'DataNode')]/*[contains(@class,'Icon')]" -t attr -n "ry" -v "15px" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode')]/*[contains(@class,'Icon')]/@stroke-width" \
-		  -v "0px" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode')]/*[contains(@class,'Text')]/@font-weight" \
-		  -v "bold" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'GeneProduct')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "#f4d03f" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'GeneProduct')]/*[contains(@class,'Text')]/@fill" \
-		  -v "#333" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Protein')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "brown" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Protein')]/*[contains(@class,'Text')]/@fill" \
-		  -v "#FEFEFE" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Rna')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "#9453A7" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Rna')]/*[contains(@class,'Text')]/@fill" \
-		  -v "#ECF0F1" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Pathway')]/*[contains(@class,'Icon')]/@xlink:href" \
-		  -v "#Rectangle" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Pathway')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "#75C95C" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Pathway')]/*[contains(@class,'Icon')]/@fill-opacity" \
-		  -v "1" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Pathway')]/*[contains(@class,'Text')]/@stroke" \
-		  -v "transparent" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Pathway')]/*[contains(@class,'Text')]/@stroke-width" \
-		  -v "0px" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Pathway')]/*[contains(@class,'Text')]/@fill" \
-		  -v "#1C2833" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Metabolite')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "#0000EE" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode') and contains(@typeof, 'Metabolite')]/*[contains(@class,'Text')]/@fill" \
-		  -v "#FEFEFE" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode')]/svg:g[contains(@typeof, 'State')]/*[contains(@class,'Icon')]/@fill" \
-		  -v "#fefefe" \
-		  -i "/svg:svg/svg:g//svg:g[contains(@class,'DataNode')]/svg:g[contains(@typeof, 'State')]/*[contains(@class,'Icon')]" \
-		  -t attr -n "color" \
-		  -v "gray" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode')]/svg:g[contains(@typeof, 'State')]/*[contains(@class,'Icon')]/@stroke" \
-		  -v "gray" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode')]/svg:g[contains(@typeof, 'State')]/*[contains(@class,'Icon')]/@stroke-width" \
-		  -v "1px" \
-		  -u "/svg:svg/svg:g//svg:g[contains(@class,'DataNode')]/svg:g[contains(@typeof, 'State')]/*[contains(@class,'Text')]/@fill" \
-		  -v "black" \
-		  "$path_out_dark_svg"
 
   fi
 else
