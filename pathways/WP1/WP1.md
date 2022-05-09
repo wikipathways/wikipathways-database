@@ -32,7 +32,7 @@ description: 'Statins inhibit endogenous cholesterol production by competitive i
   genes involved in statin pharmacogenomics, including genes involved in mediating
   the effects of statins on plasma lipoprotein metabolism.   Sources: [https://www.pharmgkb.org/pathway/PA2031
   PharmGKB] and [http://en.wikipedia.org/wiki/Statin Wikipedia]'
-last-edited: 2022-05-06
+last-edited: 2022-05-09
 organisms:
 - Mus musculus
 redirect_from:
@@ -84,8 +84,8 @@ schema-jsonld:
   - Statin
   - Triglycerides
   license: CC0
-  name: Statin Pathway Testing 1
+  name: Statin Pathway Testing 2
 seo: CreativeWork
-title: Statin Pathway Testing 1
+title: Statin Pathway Testing 2
 wpid: WP1
 ---
