@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+const { exec, execSync} = require("child_process");
+const { convertFile}  = require('convert-svg-to-png');
+const fs = require("fs");
+const path = require("path");
+
+const svgFile = process.argv[2];
+if (!svgFile) {
+  throw new Error("Must specify the path to svg");
+}
+
+(async() => {
+  const inputFilePath = svgFile;
+  const outputFilePath = await convertFile(inputFilePath, {
+    width: 480
+  });
+  const parsedPath = path.parse(outputFilePath);
+  const outputFilePathThumb = path.join(parsedPath.dir, parsedPath.name + "-thumb.png");
+  fs.rename(
+    outputFilePath,
+    outputFilePathThumb,
+        function(err) {
+          if (err) {
+            console.error(`Error renaming png file`); 
+          }
+        }
+  );
+
+  const outputFilePath2 = await convertFile(inputFilePath, {
+    scale: 10
+  });
+
+  console.log(outputFilePathThumb);
+  console.log(outputFilePath2);
+})();

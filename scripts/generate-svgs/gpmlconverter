@@ -453,11 +453,10 @@ r /dev/stdin
 						"$path_out_tmp";
 		fi
     	fi
-    	
     done
     
     mv "$path_out_tmp" "$path_out"
-
+    svg_to_png "$path_out"
   fi
 else
   error_exit "Invalid output extension: '$ext_out'"
