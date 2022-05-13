@@ -118,7 +118,7 @@ Rx.Observable.from(xrefs)
         if (wditems.length > 0) {
           return Rx.Observable.of({ bridgeDbDataSource, wdprop, id, wditems });
         } else {
-          return wdRx(`query -p ${wdprop} -o ${id}`).map(wditem => {
+          return wdRx(`query -p ${wdprop} -o "${id}"`).map(wditem => {
             let wditems = [];
             if (wditem) {
               wditems.push(wditem);
