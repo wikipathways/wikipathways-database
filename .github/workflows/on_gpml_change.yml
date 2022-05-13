@@ -286,12 +286,12 @@ jobs:
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           cd wikipathways-assets
-          git add pathways/WP*/WP*.{json,svg}
+          git add pathways/WP*/WP*.{json,svg,png}
           if git diff --exit-code --staged; then
               echo "No changes"
           else
               git pull
-              git commit -m 'Update JSON and SVG files'
+              git commit -m 'Update JSON, SVG and PNG files'
               git push
           fi
           

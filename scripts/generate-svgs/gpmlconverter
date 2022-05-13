@@ -239,9 +239,9 @@ elif [[ "$ext_out" =~ ^(svg|pvjssvg)$ ]]; then
   json_f="$dir_out/$bare_stub_out.json"
   "$SCRIPT_DIR/gpmlconverter" --id "$ID" --pathway-version "$PATHWAY_VERSION" -i "$path_in" -o "$json_f"
 
-  metabolite_patterns_css_f="$dir_out/$bare_stub_out.metabolite-patterns-uri.css"
-  metabolite_patterns_svg_f="$dir_out/$bare_stub_out.metabolite-patterns-uri.svg"
-  "$SCRIPT_DIR/metabolite-patterns-uri" "$json_f"
+#  metabolite_patterns_css_f="$dir_out/$bare_stub_out.metabolite-patterns-uri.css"
+#  metabolite_patterns_svg_f="$dir_out/$bare_stub_out.metabolite-patterns-uri.svg"
+#  "$SCRIPT_DIR/metabolite-patterns-uri" "$json_f"
 
   if [[ "$base_out" =~ (pvjssvg)$ ]]; then
     #############################
@@ -259,9 +259,9 @@ elif [[ "$ext_out" =~ ^(svg|pvjssvg)$ ]]; then
 #r '"$metabolite_patterns_css_f"'
 #}' "$path_out"
 
-    sed -i '/<g id="jic-defs">/{
-r /dev/stdin
-}' "$path_out" < <(xmlstarlet sel -t -c '/svg/defs/*' "$metabolite_patterns_svg_f")
+#    sed -i '/<g id="jic-defs">/{
+#r /dev/stdin
+#}' "$path_out" < <(xmlstarlet sel -t -c '/svg/defs/*' "$metabolite_patterns_svg_f")
 
     # We overwrite the stylesheet, getting rid of the hover effects
     # for metabolites, but that's desired for now.
@@ -306,13 +306,13 @@ r '"$SCRIPT_DIR/plain.css"'
   
     fix_pvjs_bugs "$path_out"
 
-    sed -i '/<style.*>/{
-r '"$metabolite_patterns_css_f"'
-}' "$path_out"
+#    sed -i '/<style.*>/{
+#r '"$metabolite_patterns_css_f"'
+#}' "$path_out"
 
-    sed -i '/<g id="jic-defs">/{
-r /dev/stdin
-}' "$path_out" < <(xmlstarlet sel -t -c '/svg/defs/*' "$metabolite_patterns_svg_f")
+#    sed -i '/<g id="jic-defs">/{
+#r /dev/stdin
+#}' "$path_out" < <(xmlstarlet sel -t -c '/svg/defs/*' "$metabolite_patterns_svg_f")
 
     edge_count=$(cat "$path_out" | xmlstarlet sel -N svg='http://www.w3.org/2000/svg' -t -v 'count(/svg:svg/svg:g/svg:g[contains(@typeof,'Edge')])')
     for i in $(seq $edge_count); do
