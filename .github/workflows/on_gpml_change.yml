@@ -342,7 +342,7 @@ jobs:
               git push
           fi
           
-  sync-site-repo-deleted:
+  sync-assets-repo-deleted:
     runs-on: ubuntu-latest
     needs: changed-gpmls
     # only run if gpmls were deleted
@@ -356,6 +356,53 @@ jobs:
           fetch-depth: 0
           ref: main
           
+      - name: Checkout assets repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways-assets
+          path: wikipathways-assets
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
+
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_ASSETS_KEY }}   ## for push into wp-assets rep 
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd wikipathways-assets
+          for f in ${{needs.changed-gpmls.outputs.deleted}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "deleting $wpid from wikipathways-assets"
+            git rm pathways/"$wpid"/*
+          done          
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Remove deleted asset files'
+              git push
+          fi
+
+ sync-site-repo-deleted:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were deleted
+    if: ${{needs.changed-gpmls.outputs.deleted}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          ref: main
+
       - name: Checkout jekyll repo
         uses: actions/checkout@v2
         with:
@@ -369,7 +416,7 @@ jobs:
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1
         with:
-          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io rep 
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io rep
 
       - name: Commit report
         run: |
@@ -388,9 +435,7 @@ jobs:
             if [ -e _data/"$wpid"-datanodes.tsv ]; then
               git rm _data/"$wpid"-datanodes.tsv
             fi
-          done          
-          git add _pathways/*.md
-          git add _data/*.tsv
+          done
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
@@ -398,3 +443,4 @@ jobs:
               git commit -m 'Remove deleted tsv and md file(s)'
               git push
           fi
+
