@@ -347,10 +347,7 @@ jobs:
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             cp wikipathways-database/pathways/"$wpid"/"$wpid".md wikipathways.github.io/_pathways/
             cp wikipathways-database/pathways/"$wpid"/"$wpid"-bibliography.tsv wikipathways.github.io/_data/
-            # Enabling WPx-datanodes.tsv to check whether this issue is resolved:
-            # https://github.com/wikipathways/meta-data-action/issues/1
-            # If we don't get any errors, remove this comment section and close the issue.
-            # cp wikipathways-database/pathways/"$wpid"/"$wpid"-datanodes.tsv wikipathways.github.io/_data/
+            cp wikipathways-database/pathways/"$wpid"/"$wpid"-datanodes.tsv wikipathways.github.io/_data/
             mkdir -p wikipathways.github.io/assets/img/"$wpid"
             cp wikipathways-database/pathways/"$wpid"/"$wpid"-thumb.png wikipathways.github.io/assets/img/"$wpid"/
           done
