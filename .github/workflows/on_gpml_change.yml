@@ -10,7 +10,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false # to allow multiple runs to queue up rather than clobber
 
 jobs:
   # inspired by https://dev.to/scienta/get-changed-files-in-github-actions-1p36
