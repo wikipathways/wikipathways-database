@@ -64,10 +64,16 @@ jobs:
     needs: changed-gpmls
     # run if any changes to gpmls: added, modified or deleted
     steps:
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
       - name: Generate WPID list
         run: |
-          for d in pathways/*; do
-            [[ -d "$d" ]] && echo "${d##./}" >> wpid_list.txt; 
+          cd pathways
+          for d in /*; do
+            [[ -d "$d" ]] && echo "${d##./}" >> ../wpid_list.txt; 
           done
       - name: Commit report
         run: |
