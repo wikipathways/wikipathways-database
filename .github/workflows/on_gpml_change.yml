@@ -72,6 +72,7 @@ jobs:
       - name: Generate WPID list
         run: |
           cd pathways
+          cat /dev/null > ../wpid_list.txt
           for d in ./*; do
             [[ -d "$d" ]] && echo "${d##./}" >> ../wpid_list.txt; 
           done
