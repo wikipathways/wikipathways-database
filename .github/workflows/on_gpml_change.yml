@@ -72,7 +72,7 @@ jobs:
       - name: Generate WPID list
         run: |
           cd pathways
-          for d in /*; do
+          for d in ./*; do
             [[ -d "$d" ]] && echo "${d##./}" >> ../wpid_list.txt; 
           done
       - name: Commit report
