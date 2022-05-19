@@ -59,6 +59,29 @@ jobs:
             git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
           fi
           
+  wpid-list:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # run if any changes to gpmls: added, modified or deleted
+    steps:
+      - name: Generate WPID list
+        run: |
+          for d in pathways/*; do
+            [[ -d "$d" ]] && echo "${d##./}" >> wpid_list.txt; 
+          done
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add wpid_list.txt
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update wpid_list file'
+              git push
+          fi
+
   metadata:
     runs-on: ubuntu-latest
     needs: changed-gpmls
@@ -97,7 +120,7 @@ jobs:
             # TODO: Is the following correct? Is the authentication key correct?
             java -jar meta-data-action-0.0.2-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F)
           done
-          
+      
       - name: Commit report
         run: |
           git config --global user.name 'GitHub Action'
