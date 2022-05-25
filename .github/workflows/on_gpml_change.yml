@@ -107,18 +107,20 @@ jobs:
           distribution: 'temurin'
           java-version: '8'
           
-      - name: Install deps
-        run: |
-          wget https://github.com/wikipathways/meta-data-action/releases/download/v0.0.2/meta-data-action-0.0.2-jar-with-dependencies.jar
-
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
           path: ~/
-          key: ${{ runner.os }}-java-${{ hashFiles('meta-data-action-0.0.2-jar-with-dependencies.jar') }}
+          key: ${{ runner.os }}-java-'meta-data-action-0.0.2-jar-with-dependencies.jar'
           restore-keys: |
             ${{ runner.os }}-java-
-            
+
+      - name: Install deps
+        run: |
+          if [ ! -e ./meta-data-action-0.0.2-jar-with-dependencies.jar ]; then
+            wget https://github.com/wikipathways/meta-data-action/releases/download/v0.0.2/meta-data-action-0.0.2-jar-with-dependencies.jar
+          fi
+  
       - name: Generate info and datanode files
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
