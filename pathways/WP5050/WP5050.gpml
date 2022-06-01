@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="TCA cycle in senescence" Data-Source="WikiPathways" Version="WP5050_r119012" Author="[WayanM0, AlexanderPico, Egonw, Fehrhart, Eweitz]" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Pyruvate dehydrogenase (PDH) is a central enzyme in relation to the TCA cycle, as it converts pyruvate into acetyl-CoA. Its activity favours TCA cycle activity. PDH is downregulated by PDH kinase (PDK) and upregulated by PDH phosphatase (PDP). PDK and PDP are respectively down and upregulated in OIS, in particular in the case of the oncogene BRAFV600E (James et al., 2015; Wiley &amp; Campisi, 2016). Due to these regulatory mechanisms, PDH is a crucial mediator of OIS for TCA activity.
+
+Malic enzyme (ME) is another crucial enzyme in the TCA cycle. There appears to be a reciprocal regulation between p53 and ME, mediated through AMPK activation. Downregulation of ME leads to p53-mediated induction of senescence, while upregulation can suppress it (Jiang et al., 2013; Wiley &amp; Campisi, 2016). Because ME uses NAD+/NADP+ and produces NADH/NADPH, downregulation of the enzyme also affects NADPH-dependent mechanisms, including antioxidant defenses. This in turn can cause accumulation of reactive oxygen species (ROS), which activate p53 through AMPK and cause senescence (Wiley &amp; Campisi, 2016).
+
+In OIS, accumulation of TCA intermediates has been observed, including alpha-ketoglutarate, citrate and malate (Kaplon et al., 2013). Further research showed that increased alpha-ketoglutarate has an effect on transcriptional regulation (Salama et al., 2014).
+
+Lipids are also part of the input of the TCA cycle, and fatty acid oxidation has been observed to increase in OIS (Sabbatinelli et al., 2019).
+
+Malate dehydrogenase (MDH1) also plays an important role in the TCA cycle and is part of the malate-aspartate shuttle. Lower levels of the enzyme were observed in DNA-damage induced and proliferative exhaustion-induced senescent cells. Downregulation of MDH1 also affects the NAD+/NADH ratio, known to be related to senescence. Other enzymes of the malate-aspartate shuttle also affect this ratio, such as the aspartate aminotransferase (GOT1). Factors influencing NAD metabolism in senescence have been addressed in more details in https://www.wikipathways.org/index.php/Pathway:WP5046</Comment>
+  <BiopaxRef>eac</BiopaxRef>
+  <Graphics BoardWidth="1219.0" BoardHeight="600.8194444444443" />
+  <DataNode TextLabel="ROS" GraphId="c9a73" Type="Metabolite">
+    <Graphics CenterX="934.5801860974276" CenterY="551.4444444444443" Width="48.08100711549002" Height="38.75" ZOrder="28672" FontWeight="Bold" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:26523" />
+  </DataNode>
+  <DataNode TextLabel="FH" GraphId="a057c" Type="GeneProduct">
+    <Graphics CenterX="1044.0" CenterY="220.0" Width="42.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000091483" />
+  </DataNode>
+  <DataNode TextLabel="AMPK" GraphId="a56a4" Type="Protein">
+    <Graphics CenterX="961.9931875000008" CenterY="207.214875" Width="58.013624999998456" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="AOA" GraphId="a5f4f" Type="Metabolite">
+    <Graphics CenterX="1144.0" CenterY="451.6856249999999" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:40823" />
+  </DataNode>
+  <DataNode TextLabel="NADH" GraphId="a7eb8" Type="Metabolite" GroupRef="cc85d">
+    <Graphics CenterX="787.3194444444442" CenterY="385.73015873015845" Width="55.75" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16908" />
+  </DataNode>
+  <DataNode TextLabel="Antioxidant defenses" GraphId="a9199" Type="Pathway" GroupRef="d2a5b">
+    <Graphics CenterX="787.4444444444459" CenterY="551.4444444444443" Width="127.99999999999994" Height="25.00000000000001" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP2824" />
+  </DataNode>
+  <DataNode TextLabel="Oncogene induced&#xA;senescence" GraphId="a9766" Type="Pathway">
+    <Graphics CenterX="500.775440625" CenterY="130.95026796874998" Width="124.12945687499996" Height="36.74934968750001" ZOrder="32768" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP3308" />
+  </DataNode>
+  <DataNode TextLabel="alpha-ketoglutarate" GraphId="ad93f" Type="Metabolite">
+    <Graphics CenterX="342.40271843749406" CenterY="416.06778937499996" Width="126.03375" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16810" />
+  </DataNode>
+  <DataNode TextLabel="BRAF" GraphId="add2d" Type="GeneProduct">
+    <Graphics CenterX="500.83333333333314" CenterY="41.23566666666656" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000157764" />
+  </DataNode>
+  <DataNode TextLabel="Acetyl-CoA" GraphId="aecff" Type="Metabolite">
+    <Graphics CenterX="673.4877499999991" CenterY="372.657" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01206" />
+  </DataNode>
+  <DataNode TextLabel="TP53" GraphId="af18c" Type="GeneProduct">
+    <Graphics CenterX="931.8881249999997" CenterY="134.2845" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000141510" />
+  </DataNode>
+  <DataNode TextLabel="Fatty acid&#xA;oxidation" GraphId="b3265" Type="Pathway">
+    <Graphics CenterX="326.56300734375" CenterY="280.50754260416676" Width="82.01216531249997" Height="35.18708145833352" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP143" />
+  </DataNode>
+  <DataNode TextLabel="Oxaloacetate" GraphId="b4364" Type="Metabolite">
+    <Graphics CenterX="884.7543125000003" CenterY="379.80949999999996" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:30744" />
+  </DataNode>
+  <DataNode TextLabel="MDH1" GraphId="b5ee3" Type="GeneProduct">
+    <Graphics CenterX="996.7151250000009" CenterY="313.9282500000004" Width="90.0" Height="25.000000000000057" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000014641" />
+  </DataNode>
+  <DataNode TextLabel="NADP+" GraphId="bc5e6" Type="Metabolite" GroupRef="e6881">
+    <Graphics CenterX="739.6507936507918" CenterY="329.6507936507937" Width="47.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:18009" />
+  </DataNode>
+  <DataNode TextLabel="Glucose" GraphId="be463" Type="Metabolite">
+    <Graphics CenterX="673.487749999999" CenterY="166.69799999999992" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17234" />
+  </DataNode>
+  <DataNode TextLabel="Oncogene induced&#xA;senescence" GraphId="cbef3" Type="Pathway">
+    <Graphics CenterX="933.4348903124999" CenterY="52.834277031250025" Width="136.89227249999993" Height="41.85447593749998" ZOrder="32768" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP3308" />
+  </DataNode>
+  <DataNode TextLabel="TCA&#xA;cycle" GraphId="cc6e6" Type="Pathway">
+    <Graphics CenterX="485.460061875" CenterY="420.66618265625" Width="70.52563124999995" Height="34.19678656249992" ZOrder="32768" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP78" />
+  </DataNode>
+  <DataNode TextLabel="Glycolysis" GraphId="cce2a" Type="Pathway">
+    <Graphics CenterX="707.059985625" CenterY="214.4153025" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP534" />
+  </DataNode>
+  <DataNode TextLabel="PDH" GraphId="d05a7" Type="GeneProduct">
+    <Graphics CenterX="535.1515624999997" CenterY="310.6427425367563" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000131828" />
+  </DataNode>
+  <DataNode TextLabel="Pyruvate" GraphId="d17f8" Type="Metabolite">
+    <Graphics CenterX="673.4877499999991" CenterY="265.4249375" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15361" />
+  </DataNode>
+  <DataNode TextLabel="Lipids" GraphId="d702d" Type="Metabolite">
+    <Graphics CenterX="204.30045833333347" CenterY="280.50754260416676" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:18059" />
+  </DataNode>
+  <DataNode TextLabel="ME2" GraphId="d8281" Type="GeneProduct" GroupRef="aad3a">
+    <Graphics CenterX="813.7561249999994" CenterY="201.58437499999994" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000082212" />
+  </DataNode>
+  <DataNode TextLabel="GOT1" GraphId="dab63" Type="GeneProduct">
+    <Graphics CenterX="996.7151250000006" CenterY="451.6856249999999" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000120053" />
+  </DataNode>
+  <DataNode TextLabel="PDP2" GraphId="db38c" Type="GeneProduct">
+    <Graphics CenterX="455.48399999999936" CenterY="224.43970833333324" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000172840" />
+  </DataNode>
+  <DataNode TextLabel="Fumarate" GraphId="ddb7f" Type="Metabolite">
+    <Graphics CenterX="1082.0" CenterY="265.4249375" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29806" />
+  </DataNode>
+  <DataNode TextLabel="Malate" GraphId="ddbbf" Type="Metabolite">
+    <Graphics CenterX="884.7543125000004" CenterY="265.4249375" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:30797" />
+  </DataNode>
+  <DataNode TextLabel="PDK1" GraphId="dfc95" Type="GeneProduct">
+    <Graphics CenterX="566.9758541666657" CenterY="224.43970833333327" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000152256" />
+  </DataNode>
+  <DataNode TextLabel="NAD+" GraphId="e326a" Type="Metabolite" GroupRef="e6881">
+    <Graphics CenterX="739.6507936507918" CenterY="304.6507936507937" Width="47.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15846" />
+  </DataNode>
+  <DataNode TextLabel="NADPH" GraphId="ed17e" Type="Metabolite" GroupRef="cc85d">
+    <Comment>Mitochondrial NADPH</Comment>
+    <Graphics CenterX="787.3194444444442" CenterY="410.73015873015845" Width="55.75" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00221" />
+  </DataNode>
+  <DataNode TextLabel="ME1" GraphId="fa1a6" Type="GeneProduct" GroupRef="aad3a">
+    <Graphics CenterX="813.7561249999994" CenterY="176.58437499999994" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000065833" />
+  </DataNode>
+  <Interaction GraphId="id1246a5fe">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="673.4877499999991" Y="310.8177625" GraphRef="f919e" RelX="0.0" RelY="0.0" />
+      <Point X="759.4444444444442" Y="385.73015873015845" GraphRef="a7eb8" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id15cbf426">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="580.1515624999997" Y="310.6427425367563" GraphRef="d05a7" RelX="1.0" RelY="0.0" />
+      <Point X="673.4877499999991" Y="310.8177625" GraphRef="f919e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id18b07954">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="787.3194444444442" Y="423.23015873015845" GraphRef="ed17e" RelX="0.0" RelY="1.0" />
+      <Point X="787.4444444444459" Y="455.94444444444434" GraphRef="c1fe1" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1b142cc">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="673.4877499999991" Y="277.9249375" GraphRef="d17f8" RelX="0.0" RelY="1.0" />
+      <Point X="673.4877499999991" Y="360.157" GraphRef="aecff" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="f919e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id24b0dfb7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="839.7543125000004" Y="265.4249375" GraphRef="ddbbf" RelX="-1.0" RelY="0.0" />
+      <Point X="718.4877499999991" Y="265.4249375" GraphRef="d17f8" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="ab8d8" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id26741faa">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="438.7107121875" Y="140.13760539062497" GraphRef="a9766" RelX="-1.0" RelY="0.5" />
+      <Point X="347.06604867187497" Y="262.914001875" GraphRef="b3265" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id272e5f14">
+    <Comment>Alpha-ketoglutarate has been shown to affect transcriptional regulation in OIS.</Comment>
+    <BiopaxRef>d18</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="279.38584343749403" Y="416.06778937499996" GraphRef="ad93f" RelX="-1.0" RelY="0.0" />
+      <Point X="243.67246843750127" Y="416.067789375" GraphRef="b8a2e" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id29d312c7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="931.8881249999997" Y="121.78450000000001" GraphRef="af18c" RelX="0.0" RelY="-1.0" />
+      <Point X="933.4348903124999" Y="73.76151500000002" GraphRef="cbef3" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2b70e0f4">
+    <BiopaxRef>ece</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="909.3881249999997" Y="146.7845" GraphRef="af18c" RelX="-0.5" RelY="1.0" />
+      <Point X="866.7561249999994" Y="172.58437499999994" GraphRef="b0cf3" RelX="1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id32b22ad4">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="1093.596059113305" Y="386.20689655172464" GraphRef="f46cb" RelX="1.0" RelY="0.0" />
+      <Point X="1138.9162561576356" Y="280.4608857758623" />
+      <Point X="1057.706424953818" Y="174.714875" />
+      <Point X="976.4965937500003" Y="194.714875" GraphRef="a56a4" RelX="0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id446e92d7">
+    <BiopaxRef>ece</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="961.9931875000008" Y="194.714875" GraphRef="a56a4" RelX="0.0" RelY="-1.0" />
+      <Point X="954.3881249999997" Y="146.7845" GraphRef="af18c" RelX="0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4d3f712f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1044.0" Y="232.5" GraphRef="a057c" RelX="0.0" RelY="1.0" />
+      <Point X="994.1017250000002" Y="265.4249375" GraphRef="b3941" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4ff44499">
+    <BiopaxRef>cd8</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1099.0" Y="451.6856249999999" GraphRef="a5f4f" RelX="-1.0" RelY="0.0" />
+      <Point X="1041.7151250000006" Y="451.6856249999999" GraphRef="dab63" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id53e6afbb">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="851.4444444444459" Y="551.4444444444443" GraphRef="a9199" RelX="1.0" RelY="0.0" />
+      <Point X="910.5396825396826" Y="551.4444444444443" GraphRef="c9a73" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id60a1addd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="951.7151250000009" Y="313.9282500000004" GraphRef="b5ee3" RelX="-1.0" RelY="0.0" />
+      <Point X="884.7543125000004" Y="313.6787625" GraphRef="dd8b3" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6c2c2418">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="477.98399999999936" Y="236.93970833333324" GraphRef="db38c" RelX="0.5" RelY="1.0" />
+      <Point X="512.6515624999997" Y="298.1427425367563" GraphRef="d05a7" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6da80b88">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="249.30045833333347" Y="280.50754260416676" GraphRef="d702d" RelX="1.0" RelY="0.0" />
+      <Point X="285.5569246875" Y="280.50754260416676" GraphRef="b3265" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6de74d11">
+    <Comment>MDH1 depletion appears to lower NAD+/NADH ratio and induce senescence in fibroblasts (Wiley and Campisi, 2016)</Comment>
+    <BiopaxRef>cd8</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="996.7151250000009" Y="326.4282500000004" GraphRef="b5ee3" RelX="0.0" RelY="1.0" />
+      <Point X="994.0825123152758" Y="373.70689655172464" GraphRef="f46cb" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id707aea68">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1037.0" Y="265.4249375" GraphRef="ddb7f" RelX="-1.0" RelY="0.0" />
+      <Point X="929.7543125000004" Y="265.4249375" GraphRef="ddbbf" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="b3941" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id84417498">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="791.2476874999999" Y="265.4249375" GraphRef="ab8d8" RelX="0.0" RelY="0.0" />
+      <Point X="787.3194444444442" Y="365.23015873015845" GraphRef="e10d8" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id862a5893">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="813.7561249999994" Y="222.08437499999994" GraphRef="b0cf3" RelX="0.0" RelY="1.0" />
+      <Point X="791.2476874999999" Y="265.4249375" GraphRef="ab8d8" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id87782a34">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="884.7543125000004" Y="277.9249375" GraphRef="ddbbf" RelX="0.0" RelY="1.0" />
+      <Point X="884.7543125000003" Y="367.30949999999996" GraphRef="b4364" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="dd8b3" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9bed8c5a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="946.6004378763002" Y="532.0694444444443" GraphRef="c9a73" RelX="0.5" RelY="-1.0" />
+      <Point X="947.4897812500012" Y="219.714875" GraphRef="a56a4" RelX="-0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida09de9bd">
+    <Comment>Inhibition of GOT1 also lowers the ratio and induces senescence (Wiley and Campisi, 2016)</Comment>
+    <BiopaxRef>cd8</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="996.7151250000006" Y="439.1856249999999" GraphRef="dab63" RelX="0.0" RelY="-1.0" />
+      <Point X="994.0825123152758" Y="398.70689655172464" GraphRef="f46cb" RelX="-0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb0f88663">
+    <BiopaxRef>ece</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="866.7561249999994" Y="205.58437499999994" GraphRef="b0cf3" RelX="1.0" RelY="0.5" />
+      <Point X="932.9863750000015" Y="213.464875" GraphRef="a56a4" RelX="-1.0" RelY="0.5" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc017a309">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="628.4877499999991" Y="378.907" GraphRef="aecff" RelX="-1.0" RelY="0.5" />
+      <Point X="520.7228775" Y="412.116986015625" GraphRef="cc6e6" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc82c6c3">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="673.487749999999" Y="179.19799999999992" GraphRef="be463" RelX="0.0" RelY="1.0" />
+      <Point X="673.4877499999991" Y="252.9249375" GraphRef="d17f8" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc8e1f560">
+    <BiopaxRef>bfc</BiopaxRef>
+    <BiopaxRef>ba6</BiopaxRef>
+    <BiopaxRef>d69</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="531.80780484375" Y="149.32494281249998" GraphRef="a9766" RelX="0.5" RelY="1.0" />
+      <Point X="544.4758541666657" Y="211.93970833333327" GraphRef="dfc95" RelX="-0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idca428336">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="566.9758541666657" Y="236.93970833333327" GraphRef="dfc95" RelX="0.0" RelY="1.0" />
+      <Point X="535.1515624999997" Y="298.1427425367563" GraphRef="d05a7" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd0ae4e23">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="500.83333333333314" Y="53.73566666666656" GraphRef="add2d" RelX="0.0" RelY="1.0" />
+      <Point X="500.775440625" Y="112.57559312499998" GraphRef="a9766" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf6afc27c">
+    <Comment>Accumulation of alpha-ketoglutarate has been observed in OIS, as well as other TCA intermediates.</Comment>
+    <BiopaxRef>d69</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="450.19724625000003" Y="420.66618265625" GraphRef="cc6e6" RelX="-1.0" RelY="0.0" />
+      <Point X="405.4195934374941" Y="416.06778937499996" GraphRef="ad93f" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf8dd430">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="347.06604867187497" Y="298.1010833333335" GraphRef="b3265" RelX="0.5" RelY="1.0" />
+      <Point X="467.82865406250005" Y="403.567789375" GraphRef="cc6e6" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idfe2c3716">
+    <BiopaxRef>bfc</BiopaxRef>
+    <BiopaxRef>d69</BiopaxRef>
+    <BiopaxRef>ba6</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="469.74307640625" Y="149.32494281249998" GraphRef="a9766" RelX="-0.5" RelY="1.0" />
+      <Point X="455.48399999999936" Y="211.93970833333324" GraphRef="db38c" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="id8686ebfc">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="755.4007936507918" Y="284.1507936507937" GraphRef="d272e" RelX="0.5" RelY="-1.0" />
+      <Point X="791.2476874999999" Y="265.4249375" GraphRef="ab8d8" RelX="0.0" RelY="0.0" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="id8e493e4f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="716.1507936507918" Y="304.6507936507937" GraphRef="e326a" RelX="-1.0" RelY="0.0" />
+      <Point X="673.4877499999991" Y="310.8177625" GraphRef="f919e" RelX="0.0" RelY="0.0" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Transcriptional&#xA;regulation" GraphId="b8a2e">
+    <Graphics CenterX="194.5470934375013" CenterY="416.067789375" Width="98.25074999999995" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Glucose consumption" GraphId="c3517" GroupRef="d2a5b">
+    <Graphics CenterX="787.4444444444458" CenterY="501.44444444444434" Width="128.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Lipid synthesis" GraphId="d94e4" GroupRef="d2a5b">
+    <Graphics CenterX="787.4444444444458" CenterY="476.44444444444434" Width="127.99999999999994" Height="25.00000000000001" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Glutaminolysis" GraphId="eefc9" GroupRef="d2a5b">
+    <Graphics CenterX="787.4444444444458" CenterY="526.4444444444443" Width="127.99999999999994" Height="25.00000000000001" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="NAD+/NADH ratio" GraphId="f46cb">
+    <Graphics CenterX="1027.2536945812856" CenterY="386.20689655172464" Width="132.68472906403895" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Group GroupId="aad3a" GraphId="b0cf3" Style="Group" />
+  <Group GroupId="d2a5b" GraphId="c1fe1" Style="Group" />
+  <Group GroupId="e6881" GraphId="d272e" Style="Group" />
+  <Group GroupId="cc85d" GraphId="e10d8" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d18">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24449267</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cellular senescence and its effector programs.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes Dev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salama R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sadaie M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoare M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narita M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">citric acid cycle pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000026</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ece">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23334421</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reciprocal regulation of p53 and malic enzymes modulates metabolism and senescence.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Du W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mancuso A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wellen KE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang X</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bfc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanisms and functions of cellular senescence</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1172/JCI95148</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29608137</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanisms and functions of cellular senescence.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herranz N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gil J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd8">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27304503</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">From Ancient Pathways to Aging Cells-Connecting Metabolism and Cellular Senescence.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wiley CD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Campisi J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ba6">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pyruvate as a Pivot Point for Oncogene-Induced Senescence</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1016/j.cell.2013.06.001</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23791173</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pyruvate as a pivot point for oncogene-induced senescence.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olenchock BA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vander Heiden MG</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eac">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metabolic hallmarks of cellular senescence: highlighting the role of intracellular pathways in various senescent phenotypes</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Birgit Veldman</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d69">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A key role for mitochondrial gatekeeper pyruvate dehydrogenase in oncogene-induced senescence</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1038/nature12154</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23685455</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A key role for mitochondrial gatekeeper pyruvate dehydrogenase in oncogene-induced senescence.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaplon J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zheng L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meissl K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chaneton B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selivanov VA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mackay G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van der Burg SH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verdegaal EM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cascante M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shlomi T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gottlieb E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peeper DS</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular senescence pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000277</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>
+
