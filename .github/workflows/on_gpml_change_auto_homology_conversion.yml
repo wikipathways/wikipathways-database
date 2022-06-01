@@ -95,7 +95,7 @@ jobs:
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating info and datanode files for $wpid ($f)"
-            java -jar HomologyMapperAuto-WithDependencies.jar properties/autorun.properties $wpid
+            java -jar HomologyMapperAuto-WithDependencies.jar scripts/homology-converter/properties/autorun.properties $wpid
           done
           
       - name: Commit report
