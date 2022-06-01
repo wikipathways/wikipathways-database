@@ -1,0 +1,113 @@
+name: Handle GPML changes
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - pathways/**/*.gpml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # inspired by https://dev.to/scienta/get-changed-files-in-github-actions-1p36
+  changed-gpmls:
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      added-modified: ${{ steps.changes.outputs.added-modified }}
+      copied: ${{ steps.changes.outputs.copied }}
+      deleted: ${{ steps.changes.outputs.deleted }}
+      renamed: ${{ steps.changes.outputs.renamed }}
+    steps:
+        # Make sure we have some code to diff.
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: Get changed files
+        id: changes
+        # Set outputs using the command.
+        run: |
+          echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
+          
+          echo "::set-output name=added-modified::$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'added or modified:'
+            git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+          
+          echo "::set-output name=copied::$(git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'copied:'
+            git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+
+          echo "::set-output name=deleted::$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'deleted:'
+            git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+            
+          echo "::set-output name=renamed::$(git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'renamed:'
+            git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+          
+  homologyConversion:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    steps:
+      - name: Checkout homologyConverterActions repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+        
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+          
+      - name: Install deps
+        run: |
+          #wget https://github.com/hbasaric/homology.mapper.automated/releases/download/v1.0/HomologyMapperAuto-WithDependencies.jar
+          wget https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1
+          #wget https://github.com/wikipathways/homologyConverterActions/tree/main/properties/autorun.properties
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/
+          key: ${{ runner.os }}-java-${{ hashFiles('HomologyMapperAuto-WithDependencies.jar') }}
+          restore-keys: |
+            ${{ runner.os }}-java-
+            
+      - name: Generate info and datanode files
+        run: |
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "generating info and datanode files for $wpid ($f)"
+            java -jar HomologyMapperAuto-WithDependencies.jar properties/autorun.properties $wpid
+          done
+          
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git diff
+          git add outputs/output_hsa-bt/WP*/WP*.gpml
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update homology converted pathway files'
+              git push
+          fi
