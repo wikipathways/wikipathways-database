@@ -2,7 +2,7 @@
 
 This repository is a prototype to test using GitHub Actions to trigger the automated homology conversion script to run when a .gpml file is changed.
 
-When a new pathway is added  to the /pathways folder, or an existing pathway is modified, the on_gpml_change.yml file triggers a workflow run.
+When a new pathway is added  to the /pathways folder, or an existing pathway is modified, the on_gpml_change_auto_homology_conversion.yml file triggers a workflow run.
 
 The workflow run installs the necessary dependency; Hs_Derby_Ensembl_105.bridge from https://bridgedb.github.io/data/gene_database/ using a wget statement.
 
