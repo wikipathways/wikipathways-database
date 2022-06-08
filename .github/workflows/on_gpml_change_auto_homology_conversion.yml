@@ -167,7 +167,7 @@ jobs:
             echo "copying gpml files for $wpid for all species"
             cd "$HM_PATH"
             
-            for value in Bt Cf Dr Ec Gg Mm Pt Rn Ss
+            for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
             do
                 mkdir -p pathways/$value/"$wpid"
                 for old_f in pathways/$value/"$wpid"/"$wpid".{gpml}; do 
@@ -186,7 +186,7 @@ jobs:
           git config --global user.email 'action@github.com'
           cd wikipathways-homology
           
-          for value in Bt Cf Dr Ec Gg Mm Pt Rn Ss
+          for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
           do
             git add $HM_PATH/pathways/$value/WP*/WP*_$value.gpml
           done
