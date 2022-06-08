@@ -181,13 +181,14 @@ jobs:
 
       - name: Commit gpml to homology repo
         run: |
+          HM_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-homology"
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           cd wikipathways-homology
           
           for value in Bt Cf Dr Ec Gg Mm Pt Rn Ss
           do
-            git add pathways/$value/WP*/WP*.{gpml}
+            git add $HM_PATH/pathways/$value/WP*/WP*.{gpml}
           done
           
           if git diff --exit-code --staged; then
