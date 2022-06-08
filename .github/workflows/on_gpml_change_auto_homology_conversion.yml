@@ -160,8 +160,8 @@ jobs:
             
       - name: Copy gpml files from database repo to homology repo
         run: |
-          DB_PATH="/home/runner/work/wikipathways-database"
-          HM_PATH="/home/runner/work/wikipathways-homology"
+          DB_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-database"
+          HM_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-homology"
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "copying gpml files for $wpid for all species"
