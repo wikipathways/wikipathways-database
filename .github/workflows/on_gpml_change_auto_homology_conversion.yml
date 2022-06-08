@@ -11,8 +11,8 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
-  
- variables:      # pipeline-level
+
+variables:      # pipeline-level
   DERBY_VERSION: '105'
 
 jobs:
