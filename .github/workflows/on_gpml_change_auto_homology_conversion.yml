@@ -92,11 +92,11 @@ jobs:
             wget https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1
           fi
             
-      - name: Generate info and datanode files
+      - name: Perform homology conversion
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
-            echo "generating info and datanode files for $wpid ($f)"
+            echo "perfomring homology conversion for $wpid ($f)"
             java -jar HomologyMapperAuto-WithDependencies.jar scripts/homology-converter/properties/autorun.properties $wpid
           done
           
