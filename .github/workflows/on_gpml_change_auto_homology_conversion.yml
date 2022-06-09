@@ -96,7 +96,7 @@ jobs:
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
-            echo "perfomring homology conversion for $wpid ($f)"
+            echo "perfoming homology conversion for $wpid ($f)"
             java -jar HomologyMapperAuto-WithDependencies.jar scripts/homology-converter/properties/autorun.properties $wpid
           done
           
@@ -171,8 +171,10 @@ jobs:
             do
                 mkdir -p pathways/$value/"$wpid"
                 for old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
+                  echo "for $old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml"
                   if [ -e "$old_f" ]; then
                     rm "$old_f"
+                    echo "rm $old_f"
                   fi
                 done
                 cp $DB_PATH/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml
