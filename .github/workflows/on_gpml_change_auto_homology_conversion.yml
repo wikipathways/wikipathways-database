@@ -119,7 +119,7 @@ jobs:
           fi
           
   commit-to-homology:
-    needs: [changed-gpmls]
+    needs: [changed-gpmls,homologyConversion]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout wikipathways-database repo
