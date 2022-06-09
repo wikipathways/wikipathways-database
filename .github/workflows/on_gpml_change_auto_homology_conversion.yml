@@ -107,7 +107,7 @@ jobs:
           git diff
           for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
           do
-            git add scripts/homology-converter/outputs/$value/WP*/WP*.gpml
+            git add scripts/homology-converter/outputs/$value/WP*/WP*_$value.gpml
           done
           git add scripts/homology-converter/logs/*.txt
           if git diff --exit-code --staged; then
@@ -170,7 +170,7 @@ jobs:
             for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
             do
                 mkdir -p pathways/$value/"$wpid"
-                for old_f in pathways/$value/"$wpid"/"$wpid".{gpml}; do 
+                for old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
                   if [ -e "$old_f" ]; then
                     rm "$old_f"
                   fi
