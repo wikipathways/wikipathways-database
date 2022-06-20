@@ -65,7 +65,7 @@ jobs:
     needs: changed-gpmls
     # only run if gpmls were added or modified
     if: ${{needs.changed-gpmls.outputs.added-modified}}
-    steps:
+    steps:      
       - name: Checkout homologyConverterActions repo
         uses: actions/checkout@v2
         with:
@@ -78,15 +78,17 @@ jobs:
           distribution: 'temurin'
           java-version: '8'
           
-      - name: Cache dependencies
-        uses: actions/cache@v2
+      - name: Cache and install dependencies
+        uses: actions/cache@v3
+        id: cache
         with:
           path: ~/
-          key: ${{ runner.os }}-java-'Hs_Derby_Ensembl_105.bridge?download=1'
+          key: ${{ runner.os }}-java-Hs_Derby_Ensembl_105.bridge?download=1
           restore-keys: |
             ${{ runner.os }}-java-
             
-      - name: Install deps
+      - if: steps.cache.outputs.cache-hit != 'true'
+        name: Install deps
         run: |
           if [ ! -e ./Hs_Derby_Ensembl_105.bridge?download=1 ]; then
             wget https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1
