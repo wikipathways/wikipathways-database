@@ -96,7 +96,7 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
       - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           ref: main
@@ -133,7 +133,7 @@ jobs:
       - name: Commit report
         run: |
           git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@noreply-wikipathways.org'
+          git config --global user.email 'action@github.com'
           git add pathways/WP*/WP*.{json,tsv}
           if git diff --exit-code --staged; then
               echo "No changes"
