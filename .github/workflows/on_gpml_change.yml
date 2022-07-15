@@ -235,6 +235,151 @@ jobs:
               git push
           fi
 
+  homologyConversion:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    steps:      
+      - name: Checkout homologyConverterActions repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+        
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+          
+      - name: Cache and install dependencies
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: ~/
+          key: ${{ runner.os }}-java-Hs_Derby_Ensembl_105.bridge?download=1
+          restore-keys: |
+            ${{ runner.os }}-java-
+            
+      - if: steps.cache.outputs.cache-hit != 'true'
+        name: Install deps
+        run: |
+          if [ ! -e ./Hs_Derby_Ensembl_105.bridge?download=1 ]; then
+            wget https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1
+          fi
+            
+      - name: Perform homology conversion
+        run: |
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "perfoming homology conversion for $wpid ($f)"
+            java -jar HomologyMapperAuto-WithDependencies.jar scripts/homology-converter/properties/autorun.properties $wpid
+          done
+          
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git diff
+          for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
+          do
+            git add scripts/homology-converter/outputs/$value/WP*/WP*_$value.gpml
+          done
+          git add scripts/homology-converter/logs/*.txt
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update homology converted pathway files'
+              git push
+          fi
+          
+  commit-to-homology:
+    needs: [changed-gpmls,homologyConversion]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          ref: main
+
+      - name: Checkout homology repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways-homology
+          path: wikipathways-homology
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }}
+
+      - name: Install SSH Client ??
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }} ## for push into wp-homology repo
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12.x'
+
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+            
+      - name: Copy gpml files from database repo to homology repo
+        run: |
+          DB_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-database"
+          HM_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-homology"
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "copying gpml files for $wpid for all species"
+            cd "$HM_PATH"
+            
+            for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
+            do
+                mkdir -p pathways/$value/"$wpid"
+                for old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
+                  echo "for $old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml"
+                  if [ -e "$old_f" ]; then
+                    rm "$old_f"
+                    echo "rm $old_f"
+                  fi
+                done
+                if [-e $DB_PATH/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml]; then
+                    cp $DB_PATH/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml
+                fi
+            done  
+          done
+
+      - name: Commit gpml to homology repo
+        run: |
+          HM_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-homology"
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd wikipathways-homology
+          
+          for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
+          do
+            git add $HM_PATH/pathways/$value/WP*/WP*_$value.gpml
+          done
+          
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update GPML files'
+              git push
+          fi
+          
   json-svg:
     needs: [changed-gpmls]
     runs-on: ubuntu-latest
