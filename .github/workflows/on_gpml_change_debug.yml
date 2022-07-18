@@ -65,12 +65,6 @@ jobs:
     # only run if gpmls were added or modified
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
-      - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          ref: main
-      
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
@@ -84,6 +78,13 @@ jobs:
           key: ${{ runner.os }}-java-'meta-data-action-0.0.2-jar-with-dependencies.jar'
           restore-keys: |
             ${{ runner.os }}-java-
+
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+
       - name: Install deps
         run: |
           if [ ! -e ./meta-data-action-0.0.2-jar-with-dependencies.jar ]; then
