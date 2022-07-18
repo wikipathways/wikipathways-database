@@ -77,9 +77,13 @@ jobs:
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git pull
+          echo "" >> $REPO_PATH/pathways/WP1/WP1.json
           git add $REPO_PATH/pathways/WP*/WP*.{json,tsv}
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              echo "debug success"
+              git pull
+              git commit -m 'Update metadata files'
+              git push
           fi 
+          echo "debug success"
