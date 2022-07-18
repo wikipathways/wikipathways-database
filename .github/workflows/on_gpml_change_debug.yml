@@ -105,10 +105,6 @@ jobs:
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add pathways/WP*/WP*.{json,tsv}
-          if git diff --exit-code --staged; then
-              echo "No changes"
-          else
-              git pull
-              git commit -m 'Update metadata files'
-              git push
-          fi
+          git pull
+          git commit -m 'Update metadata files'
+          git push
