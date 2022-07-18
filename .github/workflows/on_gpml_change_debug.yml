@@ -70,40 +70,10 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
-        
-      - name: Setup Java
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'temurin'
-          java-version: '8'
-          
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/
-          key: ${{ runner.os }}-java-'meta-data-action-0.0.2-jar-with-dependencies.jar'
-          restore-keys: |
-            ${{ runner.os }}-java-
-
-      - name: Install deps
-        run: |
-          if [ ! -e ./meta-data-action-0.0.2-jar-with-dependencies.jar ]; then
-            wget https://github.com/wikipathways/meta-data-action/releases/download/v0.0.2/meta-data-action-0.0.2-jar-with-dependencies.jar
-          fi
-  
-      - name: Generate info and datanode files
-        run: |
-          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
-            wpid="$(basename ""$f"" | sed 's/.gpml//')"
-            echo "generating info and datanode files for $wpid ($f)"
-            # TODO: Is the following correct? Is the authentication key correct?
-            java -jar meta-data-action-0.0.2-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F)
-          done
       
       - name: Commit report
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add pathways/WP*/WP*.{json,tsv}
           git pull
           echo "debug success"
