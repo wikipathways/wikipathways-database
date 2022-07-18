@@ -73,7 +73,9 @@ jobs:
       
       - name: Commit report
         run: |
+          REPO_PATH="/home/runner/work/wikipathways-database/wikipathways-database"
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git pull
+          git add $REPO_PATH/pathways/WP*/WP*.{json,tsv}
           echo "debug success"
