@@ -78,4 +78,8 @@ jobs:
           git config --global user.email 'action@github.com'
           git pull
           git add $REPO_PATH/pathways/WP*/WP*.{json,tsv}
-          echo "debug success"
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              echo "debug success"
+          fi 
