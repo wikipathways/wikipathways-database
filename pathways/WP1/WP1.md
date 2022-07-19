@@ -1,9 +1,5 @@
 ---
 annotations:
-- id: PW:0000724
-  parent: drug pathway
-  type: Pathway Ontology
-  value: statin drug pathway
 - id: PW:0001933
   parent: disease pathway
   type: Pathway Ontology
@@ -12,6 +8,10 @@ annotations:
   parent: cardiovascular system disease
   type: Disease Ontology
   value: cardiovascular system disease
+- id: PW:0000724
+  parent: drug pathway
+  type: Pathway Ontology
+  value: statin drug pathway
 authors:
 - Nsalomonis
 - MaintBot
@@ -31,13 +31,14 @@ description: 'Statins inhibit endogenous cholesterol production by competitive i
   genes involved in statin pharmacogenomics, including genes involved in mediating
   the effects of statins on plasma lipoprotein metabolism.   Sources: [https://www.pharmgkb.org/pathway/PA2031
   PharmGKB] and [http://en.wikipedia.org/wiki/Statin Wikipedia]'
-last-edited: 2021-05-23
+last-edited: 2022-07-19
 organisms:
 - Mus musculus
 redirect_from:
 - /index.php/Pathway:WP1
 - /instance/WP1
-revision: null
+- /instance/WP1_rr117947
+revision: r117947
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP1.html
