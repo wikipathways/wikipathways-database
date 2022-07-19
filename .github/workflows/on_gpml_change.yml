@@ -108,6 +108,7 @@ jobs:
           path: ~/
           key: ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies.jar
           restore-keys: |
+            ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies.jar
             ${{ runner.os }}-java-
 
       - name: Checkout wikipathways-database repo
@@ -263,6 +264,7 @@ jobs:
           path: ~/
           key: ${{ runner.os }}-java-Hs_Derby_Ensembl_105.bridge?download=1
           restore-keys: |
+            ${{ runner.os }}-java-Hs_Derby_Ensembl_105.bridge?download=1
             ${{ runner.os }}-java-
           
       - if: steps.cache.outputs.cache-hit != 'true'
