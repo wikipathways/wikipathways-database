@@ -101,9 +101,10 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '8'
-          
+            
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
+        id: cacheMetaJar
         with:
           path: ~/
           key: ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies.jar
@@ -115,8 +116,9 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
-          
-      - name: Install deps
+    
+      - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
+        name: Install deps
         run: |
           if [ ! -e ./meta-data-action-0.0.2-jar-with-dependencies.jar ]; then
             wget https://github.com/wikipathways/meta-data-action/releases/download/v0.0.2/meta-data-action-0.0.2-jar-with-dependencies.jar
