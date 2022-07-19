@@ -244,6 +244,12 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:      
         
+      - name: Checkout homologyConverterActions repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+          
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
@@ -258,12 +264,6 @@ jobs:
           key: ${{ runner.os }}-java-Hs_Derby_Ensembl_105.bridge?download=1
           restore-keys: |
             ${{ runner.os }}-java-
-
-      - name: Checkout homologyConverterActions repo
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          ref: main
           
       - if: steps.cache.outputs.cache-hit != 'true'
         name: Install deps
