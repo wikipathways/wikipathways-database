@@ -96,6 +96,12 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
         
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: main
+          
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
@@ -110,12 +116,6 @@ jobs:
           key: ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies
           restore-keys: |
             ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies
-
-      - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: main
     
       - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
         name: Install deps
