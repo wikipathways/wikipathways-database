@@ -106,7 +106,7 @@ jobs:
         uses: actions/cache@v3
         id: cacheMetaJar
         with:
-          path: ~/meta-data-action-0.0.2-jar-with-dependencies.jar
+          path: ./meta-data-action-0.0.2-jar-with-dependencies.jar
           key: ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies
           restore-keys: |
             ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies
@@ -121,7 +121,7 @@ jobs:
         name: Install deps
         run: |
           if [ ! -e ./meta-data-action-0.0.2-jar-with-dependencies.jar ]; then
-            wget https://github.com/wikipathways/meta-data-action/releases/download/v0.0.2/meta-data-action-0.0.2-jar-with-dependencies.jar
+            wget -O meta-data-action-0.0.2-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v0.0.2/meta-data-action-0.0.2-jar-with-dependencies.jar
           fi
   
       - name: Generate info and datanode files
@@ -262,7 +262,7 @@ jobs:
         uses: actions/cache@v3
         id: cache
         with:
-          path: ~/
+          path: ./Hs_Derby_Ensembl_105.bridge
           key: ${{ runner.os }}-java-Hs_Derby_Ensembl_105
           restore-keys: |
             ${{ runner.os }}-java-Hs_Derby_Ensembl_105
