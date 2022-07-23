@@ -444,9 +444,9 @@ jobs:
             ./gpmlconverter --id "$wpid" -i $DB_PATH/pathways/"$wpid"/"$wpid".gpml -o $AS_PATH/pathways/"$wpid"/"$wpid".svg
             
             # delete intermediate JSON files
-            rm $AS_PATH/pathways/"$wpid"/"$wpid".json.b4bridgedb.json
-            rm $AS_PATH/pathways/"$wpid"/"$wpid".b4wd.json
-            rm $AS_PATH/pathways/"$wpid"/"$wpid".b4hgnc.json
+            rm $AS_PATH/pathways/"$wpid"/"$wpid".json.b4bridgedb.json || true
+            rm $AS_PATH/pathways/"$wpid"/"$wpid".b4wd.json || true
+            rm $AS_PATH/pathways/"$wpid"/"$wpid".b4hgnc.json || true
             
             # mv thumbnail png
             mv $AS_PATH/pathways/"$wpid"/"$wpid"-thumb.png $DB_PATH/pathways/"$wpid"/
