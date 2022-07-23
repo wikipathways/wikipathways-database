@@ -96,6 +96,12 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
         
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: main
+          
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
@@ -106,22 +112,16 @@ jobs:
         uses: actions/cache@v3
         id: cacheMetaJar
         with:
-          path: ~/
-          key: ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies.jar
+          path: ./meta-data-action-0.0.2-jar-with-dependencies.jar
+          key: ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies
           restore-keys: |
-            ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies.jar
-
-      - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: main
+            ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies
     
       - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
         name: Install deps
         run: |
           if [ ! -e ./meta-data-action-0.0.2-jar-with-dependencies.jar ]; then
-            wget https://github.com/wikipathways/meta-data-action/releases/download/v0.0.2/meta-data-action-0.0.2-jar-with-dependencies.jar
+            wget -O meta-data-action-0.0.2-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v0.0.2/meta-data-action-0.0.2-jar-with-dependencies.jar
           fi
   
       - name: Generate info and datanode files
@@ -262,17 +262,17 @@ jobs:
         uses: actions/cache@v3
         id: cache
         with:
-          path: ~/
-          key: ${{ runner.os }}-java-Hs_Derby_Ensembl_105.bridge?download=1
+          path: ./Hs_Derby_Ensembl_105.bridge
+          key: ${{ runner.os }}-java-Hs_Derby_Ensembl_105
           restore-keys: |
-            ${{ runner.os }}-java-Hs_Derby_Ensembl_105.bridge?download=1
+            ${{ runner.os }}-java-Hs_Derby_Ensembl_105
             ${{ runner.os }}-java-
           
       - if: steps.cache.outputs.cache-hit != 'true'
         name: Install deps
         run: |
-          if [ ! -e ./Hs_Derby_Ensembl_105.bridge?download=1 ]; then
-            wget https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1
+          if [ ! -e ./Hs_Derby_Ensembl_105.bridge ]; then
+            wget -O Hs_Derby_Ensembl_105.bridge https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1
           fi
             
       - name: Perform homology conversion

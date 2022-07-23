@@ -25,13 +25,14 @@ authors:
 - Egonw
 - Ddigles
 - Eweitz
-description: 'Statins inhibit endogenous cholesterol production by competitive inhibition
-  of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion of HMG-CoA to
-  mevalonate, an early rate-limiting step in cholesterol synthesis. This pathway delineates
-  genes involved in statin pharmacogenomics, including genes involved in mediating
-  the effects of statins on plasma lipoprotein metabolism.   Sources: [https://www.pharmgkb.org/pathway/PA2031
-  PharmGKB] and [http://en.wikipedia.org/wiki/Statin Wikipedia]'
-last-edited: 2022-07-19
+description: 'Statins inhibit the endogenous cholesterol production by competitive
+  inhibition of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion of
+  HMG-CoA to mevalonate, an early rate-limiting step in cholesterol synthesis. This
+  pathway delineates genes involved in statin pharmacogenomics, including genes involved
+  in mediating the effects of statins on plasma lipoprotein metabolism.   Sources:
+  [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikipedia.org/wiki/Statin
+  Wikipedia]'
+last-edited: 2022-07-20
 organisms:
 - Mus musculus
 redirect_from:
@@ -46,11 +47,11 @@ schema-jsonld:
   creator:
     '@type': Organization
     name: WikiPathways
-  description: 'Statins inhibit endogenous cholesterol production by competitive inhibition
-    of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion of HMG-CoA
-    to mevalonate, an early rate-limiting step in cholesterol synthesis. This pathway
-    delineates genes involved in statin pharmacogenomics, including genes involved
-    in mediating the effects of statins on plasma lipoprotein metabolism.   Sources:
+  description: 'Statins inhibit the endogenous cholesterol production by competitive
+    inhibition of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion
+    of HMG-CoA to mevalonate, an early rate-limiting step in cholesterol synthesis.
+    This pathway delineates genes involved in statin pharmacogenomics, including genes
+    involved in mediating the effects of statins on plasma lipoprotein metabolism.   Sources:
     [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikipedia.org/wiki/Statin
     Wikipedia]'
   keywords:
