@@ -106,54 +106,31 @@ jobs:
         uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
-          java-version: '11'
+          java-version: '8'
             
       - name: Cache dependencies
         uses: actions/cache@v3
         id: cacheMetaJar
         with:
-          path: ./MetaDataAction.jar
-          key: ${{ runner.os }}-MetaDataAction.jar
+          path: ./meta-data-action-0.0.2-jar-with-dependencies.jar
+          key: ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies
           restore-keys: |
-            ${{ runner.os }}-java-MetaDataAction.jar
+            ${{ runner.os }}-java-meta-data-action-0.0.2-jar-with-dependencies
     
       - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
         name: Install deps
         run: |
-          if [ ! -e ./MetaDataAction.jar ]; then
-            wget -O MetaDataAction.jar https://github.com/hbasaric/meta-data-action/releases/download/v0.03/MetaDataAction.jar
+          if [ ! -e ./meta-data-action-0.0.2-jar-with-dependencies.jar ]; then
+            wget -O meta-data-action-0.0.2-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v0.0.2/meta-data-action-0.0.2-jar-with-dependencies.jar
           fi
-              
-      - name: Generate gdb.config, fileNames.config, and fileDownloads.config
-        run: |
-          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
-            scripts/meta-data-action/configGenerator.sh $f
-          done
-
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        id: cacheAllBridge
-        with:
-          path: ./*.bridge
-          key: ${{ runner.os }}-java-${{ hashFiles('**/*.bridge') }}
-          restore-keys: |
-            ${{ runner.os }}-java-
-            
-      - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
-        name: Install all bridge files
-        run: |
-          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
-            org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
-            scripts/meta-data-action/installDependencies.sh $org
-          done
-          
+  
       - name: Generate info and datanode files
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
-            org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
             echo "generating info and datanode files for $wpid ($f)"
-            java -jar MetaDataAction.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) scripts/meta-data-action/gdb.config $org
+            # TODO: Is the following correct? Is the authentication key correct?
+            java -jar meta-data-action-0.0.2-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F)
           done
       
       - name: Commit report
@@ -663,3 +640,4 @@ jobs:
               git commit -m 'Remove deleted tsv, md and png file(s)'
               git push
           fi
+

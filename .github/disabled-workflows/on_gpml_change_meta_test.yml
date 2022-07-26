@@ -153,7 +153,7 @@ jobs:
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
             echo "generating info and datanode files for $wpid ($f)"
-            java -jar MetaDataAction.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) scripts/meta-data-action/gdb.config $org
+            java -jar MetaDataAction.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config $org
           done
       
       - name: Commit report
