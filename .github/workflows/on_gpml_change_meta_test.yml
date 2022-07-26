@@ -127,7 +127,7 @@ jobs:
       - name: Generate gdb.config, fileNames.config, and fileDownloads.config
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
-            configGenerator.sh $f
+            scripts/meta-data-action/configGenerator.sh $f
           done
 
       - name: Cache dependencies
@@ -144,7 +144,7 @@ jobs:
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
-            installDependencies.sh $org
+            scripts/meta-data-action/installDependencies.sh $org
           done
           
       - name: Generate info and datanode files
