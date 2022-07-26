@@ -1,0 +1,665 @@
+name: Handle GPML changes
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - pathways/**/*.gpml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: false # to allow multiple runs to queue up rather than clobber
+
+jobs:
+  # inspired by https://dev.to/scienta/get-changed-files-in-github-actions-1p36
+  changed-gpmls:
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      added-modified: ${{ steps.changes.outputs.added-modified }}
+      copied: ${{ steps.changes.outputs.copied }}
+      deleted: ${{ steps.changes.outputs.deleted }}
+      renamed: ${{ steps.changes.outputs.renamed }}
+    steps:
+        # Make sure we have some code to diff.
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: Get changed files
+        id: changes
+        # Set outputs using the command.
+        run: |
+          echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
+          
+          echo "::set-output name=added-modified::$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'added or modified:'
+            git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+          
+          echo "::set-output name=copied::$(git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'copied:'
+            git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+
+          echo "::set-output name=deleted::$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'deleted:'
+            git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+            
+          echo "::set-output name=renamed::$(git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'renamed:'
+            git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+          
+  wpid-list:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # run if any changes to gpmls: added, modified or deleted
+    steps:
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: Generate WPID list
+        run: |
+          cd pathways
+          cat /dev/null > ../wpid_list.txt
+          for d in ./*; do
+            [[ -d "$d" ]] && echo "${d##./}" >> ../wpid_list.txt; 
+          done
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add wpid_list.txt
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update wpid_list file'
+              git push
+          fi
+
+  metadata:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    steps:
+        
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: main
+          
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+            
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        id: cacheMetaJar
+        with:
+          path: ./MetaDataAction.jar
+          key: ${{ runner.os }}-MetaDataAction.jar
+          restore-keys: |
+            ${{ runner.os }}-java-MetaDataAction.jar
+    
+      - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
+        name: Install deps
+        run: |
+          if [ ! -e ./MetaDataAction.jar ]; then
+            wget -O MetaDataAction.jar https://github.com/hbasaric/meta-data-action/releases/download/v0.03/MetaDataAction.jar
+          fi
+              
+      - name: Generate gdb.config, fileNames.config, and fileDownloads.config
+        run: |
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            configGenerator.sh $f
+          done
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        id: cacheAllBridge
+        with:
+          path: ./*.bridge
+          key: ${{ runner.os }}-java-${{ hashFiles('**/*.bridge') }}
+          restore-keys: |
+            ${{ runner.os }}-java-
+            
+      - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
+        name: Install all bridge files
+        run: |
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
+            installDependencies.sh $org
+          done
+          
+      - name: Generate info and datanode files
+        run: |
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
+            echo "generating info and datanode files for $wpid ($f)"
+            java -jar MetaDataAction.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config $org
+          done
+      
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/WP*/WP*.{json,tsv}
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update metadata files'
+              git push
+          fi
+          
+  pubmed:
+    runs-on: ubuntu-20.04
+    needs: [changed-gpmls, metadata]
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    steps:
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12.x'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          
+      - working-directory: scripts/generate-references
+        run: |
+          npm install
+          node index.js
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/*/*-bibliography.tsv
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update formatted references'
+              git push
+          fi
+          
+  frontmatter:
+    runs-on: ubuntu-20.04
+    needs: [changed-gpmls, metadata]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Install deps
+        run: |
+          pip install python-frontmatter
+          
+      - name: Create pathway frontmatter
+        run: |        
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "generating frontmatter file for $wpid"
+            json_info_f=./pathways/"$wpid"/"$wpid"-info.json
+            old_info_f=./pathways/"$wpid"/"$wpid".info
+            if [ -e "$json_info_f" ]; then
+              python scripts/create_pathway_frontmatter.py "$json_info_f"
+            elif [ -e "$old_info_f" ]; then
+              python scripts/create_pathway_frontmatter.py "$old_info_f"
+            else
+              echo "info file missing for $wpid" >2
+            fi
+          done
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/*/*.md
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update frontmatter .md files'
+              git push
+          fi
+
+  homologyConversion:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    steps:      
+        
+      - name: Checkout homologyConverterActions repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+          
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+          
+      - name: Cache and install dependencies
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: ./Hs_Derby_Ensembl_105.bridge
+          key: ${{ runner.os }}-java-Hs_Derby_Ensembl_105
+          restore-keys: |
+            ${{ runner.os }}-java-Hs_Derby_Ensembl_105
+            ${{ runner.os }}-java-
+          
+      - if: steps.cache.outputs.cache-hit != 'true'
+        name: Install deps
+        run: |
+          if [ ! -e ./Hs_Derby_Ensembl_105.bridge ]; then
+            wget -O Hs_Derby_Ensembl_105.bridge https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1
+          fi
+            
+      - name: Perform homology conversion
+        run: |
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "perfoming homology conversion for $wpid ($f)"
+            java -jar HomologyMapperAuto-WithDependencies.jar scripts/homology-converter/properties/autorun.properties $wpid
+          done
+          
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git diff
+          for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
+          do
+            git add scripts/homology-converter/outputs/$value/WP*/WP*_$value.gpml
+          done
+          git add scripts/homology-converter/logs/*.txt
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update homology converted pathway files'
+              git push
+          fi
+          
+  commit-to-homology:
+    needs: [changed-gpmls,homologyConversion]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          ref: main
+
+      - name: Checkout homology repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways-homology
+          path: wikipathways-homology
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }}
+
+      - name: Set up ssh-agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }} ## for push into wp-homology repo
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12.x'
+            
+      - name: Copy gpml files from database repo to homology repo
+        run: |
+          DB_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-database"
+          HM_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-homology"
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "copying gpml files for $wpid for all species"
+            cd "$HM_PATH"
+            
+            for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
+            do
+                mkdir -p pathways/$value/"$wpid"
+                for old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
+                  echo "for $old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml"
+                  if [ -e "$old_f" ]; then
+                    rm "$old_f"
+                    echo "rm $old_f"
+                  fi
+                done
+                if [-e $DB_PATH/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml]; then
+                    cp $DB_PATH/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml
+                fi
+            done  
+          done
+
+      - name: Commit gpml to homology repo
+        run: |
+          HM_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-homology"
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd wikipathways-homology
+          
+          for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
+          do
+            git add $HM_PATH/pathways/$value/WP*/WP*_$value.gpml
+          done
+          
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update GPML files'
+              git push
+          fi
+          
+  json-svg:
+    needs: [changed-gpmls]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          ref: main
+
+      - name: Checkout assets repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways-assets
+          path: wikipathways-assets
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
+
+      - name: Set up ssh-agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_ASSETS_KEY }} ## for push into wp-assets repo
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12.x'
+
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install deps
+        working-directory: wikipathways-database/scripts/generate-svgs
+        run: |
+          npm install
+          sudo apt-get install -y xmlstarlet
+            
+      - name: Convert GPML to JSON and SVG
+        run: |
+          DB_PATH="${{ github.workspace }}/wikipathways-database"
+          AS_PATH="${{ github.workspace }}/wikipathways-assets"
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "generating JSON and SVG files for $wpid"
+            cd "$AS_PATH"
+            mkdir -p pathways/"$wpid"
+            
+            for old_f in pathways/"$wpid"/"$wpid".{json,svg}; do 
+              if [ -e "$old_f" ]; then
+                rm "$old_f"
+              fi
+            done
+            
+            cd "$DB_PATH/scripts/generate-svgs"
+            ./gpmlconverter --id "$wpid" -i $DB_PATH/pathways/"$wpid"/"$wpid".gpml -o $AS_PATH/pathways/"$wpid"/"$wpid".svg
+            
+            # delete intermediate JSON files
+            rm $AS_PATH/pathways/"$wpid"/"$wpid".json.b4bridgedb.json || true
+            rm $AS_PATH/pathways/"$wpid"/"$wpid".b4wd.json || true
+            rm $AS_PATH/pathways/"$wpid"/"$wpid".b4hgnc.json || true
+            
+            # mv thumbnail png
+            mv $AS_PATH/pathways/"$wpid"/"$wpid"-thumb.png $DB_PATH/pathways/"$wpid"/
+
+            # pretty print the JSON
+            for json_f in $AS_PATH/pathways/"$wpid"/"$wpid".json; do
+              mv "$json_f" "$json_f".tmp.json 
+              jq -S . "$json_f".tmp.json >"$json_f"
+              rm "$json_f".tmp.json
+            done
+          done
+
+      - name: Commit report for assets
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd wikipathways-assets
+          git add pathways/WP*/WP*.{json,svg,png}
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update JSON, SVG and PNG files'
+              git push
+          fi
+          
+      - name: Commit report for database
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd wikipathways-database
+          git add pathways/WP*/WP*-thumb.png
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update PNG files'
+              git push
+          fi
+
+  sync-site-repo-added-modified:
+    runs-on: ubuntu-latest
+    needs: [changed-gpmls, metadata, pubmed, frontmatter, json-svg]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          
+      - name: Checkout jekyll repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways.github.io
+          path: wikipathways.github.io
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+
+      - name: Set up ssh-agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io repo
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            cp wikipathways-database/pathways/"$wpid"/"$wpid".md wikipathways.github.io/_pathways/
+            cp wikipathways-database/pathways/"$wpid"/"$wpid"-bibliography.tsv wikipathways.github.io/_data/
+            cp wikipathways-database/pathways/"$wpid"/"$wpid"-datanodes.tsv wikipathways.github.io/_data/
+            mkdir -p wikipathways.github.io/assets/img/"$wpid"
+            cp wikipathways-database/pathways/"$wpid"/"$wpid"-thumb.png wikipathways.github.io/assets/img/"$wpid"/
+          done
+          cd wikipathways.github.io
+          git add .
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update tsv, md and png files'
+              git push
+          fi
+
+  sync-assets-repo-deleted:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were deleted
+    if: ${{needs.changed-gpmls.outputs.deleted}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          
+      - name: Checkout assets repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways-assets
+          path: wikipathways-assets
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
+
+      - name: Set up ssh-agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_ASSETS_KEY }}   ## for push into wp-assets rep 
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd wikipathways-assets
+          for f in ${{needs.changed-gpmls.outputs.deleted}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "deleting $wpid from wikipathways-assets"
+            git rm pathways/"$wpid"/*
+          done          
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Remove deleted asset files'
+              git push
+          fi
+
+  sync-site-repo-deleted:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were deleted
+    if: ${{needs.changed-gpmls.outputs.deleted}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          ref: main
+
+      - name: Checkout jekyll repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways.github.io
+          path: wikipathways.github.io
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+
+      - name: Set up ssh-agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io rep
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cd wikipathways.github.io
+          for f in ${{needs.changed-gpmls.outputs.deleted}}; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            echo "deleting $wpid from wikipathways.github.io"
+            if [ -e _pathways/"$wpid".md ]; then
+              git rm _pathways/"$wpid".md
+            fi
+            if [ -e _data/"$wpid"-bibliography.tsv ]; then
+              git rm _data/"$wpid"-bibliography.tsv
+            fi
+            if [ -e _data/"$wpid"-datanodes.tsv ]; then
+              git rm _data/"$wpid"-datanodes.tsv
+            fi
+            if [ -e assets/img/"$wpid"/"$wpid"-thumb.png ]; then
+              git rm assets/img/"$wpid"/"$wpid"-thumb.png
+            fi
+          done
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Remove deleted tsv, md and png file(s)'
+              git push
+          fi
