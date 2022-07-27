@@ -112,16 +112,16 @@ jobs:
         uses: actions/cache@v3
         id: cacheMetaJar
         with:
-          path: ./MetaDataAction.jar
-          key: ${{ runner.os }}-MetaDataAction.jar
+          path: ./meta-data-action-0.0.3-jar-with-dependencies.jar
+          key: ${{ runner.os }}-meta-data-action-0.0.3-jar-with-dependencies.jar
           restore-keys: |
-            ${{ runner.os }}-java-MetaDataAction.jar
+            ${{ runner.os }}-java-meta-data-action-0.0.3-jar-with-dependencies.jar
     
       - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
         name: Install deps
         run: |
-          if [ ! -e ./MetaDataAction.jar ]; then
-            wget -O MetaDataAction.jar https://github.com/hbasaric/meta-data-action/releases/download/v0.03/MetaDataAction.jar
+          if [ ! -e ./meta-data-action-0.0.3-jar-with-dependencies.jar ]; then
+            wget -O meta-data-action-0.0.3-jar-with-dependencies.jar https://github.com/hbasaric/meta-data-action/releases/download/v0.03/meta-data-action-0.0.3-jar-with-dependencies.jar
           fi
               
       - name: Generate gdb.config, fileNames.config, and fileDownloads.config
@@ -134,13 +134,49 @@ jobs:
         uses: actions/cache@v2
         id: cacheAllBridge
         with:
-          path: ./*.bridge
+          path: |
+            ./metabolites*.bridge
+            ./Ag*.bridge
+            ./An*.bridge
+            ./At*.bridge
+            ./Bs*.bridge
+            ./Bt*.bridge
+            ./Ce*.bridge
+            ./Cf*.bridge
+            ./Ci*.bridge
+            ./Dr*.bridge
+            ./Da*.bridge
+            ./Dp*.bridge
+            ./Dm*.bridge
+            ./Ec*.bridge
+            ./Gg*.bridge
+            ./Fg*.bridge
+            ./Gm*.bridge
+            ./Hs*.bridge
+            ./Hv*.bridge
+            ./Ml*.bridge
+            ./Mm*.bridge
+            ./Mx*.bridge
+            ./Oa*.bridge
+            ./Ova*.bridge
+            ./Oi*.bridge
+            ./Oj*.bridge
+            ./Pi*.bridge
+            ./Pt*.bridge
+            ./Qc*.bridge
+            ./Rn*.bridge
+            ./Sc*.bridge
+            ./Sl*.bridge
+            ./Ss*.bridge
+            ./Vv*.bridge
+            ./Xt*.bridge
+            ./Zm*.bridge
           key: ${{ runner.os }}-java-${{ hashFiles('**/*.bridge') }}
           restore-keys: |
+            ${{ runner.os }}-java-${{ hashFiles('**/*.bridge') }}
             ${{ runner.os }}-java-
             
-      - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
-        name: Install all bridge files
+      - name: Install all bridge files
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
@@ -150,13 +186,13 @@ jobs:
       - name: Generate info and datanode files
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
-            wget -O MetaDataAction.jar https://github.com/hbasaric/meta-data-action/releases/download/v0.03/MetaDataAction.jar
+            #wget -O meta-data-action-0.0.3-jar-with-dependencies.jar https://github.com/hbasaric/meta-data-action/releases/download/v0.03/MetaDataAction.jar
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
             echo "generating info and datanode files for $wpid ($f)"
-            chmod 777 MetaDataAction.jar
+            chmod 777 meta-data-action-0.0.3-jar-with-dependencies.jar
             cat gdb.config
-            java -jar MetaDataAction.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config $org
+            java -jar meta-data-action-0.0.3-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
           done
       
       - name: Commit report
