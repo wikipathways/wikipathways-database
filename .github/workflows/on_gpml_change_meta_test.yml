@@ -134,9 +134,13 @@ jobs:
         uses: actions/cache@v2
         id: cacheAllBridge
         with:
-          path: ./*.bridge
+          #path: ./*.bridge
+          path: |
+            ./metabolites*.bridge
+            ./Mm*.bridge
           key: ${{ runner.os }}-java-${{ hashFiles('**/*.bridge') }}
           restore-keys: |
+            ${{ runner.os }}-java-${{ hashFiles('**/*.bridge') }}
             ${{ runner.os }}-java-
             
       #- if: steps.cacheAllBridge.outputs.cache-hit != 'true'
