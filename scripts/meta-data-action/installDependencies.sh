@@ -11,7 +11,7 @@ do
 	if [[ $org == $organismName ]]; then
 		requiredFile=$bridgeFileName
     fi
-	if [[ $org == "Metabolites" ]]; then
+	if [[ "Metabolites" == $organismName ]]; then
 		metabolitesFile=$bridgeFileName
     fi
 done
@@ -29,7 +29,7 @@ do
 			wget -O $bridgeFile $downloadURL
 		fi
 	fi
-		if [[ $metabolitesFile == $bridgeFile ]]; then
+	if [[ $metabolitesFile == $bridgeFile ]]; then
 		if [ ! -e ./$bridgeFile ]; then
 			echo "wget $downloadURL"
 			wget -O $bridgeFile $downloadURL
