@@ -150,10 +150,12 @@ jobs:
       - name: Generate info and datanode files
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            wget -O MetaDataAction.jar https://github.com/hbasaric/meta-data-action/releases/download/v0.03/MetaDataAction.jar
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
             echo "generating info and datanode files for $wpid ($f)"
             chmod 777 MetaDataAction.jar
+            cat gdb.config
             java -jar MetaDataAction.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config $org
           done
       
