@@ -139,8 +139,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-java-
             
-      - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
-        name: Install all bridge files
+      #- if: steps.cacheAllBridge.outputs.cache-hit != 'true'
+      - name: Install all bridge files
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
