@@ -11,6 +11,9 @@ do
 	if [[ $org == $organismName ]]; then
 		requiredFile=$bridgeFileName
     fi
+	if [[ $org == "Metabolites" ]]; then
+		metabolitesFile=$bridgeFileName
+    fi
 done
 
 # iterate through each line in fileDownloads.config and download from the URLs
@@ -21,6 +24,12 @@ do
 	bridgeFile="${LINK%%=*}"
 	downloadURL="${LINK#*=}"
 	if [[ $requiredFile == $bridgeFile ]]; then
+		if [ ! -e ./$bridgeFile ]; then
+			echo "wget $downloadURL"
+			wget -O $bridgeFile $downloadURL
+		fi
+	fi
+		if [[ $metabolitesFile == $bridgeFile ]]; then
 		if [ ! -e ./$bridgeFile ]; then
 			echo "wget $downloadURL"
 			wget -O $bridgeFile $downloadURL
