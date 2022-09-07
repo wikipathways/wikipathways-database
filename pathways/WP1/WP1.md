@@ -32,7 +32,7 @@ description: 'Statins inhibit the endogenous cholesterol production by competiti
   in mediating the effects of statins on plasma lipoprotein metabolism.   Sources:
   [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikipedia.org/wiki/Statin
   Wikipedia]'
-last-edited: 2022-07-27
+last-edited: 2022-09-07
 organisms:
 - Mus musculus
 redirect_from:
