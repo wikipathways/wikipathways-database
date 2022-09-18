@@ -1,10 +1,7 @@
 import csv
-from datetime import date
 import frontmatter
 from frontmatter.default_handlers import YAMLHandler
-from io import BytesIO
 from pathlib import Path
-import sys
 import glob
 
 repo_dir = Path('./')
