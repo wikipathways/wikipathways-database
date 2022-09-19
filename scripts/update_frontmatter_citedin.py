@@ -14,7 +14,7 @@ wpids.remove('last_run')
 temp_path = r'pathways/{wpid}/{wpid}.md'
 var_path = lambda wpid: temp_path.format(wpid=wpid)
 
-for wpid in wpids[:5]:
+for wpid in wpids:
     print(wpid)
     p = repo_dir.joinpath(var_path(wpid))
     post = frontmatter.load(str(p), handler=YAMLHandler())
