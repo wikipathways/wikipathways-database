@@ -112,16 +112,16 @@ jobs:
         uses: actions/cache@v3
         id: cacheMetaJar
         with:
-          path: ./meta-data-action-0.0.7-jar-with-dependencies.jar
-          key: ${{ runner.os }}-meta-data-action-0.0.7.jar
+          path: ./meta-data-action-0.0.3-jar-with-dependencies.jar
+          key: ${{ runner.os }}-meta-data-action-0.0.3.jar
           restore-keys: |
-            ${{ runner.os }}-java-meta-data-action-0.0.7.jar
+            ${{ runner.os }}-java-meta-data-action-0.0.3.jar
     
       - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
         name: Install deps
         run: |
-          if [ ! -e ./meta-data-action-0.0.7-jar-with-dependencies.jar ]; then
-            wget -O meta-data-action-0.0.7-jar-with-dependencies.jar https://github.com/hbasaric/meta-data-action/releases/download/v0.03/meta-data-action-0.0.7-jar-with-dependencies.jar
+          if [ ! -e ./meta-data-action-0.0.3-jar-with-dependencies.jar ]; then
+            wget -O meta-data-action-0.0.3-jar-with-dependencies.jar https://github.com/hbasaric/meta-data-action/releases/download/v0.03/meta-data-action-0.0.3-jar-with-dependencies.jar
           fi
               
       - name: Generate gdb.config, fileNames.config, and fileDownloads.config
@@ -189,9 +189,9 @@ jobs:
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
             echo "generating info and datanode files for $wpid ($f)"
-            chmod 777 meta-data-action-0.0.7-jar-with-dependencies.jar
+            chmod 777 meta-data-action-0.0.3-jar-with-dependencies.jar
             cat gdb.config
-            java -jar meta-data-action-0.0.7-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
+            java -jar meta-data-action-0.0.3-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
           done
       
       - name: Commit report
