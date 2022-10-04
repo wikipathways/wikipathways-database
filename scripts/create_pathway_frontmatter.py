@@ -13,9 +13,9 @@ DATASOURCE_RE = re.compile(r'http://purl.obolibrary.org/obo/([A-Z]+)_\d+')
 WPID_RE = re.compile(r'.*(WP\d+).*')
 
 ANNOTION_TYPE_BY_NAMESPACE = {
-        'PW': 'Pathway Ontology',
-        'CL': 'Cell Type Ontology',
-        'DOID': 'Disease Ontology',
+        'pw': 'Pathway Ontology',
+        'cl': 'Cell Type Ontology',
+        'doid': 'Disease Ontology',
         }
 
 parent_annotation_iris_by_datasource = {}
