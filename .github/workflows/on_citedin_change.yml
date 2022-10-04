@@ -1,0 +1,86 @@
+name: When citedin lookup yaml changes, update frontmatter .md files
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - downstream/citedin_lookup.yml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:      
+  frontmatter:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+          ref: main
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Install deps
+        run: |
+          pip install python-frontmatter
+          
+      - name: Update citedin in frontmatter .md files
+        run: |
+          python ./scripts/update_frontmatter_citedin.py
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/*/*.md
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Update citedin in frontmatter .md files'
+              git push
+          fi
+          
+  copy-to-site-repo:
+    runs-on: ubuntu-20.04
+    needs: [frontmatter]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          
+      - name: Checkout jekyll repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways.github.io
+          path: wikipathways.github.io
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          cp wikipathways-database/pathways/*/*.md wikipathways.github.io/_pathways/
+          cd wikipathways.github.io
+          git add _pathways/*.md
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git diff --name-only
+              git commit -m 'Update citedin in frontmatter .md files'
+              git push
+          fi

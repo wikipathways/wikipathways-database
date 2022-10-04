@@ -25,6 +25,10 @@ authors:
 - Egonw
 - Ddigles
 - Eweitz
+citedin:
+- link: PMC5075206
+- link: PMC4723140
+- link: PMC4546821
 description: 'Statins inhibit the endogenous cholesterol production by competitive
   inhibition of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion of
   HMG-CoA to mevalonate, an early rate-limiting step in cholesterol synthesis. This
@@ -32,7 +36,7 @@ description: 'Statins inhibit the endogenous cholesterol production by competiti
   in mediating the effects of statins on plasma lipoprotein metabolism.   Sources:
   [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikipedia.org/wiki/Statin
   Wikipedia]'
-last-edited: 2022-07-27
+last-edited: 2022-10-03
 organisms:
 - Mus musculus
 redirect_from:
