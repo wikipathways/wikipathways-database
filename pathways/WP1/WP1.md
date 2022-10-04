@@ -12,19 +12,7 @@ annotations:
   parent: drug pathway
   type: Pathway Ontology
   value: statin drug pathway
-authors:
-- Nsalomonis
-- MaintBot
-- Khanspers
-- BruceConklin
-- TestUser
-- AlexanderPico
-- Thomas
-- Mkutmon
-- Andra
-- Egonw
-- Ddigles
-- Eweitz
+authors: []
 citedin:
 - link: PMC5075206
 - link: PMC4723140
@@ -36,7 +24,7 @@ description: 'Statins inhibit the endogenous cholesterol production by competiti
   in mediating the effects of statins on plasma lipoprotein metabolism.   Sources:
   [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikipedia.org/wiki/Statin
   Wikipedia]'
-last-edited: 2022-10-03
+last-edited: 2022-10-04
 organisms:
 - Mus musculus
 redirect_from:
