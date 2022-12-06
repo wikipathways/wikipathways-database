@@ -88,14 +88,15 @@ for f in ${changed_gpmls[@]}; do
     scripts/meta-data-action/installDependencies.sh $org
 done
 
-# generate info and datanodes files
+# generate info and datanodes files (NOTE: Adapted date for macOS (-u instead of --utc))
 for f in ${changed_gpmls[@]}; do
     wpid="$(basename ""$f"" | sed 's/.gpml//')"
     org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
     echo "generating info and datanode files for $wpid ($f)"
     chmod 777 meta-data-action-1.0.3-jar-with-dependencies.jar
     cat gdb.config
-    java -jar meta-data-action-1.0.3-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
+    ##TODO: make independent of GPMLs in github repo
+    java -jar meta-data-action-1.0.3-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date -u +%F) gdb.config "$org"
 done
 
 ##############################
