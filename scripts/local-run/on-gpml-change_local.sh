@@ -101,9 +101,10 @@ done
 
 ##############################
 echo "4. ACTION: pubmed"
-# NOTE: Requires Node.js v12.x
-npm install
-node index.js
+# NOTE: Requires Node.js v12.x, npm, @citation-js/core
+#npm install
+#npm install @citation-js/core
+node scripts/generate-references/index.js
 
 ##############################
 echo "5. ACTION: frontmatter"
@@ -163,9 +164,10 @@ echo "TODO: Manually copy wikipathways-homology folder content to wikipathways-h
 
 ##############################
 echo "5. ACTION: json-svg"
-# NOTE: Requires Node.js v12.x
-npm install
-sudo apt-get install -y xmlstarlet
+# NOTE: Requires Node.js v12.x and npm and xlmstarlet
+#npm install
+#sudo apt-get install -y xmlstarlet
+#brew install xmlstarlet
 
 AS_PATH="wikipathways-assets"
 mkdir $AS_PATH
