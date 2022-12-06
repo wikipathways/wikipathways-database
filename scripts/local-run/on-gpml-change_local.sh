@@ -127,7 +127,7 @@ for f in ${changed_gpmls[@]}; do
 done
 
 ##############################
-echo "5. ACTION: homologyConversion"
+echo "6. ACTION: homologyConversion"
 # NOTE: requires Java 8 
 if [ ! -e ./Hs_Derby_Ensembl_105.bridge ]; then
     wget -O Hs_Derby_Ensembl_105.bridge "https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1"
@@ -164,7 +164,7 @@ done
 echo "TODO: Manually copy wikipathways-homology folder content to wikipathways-homology repo for commit/push"
 
 ##############################
-echo "5. ACTION: json-svg"
+echo "7. ACTION: json-svg"
 # NOTE: Requires Node.js v12.x, npm, convert-svg-to-png, and xlmstarlet
 #npm install
 #npm install --save convert-svg-to-png
@@ -207,7 +207,7 @@ echo "TODO: Manually copy wikipathways-assets folder content to wikipathways-ass
 
 
 ##############################
-echo "6. ACTION: sync-site-repo-added-modified"
+echo "8. ACTION: sync-site-repo-added-modified"
 mkdir "wikipathways.github.io"
 for f in ${changed_gpmls[@]}; do
     wpid="$(basename ""$f"" | sed 's/.gpml//')"
