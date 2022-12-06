@@ -66,6 +66,7 @@ cat /dev/null > ../wpid_list.txt
 for d in ./*; do
     [[ -d "$d" ]] && echo "${d##./}" >> ../wpid_list.txt; 
 done
+cd ../
 
 ##############################
 echo "3. ACTION: metadata"
@@ -144,12 +145,11 @@ mkdir $HM_PATH
 for f in ${changed_gpmls[@]}; do
     wpid="$(basename ""$f"" | sed 's/.gpml//')"
     echo "copying gpml files for $wpid for all species"
-    cd "$HM_PATH"
             
     for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss; do
-        mkdir -p pathways/$value/"$wpid"
-        for old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
-            echo "for $old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml"
+        mkdir -p "$HM_PATH"/pathways/$value/"$wpid"
+        for old_f in "$HM_PATH"/pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
+            echo "for $old_f in $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml"
             if [ -e "$old_f" ]; then
                 rm "$old_f"
                 echo "rm $old_f"
