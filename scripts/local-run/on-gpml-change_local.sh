@@ -129,7 +129,8 @@ done
 echo "5. ACTION: homologyConversion"
 # NOTE: requires Java 8 
 if [ ! -e ./Hs_Derby_Ensembl_105.bridge ]; then
-    wget -O Hs_Derby_Ensembl_105.bridge https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1
+    wget -O Hs_Derby_Ensembl_105.bridge "https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1"
+                                        
 fi
 
 for f in ${changed_gpmls[@]}; do
@@ -164,8 +165,9 @@ echo "TODO: Manually copy wikipathways-homology folder content to wikipathways-h
 
 ##############################
 echo "5. ACTION: json-svg"
-# NOTE: Requires Node.js v12.x and npm and xlmstarlet
+# NOTE: Requires Node.js v12.x, npm, convert-svg-to-png, and xlmstarlet
 #npm install
+#npm install --save convert-svg-to-png
 #sudo apt-get install -y xmlstarlet
 #brew install xmlstarlet
 
@@ -174,18 +176,18 @@ mkdir $AS_PATH
 for f in ${changed_gpmls[@]}; do
     wpid="$(basename ""$f"" | sed 's/.gpml//')"
     echo "generating JSON and SVG files for $wpid"
-    cd "$AS_PATH"
-    mkdir -p pathways/"$wpid"
+    mkdir -p "$AS_PATH"/pathways/"$wpid"
             
-    for old_f in pathways/"$wpid"/"$wpid".{json,svg}; do 
+    for old_f in "$AS_PATH"/pathways/"$wpid"/"$wpid".{json,svg}; do 
         if [ -e "$old_f" ]; then
             rm "$old_f"
         fi
     done
-            
-    cd "scripts/generate-svgs"
-    ./gpmlconverter --id "$wpid" -i pathways/"$wpid"/"$wpid".gpml -o $AS_PATH/pathways/"$wpid"/"$wpid".svg
-            
+    
+    cd scripts/generate-svgs
+    ./gpmlconverter --id "$wpid" -i ../../pathways/"$wpid"/"$wpid".gpml -o ../../$AS_PATH/pathways/"$wpid"/"$wpid".svg
+    cd ../../
+
     # delete intermediate JSON files
     rm $AS_PATH/pathways/"$wpid"/"$wpid".json.b4bridgedb.json || true
     rm $AS_PATH/pathways/"$wpid"/"$wpid".b4wd.json || true
