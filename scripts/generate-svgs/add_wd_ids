@@ -64,6 +64,7 @@ const wdRx = function(argsString) {
 // DataNodes that don't have Wikidata ids already
 const dataNodes = Object.values(entitiesById).filter(
   entityById =>
+    entityById.type !== undefined &&
     entityById.type.indexOf("DataNode") > -1 &&
     entityById.type.filter(type => type.indexOf("Wikidata:") > -1).length ===
       0 &&

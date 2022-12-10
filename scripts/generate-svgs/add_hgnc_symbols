@@ -14,6 +14,7 @@ const pathwayId = pathway.id;
 // DataNodes with HGNC symbols
 Object.values(entitiesById).filter(
   entityById =>
+    entityById.type !== undefined &&
     entityById.type.indexOf("DataNode") > -1 &&
     entityById.type.filter(type => type.indexOf("HGNC:") > -1).length > -1 &&
     entityById.xrefDataSource &&
