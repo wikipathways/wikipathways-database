@@ -16,8 +16,8 @@ echo organism:
 ORGANISM=`echo $ORGANISM | sed -e 's/^[[:space:]]*//'`
 echo "$ORGANISM"
 
-wget https://bridgedb.github.io/data/gene.json
-wget https://bridgedb.github.io/data/other.json
+wget -O gene.json https://bridgedb.github.io/data/gene.json
+wget -O other.json https://bridgedb.github.io/data/other.json
 
 # generate fileNames.config and fileDownloads.config with species + file name, species + download URL
 # these files will be used in the installDependencies bash script
