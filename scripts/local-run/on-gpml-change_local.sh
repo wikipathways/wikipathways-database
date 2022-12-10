@@ -1,4 +1,5 @@
 #!/bin/zsh
+exec >local-run.log 2>&1
 
 # This script reproduces the on-gpml-change GH Action as a script 
 # to be run locally.
@@ -7,7 +8,7 @@
 echo "1. Define list of GPML files"
 
 # 1A. Either as a local folder containing GPML files
-changed_dir="pathways_changed" #set to "" to use 1B instead
+changed_dir="wikipathways-tina/pathways" #set to "" to use 1B instead
 
 # 1B. Or as a list of WPIDs referencing GPMLs in existing pathway subfolders
 changed_wpids=() #WPIDs or use keyword "ALL"
@@ -15,16 +16,23 @@ changed_wpids=() #WPIDs or use keyword "ALL"
 # Identify file paths to changed GPMLs; creating them if necessary.
 changed_gpmls=()
 if [ ! -z "$changed_dir" ]; then
-    for i in "$changed_dir"/*.gpml; do
+    for i in "$changed_dir"/*/*.gpml; do
         this_wpid="$(basename -s .gpml $i)"
         this_dir="pathways/$this_wpid"
         if [ ! -d "$this_dir" ]; then
             mkdir -p pathways/"$this_wpid"
         fi
         new_path=$this_dir"/"$this_wpid".gpml"
-        cp $i $new_path
-        echo $new_path
-        changed_gpmls+="$new_path"
+        if [ -s $i ]; then #if not empty
+            cp $i $new_path
+            echo $new_path
+            changed_gpmls+="$new_path"
+        else
+            echo "$i is empty. SKIP"
+            if [ ! -s $new_path ]; then #clean up empty dir
+                rm -rf pathways/"$this_wpid"
+            fi
+        fi
     done
 else
     if [ -z "$changed_wpids" ]; then
@@ -37,26 +45,41 @@ else
             changed_gpmls+="$i"
         done
     else 
-    for i in ${changed_wpids[@]}; do
-        changed_gpmls+="pathways/${i##*/}/${i##*/}.gpml"
-    done
-    # 1B. Or as a local folder containing GPML files
-    #changed-gpmls = 
+        for i in ${changed_wpids[@]}; do
+            changed_gpmls+="pathways/${i##*/}/${i##*/}.gpml"
+        done
+        # 1B. Or as a local folder containing GPML files
+        #changed-gpmls = 
 
-    # Verify changed GPML files:
-    for i in ${changed_gpmls[@]}; do
-        if [ -f $i ]; then
-            echo "$i"
-        else
-            echo "$i not found"'!'
-            echo "EXITING"
-            exit 1;
-        fi
-    done
+        # Verify changed GPML files:
+        for i in ${changed_gpmls[@]}; do
+            if [ -f $i ]; then #file exists
+                if [ -s $i ]; then #file is not empty
+                    echo "$i"
+                else
+                echo "$i is empty"'!'
+                echo "EXITING"
+                exit 1;
+                fi
+            else
+                echo "$i not found"'!'
+                echo "EXITING"
+                exit 1;
+            fi
+        done
     fi
 fi
 
 echo "Identified ${#changed_gpmls[@]} changed GPML files."
+
+##############################
+echo "1B. TODO-ACTION: gpml-cleanup"
+
+for f in ${changed_gpmls[@]}; do
+    #Avoid error: org.pathvisio.libgpml.io.ConverterException: class java.lang.IllegalArgumentException: Citation must have valid xref or url, or both
+    sed -i '' 's/><\/bp:ID>/>NA<\/bp:ID>/' "$f"
+done
+
 
 ##############################
 echo "2. ACTION: wpid-list"
@@ -75,30 +98,48 @@ echo "3. ACTION: metadata"
 
 # cache dependencies
 if [ ! -e ./meta-data-action-1.0.3-jar-with-dependencies.jar ]; then
-    wget -O meta-data-action-1.0.3-jar-with-dependencies.jar https://github.com/hbasaric/meta-data-action/releases/download/v1.0.0/meta-data-action-1.0.3-jar-with-dependencies.jar
+    wget -O meta-data-action-1.0.3-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/1.0.0/meta-data-action-1.0.3-jar-with-dependencies.jar
+    chmod 777 meta-data-action-1.0.3-jar-with-dependencies.jar
 fi
 
-# configGenerator
 for f in ${changed_gpmls[@]}; do
     scripts/meta-data-action/configGenerator.sh $f
-done
-
-# installDependencies, a.k.a. BridgeDb files; each only has to be downloaded once 
-for f in ${changed_gpmls[@]}; do
+    # installDependencies, a.k.a. BridgeDb files; each only has to be downloaded once 
     org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
     scripts/meta-data-action/installDependencies.sh $org
+    # generate info and datanodes files (NOTE: Adapted date for macOS (-u instead of --utc))
+    wpid="$(basename ""$f"" | sed 's/.gpml//')"
+    echo "generating info and datanode files for $wpid ($f)"
+    cat gdb.config
+    java -jar meta-data-action-1.0.4-jar-with-dependencies.jar local pathways/"$wpid"/"$wpid".gpml $(date -u +%F) gdb.config "$org" || echo "$wpid FAILED"
 done
 
-# generate info and datanodes files (NOTE: Adapted date for macOS (-u instead of --utc))
+##############################
+echo "3B. TODO-ACTION: meta-data cleanup"
+
 for f in ${changed_gpmls[@]}; do
+
+    # INFO.JSON
     wpid="$(basename ""$f"" | sed 's/.gpml//')"
-    org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
-    echo "generating info and datanode files for $wpid ($f)"
-    chmod 777 meta-data-action-1.0.3-jar-with-dependencies.jar
-    cat gdb.config
-    ##TODO: make independent of GPMLs in github repo
-    java -jar meta-data-action-1.0.3-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date -u +%F) gdb.config "$org"
+    thisInfo="pathways/$wpid/$wpid-info.json"
+
+    #FOR BULK ACTION ONLY: hack to set last edited to previous info (if available)    
+    prevInfo="../wikipathways-database/pathways/$wpid/$wpid-info.json"
+    if [ -z $prevInfo ]; then
+        prevLastEd="$(sed -n '/\"last-edited\": .*/p' $prevInfo)"
+        prevDate="$(sed -n '/\"last-edited\"\: /s/.*\: \(.*\)/\1/p' $prevInfo |tr -d '"' | tr -d ',' )"
+        thisInfo="pathways/$wpid/$wpid-info.json"
+        sed -i '' 's/.*\"last-edited\"\: .*/'"$prevLastEd"'/' "$thisInfo"
+    fi
+
+    #BUG FIX: fix authors due to meta-data-action bug
+    gpmlAuthors="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $f)"
+    gpmlAuthorsArr=(`echo $gpmlAuthors | sed 's/, /\n/g'`)
+    newAuthors=(`echo $gpmlAuthors | sed 's/^/\"authors\"\: \[\"/;s/, /\",\"/g;s/$/\"\],/'`)
+    sed -i '' 's/\"authors\"\: \[\],/'"$newAuthors"'/' "$thisInfo"
+
 done
+
 
 ##############################
 echo "4. ACTION: pubmed"
@@ -116,11 +157,8 @@ for f in ${changed_gpmls[@]}; do
     wpid="$(basename ""$f"" | sed 's/.gpml//')"
     echo "generating frontmatter file for $wpid"
     json_info_f=./pathways/"$wpid"/"$wpid"-info.json
-    old_info_f=./pathways/"$wpid"/"$wpid".info
     if [ -e "$json_info_f" ]; then
         python scripts/create_pathway_frontmatter.py "$json_info_f"
-    elif [ -e "$old_info_f" ]; then
-        python scripts/create_pathway_frontmatter.py "$old_info_f"
     else
         echo "info file missing for $wpid" >2
     fi
@@ -130,8 +168,7 @@ done
 echo "6. ACTION: homologyConversion"
 # NOTE: requires Java 8 
 if [ ! -e ./Hs_Derby_Ensembl_105.bridge ]; then
-    wget -O Hs_Derby_Ensembl_105.bridge "https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1"
-                                        
+    wget -O Hs_Derby_Ensembl_105.bridge "https://zenodo.org/record/6502115/files/Hs_Derby_Ensembl_105.bridge?download=1"                         
 fi
 
 for f in ${changed_gpmls[@]}; do
@@ -140,28 +177,25 @@ for f in ${changed_gpmls[@]}; do
     java -jar HomologyMapperAuto-WithDependencies.jar scripts/homology-converter/properties/autorun.properties $wpid
 done
 
-HM_PATH="wikipathways-homology"
-mkdir $HM_PATH
-for f in ${changed_gpmls[@]}; do
-    wpid="$(basename ""$f"" | sed 's/.gpml//')"
-    echo "copying gpml files for $wpid for all species"
-            
-    for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss; do
-        mkdir -p "$HM_PATH"/pathways/$value/"$wpid"
-        for old_f in "$HM_PATH"/pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
-            echo "for $old_f in $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml"
-            if [ -e "$old_f" ]; then
-                rm "$old_f"
-                echo "rm $old_f"
-            fi
-        done
-        if [-e scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml]; then
-            cp scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml
-        fi
-    done  
-done
+#HM_PATH="wikipathways-homology"
+#mkdir $HM_PATH
+#for f in ${changed_gpmls[@]}; do
+#    wpid="$(basename ""$f"" | sed 's/.gpml//')"
+#    echo "copying gpml files for $wpid for all species"
+#            
+#    for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss; do
+#        mkdir -p "$HM_PATH"/pathways/$value/"$wpid"
+#        for old_f in "$HM_PATH"/pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
+#            echo "for $old_f in $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml"
+#            if [ -e "$old_f" ]; then
+#                rm "$old_f"
+#                echo "rm $old_f"
+#            fi
+#        done
+#    done  
+#done
 
-echo "TODO: Manually copy wikipathways-homology folder content to wikipathways-homology repo for commit/push"
+echo "TODO: Manually copy scripts/homology-converter/outputs folder content to wikipathways-homology repo for commit/push"
 
 ##############################
 echo "7. ACTION: json-svg"
@@ -208,7 +242,9 @@ echo "TODO: Manually copy wikipathways-assets folder content to wikipathways-ass
 
 ##############################
 echo "8. ACTION: sync-site-repo-added-modified"
-mkdir "wikipathways.github.io"
+mkdir -p "wikipathways.github.io/assets/img"
+mkdir -p "wikipathways.github.io/_pathways"
+mkdir -p "wikipathways.github.io/_data"
 for f in ${changed_gpmls[@]}; do
     wpid="$(basename ""$f"" | sed 's/.gpml//')"
     cp pathways/"$wpid"/"$wpid".md wikipathways.github.io/_pathways/
