@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Lac-Phe pathway" Data-Source="WikiPathways" Version="WP5240_r124561" Author="[Egonw, Eweitz]" Last-Modified="20221109004909" Organism="Mus musculus">
+  <Comment Source="WikiPathways-description">Mouse Lac-Phe pathway</Comment>
+  <Graphics BoardWidth="712.1641791044772" BoardHeight="353.01740812379114" />
+  <DataNode TextLabel="L-phenylalanine" GraphId="a4f78" Type="Metabolite">
+    <Graphics CenterX="196.0" CenterY="237.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="ChEBI" ID="58095" />
+  </DataNode>
+  <DataNode TextLabel="ABCC5" GraphId="a5f82" Type="GeneProduct">
+    <Graphics CenterX="507.6119402985062" CenterY="151.5067519545131" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9R1X5" />
+  </DataNode>
+  <DataNode TextLabel="(S)-lactate" GraphId="c484a" Type="Metabolite">
+    <Graphics CenterX="196.0" CenterY="187.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="ChEBI" ID="16651" />
+  </DataNode>
+  <DataNode TextLabel="Lac-Phe" GraphId="ef6b4" Type="Metabolite">
+    <Graphics CenterX="637.1641791044772" CenterY="186.58137882018485" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="ChEBI" ID="167456" />
+  </DataNode>
+  <DataNode TextLabel="CNDP2" GraphId="f2148" Type="Protein">
+    <Graphics CenterX="286.0" CenterY="137.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9D1A2" />
+  </DataNode>
+  <DataNode TextLabel="Lac-Phe" GraphId="fcf48" Type="Metabolite">
+    <Graphics CenterX="376.0" CenterY="187.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="3955e7" />
+    <Xref Database="ChEBI" ID="167456" />
+  </DataNode>
+  <Interaction GraphId="c4815">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="a3e20" X="286.0" Y="149.5" GraphRef="f2148" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f7497" X="286.0" Y="187.0" GraphRef="eefef" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c81b4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="e1db6" X="507.61194029850617" Y="164.0067519545131" GraphRef="a5f82" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c6092" X="506.5820895522386" Y="186.79068941009243" GraphRef="d77d3" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e173b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="a404a" X="241.0" Y="237.0" GraphRef="a4f78" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f65ac" X="286.0" Y="187.0" GraphRef="eefef" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ecef7">
+    <BiopaxRef>d3508</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="cb52d" X="241.0" Y="187.0" GraphRef="c484a" RelX="1.0" RelY="0.0" />
+      <Point GraphId="a198e" X="331.0" Y="187.0" GraphRef="fcf48" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5" Shape="None" GraphId="eefef" />
+    </Graphics>
+    <Xref Database="Rhea" ID="66724" />
+  </Interaction>
+  <Interaction GraphId="fc181">
+    <BiopaxRef>d3508</BiopaxRef>
+    <BiopaxRef>d611e</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="b57e4" X="421.0" Y="187.0" GraphRef="fcf48" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e74da" X="592.1641791044772" Y="186.58137882018485" GraphRef="ef6b4" RelX="-1.0" RelY="0.0" />
+      <Anchor Position="0.5" Shape="None" GraphId="d77d3" />
+    </Graphics>
+    <Xref Database="Rhea" ID="66720" />
+  </Interaction>
+  <Shape GraphId="cce14">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="307.2935203094779" CenterY="193.49597034171504" Width="400.2421018697612" Height="259.0428755641522" ZOrder="-2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000003</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obesity</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:9970</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d3508">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25964343</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d611e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35705806</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
