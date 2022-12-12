@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Role of carnosine in muscle contraction" Data-Source="WikiPathways" Version="WP4486_r119317" Author="[DeSl, Egonw, Khanspers, AlexanderPico, Eweitz, Finterly]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Role of carnosine in muscle contraction" Data-Source="WikiPathways" Version="WP4486_r119317" Author="[DeSl, Egonw, Khanspers, AlexanderPico, Eweitz, Finterly]" Last-Modified="20210623132201" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Carnosine is known to be an antioxidant, a metal chelator, a Ca(2+) and enzyme regulator. It also functions as an inhibitor of protein glycosylation and protein-protein cross-linking.
-Carnosine has also been linked to overcoming muscle fatigue, and can only be transported into a working muscle cell. This pathway shows the main metabolites of carnosine and their relationship  with each other. </Comment>
+Carnosine has also been linked to overcoming muscle fatigue, and can only be transported into a working muscle cell. This pathway shows the main metabolites of carnosine and their relationship  with each other.</Comment>
   <BiopaxRef>a76</BiopaxRef>
   <BiopaxRef>c4d</BiopaxRef>
-  <Graphics BoardWidth="926.1522633744852" BoardHeight="506.5" />
+  <Graphics BoardWidth="1011.0" BoardHeight="506.5" />
   <DataNode TextLabel="Carnosinase" GraphId="b1e2f" Type="Protein">
     <Comment>"present in many tissues (kidney, liver, plasma) with the exceptions of skeletal musculature"</Comment>
     <BiopaxRef>a76</BiopaxRef>
@@ -32,7 +32,7 @@ and blood plasma "</Comment>
   </DataNode>
   <DataNode TextLabel="beta-alanine" GraphId="eb67f" Type="Metabolite">
     <Comment>"Indispensable component of coenzyme A"</Comment>
-    <Comment>"Product of pyrimidine base degradation" </Comment>
+    <Comment>"Product of pyrimidine base degradation"</Comment>
     <Comment>"Factor which stimulates collagen synthesis in
 tissues"</Comment>
     <BiopaxRef>fc9</BiopaxRef>
@@ -88,111 +88,111 @@ tissues"</Comment>
     <Graphics CenterX="459.5" CenterY="464.0" Width="153.0" Height="25.0" ZOrder="32779" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q210021" />
   </DataNode>
-  <Interaction GraphId="id53c094ec">
+  <Interaction GraphId="df873">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="a8b13" X="576.1522633744852" Y="147.5" GraphRef="be95c" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e06d2" X="618.0745366295938" Y="167.967637832123" GraphRef="c7726" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bef18">
     <Comment>Transport into muscle cells (which only happens in working muscle).</Comment>
     <BiopaxRef>c4d</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="500.6522633744852" Y="207.5" GraphRef="bc1cc" RelX="0.0" RelY="-1.0" />
-      <Point X="500.1522633744852" Y="67.5" GraphRef="d9801" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="f2283" X="500.6522633744852" Y="207.5" GraphRef="bc1cc" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="eb4ee" X="500.1522633744852" Y="67.5" GraphRef="d9801" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f750c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="bb208" X="455.6522633744852" Y="213.75" GraphRef="bc1cc" RelX="-1.0" RelY="-0.5" />
+      <Point GraphId="f94e8" X="298.1790123456795" Y="156.75" GraphRef="eb67f" RelX="1.0" RelY="-0.5" ArrowHead="mim-conversion" />
+      <Anchor Position="0.3491493583208844" Shape="None" GraphId="aec8f" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fe216">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="f5944" X="428.02515201768927" Y="171.0160616669739" GraphRef="b1e2f" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="b51df" X="400.67057882507413" Y="193.8484865757096" GraphRef="aec8f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="af01d">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="d1777" X="400.67057882507413" Y="193.8484865757096" GraphRef="aec8f" RelX="0.0" RelY="0.0" />
+      <Point GraphId="d1dfd" X="204.63877415165004" Y="128.39506172839506" />
+      <Point GraphId="b41e5" X="35.39094650205761" Y="220.82253086419752" />
+      <Point GraphId="da51c" X="208.1790123456795" Y="313.25" GraphRef="a095e" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id70783305">
     <Comment>in skeletal muscle</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="297.9608132178614" Y="204.0144800687918" GraphRef="d6ea0" RelX="1.0" RelY="0.0" />
-      <Point X="370.5517423985782" Y="195.44648471130262" GraphRef="f9e7e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id7cdb6dab">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="576.1522633744852" Y="147.5" GraphRef="be95c" RelX="0.0" RelY="1.0" />
-      <Point X="618.0745366295938" Y="167.967637832123" GraphRef="c7726" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="af8b7" X="297.9608132178614" Y="204.0144800687918" GraphRef="d6ea0" RelX="1.0" RelY="0.0" />
+      <Point GraphId="c9af7" X="370.5517423985782" Y="195.44648471130262" GraphRef="f9e7e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id855f498f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="208.1790123456795" Y="163.0" GraphRef="eb67f" RelX="-1.0" RelY="0.0" />
-      <Point X="105.30587801732085" Y="207.5" GraphRef="ac054" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id964bb958">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="428.02515201768927" Y="171.0160616669739" GraphRef="b1e2f" RelX="-0.5" RelY="1.0" />
-      <Point X="400.67057882507413" Y="193.8484865757096" GraphRef="aec8f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id999c5e75">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="455.6522633744852" Y="213.75" GraphRef="bc1cc" RelX="-1.0" RelY="-0.5" />
-      <Point X="298.1790123456795" Y="156.75" GraphRef="eb67f" RelX="1.0" RelY="-0.5" ArrowHead="mim-conversion" />
-      <Anchor Position="0.3491493583208844" Shape="None" GraphId="aec8f" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idbf4ebd8">
-    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="400.67057882507413" Y="193.8484865757096" GraphRef="aec8f" RelX="0.0" RelY="0.0" />
-      <Point X="204.63877415165004" Y="128.39506172839506" />
-      <Point X="35.39094650205761" Y="220.82253086419752" />
-      <Point X="208.1790123456795" Y="313.25" GraphRef="a095e" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion" />
+      <Point GraphId="ca5b2" X="208.1790123456795" Y="163.0" GraphRef="eb67f" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="d39d8" X="105.30587801732085" Y="207.5" GraphRef="ac054" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="feeb6">
     <Graphics ZOrder="32780" LineThickness="1.0">
-      <Point X="105.30587801732085" Y="269.8086419753089" GraphRef="c82fc" RelX="0.0" RelY="-1.0" />
-      <Point X="105.30587801732085" Y="232.5" GraphRef="ac054" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="c2de3" X="105.30587801732085" Y="269.8086419753089" GraphRef="c82fc" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="a8f5c" X="105.30587801732085" Y="232.5" GraphRef="ac054" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ee1c2">
     <Comment>decarboxylation</Comment>
     <Graphics ZOrder="32781" LineThickness="1.0">
-      <Point X="208.1790123456795" Y="300.75" GraphRef="a095e" RelX="-1.0" RelY="-0.5" />
-      <Point X="150.30587801732085" Y="282.3086419753089" GraphRef="c82fc" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="d6d6c" X="208.1790123456795" Y="300.75" GraphRef="a095e" RelX="-1.0" RelY="-0.5" />
+      <Point GraphId="ebc73" X="150.30587801732085" Y="282.3086419753089" GraphRef="c82fc" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="dab7f">
     <Comment>synthesized in gray matter of mammalian brain</Comment>
     <Graphics ZOrder="32782" LineThickness="1.0">
-      <Point X="253.1790123456795" Y="319.5" GraphRef="a095e" RelX="0.0" RelY="1.0" />
-      <Point X="522.0" Y="377.5" GraphRef="aa476" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="d85c0" X="253.1790123456795" Y="319.5" GraphRef="a095e" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f759f" X="522.0" Y="377.5" GraphRef="aa476" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="de25b">
     <Comment>synthesized in gray matter of mammalian brain</Comment>
     <Graphics ZOrder="32783" LineThickness="1.0">
-      <Point X="459.5" Y="451.5" GraphRef="e6275" RelX="0.0" RelY="-1.0" />
-      <Point X="522.0" Y="402.5" GraphRef="aa476" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="dc8d7" X="459.5" Y="451.5" GraphRef="e6275" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="d9fde" X="522.0" Y="402.5" GraphRef="aa476" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="bd754">
     <Comment>Methylation</Comment>
     <Graphics ZOrder="32784" LineThickness="1.0">
-      <Point X="567.0" Y="390.0" GraphRef="aa476" RelX="1.0" RelY="0.0" />
-      <Point X="618.0" Y="390.0" GraphRef="a1349" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="d0de5" X="567.0" Y="390.0" GraphRef="aa476" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d219c" X="618.0" Y="390.0" GraphRef="a1349" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ef31f">
     <Graphics ZOrder="32785" LineThickness="1.0">
-      <Point X="230.6790123456795" Y="294.5" GraphRef="a095e" RelX="-0.5" RelY="-1.0" />
-      <Point X="370.5517423985782" Y="195.44648471130262" GraphRef="f9e7e" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="fb954" X="230.6790123456795" Y="294.5" GraphRef="a095e" RelX="-0.5" RelY="-1.0" />
+      <Point GraphId="f0d91" X="370.5517423985782" Y="195.44648471130262" GraphRef="f9e7e" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ef2a2">
     <Graphics ZOrder="32786" LineThickness="1.0">
-      <Point X="298.1790123456795" Y="169.25" GraphRef="eb67f" RelX="1.0" RelY="0.5" />
-      <Point X="455.6522633744852" Y="226.25" GraphRef="bc1cc" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion" />
+      <Point GraphId="ce82d" X="298.1790123456795" Y="169.25" GraphRef="eb67f" RelX="1.0" RelY="0.5" />
+      <Point GraphId="b33c3" X="455.6522633744852" Y="226.25" GraphRef="bc1cc" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion" />
       <Anchor Position="0.4595874510754844" Shape="None" GraphId="f9e7e" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -200,8 +200,8 @@ tissues"</Comment>
   <Interaction GraphId="a6da9">
     <Comment>Methylation</Comment>
     <Graphics ZOrder="32787" LineThickness="1.0">
-      <Point X="545.6522633744852" Y="213.75" GraphRef="bc1cc" RelX="1.0" RelY="-0.5" />
-      <Point X="659.1522633744852" Y="142.0" GraphRef="e7ee3" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="e3d2a" X="545.6522633744852" Y="213.75" GraphRef="bc1cc" RelX="1.0" RelY="-0.5" />
+      <Point GraphId="b4834" X="659.1522633744852" Y="142.0" GraphRef="e7ee3" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.6380817026881815" Shape="None" GraphId="c7726" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -210,8 +210,8 @@ tissues"</Comment>
     <Comment>Methylation</Comment>
     <BiopaxRef>eee</BiopaxRef>
     <Graphics ZOrder="32788" LineThickness="1.0">
-      <Point X="545.6522633744852" Y="220.0" GraphRef="bc1cc" RelX="1.0" RelY="0.0" />
-      <Point X="659.1522633744852" Y="220.0" GraphRef="e4d3f" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="fb482" X="545.6522633744852" Y="220.0" GraphRef="bc1cc" RelX="1.0" RelY="0.0" />
+      <Point GraphId="dbbc7" X="659.1522633744852" Y="220.0" GraphRef="e4d3f" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.5947136563876652" Shape="None" GraphId="d13d4" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -219,8 +219,8 @@ tissues"</Comment>
   <Interaction GraphId="fe323">
     <Comment>Acetylation</Comment>
     <Graphics ZOrder="32789" LineThickness="1.0">
-      <Point X="545.6522633744852" Y="226.25" GraphRef="bc1cc" RelX="1.0" RelY="0.5" />
-      <Point X="659.1522633744852" Y="284.0" GraphRef="daa46" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="c2574" X="545.6522633744852" Y="226.25" GraphRef="bc1cc" RelX="1.0" RelY="0.5" />
+      <Point GraphId="dc503" X="659.1522633744852" Y="284.0" GraphRef="daa46" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.5859671570119895" Shape="None" GraphId="a2f18" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -228,22 +228,22 @@ tissues"</Comment>
   <Interaction GraphId="f4b09">
     <Comment>Acetylation</Comment>
     <Graphics ZOrder="32790" LineThickness="1.0">
-      <Point X="749.1522633744852" Y="220.0" GraphRef="e4d3f" RelX="1.0" RelY="0.0" />
-      <Point X="806.1522633744852" Y="220.0" GraphRef="a1dfd" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="f3976" X="749.1522633744852" Y="220.0" GraphRef="e4d3f" RelX="1.0" RelY="0.0" />
+      <Point GraphId="a7721" X="806.1522633744852" Y="220.0" GraphRef="a1dfd" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a8e6e">
     <Graphics ZOrder="32792" LineThickness="1.0">
-      <Point X="576.1522633744852" Y="147.5" GraphRef="be95c" RelX="0.0" RelY="1.0" />
-      <Point X="613.1522633744852" Y="220.0" GraphRef="d13d4" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="a13c3" X="576.1522633744852" Y="147.5" GraphRef="be95c" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c9361" X="613.1522633744852" Y="220.0" GraphRef="d13d4" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ddd96">
     <Graphics ZOrder="32793" LineThickness="1.0">
-      <Point X="576.1522633744852" Y="147.5" GraphRef="be95c" RelX="0.0" RelY="1.0" />
-      <Point X="612.159535695346" Y="260.0896033174424" GraphRef="a2f18" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="a6cad" X="576.1522633744852" Y="147.5" GraphRef="be95c" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d780e" X="612.159535695346" Y="260.0896033174424" GraphRef="a2f18" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -265,46 +265,8 @@ tissues"</Comment>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">muscle cell</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000187</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c4d">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2206021</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The histidine-containing dipeptides, carnosine and anserine: distribution, properties and biological significance.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adv Enzyme Regul</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1990</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boldyrev AA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Severin SE</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="abc">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3407773</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dietary regulation of intestinal transport of the dipeptide carnosine.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferraris RP</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diamond J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kwan WW</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fa5">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1016/0304-4165(88)90015-3</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Detection, characterization and quantification of carnosine and other histidyl derivatives in cardiac and skeletal muscle</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1016/0304-4165(88)90015-3</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J.J. O'Dowd</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D.J. Robins</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D.J. Miller</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fc9">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3067017</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realization of spontaneous healing function by carnosine.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods Find Exp Clin Pharmacol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagai K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suda T</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a76">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16327029</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -315,22 +277,14 @@ tissues"</Comment>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cunliffe A</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leveritt M</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eee">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5678152</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c4d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2206021</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[Intensity of biosynthesis of anserine and carnosine by intact and denervated muscles in chickens].</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biokhimiia</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1968</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dobrynina OV</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gorbunova AV</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f8a">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3891936</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carnosinase and homocarnosinosis</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J. Oslo City Hospitals, 35, pp. 27-40</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1985</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JF Lenney</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The histidine-containing dipeptides, carnosine and anserine: distribution, properties and biological significance.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adv Enzyme Regul</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1990</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boldyrev AA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Severin SE</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fde">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11281261</bp:ID>
@@ -342,6 +296,51 @@ tissues"</Comment>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abe H</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boldyrev A</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f8a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3891936</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carnosinase and homocarnosinosis</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J. Oslo City Hospitals, 35, pp. 27-40</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1985</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JF Lenney</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="abc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3407773</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dietary regulation of intestinal transport of the dipeptide carnosine.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferraris RP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diamond J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kwan WW</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fc9">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3067017</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realization of spontaneous healing function by carnosine.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods Find Exp Clin Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagai K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suda T</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fa5">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1016/0304-4165(88)90015-3</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Detection, characterization and quantification of carnosine and other histidyl derivatives in cardiac and skeletal muscle</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1016/0304-4165(88)90015-3</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J.J. O'Dowd</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D.J. Robins</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D.J. Miller</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eee">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5678152</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[Intensity of biosynthesis of anserine and carnosine by intact and denervated muscles in chickens].</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biokhimiia</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1968</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dobrynina OV</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gorbunova AV</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

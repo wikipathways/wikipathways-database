@@ -34,7 +34,8 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP9
 - /instance/WP9
-revision: null
+- /instance/WP9_rr117325
+revision: r117325
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP9.html

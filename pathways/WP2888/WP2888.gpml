@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Wnt signaling - Q neuroblast migration" Data-Source="WikiPathways" Version="WP2888_r118034" Author="[Cgrove, MaintBot, Mkutmon, Eweitz]" Organism="Caenorhabditis elegans">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Wnt signaling - Q neuroblast migration" Data-Source="WikiPathways" Version="WP2888_r118034" Author="[Cgrove, MaintBot, Mkutmon, Eweitz]" Last-Modified="20210523114637" Organism="Caenorhabditis elegans">
   <Comment Source="WikiPathways-description">One of the functions of the Wnt-signaling pathway in the nematode Caenorhabditis elegans (C. elegans) is to control the proper anterior-posterior axis migration of descendants of the QL and QR neuroblasts. In wild type animals, Wnt signaling is activated in the QL neuroblast to induce expression of the Hox gene mab-5 resulting in the appropriate posterior migration of QL descendants. Any disruption in the Wnt signaling pathway leading to mab-5 expression results in erroneous anterior migration of QL neuroblast descendants.</Comment>
   <Graphics BoardWidth="855.0" BoardHeight="715.9976168106517" />
-  <DataNode TextLabel="mab-5/Hox" GraphId="a8e98" Type="GeneProduct">
-    <Graphics CenterX="140.71947875371495" CenterY="556.2181993171242" Width="88.56512141280373" Height="19.933774834437145" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="WormBase" ID="C08C3.3" />
-  </DataNode>
   <DataNode TextLabel="EGL-20/Wnt" GraphId="c4e84" Type="Protein">
     <BiopaxRef>c42</BiopaxRef>
     <Graphics CenterX="215.2005927419662" CenterY="243.84408441989976" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="WormBase" ID="W08D2.1" />
   </DataNode>
-  <DataNode TextLabel="MIG-1/Frizzled" GraphId="d0ed9" Type="GeneProduct">
-    <Graphics CenterX="278.0" CenterY="291.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="WormBase" ID="Y34D9B.1" />
+  <DataNode TextLabel="mab-5/Hox" GraphId="a8e98" Type="GeneProduct">
+    <Graphics CenterX="140.71947875371495" CenterY="556.2181993171242" Width="88.56512141280373" Height="19.933774834437145" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="WormBase" ID="C08C3.3" />
   </DataNode>
   <DataNode TextLabel="PRY-1" GraphId="d648c" Type="GeneProduct">
     <Graphics CenterX="141.26080727267518" CenterY="411.12319828593775" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -30,6 +26,10 @@
   <DataNode TextLabel="MIG-14/MOM-3&#xA;Porcupine" GraphId="f037f" Type="GeneProduct">
     <Graphics CenterX="225.67474048442924" CenterY="93.61591695501718" Width="81.52249134948092" Height="29.03114186851211" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="WormBase" ID="R06B9.6" />
+  </DataNode>
+  <DataNode TextLabel="MIG-1/Frizzled" GraphId="d0ed9" Type="GeneProduct">
+    <Graphics CenterX="278.0" CenterY="291.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="WormBase" ID="Y34D9B.1" />
   </DataNode>
   <DataNode TextLabel="MIG-5" GraphId="f6ec2" Type="GeneProduct">
     <Graphics CenterX="185.11796733212347" CenterY="352.09618874773093" Width="80.0" Height="21.796733212340783" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -59,12 +59,26 @@
     <Graphics CenterX="561.9546888486598" CenterY="468.9225005155947" Width="74.09062230268034" Height="30.15499896881056" ZOrder="32780" FontSize="10" Valign="Middle" />
     <Xref Database="WormBase" ID="C54D1.6" />
   </DataNode>
-  <Interaction GraphId="id15007938">
-    <BiopaxRef>c42</BiopaxRef>
+  <Interaction GraphId="idd72729a1">
     <BiopaxRef>d25</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="225.67474048442926" Y="108.13148788927325" GraphRef="f037f" RelX="0.0" RelY="1.0" />
-      <Point X="216.8199699045959" Y="161.4496207520797" GraphRef="b525d" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="c481c" X="215.2005927419662" Y="253.84408441989976" GraphRef="c4e84" RelX="0.0" RelY="1.0" />
+      <Point GraphId="bc9b7" X="157.43929359823403" Y="281.28697571743925" GraphRef="e9f28" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7ee250dd">
+    <BiopaxRef>f2b</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="a1380" X="146.95468884865983" Y="484.0" GraphRef="cedf6" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f4528" X="140.71947875371495" Y="546.2513118999057" GraphRef="a8e98" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide268096c">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0" Color="cccccc">
+      <Point GraphId="e5ae8" X="141.26080727267518" Y="421.12319828593775" GraphRef="d648c" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b50c2" X="146.95468884865983" Y="453.84500103118944" GraphRef="cedf6" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -73,69 +87,54 @@
     <BiopaxRef>eaf</BiopaxRef>
     <BiopaxRef>c42</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="308.7981010869485" Y="602.4765309318121" GraphRef="dfc80" RelX="0.0" RelY="1.0" />
-      <Point X="267.32899470656974" Y="652.8188088636317" GraphRef="d9302" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id7cac3afe">
-    <BiopaxRef>a6a</BiopaxRef>
-    <BiopaxRef>c42</BiopaxRef>
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="278.0" Y="301.0" GraphRef="d0ed9" RelX="0.0" RelY="1.0" />
-      <Point X="205.11796733212347" Y="341.19782214156055" GraphRef="f6ec2" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id7ee250dd">
-    <BiopaxRef>f2b</BiopaxRef>
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="146.95468884865983" Y="484.0" GraphRef="cedf6" RelX="0.0" RelY="1.0" />
-      <Point X="140.71947875371495" Y="546.2513118999057" GraphRef="a8e98" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id990ab31d">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0" Color="cccccc">
-      <Point X="594.993392747096" Y="572.0475271931479" GraphRef="f8036" RelX="1.0" RelY="0.0" />
-      <Point X="684.6004415011046" Y="576.8476821192057" GraphRef="db574" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idaa2d56dd">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0" Color="cccccc">
-      <Point X="561.9546888486598" Y="484.0" GraphRef="e5a32" RelX="0.0" RelY="1.0" />
-      <Point X="550.7108320406941" Y="562.0806397759293" GraphRef="f8036" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idd72729a1">
-    <BiopaxRef>d25</BiopaxRef>
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="215.2005927419662" Y="253.84408441989976" GraphRef="c4e84" RelX="0.0" RelY="1.0" />
-      <Point X="157.43929359823403" Y="281.28697571743925" GraphRef="e9f28" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ide268096c">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0" Color="cccccc">
-      <Point X="141.26080727267518" Y="421.12319828593775" GraphRef="d648c" RelX="0.0" RelY="1.0" />
-      <Point X="146.95468884865983" Y="453.84500103118944" GraphRef="cedf6" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="aa98d" X="308.7981010869485" Y="602.4765309318121" GraphRef="dfc80" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a3311" X="267.32899470656974" Y="652.8188088636317" GraphRef="d9302" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide47f0ec9">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="162.86075910691588" Y="566.1850867343428" GraphRef="a8e98" RelX="0.5" RelY="1.0" />
-      <Point X="268.7981010869485" Y="592.4765309318121" GraphRef="dfc80" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="aefb0" X="162.86075910691588" Y="566.1850867343428" GraphRef="a8e98" RelX="0.5" RelY="1.0" />
+      <Point GraphId="dfa7d" X="268.7981010869485" Y="592.4765309318121" GraphRef="dfc80" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id990ab31d">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0" Color="cccccc">
+      <Point GraphId="bda73" X="594.993392747096" Y="572.0475271931479" GraphRef="f8036" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f8957" X="684.6004415011046" Y="576.8476821192057" GraphRef="db574" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide6928eb3">
     <BiopaxRef>c42</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="216.8199699045959" Y="181.4496207520797" GraphRef="b525d" RelX="0.0" RelY="1.0" />
-      <Point X="215.2005927419662" Y="233.84408441989976" GraphRef="c4e84" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="e1fa6" X="216.8199699045959" Y="181.4496207520797" GraphRef="b525d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a6b42" X="215.2005927419662" Y="233.84408441989976" GraphRef="c4e84" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id15007938">
+    <BiopaxRef>c42</BiopaxRef>
+    <BiopaxRef>d25</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="dcf98" X="225.67474048442926" Y="108.13148788927325" GraphRef="f037f" RelX="0.0" RelY="1.0" />
+      <Point GraphId="df157" X="216.8199699045959" Y="161.4496207520797" GraphRef="b525d" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf1c4da7d">
+    <BiopaxRef>d25</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="e8315" X="215.2005927419662" Y="253.84408441989976" GraphRef="c4e84" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f72db" X="278.0" Y="281.0" GraphRef="d0ed9" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idaa2d56dd">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0" Color="cccccc">
+      <Point GraphId="c2179" X="561.9546888486598" Y="484.0" GraphRef="e5a32" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e8a5c" X="550.7108320406941" Y="562.0806397759293" GraphRef="f8036" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -143,16 +142,17 @@
     <BiopaxRef>ebc</BiopaxRef>
     <BiopaxRef>c42</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="137.43929359823403" Y="301.28697571743925" GraphRef="e9f28" RelX="0.0" RelY="1.0" />
-      <Point X="165.11796733212347" Y="341.19782214156055" GraphRef="f6ec2" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="fb463" X="137.43929359823403" Y="301.28697571743925" GraphRef="e9f28" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a8397" X="165.11796733212347" Y="341.19782214156055" GraphRef="f6ec2" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idf1c4da7d">
-    <BiopaxRef>d25</BiopaxRef>
+  <Interaction GraphId="id7cac3afe">
+    <BiopaxRef>a6a</BiopaxRef>
+    <BiopaxRef>c42</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="215.2005927419662" Y="253.84408441989976" GraphRef="c4e84" RelX="0.0" RelY="1.0" />
-      <Point X="278.0" Y="281.0" GraphRef="d0ed9" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="e9930" X="278.0" Y="301.0" GraphRef="d0ed9" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ea22a" X="205.11796733212347" Y="341.19782214156055" GraphRef="f6ec2" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -161,8 +161,8 @@
     <BiopaxRef>b09</BiopaxRef>
     <BiopaxRef>e61</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="185.11796733212347" Y="362.9945553539013" GraphRef="f6ec2" RelX="0.0" RelY="1.0" />
-      <Point X="141.26080727267518" Y="401.12319828593775" GraphRef="d648c" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="c4fcd" X="185.11796733212347" Y="362.9945553539013" GraphRef="f6ec2" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c2c63" X="141.26080727267518" Y="401.12319828593775" GraphRef="d648c" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -171,33 +171,33 @@
     <BiopaxRef>e61</BiopaxRef>
     <BiopaxRef>f2b</BiopaxRef>
     <Graphics ZOrder="32776" LineThickness="1.0">
-      <Point X="562.2677402476385" Y="425.60762735168163" GraphRef="a2060" RelX="0.0" RelY="1.0" />
-      <Point X="561.9546888486598" Y="453.84500103118944" GraphRef="e5a32" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="f424a" X="562.2677402476385" Y="425.60762735168163" GraphRef="a2060" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a376f" X="561.9546888486598" Y="453.84500103118944" GraphRef="e5a32" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <GraphicalLine GraphId="id79f57742" GroupRef="a8fbe">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="170.26793431287732" Y="522.0397579948132" />
-      <Point X="152.98184961106324" Y="522.039757994813" />
+      <Point GraphId="b7116" X="170.26793431287732" Y="522.0397579948132" />
+      <Point GraphId="a3bbb" X="152.98184961106324" Y="522.039757994813" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="ida0adea17" GroupRef="a8fbe">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="152.98184961106324" Y="545.3759723422634" />
-      <Point X="152.98184961106324" Y="522.039757994813" />
+      <Point GraphId="f3ec7" X="152.98184961106324" Y="545.3759723422634" />
+      <Point GraphId="d5f79" X="152.98184961106324" Y="522.039757994813" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="b0695" GroupRef="e4c4e">
     <Graphics ZOrder="32783" LineThickness="1.0">
-      <Point X="571.7977528089891" Y="562.2904062229899" />
-      <Point X="571.7977528089891" Y="538.9541918755395" />
+      <Point GraphId="fb7d9" X="571.7977528089891" Y="562.2904062229899" />
+      <Point GraphId="eb09c" X="571.7977528089891" Y="538.9541918755395" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="fce28" GroupRef="e4c4e">
     <Graphics ZOrder="32784" LineThickness="1.0">
-      <Point X="589.0838375108035" Y="538.9541918755397" />
-      <Point X="571.7977528089891" Y="538.9541918755395" />
+      <Point GraphId="cd0be" X="589.0838375108035" Y="538.9541918755397" />
+      <Point GraphId="d5779" X="571.7977528089891" Y="538.9541918755395" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="Posterior migration" GraphId="d9302">
@@ -211,13 +211,13 @@
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="215.0248344370861" CenterY="457.20033112582826" Width="371.2748344370862" Height="332.83995584988946" ZOrder="16384" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="b1923" GroupRef="a8fbe">
-    <Graphics CenterX="175.30034572169495" CenterY="522.7506482281748" Width="15.86430423509006" Height="15.864304235090632" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Triangle" Rotation="0.0" />
-  </Shape>
   <Shape TextLabel="Nucleus" GraphId="e3b0e">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="143.10380622837374" CenterY="549.9273356401379" Width="185.64013840830472" Height="110.72664359861615" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b1923" GroupRef="a8fbe">
+    <Graphics CenterX="175.30034572169495" CenterY="522.7506482281748" Width="15.86430423509006" Height="15.864304235090632" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Triangle" Rotation="0.0" />
   </Shape>
   <Shape TextLabel="QR neuroblast" GraphId="eabd4">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
@@ -237,11 +237,34 @@
   <Shape GraphId="f8791" GroupRef="e4c4e">
     <Graphics CenterX="594.1162489196206" CenterY="539.6650821089017" Width="15.86430423509006" Height="15.864304235090632" ZOrder="32785" FontSize="10" Valign="Middle" ShapeType="Triangle" Rotation="0.0" />
   </Shape>
-  <Group GroupId="f956d" GraphId="b0bce" Style="Group" />
-  <Group GroupId="a8fbe" GraphId="b2436" Style="Group" />
-  <Group GroupId="e4c4e" GraphId="c1a21" Style="Group" />
+  <Group GroupId="a8fbe" GraphId="a8fbe" Style="Group" />
+  <Group GroupId="e4c4e" GraphId="e4c4e" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wnt signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000008</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c42">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8898225</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuronal cell migration in C. elegans: regulation of Hox gene expression and cell position.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Development</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harris J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Honigberg L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robinson N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenyon C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d25">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12210516</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canonical and non-canonical Wnt signaling pathways in Caenorhabditis elegans: variations on a common signaling theme.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioessays</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korswagen HC</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f2b">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9834184</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -254,16 +277,43 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jongeward GD</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenyon C</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c42">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8898225</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="da5">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3731276</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuronal cell migration in C. elegans: regulation of Hox gene expression and cell position.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Development</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harris J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Honigberg L</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robinson N</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gene involved in the development of the posterior body region of C. elegans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1986</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenyon C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eaf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1346230</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activation of a C. elegans Antennapedia homologue in migrating cells controls their direction of migration.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salser SJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenyon C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ebc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1363076</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulation of anterior cell-specific mec-3 expression during asymmetric cell division in C. elegans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dev Dyn</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Way JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Run JQ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang AY</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a6a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3308403</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genetics of cell and axon migrations in Caenorhabditis elegans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Development</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1987</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hedgecock EM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Culotti JG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hall DH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stern BD</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b09">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12023307</bp:ID>
@@ -292,57 +342,5 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dale TC</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korswagen HC</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a6a">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3308403</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genetics of cell and axon migrations in Caenorhabditis elegans.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Development</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1987</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hedgecock EM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Culotti JG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hall DH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stern BD</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ebc">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1363076</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulation of anterior cell-specific mec-3 expression during asymmetric cell division in C. elegans.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dev Dyn</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Way JC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Run JQ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang AY</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eaf">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1346230</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activation of a C. elegans Antennapedia homologue in migrating cells controls their direction of migration.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salser SJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenyon C</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d25">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12210516</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canonical and non-canonical Wnt signaling pathways in Caenorhabditis elegans: variations on a common signaling theme.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bioessays</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korswagen HC</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="da5">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3731276</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A gene involved in the development of the posterior body region of C. elegans.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1986</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenyon C</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wnt signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000008</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-

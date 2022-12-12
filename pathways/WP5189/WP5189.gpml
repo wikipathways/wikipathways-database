@@ -1,329 +1,451 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Copper metabolism" Data-Source="WikiPathways" Version="WP5189_r121640" Author="[Leo-kal, Andra]" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">Disorders of copper metabolism
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Copper metabolism" Data-Source="WikiPathways" Version="WP5189_r122491" Author="[Leo-kal, Andra, Khanspers, DeSl]" Last-Modified="20220413073722" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway shows copper metabolism and translocation for two cell types (enterocytes and hepatocytes), as well as associated disorders for transportation of copper to vesicles.
 Copper is an essential trace element required for the functioning of metalloenzymes. Copper is ingested through diet, absorbed by enterocytes in the intestinal walls, and sent to hepatocytes via the hepatic portal system. 
-The 4 main diseases that disrupts the uptake/ excretion of copper are mentioned in the metabolic pathway diagram.</Comment>
-  <Comment Source="WikiPathways-description">Copper metabolism disorders</Comment>
-  <Graphics BoardWidth="991.6127509653417" BoardHeight="856.7798980449954" />
-  <DataNode TextLabel="copper(Cu2+)" GraphId="a9b62" Type="Metabolite">
-    <Graphics CenterX="381.5309842041311" CenterY="128.79708383961116" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+
+This pathway model was constructed using chapter 39 of the book "Physician's Guide to the Diagnosis, Treatment, and Follow-Up of Inherited Metabolic Diseases (first edition)" by Blau (ISBN 3642403360)</Comment>
+  <Graphics BoardWidth="1224.9796012190377" BoardHeight="830.3738041859905" />
+  <DataNode TextLabel="COPPER (II) ION" GraphId="a9b62" Type="Metabolite">
+    <Graphics CenterX="398.0034418173387" CenterY="123.97953855758587" Width="114.25325164164644" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29036" />
   </DataNode>
-  <DataNode TextLabel="DMT" GraphId="aafb5" Type="Metabolite">
-    <Graphics CenterX="443.4993924665858" CenterY="162.8189550425273" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="ChEBI" ID="CHEBI:141217" />
-  </DataNode>
   <DataNode TextLabel="ATP7A" GraphId="b0ec8" Type="GeneProduct">
-    <Graphics CenterX="134.72896812609258" CenterY="491.88716759915013" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="312.5255576510622" CenterY="367.88716759915013" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000165240" />
   </DataNode>
   <DataNode TextLabel="ATP7B" GraphId="bc8ba" Type="GeneProduct">
-    <Graphics CenterX="614.0927697561197" CenterY="436.2238869868463" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="622.2954305893422" CenterY="436.2238869868463" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000123191" />
   </DataNode>
-  <DataNode TextLabel="copper (Cu+)" GraphId="bcb74" Type="Metabolite">
-    <Graphics CenterX="190.49071089128236" CenterY="247.44011752083094" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:28694" />
+  <DataNode TextLabel="DMT1&#xA;" GraphId="d41db" Type="GeneProduct">
+    <Comment>SLC11A2 is the gene for DMT1 used in copper uptake</Comment>
+    <Graphics CenterX="319.9999999999997" CenterY="187.6190476190476" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000110911" />
   </DataNode>
-  <DataNode TextLabel="DMT" GraphId="f3274" Type="Metabolite">
-    <Graphics CenterX="530.9842041312263" CenterY="716.8894289185907" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="ChEBI" ID="CHEBI:141217" />
+  <DataNode TextLabel="DMT1" GraphId="f3274" Type="GeneProduct">
+    <Comment>SLC11A2 is the gene for DMT1 used in copper uptake</Comment>
+    <Graphics CenterX="671.0444584552804" CenterY="688.2251525120228" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000110911" />
   </DataNode>
   <DataNode TextLabel="Reductase" GraphId="fbedb">
-    <Graphics CenterX="303.7667071688945" CenterY="94.77521263669504" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Comment>The reductase used for copper reduction prior to entering the cell via CTR1 channels for mammals are unknown (5). 
+Two possible RHEA IDs: 22149 and 18702</Comment>
+    <BiopaxRef>a36</BiopaxRef>
+    <Graphics CenterX="321.7463952854134" CenterY="86.90310545033694" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="CTR1" GraphId="fe331" Type="GeneProduct">
     <Comment>obtained from SLC31A1</Comment>
-    <Comment>Type your comment here</Comment>
-    <Graphics CenterX="142.2566979360272" CenterY="154.86251986433837" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="158.76406100281858" CenterY="188.31433728235822" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000136868" />
   </DataNode>
-  <DataNode TextLabel="copper (Cu+)" GraphId="dbf92" Type="Metabolite">
-    <Graphics CenterX="214.11949861185244" CenterY="123.97953855758587" Width="90.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:28694" />
+  <DataNode TextLabel="COPPER (I) ION" GraphId="dbf92" Type="Metabolite">
+    <Graphics CenterX="229.12662582082322" CenterY="123.97953855758587" Width="114.25325164164644" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49552" />
   </DataNode>
   <DataNode TextLabel="CTR1" GraphId="d6872" Type="GeneProduct">
     <Comment>obtained from SLC31A1</Comment>
-    <Comment>Type your comment here</Comment>
-    <Graphics CenterX="916.6127509653417" CenterY="760.0561384275173" Width="90.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="827.2759264571495" CenterY="687.2727715596417" Width="90.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000136868" />
   </DataNode>
-  <DataNode TextLabel="copper (Cu+)" GraphId="ca10e" Type="Metabolite">
-    <Graphics CenterX="777.9935512391887" CenterY="767.2572355022838" Width="90.0" Height="25.0" ZOrder="32772" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:28694" />
+  <DataNode TextLabel="COPPER (I) ION" GraphId="ca10e" Type="Metabolite">
+    <Graphics CenterX="757.8605226246541" CenterY="741.6345215888266" Width="114.25325164164644" Height="25.0" ZOrder="32772" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49552" />
   </DataNode>
-  <DataNode TextLabel="copper (Cu+)" GraphId="d4677" Type="Metabolite">
-    <Graphics CenterX="768.9785639379724" CenterY="633.4912018783043" Width="90.0" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:28694" />
+  <DataNode TextLabel="COPPER (I) ION" GraphId="ad842" Type="Metabolite">
+    <Graphics CenterX="229.12662582082322" CenterY="565.3013278297417" Width="114.25325164164644" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49552" />
   </DataNode>
-  <DataNode TextLabel="copper (Cu+)" GraphId="ad842" Type="Metabolite">
-    <Graphics CenterX="262.06375222007523" CenterY="568.1182292381925" Width="90.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:28694" />
+  <DataNode TextLabel="COPPER (I) ION" GraphId="a4b5e" Type="Metabolite">
+    <Graphics CenterX="229.12662582082322" CenterY="243.29283110571075" Width="114.25325164164644" Height="28.226574056053366" ZOrder="32775" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49552" />
   </DataNode>
-  <DataNode TextLabel="copper (Cu+)&#xA;" GraphId="a4b5e" Type="Metabolite">
-    <Graphics CenterX="214.45666211667688" CenterY="324.1779389418664" Width="90.0" Height="33.92811925361113" ZOrder="32775" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:28694" />
+  <DataNode TextLabel="COPPER (I) ION" GraphId="d9781" Type="Metabolite">
+    <Graphics CenterX="757.8605226246541" CenterY="587.3534867633103" Width="114.25325164164644" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49552" />
   </DataNode>
-  <DataNode TextLabel="copper (Cu+)&#xA;" GraphId="d9781" Type="Metabolite">
-    <Graphics CenterX="710.9341578245204" CenterY="538.5369187159738" Width="90.0" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:28694" />
+  <DataNode TextLabel="COPPER (I) ION" GraphId="ab8c3" Type="Metabolite">
+    <Graphics CenterX="757.8605226246541" CenterY="251.638838952311" Width="114.25325164164644" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49552" />
   </DataNode>
-  <DataNode TextLabel="copper (Cu+)" GraphId="ab8c3" Type="Metabolite">
-    <Graphics CenterX="726.8425773223034" CenterY="251.638838952311" Width="90.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:28694" />
-  </DataNode>
-  <DataNode TextLabel="copper(Cu2+)" GraphId="c4a86" Type="Metabolite">
-    <Graphics CenterX="359.93924665856633" CenterY="243.29283110571075" Width="90.0" Height="25.0" ZOrder="32778" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="COPPER (II) ION" GraphId="c4a86" Type="Metabolite">
+    <Graphics CenterX="398.0034418173387" CenterY="243.29283110571075" Width="114.25325164164644" Height="25.0" ZOrder="32778" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29036" />
   </DataNode>
-  <DataNode TextLabel="copper(Cu2+)" GraphId="f5b8b" Type="Metabolite">
-    <Graphics CenterX="600.5224787363318" CenterY="766.9866342648837" Width="90.0" Height="25.0" ZOrder="32779" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="COPPER (II) ION" GraphId="f5b8b" Type="Metabolite">
+    <Graphics CenterX="599.1140280321067" CenterY="741.6345215888267" Width="114.25325164164644" Height="25.0" ZOrder="32779" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29036" />
   </DataNode>
-  <DataNode TextLabel="copper(Cu2+)" GraphId="c32f4" Type="Metabolite">
-    <Graphics CenterX="616.5978128797103" CenterY="643.329283110569" Width="90.0" Height="25.0" ZOrder="32780" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="COPPER (II) ION" GraphId="c32f4" Type="Metabolite">
+    <Graphics CenterX="599.6964044290057" CenterY="587.3534867633103" Width="114.25325164164644" Height="25.0" ZOrder="32780" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29036" />
   </DataNode>
-  <DataNode TextLabel="Reductase" GraphId="de472">
-    <Graphics CenterX="680.567242644129" CenterY="814.2798980449954" Width="90.0" Height="25.0" ZOrder="32781" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="Reductase" GraphId="cb8d9">
+    <Comment>The reductase used for copper reduction prior to entering the cell via CTR1 channels for mammals are unknown (5). 
+Two possible RHEA IDs: 22149 and 18702</Comment>
+    <BiopaxRef>a36</BiopaxRef>
+    <Graphics CenterX="675.470932521008" CenterY="787.8738041859905" Width="90.0" Height="25.0" ZOrder="32783" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="COPPER (I) ION" GraphId="cbf6c" Type="Metabolite">
+    <Graphics CenterX="757.8605226246541" CenterY="115.33011412009624" Width="114.25325164164644" Height="25.0" ZOrder="32784" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49552" />
+  </DataNode>
+  <DataNode TextLabel="COPPER (I) ION" GraphId="b00d7" Type="Metabolite">
+    <Graphics CenterX="229.12662582082322" CenterY="741.6345215888267" Width="114.25325164164644" Height="25.0" ZOrder="32785" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:49552" />
   </DataNode>
   <Interaction GraphId="id194968da">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="680.567242644129" Y="801.7798980449954" GraphRef="de472" RelX="0.0" RelY="-1.0" />
-      <Point X="680.5109077374746" Y="760.8448747598437" GraphRef="f7f73" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="f0d12" X="675.470932521008" Y="775.3738041859905" GraphRef="cb8d9" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="ebaa3" X="674.0379510332903" Y="735.3845215888267" GraphRef="f7f73" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id22f52019">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="733.6010709504685" Y="215.52878179384203" />
-      <Point X="801.8741633199464" Y="136.54618473895582" ArrowHead="Arrow" />
+    <Graphics ZOrder="12288" LineThickness="2.0" Color="990099">
+      <Point GraphId="a3d8a" X="757.8605226246541" Y="239.138838952311" GraphRef="ab8c3" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="ff142" X="757.8605226246541" Y="127.83011412009624" GraphRef="cbf6c" RelX="0.0" RelY="1.0" ArrowHead="mim-translocation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2793c504">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="569.0927697561197" Y="429.9738869868463" GraphRef="bc8ba" RelX="-1.0" RelY="-0.5" />
-      <Point X="717.9887555765469" Y="409.8980650090882" GraphRef="f04a4" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="c6d82" X="577.2954305893422" Y="429.9738869868463" GraphRef="bc8ba" RelX="-1.0" RelY="-0.5" />
+      <Point GraphId="a5d40" X="757.8605226246541" Y="431.1943309795837" GraphRef="f04a4" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2f51a9e3">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="717.9887555765469" Y="409.8980650090882" GraphRef="f04a4" RelX="0.0" RelY="0.0" />
-      <Point X="641.6799332567414" Y="383.2293889162437" GraphRef="c84f9" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="eb72b" X="757.8605226246541" Y="431.1943309795837" GraphRef="f04a4" RelX="0.0" RelY="0.0" />
+      <Point GraphId="a884c" X="647.9472031151915" Y="383.2293889162437" GraphRef="c84f9" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id43398c9d">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="871.6127509653417" Y="753.8061384275173" GraphRef="d6872" RelX="-1.0" RelY="-0.5" />
-      <Point X="772.5751975931838" Y="689.3846714423806" GraphRef="c0456" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="fd7ad" X="782.2759264571495" Y="687.2727715596417" GraphRef="d6872" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="cfdbc" X="757.8605226246541" Y="687.1331849139906" GraphRef="c0456" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5124a4f1">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="214.11949861185246" Y="136.47953855758587" GraphRef="dbf92" RelX="0.0" RelY="1.0" />
-      <Point X="190.49071089128236" Y="234.94011752083094" GraphRef="bcb74" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
-      <Anchor Position="0.4949285780043611" Shape="None" GraphId="bf48e" />
+    <Graphics ZOrder="12288" LineThickness="2.0" Color="990099">
+      <Point GraphId="cd0a5" X="229.12662582082322" Y="136.47953855758587" GraphRef="dbf92" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a8fc6" X="229.12662582082322" Y="229.17954407768406" GraphRef="a4b5e" RelX="0.0" RelY="-1.0" ArrowHead="mim-translocation" />
+      <Anchor Position="0.5456730598378902" Shape="None" GraphId="bf48e" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id521a72a8">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="710.9341578245204" Y="526.0369187159738" GraphRef="d9781" RelX="0.0" RelY="-1.0" />
-      <Point X="726.8425773223034" Y="264.138838952311" ArrowHead="Arrow" />
-      <Anchor Position="0.44345057364181306" Shape="None" GraphId="f04a4" />
+    <Graphics ZOrder="12288" LineThickness="2.0" Color="990099">
+      <Point GraphId="e99db" X="757.8605226246541" Y="574.8534867633103" GraphRef="d9781" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="c9a60" X="757.8605226246541" Y="264.138838952311" GraphRef="ab8c3" RelX="0.0" RelY="1.0" ArrowHead="mim-translocation" />
+      <Anchor Position="0.4623507671614865" Shape="None" GraphId="f04a4" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id57db7fb">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="269.0763052208835" Y="602.4096385542168" />
-      <Point X="294.51137884872827" Y="755.0200803212851" ArrowHead="Arrow" />
+    <Graphics ZOrder="12288" LineThickness="2.0" Color="990099">
+      <Point GraphId="ce2d1" X="229.12662582082322" Y="577.8013278297417" GraphRef="ad842" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cea1e" X="229.12662582082322" Y="729.1345215888267" GraphRef="b00d7" RelX="0.0" RelY="-1.0" ArrowHead="mim-translocation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id581aa7a9">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="600.5224787363318" Y="754.4866342648837" GraphRef="f5b8b" RelX="0.0" RelY="-1.0" />
-      <Point X="616.5978128797103" Y="655.829283110569" GraphRef="c32f4" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
-      <Anchor Position="0.7018803537573558" Shape="None" GraphId="ff685" />
+    <Graphics ZOrder="12288" LineThickness="2.0" Color="990099">
+      <Point GraphId="a6470" X="599.1140280321067" Y="729.1345215888267" GraphRef="f5b8b" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="aff2f" X="599.6964044290057" Y="599.8534867633103" GraphRef="c32f4" RelX="0.0" RelY="1.0" ArrowHead="mim-translocation" />
+      <Anchor Position="0.31320401514708707" Shape="None" GraphId="ff685" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id64276086">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="fe012" X="229.12662582082322" Y="367.1559485866562" GraphRef="a2854" RelX="0.0" RelY="0.0" />
+      <Point GraphId="e5fcd" X="180.09089014752544" Y="439.1378705490732" GraphRef="a0156" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6bda39f5">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="777.9935512391887" Y="754.7572355022838" GraphRef="ca10e" RelX="0.0" RelY="-1.0" />
-      <Point X="768.9785639379724" Y="645.9912018783043" GraphRef="d4677" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    <Graphics ZOrder="12288" LineThickness="2.0" Color="990099">
+      <Point GraphId="f7d7c" X="757.8605226246541" Y="729.1345215888266" GraphRef="ca10e" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="cd2c7" X="757.8605226246541" Y="599.8534867633103" GraphRef="d9781" RelX="0.0" RelY="1.0" ArrowHead="mim-translocation" />
       <Anchor Position="0.5584281315408833" Shape="None" GraphId="fcd2b" />
-      <Anchor Position="0.6010384113656835" Shape="None" GraphId="c0456" />
+      <Anchor Position="0.32488397645890543" Shape="None" GraphId="c0456" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6e6d3116">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="645.5224787363318" Y="760.7366342648837" GraphRef="f5b8b" RelX="1.0" RelY="-0.5" />
-      <Point X="732.9935512391887" Y="761.0072355022838" GraphRef="ca10e" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+      <Point GraphId="f1c34" X="656.2406538529299" Y="735.3845215888267" GraphRef="f5b8b" RelX="1.0" RelY="-0.5" />
+      <Point GraphId="aa073" X="700.7338968038309" Y="735.3845215888266" GraphRef="ca10e" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
       <Anchor Position="0.4" Shape="None" GraphId="f7f73" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id846e8551">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="381.5309842041311" Y="141.29708383961116" GraphRef="a9b62" RelX="0.0" RelY="1.0" />
-      <Point X="359.93924665856633" Y="230.79283110571075" GraphRef="c4a86" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
-      <Anchor Position="0.49913668677067086" Shape="None" GraphId="a66ac" />
+    <Graphics ZOrder="12288" LineThickness="2.0" Color="990099">
+      <Point GraphId="ffa71" X="398.0034418173387" Y="136.47953855758587" GraphRef="a9b62" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fdf58" X="398.0034418173387" Y="230.79283110571075" GraphRef="c4a86" RelX="0.0" RelY="-1.0" ArrowHead="mim-translocation" />
+      <Anchor Position="0.5220408378425502" Shape="None" GraphId="e1119" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9ac00151">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="712.2918611889199" Y="411.2784002489884" />
-      <Point X="633.3842981637098" Y="479.55571117335813" GraphRef="f1b13" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="fc8cb" X="757.8605226246541" Y="431.1943309795837" GraphRef="f04a4" RelX="0.0" RelY="0.0" />
+      <Point GraphId="fecf9" X="656.9510630581912" Y="477.46478873239437" GraphRef="f1b13" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9f0aad7">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="303.7667071688945" Y="107.27521263669504" GraphRef="fbedb" RelX="0.0" RelY="1.0" />
-      <Point X="305.5663899672196" Y="129.37006572680104" GraphRef="b5304" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="d8bc3" X="321.7463952854134" Y="99.40310545033694" GraphRef="fbedb" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c37a2" X="320.9840257852585" Y="123.97953855758587" GraphRef="b5304" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida025b758">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="575.9842041312263" Y="710.6394289185907" GraphRef="f3274" RelX="1.0" RelY="-0.5" />
-      <Point X="611.805439951654" Y="685.2409777359296" GraphRef="ff685" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="b504b" X="626.0444584552804" Y="688.2251525120228" GraphRef="f3274" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="c50e7" X="599.2964306579423" Y="688.6431823991046" GraphRef="ff685" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida96c39ef">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="142.2566979360272" Y="167.36251986433837" GraphRef="fe331" RelX="0.0" RelY="1.0" />
-      <Point X="202.4249363053438" Y="185.21049289335087" GraphRef="bf48e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="bc147" X="203.76406100281858" Y="188.31433728235822" GraphRef="fe331" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b9f22" X="229.12662582082322" Y="187.06343421672716" GraphRef="bf48e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idb4297b6e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="179.72896812609258" Y="485.63716759915013" GraphRef="b0ec8" RelX="1.0" RelY="-0.5" />
-      <Point X="232.5976138657763" Y="422.869382944697" GraphRef="a2854" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="bc41c" X="267.5255576510622" Y="367.88716759915013" GraphRef="b0ec8" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="dde60" X="229.12662582082322" Y="367.1559485866562" GraphRef="a2854" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idb9eb1d59">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="233.4994981580362" Y="426.93249083648016" GraphRef="ee0df" RelX="0.0" RelY="0.0" />
-      <Point X="165.11604847092286" Y="422.03108758684857" GraphRef="f0f37" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="a00f4" X="229.12662582082322" Y="367.1559485866562" GraphRef="a2854" RelX="0.0" RelY="0.0" />
+      <Point GraphId="a5037" X="191.84918589692398" Y="365.6930594178348" GraphRef="f0f37" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc1ea9427">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="415.5528554070474" Y="168.89428918590522" />
-      <Point X="370.753755864016" Y="185.96769461007744" GraphRef="a66ac" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="f7009" X="364.78348705765734" Y="185.9853323231505" GraphRef="cc341" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="c70dd" X="398.0034418173387" Y="185.71492881909853" GraphRef="e1119" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idce5b21ed">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="214.45666211667685" Y="341.14199856867197" GraphRef="a4b5e" RelX="0.0" RelY="1.0" />
-      <Point X="262.06375222007523" Y="555.6182292381925" GraphRef="ad842" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
-      <Anchor Position="0.3810556727936726" Shape="None" GraphId="a2854" />
-      <Anchor Position="0.4" Shape="None" GraphId="ee0df" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idd6f2bd9c">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="494.81764846099253" Y="148.6066402599116" />
-      <Point X="493.8044662309368" Y="690.6901649548707" />
+    <Graphics ZOrder="12288" LineThickness="2.0" Color="990099">
+      <Point GraphId="c7334" X="229.12662582082322" Y="257.40611813373744" GraphRef="a4b5e" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f8c1a" X="229.12662582082322" Y="552.8013278297417" GraphRef="ad842" RelX="0.0" RelY="-1.0" ArrowHead="mim-translocation" />
+      <Anchor Position="0.3715355796252215" Shape="None" GraphId="a2854" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide762a761">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="232.5976138657763" Y="422.869382944697" GraphRef="a2854" RelX="0.0" RelY="0.0" />
-      <Point X="102.14974189717802" Y="347.19197849825116" GraphRef="dfcfd" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="e2048" X="229.12662582082322" Y="367.1559485866562" GraphRef="a2854" RelX="0.0" RelY="0.0" />
+      <Point GraphId="b3a93" X="138.29076685935834" Y="316.20606300529107" GraphRef="dfcfd" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf5815d12">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="336.5309842041311" Y="128.79708383961116" GraphRef="a9b62" RelX="-1.0" RelY="0.0" />
-      <Point X="259.11949861185246" Y="130.22953855758587" GraphRef="dbf92" RelX="1.0" RelY="0.5" ArrowHead="Arrow" />
-      <Anchor Position="0.4" Shape="None" GraphId="b5304" />
+      <Point GraphId="ffeed" X="340.87681599651546" Y="123.97953855758587" GraphRef="a9b62" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="e3729" X="286.25325164164644" Y="123.97953855758587" GraphRef="dbf92" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.3641796438258931" Shape="None" GraphId="b5304" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <GraphicalLine GraphId="e374d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="a92db" X="503.56186283370874" Y="148.6066402599116" />
+      <Point GraphId="acc5c" X="502.548680603653" Y="690.6901649548707" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c3ada">
+    <Graphics ZOrder="32894" LineThickness="2.0" Color="990099">
+      <Point GraphId="e2b43" X="990.464871202916" Y="207.08309192940274" />
+      <Point GraphId="a356f" X="1064.4648712029157" Y="207.08309192940274" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e7879">
+    <Graphics ZOrder="32895" LineThickness="1.0">
+      <Point GraphId="e41f4" X="990.464871202916" Y="234.3694036787166" />
+      <Point GraphId="c27c1" X="1064.4648712029157" Y="234.3694036787166" ArrowHead="mim-conversion" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="dbe55">
+    <Graphics ZOrder="32896" LineThickness="1.0">
+      <Point GraphId="bb179" X="991.9796012190428" Y="307.3694036787168" />
+      <Point GraphId="f784d" X="1065.9796012190452" Y="307.3694036787168" ArrowHead="mim-catalysis" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="b0fc2">
+    <Graphics ZOrder="32897" LineThickness="1.0">
+      <Point GraphId="ae5a9" X="989.9648307112301" Y="271.3694036787169" />
+      <Point GraphId="da115" X="1064.9648307112327" Y="271.3694036787169" ArrowHead="mim-stimulation" />
+    </Graphics>
+  </GraphicalLine>
   <Label TextLabel="Bile&#xA;" GraphId="bb124">
-    <Graphics CenterX="755.0200803212849" CenterY="159.30388219544847" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="727.0365412266349" CenterY="168.35738013783524" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Enterocyte&#xA;" GraphId="c7b8b">
-    <Graphics CenterX="437.0636049715727" CenterY="84.49149808784685" Width="101.12244897959113" Height="43.1122448979597" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="100.47991280640136" CenterY="205.61825865122688" Width="101.12244897959113" Height="43.1122448979597" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Wilson disease" GraphId="c84f9" Href="https://www.omim.org/entry/277900">
     <BiopaxRef>eaf</BiopaxRef>
-    <Graphics CenterX="616.0281607308922" CenterY="362.94689260900583" Width="102.60709010339697" Height="40.56499261447564" ZOrder="28672" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+    <Graphics CenterX="622.2954305893423" CenterY="362.94689260900583" Width="102.60709010339697" Height="40.56499261447564" ZOrder="28672" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
   </Label>
   <Label TextLabel="Blood" GraphId="d56ed">
-    <Graphics CenterX="267.73761713520753" CenterY="722.8915662650603" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="266.3651925756701" CenterY="714.2898953381593" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Menkes disease" GraphId="dfcfd" Href="https://www.omim.org/entry/309400 ">
     <BiopaxRef>a98</BiopaxRef>
-    <Graphics CenterX="102.149741897178" CenterY="323.9310428967931" Width="102.06561360874849" Height="46.52187120291609" ZOrder="28672" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+    <Graphics CenterX="108.89230077384693" CenterY="292.945127403833" Width="117.59386434204563" Height="46.52187120291609" ZOrder="28672" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
   </Label>
   <Label TextLabel="Occipital horn syndrome" GraphId="f0f37" Href="https://www.omim.org/entry/304150">
     <BiopaxRef>ea7</BiopaxRef>
-    <Graphics CenterX="100.86198643251815" CenterY="422.03108758684857" Width="128.50812407680945" Height="52.38183161004417" ZOrder="28672" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+    <Graphics CenterX="108.89230077384693" CenterY="365.6930594178348" Width="165.91377024615412" Height="52.38183161004417" ZOrder="28672" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
   </Label>
-  <Label TextLabel="Medkins disease&#xA;" GraphId="f1b13" Href="https://www.omim.org/entry/609313">
+  <Label TextLabel="MEDNIKs disease&#xA;" GraphId="f1b13" Href="https://www.omim.org/entry/609313">
     <BiopaxRef>c46</BiopaxRef>
-    <Graphics CenterX="609.2666511048864" CenterY="494.7342826019296" Width="96.47058823529409" Height="30.357142857142904" ZOrder="28672" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+    <Graphics CenterX="622.2954305893422" CenterY="493.6888213814477" Width="138.6225298753958" Height="32.448065298106705" ZOrder="28672" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
   </Label>
   <Label TextLabel="Hepatocyte&#xA;" GraphId="f904f">
-    <Graphics CenterX="557.586207897725" CenterY="84.49149808784685" Width="101.12244897959113" Height="43.1122448979597" ZOrder="32770" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="585.7552219822323" CenterY="204.2098079470016" Width="101.12244897959113" Height="43.1122448979597" ZOrder="32770" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
-  <Shape GraphId="bae4d">
-    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Golgi Apparatus" />
-    <Graphics CenterX="303.46686087860485" CenterY="421.7028319066519" Width="65.0" Height="125.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Golgi Apparatus" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  <Label TextLabel="X-linked distal spinal &#xA;muscular atrophy" GraphId="a0156" Href="https://www.omim.org/entry/300489">
+    <BiopaxRef>a98</BiopaxRef>
+    <Graphics CenterX="108.8923007738469" CenterY="439.1378705490732" Width="142.3971787473571" Height="59.7524279159382" ZOrder="32782" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Oval" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Transport" GraphId="eeb39">
+    <Graphics CenterX="1149.11775171369" CenterY="203.39534714673468" Width="90.0" Height="25.0" ZOrder="32893" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Catalysis" GraphId="dc878">
+    <Graphics CenterX="1149.1177517136903" CenterY="307.3694036787168" Width="90.0" Height="25.0" ZOrder="32899" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Stimulation" GraphId="b81af">
+    <Graphics CenterX="1149.1177517136903" CenterY="271.36902220899054" Width="90.0" Height="25.0" ZOrder="32901" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Protein" GraphId="e818d">
+    <Graphics CenterX="1025.357304103069" CenterY="141.51223351825755" Width="90.0" Height="25.0" ZOrder="32902" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="Metabolite" GraphId="affa6">
+    <Graphics CenterX="1025.357304103069" CenterY="108.10887217371997" Width="90.0" Height="25.0" ZOrder="32903" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Conversion" GraphId="c0f2e">
+    <Graphics CenterX="1149.1177517136903" CenterY="234.3690222089897" Width="90.0" Height="25.0" ZOrder="32904" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Legend" GraphId="d0b11">
+    <Graphics CenterX="1081.979601219043" CenterY="76.60589058180938" Width="90.0" Height="25.0" ZOrder="32905" FillColor="ffffff" FontWeight="Bold" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Disease" GraphId="fa254">
+    <Graphics CenterX="1026.2402275119703" CenterY="178.16338526851138" Width="90.0" Height="25.0" ZOrder="33042" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Shape GraphId="cc341">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="263.232526939489" CenterY="437.831713416208" Width="406.20384047267356" Height="503.69276218611503" ZOrder="-4" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape GraphId="bd16e">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="745.007956455304" CenterY="437.83171341620806" Width="406.2038404726736" Height="503.69276218611503" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="745.007956455304" CenterY="437.83171341620806" Width="406.2038404726736" Height="503.69276218611503" ZOrder="-2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bae4d">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Golgi Apparatus" />
+    <Graphics CenterX="378.3817252017872" CenterY="319.10141595332595" Width="53.23654959642556" Height="63.79716809334809" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Golgi Apparatus" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape GraphId="be8ae">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Endoplasmic Reticulum" />
-    <Graphics CenterX="361.6456464253189" CenterY="422.77390350553543" Width="100.0" Height="200.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Endoplasmic Reticulum" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="403.22111797514424" CenterY="369.3869517527677" Width="70.44223595028848" Height="93.22609649446463" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Endoplasmic Reticulum" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="cb8c3">
-    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Endoplasmic Reticulum" />
-    <Graphics CenterX="783.0000517111221" CenterY="414.6382028817295" Width="94.57672877105513" Height="210.43366976579247" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Endoplasmic Reticulum" LineThickness="3.0" Color="c0c0c0" Rotation="3.0214839180228803" />
-  </Shape>
-  <Shape GraphId="cc341">
-    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
-    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="236.4359374145194" CenterY="437.831713416208" Width="406.20384047267356" Height="503.69276218611503" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
-  </Shape>
-  <Shape GraphId="d02ac">
-    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Golgi Apparatus" />
-    <Graphics CenterX="840.857997029472" CenterY="418.82154253753004" Width="62.2027952598707" Height="132.57440387552285" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Golgi Apparatus" LineThickness="3.0" Color="c0c0c0" Rotation="3.1049118658331416" />
-  </Shape>
-  <Shape TextLabel="vesicle&#xA;" GraphId="d3051">
+  <Shape TextLabel="vesicle" GraphId="d3051">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
-    <Graphics CenterX="264.28765950824777" CenterY="567.5410052910051" Width="125.00000000000011" Height="76.13025210084038" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="Oval" LineThickness="3.0" Color="333333" Rotation="0.0" />
+    <Graphics CenterX="239.5" CenterY="567.5410052910051" Width="173.0" Height="76.13025210084038" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="Oval" LineThickness="3.0" Color="333333" Rotation="0.0" />
   </Shape>
   <Shape TextLabel="vesicle&#xA;" GraphId="f19fd">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
-    <Graphics CenterX="726.7263498438197" CenterY="252.31481481481478" Width="128.5140562248996" Height="65.59571619812584" ZOrder="16384" FontSize="12" ShapeType="Oval" LineThickness="3.0" Color="333333" Rotation="0.0" />
+    <Graphics CenterX="760.9053497942391" CenterY="249.84567901234567" Width="165.43209876543216" Height="65.59571619812584" ZOrder="16384" FontSize="12" ShapeType="Oval" LineThickness="3.0" Color="333333" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="edfd5">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Golgi Apparatus" />
+    <Graphics CenterX="845.3817252017873" CenterY="314.82890163342387" Width="53.23654959642556" Height="63.79716809334809" ZOrder="32786" FontSize="12" Valign="Middle" ShapeType="Golgi Apparatus" LineThickness="3.0" Color="c0c0c0" Rotation="3.1078169284821273" />
+  </Shape>
+  <Shape GraphId="e445b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Endoplasmic Reticulum" />
+    <Graphics CenterX="820.2211179751442" CenterY="357.0646119392735" Width="70.44223595028848" Height="93.22609649446463" ZOrder="32787" FontSize="12" Valign="Middle" ShapeType="Endoplasmic Reticulum" LineThickness="3.0" Color="c0c0c0" Rotation="3.207983717046879" />
+  </Shape>
+  <Shape GraphId="e6c65">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="1082.7296012190377" CenterY="189.8101656247161" Width="224.5" Height="263.80055599192553" ZOrder="32898" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilson disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:893</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">occipital horn syndrome</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0111272</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Menkes disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1838</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copper homeostasis pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X-linked distal spinal muscular atrophy 3</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0111196</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEDNIK syndrome</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0060483</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eaf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30190489</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilson disease.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Dis Primers</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Członkowska A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Litwin T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dusek P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferenci P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lutsenko S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medici V</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rybakowski JK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weiss KH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schilsky ML</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a98">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17989919</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Menkes disease.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Mol Life Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bertini I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosato A</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ea7">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24002164</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -339,15 +461,6 @@ The 4 main diseases that disrupts the uptake/ excretion of copper are mentioned 
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martins M</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skjørringe T</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Møller LB</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a98">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17989919</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Menkes disease.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Mol Life Sci</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bertini I</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosato A</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c46">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23423674</bp:ID>
@@ -370,27 +483,24 @@ The 4 main diseases that disrupts the uptake/ excretion of copper are mentioned 
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Torre G</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dionisi-Vici C</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eaf">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30190489</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a36">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35090891</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilson disease.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Dis Primers</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Członkowska A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Litwin T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dusek P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferenci P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lutsenko S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medici V</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rybakowski JK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weiss KH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schilsky ML</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Copper(II) import and reduction are dependent on His-Met clusters in the extracellular amino terminus of human copper transporter-1.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kar S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sen S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maji S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saraf D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruturaj</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dutt S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mondal B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodriguez-Boulan E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schreiner R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sengupta D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gupta A</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copper homeostasis pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001002</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Metabolic pathway of LDL, HDL and TG, including diseases" Data-Source="WikiPathways" Version="WP4522_r119310" Author="[Ingebude, DeSl, LobkeM, Mkutmon, Egonw, IreneHemel, Fehrhart, Finterly]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Metabolic pathway of LDL, HDL and TG, including diseases" Data-Source="WikiPathways" Version="WP4522_r124275" Author="[Ingebude, DeSl, LobkeM, Mkutmon, Egonw, IreneHemel, Fehrhart, Finterly]" Last-Modified="20221006133130" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">This pathway shows genetic disorders related to lipoprotein metabolism. Two plasmalipoproteins, LDL and HDL, and one plasma lipid, triglyceride (TG), play an important role in this pathway. Hydrophobic lipids and fat-soluble vitamins are normally transported to the site of their uptake by transporters called lipoproteins, and any deregulation of the plasma concentrations of these proteins can cause dyslipidemias. Disorders resulting from an enzyme deficiency are highlighted in pink. More details on the composition of the various lipoproteins in this pathway are visualised in [https://www.wikipathways.org/index.php/Pathway:WP3601].
 
-This pathway was inspired by Chapter 43 of the book of Blau (ISBN 3642403360 (978-3642403361)).
-</Comment>
+This pathway was inspired by Chapter 43 of the book of Blau (ISBN 3642403360 (978-3642403361)).</Comment>
   <BiopaxRef>e64</BiopaxRef>
-  <Graphics BoardWidth="1715.4190750975954" BoardHeight="1126.3721657952603" />
+  <Graphics BoardWidth="1715.4190750975954" BoardHeight="1134.3721657952603" />
   <DataNode TextLabel="LPL" GraphId="a2fe4" Type="GeneProduct">
     <Graphics CenterX="883.5311609390255" CenterY="944.0823456467372" Width="49.888657676684815" Height="29.395077873879263" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000175445" />
@@ -102,8 +101,9 @@ This pathway was inspired by Chapter 43 of the book of Blau (ISBN 3642403360 (97
     <Xref Database="Ensembl" ID="ENSG00000165029" />
   </DataNode>
   <DataNode TextLabel="Remnant receptor" GraphId="f9700" Type="Protein">
+    <Comment>"The chylomicron remnant receptor accepts apoE as a ligand. Chylomicron remnants are removed from the circulation exclusively by the liver, probably because these large complexes can penetrate the unique sinusoidal vascular space. The multifunctional, α2-macroglobulin/LDL receptor-related protein (LRP) is the chylomicron remnant receptor" [https://doi.org/10.1016/B978-1-4160-6189-2.00072-X]</Comment>
     <Graphics CenterX="495.66002265328365" CenterY="676.6362153344212" Width="104.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
+    <Xref Database="InterPro" ID="IPR038003" />
   </DataNode>
   <DataNode TextLabel="LPL" GraphId="fb57d" Type="GeneProduct">
     <Graphics CenterX="558.0528052805262" CenterY="113.68646864686411" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
@@ -234,45 +234,38 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
   </DataNode>
   <Interaction GraphId="id100161b9">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="694.7790044521824" Y="1053.950147298186" GraphRef="f5c32" RelX="0.0" RelY="1.0" />
-      <Point X="735.9480912248268" Y="1080.1221657952601" GraphRef="e42eb" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="a8af7" X="694.7790044521824" Y="1053.950147298186" GraphRef="f5c32" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cbdf6" X="735.9480912248268" Y="1080.1221657952601" GraphRef="e944e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id444e240b">
     <BiopaxRef>a67</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="924.7378892592549" Y="489.94893683897226" GraphRef="a3d29" RelX="-1.0" RelY="-0.5" />
-      <Point X="789.2184841407442" Y="489.94893683897226" GraphRef="a3424" RelX="1.0" RelY="-0.5" ArrowHead="mim-conversion" />
+      <Point GraphId="be794" X="924.7378892592549" Y="489.94893683897226" GraphRef="a45d1" RelX="-1.0" RelY="-0.5" />
+      <Point GraphId="fb48b" X="789.2184841407442" Y="489.94893683897226" GraphRef="b0c05" RelX="1.0" RelY="-0.5" ArrowHead="mim-conversion" />
       <Anchor Position="0.4367816091954018" Shape="None" GraphId="b78b2" />
     </Graphics>
     <Xref Database="Rhea" ID="RHEA:38497" />
   </Interaction>
   <Interaction GraphId="id44587cee">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="883.5311609390255" Y="929.3848067097975" GraphRef="a2fe4" RelX="0.0" RelY="-1.0" />
-      <Point X="881.2715793056515" Y="896.761810173181" GraphRef="eff88" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id486de70c">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="624.2105263157895" Y="941.2309998487943" GraphRef="e463c" RelX="0.0" RelY="0.0" />
-      <Point X="626.4437120976993" Y="867.1151241300252" GraphRef="ed33b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c364d" X="883.5311609390255" Y="929.3848067097975" GraphRef="a2fe4" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="fa747" X="881.2715793056515" Y="896.761810173181" GraphRef="eff88" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5498245e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="864.333333333333" Y="740.6666666666666" GraphRef="db111" RelX="-1.0" RelY="0.0" />
-      <Point X="758.8385068628429" Y="749.9811913791826" GraphRef="a582b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="c41d4" X="864.333333333333" Y="740.6666666666666" GraphRef="db111" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="dd84e" X="758.8385068628429" Y="749.9811913791826" GraphRef="a582b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id56204ee1">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="686.7957659745414" Y="211.07745507953192" GraphRef="e14d8" RelX="-1.0" RelY="0.0" />
-      <Point X="566.8027134869469" Y="211.8387511909449" GraphRef="b3f75" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="df347" X="686.7957659745414" Y="211.07745507953192" GraphRef="dc6a8" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="e91e1" X="566.8027134869469" Y="211.8387511909449" GraphRef="f6a07" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4776320411384771" Shape="None" GraphId="c7033" />
       <Anchor Position="0.483067829139724" Shape="None" GraphId="d380b" />
     </Graphics>
@@ -280,16 +273,16 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
   </Interaction>
   <Interaction GraphId="id7417e119">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1229.9723631918828" Y="984.8188662835835" GraphRef="ab814" RelX="0.0" RelY="1.0" />
-      <Point X="865.7161215522733" Y="1129.113924050633" />
-      <Point X="501.45987991266395" Y="986.6179039301308" GraphRef="abfde" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="c4e2f" X="1229.9723631918828" Y="984.8188662835835" GraphRef="f29db" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e3930" X="865.7161215522733" Y="1129.113924050633" />
+      <Point GraphId="e4157" X="501.45987991266395" Y="986.6179039301308" GraphRef="abfde" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id76d8bd1c">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1235.289267945985" Y="530.9586330935258" GraphRef="fddb5" RelX="-1.0" RelY="0.0" />
-      <Point X="1058.7055913046827" Y="531.490237590091" GraphRef="a3d29" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="ade73" X="1235.289267945985" Y="530.9586330935258" GraphRef="fddb5" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="cf648" X="1058.7055913046827" Y="531.490237590091" GraphRef="a45d1" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.5207814686147749" Shape="None" GraphId="be1d6" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -297,15 +290,15 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
   <Interaction GraphId="id7a3039f6">
     <Comment>Oxysterols and Bile acids are activators of nuclear hormone receptors, which are involved in sterol metabolism.</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1573.5129902804786" Y="590.8991092840008" GraphRef="e6032" RelX="0.0" RelY="1.0" />
-      <Point X="1573.5129902804786" Y="655.3185200372734" GraphRef="c7e11" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="b7caa" X="1573.5129902804786" Y="590.8991092840008" GraphRef="b2e01" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c5b04" X="1573.5129902804786" Y="655.3185200372734" GraphRef="c7e11" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id87db2526">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="473.4002042602858" Y="926.0652860502227" GraphRef="c3d61" RelX="0.0" RelY="1.0" />
-      <Point X="472.9911299126639" Y="961.6179039301308" GraphRef="abfde" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="f9e11" X="473.4002042602858" Y="926.0652860502227" GraphRef="c3d61" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ec46d" X="472.9911299126639" Y="961.6179039301308" GraphRef="abfde" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -316,77 +309,77 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
     <BiopaxRef>b7c</BiopaxRef>
     <BiopaxRef>fb8</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1041.4201183431946" Y="153.03254437869828" GraphRef="efd64" RelX="0.0" RelY="1.0" />
-      <Point X="1023.0762728986409" Y="211.22662498685497" GraphRef="ded1b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="a471f" X="1041.4201183431946" Y="153.03254437869828" GraphRef="efd64" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c87cc" X="1023.0762728986409" Y="211.22662498685497" GraphRef="ded1b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9179eec7">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="728.0170952518553" Y="614.5728390923286" GraphRef="a3424" RelX="0.0" RelY="1.0" />
-      <Point X="713.568873337314" Y="807.4832899326252" GraphRef="da60c" RelX="-0.5" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="f3993" X="728.0170952518553" Y="614.5728390923286" GraphRef="b0c05" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a4202" X="713.568873337314" Y="807.4832899326252" GraphRef="d4ee4" RelX="-0.5" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id91aacfc3">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="490.955491264726" Y="289.9304542477127" GraphRef="b3f75" RelX="0.0" RelY="1.0" />
-      <Point X="495.6600226532837" Y="664.1362153344212" GraphRef="f9700" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="dea9d" X="490.955491264726" Y="289.9304542477127" GraphRef="f6a07" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e0716" X="495.6600226532837" Y="664.1362153344212" GraphRef="f9700" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id91c1e8bf">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="558.0528052805262" Y="126.18646864686411" GraphRef="fb57d" RelX="0.0" RelY="1.0" />
-      <Point X="629.4832393924552" Y="211.4410744951369" GraphRef="c7033" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="e9d13" X="558.0528052805262" Y="126.18646864686411" GraphRef="fb57d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a9a7e" X="629.4832393924552" Y="211.4410744951369" GraphRef="c7033" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id94bd6c4">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="560.8537557515897" Y="732.1577181208054" GraphRef="b15ec" RelX="0.0" RelY="-1.0" />
-      <Point X="759.5417852611008" Y="387.91946308724835" />
-      <Point X="958.2298147706118" Y="448.40763608785346" GraphRef="a3d29" RelX="-0.5" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="c0338" X="560.8537557515897" Y="732.1577181208054" GraphRef="b15ec" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="af08e" X="759.5417852611008" Y="387.91946308724835" />
+      <Point GraphId="a152d" X="958.2298147706118" Y="448.40763608785346" GraphRef="a45d1" RelX="-0.5" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9d374fe4">
     <Comment>Transport of cholesterol-rich LDL into cell.</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1277.896233120114" Y="813.6981104367148" GraphRef="bf5f3" RelX="0.0" RelY="0.0" />
-      <Point X="1372.257053291536" Y="719.8010935876621" />
-      <Point X="1369.7274310524183" Y="611.8752997601918" />
-      <Point X="1367.1978088133005" Y="591.8752997601919" GraphRef="cbbd7" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="b39c4" X="1277.896233120114" Y="813.6981104367148" GraphRef="bf5f3" RelX="0.0" RelY="0.0" />
+      <Point GraphId="a4990" X="1372.257053291536" Y="719.8010935876621" />
+      <Point GraphId="cf269" X="1369.7274310524183" Y="611.8752997601918" />
+      <Point GraphId="e4e1f" X="1367.1978088133005" Y="609.1965324420736" GraphRef="c112d" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idaa974573">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="558.3973799126641" Y="974.1179039301308" GraphRef="abfde" RelX="1.0" RelY="0.0" />
-      <Point X="669.80289248227" Y="941.2309998487943" GraphRef="da60c" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion" />
+      <Point GraphId="eb076" X="558.3973799126641" Y="974.1179039301308" GraphRef="abfde" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d3adf" X="669.80289248227" Y="941.2309998487943" GraphRef="d4ee4" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion" />
       <Anchor Position="0.6840279813403296" Shape="None" GraphId="e463c" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idaebe7fca">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="864.034484746023" Y="446.63404544173807" GraphRef="d820d" RelX="0.0" RelY="1.0" />
-      <Point X="865.5455054143882" Y="489.94893683897226" GraphRef="b78b2" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="dfc94" X="864.034484746023" Y="446.63404544173807" GraphRef="d820d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="db77b" X="865.5455054143882" Y="489.94893683897226" GraphRef="b78b2" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="Rhea" ID="RHEA:38497" />
   </Interaction>
   <Interaction GraphId="idafce192">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1114.4720741304898" Y="211.3117151951865" GraphRef="e7489" RelX="-1.0" RelY="0.0" />
-      <Point X="862.852159374901" Y="211.07745507953192" GraphRef="e14d8" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="de2b8" X="1114.4720741304898" Y="211.3117151951865" GraphRef="e7489" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="d4a5a" X="862.852159374901" Y="211.07745507953192" GraphRef="dc6a8" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
       <Anchor Position="0.3632296009663078" Shape="None" GraphId="ded1b" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idcc399a35">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="844.866815902446" Y="896.648429876738" GraphRef="da60c" RelX="1.0" RelY="0.0" />
-      <Point X="909.6503732432698" Y="896.8501941034294" GraphRef="e2a67" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="f6dcf" X="844.866815902446" Y="896.648429876738" GraphRef="d4ee4" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f0ab9" X="909.6503732432698" Y="896.8501941034294" GraphRef="f503f" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.5709232722655543" Shape="None" GraphId="aa5ce" />
       <Anchor Position="0.5619444948304005" Shape="None" GraphId="eff88" />
     </Graphics>
@@ -394,150 +387,136 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
   </Interaction>
   <Interaction GraphId="idce5366f8">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="852.659409917145" Y="580.527222385584" GraphRef="b485e" RelX="0.0" RelY="-1.0" />
-      <Point X="853.6912751677852" Y="531.490237590091" GraphRef="b6414" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="c7611" X="852.659409917145" Y="580.527222385584" GraphRef="b485e" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="edc0f" X="853.6912751677852" Y="531.490237590091" GraphRef="b6414" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idcebb4f45">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="666.8157063629664" Y="531.490237590091" GraphRef="a3424" RelX="-1.0" RelY="0.0" />
-      <Point X="644.2953020134228" Y="638.0739778554482" />
-      <Point X="605.8537557515897" Y="744.6577181208054" GraphRef="b15ec" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="d34bd" X="666.8157063629664" Y="531.490237590091" GraphRef="b0c05" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b9780" X="644.2953020134228" Y="638.0739778554482" />
+      <Point GraphId="b525c" X="605.8537557515897" Y="744.6577181208054" GraphRef="b15ec" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd9cbf02b">
     <BiopaxRef>ca1</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="694.7790044521824" Y="1053.950147298186" GraphRef="f5c32" RelX="0.0" RelY="1.0" />
-      <Point X="529.9286299126641" Y="986.6179039301308" GraphRef="abfde" RelX="0.5" RelY="1.0" ArrowHead="mim-binding" />
+      <Point GraphId="c6a35" X="694.7790044521824" Y="1053.950147298186" GraphRef="f5c32" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f5ba7" X="529.9286299126641" Y="986.6179039301308" GraphRef="abfde" RelX="0.5" RelY="1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="iddcf88dc3">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="758.9452760343984" Y="815.4832899326252" GraphRef="bf0f8" RelX="0.0" RelY="-1.0" />
-      <Point X="758.6177896962997" Y="614.5728390923286" GraphRef="a3424" RelX="0.5" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="e6266" X="758.9452760343984" Y="815.4832899326252" GraphRef="bf0f8" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="e45a2" X="758.6177896962997" Y="614.5728390923286" GraphRef="b0c05" RelX="0.5" RelY="1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.32602633800025693" Shape="None" GraphId="a582b" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide5250c6b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1143.2560583451284" Y="594.425851703407" GraphRef="f63e5" RelX="0.0" RelY="1.0" />
-      <Point X="1143.327761491331" Y="531.2354828639693" GraphRef="be1d6" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="c1cdb" X="1143.2560583451284" Y="594.425851703407" GraphRef="f63e5" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cebf4" X="1143.327761491331" Y="531.2354828639693" GraphRef="be1d6" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide571e679">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="789.2184841407442" Y="531.490237590091" GraphRef="a3424" RelX="1.0" RelY="0.0" />
-      <Point X="924.7378892592549" Y="531.490237590091" GraphRef="a3d29" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="eee6b" X="789.2184841407442" Y="531.490237590091" GraphRef="b0c05" RelX="1.0" RelY="0.0" />
+      <Point GraphId="aa46b" X="924.7378892592549" Y="531.490237590091" GraphRef="a45d1" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4757458237856051" Shape="None" GraphId="b6414" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ide60b483a">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1143.327761491331" Y="531.2354828639693" GraphRef="be1d6" RelX="0.0" RelY="0.0" />
-      <Point X="1143.2560583451282" Y="453.60113857756613" GraphRef="e932c" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ideb2222c1">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1114.4720741304898" Y="225.6867151951865" GraphRef="e7489" RelX="-1.0" RelY="0.5" />
-      <Point X="991.7217402819688" Y="448.40763608785346" GraphRef="a3d29" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e9b17" X="1114.4720741304898" Y="225.6867151951865" GraphRef="e7489" RelX="-1.0" RelY="0.5" />
+      <Point GraphId="f3caf" X="991.7217402819688" Y="448.40763608785346" GraphRef="a45d1" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf0c2e3ad">
     <BiopaxRef>b5a</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="694.7790044521824" Y="1024.7056917010264" GraphRef="f5c32" RelX="0.0" RelY="-1.0" />
-      <Point X="714.7463488083893" Y="965.3135698208508" GraphRef="ea312" RelX="-1.0" RelY="0.0" ArrowHead="mim-modification" />
+      <Point GraphId="dc6be" X="694.7790044521824" Y="1024.7056917010264" GraphRef="f5c32" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="f94ec" X="714.7463488083893" Y="965.3135698208508" GraphRef="ea312" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a02a4">
     <BiopaxRef>e4a</BiopaxRef>
     <Graphics ZOrder="32773" LineThickness="1.0">
-      <Point X="1081.1303436786934" Y="896.8501941034294" GraphRef="e2a67" RelX="1.0" RelY="0.0" />
-      <Point X="1145.4300822975579" Y="895.9660574547426" GraphRef="ab814" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="cebd3" X="1081.1303436786934" Y="896.8501941034294" GraphRef="f503f" RelX="1.0" RelY="0.0" />
+      <Point GraphId="c745b" X="1145.4300822975579" Y="895.9660574547426" GraphRef="f29db" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.7407407407407409" Shape="None" GraphId="bdde7" />
     </Graphics>
     <Xref Database="Rhea" ID="RHEA:12046" />
   </Interaction>
   <Interaction GraphId="deee1">
     <Graphics ZOrder="32774" LineThickness="1.0">
-      <Point X="1119.6580041580041" Y="939.4133749133747" GraphRef="d6f30" RelX="0.0" RelY="-1.0" />
-      <Point X="1128.759779692667" Y="896.195278067365" GraphRef="bdde7" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="f08d9" X="1119.6580041580041" Y="939.4133749133747" GraphRef="d6f30" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="a6179" X="1128.759779692667" Y="896.195278067365" GraphRef="bdde7" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida765c91">
     <BiopaxRef>caa</BiopaxRef>
     <Graphics ZOrder="32790" LineThickness="1.0">
-      <Point X="607.4006706016245" Y="1039.327919499606" GraphRef="dd4e5" RelX="1.0" RelY="0.0" />
-      <Point X="649.7790044521824" Y="1039.3279194996062" GraphRef="f5c32" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="db4cb" X="607.4006706016245" Y="1039.327919499606" GraphRef="dd4e5" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d718a" X="649.7790044521824" Y="1039.3279194996062" GraphRef="f5c32" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id10ce9d03">
     <Comment>Cholesterol is the precursor for steroid hormones.</Comment>
     <Graphics ZOrder="32796" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1427.3354231974924" Y="461.2540876389808" GraphRef="cd187" RelX="0.0" RelY="-1.0" />
-      <Point X="1427.3354231974922" Y="413.78195994930064" GraphRef="ab550" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="eb682" X="1427.3354231974924" Y="461.2540876389808" GraphRef="cd187" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="a9b47" X="1427.3354231974922" Y="413.78195994930064" GraphRef="e793e" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f16ca">
     <Comment>Cholesterol is the precursor for Vitamin D.</Comment>
     <Graphics ZOrder="32797" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1289.97867803838" Y="496.30110958255284" GraphRef="a7196" RelX="0.0" RelY="-1.0" />
-      <Point X="1268.48933901919" Y="433.1551176434593" GraphRef="cf557" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="c960e" X="1289.97867803838" Y="496.30110958255284" GraphRef="a7196" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="a706e" X="1268.48933901919" Y="433.1551176434593" GraphRef="cf557" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f4a63">
     <Comment>Cholesterol is the precursor for Oxysterols and Bile acids.</Comment>
     <Graphics ZOrder="32799" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1473.3072100313477" Y="557.7979747863159" GraphRef="db79a" RelX="1.0" RelY="0.0" />
-      <Point X="1520.5129902804786" Y="557.8991092840008" GraphRef="e6032" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="f2d5e" X="1473.3072100313477" Y="557.7979747863159" GraphRef="db79a" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e1822" X="1520.5129902804786" Y="557.8991092840008" GraphRef="b2e01" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9b79643f">
     <Graphics ConnectorType="Elbow" ZOrder="32834" LineThickness="1.0">
-      <Point X="1201.90230451978" Y="866.3320873667612" GraphRef="d572e" RelX="1.0" RelY="0.0" />
-      <Point X="1277.896233120114" Y="620.7562521411444" GraphRef="e84e1" RelX="0.0" RelY="1.0" ArrowHead="mim-binding" />
+      <Point GraphId="a66cc" X="1201.90230451978" Y="866.3320873667612" GraphRef="d572e" RelX="1.0" RelY="0.0" />
+      <Point GraphId="cc103" X="1277.896233120114" Y="620.7562521411444" GraphRef="e84e1" RelX="0.0" RelY="1.0" ArrowHead="mim-binding" />
       <Anchor Position="0.4" Shape="None" GraphId="bf5f3" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id8c6ae5bf">
-    <Graphics ZOrder="32835" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1189.7842489642244" Y="853.8320873667612" GraphRef="d572e" RelX="0.5" RelY="-1.0" />
-      <Point X="1209.7004403270694" Y="775.1120524962967" GraphRef="ce526" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f1eb8">
     <BiopaxRef>b5a</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="32845" LineThickness="1.0">
-      <Point X="739.7790044521824" Y="1039.3279194996062" GraphRef="f5c32" RelX="1.0" RelY="0.0" />
-      <Point X="809.694860511067" Y="935.3179114942751" GraphRef="caa9a" RelX="0.0" RelY="1.0" ArrowHead="mim-modification" />
+      <Point GraphId="c0ff5" X="739.7790044521824" Y="1039.3279194996062" GraphRef="f5c32" RelX="1.0" RelY="0.0" />
+      <Point GraphId="ce317" X="809.694860511067" Y="935.3179114942751" GraphRef="caa9a" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f8ceb">
     <BiopaxRef>b5a</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="32846" LineThickness="1.0">
-      <Point X="739.7790044521824" Y="1046.6390333988961" GraphRef="f5c32" RelX="1.0" RelY="0.5" />
-      <Point X="1698.205546492659" Y="654.6408870093991" />
-      <Point X="1364.4598432940004" Y="262.6427406199021" />
-      <Point X="1030.7141400953417" Y="530.3721331292734" GraphRef="c3dbf" RelX="0.0" RelY="-1.0" ArrowHead="mim-modification" />
+      <Point GraphId="ebac0" X="739.7790044521824" Y="1046.6390333988961" GraphRef="f5c32" RelX="1.0" RelY="0.5" />
+      <Point GraphId="e8c45" X="1698.205546492659" Y="654.6408870093991" />
+      <Point GraphId="fc55f" X="1364.4598432940004" Y="262.6427406199021" />
+      <Point GraphId="e7618" X="1030.7141400953417" Y="530.3721331292734" GraphRef="c3dbf" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -548,94 +527,111 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
     <BiopaxRef>b7c</BiopaxRef>
     <BiopaxRef>fb8</BiopaxRef>
     <Graphics ZOrder="32848" LineThickness="1.0">
-      <Point X="626.4437120976993" Y="972.2084438254893" GraphRef="c741d" RelX="0.0" RelY="-1.0" />
-      <Point X="624.2105263157895" Y="941.2309998487943" GraphRef="e463c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="c6e2a">
-    <Graphics ZOrder="32849" LineStyle="Broken" LineThickness="1.0">
-      <Point X="677.80289248227" Y="850.2862206080595" GraphRef="a7aed" RelX="-1.0" RelY="-0.5" />
-      <Point X="661.7443122326117" Y="822.9892881311873" GraphRef="e1132" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="e76fd" X="626.4437120976993" Y="972.2084438254893" GraphRef="c741d" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="c3e8b" X="624.2105263157895" Y="941.2309998487943" GraphRef="e463c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <GraphicalLine GraphId="a6710">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="472.9911299126639" Y="986.6179039301308" GraphRef="abfde" RelX="-0.5" RelY="1.0" />
-      <Point X="383.20323786909773" Y="1030.2168850072783" GraphRef="a6b6b" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="dd068" X="472.9911299126639" Y="986.6179039301308" GraphRef="abfde" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="c4c87" X="383.2032378690978" Y="1030.2168850072783" GraphRef="e92a0" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="aced1">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="758.8385068628429" Y="749.9811913791826" GraphRef="a582b" RelX="0.0" RelY="0.0" />
-      <Point X="857.5207100591715" Y="791.5" GraphRef="cb2e7" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="d09b6" X="758.8385068628429" Y="749.9811913791826" GraphRef="a582b" RelX="0.0" RelY="0.0" />
+      <Point GraphId="d727d" X="857.5207100591715" Y="791.5" GraphRef="cb2e7" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="b5cf8">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="983.4414128226153" Y="456.4076360878535" GraphRef="c0ca0" RelX="0.0" RelY="-1.0" />
-      <Point X="950.3743837842876" Y="356.75155714354673" GraphRef="bd09a" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="c084d" X="983.4414128226153" Y="456.4076360878535" GraphRef="c0ca0" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="ea83f" X="950.3743837842876" Y="356.75155714354673" GraphRef="bd09a" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c1bc8">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="b1da1" X="624.2105263157895" Y="941.2309998487943" GraphRef="e463c" RelX="0.0" RelY="0.0" />
+      <Point GraphId="fd8fa" X="626.4437120976993" Y="899.6151241300252" GraphRef="ed33b" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="c8487">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1023.0762728986409" Y="211.22662498685497" GraphRef="ded1b" RelX="0.0" RelY="0.0" />
-      <Point X="935.2435116292695" Y="100.33819594977054" GraphRef="a72da" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="a6b39" X="1023.0762728986409" Y="211.22662498685497" GraphRef="ded1b" RelX="0.0" RelY="0.0" />
+      <Point GraphId="e9181" X="935.2435116292695" Y="100.33819594977054" GraphRef="a72da" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cff8c">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="bffa5" X="1143.327761491331" Y="531.2354828639693" GraphRef="be1d6" RelX="0.0" RelY="0.0" />
+      <Point GraphId="f7ab7" X="1143.2560583451282" Y="453.60113857756613" GraphRef="e932c" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="d1cb3">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="629.4832393924552" Y="211.4410744951369" GraphRef="c7033" RelX="0.0" RelY="0.0" />
-      <Point X="653.7286887576588" Y="80.13300570640368" ArrowHead="Arrow" />
+      <Point GraphId="e6838" X="629.4832393924552" Y="211.4410744951369" GraphRef="c7033" RelX="0.0" RelY="0.0" />
+      <Point GraphId="c6929" X="653.7286887576588" Y="80.13300570640368" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="e9b02">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="435.2263245980606" Y="247.5323060995649" GraphRef="b1def" RelX="-0.5" RelY="1.0" />
-      <Point X="383.1858866695951" Y="305.3704684633475" GraphRef="a0bf7" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="da161" X="435.2263245980606" Y="247.5323060995649" GraphRef="b1def" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="d2446" X="383.1858866695951" Y="305.3704684633475" GraphRef="a0bf7" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="efcd3">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="853.6912751677852" Y="531.490237590091" GraphRef="b6414" RelX="0.0" RelY="0.0" />
-      <Point X="941.8756987713148" Y="618.5437609710549" GraphRef="a1ae8" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="b67ef" X="853.6912751677852" Y="531.490237590091" GraphRef="b6414" RelX="0.0" RelY="0.0" />
+      <Point GraphId="c3c42" X="941.8756987713148" Y="618.5437609710549" GraphRef="ab98e" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="f66be">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="605.8537557515897" Y="750.9077181208054" GraphRef="b15ec" RelX="1.0" RelY="0.5" />
-      <Point X="651.6778523489932" Y="773.7549488870438" GraphRef="c49bb" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a5f41" X="605.8537557515897" Y="750.9077181208054" GraphRef="b15ec" RelX="1.0" RelY="0.5" />
+      <Point GraphId="c41ba" X="651.6778523489932" Y="773.7549488870438" GraphRef="c49bb" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="fb97c">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1128.759779692667" Y="896.195278067365" GraphRef="bdde7" RelX="0.0" RelY="0.0" />
-      <Point X="1109.2298684152775" Y="855.1254054017967" GraphRef="e941a" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="c2d6c" X="1128.759779692667" Y="896.195278067365" GraphRef="bdde7" RelX="0.0" RelY="0.0" />
+      <Point GraphId="cef0d" X="1109.2298684152775" Y="855.1254054017967" GraphRef="e941a" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f47b8">
+    <Graphics ZOrder="32835" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="ad59a" X="1177.666193408669" Y="866.3320873667612" GraphRef="d572e" RelX="0.0" RelY="0.0" />
+      <Point GraphId="d1322" X="1209.7004403270694" Y="775.1120524962967" GraphRef="ce526" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="d7069">
     <Graphics ZOrder="32839" LineStyle="Broken" LineThickness="1.0">
-      <Point X="740.7522517526618" Y="133.15708256084145" GraphRef="f4600" RelX="0.0" RelY="-1.0" />
-      <Point X="726.9238493223157" Y="81.15667434545735" GraphRef="ec9f4" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="a0dfa" X="740.7522517526618" Y="133.15708256084145" GraphRef="f4600" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="fedf7" X="726.9238493223157" Y="81.15667434545735" GraphRef="ec9f4" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="db8bd">
     <Graphics ZOrder="32840" LineStyle="Broken" LineThickness="1.0">
-      <Point X="854.852159374901" Y="190.3981025831841" GraphRef="fbfee" RelX="1.0" RelY="0.0" />
-      <Point X="871.3154256254019" Y="166.84756478606255" GraphRef="e7e8d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="dd0d4" X="854.852159374901" Y="190.3981025831841" GraphRef="fbfee" RelX="1.0" RelY="0.0" />
+      <Point GraphId="cc3c9" X="901.3154256254019" Y="170.84756478606255" GraphRef="e7e8d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="c4a1f">
     <Graphics ZOrder="32842" LineStyle="Broken" LineThickness="1.0">
-      <Point X="865.5455054143882" Y="489.94893683897226" GraphRef="b78b2" RelX="0.0" RelY="0.0" />
-      <Point X="780.3254566374201" Y="438.45651264890796" GraphRef="b792f" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="fd010" X="865.5455054143882" Y="489.94893683897226" GraphRef="b78b2" RelX="0.0" RelY="0.0" />
+      <Point GraphId="c7c1a" X="780.3254566374201" Y="438.45651264890796" GraphRef="b792f" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="d3934">
     <Graphics ZOrder="32844" LineStyle="Broken" LineThickness="1.0">
-      <Point X="454.34583068710396" Y="901.0652860502227" GraphRef="c3d61" RelX="-0.5" RelY="-1.0" />
-      <Point X="383.1858866695951" Y="872.5705331576728" GraphRef="a891c" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="cf8c5" X="454.34583068710396" Y="901.0652860502227" GraphRef="c3d61" RelX="-0.5" RelY="-1.0" />
+      <Point GraphId="b358b" X="383.1858866695951" Y="872.5705331576728" GraphRef="a891c" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e19c8">
+    <Graphics ZOrder="32849" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="f9ab5" X="689.9209480378255" Y="844.0362206080595" GraphRef="a7aed" RelX="-0.5" RelY="-1.0" />
+      <Point GraphId="b53d5" X="661.7443122326117" Y="822.9892881311873" GraphRef="e1132" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="43.2.1" GraphId="a72da" Href="https://www.omim.org/entry/200100">
@@ -645,7 +641,7 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
     <Graphics CenterX="935.2435116292696" CenterY="85.08819594977058" Width="92.38051438279822" Height="30.499999999999915" ZOrder="28672" FillColor="ffccff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
   <Label TextLabel="Chyclomicron" GraphId="bcd5d" GroupRef="dc6a8">
-    <Comment>Chyclomicron (CM) is one of the two main TG (triglyceride or triacylglycerol) carrying lipoproteins, which are spheroidal macromolecular complexes responsible for transporting lipids through plasma. </Comment>
+    <Comment>Chyclomicron (CM) is one of the two main TG (triglyceride or triacylglycerol) carrying lipoproteins, which are spheroidal macromolecular complexes responsible for transporting lipids through plasma.</Comment>
     <Comment>See also [https://en.wikipedia.org/wiki/Chylomicron]</Comment>
     <Graphics CenterX="766.1054892709225" CenterY="276.4978275982224" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
@@ -658,7 +654,7 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
   <Label TextLabel="43.2.2" GraphId="e7e8d" Href="https://www.omim.org/entry/605019">
     <Comment>Hypobetalipoproteinemia (APOB)</Comment>
     <BiopaxRef>cb2</BiopaxRef>
-    <Graphics CenterX="903.1133341144761" CenterY="166.84756478606255" Width="63.5958169781484" Height="30.833333333333144" ZOrder="32769" FillColor="ffccff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="933.1133341144761" CenterY="170.84756478606255" Width="63.5958169781484" Height="30.833333333333144" ZOrder="32769" FillColor="ffccff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
   <Label TextLabel="43.5.1&#xA;" GraphId="b2b1c" Href="https://www.omim.org/entry/238600">
     <Comment>Lipoprotein lipase deficiency (LPL)</Comment>
@@ -752,7 +748,6 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
     <Graphics CenterX="1209.7004403270694" CenterY="758.8620524962967" Width="85.13333204165777" Height="32.5" ZOrder="32789" FillColor="ffccff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
   <Label TextLabel="Remnant" GraphId="afe1e" GroupRef="f6a07">
-    <Comment></Comment>
     <Graphics CenterX="488.61752830176295" CenterY="269.4304542477127" Width="90.0" Height="25.0" ZOrder="32809" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="HDL3" GraphId="edc2b" GroupRef="a45d1">
@@ -815,59 +810,85 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
   <Shape GraphId="bd933" GroupRef="f29db">
     <Graphics CenterX="1241.3692142585326" CenterY="882.0202834019927" Width="130.29085965535057" Height="133.81406955218222" ZOrder="32829" FillColor="cccccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
-  <Group GroupId="c95e7" Style="Group" />
-  <Group GroupId="b4fd5" Style="Group" />
-  <Group GroupId="e919d" Style="Group" />
-  <Group GroupId="a99e0" GraphId="a1239" Style="Group" />
-  <Group GroupId="ab98e" GraphId="a1ae8" Style="Group" />
-  <Group GroupId="b0c05" GraphId="a3424" Style="Group" />
-  <Group GroupId="a45d1" GraphId="a3d29" Style="Group" />
-  <Group GroupId="e92a0" GraphId="a6b6b" Style="Group" />
-  <Group GroupId="e793e" GraphId="ab550" Style="Group" />
-  <Group GroupId="f29db" GraphId="ab814" Style="Group" />
-  <Group GroupId="f6a07" GraphId="b3f75" Style="Group" />
-  <Group GroupId="c112d" GraphId="cbbd7" Style="Group" />
-  <Group GroupId="d4ee4" GraphId="da60c" Style="Group" />
-  <Group GroupId="dc6a8" GraphId="e14d8" Style="Group" />
-  <Group GroupId="f503f" GraphId="e2a67" Style="Group" />
-  <Group GroupId="e944e" GraphId="e42eb" Style="Group" />
-  <Group GroupId="b2e01" GraphId="e6032" Style="Group" />
-  <Group GroupId="bd323" GraphId="ec9af" Style="Group" />
+  <Group GroupId="ab98e" GraphId="ab98e" Style="Group" />
+  <Group GroupId="b0c05" GraphId="b0c05" Style="Group" />
+  <Group GroupId="a45d1" GraphId="a45d1" Style="Group" />
+  <Group GroupId="e92a0" GraphId="e92a0" Style="Group" />
+  <Group GroupId="e793e" GraphId="e793e" Style="Group" />
+  <Group GroupId="f29db" GraphId="f29db" Style="Group" />
+  <Group GroupId="f6a07" GraphId="f6a07" Style="Group" />
+  <Group GroupId="c112d" GraphId="c112d" Style="Group" />
+  <Group GroupId="d4ee4" GraphId="d4ee4" Style="Group" />
+  <Group GroupId="dc6a8" GraphId="dc6a8" Style="Group" />
+  <Group GroupId="f503f" GraphId="f503f" Style="Group" />
+  <Group GroupId="e944e" GraphId="e944e" Style="Group" />
+  <Group GroupId="b2e01" GraphId="b2e01" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="edc">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19139765</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plasma lipoproteins: geneticinfluences and clinical implications.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Genet</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hegele RA</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a69">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15728179</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional dissection of an AP-2 beta2 appendage-binding sequence within the autosomal recessive hypercholesterolemia protein.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mishra SK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keyel PA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edeling MA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dupin AL</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Owen DJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Traub LM</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b7c">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25108285</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novel missense MTTP gene mutations causing abetalipoproteinemia.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">familial combined hyperlipidemia</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:13809</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tangier disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1388</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypobetalipoproteinemia</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1390</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autosomal recessive hypercholesterolemia</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0090105</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered lipoprotein metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000484</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">triacylglycerol metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000153</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">familial combined hyperlipidemia pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000175</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000013</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lipoprotein metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000482</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e64">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9783642403361</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physician's Guide to the Diagnosis, Treatment, and Follow-Up of Inherited Metabolic Diseases</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9783642403361</bp:SOURCE>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miller SA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burnett JR</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonis MA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McKnight CJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Bockxmeer FM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hooper AJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blau Nenad</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duran Marinus</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibson, K,  Michael</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dionisi-Vici, Carlo</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cbd">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24288038</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abetalipoproteinemia and homozygous hypobetalipoproteinemia: a framework for diagnosis and management.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Inherit Metab Dis</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hegele RA</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="afb">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6403642</bp:ID>
@@ -882,11 +903,6 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Groszek E</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McDonald GB</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered lipoprotein metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000484</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cb2">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28538136</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -951,50 +967,68 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gromada J</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baras A</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d07">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23475612</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eff">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2511019</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of both phospholipid and triglyceride transfer activities of microsomal triglyceride transfer protein in abetalipoproteinemia.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Lipid Res</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khatun I</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walsh MT</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hussain MM</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defective enzyme protein in lipoprotein lipase deficiency.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eur J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1989</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auwerx JH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Babirak SP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fujimoto WY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iverius PH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brunzell JD</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eae">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8939939</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dbe">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3630977</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A novel abetalipoproteinemia genotype. Identification of a missense mutation in the 97-kDa subunit of the microsomal triglyceride transfer protein that prevents complex formation with protein disulfide isomerase.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rehberg EF</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samson-Bouma ME</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kienzle B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blinderman L</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamil H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wetterau JR</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aggerbeck LP</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gordon DA</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An incomplete form of familial lipoprotein lipase deficiency presenting with type I hyperlipoproteinemia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Clin Pathol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1987</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berger GM</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">familial combined hyperlipidemia</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:13809</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autosomal recessive hypercholesterolemia</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0090105</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ca1">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17215125</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e53">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3944267</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular biology of PCSK9: its role in LDL metabolism.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trends Biochem Sci</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horton JD</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cohen JC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hobbs HH</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apolipoprotein C-II deficiency syndrome. Clinical features, lipoprotein characterization, lipase activity, and correction of hypertriglyceridemia after apolipoprotein C-II administration in two affected patients.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1986</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baggio G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manzato E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gabelli C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fellin R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martini S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enzi GB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verlato F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baiocchi MR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sprecher DL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kashyap ML</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c29">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3004475</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ApoE deficiency: markedly decreased levels of cellular ApoE mRNA.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Biophys Res Commun</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1986</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anchors JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gregg RE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Law SW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brewer HB Jr</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ac6">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6961921</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lipoprotein abnormalities associated with a familial deficiency of hepatic lipase.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atherosclerosis</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1982</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breckenridge WC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Little JA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alaupovic P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang CS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuksis A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kakis G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindgren F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gardiner G</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cda">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7426196</bp:ID>
@@ -1023,6 +1057,49 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mancuso JP</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rader DJ</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a02">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">168823</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Familial hyperalphalipoproteinemia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arch Intern Med</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glueck CJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fallat RW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Millett F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steiner PM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cea">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">194920</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isolation and characterization of an abnormal high density lipoprotein in Tangier Diesase.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1977</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assmann G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbert PN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fredrickson DS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forte T</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aa3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">190272</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The lipoprotein abnormality in Tangier disease: quantitation of A apoproteins.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1977</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assmann G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smootz E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adler K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capurso A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oette K</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c91">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4061122</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evidence for deficiency of high density lipoprotein lecithin: cholesterol acyltransferase activity (alpha-LCAT) in fish eye disease.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acta Med Scand</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1985</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlson LA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Holmquist L</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a07">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7327552</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -1032,6 +1109,46 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albers JJ</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen C</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adolphson JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f5b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6805319</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Detection of heterozygotes for familial lecithin: cholesterol acyltransferase (LCAT) deficiency.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Hum Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1982</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frohlich J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McLeod R</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab5">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16452169</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crystal structure of human apolipoprotein A-I: insights into its protective effect against cardiovascular diseases.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ajees AA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anantharamaiah GM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mishra VK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hussain MM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murthy HM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a25">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21480869</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novel mutations in scavenger receptor BI associated with high HDL cholesterol in humans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clin Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brunham LR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tietjen I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bochem AE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Singaraja RR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franchini PL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radomski C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mattice M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legendre A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hovingh GK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kastelein JJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hayden MR</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b1e">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12730697</bp:ID>
@@ -1066,66 +1183,23 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seidah NG</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boileau C</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">triacylglycerol metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000153</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a25">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21480869</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bf2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18499582</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novel mutations in scavenger receptor BI associated with high HDL cholesterol in humans.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clin Genet</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brunham LR</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tietjen I</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bochem AE</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Singaraja RR</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franchini PL</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radomski C</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mattice M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legendre A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hovingh GK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kastelein JJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hayden MR</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a02">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">168823</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Familial hyperalphalipoproteinemia.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arch Intern Med</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glueck CJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fallat RW</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Millett F</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steiner PM</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f5b">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6805319</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Detection of heterozygotes for familial lecithin: cholesterol acyltransferase (LCAT) deficiency.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Hum Genet</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1982</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frohlich J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McLeod R</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b5a">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18039658</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The proprotein convertase PCSK9 induces the degradation of low density lipoprotein receptor (LDLR) and its closest family members VLDLR and ApoER2.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A PCSK9 missense variant associated with a reduced risk of early-onset myocardial infarction.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N Engl J Med</bp:SOURCE>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poirier S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayer G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benjannet S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bergeron E</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marcinkiewicz J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nassoury N</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayer H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nimpf J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prat A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seidah NG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathiresan S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f3f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52771</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A new type of familial hypercholesterolaemia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lancet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Higgins MJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lecamwasam DS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galton DJ</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ef6">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3477815</bp:ID>
@@ -1141,13 +1215,56 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vega GL</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grundy SM</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dbe">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3630977</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a69">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15728179</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An incomplete form of familial lipoprotein lipase deficiency presenting with type I hyperlipoproteinemia.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Clin Pathol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1987</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berger GM</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional dissection of an AP-2 beta2 appendage-binding sequence within the autosomal recessive hypercholesterolemia protein.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mishra SK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keyel PA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edeling MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dupin AL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Owen DJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Traub LM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c7b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12016260</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutation in the ARH gene and a chromosome 13q locus influence cholesterol levels in a new form of digenic-recessive familial hypercholesterolemia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circ Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al-Kateb H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bähring D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoffmann K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strauch K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Busjahn A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nürnberg G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jouma M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bautz EK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dresel HA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luft FC</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="edc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19139765</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plasma lipoproteins: geneticinfluences and clinical implications.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hegele RA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a5e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27068984</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current trends in oxysterol research.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Soc Trans</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Griffiths WJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abdel-Khalik J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hearn T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yutuc E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morgan AH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang Y</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e62">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26965621</bp:ID>
@@ -1205,178 +1322,6 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathiresan S</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rader DJ</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cbd">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24288038</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abetalipoproteinemia and homozygous hypobetalipoproteinemia: a framework for diagnosis and management.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Inherit Metab Dis</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hegele RA</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a67">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23066022</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studies on the substrate and stereo/regioselectivity of adipose triglyceride lipase, hormone-sensitive lipase, and diacylglycerol-O-acyltransferases.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eichmann TO</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kumari M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haas JT</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farese RV Jr</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zimmermann R</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lass A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zechner R</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aa3">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">190272</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The lipoprotein abnormality in Tangier disease: quantitation of A apoproteins.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1977</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assmann G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smootz E</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adler K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capurso A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oette K</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c7b">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12016260</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutation in the ARH gene and a chromosome 13q locus influence cholesterol levels in a new form of digenic-recessive familial hypercholesterolemia.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circ Res</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al-Kateb H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bähring D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoffmann K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strauch K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Busjahn A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nürnberg G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jouma M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bautz EK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dresel HA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luft FC</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c29">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3004475</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ApoE deficiency: markedly decreased levels of cellular ApoE mRNA.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Biophys Res Commun</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1986</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anchors JM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gregg RE</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Law SW</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brewer HB Jr</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="abb">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26224785</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novel Abetalipoproteinemia Missense Mutation Highlights the Importance of the N-Terminal β-Barrel in Microsomal Triglyceride Transfer Protein Function.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circ Cardiovasc Genet</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walsh MT</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iqbal J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josekutty J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soh J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Di Leo E</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Özaydin E</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gündüz M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tarugi P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hussain MM</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lipoprotein metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000482</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000013</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c91">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4061122</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evidence for deficiency of high density lipoprotein lecithin: cholesterol acyltransferase activity (alpha-LCAT) in fish eye disease.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acta Med Scand</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1985</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlson LA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Holmquist L</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tangier disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1388</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cea">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">194920</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isolation and characterization of an abnormal high density lipoprotein in Tangier Diesase.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1977</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assmann G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbert PN</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fredrickson DS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forte T</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e64">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9783642403361</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physician's Guide to the Diagnosis, Treatment, and Follow-Up of Inherited Metabolic Diseases</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9783642403361</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blau Nenad</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duran Marinus</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibson, K,  Michael</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dionisi-Vici, Carlo</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a5e">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27068984</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Current trends in oxysterol research.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Soc Trans</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Griffiths WJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abdel-Khalik J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hearn T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yutuc E</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morgan AH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang Y</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab5">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16452169</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crystal structure of human apolipoprotein A-I: insights into its protective effect against cardiovascular diseases.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ajees AA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anantharamaiah GM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mishra VK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hussain MM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murthy HM</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eff">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2511019</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defective enzyme protein in lipoprotein lipase deficiency.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eur J Clin Invest</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1989</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auwerx JH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Babirak SP</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fujimoto WY</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iverius PH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brunzell JD</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f3f">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52771</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A new type of familial hypercholesterolaemia.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lancet</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Higgins MJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lecamwasam DS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galton DJ</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="caa">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24808179</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -1394,18 +1339,83 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seidah NG</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Day R</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">familial combined hyperlipidemia pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000175</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bf2">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18499582</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ca1">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17215125</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A PCSK9 missense variant associated with a reduced risk of early-onset myocardial infarction.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N Engl J Med</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathiresan S</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular biology of PCSK9: its role in LDL metabolism.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trends Biochem Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horton JD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cohen JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hobbs HH</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a67">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23066022</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studies on the substrate and stereo/regioselectivity of adipose triglyceride lipase, hormone-sensitive lipase, and diacylglycerol-O-acyltransferases.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eichmann TO</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kumari M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haas JT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farese RV Jr</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zimmermann R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lass A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zechner R</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d07">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23475612</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of both phospholipid and triglyceride transfer activities of microsomal triglyceride transfer protein in abetalipoproteinemia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Lipid Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khatun I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walsh MT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hussain MM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eae">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8939939</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A novel abetalipoproteinemia genotype. Identification of a missense mutation in the 97-kDa subunit of the microsomal triglyceride transfer protein that prevents complex formation with protein disulfide isomerase.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rehberg EF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samson-Bouma ME</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kienzle B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blinderman L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamil H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wetterau JR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aggerbeck LP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gordon DA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="abb">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26224785</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novel Abetalipoproteinemia Missense Mutation Highlights the Importance of the N-Terminal β-Barrel in Microsomal Triglyceride Transfer Protein Function.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circ Cardiovasc Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walsh MT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iqbal J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josekutty J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soh J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Di Leo E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Özaydin E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gündüz M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tarugi P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hussain MM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b7c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25108285</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novel missense MTTP gene mutations causing abetalipoproteinemia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miller SA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burnett JR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonis MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McKnight CJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Bockxmeer FM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hooper AJ</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fb8">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22236406</bp:ID>
@@ -1424,20 +1434,22 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bozon D</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sassolas A</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ac6">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6961921</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b5a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18039658</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lipoprotein abnormalities associated with a familial deficiency of hepatic lipase.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atherosclerosis</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1982</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breckenridge WC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Little JA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alaupovic P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang CS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuksis A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kakis G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindgren F</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gardiner G</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The proprotein convertase PCSK9 induces the degradation of low density lipoprotein receptor (LDLR) and its closest family members VLDLR and ApoER2.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poirier S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayer G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benjannet S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bergeron E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marcinkiewicz J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nassoury N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayer H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nimpf J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prat A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seidah NG</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e4a">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11717312</bp:ID>
@@ -1456,28 +1468,5 @@ ApoB 48 is a unique protein to chylomicrons from the small intestine. After most
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wagner EF</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zechner R</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e53">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3944267</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apolipoprotein C-II deficiency syndrome. Clinical features, lipoprotein characterization, lipase activity, and correction of hypertriglyceridemia after apolipoprotein C-II administration in two affected patients.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1986</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baggio G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manzato E</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gabelli C</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fellin R</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martini S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enzi GB</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verlato F</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baiocchi MR</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sprecher DL</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kashyap ML</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypobetalipoproteinemia</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1390</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="eIF5A regulation in response to inhibition of the nuclear export system" Data-Source="WikiPathways" Version="WP3302_r87966" Author="[Khanspers, MaintBot, AlexanderPico, Susan]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="eIF5A regulation in response to inhibition of the nuclear export system" Data-Source="WikiPathways" Version="WP3302_r123388" Author="[Khanspers, MaintBot, AlexanderPico, Susan, Egonw]" Last-Modified="20220723062024" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Model of eIF5A regulation in response to inhibition of the nuclear export system. Under normal conditions, IGF2BP1 is exported by XPO1 and binds to eIF5A in cytoplasm. The binding with IGF2BP1 prevents eIF5A from accumulating in mitochondria. SINE (Selective Inhibitors of Nuclear Export) inhibits the nuclear export of IGF2BP1, resulting in decreased cytoplasmic IGF2BP1. Unbound eIF5A accumulates in mitochondria and induces apoptosis.</Comment>
   <BiopaxRef>b57</BiopaxRef>
-  <Graphics BoardWidth="955.0" BoardHeight="357.0" />
-  <DataNode TextLabel="EXP4" GraphId="ace16" Type="GeneProduct" GroupRef="c264b">
-    <Graphics CenterX="165.5" CenterY="254.0" Width="51.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="Ensembl" ID="ENSG00000132953" />
-  </DataNode>
+  <Graphics BoardWidth="955.0" BoardHeight="369.0" />
   <DataNode TextLabel="EIF5A" GraphId="d5475" Type="GeneProduct" GroupRef="c264b">
     <Graphics CenterX="143.0" CenterY="234.0" Width="46.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000132507" />
   </DataNode>
+  <DataNode TextLabel="EXP4" GraphId="ace16" Type="GeneProduct" GroupRef="c264b">
+    <Graphics CenterX="165.5" CenterY="254.0" Width="51.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000132953" />
+  </DataNode>
   <DataNode TextLabel="Apoptosis" GraphId="e7048" Type="Pathway">
-    <Graphics CenterX="757.0" CenterY="214.04816295450217" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Graphics CenterX="757.0" CenterY="214.04816295450217" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP254" />
   </DataNode>
   <DataNode TextLabel="IGF2BP1" GraphId="a2cd3" Type="GeneProduct" GroupRef="aa209">
@@ -55,70 +55,70 @@
     <Graphics CenterX="175.0" CenterY="122.0" Width="48.0" Height="20.0" ZOrder="32783" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000082898" />
   </DataNode>
-  <Interaction GraphId="id26b4db4f">
+  <Interaction GraphId="ida3c2409">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="394.0" Y="167.0" GraphRef="f5777" RelX="1.0" RelY="0.0" />
-      <Point X="442.5" Y="192.0" GraphRef="f5557" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id2ca87cd4">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="400.0" Y="296.0" GraphRef="bfcd5" RelX="0.0" RelY="-1.0" />
-      <Point X="442.5" Y="256.0" GraphRef="f5557" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id3b9fd6d5">
-    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="423.0" Y="306.0" GraphRef="bfcd5" RelX="1.0" RelY="0.0" />
-      <Point X="621.0" Y="221.0" GraphRef="b627d" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id523509c8">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="221.0" Y="132.0" GraphRef="f2c9f" RelX="1.0" RelY="0.0" />
-      <Point X="307.0" Y="167.0" GraphRef="f5777" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="f1ce7" X="203.0" Y="260.0" GraphRef="c264b" RelX="1.0" RelY="0.5" />
+      <Point GraphId="e9ac1" X="258.0" Y="291.0" GraphRef="ce2a2" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id580a2022">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="349.0" Y="307.0" GraphRef="c0db7" RelX="1.0" RelY="0.0" />
-      <Point X="377.0" Y="306.0" GraphRef="bfcd5" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="e7327" X="349.0" Y="307.0" GraphRef="ce2a2" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d10db" X="377.0" Y="306.0" GraphRef="bfcd5" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="ida3c2409">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="203.0" Y="260.0" GraphRef="d3810" RelX="1.0" RelY="0.5" />
-      <Point X="258.0" Y="291.0" GraphRef="c0db7" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+  <Interaction GraphId="id3b9fd6d5">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="d0f3f" X="423.0" Y="306.0" GraphRef="bfcd5" RelX="1.0" RelY="0.0" />
+      <Point GraphId="fdc6d" X="621.0" Y="221.0" GraphRef="b627d" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="ida3c44fa2">
+  <Interaction GraphId="id523509c8">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="679.0" Y="214.0" GraphRef="ef914" RelX="1.0" RelY="0.0" />
-      <Point X="717.0" Y="214.04816295450217" GraphRef="e7048" RelX="-1.0" RelY="0.0" ArrowHead="TBar" />
+      <Point GraphId="b5af8" X="221.0" Y="132.0" GraphRef="f53db" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b401f" X="307.0" Y="167.0" GraphRef="cf092" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2ca87cd4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="f6ed4" X="400.0" Y="296.0" GraphRef="bfcd5" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="fa806" X="442.5" Y="256.0" GraphRef="aa209" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id26b4db4f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="c7b18" X="394.0" Y="167.0" GraphRef="cf092" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d4d42" X="442.5" Y="192.0" GraphRef="aa209" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idcaffb1a4">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="92.5" Y="154.0" GraphRef="b7b8f" RelX="0.0" RelY="-1.0" />
-      <Point X="139.0" Y="132.0" GraphRef="f2c9f" RelX="-1.0" RelY="0.0" ArrowHead="TBar" />
+      <Point GraphId="aec3e" X="92.5" Y="154.0" GraphRef="b7b8f" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="bb905" X="139.0" Y="132.0" GraphRef="f53db" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida3c44fa2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="aead6" X="679.0" Y="214.0" GraphRef="ef914" RelX="1.0" RelY="0.0" />
+      <Point GraphId="c4492" X="717.0" Y="214.04816295450217" GraphRef="e7048" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Label TextLabel="SINE" GraphId="b7b8f">
     <Graphics CenterX="92.5" CenterY="170.0" Width="49.0" Height="32.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Pentagon" LineThickness="2.0" />
   </Label>
-  <Label TextLabel="Nucleus" GraphId="bc76f">
-    <Graphics CenterX="130.0" CenterY="74.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
   <Label TextLabel="SINE: Selective inhibitors of nuclear export&#xA;" GraphId="f8dfa">
     <Graphics CenterX="790.5" CenterY="44.0" Width="269.0" Height="22.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Nucleus" GraphId="bc76f">
+    <Graphics CenterX="130.0" CenterY="74.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Cytoplasm" GraphId="d7c20">
     <Graphics CenterX="342.0" CenterY="91.0" Width="80.0" Height="20.0" ZOrder="32777" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
@@ -132,14 +132,12 @@
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Mitochondria" />
     <Graphics CenterX="623.0" CenterY="214.0" Width="168.0" Height="112.0" ZOrder="-2" FillColor="eeedee" FontSize="10" Valign="Middle" ShapeType="Mitochondria" LineThickness="3.0" Color="c0c0c0" Rotation="1.5707963267948966" />
   </Shape>
-  <Group GroupId="ce2a2" GraphId="c0db7" Style="Complex" />
-  <Group GroupId="c264b" GraphId="d3810" Style="Complex" />
-  <Group GroupId="b28ea" GraphId="d8a0b" Style="Group" />
-  <Group GroupId="f53db" GraphId="f2c9f" Style="Complex" />
-  <Group GroupId="aa209" GraphId="f5557" Style="Complex" />
-  <Group GroupId="cf092" GraphId="f5777" Style="Complex" />
-  <Group GroupId="cb26b" GraphId="f90b9" Style="Group" />
-  <Group GroupId="b4220" GraphId="fd2b0" Style="Group" />
+  <Group GroupId="cb26b" GraphId="cb26b" Style="Group" />
+  <Group GroupId="ce2a2" GraphId="ce2a2" Style="Complex" />
+  <Group GroupId="c264b" GraphId="c264b" Style="Complex" />
+  <Group GroupId="f53db" GraphId="f53db" Style="Complex" />
+  <Group GroupId="cf092" GraphId="cf092" Style="Complex" />
+  <Group GroupId="aa209" GraphId="aa209" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
@@ -178,4 +176,3 @@
     </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

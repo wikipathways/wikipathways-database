@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cancer immunotherapy by CTLA4 blockade" Data-Source="WikiPathways" Version="WP4582_r108125" Author="[Khanspers, Fehrhart]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cancer immunotherapy by CTLA4 blockade" Data-Source="WikiPathways" Version="WP4582_r123435" Author="[Khanspers, Fehrhart, Egonw]" Last-Modified="20220727043659" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Immune checkpoints are hardwired into the immune system and are crucial for maintaining self-tolerance. Tumors can use these checkpoints to protect themselves from immune system attacks. 
 CTLA-4 is expressed on T cells and is a negative regulator of T cell activation. CTLA4 counteracts the activity of the T cell co-stimulatory receptor, CD28, which amplifies TCR signaling once antigen is bound. CTLA-4 and CD28 share the same ligands, CD80 and CD86, although CTLA-4 has a higher affinity. This is represented in the pathway with a blue inhibitory interaction.  One strategy for cancer immunotherapy is to block CTLA-4, thereby removing the negative regulation on T-cell activation. The first checkpoint antibody approved by the FDA was ipilimumab, approved in 2011 for treatment of melanoma. 
 
@@ -8,9 +8,9 @@ The [https://www.nobelprize.org/prizes/medicine/2018/summary/ 2018 Nobel prize i
 Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-science/antibodies/antibodies-learning-center/antibodies-resource-library/cell-signaling-pathways/ctla4-signaling-pathway.html CTLA4 Signaling Pathway] and [https://en.wikipedia.org/wiki/Immune_checkpoint Wikipedia].</Comment>
   <BiopaxRef>f09</BiopaxRef>
   <BiopaxRef>c47</BiopaxRef>
-  <Graphics BoardWidth="1127.9840065265278" BoardHeight="725.7001102535833" />
+  <Graphics BoardWidth="1256.6289343984486" BoardHeight="807.0032571959587" />
   <DataNode TextLabel="TCR Signaling" GraphId="a77f8" Type="Pathway">
-    <Graphics CenterX="287.7618522601984" CenterY="563.3958103638369" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Graphics CenterX="287.7618522601984" CenterY="563.3958103638369" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP69" />
   </DataNode>
   <DataNode TextLabel="PPP2CA" GraphId="ad3b3" Type="GeneProduct">
@@ -18,7 +18,7 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
     <Xref Database="Ensembl" ID="ENSG00000113575" />
   </DataNode>
   <DataNode TextLabel="Akt Signaling" GraphId="b0708" Type="Pathway">
-    <Graphics CenterX="656.4827899568094" CenterY="571.1371921370726" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Graphics CenterX="656.4827899568094" CenterY="571.1371921370726" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP4172" />
   </DataNode>
   <DataNode TextLabel="Ipilimumab" GraphId="b24d9" Type="Metabolite" GroupRef="c9cab">
@@ -105,17 +105,31 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
     <Graphics CenterX="462.4883053822238" CenterY="432.43593057631756" Width="60.0" Height="25.0" ZOrder="32998" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000117461" />
   </DataNode>
+  <Interaction GraphId="e777f">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="c3b4e" X="446.83848884598683" Y="452.93593057631756" GraphRef="e30ab" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f8bdf" X="305.39381809463583" Y="390.4831336007591" GraphRef="f04b6" RelX="0.5" RelY="1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f7246">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="ff098" X="287.39381809463583" Y="390.4831336007591" GraphRef="f04b6" RelX="0.0" RelY="1.0" />
+      <Point GraphId="af810" X="287.7618522601984" Y="550.8958103638369" GraphRef="a77f8" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Interaction GraphId="id1d95f1b3">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="286.965246666063" Y="223.87388990328043" GraphRef="e1c03" RelX="0.0" RelY="1.0" />
-      <Point X="287.39381809463583" Y="316.4831336007591" GraphRef="f787c" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point GraphId="ce609" X="286.965246666063" Y="223.87388990328043" GraphRef="e1c03" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f2bf1" X="287.39381809463583" Y="316.4831336007591" GraphRef="f04b6" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id1f573d29">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="585.829972931433" Y="209.7704692626977" GraphRef="e02d8" RelX="0.0" RelY="1.0" />
-      <Point X="701.9407731500867" Y="348.6461143388101" GraphRef="fcef8" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point GraphId="cde4a" X="585.829972931433" Y="209.77046926269773" GraphRef="c9ea8" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b87d6" X="701.9407731500867" Y="348.6461143388101" GraphRef="fcef8" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
       <Anchor Position="0.4" Shape="None" GraphId="a92ec" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -125,44 +139,30 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
     <BiopaxRef>daf</BiopaxRef>
     <BiopaxRef>af4</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0" Color="0066ff">
-      <Point X="632.2742930188945" Y="265.3207272931427" GraphRef="a92ec" RelX="0.0" RelY="0.0" />
-      <Point X="545.7710660110965" Y="265.60130999928765" GraphRef="f1218" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="c7221" X="632.2742930188945" Y="265.3207272931427" GraphRef="a92ec" RelX="0.0" RelY="0.0" />
+      <Point GraphId="a619f" X="545.7710660110965" Y="265.6013099992877" GraphRef="f1218" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id84dbbf0d">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="446.83848884598683" Y="452.93593057631756" GraphRef="b7b07" RelX="0.0" RelY="1.0" />
-      <Point X="611.4827899568094" Y="571.1371921370726" GraphRef="b0708" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ida5f79288">
-    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="446.83848884598683" Y="452.93593057631756" GraphRef="b7b07" RelX="0.0" RelY="1.0" />
-      <Point X="305.39381809463583" Y="390.4831336007591" GraphRef="f787c" RelX="0.5" RelY="1.0" ArrowHead="mim-conversion" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idabdd1524">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="287.39381809463583" Y="390.4831336007591" GraphRef="f787c" RelX="0.0" RelY="1.0" />
-      <Point X="287.7618522601984" Y="550.8958103638369" GraphRef="a77f8" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="b8209" X="446.83848884598683" Y="452.93593057631756" GraphRef="e30ab" RelX="0.0" RelY="1.0" />
+      <Point GraphId="dd21c" X="611.4827899568094" Y="571.1371921370726" GraphRef="b0708" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idb88160ba">
     <BiopaxRef>b57</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="720.6885148046308" Y="309.22432489535913" GraphRef="a0110" RelX="0.0" RelY="1.0" />
-      <Point X="720.1907731500867" Y="348.6461143388101" GraphRef="fcef8" RelX="0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="d5edd" X="720.6885148046308" Y="309.22432489535913" GraphRef="c9cab" RelX="0.0" RelY="1.0" />
+      <Point GraphId="bbccb" X="720.1907731500867" Y="348.6461143388101" GraphRef="fcef8" RelX="0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc33f25ed">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="405.66339711410546" Y="452.93593057631756" GraphRef="b7b07" RelX="-0.5" RelY="1.0" />
-      <Point X="404.516403402187" Y="616.6713244228426" GraphRef="b0912" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e401a" X="405.66339711410546" Y="452.93593057631756" GraphRef="e30ab" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="c6e4f" X="404.516403402187" Y="616.6713244228426" GraphRef="b0912" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -170,8 +170,8 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
     <BiopaxRef>f7e</BiopaxRef>
     <BiopaxRef>b19</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="696.423966427398" Y="386.01166055729726" GraphRef="ad3b3" RelX="-1.0" RelY="0.0" />
-      <Point X="656.4827899568094" Y="558.6371921370726" GraphRef="b0708" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="d6855" X="696.423966427398" Y="386.01166055729726" GraphRef="ad3b3" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="e0a02" X="656.4827899568094" Y="558.6371921370726" GraphRef="b0708" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -179,23 +179,23 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
     <BiopaxRef>f7e</BiopaxRef>
     <BiopaxRef>b19</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="696.423966427398" Y="436.0116605572973" GraphRef="d4867" RelX="-1.0" RelY="0.0" />
-      <Point X="505.18867230974956" Y="369.4612403892306" GraphRef="ab01b" RelX="0.5" RelY="1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="df5f3" X="696.423966427398" Y="436.0116605572973" GraphRef="d4867" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="a4296" X="505.18867230974956" Y="369.4612403892306" GraphRef="ab01b" RelX="0.5" RelY="1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c7405">
     <Graphics ZOrder="32783" LineThickness="1.0">
-      <Point X="585.829972931433" Y="209.7704692626977" GraphRef="e02d8" RelX="0.0" RelY="1.0" />
-      <Point X="489.18867230974956" Y="344.4612403892306" GraphRef="ab01b" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point GraphId="c71d2" X="585.829972931433" Y="209.77046926269773" GraphRef="c9ea8" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fe1a8" X="489.18867230974956" Y="344.4612403892306" GraphRef="ab01b" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
       <Anchor Position="0.41451125618800305" Shape="None" GraphId="f1218" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <GraphicalLine GraphId="ad323" GroupRef="a09fd">
     <Graphics ZOrder="32999" LineThickness="1.0" Color="0066ff">
-      <Point X="921.5134182912333" Y="60.75548741428718" />
-      <Point X="965.6310653500589" Y="60.755487414287096" ArrowHead="mim-inhibition" />
+      <Point GraphId="d92e7" X="921.5134182912333" Y="60.75548741428718" />
+      <Point GraphId="f92fa" X="965.6310653500589" Y="60.755487414287096" ArrowHead="mim-inhibition" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="IL-2 expression&#xA;Immune Response" GraphId="b0912">
@@ -217,29 +217,44 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="525.3583241455347" CenterY="529.0617677583843" Width="717.7508269018742" Height="333.2766849903978" ZOrder="32775" FontSize="12" Valign="Bottom" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Group GroupId="a09fd" Style="Group" />
-  <Group GroupId="c9cab" GraphId="a0110" Style="Group" />
-  <Group GroupId="e30ab" GraphId="b7b07" Style="Group" />
-  <Group GroupId="c9ea8" GraphId="e02d8" Style="Group" />
-  <Group GroupId="f04b6" GraphId="f787c" Style="Complex" />
-  <Group GroupId="b966c" GraphId="f7f72" Style="Complex" />
+  <Group GroupId="a09fd" GraphId="a09fd" Style="Group" />
+  <Group GroupId="c9cab" GraphId="c9cab" Style="Group" />
+  <Group GroupId="e30ab" GraphId="e30ab" Style="Group" />
+  <Group GroupId="c9ea8" GraphId="c9ea8" Style="Group" />
+  <Group GroupId="f04b6" GraphId="f04b6" Style="Complex" />
+  <Group GroupId="b966c" GraphId="b966c" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:162</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="af4">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16551244</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A molecular perspective of CTLA-4 function.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annu Rev Immunol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teft WA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kirchhof MG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madrenas J</bp:AUTHORS>
-    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000084</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adaptive immune response pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000235</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immune response pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000023</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">professional antigen presenting cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000145</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f09">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30511409</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -253,29 +268,6 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fotouhi A</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aghebati-Maleki L</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b19">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21904389</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New insights into the T cell synapse from single molecule techniques.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Immunol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dustin ML</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Depoil D</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="af6">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22116087</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The emerging role of CTLA4 as a cell-extrinsic regulator of T cell responses.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Immunol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walker LS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sansom DM</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immune response pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000023</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c47">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8596936</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -286,6 +278,15 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krummel MF</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allison JP</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="af6">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22116087</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The emerging role of CTLA4 as a cell-extrinsic regulator of T cell responses.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walker LS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sansom DM</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="daf">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1191089</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -295,6 +296,16 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trinca C</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bressler R</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walson P</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="af4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16551244</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A molecular perspective of CTLA-4 function.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annu Rev Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teft WA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kirchhof MG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madrenas J</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b57">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29339377</bp:ID>
@@ -325,26 +336,6 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolchok JD</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allison JP</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000084</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adaptive immune response pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000235</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">professional antigen presenting cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000145</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f7e">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19426232</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -354,6 +345,14 @@ Partially based on Thermo Fisher [https://www.thermofisher.com/us/en/home/life-s
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Podojil JR</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miller SD</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b19">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21904389</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New insights into the T cell synapse from single molecule techniques.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dustin ML</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Depoil D</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

@@ -1,701 +1,957 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Degradation pathway of sphingolipids, including diseases" Data-Source="WikiPathways" Version="WP4153_r120394" Author="[DeSl, Andra, Egonw, AdoBioInfo, IreneHemel, Khanspers, Finterly, Fehrhart]" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">The degradation of SphingoLipids (SLs) occurs through a series of specific hydrolases in the lysosome, after the compounds have been transported via the endosomal pathway. Disorders resulting from an enzyme defect are highlighted in pink. Hydrolase defects result in accumulation and lysosomal storage of substrates, leading to cell pathology.
-This pathway was inspired by Chapter 25 ("Lysosomal Storage Disorders Including Neuronal Ceroid Lipofuscinoses") of the book of Blau (ISBN 3642403360 (978-3642403361)).
-
-Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP4153 CPTAC Assay Portal]</Comment>
-  <Comment Source="WikiPathways-description">New Pathway on Sphingolipids.</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Degradation pathway of sphingolipids, including diseases" Data-Source="WikiPathways" Version="WP4153_r123688" Author="[DeSl, Andra, Egonw, AdoBioInfo, IreneHemel, Khanspers, Finterly, Fehrhart]" Last-Modified="20220810113030" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Test pathway to include dieases in pathways, in order to deduce biomarkers.</Comment>
   <BiopaxRef>eee</BiopaxRef>
-  <Graphics BoardWidth="1342.8285555495215" BoardHeight="1006.1323853425366" />
-  <DataNode TextLabel="HEXB" GraphId="a51f2" Type="Protein" GroupRef="fa305">
-    <Graphics CenterX="774.4180689424367" CenterY="264.1098460508701" Width="148.07898259705485" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <BiopaxRef>d3a</BiopaxRef>
+  <BiopaxRef>a58</BiopaxRef>
+  <BiopaxRef>bff</BiopaxRef>
+  <Graphics BoardWidth="1827.7967806841061" BoardHeight="1016.1323853425366" />
+  <DataNode TextLabel="SCARB2" GraphId="ab01a" Type="GeneProduct">
+    <Comment>AKA scavenger receptor class B, member 2/ lysosomal intergral membrane protein 2</Comment>
+    <Graphics CenterX="1419.14950455099" CenterY="556.7367028256492" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="950" />
+  </DataNode>
+  <DataNode TextLabel="PSAP" GraphId="c6dab" Type="GeneProduct">
+    <Graphics CenterX="1419.14950455099" CenterY="340.659434048332" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5660" />
+  </DataNode>
+  <DataNode TextLabel="HEXB" GraphId="f166d" Type="Protein" GroupRef="f0e00">
+    <Graphics CenterX="803.4665997463243" CenterY="274.10984605087015" Width="186.17604420483016" Height="25.00000000000001" ZOrder="33025" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P07686" />
   </DataNode>
-  <DataNode TextLabel="digalactosylceramide" GraphId="a5d49" Type="Metabolite" GroupRef="de500">
-    <Graphics CenterX="1116.1432396251678" CenterY="596.5333506377399" Width="131.7888069332986" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:28811" />
+  <DataNode TextLabel="digalactosylceramide" GraphId="fe1b0" Type="Metabolite" GroupRef="cdbc9">
+    <Comment>AKA Gal-α(1-4)-Gal-Cer</Comment>
+    <Graphics CenterX="1126.1432396251678" CenterY="606.5333506377399" Width="131.7888069332986" Height="25.0" ZOrder="33026" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="134506" />
   </DataNode>
-  <DataNode TextLabel="GM1-beta-galactosidase (GLB)" GraphId="a6abc" Type="Protein" GroupRef="b1bab">
-    <Graphics CenterX="406.6910105723202" CenterY="73.65190226893279" Width="186.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="GM1-beta-galactosidase (GLB):" GraphId="d8ccf" Type="Protein" GroupRef="b6add">
+    <Graphics CenterX="416.6910105723202" CenterY="83.65190226893279" Width="214.67033396549482" Height="25.0" ZOrder="33027" FontSize="12" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="3.2.1.23" />
   </DataNode>
-  <DataNode TextLabel="Sap-B" GraphId="a9922" Type="Protein" GroupRef="b1bab">
+  <DataNode TextLabel="Sap-B" GraphId="f9e63" Type="Protein" GroupRef="b6add">
     <Comment>SaposinB</Comment>
-    <Graphics CenterX="406.6910105723202" CenterY="48.65190226893279" Width="186.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="416.6910105723202" CenterY="58.65190226893279" Width="214.67033396549482" Height="24.999999999999996" ZOrder="33028" FontSize="12" Valign="Middle" />
     <Xref Database="InterPro" ID="IPR008139" />
   </DataNode>
-  <DataNode TextLabel="digalactosylceramide beta" GraphId="afe5d" Type="Metabolite" GroupRef="de500">
-    <Graphics CenterX="1198.0" CenterY="572.0" Width="164.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="digalactosylceramide beta" GraphId="f4f44" Type="Metabolite" GroupRef="cdbc9">
+    <Graphics CenterX="1217.9032882011604" CenterY="582.0" Width="183.80657640232124" Height="25.0" ZOrder="33029" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:134507" />
   </DataNode>
-  <DataNode TextLabel="HEXA" GraphId="b205a" Type="Protein" GroupRef="ec2eb">
+  <DataNode TextLabel="HEXA" GraphId="a7bff" Type="Protein" GroupRef="dbc4c">
     <Comment>Hexosaminidase A; HEXA and the cofactor GM2 activator protein catalyze the degradation of the GM2 gangliosides</Comment>
     <BiopaxRef>bd5</BiopaxRef>
-    <Graphics CenterX="382.2187971521325" CenterY="172.17965443240627" Width="91.85408299866131" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="392.2187971521325" CenterY="182.17965443240627" Width="91.85408299866131" Height="25.0" ZOrder="33030" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P06865" />
   </DataNode>
-  <DataNode TextLabel="Globoside" GraphId="b2c82" Type="Metabolite" GroupRef="cbadc">
-    <Comment></Comment>
-    <Graphics CenterX="1117.0" CenterY="168.0" Width="124.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="Globoside" GraphId="e572f" Type="Metabolite" GroupRef="f9f0c">
+    <Comment>AKA GalNAc -ß(1-3)Gal-Glc-Cer</Comment>
+    <Graphics CenterX="1129.1432396251678" CenterY="178.0" Width="150.14556533513888" Height="25.00000000000001" ZOrder="33031" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:61360" />
   </DataNode>
-  <DataNode TextLabel="sialidase 2" GraphId="b42d9" Type="Protein" GroupRef="ff6aa">
-    <Graphics CenterX="425.89686637707354" CenterY="392.0139742644044" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="sialidase 2" GraphId="d4ac8" Type="Protein" GroupRef="be523">
+    <Graphics CenterX="435.89686637707354" CenterY="402.0139742644044" Width="90.0" Height="25.0" ZOrder="33032" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="Q9Y3R4" />
   </DataNode>
-  <DataNode TextLabel="GLB1" GraphId="b81b1" Type="GeneProduct" GroupRef="b1bab">
+  <DataNode TextLabel="GLB1" GraphId="f6369" Type="GeneProduct" GroupRef="b6add">
     <Comment>GM1-beta-galactosidase 1</Comment>
-    <Graphics CenterX="406.6910105723202" CenterY="98.65190226893279" Width="186.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="416.6910105723202" CenterY="108.65190226893279" Width="214.67033396549482" Height="24.999999999999996" ZOrder="33033" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000170266" />
   </DataNode>
-  <DataNode TextLabel="acrylsulfatase A" GraphId="bbb06" Type="Protein" GroupRef="cffd8">
+  <DataNode TextLabel="acrylsulfatase A" GraphId="d58ab" Type="Protein" GroupRef="f9324">
     <Comment>Arylsulfatase A (or cerebroside-sulfatase)</Comment>
-    <Graphics CenterX="1235.1530612244899" CenterY="892.8571428571436" Width="111.32653061224497" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="1245.1530612244899" CenterY="902.8571428571436" Width="111.32653061224497" Height="25.0" ZOrder="33034" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000100299" />
   </DataNode>
-  <DataNode TextLabel="sialidase 1" GraphId="bbf5a" Type="Protein" GroupRef="ff6aa">
-    <Graphics CenterX="425.89686637707354" CenterY="417.0139742644044" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="sialidase 1" GraphId="c615f" Type="Protein" GroupRef="be523">
+    <Graphics CenterX="435.89686637707354" CenterY="427.0139742644044" Width="90.0" Height="25.0" ZOrder="33035" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="Q99519" />
   </DataNode>
-  <DataNode TextLabel="Globoside example 1" GraphId="c221a" Type="Metabolite" GroupRef="cbadc">
+  <DataNode TextLabel="Globoside example 1" GraphId="a14a1" Type="Metabolite" GroupRef="f9f0c">
     <Comment>N-acetyl-beta-D-galactosaminyl-(1-&gt;3)-alpha-D-galactosyl-(1-&gt;4)-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1-&gt;1')-ceramide</Comment>
-    <Graphics CenterX="1117.0" CenterY="118.0" Width="124.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="1129.143239625168" CenterY="128.0" Width="150.14556533513888" Height="25.0" ZOrder="33036" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:88167" />
   </DataNode>
-  <DataNode TextLabel="sphingomyelinase" GraphId="c480e" Type="Protein">
+  <DataNode TextLabel="sphingomyelinase" GraphId="d736e" Type="Protein">
     <Comment>Sphingomyelin phosphodiesterase (also known as neutral sphingomyelinase, sphingomyelinase, or SMase)</Comment>
-    <Graphics CenterX="421.3775510204083" CenterY="756.377551020407" Width="118.97959183673478" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="431.3775510204083" CenterY="766.377551020407" Width="118.97959183673478" Height="25.0" ZOrder="33037" FontSize="12" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="3.1.4.12" />
   </DataNode>
-  <DataNode TextLabel="sialidase" GraphId="c8be0" Type="Protein" GroupRef="ff6aa">
-    <Graphics CenterX="425.89686637707354" CenterY="367.0139742644044" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="sialidase" GraphId="f8128" Type="Protein" GroupRef="be523">
+    <Graphics CenterX="435.89686637707354" CenterY="377.0139742644044" Width="90.0" Height="25.0" ZOrder="33038" FontSize="12" Valign="Middle" />
     <Xref Database="InterPro" ID="IPR004124" />
   </DataNode>
-  <DataNode TextLabel="globotriaosylceramide" GraphId="ca46d" Type="Metabolite">
+  <DataNode TextLabel="globotriaosylceramide" GraphId="a5647" Type="Metabolite">
     <Comment>also known as CD77, Gb3, and ceramide trihexoside</Comment>
-    <Graphics CenterX="1119.1432396251678" CenterY="320.0967133841486" Width="140.0468540829984" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Comment>AKA Gal-α(1-4)-Gal-Glc-Cer</Comment>
+    <Graphics CenterX="1129.1432396251678" CenterY="330.0967133841486" Width="140.0468540829984" Height="25.0" ZOrder="33039" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="PubChem-compound" ID="66616222" />
   </DataNode>
-  <DataNode TextLabel="glucosylceramide-beta-glucosidase" GraphId="d054b" Type="Protein" GroupRef="ca76d">
-    <Graphics CenterX="814.8724489795924" CenterY="676.0204081632659" Width="201.8877551020409" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
+  <DataNode TextLabel="glucosylceramide-beta-glucosidase" GraphId="c1bbb" Type="Protein" GroupRef="f6ba4">
+    <Comment>Based on disorder (Goucher), this enzyme is assumed to be GBA)</Comment>
+    <Graphics CenterX="838.9807466196357" CenterY="686.0204081632659" Width="230.10435038212765" Height="25.0" ZOrder="33040" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P04062" />
   </DataNode>
-  <DataNode TextLabel="GM2A " GraphId="d64b5" Type="Protein" GroupRef="ec2eb">
-    <Comment></Comment>
-    <Graphics CenterX="382.2187971521325" CenterY="147.17965443240627" Width="91.85408299866128" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="GM2A " GraphId="f2d8d" Type="Protein" GroupRef="dbc4c">
+    <Comment>GM2-Activator</Comment>
+    <Graphics CenterX="392.2187971521325" CenterY="157.17965443240627" Width="91.85408299866128" Height="25.0" ZOrder="33041" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="2760" />
   </DataNode>
-  <DataNode TextLabel="beta-hexosaminidase A, B" GraphId="dc40c" Type="Protein" GroupRef="fa305">
-    <Graphics CenterX="774.4180689424367" CenterY="214.1098460508701" Width="148.07898259705485" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="beta-hexosaminidase A, B:" GraphId="f010d" Type="Protein" GroupRef="f0e00">
+    <Graphics CenterX="803.4665997463244" CenterY="224.1098460508701" Width="186.1760442048302" Height="25.0" ZOrder="33042" FontSize="12" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="3.2.1.52" />
   </DataNode>
-  <DataNode TextLabel="Globoside example 2" GraphId="df235" Type="Metabolite" GroupRef="cbadc">
+  <DataNode TextLabel="Globoside example 2" GraphId="e35ed" Type="Metabolite" GroupRef="f9f0c">
     <Comment>N-acetyl-beta-D-galactosaminyl-(1-&gt;3)-alpha-D-galactosyl-(1-&gt;4)-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1-&gt;1')-N-acylsphing-4-enine</Comment>
-    <Graphics CenterX="1117.0" CenterY="143.0" Width="124.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="1129.1432396251678" CenterY="153.0" Width="150.14556533513888" Height="25.00000000000001" ZOrder="33043" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:18259" />
   </DataNode>
-  <DataNode TextLabel="alpha-galactosidase A" GraphId="e23ba" Type="Protein" GroupRef="f615c">
-    <Graphics CenterX="913.9123159303879" CenterY="369.6281725541622" Width="148.07898259705553" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="alpha-galactosidase A" GraphId="dedc8" Type="Protein" GroupRef="f090c">
+    <Graphics CenterX="923.9123159303879" CenterY="379.6281725541622" Width="148.07898259705553" Height="25.0" ZOrder="33044" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="2717" />
   </DataNode>
-  <DataNode TextLabel="sialidase 3" GraphId="e3554" Type="Protein" GroupRef="ff6aa">
-    <Graphics CenterX="425.89686637707354" CenterY="442.0139742644044" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="sialidase 3" GraphId="ecdaa" Type="Protein" GroupRef="be523">
+    <Graphics CenterX="435.89686637707354" CenterY="452.0139742644044" Width="90.0" Height="25.0" ZOrder="33045" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="Q9UQ49" />
   </DataNode>
-  <DataNode TextLabel="alpha-galactosidase A" GraphId="e3eef" Type="Protein" GroupRef="dae5a">
-    <Graphics CenterX="1231.4392501186521" CenterY="676.0204081632659" Width="143.21428571428598" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="alpha-galactosidase A" GraphId="d6053" Type="Protein" GroupRef="f95e0">
+    <Graphics CenterX="1241.4392501186521" CenterY="686.0204081632659" Width="143.21428571428598" Height="25.0" ZOrder="33046" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="2717" />
   </DataNode>
-  <DataNode TextLabel="acid ceramidase" GraphId="e83ac" Type="Protein" GroupRef="eca86">
+  <DataNode TextLabel="acid ceramidase" GraphId="efbc8" Type="Protein" GroupRef="ee748">
     <Comment>Acid ceramidase (N-acylsphingosine deacylase, ASAH1)</Comment>
-    <Graphics CenterX="757.4140464205126" CenterY="866.1318719468342" Width="112.60204081632659" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="767.4140464205126" CenterY="876.1318719468342" Width="112.60204081632659" Height="25.0" ZOrder="33047" FontSize="12" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="3.5.1.23" />
   </DataNode>
-  <DataNode TextLabel="digalactosylceramide alpha" GraphId="e8e88" Type="Metabolite" GroupRef="de500">
+  <DataNode TextLabel="digalactosylceramide alpha" GraphId="ddec4" Type="Metabolite" GroupRef="cdbc9">
     <Comment>alpha-D-galactosyl-(1-&gt;4)-beta-D-galactosyl-N-(pentacosanoyl)sphingosine</Comment>
-    <Graphics CenterX="1038.5" CenterY="572.0" Width="159.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="1033.8613797549965" CenterY="582.0" Width="188.27724049000594" Height="25.0" ZOrder="33048" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:134506" />
   </DataNode>
-  <DataNode TextLabel="GalCer-beta-galactosidase" GraphId="eb907" Type="Protein" GroupRef="f5915">
+  <DataNode TextLabel="GalCer-beta-galactosidase" GraphId="efa49" Type="Protein" GroupRef="ef922">
     <Comment>GALCERase</Comment>
-    <Graphics CenterX="787.3710028124991" CenterY="480.07039062499996" Width="186.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="823.085288526785" CenterY="509.11800967261877" Width="214.67033396549488" Height="24.999999999999943" ZOrder="33049" FontSize="12" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="3.2.1.46" />
   </DataNode>
-  <DataNode TextLabel="sialidase 4" GraphId="f91e6" Type="Protein" GroupRef="ff6aa">
-    <Graphics CenterX="425.89686637707354" CenterY="467.0139742644044" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="sialidase 4" GraphId="e56ea" Type="Protein" GroupRef="be523">
+    <Graphics CenterX="435.89686637707354" CenterY="477.0139742644044" Width="90.0" Height="25.0" ZOrder="33050" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="Q8WWR8" />
   </DataNode>
-  <DataNode TextLabel="HEXA" GraphId="fd43d" Type="Protein" GroupRef="fa305">
-    <Graphics CenterX="774.4180689424367" CenterY="239.1098460508701" Width="148.07898259705485" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="HEXA" GraphId="a9e39" Type="Protein" GroupRef="f0e00">
+    <Graphics CenterX="803.4665997463243" CenterY="249.1098460508701" Width="186.17604420483016" Height="25.00000000000001" ZOrder="33051" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000213614" />
   </DataNode>
-  <DataNode TextLabel="GA2" GraphId="a2bb3" Type="Metabolite">
+  <DataNode TextLabel="GA2" GraphId="d47a1" Type="Metabolite">
     <Comment>ganglioside GA2</Comment>
-    <Graphics CenterX="658.5425418019877" CenterY="178.90682053244882" Width="90.0" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Comment>AKA GalNAc-ß-(1-4)-Gal-Glc-Cer</Comment>
+    <Graphics CenterX="668.5425418019877" CenterY="188.90682053244882" Width="90.0" Height="25.0" ZOrder="33052" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:27731" />
   </DataNode>
-  <DataNode TextLabel="GM3" GraphId="fd574" Type="Metabolite">
+  <DataNode TextLabel="GM3" GraphId="f83d5" Type="Metabolite">
     <Comment>ganglioside GM3</Comment>
-    <Graphics CenterX="241.19294033364412" CenterY="320.0967133841486" Width="90.0" Height="25.0" ZOrder="32780" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:15681" />
+    <Comment>AKA Α(2,3)NeuAc-Gal-ß(1-4)-Glc-Cer</Comment>
+    <Graphics CenterX="251.19294033364412" CenterY="330.0967133841486" Width="90.0" Height="25.0" ZOrder="33053" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:79210" />
   </DataNode>
-  <DataNode TextLabel="Ceramide" GraphId="e1855" Type="Metabolite">
-    <Graphics CenterX="658.5425418019877" CenterY="818.2181344303865" Width="82.05694680137412" Height="25.000000000000014" ZOrder="32792" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="Ceramide" GraphId="e8eb7" Type="Metabolite">
+    <Graphics CenterX="668.5425418019877" CenterY="828.2181344303865" Width="82.05694680137412" Height="25.000000000000014" ZOrder="33054" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:17761" />
   </DataNode>
-  <DataNode TextLabel="Sphingosine" GraphId="f7bbc" Type="Metabolite">
-    <Graphics CenterX="658.5425418019877" CenterY="963.6323853425366" Width="88.5093167701863" Height="25.000000000000014" ZOrder="32798" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="Sphingosine" GraphId="c1e9d" Type="Metabolite">
+    <Graphics CenterX="668.5425418019877" CenterY="973.6323853425366" Width="88.5093167701863" Height="25.000000000000014" ZOrder="33055" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q46298" />
   </DataNode>
-  <DataNode TextLabel="galactosyl-ceramide" GraphId="f0d46" Type="Metabolite">
+  <DataNode TextLabel="galactosyl-ceramide" GraphId="b1257" Type="Metabolite">
     <Comment>Galactocerebroside</Comment>
-    <Graphics CenterX="1119.1432396251678" CenterY="818.2181344303865" Width="133.54037267080759" Height="25.000000000000014" ZOrder="32834" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Comment>AKA Gal-ß(1-1)-Cer</Comment>
+    <Graphics CenterX="1129.1432396251678" CenterY="828.2181344303865" Width="133.54037267080759" Height="25.000000000000014" ZOrder="33056" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q2756638" />
   </DataNode>
-  <DataNode TextLabel="Sphingomyelin" GraphId="f1684" Type="Metabolite">
-    <Graphics CenterX="241.19294033364412" CenterY="818.2181344303865" Width="99.3788819875778" Height="25.000000000000014" ZOrder="32842" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="Sphingomyelin" GraphId="d70c6" Type="Metabolite">
+    <Graphics CenterX="251.19294033364412" CenterY="828.2181344303865" Width="99.3788819875778" Height="25.000000000000014" ZOrder="33057" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q423143" />
   </DataNode>
-  <DataNode TextLabel="glucosylceramide" GraphId="cf00f" Type="Metabolite">
-    <Graphics CenterX="658.5425418019877" CenterY="596.5333506377399" Width="113.11284742249245" Height="25.000000000000014" ZOrder="32844" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="glucosylceramide" GraphId="f2d57" Type="Metabolite">
+    <Comment>AKA Glc-ß(1-1)-Cer</Comment>
+    <Graphics CenterX="668.5425418019877" CenterY="606.5333506377399" Width="113.11284742249245" Height="25.000000000000014" ZOrder="33058" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q35662896" />
   </DataNode>
-  <DataNode TextLabel="Sulfatide" GraphId="f9904" Type="Metabolite">
-    <Graphics CenterX="1119.1432396251676" CenterY="963.6323853425368" Width="80.09381600494696" Height="25.000000000000014" ZOrder="32846" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="Sulfatide" GraphId="d4d1a" Type="Metabolite">
+    <Comment>AKA O 3 S-3-Gal-Cer</Comment>
+    <Graphics CenterX="1129.1432396251676" CenterY="973.6323853425368" Width="80.09381600494696" Height="25.000000000000014" ZOrder="33059" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q408584" />
   </DataNode>
-  <DataNode TextLabel="lactosylceramide" GraphId="f8ad4" Type="Metabolite">
-    <Graphics CenterX="658.5425418019873" CenterY="320.0967133841486" Width="106.52069295017824" Height="25.000000000000014" ZOrder="32854" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="lactosylceramide" GraphId="a96ae" Type="Metabolite">
+    <Comment>AKA Gal-ß(1-4)-Glc-Cer</Comment>
+    <Graphics CenterX="668.5425418019873" CenterY="330.0967133841486" Width="106.52069295017824" Height="25.000000000000014" ZOrder="33060" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q3215908" />
   </DataNode>
-  <DataNode TextLabel="GM2" GraphId="af9a2" Type="Metabolite">
+  <DataNode TextLabel="GM2" GraphId="eaaa9" Type="Metabolite">
     <Comment>ganglioside GM2</Comment>
-    <Graphics CenterX="241.19294033364412" CenterY="178.90682053244882" Width="90.0" Height="25.0" ZOrder="32886" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:51013" />
+    <Comment>AKA GalNAc-ß(1-4)-Gal[NeuAc]-Glc-Cer</Comment>
+    <Graphics CenterX="251.19294033364412" CenterY="188.90682053244882" Width="90.0" Height="25.0" ZOrder="33061" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:79218" />
   </DataNode>
-  <DataNode TextLabel="GM1a" GraphId="f409a" Type="Metabolite">
-    <Comment>ganglioside GM1a</Comment>
-    <Graphics CenterX="241.19294033364412" CenterY="82.09519801240441" Width="90.0" Height="25.0" ZOrder="32888" FontSize="12" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="GM1" GraphId="a4c37" Type="Metabolite">
+    <Comment>aka ganglioside GM1a, GM1a</Comment>
+    <Comment>AKA Gal-ß(1-3)-GalNAc-Gal[NeuAc]-Glc-Cer</Comment>
+    <Graphics CenterX="251.19294033364412" CenterY="92.09519801240441" Width="90.0" Height="25.0" ZOrder="33062" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:18216" />
   </DataNode>
-  <DataNode TextLabel="GA1" GraphId="d44db" Type="Metabolite">
+  <DataNode TextLabel="GA1" GraphId="ca47a" Type="Metabolite">
     <Comment>ganglioside GA1</Comment>
-    <Graphics CenterX="658.5425418019877" CenterY="82.09519801240441" Width="90.0" Height="25.0" ZOrder="32904" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Comment>AKA Gal-ß(1-3)-GalNAc-Gal-Glc-Cer</Comment>
+    <Graphics CenterX="668.5425418019877" CenterY="92.09519801240441" Width="90.0" Height="25.0" ZOrder="33063" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:27938" />
   </DataNode>
-  <DataNode TextLabel="GM2-activator" GraphId="e3f60" Type="Protein" GroupRef="ad5af">
+  <DataNode TextLabel="GM2-activator" GraphId="ee80a" Type="Protein" GroupRef="cc0d4">
     <BiopaxRef>e35</BiopaxRef>
-    <Graphics CenterX="318.256068467187" CenterY="249.39290960165178" Width="91.85408299866128" Height="25.0" ZOrder="32913" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="328.256068467187" CenterY="259.3929096016518" Width="91.85408299866128" Height="25.0" ZOrder="33066" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="2760" />
   </DataNode>
-  <DataNode TextLabel="Sap-B" GraphId="c23da" Type="Protein" GroupRef="ff6aa">
-    <Graphics CenterX="425.89686637707354" CenterY="492.0139742644044" Width="90.0" Height="25.0" ZOrder="32914" FontSize="12" Valign="Middle" />
-    <Xref Database="InterPro" ID="IPR008139" />
+  <DataNode TextLabel="Sap-B" GraphId="f50b5" Type="Protein" GroupRef="be523">
+    <Comment>Sap-B is assumed to represent Saposin-B, which "stimulates the hydrolysis of galacto-cerebroside sulfate by arylsulfatase A (EC 3.1.6.8), GM1 gangliosides by beta-galactosidase (EC 3.2.1.23) and globotriaosylceramide by alpha-galactosidase A (EC 3.2.1.22). Saposin-B forms a solubilizing complex with the substrates of the sphingolipid hydrolases." Source: https://www.uniprot.org/uniprotkb/P07602/entry</Comment>
+    <Comment>Alternative names: Cerebroside sulfate activator (CSAct) DispersinSphingolipid activator protein 1 (SAP-1) Sulfatide/GM1 activator</Comment>
+    <Graphics CenterX="435.89686637707354" CenterY="502.0139742644044" Width="90.0" Height="25.0" ZOrder="33067" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P07602" />
   </DataNode>
-  <DataNode TextLabel="GM1-beta-galactosidease (GLB)" GraphId="ae2ad" Type="Protein" GroupRef="c6ca9">
-    <Graphics CenterX="794.4698795180724" CenterY="125.1271753681392" Width="189.06024096385522" Height="25.0" ZOrder="32915" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="GM1-beta-galactosidease (GLB):" GraphId="c5db9" Type="Protein" GroupRef="a8eaa">
+    <Graphics CenterX="804.4698795180724" CenterY="135.1271753681392" Width="214.67033396549482" Height="24.999999999999996" ZOrder="33068" FontSize="12" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="3.2.1.23" />
   </DataNode>
-  <DataNode TextLabel="GM2-activator" GraphId="b89e9" Type="Protein" GroupRef="fa305">
-    <Graphics CenterX="774.4180689424364" CenterY="289.1098460508701" Width="148.07898259705485" Height="25.0" ZOrder="32917" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="GM2-activator" GraphId="ec05e" Type="Protein" GroupRef="f0e00">
+    <Graphics CenterX="803.4665997463243" CenterY="299.10984605087015" Width="186.17604420483016" Height="25.00000000000001" ZOrder="33069" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="2760" />
   </DataNode>
-  <DataNode TextLabel="Sap-B" GraphId="c8c47" Type="Protein" GroupRef="f615c">
-    <Graphics CenterX="913.9123159303879" CenterY="394.6281725541622" Width="148.07898259705553" Height="25.0" ZOrder="32918" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="Sap-B" GraphId="d5e4f" Type="Protein" GroupRef="f090c">
+    <Graphics CenterX="923.9123159303879" CenterY="404.6281725541622" Width="148.07898259705553" Height="25.0" ZOrder="33070" FontSize="12" Valign="Middle" />
     <Xref Database="InterPro" ID="IPR008139" />
   </DataNode>
-  <DataNode TextLabel="Sap-B" GraphId="b076a" Type="Protein" GroupRef="f5915">
-    <Graphics CenterX="787.3710028124992" CenterY="505.07039062499996" Width="186.0" Height="25.0" ZOrder="32921" FontSize="12" Valign="Middle" />
-    <Xref Database="InterPro" ID="IPR008139" />
+  <DataNode TextLabel="Sap-B" GraphId="f7d64" Type="Protein" GroupRef="ef922">
+    <Comment>Sap-B is assumed to represent Saposin-B, which "stimulates the hydrolysis of galacto-cerebroside sulfate by arylsulfatase A (EC 3.1.6.8), GM1 gangliosides by beta-galactosidase (EC 3.2.1.23) and globotriaosylceramide by alpha-galactosidase A (EC 3.2.1.22). Saposin-B forms a solubilizing complex with the substrates of the sphingolipid hydrolases." Source: https://www.uniprot.org/uniprotkb/P07602/entry</Comment>
+    <Comment>Alternative names: Cerebroside sulfate activator (CSAct) DispersinSphingolipid activator protein 1 (SAP-1) Sulfatide/GM1 activator</Comment>
+    <Graphics CenterX="823.0852885267849" CenterY="534.1180096726191" Width="214.67033396549488" Height="25.0" ZOrder="33071" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P07602" />
   </DataNode>
-  <DataNode TextLabel="Sap-C" GraphId="fc596" Type="Protein" GroupRef="f5915">
-    <Graphics CenterX="787.3710028124992" CenterY="530.070390625" Width="186.0" Height="25.0" ZOrder="32922" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
+  <DataNode TextLabel="Sap-C" GraphId="ed3ae" Type="Protein" GroupRef="ef922">
+    <Comment>Sap-C is assumed to represent Saposin-C, which " stimulates the hydrolysis of glucosylceramide by beta-glucosylceramidase (EC 3.2.1.45) and galactosylceramide by beta-galactosylceramidase (EC 3.2.1.46). Saposin-C apparently acts by combining with the enzyme and acidic lipid to form an activated complex, rather than by solubilizing the substrate." Source:[https://www.uniprot.org/uniprotkb/P07602/entry]</Comment>
+    <Comment>"Saposin C is one of four homologous proteins derived from sequential cleavage of the saposin precursor protein, prosaposin." [PMID:22652185]</Comment>
+    <Comment>Alternative names: A1 activatorCo-beta-glucosidaseGlucosylceramidase activatorSphingolipid activator protein 2 (SAP-2)</Comment>
+    <Comment>Amino acid sequence of saposin C: C'-SDVYCEVCEFLVKEVTKLIDNNKTEKEILDAFDKMCSKLPKSLSEECQEVVDTYGSSILSILLEEVSPELVCSMLHLCSG-N'  [PMID:22652185]</Comment>
+    <BiopaxRef>dbd</BiopaxRef>
+    <Graphics CenterX="823.0852885267848" CenterY="559.1180096726191" Width="214.67033396549488" Height="25.0" ZOrder="33072" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P07602" />
   </DataNode>
-  <DataNode TextLabel="Sap-C" GraphId="d24d9" Type="Protein" GroupRef="ca76d">
-    <Graphics CenterX="814.8724489795923" CenterY="701.0204081632659" Width="201.88775510204084" Height="25.0" ZOrder="32923" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
+  <DataNode TextLabel="Sap-C" GraphId="b174d" Type="Protein" GroupRef="f6ba4">
+    <Comment>Sap-C is assumed to represent Saposin-C, which " stimulates the hydrolysis of glucosylceramide by beta-glucosylceramidase (EC 3.2.1.45) and galactosylceramide by beta-galactosylceramidase (EC 3.2.1.46). Saposin-C apparently acts by combining with the enzyme and acidic lipid to form an activated complex, rather than by solubilizing the substrate." Source:[https://www.uniprot.org/uniprotkb/P07602/entry]</Comment>
+    <Comment>Alternative names: A1 activatorCo-beta-glucosidaseGlucosylceramidase activatorSphingolipid activator protein 2 (SAP-2)</Comment>
+    <Graphics CenterX="838.9807466196359" CenterY="711.0204081632659" Width="230.1043503821276" Height="25.0" ZOrder="33073" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P07602" />
   </DataNode>
-  <DataNode TextLabel="Sap-C" GraphId="a2834" Type="Protein" GroupRef="eca86">
-    <Graphics CenterX="757.4140464205127" CenterY="891.1318719468342" Width="112.60204081632662" Height="25.0" ZOrder="32924" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
+  <DataNode TextLabel="Sap-C" GraphId="d048e" Type="Protein" GroupRef="ee748">
+    <Comment>Sap-C is assumed to represent Saposin-C, which " stimulates the hydrolysis of glucosylceramide by beta-glucosylceramidase (EC 3.2.1.45) and galactosylceramide by beta-galactosylceramidase (EC 3.2.1.46). Saposin-C apparently acts by combining with the enzyme and acidic lipid to form an activated complex, rather than by solubilizing the substrate." Source:[https://www.uniprot.org/uniprotkb/P07602/entry]</Comment>
+    <Comment>Alternative names: A1 activatorCo-beta-glucosidase Glucosylceramidase activator Sphingolipid activator protein 2 (SAP-2)</Comment>
+    <Graphics CenterX="767.4140464205127" CenterY="901.1318719468342" Width="112.60204081632662" Height="25.0" ZOrder="33074" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P07602" />
   </DataNode>
-  <DataNode TextLabel="glucosylceramide-beta-glucosidase" GraphId="fc8fe" Type="Protein" GroupRef="bda3b">
-    <Graphics CenterX="901.4030612244894" CenterY="751.0714285714298" Width="201.8877551020409" Height="25.0" ZOrder="32925" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
+  <DataNode TextLabel="glucosylceramide-beta-glucosidase" GraphId="d22c0" Type="Protein" GroupRef="a04fc">
+    <Comment>Based on disorder (Krabbe), this enzyme is assumed to be GALC)</Comment>
+    <Graphics CenterX="911.4030612244894" CenterY="761.0714285714298" Width="201.8877551020409" Height="25.0" ZOrder="33075" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P54803" />
   </DataNode>
-  <DataNode TextLabel="Sap-A" GraphId="a72cf" Type="Protein" GroupRef="bda3b">
-    <Graphics CenterX="901.4030612244894" CenterY="776.0714285714298" Width="201.88775510204096" Height="25.0" ZOrder="32926" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="Sap-A" GraphId="af7e3" Type="Protein" GroupRef="a04fc">
+    <Graphics CenterX="911.4030612244894" CenterY="786.0714285714298" Width="201.88775510204096" Height="25.0" ZOrder="33076" FontSize="12" Valign="Middle" />
     <Xref Database="InterPro" ID="IPR003119" />
   </DataNode>
-  <DataNode TextLabel="Sap-B" GraphId="a1d6f" Type="Protein" GroupRef="dae5a">
-    <Graphics CenterX="1231.4392501186521" CenterY="701.0204081632659" Width="143.214285714286" Height="25.0" ZOrder="32927" FontSize="12" Valign="Middle" />
-    <Xref Database="InterPro" ID="IPR008139" />
+  <DataNode TextLabel="Sap-B" GraphId="d7094" Type="Protein" GroupRef="f95e0">
+    <Comment>Sap-B is assumed to represent Saposin-B, which "stimulates the hydrolysis of galacto-cerebroside sulfate by arylsulfatase A (EC 3.1.6.8), GM1 gangliosides by beta-galactosidase (EC 3.2.1.23) and globotriaosylceramide by alpha-galactosidase A (EC 3.2.1.22). Saposin-B forms a solubilizing complex with the substrates of the sphingolipid hydrolases." Source: https://www.uniprot.org/uniprotkb/P07602/entry</Comment>
+    <Comment>Alternative names: Cerebroside sulfate activator (CSAct) DispersinSphingolipid activator protein 1 (SAP-1) Sulfatide/GM1 activator</Comment>
+    <Graphics CenterX="1241.4392501186521" CenterY="711.0204081632659" Width="143.214285714286" Height="25.0" ZOrder="33077" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P07602" />
   </DataNode>
-  <DataNode TextLabel="Sap-B" GraphId="a14c7" Type="Protein" GroupRef="cffd8">
-    <Graphics CenterX="1235.15306122449" CenterY="917.8571428571436" Width="111.32653061224505" Height="25.0" ZOrder="32928" FontSize="12" Valign="Middle" />
-    <Xref Database="InterPro" ID="IPR008139" />
+  <DataNode TextLabel="Sap-B" GraphId="d182b" Type="Protein" GroupRef="f9324">
+    <Comment>Sap-B is assumed to represent Saposin-B, which "stimulates the hydrolysis of galacto-cerebroside sulfate by arylsulfatase A (EC 3.1.6.8), GM1 gangliosides by beta-galactosidase (EC 3.2.1.23) and globotriaosylceramide by alpha-galactosidase A (EC 3.2.1.22). Saposin-B forms a solubilizing complex with the substrates of the sphingolipid hydrolases." Source: https://www.uniprot.org/uniprotkb/P07602/entry</Comment>
+    <Comment>Alternative names: Cerebroside sulfate activator (CSAct) DispersinSphingolipid activator protein 1 (SAP-1) Sulfatide/GM1 activator</Comment>
+    <Graphics CenterX="1245.15306122449" CenterY="927.8571428571436" Width="111.32653061224505" Height="25.0" ZOrder="33078" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P07602" />
   </DataNode>
-  <DataNode TextLabel="GLB1" GraphId="d813f" Type="GeneProduct" GroupRef="c6ca9">
+  <DataNode TextLabel="GLB1" GraphId="e88da" Type="GeneProduct" GroupRef="a8eaa">
     <Comment>GM1-beta-galactosidase 1</Comment>
-    <Graphics CenterX="794.4698795180726" CenterY="150.1271753681392" Width="189.06024096385522" Height="25.0" ZOrder="32944" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="804.4698795180726" CenterY="160.1271753681392" Width="214.67033396549488" Height="25.00000000000001" ZOrder="33079" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000170266" />
   </DataNode>
-  <DataNode TextLabel="HEXA" GraphId="e8365" Type="Protein" GroupRef="ad5af">
-    <Graphics CenterX="318.256068467187" CenterY="224.39290960165178" Width="91.85408299866128" Height="25.0" ZOrder="32945" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="HEXA" GraphId="fea30" Type="Protein" GroupRef="cc0d4">
+    <Graphics CenterX="328.256068467187" CenterY="234.39290960165178" Width="91.85408299866128" Height="25.0" ZOrder="33080" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000213614" />
   </DataNode>
-  <DataNode TextLabel="HEXB" GraphId="b8280" Type="Protein" GroupRef="bee72">
-    <Graphics CenterX="1238.7890642509942" CenterY="242.87157249151662" Width="148.07898259705485" Height="25.0" ZOrder="32946" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="HEXB" GraphId="d122c" Type="Protein" GroupRef="ff401">
+    <Graphics CenterX="1248.7890642509942" CenterY="252.87157249151664" Width="186.17604420483016" Height="25.00000000000001" ZOrder="33081" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P07686" />
   </DataNode>
-  <DataNode TextLabel="beta-hexosaminidase A, B" GraphId="ccc65" Type="Protein" GroupRef="bee72">
-    <Graphics CenterX="1238.7890642509942" CenterY="217.87157249151662" Width="148.07898259705485" Height="25.0" ZOrder="32947" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="beta-hexosaminidase A, B:" GraphId="caed5" Type="Protein" GroupRef="ff401">
+    <Graphics CenterX="1248.7890642509942" CenterY="227.87157249151662" Width="186.17604420483016" Height="25.00000000000001" ZOrder="33082" FontSize="12" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="3.2.1.52" />
   </DataNode>
-  <DataNode TextLabel="HEXA" GraphId="d44f6" Type="Protein" GroupRef="bee72">
-    <Graphics CenterX="1238.7890642509942" CenterY="267.87157249151664" Width="148.07898259705485" Height="25.0" ZOrder="32948" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="HEXA" GraphId="c6326" Type="Protein" GroupRef="ff401">
+    <Graphics CenterX="1248.7890642509942" CenterY="277.87157249151664" Width="186.17604420483016" Height="24.99999999999998" ZOrder="33083" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000213614" />
   </DataNode>
-  <DataNode TextLabel="GM1-beta-galactosidase (GLB)" GraphId="c2813" Type="Protein" GroupRef="f5915">
-    <Graphics CenterX="787.3710028124991" CenterY="430.07039062499996" Width="186.0" Height="25.0" ZOrder="32949" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="GM1-beta-galactosidase (GLB):" GraphId="e967c" Type="Protein" GroupRef="ef922">
+    <Graphics CenterX="823.0852885267851" CenterY="459.118009672619" Width="214.67033396549488" Height="25.0" ZOrder="33084" FontSize="12" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="3.2.1.23" />
   </DataNode>
-  <DataNode TextLabel="GLB1" GraphId="f6a36" Type="GeneProduct" GroupRef="f5915">
+  <DataNode TextLabel="GLB1" GraphId="bfae8" Type="GeneProduct" GroupRef="ef922">
     <Comment>GM1-beta-galactosidase 1</Comment>
-    <Graphics CenterX="787.3710028124992" CenterY="455.07039062499996" Width="186.0" Height="25.0" ZOrder="32950" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="823.085288526785" CenterY="484.118009672619" Width="214.67033396549488" Height="25.0" ZOrder="33085" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000170266" />
   </DataNode>
-  <Interaction GraphId="id22df04ae">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="693.1130260123493" Y="878.6318719468342" GraphRef="c15d3" RelX="-1.0" RelY="0.0" />
-      <Point X="658.5425418019877" Y="878.8838347952466" GraphRef="f70d2" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  <DataNode TextLabel="NPC1" GraphId="a40bf" Type="GeneProduct">
+    <Comment>AKA scavenger receptor class B, member 2/ lysosomal intergral membrane protein 2</Comment>
+    <Graphics CenterX="1419.14950455099" CenterY="645.6099422622698" Width="90.0" Height="25.0" ZOrder="33133" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="4864" />
+  </DataNode>
+  <DataNode TextLabel="NPC2" GraphId="c2aae" Type="GeneProduct">
+    <Comment>AKA scavenger receptor class B, member 2/ lysosomal intergral membrane protein 2</Comment>
+    <Graphics CenterX="1419.1495045509903" CenterY="723.2155760650879" Width="90.0" Height="25.0" ZOrder="33136" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10577" />
+  </DataNode>
+  <DataNode TextLabel="LIPA" GraphId="f3570" Type="GeneProduct">
+    <Comment>AKA scavenger receptor class B, member 2/ lysosomal intergral membrane protein 2</Comment>
+    <Graphics CenterX="1419.1495045509903" CenterY="810.6803647974831" Width="90.0" Height="25.0" ZOrder="33139" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000107798" />
+  </DataNode>
+  <Interaction GraphId="ed08c">
+    <Graphics ZOrder="32980" LineThickness="1.0">
+      <Point GraphId="f8453" X="703.1130260123493" Y="888.6318719468342" GraphRef="ee748" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b3306" X="668.5425418019877" Y="888.8838347952466" GraphRef="f1bb4" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id24ed80da">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="260.32902696785635" Y="236.8929096016518" GraphRef="d185f" RelX="-1.0" RelY="0.0" />
-      <Point X="241.19294033364412" Y="250.39006067440215" GraphRef="e9e18" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  <Interaction GraphId="fd3b9">
+    <Graphics ZOrder="32981" LineThickness="1.0">
+      <Point GraphId="c9790" X="270.32902696785635" Y="246.8929096016518" GraphRef="cc0d4" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="aa22c" X="251.19294033364412" Y="260.39006067440215" GraphRef="ab923" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id26f37abf">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1049.1198125836686" Y="320.0967133841486" GraphRef="ca46d" RelX="-1.0" RelY="0.0" />
-      <Point X="711.8028882770765" Y="320.0967133841486" GraphRef="f8ad4" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.4" Shape="None" GraphId="a244c" />
+  <Interaction GraphId="aeb31">
+    <Graphics ZOrder="32982" LineThickness="1.0">
+      <Point GraphId="f2f02" X="1059.1198125836686" Y="330.0967133841486" GraphRef="a5647" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b23cb" X="721.8028882770765" Y="330.0967133841486" GraphRef="a96ae" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.40408493233312914" Shape="None" GraphId="b1f5e" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id2a1e6503">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="686.3710028124992" Y="480.07039062499996" GraphRef="db0cb" RelX="-1.0" RelY="0.0" />
-      <Point X="658.5425418019876" Y="471.93877551020404" GraphRef="c50a7" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  <Interaction GraphId="fb75d">
+    <Graphics ZOrder="32983" LineThickness="1.0">
+      <Point GraphId="b69f6" X="707.7501215440374" Y="509.11800967261905" GraphRef="ef922" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="a5734" X="668.5425418019876" Y="508.38813668600903" GraphRef="dc93a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id35bb0e99">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="692.378577643909" Y="251.6098460508701" GraphRef="c298d" RelX="-1.0" RelY="0.0" />
-      <Point X="658.5425418019876" Y="243.62244897959184" GraphRef="d880c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  <Interaction GraphId="fe925">
+    <Graphics ZOrder="32984" LineThickness="1.0">
+      <Point GraphId="cadd5" X="702.3785776439092" Y="261.60984605087015" GraphRef="f0e00" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="ed194" X="668.5425418019876" Y="253.62244897959184" GraphRef="d1a7a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id3e2efa63">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="305.6910105723202" Y="73.65190226893279" GraphRef="b36c8" RelX="-1.0" RelY="0.0" />
-      <Point X="241.19294033364412" Y="123.31984702042217" GraphRef="ce9d9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  <Interaction GraphId="f065e">
+    <Graphics ZOrder="32985" LineThickness="1.0">
+      <Point GraphId="ab23e" X="301.3558435895727" Y="83.65190226893279" GraphRef="b6add" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="aa0bd" X="251.19294033364412" Y="133.31984702042217" GraphRef="afda2" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id46549543">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="901.4030612244894" Y="796.5714285714298" GraphRef="b4cbf" RelX="0.0" RelY="1.0" />
-      <Point X="900.9138849458562" Y="818.2181344303865" GraphRef="ace04" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  <Interaction GraphId="fab9e">
+    <Graphics ZOrder="32986" LineThickness="1.0">
+      <Point GraphId="b3595" X="911.4030612244894" Y="806.5714285714298" GraphRef="a04fc" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a2760" X="910.9138849458562" Y="828.2181344303865" GraphRef="df6df" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id4bf41099">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="658.5425418019877" Y="878.8838347952466" GraphRef="f70d2" RelX="0.0" RelY="0.0" />
-      <Point X="599.0656785253973" Y="879.4420873963942" GraphRef="ad87a" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+  <Interaction GraphId="ee0ed">
+    <Graphics ZOrder="32987" LineThickness="1.0">
+      <Point GraphId="d8385" X="1124.7646679561574" Y="627.0333506377399" GraphRef="cdbc9" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a50b6" X="1129.1432396251676" Y="815.7181344303865" GraphRef="b1257" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.37605477956114364" Shape="None" GraphId="f9e29" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id64a389b6">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="658.5425418019877" Y="687.7072641547985" GraphRef="fc34f" RelX="0.0" RelY="0.0" />
-      <Point X="599.0656785253973" Y="687.9343777117973" GraphRef="af291" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+  <Interaction GraphId="b231f">
+    <Graphics ZOrder="32988" LineThickness="1.0">
+      <Point GraphId="bcdf7" X="923.9123159303879" Y="359.1281725541622" GraphRef="f090c" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="bc46b" X="922.8151260504201" Y="330.0967133841486" GraphRef="b1f5e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id6688bd76">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1119.1432396251676" Y="905.6122448979592" GraphRef="f8676" RelX="0.0" RelY="0.0" />
-      <Point X="1070.1169585551033" Y="917.3886244559324" GraphRef="a2976" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id7c2a3d7b">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="900.9138849458562" Y="818.2181344303865" GraphRef="ace04" RelX="0.0" RelY="0.0" />
-      <Point X="900.7717750826904" Y="854.0931642778384" GraphRef="e8292" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id8c217d78">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1119.5" Y="617.0333506377399" GraphRef="a9984" RelX="0.0" RelY="1.0" />
-      <Point X="1119.1432396251676" Y="805.7181344303865" GraphRef="f0d46" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.37605477956114364" Shape="None" GraphId="dfc65" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id90ae5278">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="241.19294033364412" Y="145.7142857142857" GraphRef="e7fa8" RelX="0.0" RelY="0.0" />
-      <Point X="181.1850987526473" Y="135.68908489525893" GraphRef="a1d81" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id98920c04">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="658.5425418019877" Y="132.3943661971831" GraphRef="e2294" RelX="0.0" RelY="0.0" />
-      <Point X="620.115843905772" Y="133.0372532881966" GraphRef="cd557" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id9d308d67">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="913.9123159303879" Y="349.1281725541622" GraphRef="d6755" RelX="0.0" RelY="-1.0" />
-      <Point X="914.1930428610317" Y="320.0967133841486" GraphRef="a244c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ida10c7dd8">
+  <Interaction GraphId="ed96a">
     <BiopaxRef>ae1</BiopaxRef>
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="324.29175565280184" Y="159.67965443240627" GraphRef="a6bc4" RelX="-1.0" RelY="0.0" />
-      <Point X="241.19294033364412" Y="145.7142857142857" GraphRef="e7fa8" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    <Graphics ZOrder="32989" LineThickness="1.0">
+      <Point GraphId="d8354" X="334.29175565280184" Y="169.67965443240627" GraphRef="dbc4c" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="e7a0c" X="251.19294033364412" Y="155.7142857142857" GraphRef="b5fcf" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="ida13acca5">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1171.4897959183675" Y="905.3571428571436" GraphRef="e5944" RelX="-1.0" RelY="0.0" />
-      <Point X="1119.1432396251676" Y="905.6122448979592" GraphRef="f8676" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  <Interaction GraphId="fec0e">
+    <Graphics ZOrder="32990" LineThickness="1.0">
+      <Point GraphId="f5803" X="1181.4897959183675" Y="915.3571428571436" GraphRef="f9324" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="a4062" X="1129.1432396251676" Y="915.6122448979592" GraphRef="a2f52" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="ida4782145">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1117.9631698695496" Y="242.0219508574632" GraphRef="b0526" RelX="0.0" RelY="0.0" />
-      <Point X="1072.0" Y="242.0" GraphRef="eaa5a" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+  <Interaction GraphId="bd6e5">
+    <Graphics ZOrder="32991" LineThickness="1.0">
+      <Point GraphId="f9f3f" X="435.89686637707354" Y="356.5139742644044" GraphRef="be523" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="b6571" X="436.0204081632653" Y="330.0967133841486" GraphRef="b0cf0" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idb3e9cfeb">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="425.89686637707354" Y="346.5139742644044" GraphRef="c6782" RelX="0.0" RelY="-1.0" />
-      <Point X="426.0204081632653" Y="320.0967133841486" GraphRef="d0c93" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  <Interaction GraphId="ff303">
+    <Graphics ZOrder="32992" LineThickness="1.0">
+      <Point GraphId="db626" X="431.3775510204083" Y="778.877551020407" GraphRef="d736e" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fa03a" X="431.5350561569801" Y="828.2181344303865" GraphRef="b2e94" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idc05c77b0">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="421.3775510204083" Y="768.877551020407" GraphRef="c480e" RelX="0.0" RelY="1.0" />
-      <Point X="421.5350561569801" Y="818.2181344303865" GraphRef="cc3e0" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  <Interaction GraphId="e566f">
+    <Graphics ZOrder="32993" LineThickness="1.0">
+      <Point GraphId="bc2dc" X="1129.1432396251678" Y="198.5" GraphRef="f9f0c" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a1406" X="1129.1432396251678" Y="317.5967133841486" GraphRef="a5647" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.44939905843435984" Shape="None" GraphId="d8e83" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idc943199a">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1117.0" Y="188.5" GraphRef="ae054" RelX="0.0" RelY="1.0" />
-      <Point X="1119.1432396251678" Y="307.5967133841486" GraphRef="ca46d" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.44939905843435984" Shape="None" GraphId="b0526" />
+  <Interaction GraphId="dc405">
+    <Graphics ZOrder="32994" LineThickness="1.0">
+      <Point GraphId="d42e4" X="715.9285714285719" Y="698.5204081632659" GraphRef="f6ba4" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="a7776" X="668.5425418019877" Y="697.7072641547985" GraphRef="cf3b9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idd70dab2d">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1119.3658385558863" Y="687.9891654134257" GraphRef="dfc65" RelX="0.0" RelY="0.0" />
-      <Point X="1067.1278941565602" Y="688.3971299237337" GraphRef="c5cf2" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+  <Interaction GraphId="cce3f">
+    <Graphics ZOrder="32995" LineThickness="1.0">
+      <Point GraphId="a454f" X="689.134712535325" Y="147.6271753681392" GraphRef="a8eaa" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="f7d85" X="668.5425418019877" Y="142.3943661971831" GraphRef="f03ee" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="iddeefcb00">
+  <Interaction GraphId="cd129">
+    <Graphics ZOrder="32996" LineThickness="1.0">
+      <Point GraphId="c9669" X="1147.701042148579" Y="252.87157249151664" GraphRef="ff401" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="ea253" X="1129.1432396251678" Y="252.0219508574632" GraphRef="d8e83" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d95aa">
+    <Graphics ZOrder="32997" LineThickness="1.0">
+      <Point GraphId="a3854" X="1161.832107261509" Y="698.5204081632659" GraphRef="f95e0" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="a2e8a" X="1126.4112507599398" Y="697.9891654134257" GraphRef="f9e29" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f40c6">
+    <Graphics ZOrder="33010" LineThickness="1.0">
+      <Point GraphId="c82bf" X="296.1929403336441" Y="330.0967133841486" GraphRef="f83d5" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b1aae" X="615.2821953268982" Y="330.0967133841486" GraphRef="a96ae" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4382080112117135" Shape="None" GraphId="b0cf0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e5db2">
+    <Graphics ZOrder="33011" LineThickness="1.0">
+      <Point GraphId="efea6" X="668.5425418019877" Y="104.59519801240441" GraphRef="ca47a" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ed54a" X="668.5425418019877" Y="176.40682053244882" GraphRef="d47a1" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5263656057099672" Shape="None" GraphId="f03ee" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c414e">
+    <Graphics ZOrder="33012" LineThickness="1.0">
+      <Point GraphId="cf936" X="668.5425418019877" Y="201.40682053244882" GraphRef="d47a1" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e1d95" X="668.5425418019873" Y="317.5967133841486" GraphRef="a96ae" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.44939905843435973" Shape="None" GraphId="d1a7a" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c3255">
+    <Graphics ZOrder="33013" LineThickness="1.0">
+      <Point GraphId="af6f6" X="668.5425418019877" Y="840.7181344303865" GraphRef="e8eb7" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fe79b" X="668.5425418019877" Y="961.1323853425366" GraphRef="c1e9d" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="f1bb4" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bc10b">
+    <Graphics ZOrder="33014" LineThickness="1.0">
+      <Point GraphId="a5705" X="668.5425418019873" Y="342.5967133841486" GraphRef="a96ae" RelX="0.0" RelY="1.0" />
+      <Point GraphId="be328" X="668.5425418019877" Y="594.0333506377399" GraphRef="f2d57" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.6593765535236947" Shape="None" GraphId="dc93a" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f4a33">
+    <Graphics ZOrder="33015" LineThickness="1.0">
+      <Point GraphId="c584b" X="1062.373053289764" Y="828.2181344303865" GraphRef="b1257" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="ba076" X="709.5710152026747" Y="828.2181344303865" GraphRef="e8eb7" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4293035526810647" Shape="None" GraphId="df6df" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c1067">
+    <Graphics ZOrder="33016" LineThickness="1.0">
+      <Point GraphId="b68f8" X="668.5425418019877" Y="619.0333506377399" GraphRef="f2d57" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d2ee2" X="668.5425418019877" Y="815.7181344303865" GraphRef="e8eb7" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="cf3b9" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="af9de">
+    <Graphics ZOrder="33017" LineThickness="1.0">
+      <Point GraphId="c6203" X="1129.1432396251676" Y="961.1323853425368" GraphRef="d4d1a" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="bd261" X="1129.1432396251676" Y="840.7181344303865" GraphRef="b1257" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.37802951145531316" Shape="None" GraphId="a2f52" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ef484">
+    <Graphics ZOrder="33018" LineThickness="1.0">
+      <Point GraphId="f5cfd" X="300.882381327433" Y="828.2181344303865" GraphRef="d70c6" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d6664" X="627.5140684013006" Y="828.2181344303865" GraphRef="e8eb7" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="b2e94" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b7aec">
+    <Graphics ZOrder="33064" LineThickness="1.0">
+      <Point GraphId="f6f4a" X="251.19294033364412" Y="104.59519801240441" GraphRef="a4c37" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c3cf0" X="251.19294033364412" Y="176.40682053244882" GraphRef="eaaa9" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.711849780132912" Shape="None" GraphId="b5fcf" />
+      <Anchor Position="0.4" Shape="None" GraphId="afda2" />
+    </Graphics>
+    <Xref Database="Rhea" ID="48282" />
+  </Interaction>
+  <Interaction GraphId="b50e1">
+    <Graphics ZOrder="33065" LineThickness="1.0">
+      <Point GraphId="a7068" X="251.19294033364412" Y="201.40682053244882" GraphRef="eaaa9" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d7710" X="251.19294033364412" Y="317.5967133841486" GraphRef="f83d5" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5076451892182846" Shape="None" GraphId="ab923" />
+    </Graphics>
+    <Xref Database="Rhea" ID="47969" />
+  </Interaction>
+  <GraphicalLine GraphId="dfc46">
+    <Graphics ZOrder="32998" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="cad30" X="668.5425418019877" Y="142.3943661971831" GraphRef="f03ee" RelX="0.0" RelY="0.0" />
+      <Point GraphId="a04fa" X="630.115843905772" Y="143.0372532881966" GraphRef="fb734" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d13a3">
+    <Graphics ZOrder="32999" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="de63f" X="431.5350561569801" Y="828.2181344303865" GraphRef="b2e94" RelX="0.0" RelY="0.0" />
+      <Point GraphId="a3689" X="429.5846032143692" Y="859.5010181375842" GraphRef="c4af1" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="de120">
+    <Graphics ZOrder="33000" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="a9739" X="436.0204081632653" Y="330.0967133841486" GraphRef="b0cf0" RelX="0.0" RelY="0.0" />
+      <Point GraphId="b53dd" X="435.5788313120172" Y="305.8517089305401" GraphRef="f25d7" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="de954">
+    <Graphics ZOrder="33001" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="b0e33" X="922.8151260504201" Y="330.0967133841486" GraphRef="b1f5e" RelX="0.0" RelY="0.0" />
+      <Point GraphId="dfea0" X="979.6223583148808" Y="308.4818127912685" GraphRef="a2b8e" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="cb5c0">
+    <Graphics ZOrder="33002" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="aa211" X="1126.4112507599398" Y="697.9891654134257" GraphRef="f9e29" RelX="0.0" RelY="0.0" />
+      <Point GraphId="e48f5" X="1077.1278941565602" Y="698.3971299237337" GraphRef="d27b9" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="fd06f">
+    <Graphics ZOrder="33003" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="fd711" X="668.5425418019877" Y="697.7072641547985" GraphRef="cf3b9" RelX="0.0" RelY="0.0" />
+      <Point GraphId="c079b" X="609.0656785253973" Y="697.9343777117973" GraphRef="dc68c" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="de49a">
+    <Graphics ZOrder="33004" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="d24cf" X="1129.1432396251678" Y="252.0219508574632" GraphRef="d8e83" RelX="0.0" RelY="0.0" />
+      <Point GraphId="a3c89" X="1082.0" Y="252.0" GraphRef="bbdc5" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d1311">
+    <Graphics ZOrder="33005" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="a57c5" X="668.5425418019877" Y="888.8838347952466" GraphRef="f1bb4" RelX="0.0" RelY="0.0" />
+      <Point GraphId="f603a" X="609.0656785253973" Y="889.4420873963942" GraphRef="f7b02" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="c8f24">
+    <Graphics ZOrder="33006" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="a679c" X="910.9138849458562" Y="828.2181344303865" GraphRef="df6df" RelX="0.0" RelY="0.0" />
+      <Point GraphId="f9026" X="910.7717750826904" Y="864.0931642778384" GraphRef="b5467" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d8bca">
+    <Graphics ZOrder="33007" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="fd2b3" X="251.19294033364412" Y="155.7142857142857" GraphRef="b5fcf" RelX="0.0" RelY="0.0" />
+      <Point GraphId="bd36c" X="191.1850987526473" Y="145.68908489525893" GraphRef="e069c" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f68db">
+    <Graphics ZOrder="33008" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="d0329" X="1129.1432396251676" Y="915.6122448979592" GraphRef="a2f52" RelX="0.0" RelY="0.0" />
+      <Point GraphId="ed473" X="1080.1169585551033" Y="927.3886244559324" GraphRef="d60a9" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="d7353">
     <BiopaxRef>c70</BiopaxRef>
     <BiopaxRef>d47</BiopaxRef>
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="241.19294033364412" Y="250.39006067440215" GraphRef="e9e18" RelX="0.0" RelY="0.0" />
-      <Point X="207.57055764122453" Y="250.7159117164978" GraphRef="bd556" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    <Graphics ZOrder="33009" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="c3bf2" X="251.19294033364412" Y="260.39006067440215" GraphRef="ab923" RelX="0.0" RelY="0.0" />
+      <Point GraphId="fd0c5" X="217.57055764122453" Y="260.71591171649777" GraphRef="b6a73" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ide02dbb81">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="426.0204081632653" Y="320.0967133841486" GraphRef="d0c93" RelX="0.0" RelY="0.0" />
-      <Point X="425.5788313120172" Y="295.8517089305401" GraphRef="cb3f9" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="a7c5c">
+    <Graphics ZOrder="33086" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="bc487" X="668.5425418019876" Y="253.62244897959184" GraphRef="d1a7a" RelX="0.0" RelY="0.0" />
+      <Point GraphId="ca27f" X="609.0656785253973" Y="253.35695764909252" GraphRef="bf5dc" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ide0d9b541">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="705.9285714285718" Y="688.5204081632659" GraphRef="d463c" RelX="-1.0" RelY="0.0" />
-      <Point X="658.5425418019877" Y="687.7072641547985" GraphRef="fc34f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="ea5db">
+    <Graphics ZOrder="33097" LineThickness="1.0">
+      <Point GraphId="dd228" X="115.29637970376382" Y="668.1451334169034" />
+      <Point GraphId="b9136" X="189.29637970376803" Y="668.1451334169034" ArrowHead="mim-conversion" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ide79becc4">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="914.1930428610317" Y="320.0967133841486" GraphRef="a244c" RelX="0.0" RelY="0.0" />
-      <Point X="912.8996692392506" Y="284.8263506063946" GraphRef="dcb23" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="db4b1">
+    <Graphics ZOrder="33098" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="e5557" X="116.64635528970155" Y="740.8466259542137" />
+      <Point GraphId="d269a" X="190.64635528970558" Y="740.8466259542137" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idee0b21aa">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="421.5350561569801" Y="818.2181344303865" GraphRef="cc3e0" RelX="0.0" RelY="0.0" />
-      <Point X="419.5846032143692" Y="849.5010181375842" GraphRef="af9fd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="a2820">
+    <Graphics ZOrder="33099" LineThickness="1.0">
+      <Point GraphId="d4013" X="116.81115021157655" Y="700.8466259542143" />
+      <Point GraphId="a2554" X="190.81115021158058" Y="700.8466259542143" ArrowHead="mim-catalysis" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idf3e796c4">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="691.9397590361448" Y="137.6271753681392" GraphRef="c05ac" RelX="-1.0" RelY="0.0" />
-      <Point X="658.5425418019877" Y="132.3943661971831" GraphRef="e2294" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="a9d39" GroupRef="d89f4">
+    <Graphics ZOrder="33113" LineThickness="1.0">
+      <Point GraphId="dd1e3" X="109.191812379581" Y="595.7066270988396" />
+      <Point GraphId="eee25" X="109.191812379581" Y="621.3190992591959" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idf70546d2">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1156.7495729524667" Y="242.87157249151664" GraphRef="a5d73" RelX="-1.0" RelY="0.0" />
-      <Point X="1117.9631698695496" Y="242.0219508574632" GraphRef="b0526" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="eac7c" GroupRef="d89f4">
+    <Graphics ZOrder="33114" LineThickness="1.0">
+      <Point GraphId="c00b2" X="125.31651223342297" Y="580.6732195264564" />
+      <Point GraphId="e6f7a" X="187.23726789889534" Y="580.6732195264564" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idfed1d4b4">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1151.832107261509" Y="688.5204081632659" GraphRef="a2cca" RelX="-1.0" RelY="0.0" />
-      <Point X="1119.3658385558863" Y="687.9891654134257" GraphRef="dfc65" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="a269f" GroupRef="d89f4">
+    <Graphics ZOrder="33115" LineThickness="1.0">
+      <Point GraphId="d0748" X="201.94123161119975" Y="595.7066276085988" />
+      <Point GraphId="b1c1b" X="201.94123161119975" Y="621.3190997689551" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id495977f9">
-    <Graphics ZOrder="12290" LineThickness="1.0">
-      <Point X="286.1929403336441" Y="320.0967133841486" GraphRef="fd574" RelX="1.0" RelY="0.0" />
-      <Point X="605.2821953268982" Y="320.0967133841486" GraphRef="f8ad4" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.4382080112117135" Shape="None" GraphId="d0c93" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="bf86e" GroupRef="d89f4">
+    <Graphics ZOrder="33116" LineThickness="1.0">
+      <Point GraphId="b2816" X="202.32288086076662" Y="595.8012808677402" />
+      <Point GraphId="f44c9" X="187.28947328838345" Y="580.7678732953568" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idce1de0ee">
-    <Graphics ZOrder="12302" LineThickness="1.0">
-      <Point X="658.5425418019877" Y="94.59519801240441" GraphRef="d44db" RelX="0.0" RelY="1.0" />
-      <Point X="658.5425418019877" Y="166.40682053244882" GraphRef="a2bb3" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.5263656057099672" Shape="None" GraphId="e2294" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="d11bf" GroupRef="d89f4">
+    <Graphics ZOrder="33117" LineThickness="1.0">
+      <Point GraphId="e4f0c" X="124.75974111009364" Y="636.887027989708" />
+      <Point GraphId="d8d7c" X="109.72633353771056" Y="621.8536204173249" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id66107209">
-    <Graphics ZOrder="12304" LineThickness="1.0">
-      <Point X="658.5425418019877" Y="191.40682053244882" GraphRef="a2bb3" RelX="0.0" RelY="1.0" />
-      <Point X="658.5425418019873" Y="307.5967133841486" GraphRef="f8ad4" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.44939905843435973" Shape="None" GraphId="d880c" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="a2373" GroupRef="d89f4">
+    <Graphics ZOrder="33118" LineThickness="1.0">
+      <Point GraphId="d4101" X="125.01586583169674" Y="580.9070725331381" />
+      <Point GraphId="b5166" X="110.26085469583967" Y="595.6620836689955" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id763eee19">
-    <Graphics ZOrder="12322" LineThickness="1.0">
-      <Point X="658.5425418019877" Y="830.7181344303865" GraphRef="e1855" RelX="0.0" RelY="1.0" />
-      <Point X="658.5425418019877" Y="951.1323853425366" GraphRef="f7bbc" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.4" Shape="None" GraphId="f70d2" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="b42ec" GroupRef="d89f4">
+    <Graphics ZOrder="33119" LineThickness="1.0">
+      <Point GraphId="d8758" X="201.6182917448302" Y="621.9928111591213" />
+      <Point GraphId="e7b53" X="185.8165100076366" Y="637.4660925776815" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id151e281">
-    <Graphics ZOrder="12324" LineThickness="1.0">
-      <Point X="658.5425418019873" Y="332.5967133841486" GraphRef="f8ad4" RelX="0.0" RelY="1.0" />
-      <Point X="658.5425418019877" Y="584.0333506377399" GraphRef="cf00f" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.5541836052536739" Shape="None" GraphId="c50a7" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="af2f4" GroupRef="d89f4">
+    <Graphics ZOrder="33120" LineThickness="1.0">
+      <Point GraphId="ec658" X="125.31653398314452" Y="637.4438208627591" />
+      <Point GraphId="e6f9a" X="186.77918269504758" Y="637.4438208627591" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id829e207b">
-    <Graphics ZOrder="12338" LineThickness="1.0">
-      <Point X="1052.373053289764" Y="818.2181344303865" GraphRef="f0d46" RelX="-1.0" RelY="0.0" />
-      <Point X="699.5710152026747" Y="818.2181344303865" GraphRef="e1855" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.4293035526810647" Shape="None" GraphId="ace04" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="f3ad4">
+    <Graphics ZOrder="33127" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="eed63" X="1464.14950455099" Y="340.659434048332" GraphRef="c6dab" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d597c" X="1552.405476336277" Y="235.0946767561901" GraphRef="fbf44" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ide4433e58">
-    <Graphics ZOrder="12340" LineThickness="1.0">
-      <Point X="658.5425418019877" Y="609.0333506377399" GraphRef="cf00f" RelX="0.0" RelY="1.0" />
-      <Point X="658.5425418019877" Y="805.7181344303865" GraphRef="e1855" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.4" Shape="None" GraphId="fc34f" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="fc974">
+    <Graphics ZOrder="33128" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="f8c72" X="1464.14950455099" Y="340.659434048332" GraphRef="c6dab" RelX="1.0" RelY="0.0" />
+      <Point GraphId="bb98c" X="1516.2564080132952" Y="305.6536829673696" GraphRef="bded3" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id7db6ace7">
-    <Graphics ZOrder="12352" LineThickness="1.0">
-      <Point X="1119.1432396251676" Y="951.1323853425368" GraphRef="f9904" RelX="0.0" RelY="-1.0" />
-      <Point X="1119.1432396251676" Y="830.7181344303865" GraphRef="f0d46" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.37802951145531316" Shape="None" GraphId="f8676" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="f9b47">
+    <Graphics ZOrder="33129" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="b541b" X="1464.14950455099" Y="340.659434048332" GraphRef="c6dab" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f1064" X="1555.2936750940412" Y="368.4487140232709" GraphRef="f8ff4" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id156a58cf">
-    <Graphics ZOrder="12382" LineThickness="1.0">
-      <Point X="290.882381327433" Y="818.2181344303865" GraphRef="f1684" RelX="1.0" RelY="0.0" />
-      <Point X="617.5140684013006" Y="818.2181344303865" GraphRef="e1855" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.4" Shape="None" GraphId="cc3e0" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="f34d7">
+    <Graphics ZOrder="33130" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="bac44" X="1464.14950455099" Y="340.659434048332" GraphRef="c6dab" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b1764" X="1561.5048552182648" Y="431.24374507917025" GraphRef="d7453" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="b2908">
-    <Graphics ZOrder="32910" LineThickness="1.0">
-      <Point X="241.19294033364412" Y="94.59519801240441" GraphRef="f409a" RelX="0.0" RelY="1.0" />
-      <Point X="241.19294033364412" Y="166.40682053244882" GraphRef="af9a2" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.711849780132912" Shape="None" GraphId="e7fa8" />
-      <Anchor Position="0.4" Shape="None" GraphId="ce9d9" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="ff19c">
+    <Graphics ZOrder="33132" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="f5033" X="1464.14950455099" Y="556.7367028256492" GraphRef="ab01a" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e7bfe" X="1561.5048552182648" Y="556.7367028256492" GraphRef="a5a53" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="Rhea" ID="RHEA:48282" />
-  </Interaction>
-  <Interaction GraphId="b1478">
-    <Graphics ZOrder="32912" LineThickness="1.0">
-      <Point X="241.19294033364412" Y="191.40682053244882" GraphRef="af9a2" RelX="0.0" RelY="1.0" />
-      <Point X="241.19294033364412" Y="307.5967133841486" GraphRef="fd574" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.5076451892182846" Shape="None" GraphId="e9e18" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="bc663">
+    <Graphics ZOrder="33135" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="be451" X="1464.14950455099" Y="645.6099422622698" GraphRef="a40bf" RelX="1.0" RelY="0.0" />
+      <Point GraphId="dbe71" X="1561.5048552182648" Y="645.6099422622697" GraphRef="f9586" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="Rhea" ID="RHEA:47969" />
-  </Interaction>
-  <Interaction GraphId="eef6c">
-    <Graphics ZOrder="32951" LineStyle="Broken" LineThickness="1.0">
-      <Point X="658.5425418019876" Y="243.62244897959184" GraphRef="d880c" RelX="0.0" RelY="0.0" />
-      <Point X="599.0656785253973" Y="243.35695764909252" GraphRef="af3b3" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="a6a0f">
+    <Graphics ZOrder="33138" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="bd2b8" X="1464.1495045509903" Y="723.2155760650879" GraphRef="c2aae" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f24ac" X="1561.5048552182648" Y="723.2155760650878" GraphRef="d561f" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Label TextLabel="Tay-Sachs" GraphId="c7d1d" Href="https://omim.org/272800" GroupRef="c1123">
-    <Comment>DISEASE</Comment>
-    <Graphics CenterX="104.93163812634035" CenterY="225.71591171649794" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </GraphicalLine>
+  <GraphicalLine GraphId="c4f48">
+    <Graphics ZOrder="33141" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="c0d75" X="1464.1495045509903" Y="810.6803647974831" GraphRef="f3570" RelX="1.0" RelY="0.0" />
+      <Point GraphId="bbf82" X="1561.5048552182648" Y="810.680364797483" GraphRef="f6cbb" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Disorders mentioned in&#xA;chapter, not drawn in&#xA;metabolic pathway:" GraphId="e6390">
+    <Graphics CenterX="1620.556163065349" CenterY="167.52526025719555" Width="273.260869565217" Height="51.31987577639735" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="404040" />
   </Label>
-  <Label TextLabel="Sialidosis" GraphId="cb3f9">
+  <Label TextLabel="Tay-Sachs" GraphId="c5eaa" Href="https://omim.org/272800" GroupRef="b6a73">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="425.5788313120172" CenterY="283.3517089305401" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="114.93163812634035" CenterY="235.71591171649794" Width="90.0" Height="25.0" ZOrder="33019" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="GM1-gangliosidosis" GraphId="cd557" Href="https://omim.org/230500">
+  <Label TextLabel="Sialidosis" GraphId="f25d7" Href="https://omim.org/256540">
+    <Comment>AKA galactasialidosis</Comment>
+    <Graphics CenterX="435.5788313120172" CenterY="293.3517089305401" Width="90.0" Height="25.0" ZOrder="33020" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="GM1-gangliosidosis" GraphId="fb734" Href="https://omim.org/230500">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="554.0656785253973" CenterY="133.0372532881966" Width="132.10033076074944" Height="25.0" ZOrder="28672" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="564.0656785253973" CenterY="143.0372532881966" Width="132.10033076074944" Height="25.0" ZOrder="33021" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Fabry" GraphId="dcb23" Href="https://omim.org/301500">
+  <Label TextLabel="Fabry" GraphId="a2b8e" Href="https://omim.org/301500">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="912.8996692392506" CenterY="272.3263506063946" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="979.6223583148808" CenterY="295.9818127912685" Width="90.0" Height="25.0" ZOrder="33022" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Krabbe" GraphId="e8292" Href="https://omim.org/245200">
+  <Label TextLabel="Krabbe" GraphId="b5467" Href="https://omim.org/245200">
     <Comment>Disease</Comment>
-    <Graphics CenterX="900.7717750826904" CenterY="866.5931642778384" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="910.7717750826904" CenterY="876.5931642778384" Width="90.0" Height="25.0" ZOrder="33023" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Sandhoff" GraphId="eaa5a" Href="https://omim.org/268800">
+  <Label TextLabel="Sandhoff" GraphId="bbdc5" Href="https://omim.org/268800">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="1027.0" CenterY="242.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="1037.0" CenterY="252.0" Width="90.0" Height="25.0" ZOrder="33024" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Sandhoff" GraphId="af3b3" Href="https://omim.org/268800">
+  <Label TextLabel="Sandhoff" GraphId="bf5dc" Href="https://omim.org/268800">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="554.0656785253973" CenterY="243.35695764909252" Width="90.0" Height="25.0" ZOrder="32952" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="564.0656785253973" CenterY="253.35695764909252" Width="90.0" Height="25.0" ZOrder="33087" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="GM1-gangliosidosis" GraphId="a1d81" Href="https://omim.org/230500">
+  <Label TextLabel="GM1-gangliosidosis" GraphId="e069c" Href="https://omim.org/230500">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="115.13493337227257" CenterY="135.68908489525893" Width="132.10033076074944" Height="25.0" ZOrder="32953" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="125.13493337227257" CenterY="145.68908489525893" Width="132.10033076074944" Height="25.0" ZOrder="33088" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Sandhoff" GraphId="e6caa" Href="https://omim.org/268800" GroupRef="c1123">
+  <Label TextLabel="Sandhoff" GraphId="a2130" Href="https://omim.org/268800" GroupRef="b6a73">
     <Comment>DISEASE</Comment>
     <BiopaxRef>c70</BiopaxRef>
-    <Graphics CenterX="104.93163812634035" CenterY="250.71591171649789" Width="90.0" Height="25.0" ZOrder="32954" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="114.93163812634035" CenterY="260.7159117164979" Width="90.0" Height="25.0" ZOrder="33089" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="GM2-gangliosidosis AB-variant" GraphId="efb5c" Href="https://omim.org/272750" GroupRef="c1123">
+  <Label TextLabel="GM2-gangliosidosis AB-variant" GraphId="d81df" Href="https://omim.org/272750" GroupRef="b6a73">
     <Comment>DISEASE</Comment>
     <BiopaxRef>d47</BiopaxRef>
-    <Graphics CenterX="104.93163812634032" CenterY="275.71591171649766" Width="189.27783902976842" Height="25.0" ZOrder="32955" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="114.93163812634032" CenterY="285.71591171649766" Width="189.27783902976842" Height="25.0" ZOrder="33090" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Fabry" GraphId="c5cf2" Href="https://omim.org/301500">
+  <Label TextLabel="Fabry" GraphId="d27b9" Href="https://omim.org/301500">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="1022.1278941565602" CenterY="688.3971299237337" Width="90.0" Height="25.0" ZOrder="32956" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="1032.1278941565602" CenterY="698.3971299237337" Width="90.0" Height="25.0" ZOrder="33091" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Farber" GraphId="ad87a" Href="https://omim.org/228000">
+  <Label TextLabel="Farber" GraphId="f7b02" Href="https://omim.org/228000">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="554.0656785253973" CenterY="879.4420873963942" Width="90.0" Height="25.0" ZOrder="32957" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="564.0656785253973" CenterY="889.4420873963942" Width="90.0" Height="25.0" ZOrder="33092" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Metachromatic leukodystrophy" GraphId="a2976">
+  <Label TextLabel="Metachromatic leukodystrophy" GraphId="d60a9">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="976.1277380867864" CenterY="917.3886244559324" Width="187.978440936634" Height="25.0" ZOrder="32958" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="986.1277380867864" CenterY="927.3886244559324" Width="187.978440936634" Height="25.0" ZOrder="33093" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Gaucher" GraphId="af291" Href="https://omim.org/230800">
+  <Label TextLabel="Gaucher" GraphId="dc68c" Href="https://omim.org/230800">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="554.0656785253973" CenterY="687.9343777117973" Width="90.0" Height="25.0" ZOrder="32959" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="564.0656785253973" CenterY="697.9343777117973" Width="90.0" Height="25.0" ZOrder="33094" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Niemann-Pick A" GraphId="b1f83" Href="https://omim.org/257200" GroupRef="a85d4">
+  <Label TextLabel="Niemann-Pick A" GraphId="cfc7e" Href="https://omim.org/257200" GroupRef="c4af1">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="419.584603214368" CenterY="870.0010181375842" Width="113.44318725291717" Height="25.0" ZOrder="32960" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="429.584603214368" CenterY="880.0010181375842" Width="113.44318725291717" Height="25.0" ZOrder="33095" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Label TextLabel="Niemann-Pick B" GraphId="b2520" Href="https://omim.org/607616" GroupRef="a85d4">
+  <Label TextLabel="Niemann-Pick B" GraphId="de6c2" Href="https://omim.org/607616" GroupRef="c4af1">
     <Comment>DISEASE</Comment>
-    <Graphics CenterX="419.5846032143704" CenterY="895.0010181375843" Width="113.4431872529172" Height="25.000000000000057" ZOrder="32961" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Graphics CenterX="429.5846032143704" CenterY="905.0010181375843" Width="113.4431872529172" Height="25.000000000000057" ZOrder="33096" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
   </Label>
-  <Group GroupId="dae5a" GraphId="a2cca" Style="Group" />
-  <Group GroupId="bee72" GraphId="a5d73" Style="Group" />
-  <Group GroupId="ec2eb" GraphId="a6bc4" Style="Complex" />
-  <Group GroupId="de500" GraphId="a9984" Style="Group" />
-  <Group GroupId="cbadc" GraphId="ae054" Style="Group" />
-  <Group GroupId="a85d4" GraphId="af9fd" Style="Group" />
-  <Group GroupId="b1bab" GraphId="b36c8" Style="Group" />
-  <Group GroupId="bda3b" GraphId="b4cbf" Style="Group" />
-  <Group GroupId="c1123" GraphId="bd556" Style="Group" />
-  <Group GroupId="c6ca9" GraphId="c05ac" Style="Group" />
-  <Group GroupId="eca86" GraphId="c15d3" Style="Group" />
-  <Group GroupId="fa305" GraphId="c298d" Style="Group" />
-  <Group GroupId="ff6aa" GraphId="c6782" Style="Group" />
-  <Group GroupId="ad5af" GraphId="d185f" Style="Complex" />
-  <Group GroupId="ca76d" GraphId="d463c" Style="Group" />
-  <Group GroupId="f615c" GraphId="d6755" Style="Group" />
-  <Group GroupId="f5915" GraphId="db0cb" Style="Group" />
-  <Group GroupId="cffd8" GraphId="e5944" Style="Group" />
+  <Label TextLabel="Disease" GraphId="a38b0">
+    <Graphics CenterX="154.01116241860666" CenterY="474.30452846529585" Width="90.0" Height="25.0" ZOrder="33102" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Catalysis" GraphId="f9f9e">
+    <Graphics CenterX="273.59010876631197" CenterY="700.8466259542145" Width="90.0" Height="25.0" ZOrder="33103" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Protein" GraphId="c80e2">
+    <Graphics CenterX="154.01116241860666" CenterY="540.5988901380788" Width="90.0" Height="25.0" ZOrder="33106" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="Metabolite" GraphId="bbe2a">
+    <Graphics CenterX="154.01116241860666" CenterY="505.4299269775169" Width="90.0" Height="25.0" ZOrder="33107" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Conversion" GraphId="f208b">
+    <Graphics CenterX="273.59010876631197" CenterY="672.6223638874753" Width="90.0" Height="25.0" ZOrder="33108" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Connection &#xA;to disease&#xA;" GraphId="c7b66">
+    <Graphics CenterX="273.59010876631197" CenterY="740.8462444844872" Width="90.0" Height="25.0" ZOrder="33109" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Legend" GraphId="fa752">
+    <Graphics CenterX="206.81115021157814" CenterY="439.23011830195657" Width="90.0" Height="25.0" ZOrder="33110" FillColor="ffffff" FontWeight="Bold" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Protein1" GraphId="f795c" GroupRef="d89f4">
+    <Graphics CenterX="155.4736106556717" CenterY="599.7025176357972" Width="69.1708657810363" Height="18.44831223106236" ZOrder="33112" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="404040" />
+  </Label>
+  <Label TextLabel="Protein2" GraphId="f1408" GroupRef="d89f4">
+    <Graphics CenterX="155.4736106556717" CenterY="618.1508298668597" Width="69.17086578103631" Height="18.448312231062413" ZOrder="33121" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="Complex" GraphId="c4a64">
+    <Graphics CenterX="273.590108766312" CenterY="605.5766678194612" Width="90.0" Height="25.0" ZOrder="33122" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Krabbe disease-like disorder&#xA;due to saposin A deficiency" GraphId="fbf44" Href="https://omim.org/611722">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="1657.026594348701" CenterY="235.0946767561901" Width="209.24223602484827" Height="39.31987577639737" ZOrder="33123" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Metachromic leukodystrophy-like disorder&#xA;due to saposin B deficiency" GraphId="bded3" Href="https://omim.org/249900">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="1657.0265943487009" CenterY="305.6536829673696" Width="281.54037267081077" Height="39.31987577639737" ZOrder="33124" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Gaucher disease-like disorder&#xA;due to saposin C deficiency" GraphId="f8ff4" Href="https://omim.org/610539">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="1657.0265943487009" CenterY="368.44871402327084" Width="203.46583850931995" Height="39.31987577639737" ZOrder="33125" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Combined saposin deficiency" GraphId="d7453" Href="https://omim.org/611721">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="1657.026594348701" CenterY="431.2437450791702" Width="191.04347826087297" Height="39.31987577639737" ZOrder="33126" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Action myoclonal renal &#xA;failure syndrome" GraphId="a5a53" Href="https://omim.org/254900">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="1657.026594348701" CenterY="556.7367028256492" Width="191.04347826087297" Height="39.31987577639737" ZOrder="33131" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Niemann-Pick C1" GraphId="f9586" Href="https://omim.org/257220">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="1657.0265943487013" CenterY="645.6099422622697" Width="191.04347826087297" Height="39.31987577639737" ZOrder="33134" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Niemann-Pick C2" GraphId="d561f" Href="https://omim.org/607625">
+    <Comment>DISEASE</Comment>
+    <Graphics CenterX="1657.026594348701" CenterY="723.2155760650878" Width="191.04347826087297" Height="39.31987577639737" ZOrder="33137" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Lysosomal acid lipase&#xA;deficiency" GraphId="f6cbb" Href="https://omim.org/278000">
+    <Comment>AKA Wolman disease</Comment>
+    <Graphics CenterX="1657.026594348701" CenterY="810.680364797483" Width="191.04347826087297" Height="39.31987577639737" ZOrder="33140" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+  </Label>
+  <Shape GraphId="e3fbd">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="207.5611502115729" CenterY="589.6903706515575" Width="224.5" Height="338.3125106053168" ZOrder="33101" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="d89f4" GraphId="d89f4" Style="Group" />
+  <Group GroupId="be523" GraphId="be523" Style="Group" />
+  <Group GroupId="f0e00" GraphId="f0e00" Style="Group" />
+  <Group GroupId="f9f0c" GraphId="f9f0c" Style="Group" />
+  <Group GroupId="a8eaa" GraphId="a8eaa" Style="Group" />
+  <Group GroupId="cdbc9" GraphId="cdbc9" Style="Group" />
+  <Group GroupId="ee748" GraphId="ee748" Style="Group" />
+  <Group GroupId="f6ba4" GraphId="f6ba4" Style="Group" />
+  <Group GroupId="cc0d4" GraphId="cc0d4" Style="Complex" />
+  <Group GroupId="ef922" GraphId="ef922" Style="Group" />
+  <Group GroupId="f95e0" GraphId="f95e0" Style="Group" />
+  <Group GroupId="c4af1" GraphId="c4af1" Style="Group" />
+  <Group GroupId="a04fc" GraphId="a04fc" Style="Group" />
+  <Group GroupId="ff401" GraphId="ff401" Style="Group" />
+  <Group GroupId="f9324" GraphId="f9324" Style="Group" />
+  <Group GroupId="b6a73" GraphId="b6a73" Style="Group" />
+  <Group GroupId="f090c" GraphId="f090c" Style="Group" />
+  <Group GroupId="b6add" GraphId="b6add" Style="Group" />
+  <Group GroupId="dbc4c" GraphId="dbc4c" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krabbe disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10587</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c70">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9694901</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Pro504 --&amp;gt; Ser substitution in the beta-subunit of beta-hexosaminidase A inhibits alpha-subunit hydrolysis of GM2 ganglioside, resulting in chronic Sandhoff disease.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hou Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McInnes B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hinek A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karpati G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mahuran D</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niemann-Pick disease type A</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0070111</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered sphingolipid metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000735</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandhoff disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3323</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metachromatic leukodystrophy</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10581</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaucher's disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1926</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farber lipogranulomatosis</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050464</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gangliosidosis</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2368</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sphingolipid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000197</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niemann-Pick disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14504</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sphingolipid biosynthetic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000162</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niemann-Pick disease type B</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0070112</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tay-Sachs disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3320</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krabbe disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10587</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gangliosidosis GM1</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3322</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gangliosidosis GM2</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3321</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycosphingolipid metabolic pathway</bp:TERM>
@@ -703,9 +959,39 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niemann-Pick disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14504</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sphingolipid degradation pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000163</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lacto-series glycosphingolipid metabolic pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001062</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabry disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14499</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niemann-Pick disease type A</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0070111</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered sphingolipid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000735</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tay-Sachs disease AB variant</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4795</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eee">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9783642403361</bp:ID>
@@ -718,31 +1004,47 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibson, K. Michael</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dionisi-Vici, Carlo</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandhoff disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3323</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tay-Sachs disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3320</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabry disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14499</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gangliosidosis GM1</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3322</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farber lipogranulomatosis</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050464</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d3a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19014978</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Principles of lysosomal membrane degradation: Cellular topology and biochemistry of lysosomal lipid degradation</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta .</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heike Schulze</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas Kolter</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konrad Sandhoff</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a58">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16854371</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sphingolipid metabolism diseases</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta .</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas Kolter</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konrad Sandhoff</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bff">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12011101</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Combinatorial ganglioside biosynthesis</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem .</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas Kolter</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard L Proia</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konrad Sandhoff</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c70">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9694901</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Pro504 --&amp;gt; Ser substitution in the beta-subunit of beta-hexosaminidase A inhibits alpha-subunit hydrolysis of GM2 ganglioside, resulting in chronic Sandhoff disease.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hou Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McInnes B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hinek A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karpati G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mahuran D</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d47">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8123671</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -766,31 +1068,27 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lou J</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Withers SG</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gangliosidosis</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2368</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gangliosidosis GM2</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3321</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sphingolipid degradation pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000163</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sphingolipid biosynthetic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000162</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sphingolipid metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000197</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e35">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8672428</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct determination of the substrate specificity of the alpha-active site in heterodimeric beta-hexosaminidase A.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochemistry</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hou Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tse R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mahuran DJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dbd">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22652185</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role of saposin C in Gaucher disease</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Genet Metab.</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rafael J Tamargo</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arash Velayati</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ehud Goldin</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ellen Sidransky</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ae1">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9582303</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -810,41 +1108,5 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bennett EP</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clausen H</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tay-Sachs disease AB variant</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4795</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e35">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8672428</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct determination of the substrate specificity of the alpha-active site in heterodimeric beta-hexosaminidase A.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochemistry</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hou Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tse R</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mahuran DJ</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaucher's disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1926</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niemann-Pick disease type B</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0070112</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metachromatic leukodystrophy</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10581</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-

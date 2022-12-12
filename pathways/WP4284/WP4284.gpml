@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Ultraconserved region 339 modulation of tumor suppressor microRNAs in cancer" Data-Source="WikiPathways" Version="WP4284_r108123" Author="[Khanspers, Fehrhart]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Ultraconserved region 339 modulation of tumor suppressor microRNAs in cancer" Data-Source="WikiPathways" Version="WP4284_r108123" Author="[Khanspers, Fehrhart]" Last-Modified="20191129102517" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">The TP53-uc.339-miRNA-CCNE2 network. TP53 directly inhibits the expression of ultraconserved region 339 (us339). Ultraconserved region 339 functions as an “entrapper” for CCNE2 targeting miR-339, -663b, and -95 leading to up-regulation of CCNE2 and increased tumor growth and migration.</Comment>
   <BiopaxRef>a6d</BiopaxRef>
-  <Graphics BoardWidth="678.0000000000025" BoardHeight="584.6666666666712" />
+  <Graphics BoardWidth="802.0000000000001" BoardHeight="698.0000000000001" />
   <DataNode TextLabel="uc339&#xA;(Entraper1)" GraphId="f219e" Type="GeneProduct">
     <Graphics CenterX="280.0" CenterY="213.5833333333328" Width="90.0" Height="35.166666666666714" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
@@ -11,15 +11,15 @@
     <Graphics CenterX="280.0000000000001" CenterY="122.66666666666669" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000141510" />
   </DataNode>
-  <DataNode TextLabel="MIR95" GraphId="d7b8a" Type="Rna" GroupRef="ddb77">
+  <DataNode TextLabel="MIR95" GraphId="d7b8a" Type="RNA" GroupRef="ddb77">
     <Graphics CenterX="280.0" CenterY="308.66666666666686" Width="90.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="cc00cc" />
     <Xref Database="Ensembl" ID="ENSG00000207807" />
   </DataNode>
-  <DataNode TextLabel="MIR339" GraphId="ef0cb" Type="Rna" GroupRef="ddb77">
+  <DataNode TextLabel="MIR339" GraphId="ef0cb" Type="RNA" GroupRef="ddb77">
     <Graphics CenterX="280.0" CenterY="333.66666666666686" Width="90.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle" Color="cc00cc" />
     <Xref Database="Ensembl" ID="ENSG00000199023" />
   </DataNode>
-  <DataNode TextLabel="MIR663B" GraphId="c6483" Type="Rna" GroupRef="ddb77">
+  <DataNode TextLabel="MIR663B" GraphId="c6483" Type="RNA" GroupRef="ddb77">
     <Graphics CenterX="280.0" CenterY="358.66666666666686" Width="90.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" Color="cc00cc" />
     <Xref Database="Ensembl" ID="ENSG00000221288" />
   </DataNode>
@@ -31,38 +31,38 @@
     <Graphics RelX="-0.9407407407407415" RelY="-0.68" Width="15.0" Height="15.0" ShapeType="Hexagon" />
     <Xref Database="" ID="" />
   </State>
-  <Interaction GraphId="id2f15bafb">
+  <Interaction GraphId="fa4a2">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point GraphId="c64eb" X="280.0" Y="231.16666666666617" GraphRef="f219e" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c2147" X="280.0" Y="288.16666666666686" GraphRef="ddb77" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bb356">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="f85d5" X="280.0000000000001" Y="135.16666666666669" GraphRef="fdf54" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d362a" X="280.0" Y="195.99999999999943" GraphRef="f219e" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a74bc">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="280.0" Y="379.16666666666686" GraphRef="d65e7" RelX="0.0" RelY="1.0" />
-      <Point X="280.0000000000001" Y="429.49999999999994" GraphRef="e540f" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="a7276" X="280.0" Y="379.16666666666686" GraphRef="ddb77" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a6a61" X="280.0000000000001" Y="429.49999999999994" GraphRef="e540f" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id65f94063">
+  <Interaction GraphId="f5d85">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="280.0000000000001" Y="454.49999999999994" GraphRef="e540f" RelX="0.0" RelY="1.0" />
-      <Point X="280.0000000000001" Y="510.16666666667106" GraphRef="a34ce" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="cd87f" X="280.0000000000001" Y="454.49999999999994" GraphRef="e540f" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b832a" X="280.0000000000001" Y="510.16666666667106" GraphRef="a34ce" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id6e7b0319">
+  <GraphicalLine GraphId="fcf2f" GroupRef="c3466">
     <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
-      <Point X="280.0" Y="231.16666666666617" GraphRef="f219e" RelX="0.0" RelY="1.0" />
-      <Point X="280.0" Y="288.16666666666686" GraphRef="d65e7" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ide867441f">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="280.0000000000001" Y="135.16666666666669" GraphRef="fdf54" RelX="0.0" RelY="1.0" />
-      <Point X="280.0" Y="195.99999999999943" GraphRef="f219e" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <GraphicalLine GraphId="ide17be628" GroupRef="c3466">
-    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
-      <Point X="442.6666666666672" Y="139.99999999999997" />
-      <Point X="486.6666666666666" Y="139.99999999999997" ArrowHead="mim-inhibition" />
+      <Point GraphId="e9654" X="442.6666666666672" Y="139.99999999999997" />
+      <Point GraphId="b09dd" X="486.6666666666666" Y="139.99999999999997" ArrowHead="mim-inhibition" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="Inactivating mutation" GraphId="a0820" GroupRef="c3466">
@@ -80,10 +80,15 @@
   <Shape GraphId="dda66" GroupRef="c3466">
     <Graphics CenterX="467.83333444660434" CenterY="105.16666555339802" Width="21.666668893203507" Height="21.666664440129352" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Hexagon" Rotation="0.0" />
   </Shape>
-  <Group GroupId="c3466" Style="Group" />
-  <Group GroupId="ddb77" GraphId="d65e7" Style="Group" />
+  <Group GroupId="c3466" GraphId="c3466" Style="Group" />
+  <Group GroupId="ddb77" GraphId="ddb77" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microRNA pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000808</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
@@ -92,7 +97,7 @@
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:162</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a6d">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29180617</bp:ID>
@@ -135,11 +140,5 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calin GA</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabbri M</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microRNA pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000808</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-

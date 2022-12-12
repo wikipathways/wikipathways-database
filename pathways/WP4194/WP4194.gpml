@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Hormonal control of pubertal growth spurt" Data-Source="WikiPathways" Version="WP4194_r119287" Author="[DeSl, Eweitz, Finterly]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Hormonal control of pubertal growth spurt" Data-Source="WikiPathways" Version="WP4194_r124538" Author="[DeSl, Eweitz, Finterly, Marvin M2]" Last-Modified="20221107125811" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">This pathway shows the regulation and action of the GH-IGF-1 axis. Chondrogenesis in the growth plate is the biological process that drives height gain. The Growth hormone (GH) insulin-like growth factor 1 (IGF-1) axis is one of many regulatory systems that control chondrogenesis. Other hormones (estrogens, androgens), paracrine factors, extracellular matrix molecules and intracellular proteins regulate the activity of growth plate chondrocytes as well. Estrogen is critical for epiphyseal fusion in both young women, as well as men. This pathway describes how the growth plate lengthens until the epypheseal plate closure occurs. GH is released by the anterior pituitary gland due to the GRH. This activates IGF-1 in muscles and bones, and promotes lengthening of the growth plate. Also, GnRH in the hypothalamus stimulates LH and FSH in the anterior pituitary which stimulate gonads to produce sex hormones, such as estrogen.</Comment>
   <BiopaxRef>e54</BiopaxRef>
   <BiopaxRef>c56</BiopaxRef>
   <Graphics BoardWidth="777.4392014519019" BoardHeight="482.8511796733213" />
-  <DataNode TextLabel="IGF-1" GraphId="c6b73" Type="GeneProduct">
+  <DataNode TextLabel="IGF1" GraphId="c6b73" Type="GeneProduct">
     <Graphics CenterX="370.29596303131103" CenterY="415.40653357531755" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="NCBI Protein" ID="3479" />
+    <Xref Database="Entrez Gene" ID="3479" />
   </DataNode>
   <DataNode TextLabel="GnRH" GraphId="d3d80" Type="GeneProduct">
     <Graphics CenterX="304.9602098552672" CenterY="78.44174770430944" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="2796" />
   </DataNode>
-  <DataNode TextLabel="GRH" GraphId="a62a8" Type="GeneProduct">
+  <DataNode TextLabel="GHRH" GraphId="a62a8" Type="GeneProduct">
     <Graphics CenterX="471.66459896524503" CenterY="78.44174770430945" Width="90.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" />
-    <Xref Database="Entrez Gene" ID="2796" />
+    <Xref Database="Entrez Gene" ID="2691" />
   </DataNode>
-  <DataNode TextLabel="SRIF" GraphId="e0ed5" Type="GeneProduct">
+  <DataNode TextLabel="SST" GraphId="e0ed5" Type="GeneProduct">
     <Graphics CenterX="702.4392014519019" CenterY="78.44174770430944" Width="90.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="6750" />
   </DataNode>
   <DataNode TextLabel="GH" GraphId="a2306" Type="GeneProduct">
     <Graphics CenterX="623.4392014519019" CenterY="171.85117967332133" Width="90.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" />
-    <Xref Database="NCBI Protein" ID="2688" />
+    <Xref Database="Entrez Gene" ID="2688" />
   </DataNode>
   <DataNode TextLabel="FSH" GraphId="a505b" Type="GeneProduct">
     <Graphics CenterX="362.9602098552665" CenterY="171.85117967332133" Width="90.0" Height="25.0" ZOrder="32772" FontSize="12" Valign="Middle" />
@@ -36,119 +36,119 @@
     <Graphics CenterX="304.9602098552672" CenterY="253.85117967332133" Width="90.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:50114" />
   </DataNode>
-  <DataNode TextLabel="IGF-1" GraphId="a4244" Type="GeneProduct">
+  <DataNode TextLabel="IGF1" GraphId="a4244" Type="GeneProduct">
     <Graphics CenterX="623.4392014519019" CenterY="276.96042337080047" Width="90.0" Height="25.0" ZOrder="32775" FontSize="12" Valign="Middle" />
-    <Xref Database="NCBI Protein" ID="3479" />
+    <Xref Database="Entrez Gene" ID="3479" />
   </DataNode>
   <Interaction GraphId="id12ceef46">
     <Comment>+ effect</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="244.96020985526724" Y="184.35117967332133" GraphRef="e6ee0" RelX="0.0" RelY="1.0" />
-      <Point X="304.9602098552672" Y="241.35117967332133" GraphRef="f3e2e" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="d7325" X="244.96020985526724" Y="184.35117967332133" GraphRef="e6ee0" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d9e02" X="304.9602098552672" Y="241.35117967332133" GraphRef="f3e2e" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2928af34">
     <Comment>+ effect</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="623.4392014519019" Y="289.46042337080047" GraphRef="a4244" RelX="0.0" RelY="1.0" />
-      <Point X="517.931715063524" Y="326.3511796733213" GraphRef="ec9ee" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="b13c1" X="623.4392014519019" Y="289.46042337080047" GraphRef="a4244" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d7491" X="517.931715063524" Y="326.3511796733213" GraphRef="ec9ee" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2f512d1">
     <Comment>- effect</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="679.9392014519019" Y="90.94174770430944" GraphRef="e0ed5" RelX="-0.5" RelY="1.0" />
-      <Point X="645.9392014519019" Y="159.35117967332133" GraphRef="a2306" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="bebb1" X="679.9392014519019" Y="90.94174770430944" GraphRef="e0ed5" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="e21b3" X="645.9392014519019" Y="159.35117967332133" GraphRef="a2306" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id30267f0c">
     <Comment>+ effect</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="645.9392014519019" Y="184.35117967332133" GraphRef="a2306" RelX="0.5" RelY="1.0" />
-      <Point X="645.9392014519019" Y="264.46042337080047" GraphRef="a4244" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="b50b9" X="645.9392014519019" Y="184.35117967332133" GraphRef="a2306" RelX="0.5" RelY="1.0" />
+      <Point GraphId="aad29" X="645.9392014519019" Y="264.46042337080047" GraphRef="a4244" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id382a6039">
     <Comment>+ effect</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="362.9602098552665" Y="184.35117967332133" GraphRef="a505b" RelX="0.0" RelY="1.0" />
-      <Point X="304.9602098552672" Y="241.35117967332133" GraphRef="f3e2e" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="ddf06" X="362.9602098552665" Y="184.35117967332133" GraphRef="a505b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b4e5c" X="304.9602098552672" Y="241.35117967332133" GraphRef="f3e2e" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id46b63bd4">
     <Comment>? effect</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="327.4602098552672" Y="241.35117967332133" GraphRef="f3e2e" RelX="0.5" RelY="-1.0" />
-      <Point X="494.164598965245" Y="90.94174770430945" GraphRef="a62a8" RelX="0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="eb921" X="327.4602098552672" Y="241.35117967332133" GraphRef="f3e2e" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="fdd5d" X="494.164598965245" Y="90.94174770430945" GraphRef="a62a8" RelX="0.5" RelY="1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id4932c3c9">
     <Comment>+effect</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="282.4602098552672" Y="90.94174770430944" GraphRef="d3d80" RelX="-0.5" RelY="1.0" />
-      <Point X="244.96020985526724" Y="159.35117967332133" GraphRef="e6ee0" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="bbd69" X="282.4602098552672" Y="90.94174770430944" GraphRef="d3d80" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="fa8b8" X="244.96020985526724" Y="159.35117967332133" GraphRef="e6ee0" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id4da996f">
     <Comment>+ effect</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="392.79596303131103" Y="402.90653357531755" GraphRef="c6b73" RelX="0.5" RelY="-1.0" />
-      <Point X="392.79596303131103" Y="356.8139745916515" GraphRef="d1862" RelX="0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="de4d0" X="392.79596303131103" Y="402.90653357531755" GraphRef="c6b73" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="e6c0b" X="392.79596303131103" Y="356.8139745916515" GraphRef="d1862" RelX="0.5" RelY="1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5d5ecc9">
     <Comment>+ effect</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="349.9602098552672" Y="253.85117967332133" GraphRef="f3e2e" RelX="1.0" RelY="0.0" />
-      <Point X="600.9392014519019" Y="184.35117967332133" GraphRef="a2306" RelX="-0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="d0d57" X="349.9602098552672" Y="253.85117967332133" GraphRef="f3e2e" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f43b6" X="600.9392014519019" Y="184.35117967332133" GraphRef="a2306" RelX="-0.5" RelY="1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5da40298">
     <Comment>+ effect</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="623.4392014519019" Y="184.35117967332133" GraphRef="a2306" RelX="0.0" RelY="1.0" />
-      <Point X="535.1867059891105" Y="260.21252421113644" />
-      <Point X="446.934210526319" Y="326.3511796733213" GraphRef="ec9ee" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="b4420" X="623.4392014519019" Y="184.35117967332133" GraphRef="a2306" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f15ba" X="535.1867059891105" Y="260.21252421113644" />
+      <Point GraphId="aa806" X="446.934210526319" Y="326.3511796733213" GraphRef="ec9ee" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id64688f52">
     <Comment>+ effect</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="327.4602098552672" Y="90.94174770430944" GraphRef="d3d80" RelX="0.5" RelY="1.0" />
-      <Point X="362.9602098552665" Y="159.35117967332133" GraphRef="a505b" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="ffcdb" X="327.4602098552672" Y="90.94174770430944" GraphRef="d3d80" RelX="0.5" RelY="1.0" />
+      <Point GraphId="ccb40" X="362.9602098552665" Y="159.35117967332133" GraphRef="a505b" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7b083e52">
     <Comment>+ effect</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="516.664598965245" Y="72.19174770430945" GraphRef="a62a8" RelX="1.0" RelY="-0.5" />
-      <Point X="600.9392014519019" Y="159.35117967332133" GraphRef="a2306" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="ab3e5" X="516.664598965245" Y="72.19174770430945" GraphRef="a62a8" RelX="1.0" RelY="-0.5" />
+      <Point GraphId="a5616" X="600.9392014519019" Y="159.35117967332133" GraphRef="a2306" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id867f9b95">
     <Comment>+ effect</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="304.9602098552672" Y="266.3511796733213" GraphRef="f3e2e" RelX="0.0" RelY="1.0" />
-      <Point X="375.936705989114" Y="326.3511796733213" GraphRef="ec9ee" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="c7212" X="304.9602098552672" Y="266.3511796733213" GraphRef="f3e2e" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fdff7" X="375.936705989114" Y="326.3511796733213" GraphRef="ec9ee" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idfbbbce8d">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="347.79596303131103" Y="356.8139745916515" GraphRef="d1862" RelX="-0.5" RelY="1.0" />
-      <Point X="347.79596303131103" Y="402.90653357531755" GraphRef="c6b73" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="ec43a" X="347.79596303131103" Y="356.8139745916515" GraphRef="d1862" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="e0c7b" X="347.79596303131103" Y="402.90653357531755" GraphRef="c6b73" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -215,27 +215,6 @@
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">growth hormone secreting pituitary adenoma</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:6255</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c56">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12955018</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dose effects of growth hormone during puberty.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horm Res</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saenger P</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e54">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9780511623264</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An introduction to Neuroendocrinology</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Cambridge, UK: Cambridge University Press. ISBN 0-521-42665-0</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown RM</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">growth factor signaling pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000168</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
@@ -245,6 +224,26 @@
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000238</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">growth hormone secreting pituitary adenoma</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:6255</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e54">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9780511623264</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An introduction to Neuroendocrinology</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cambridge, UK: Cambridge University Press. ISBN 0-521-42665-0</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown RM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c56">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12955018</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dose effects of growth hormone during puberty.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horm Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saenger P</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

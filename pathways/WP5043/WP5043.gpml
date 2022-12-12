@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Pentose phosphate pathway in senescent cells" Data-Source="WikiPathways" Version="WP5043_r120456" Author="[RickHendriks1999, Egonw, Eweitz, Fehrhart, Khanspers]" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">The pentose phosphate pathway is an important route for glucose oxidation. This pathway is divided over 2 different branches; the non-oxidative and the oxidative. The oxidative branch supports the regeneration of reduced NADPH, while converting glucose-6-phosphate into ribulose-5-phosphate and CO2 in an unidirectional way. This branch is also linked to glycolysis at the glucose-6-phosphate level, while the non-oxidative branch is linked to glycolysis in a bidirectional way, depending on the availability of the intermediates glyceraldehyde-3-phosphate and fructose-6-phosphate. This non-oxidative branch converts pentose phosphates into phosphorylated ketones and aldoses (Almeida et al., 2018). During this process, ribose-5-phosphate is produced, which is an important precursor for nucleotide synthesis. The regeneration of the NADPH by the oxidative branch, is regulated by the NADP+/NADPH ratio. When this ratio is lower, due to lower levels of NADPH, the regeneration of NADPH is stimulated in order to maintain the balance (Clement et al., 2019). In case of senescence, OIS heightens this ratio, while proliferative exhaustion-induced senescence lowers this ratio. Furthermore, p53 lowers glycolysis by lowering the level of fructose-2,6-bisphosphate. The PPP is also upregulated due to oxidative stress and by conditions of low stress induced by P53, which is symptomatic of PE-induced senescence (Zhang et al., 2016).  Another study by Wu et al. (2017) showed that one of the rate-limiting enzymes, 6-phosphogluconate dehydrogenase (6PGDH), is upregulated in OIS, due to which the PPP is also upregulated again.
-</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Pentose phosphate pathway in senescent cells" Data-Source="WikiPathways" Version="WP5043_r120456" Author="[RickHendriks1999, Egonw, Eweitz, Fehrhart, Khanspers]" Last-Modified="20211204055754" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">The pentose phosphate pathway is an important route for glucose oxidation. This pathway is divided over 2 different branches; the non-oxidative and the oxidative. The oxidative branch supports the regeneration of reduced NADPH, while converting glucose-6-phosphate into ribulose-5-phosphate and CO2 in an unidirectional way. This branch is also linked to glycolysis at the glucose-6-phosphate level, while the non-oxidative branch is linked to glycolysis in a bidirectional way, depending on the availability of the intermediates glyceraldehyde-3-phosphate and fructose-6-phosphate. This non-oxidative branch converts pentose phosphates into phosphorylated ketones and aldoses (Almeida et al., 2018). During this process, ribose-5-phosphate is produced, which is an important precursor for nucleotide synthesis. The regeneration of the NADPH by the oxidative branch, is regulated by the NADP+/NADPH ratio. When this ratio is lower, due to lower levels of NADPH, the regeneration of NADPH is stimulated in order to maintain the balance (Clement et al., 2019). In case of senescence, OIS heightens this ratio, while proliferative exhaustion-induced senescence lowers this ratio. Furthermore, p53 lowers glycolysis by lowering the level of fructose-2,6-bisphosphate. The PPP is also upregulated due to oxidative stress and by conditions of low stress induced by P53, which is symptomatic of PE-induced senescence (Zhang et al., 2016).  Another study by Wu et al. (2017) showed that one of the rate-limiting enzymes, 6-phosphogluconate dehydrogenase (6PGDH), is upregulated in OIS, due to which the PPP is also upregulated again.</Comment>
   <BiopaxRef>bbb</BiopaxRef>
   <BiopaxRef>a57</BiopaxRef>
   <BiopaxRef>c03</BiopaxRef>
@@ -65,7 +64,7 @@
   </DataNode>
   <DataNode TextLabel="6-phosphogluconolactonate dehydrogenase" GraphId="c13fd" Type="Protein">
     <Graphics CenterX="293.4525990810632" CenterY="524.5161289381176" Width="278.3302696732027" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="BRENDA" ID="" />
+    <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="D-Glucose-6-Phosphate" GraphId="c2e9a" Type="Metabolite">
     <Graphics CenterX="524.0895259431135" CenterY="135.1078827281074" Width="140.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -190,40 +189,39 @@
   <Interaction GraphId="id109f6649">
     <Comment>Oxidative Branch</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="524.0895259431135" Y="147.6078827281074" GraphRef="c2e9a" RelX="0.0" RelY="1.0" />
-      <Point X="524.0895259431135" Y="279.0" GraphRef="cf98b" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="bdd33" X="524.0895259431135" Y="147.6078827281074" GraphRef="c2e9a" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d9121" X="524.0895259431135" Y="279.0" GraphRef="cf98b" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4" Shape="None" GraphId="dc1a3" />
-      <Anchor Position="0.4" Shape="None" />
+      <Anchor Position="0.4" Shape="None" GraphId="e55c1" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id1ff4c60c">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="188.98097661051216" Y="812.1307187547552" GraphRef="bcc28" RelX="0.5" RelY="1.0" />
-      <Point X="525.4347807940774" Y="1097.2501676727024" />
-      <Point X="861.8885849776425" Y="1069.158188729045" GraphRef="c7c66" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="d9392" X="188.98097661051216" Y="812.1307187547552" GraphRef="bcc28" RelX="0.5" RelY="1.0" />
+      <Point GraphId="ef806" X="525.4347807940774" Y="1097.2501676727024" />
+      <Point GraphId="cf442" X="861.8885849776425" Y="1069.158188729045" GraphRef="c7c66" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id228a22ab">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="565.3787483338809" Y="798.0846188868059" GraphRef="f36d1" RelX="0.5" RelY="1.0" />
-      <Point X="667.3132764940865" Y="841.2027808120624" GraphRef="b622d" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c0aaa" X="565.3787483338809" Y="798.0846188868059" GraphRef="f36d1" RelX="0.5" RelY="1.0" />
+      <Point GraphId="b2154" X="667.3132764940865" Y="841.2027808120624" GraphRef="b622d" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id229e02cd">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="524.0895259431135" Y="200.16472963686445" GraphRef="dc1a3" RelX="0.0" RelY="0.0" />
-      <Point X="707.2536945026164" Y="212.54994593410785" GraphRef="a6090" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="ff51f" X="524.0895259431135" Y="200.16472963686445" GraphRef="dc1a3" RelX="0.0" RelY="0.0" />
+      <Point GraphId="c67ef" X="707.2536945026164" Y="212.54994593410785" GraphRef="a6090" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2b2fec7b">
-    <Comment></Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="524.0895259431135" Y="467.0" GraphRef="ff4ef" RelX="0.0" RelY="1.0" />
-      <Point X="524.0895259431134" Y="609.894041453873" GraphRef="a65df" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a18f8" X="524.0895259431135" Y="467.0" GraphRef="ff4ef" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fbfdf" X="524.0895259431134" Y="609.894041453873" GraphRef="a65df" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.4" Shape="None" GraphId="d143f" />
       <Anchor Position="0.4" Shape="None" GraphId="ce0c5" />
     </Graphics>
@@ -231,275 +229,275 @@
   </Interaction>
   <Interaction GraphId="id2f11f431">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="727.6386842882704" Y="436.9896481881645" GraphRef="d63ca" RelX="-1.0" RelY="0.0" />
-      <Point X="524.0895259431135" Y="524.1576165815492" GraphRef="ce0c5" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="d50f6" X="727.6386842882704" Y="436.9896481881645" GraphRef="d63ca" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="c6f6b" X="524.0895259431135" Y="524.1576165815492" GraphRef="ce0c5" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id39d3eb78">
-    <Comment>P53 lowers glycolysis by lowering the level of fructose-2,6-biphosphatase, a powerful allosteric modulator of PFK1. As a result the glycolytic intermediates are diverted to either the oxidative or non-oxidative branch of the PPP </Comment>
+    <Comment>P53 lowers glycolysis by lowering the level of fructose-2,6-biphosphatase, a powerful allosteric modulator of PFK1. As a result the glycolytic intermediates are diverted to either the oxidative or non-oxidative branch of the PPP</Comment>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="79.56928932083389" Y="70.98857298989908" GraphRef="b2c18" RelX="0.0" RelY="1.0" />
-      <Point X="79.34925497990278" Y="110.07990859891375" GraphRef="fc168" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="cc07b" X="79.56928932083389" Y="70.98857298989908" GraphRef="b2c18" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ef4c0" X="79.34925497990278" Y="110.07990859891375" GraphRef="fc168" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id3a1b4543">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="585.7916486544771" Y="931.3369312152901" GraphRef="e2f1a" RelX="0.5" RelY="1.0" />
-      <Point X="670.5344120312565" Y="979.5986248664005" GraphRef="ad486" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c2b42" X="585.7916486544771" Y="931.3369312152901" GraphRef="e2f1a" RelX="0.5" RelY="1.0" />
+      <Point GraphId="aeece" X="670.5344120312565" Y="979.5986248664005" GraphRef="ad486" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id3d33802a">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="49.90094715924749" Y="1020.2371886921094" GraphRef="e9e2f" RelX="-0.5" RelY="-1.0" />
-      <Point X="49.5238824698542" Y="161.49999999999994" GraphRef="fc168" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="a065f" X="49.90094715924749" Y="1020.2371886921094" GraphRef="e9e2f" RelX="-0.5" RelY="-1.0" />
+      <Point GraphId="bcce2" X="49.5238824698542" Y="161.49999999999994" GraphRef="fc168" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id3dc7c8c2">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="524.0895259431134" Y="634.894041453873" GraphRef="a65df" RelX="0.0" RelY="1.0" />
-      <Point X="858.2809606947576" Y="774.4357023334369" GraphRef="dade2" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e6efa" X="524.0895259431134" Y="634.894041453873" GraphRef="a65df" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f5b12" X="858.2809606947576" Y="774.4357023334369" GraphRef="dade2" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.4" Shape="None" GraphId="b8479" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id3f648662">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="524.0895259431135" Y="524.1576165815492" GraphRef="d143f" RelX="0.0" RelY="0.0" />
-      <Point X="727.6386842882704" Y="579.2382719315209" GraphRef="c096f" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="fafc3" X="524.0895259431135" Y="524.1576165815492" GraphRef="d143f" RelX="0.0" RelY="0.0" />
+      <Point GraphId="b9be5" X="727.6386842882704" Y="579.2382719315209" GraphRef="c096f" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id4498483b">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="109.28356645831465" Y="763.588515097206" GraphRef="bcc28" RelX="-0.5" RelY="-1.0" />
-      <Point X="109.17462748995136" Y="161.49999999999994" GraphRef="fc168" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="e13f3" X="109.28356645831465" Y="763.588515097206" GraphRef="bcc28" RelX="-0.5" RelY="-1.0" />
+      <Point GraphId="fd0cd" X="109.17462748995136" Y="161.49999999999994" GraphRef="fc168" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id48f0b897">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="740.9193465124645" Y="653.4717724507533" GraphRef="fccd6" RelX="-1.0" RelY="0.0" />
-      <Point X="657.766099843771" Y="690.7107058056986" GraphRef="b8479" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="fc1a7" X="740.9193465124645" Y="653.4717724507533" GraphRef="fccd6" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="e7e01" X="657.766099843771" Y="690.7107058056986" GraphRef="b8479" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id49df1891">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1039.4026439700758" Y="642.9390996131128" GraphRef="e8f08" RelX="0.0" RelY="1.0" />
-      <Point X="1039.211000659278" Y="701.2977850364258" GraphRef="a3ab9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="a3432" X="1039.4026439700758" Y="642.9390996131128" GraphRef="e8f08" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e82bb" X="1039.211000659278" Y="701.2977850364258" GraphRef="a3ab9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id4a18399a">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="402.63804568633543" Y="690.527276606405" GraphRef="ab70f" RelX="1.0" RelY="0.0" />
-      <Point X="524.3955175745645" Y="690.1702724270461" GraphRef="cc4d2" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="a5717" X="402.63804568633543" Y="690.527276606405" GraphRef="ab70f" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d09d5" X="524.3955175745645" Y="690.1702724270461" GraphRef="cc4d2" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id4b871050">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="484.33026170960113" Y="798.0846188868059" GraphRef="f36d1" RelX="-0.5" RelY="1.0" />
-      <Point X="308.3215170638462" Y="875.8641746579004" GraphRef="e9731" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="d0861" X="484.33026170960113" Y="798.0846188868059" GraphRef="f36d1" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="ddb71" X="308.3215170638462" Y="875.8641746579004" GraphRef="e9731" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id4f15c460">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="432.61773391766457" Y="524.5161289381176" GraphRef="c13fd" RelX="1.0" RelY="0.0" />
-      <Point X="524.0895259431135" Y="524.1576165815492" GraphRef="d143f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="d7267" X="432.61773391766457" Y="524.5161289381176" GraphRef="c13fd" RelX="1.0" RelY="0.0" />
+      <Point GraphId="a510f" X="524.0895259431135" Y="524.1576165815492" GraphRef="d143f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id50429178">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="814.6801996609955" Y="931.681443051058" GraphRef="c8bb3" RelX="-0.5" RelY="1.0" />
-      <Point X="715.5344120312565" Y="979.5986248664005" GraphRef="ad486" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="d52ef" X="814.6801996609955" Y="931.681443051058" GraphRef="c8bb3" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="a271f" X="715.5344120312565" Y="979.5986248664005" GraphRef="ad486" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5af2e2c4">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="135.96698238641582" Y="1072.7057939972972" GraphRef="e9e2f" RelX="0.5" RelY="1.0" />
-      <Point X="135.9777950134793" Y="1241.0082165399594" GraphRef="fb3ea" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="d7977" X="135.96698238641582" Y="1072.7057939972972" GraphRef="e9e2f" RelX="0.5" RelY="1.0" />
+      <Point GraphId="c3764" X="135.9777950134793" Y="1241.0082165399594" GraphRef="fb3ea" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.4" Shape="None" GraphId="a9233" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5d8c001">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1310.6060606060585" Y="698.1060606060602" GraphRef="eade4" RelX="0.0" RelY="-1.0" />
-      <Point X="1310.6060606060585" Y="591.5909090909092" GraphRef="fbdf9" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="ed5c2" X="1310.6060606060585" Y="698.1060606060602" GraphRef="eade4" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="d52c1" X="1310.6060606060585" Y="591.5909090909092" GraphRef="fbdf9" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5e0d2df5">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1310.6060606060582" Y="955.8333333333318" GraphRef="e2f8d" RelX="0.0" RelY="-1.0" />
-      <Point X="1310.6060606060582" Y="798.5579137384592" GraphRef="df432" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="bd07a" X="1310.6060606060582" Y="955.8333333333318" GraphRef="e2f8d" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="c7057" X="1310.6060606060582" Y="798.5579137384592" GraphRef="df432" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5fbe1532">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="524.0895259431135" Y="524.1576165815492" GraphRef="d143f" RelX="0.0" RelY="0.0" />
-      <Point X="732.8266836139668" Y="546.1347245414559" GraphRef="cb0fe" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="f4257" X="524.0895259431135" Y="524.1576165815492" GraphRef="d143f" RelX="0.0" RelY="0.0" />
+      <Point GraphId="e0114" X="732.8266836139668" Y="546.1347245414559" GraphRef="cb0fe" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id61f4e6c1">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="851.6139720809875" Y="200.16472963686445" GraphRef="b2df1" RelX="0.0" RelY="0.0" />
-      <Point X="944.6193326784828" Y="113.38594368291507" GraphRef="b62ec" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="eac11" X="851.6139720809875" Y="200.16472963686445" GraphRef="b2df1" RelX="0.0" RelY="0.0" />
+      <Point GraphId="a95f8" X="944.6193326784828" Y="113.38594368291507" GraphRef="b62ec" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6356f6d7">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="308.3215170638462" Y="900.8641746579004" GraphRef="e9731" RelX="0.5" RelY="1.0" />
-      <Point X="534.1544108044575" Y="1042.3367196336567" GraphRef="d3445" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c3a3f" X="308.3215170638462" Y="900.8641746579004" GraphRef="e9731" RelX="0.5" RelY="1.0" />
+      <Point GraphId="c9789" X="534.1544108044575" Y="1042.3367196336567" GraphRef="d3445" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id65e114e0">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="929.5379229268276" Y="786.9357023334369" GraphRef="dade2" RelX="1.0" RelY="0.0" />
-      <Point X="1182.8175990675973" Y="786.0579137384592" GraphRef="df432" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="b75b3" X="929.5379229268276" Y="786.9357023334369" GraphRef="dade2" RelX="1.0" RelY="0.0" />
+      <Point GraphId="aaef4" X="1182.8175990675973" Y="786.0579137384592" GraphRef="df432" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.39040070519747794" Shape="None" GraphId="cc12e" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6a622dd7">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="684.8285538537423" Y="360.1620798719552" GraphRef="fd3d1" RelX="-1.0" RelY="0.0" />
-      <Point X="524.0895259431135" Y="360.196119290628" GraphRef="dcee9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="d5a18" X="684.8285538537423" Y="360.1620798719552" GraphRef="fd3d1" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="e29f0" X="524.0895259431135" Y="360.196119290628" GraphRef="dcee9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id71576db3">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="524.0895259431135" Y="524.1576165815492" GraphRef="d143f" RelX="0.0" RelY="0.0" />
-      <Point X="730.2326839511186" Y="472.1711375039124" GraphRef="a7360" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="dcaa7" X="524.0895259431135" Y="524.1576165815492" GraphRef="d143f" RelX="0.0" RelY="0.0" />
+      <Point GraphId="e9f10" X="730.2326839511186" Y="472.1711375039124" GraphRef="a7360" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id71e42e42">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="712.3132764940865" Y="866.2027808120624" GraphRef="b622d" RelX="0.5" RelY="1.0" />
-      <Point X="862.7676239054083" Y="906.681443051058" GraphRef="c8bb3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="dd8dc" X="712.3132764940865" Y="866.2027808120624" GraphRef="b622d" RelX="0.5" RelY="1.0" />
+      <Point GraphId="e83b2" X="862.7676239054083" Y="906.681443051058" GraphRef="c8bb3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7223792f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="67.30769230769226" Y="1156.730769230769" GraphRef="c8e60" RelX="0.0" RelY="1.0" />
-      <Point X="135.9777950134793" Y="1241.0082165399594" GraphRef="fb3ea" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ba16a" X="67.30769230769226" Y="1156.730769230769" GraphRef="c8e60" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cf215" X="135.9777950134793" Y="1241.0082165399594" GraphRef="fb3ea" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id73821ebb">
     <Comment>Non-oxidative Branch</Comment>
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="109.17462748995136" Y="161.49999999999994" GraphRef="fc168" RelX="0.5" RelY="1.0" />
-      <Point X="109.28356645831465" Y="763.588515097206" GraphRef="bcc28" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="efe38" X="109.17462748995136" Y="161.49999999999994" GraphRef="fc168" RelX="0.5" RelY="1.0" />
+      <Point GraphId="ca742" X="109.28356645831465" Y="763.588515097206" GraphRef="bcc28" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7814374d">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="858.2809606947576" Y="774.4357023334369" GraphRef="dade2" RelX="0.0" RelY="-1.0" />
-      <Point X="1310.6060606060585" Y="591.5909090909092" GraphRef="fbdf9" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="eb1ab" X="858.2809606947576" Y="774.4357023334369" GraphRef="dade2" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="a5f81" X="1310.6060606060585" Y="591.5909090909092" GraphRef="fbdf9" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4" Shape="None" GraphId="a3ab9" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7f7d1b18">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1016.6386842882703" Y="315.4896481881645" GraphRef="d504d" RelX="0.0" RelY="1.0" />
-      <Point X="524.0895259431135" Y="524.1576165815492" GraphRef="ce0c5" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="a22b2" X="1016.6386842882703" Y="315.4896481881645" GraphRef="d504d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d70ad" X="524.0895259431135" Y="524.1576165815492" GraphRef="ce0c5" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
       <Anchor Position="0.4" Shape="None" GraphId="e81eb" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7fe8b842">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1112.828802437123" Y="840.0179891950861" GraphRef="b3776" RelX="0.0" RelY="-1.0" />
-      <Point X="1028.4184871043728" Y="786.5930130469433" GraphRef="cc12e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="c7ac3" X="1112.828802437123" Y="840.0179891950861" GraphRef="b3776" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="bdd21" X="1028.4184871043728" Y="786.5930130469433" GraphRef="cc12e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id80359468">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="49.5238824698542" Y="161.49999999999994" GraphRef="fc168" RelX="-0.5" RelY="1.0" />
-      <Point X="49.90094715924749" Y="1020.2371886921094" GraphRef="e9e2f" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="eb834" X="49.5238824698542" Y="161.49999999999994" GraphRef="fc168" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="c7028" X="49.90094715924749" Y="1020.2371886921094" GraphRef="e9e2f" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id86fb623f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1131.9516022818693" Y="271.43416660203115" GraphRef="ae854" RelX="-1.0" RelY="0.0" />
-      <Point X="1069.6386842882703" Y="270.9896481881645" GraphRef="bdbe8" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
+      <Point GraphId="d033c" X="1131.9516022818693" Y="271.43416660203115" GraphRef="ae854" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="d1739" X="1069.6386842882703" Y="270.9896481881645" GraphRef="c8bb0" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id94f9949a">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1028.4184871043728" Y="786.5930130469433" GraphRef="cc12e" RelX="0.0" RelY="0.0" />
-      <Point X="1061.532263588414" Y="760.4517006413874" GraphRef="b36d1" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="fbafb" X="1028.4184871043728" Y="786.5930130469433" GraphRef="cc12e" RelX="0.0" RelY="0.0" />
+      <Point GraphId="af2b9" X="1061.532263588414" Y="760.4517006413874" GraphRef="b36d1" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida404f3a4">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="524.0895259431134" Y="634.894041453873" GraphRef="a65df" RelX="0.0" RelY="1.0" />
-      <Point X="524.854505021741" Y="773.0846188868059" GraphRef="f36d1" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f8631" X="524.0895259431134" Y="634.894041453873" GraphRef="a65df" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b0e8d" X="524.854505021741" Y="773.0846188868059" GraphRef="f36d1" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.4" Shape="None" GraphId="cc4d2" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida92e2678">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="670.5344120312565" Y="1004.5986248664005" GraphRef="ad486" RelX="-0.5" RelY="1.0" />
-      <Point X="534.1544108044575" Y="1042.3367196336567" GraphRef="d3445" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e5c9c" X="670.5344120312565" Y="1004.5986248664005" GraphRef="ad486" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="f6b33" X="534.1544108044575" Y="1042.3367196336567" GraphRef="d3445" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idad36db4">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="787.0239984626876" Y="793.1857023334369" GraphRef="dade2" RelX="-1.0" RelY="0.5" />
-      <Point X="712.3132764940865" Y="841.2027808120624" GraphRef="b622d" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="b6c76" X="787.0239984626876" Y="793.1857023334369" GraphRef="dade2" RelX="-1.0" RelY="0.5" />
+      <Point GraphId="eeb60" X="712.3132764940865" Y="841.2027808120624" GraphRef="b622d" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idb8c2103b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="193.8832997987925" Y="1140.2951039570758" GraphRef="e801b" RelX="-1.0" RelY="0.0" />
-      <Point X="135.97130743724122" Y="1140.0267630143621" GraphRef="a9233" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="d1e03" X="193.8832997987925" Y="1140.2951039570758" GraphRef="e801b" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b3b1d" X="135.97130743724122" Y="1140.0267630143621" GraphRef="a9233" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idbdfe1a89">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="944.8198019862383" Y="524.1576165815492" GraphRef="e81eb" RelX="0.0" RelY="0.0" />
-      <Point X="944.6193326784828" Y="123.16953434145753" GraphRef="b62ec" RelX="-1.0" RelY="0.5" />
+      <Point GraphId="b5a07" X="944.8198019862383" Y="524.1576165815492" GraphRef="e81eb" RelX="0.0" RelY="0.0" />
+      <Point GraphId="c2eb7" X="944.6193326784828" Y="123.16953434145753" GraphRef="b62ec" RelX="-1.0" RelY="0.5" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idbee08787">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="700.6291950176106" Y="121.88556247757901" GraphRef="f5d2d" RelX="-1.0" RelY="0.0" />
-      <Point X="524.0895259431135" Y="200.16472963686445" GraphRef="dc1a3" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="c9b90" X="700.6291950176106" Y="121.88556247757901" GraphRef="f5d2d" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="ce14d" X="524.0895259431135" Y="200.16472963686445" GraphRef="dc1a3" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc3b27310">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1130.1778532114845" Y="306.85349131828036" GraphRef="d1105" RelX="-1.0" RelY="0.0" />
-      <Point X="1069.6386842882703" Y="305.9896481881645" GraphRef="bdbe8" RelX="1.0" RelY="0.5" ArrowHead="mim-inhibition" />
+      <Point GraphId="b3fff" X="1130.1778532114845" Y="306.85349131828036" GraphRef="d1105" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="a88c9" X="1069.6386842882703" Y="305.9896481881645" GraphRef="c8bb0" RelX="1.0" RelY="0.5" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -508,118 +506,143 @@
     <Comment>Type your comment here</Comment>
     <BiopaxRef>f8d</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="308.9563984707286" Y="331.47074597460613" GraphRef="dd29a" RelX="0.0" RelY="-1.0" />
-      <Point X="308.15738117290243" Y="212.633309304048" GraphRef="b5dc3" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="e4d28" X="308.9563984707286" Y="331.47074597460613" GraphRef="dd29a" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="c8a2a" X="308.15738117290243" Y="212.633309304048" GraphRef="b5dc3" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc9a0554e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="667.3132764940865" Y="866.2027808120624" GraphRef="b622d" RelX="-0.5" RelY="1.0" />
-      <Point X="534.2373857786401" Y="906.3369312152901" GraphRef="e2f1a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="db7e1" X="667.3132764940865" Y="866.2027808120624" GraphRef="b622d" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="b1f1b" X="534.2373857786401" Y="906.3369312152901" GraphRef="e2f1a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idccafc4c0">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="524.0895259431135" Y="307.5" GraphRef="cf98b" RelX="0.0" RelY="1.0" />
-      <Point X="524.0895259431135" Y="439.5" GraphRef="ff4ef" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="b9969" X="524.0895259431135" Y="307.5" GraphRef="cf98b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="dca10" X="524.0895259431135" Y="439.5" GraphRef="ff4ef" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.3992130249290002" Shape="None" GraphId="dcee9" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idcd40a5f0">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="263.3215170638462" Y="875.8641746579004" GraphRef="e9731" RelX="-0.5" RelY="-1.0" />
-      <Point X="188.98097661051216" Y="812.1307187547552" GraphRef="bcc28" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="b54d9" X="263.3215170638462" Y="875.8641746579004" GraphRef="e9731" RelX="-0.5" RelY="-1.0" />
+      <Point GraphId="d328a" X="188.98097661051216" Y="812.1307187547552" GraphRef="bcc28" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd0415591">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="348.31476234580487" Y="200.133309304048" GraphRef="b5dc3" RelX="1.0" RelY="0.0" />
-      <Point X="524.0895259431135" Y="200.16472963686445" GraphRef="dc1a3" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="e3f01" X="348.31476234580487" Y="200.133309304048" GraphRef="b5dc3" RelX="1.0" RelY="0.0" />
+      <Point GraphId="ab276" X="524.0895259431135" Y="200.16472963686445" GraphRef="dc1a3" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="iddc4a3548">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="969.8935268637638" Y="764.8003514084073" GraphRef="ffe09" RelX="0.0" RelY="1.0" />
-      <Point X="1028.4184871043728" Y="786.5930130469433" GraphRef="cc12e" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="b27ef" X="969.8935268637638" Y="764.8003514084073" GraphRef="ffe09" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f8fb8" X="1028.4184871043728" Y="786.5930130469433" GraphRef="cc12e" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="iddc4edae">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="715.5344120312565" Y="1004.5986248664005" GraphRef="ad486" RelX="0.5" RelY="1.0" />
-      <Point X="861.8885849776425" Y="1049.263822531862" GraphRef="c7c66" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f65f6" X="715.5344120312565" Y="1004.5986248664005" GraphRef="ad486" RelX="0.5" RelY="1.0" />
+      <Point GraphId="a5722" X="861.8885849776425" Y="1049.263822531862" GraphRef="c7c66" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide510e3bc">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="188.98097661051216" Y="812.1307187547552" GraphRef="bcc28" RelX="0.5" RelY="1.0" />
-      <Point X="263.3215170638462" Y="875.8641746579004" GraphRef="e9731" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f04a1" X="188.98097661051216" Y="812.1307187547552" GraphRef="bcc28" RelX="0.5" RelY="1.0" />
+      <Point GraphId="ae8df" X="263.3215170638462" Y="875.8641746579004" GraphRef="e9731" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idec0d0323">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1310.6060606060582" Y="773.5579137384592" GraphRef="df432" RelX="0.0" RelY="-1.0" />
-      <Point X="1310.6060606060585" Y="723.1060606060602" GraphRef="eade4" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="fea96" X="1310.6060606060582" Y="773.5579137384592" GraphRef="df432" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="f625a" X="1310.6060606060585" Y="723.1060606060602" GraphRef="eade4" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ideef30c1a">
     <Comment>Upregulated levels of G6PDH correlated with decreased p53 levels and increased PPP activity.</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="308.15738117290243" Y="187.633309304048" GraphRef="b5dc3" RelX="0.0" RelY="-1.0" />
-      <Point X="124.56928932083389" Y="58.48857298989908" GraphRef="b2c18" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="cb593" X="308.15738117290243" Y="187.633309304048" GraphRef="b5dc3" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="b15ef" X="124.56928932083389" Y="58.48857298989908" GraphRef="b2c18" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf31f9253">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="308.3215170638462" Y="875.8641746579004" GraphRef="e9731" RelX="0.5" RelY="-1.0" />
-      <Point X="484.33026170960113" Y="798.0846188868059" GraphRef="f36d1" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="d5390" X="308.3215170638462" Y="875.8641746579004" GraphRef="e9731" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="f9759" X="484.33026170960113" Y="798.0846188868059" GraphRef="f36d1" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf40b8436">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="524.0895259431135" Y="200.16472963686445" GraphRef="dc1a3" RelX="0.0" RelY="0.0" />
-      <Point X="702.6339931171185" Y="271.6914461837796" GraphRef="b93c0" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="d5273" X="524.0895259431135" Y="200.16472963686445" GraphRef="dc1a3" RelX="0.0" RelY="0.0" />
+      <Point GraphId="a86c8" X="702.6339931171185" Y="271.6914461837796" GraphRef="b93c0" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf5c97575">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="263.3215170638462" Y="900.8641746579004" GraphRef="e9731" RelX="-0.5" RelY="1.0" />
-      <Point X="92.93396477283166" Y="1020.2371886921094" GraphRef="e9e2f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="d99f8" X="263.3215170638462" Y="900.8641746579004" GraphRef="e9731" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="e8761" X="92.93396477283166" Y="1020.2371886921094" GraphRef="e9e2f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf8089879">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1016.6386842882703" Y="253.4896481881645" GraphRef="bdbe8" RelX="0.0" RelY="-1.0" />
-      <Point X="524.0895259431135" Y="200.16472963686445" GraphRef="dc1a3" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="e5ac8" X="1016.6386842882703" Y="253.4896481881645" GraphRef="c8bb0" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="ed659" X="524.0895259431135" Y="200.16472963686445" GraphRef="dc1a3" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
       <Anchor Position="0.4" Shape="None" GraphId="b2df1" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf8e16aee">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="138.99999999999994" Y="135.78995429945684" GraphRef="fc168" RelX="1.0" RelY="0.0" />
-      <Point X="454.0895259431135" Y="135.1078827281074" GraphRef="c2e9a" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="af21e" X="138.99999999999994" Y="135.78995429945684" GraphRef="fc168" RelX="1.0" RelY="0.0" />
+      <Point GraphId="a667e" X="454.0895259431135" Y="135.1078827281074" GraphRef="c2e9a" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Label TextLabel="Lower levels of the NADP+/NADPH ratio&#xA;upregulate the regenartion of NADPH." GraphId="b62ec">
     <Graphics CenterX="1063.7237288392414" CenterY="113.38594368291507" Width="238.2087923215172" Height="39.13436263416983" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
-  <Group GroupId="c8bb0" GraphId="bdbe8" Style="Group" />
+  <Group GroupId="c8bb0" GraphId="c8bb0" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pentose phosphate pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000045</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bbb">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metabolic hallmarks of cellular senescence: highlighting the role of intracellular pathways in various senescent phenotypes</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Birgit Veldman</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a57">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30124109</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Plasma NAD+ Metabolome Is Dysregulated in "Normal" Aging.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rejuvenation Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clement J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wong M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poljak A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sachdev P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Braidy N</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c03">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27660392</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -635,30 +658,18 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deberardinis RJ</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang RC</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a57">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30124109</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Plasma NAD&lt;sup&gt;+&lt;/sup&gt;Metabolome Is Dysregulated in "Normal" Aging.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rejuvenation Res</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clement J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wong M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poljak A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sachdev P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Braidy N</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pentose phosphate pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000045</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bbb">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metabolic hallmarks of cellular senescence: highlighting the role of intracellular pathways in various senescent phenotypes</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Birgit Veldman</bp:AUTHORS>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c9a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Improvement of neuronal differentiation by carbon monoxide: Role of pentose phosphate pathway</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elsevier</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ana S. Almeide</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuno L. Soares</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catarina O. Sequeira</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sofia A. Pereira</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ursula Sonnewald</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helena L.A. Vieira</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f8d">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28467092</bp:ID>
@@ -680,19 +691,5 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang G</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hao H</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c9a">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Improvement of neuronal differentiation by carbon monoxide: Role of pentose phosphate pathway</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elsevier</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ana S. Almeide</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuno L. Soares</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catarina O. Sequeira</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sofia A. Pereira</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ursula Sonnewald</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helena L.A. Vieira</bp:AUTHORS>
-    </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

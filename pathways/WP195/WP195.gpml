@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="IL-1 signaling pathway" Data-Source="WikiPathways" Version="WP195_r120702" Author="[A.Pandey, MaintBot, Thripsi, Khanspers, MartijnVanIersel, NetPath, Christine Chichester, Joppe014, Zari, Mkutmon, L Dupuis, Egonw, Eweitz]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="IL-1 signaling pathway" Data-Source="WikiPathways" Version="WP195_r120702" Author="[A.Pandey, MaintBot, Thripsi, Khanspers, MartijnVanIersel, NetPath, Christine Chichester, Joppe014, Zari, Mkutmon, L Dupuis, Egonw, Eweitz]" Last-Modified="20211223131834" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">The IL-1 family of cytokines currently consists of 11 members which are encoded by distinct genes and includes IL-1Î±, IL-1Î², and the IL-1 Receptor antagonist (IL-1RA). The major role of IL-1 type cytokines is to control pro-inflammatory reactions in response to tissue injury - either due to pathogen-associated molecular patterns (PAMPs) or Danger associated molecular patterns (DAMPs). Interleukin-1 (IL-1), which includes IL-1Î± and IL-1Î², plays a crucial role in many auto inflammatory diseases. IL- 1Î± and IL-1Î² are produced predominantly by macrophages and monocytes, and to a lesser extent by other cell types such as epithelial cells endothelial cells and fibroblasts. IL-1 alpha, is a membrane anchored protein which signals through autocrine or juxtracrine mechanisms where as the soluble IL-1Î² acts in a paracrine or systemic manner. Significant progress has been achieved in the study of the signaling events mediated by IL-1 and the processes they control. Involvement of IL-1Î± or IL-1Î² in host responses to infections caused by intracellular microorganisms such as Mycobacterium tuberculosis as well as in autoinflammatory diseases makes its signaling components important candidates for drug targetting for these diseases. The two forms of IL-1 (IL-1Î± and IL-1Î²) bind to the same cellular receptor, the Type I IL- 1 receptor (IL-1RI) to induce signaling. Upon receptor engagement, IL-1R1 forms a heterodimer with IL-1 receptor accessory protein (IL-1RAcP), which functions as a co receptor. IL-1RAcP cannot bind directly to IL-1 but is essential for IL-1-mediated signaling. Binding of IL-1 to this receptor complex leads to the activation of the transcription factor NF-ÎºB through different signaling mechanisms. Two IL-1 receptor-associated kinases, IRAK-1 and IRAK-2 have been implicated in the activation of NF-ÎºB. IRAK 1 and 2 functions as adapter proteins and protein kinases to transmit downstream signals. It recruits TRAF6 to the IL-1 receptor complex via an interaction with IL-1RAcP. Oligomerization of TRAF6 and subsequent formation of TAK1 and MEKK3 signaling complexes relays the signal via NF-ÎºB-inducing kinase (NIK) to two I-kappaB kinases (IKK-1 and -2), leading to NF-kappaB activation. Activation of other mitogen activated protein kinases, including JNKs and p38 MAPK through various MAP2Ks also play important roles in mediating IL-1 responses by activating transcription through the AP-1 transcription factor. The above mentioned signaling events co-operatively induce the expression of IL-1 target genes such as CCL2, IL-8 and IL-6. The interactions and intersections between canonical and non-canonical Interleukin-1 signaling systems are depicted in the pathway map. Regulation of IL-1 signaling can be brought about by various mechanisms. The IL-1 family member IL-1RA can bind to the IL1-R1 receptor with similar affinity as IL-1Î± and Î², but is incapable of activating the signaling response. The type II IL-1 receptor can bind to IL-1 alpha and beta but lacks signaling capacity. The naturally occurring 'shed' domains of the extracellular IL-1 receptor chains (IL-1RI, IL-1RII and IL- 1RAcP) also act as inhibitors of IL-1 signaling. In the cell, IL-1R binds to toll- interacting protein (TOLLIP), which results in the inhibition of IRAK1 and by promoting efficient degradation of IL-1R by targeting the internalized receptor to endosomes. Other mechanisms such as p38MAPK mediated phosphorylation of TAB1 which results in the inactivation of TAK1, and expression of genes including MAPK phosphatase 1 (MKP-1) and Inhibitor of kappa B alpha (NFKBIA) that inhibit IL-1 signaling components also serve as negative regulators of IL-1 signaling.
 
 Please access this pathway at [http://www.netpath.org/netslim/IL_1_pathway.html NetSlim] database.
@@ -96,7 +96,7 @@ Kandasamy, K., Mohan, S. S., Raju, R., Keerthikumar, S., Kumar, G. S. S., Venugo
     <Graphics CenterX="260.0" CenterY="1074.0" Width="64.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="1432" />
   </DataNode>
-  <DataNode TextLabel="CCL2" GraphId="bfec9" Type="Rna">
+  <DataNode TextLabel="CCL2" GraphId="bfec9" Type="RNA">
     <Graphics CenterX="504.5" CenterY="1323.0" Width="47.0" Height="20.0" ZOrder="32768" FontStyle="Italic" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="6347" />
   </DataNode>
@@ -292,19 +292,73 @@ Kandasamy, K., Mohan, S. S., Raju, R., Keerthikumar, S., Kumar, G. S. S., Venugo
     <Graphics CenterX="170.0" CenterY="1222.0" Width="60.0" Height="20.0" ZOrder="33345" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="5599" />
   </DataNode>
-  <State GraphRef="f54dd" TextLabel="P" GraphId="a4ad9">
-    <Comment>IL-1 stimulates the phosphorylation and activation of MAP2K4</Comment>
+  <State GraphRef="a1150" TextLabel="P" GraphId="e7cb9">
+    <Comment>Stimulation of the IL-1 receptor complex induces the phosphorylation dependent activation of MEKK2.</Comment>
+    <Graphics RelX="0.9" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="a367b" TextLabel="P" GraphId="f2a80">
+    <Graphics RelX="1.0" RelY="0.9" Width="18.0" Height="16.0" FillColor="feff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="a5a3a" TextLabel="P" GraphId="b9665">
+    <Comment>IL-1 stimulates the phosphorylation of HSP27 in Hep G2 cells</Comment>
+    <Graphics RelX="1.0" RelY="0.9090909090909091" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="a6d59" TextLabel="P" GraphId="c75a2">
+    <Comment>IL-1 alpha stimulates the phosphorylation of Erk1 in cardiac myofibroblast and mouse 3T3- L1 adipocytes.</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="15.5" Height="15.5" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="a6dbb" TextLabel="P" GraphId="fa596">
+    <Comment>IL-1 stimulates the activation and phosphorylation of IKK beta in alveolar macrophages from patients with chronic obstructive pulmonary disease(COPD) and MEF cells.</Comment>
     <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="f77df" TextLabel="Ub" GraphId="a985a">
-    <Comment>IL-1 beta stimulates the ubiquitination of TRAF6 in HeLa cells and in MEF cells.</Comment>
-    <Graphics RelX="-1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="cc66ff" ShapeType="Oval" />
+  <State GraphRef="ac6ca" TextLabel="P" GraphId="e9235">
+    <Comment>IL-1 beta induces the phosphorylation of MEK in 3T3- L1 adipocytes .</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="e73b2" TextLabel="P" GraphId="abc6c">
-    <Comment>IL-1 beta induces the phosphorylation of JNK1 in beta rat synovial fibroblasts and MINC cells.
-</Comment>
+  <State GraphRef="bd5b2" TextLabel="P" GraphId="de2e7">
+    <Comment>IL-1 stimulates the activation and phosphorylation of IKK alpha in alveolar macrophages from patients with chronic obstructive pulmonary disease(COPD) and MEF cells.</Comment>
+    <Graphics RelX="0.9565217391304348" RelY="-1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="bec0c" TextLabel="P" GraphId="b4569">
+    <Comment>IL-1 stimulates the phosphorylation of p65 NFKB subunit in HeLa cells and in human articular chondrocyte cells.</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="19.0" Height="17.0" FillColor="feff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="bedd5" TextLabel="P" GraphId="b18ab">
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff33" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="c1945" TextLabel="P" GraphId="ff841">
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="c19bf" TextLabel="P" GraphId="c3290">
+    <Graphics RelX="1.0" RelY="1.0" Width="17.0" Height="16.0" FillColor="ffff33" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="c2de7" TextLabel="P" GraphId="b89dc">
+    <Comment>IL-1 stimulates the phosphorylation of AKT1 in HEK293, human cardiac myofibroblast COS7 and EL-4 cells.</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="c33b5" TextLabel="P" GraphId="b57b2">
+    <Graphics RelX="0.9629629629629629" RelY="1.0" Width="16.5" Height="17.5" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="ca274" TextLabel="P" GraphId="de3d1">
+    <Comment>IL-1 stimulation HSP27 activates MKK3 phosphorylation.</Comment>
+    <Graphics RelX="0.8387096774193549" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="d2e9d" TextLabel="P" GraphId="ca62c">
+    <Comment>IL-1 stimulates SHP2 phosphorylation of a single tyrosine residue at 542 in human gingival fibroblasts.</Comment>
     <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
@@ -313,8 +367,17 @@ Kandasamy, K., Mohan, S. S., Raju, R., Keerthikumar, S., Kumar, G. S. S., Venugo
     <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff33" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="eea63" TextLabel="P" GraphId="acaaa">
-    <Comment>Stimulation of the IL-1 receptor complex induces the phosphorylation and activation of MEKK1.</Comment>
+  <State GraphRef="d7f2f" TextLabel="P" GraphId="f222a">
+    <Comment>IL-1 stimulates the phosphorylation of Erk2 in human umbilical vein endothelial cells (HUVEC), COS7 cells and rat VSMCs and 3T3- L1 adipocytes.</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="d8b28" TextLabel="P" GraphId="e0cad">
+    <Graphics RelX="1.0" RelY="1.0" Width="17.5" Height="16.5" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="d8e8d" TextLabel="P" GraphId="dcacd">
+    <Comment>IL-1 beta induces the phosphorylation of MEK in 3T3- L1 adipocytes.</Comment>
     <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
@@ -323,17 +386,37 @@ Kandasamy, K., Mohan, S. S., Raju, R., Keerthikumar, S., Kumar, G. S. S., Venugo
     <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="bedd5" TextLabel="P" GraphId="b18ab">
+  <State GraphRef="dbc27" TextLabel="P" GraphId="c5aad">
+    <Comment>IL-1 stimulates the activation and phosphorylation of MKK6, thus activating the p38MAPK pathway in HeLa cells.</Comment>
     <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff33" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="bec0c" TextLabel="P" GraphId="b4569">
-    <Comment>IL-1 stimulates the phosphorylation of p65 NFKB subunit in HeLa cells and in human articular chondrocyte cells.</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="19.0" Height="17.0" FillColor="feff00" ShapeType="Oval" />
+  <State GraphRef="e5522" TextLabel="P" GraphId="df703">
+    <Graphics RelX="1.0" RelY="1.0" Width="17.5" Height="16.5" FillColor="ffff33" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="c33b5" TextLabel="P" GraphId="b57b2">
-    <Graphics RelX="0.9629629629629629" RelY="1.0" Width="16.5" Height="17.5" FillColor="ffff00" ShapeType="Oval" />
+  <State GraphRef="e73b2" TextLabel="P" GraphId="abc6c">
+    <Comment>IL-1 beta induces the phosphorylation of JNK1 in beta rat synovial fibroblasts and MINC cells.</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="eaf32" TextLabel="P" GraphId="d9d26">
+    <Comment>IL-1 beta induces the phosphorylation of JNK2 in beta and MINC cells.</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff33" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="eea63" TextLabel="P" GraphId="acaaa">
+    <Comment>Stimulation of the IL-1 receptor complex induces the phosphorylation and activation of MEKK1.</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="eeb2d" TextLabel="P" GraphId="c12a3">
+    <Comment>IL-1 stimulates the phosphorylation and activation of MAP2K7</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="ef92b" TextLabel="P" GraphId="e1856">
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="efd2d" TextLabel="P" GraphId="b6dbf">
@@ -341,101 +424,14 @@ Kandasamy, K., Mohan, S. S., Raju, R., Keerthikumar, S., Kumar, G. S. S., Venugo
     <Graphics RelX="1.0" RelY="1.0" Width="16.25" Height="16.75" FillColor="ffff00" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="c2de7" TextLabel="P" GraphId="b89dc">
-    <Comment>IL-1 stimulates the phosphorylation of AKT1 in HEK293, human cardiac myofibroblast COS7 and EL-4 cells.</Comment>
+  <State GraphRef="f54dd" TextLabel="P" GraphId="a4ad9">
+    <Comment>IL-1 stimulates the phosphorylation and activation of MAP2K4</Comment>
     <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="a5a3a" TextLabel="P" GraphId="b9665">
-    <Comment>IL-1 stimulates the phosphorylation of HSP27 in Hep G2 cells</Comment>
-    <Graphics RelX="1.0" RelY="0.9090909090909091" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="eeb2d" TextLabel="P" GraphId="c12a3">
-    <Comment> IL-1 stimulates the phosphorylation and activation of MAP2K7</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="c19bf" TextLabel="P" GraphId="c3290">
-    <Graphics RelX="1.0" RelY="1.0" Width="17.0" Height="16.0" FillColor="ffff33" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="dbc27" TextLabel="P" GraphId="c5aad">
-    <Comment>IL-1 stimulates the activation and phosphorylation of MKK6, thus activating the p38MAPK pathway in HeLa cells.
-</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff33" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="a6d59" TextLabel="P" GraphId="c75a2">
-    <Comment>IL-1 alpha stimulates the phosphorylation of Erk1 in cardiac myofibroblast and mouse 3T3- L1 adipocytes.</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="15.5" Height="15.5" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="d2e9d" TextLabel="P" GraphId="ca62c">
-    <Comment>IL-1 stimulates SHP2 phosphorylation of a single tyrosine residue at 542 in human gingival fibroblasts.</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="eaf32" TextLabel="P" GraphId="d9d26">
-    <Comment>IL-1 beta induces the phosphorylation of JNK2 in beta and MINC cells.
-</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff33" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="d8e8d" TextLabel="P" GraphId="dcacd">
-    <Comment>IL-1 beta induces the phosphorylation of MEK in 3T3- L1 adipocytes.</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="bd5b2" TextLabel="P" GraphId="de2e7">
-    <Comment>IL-1 stimulates the activation and phosphorylation of IKK alpha in alveolar macrophages from patients with chronic obstructive pulmonary disease(COPD) and MEF cells.
-</Comment>
-    <Graphics RelX="0.9565217391304348" RelY="-1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="ca274" TextLabel="P" GraphId="de3d1">
-    <Comment>IL-1 stimulation HSP27 activates MKK3 phosphorylation.</Comment>
-    <Graphics RelX="0.8387096774193549" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="e5522" TextLabel="P" GraphId="df703">
-    <Graphics RelX="1.0" RelY="1.0" Width="17.5" Height="16.5" FillColor="ffff33" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="d8b28" TextLabel="P" GraphId="e0cad">
-    <Graphics RelX="1.0" RelY="1.0" Width="17.5" Height="16.5" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="ef92b" TextLabel="P" GraphId="e1856">
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="a1150" TextLabel="P" GraphId="e7cb9">
-    <Comment>Stimulation of the IL-1 receptor complex induces the phosphorylation dependent activation of MEKK2.</Comment>
-    <Graphics RelX="0.9" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="ac6ca" TextLabel="P" GraphId="e9235">
-    <Comment>IL-1 beta induces the phosphorylation of MEK in 3T3- L1 adipocytes .</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="d7f2f" TextLabel="P" GraphId="f222a">
-    <Comment>IL-1 stimulates the phosphorylation of Erk2 in human umbilical vein endothelial cells (HUVEC), COS7 cells and rat VSMCs and 3T3- L1 adipocytes.</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="a367b" TextLabel="P" GraphId="f2a80">
-    <Graphics RelX="1.0" RelY="0.9" Width="18.0" Height="16.0" FillColor="feff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="a6dbb" TextLabel="P" GraphId="fa596">
-    <Comment>IL-1 stimulates the activation and phosphorylation of IKK beta in alveolar macrophages from patients with chronic obstructive pulmonary disease(COPD) and MEF cells.</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="c1945" TextLabel="P" GraphId="ff841">
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="ffff00" ShapeType="Oval" />
+  <State GraphRef="f77df" TextLabel="Ub" GraphId="a985a">
+    <Comment>IL-1 beta stimulates the ubiquitination of TRAF6 in HeLa cells and in MEF cells.</Comment>
+    <Graphics RelX="-1.0" RelY="1.0" Width="15.0" Height="15.0" FillColor="cc66ff" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="c1c4f" TextLabel="Ub" GraphId="d6f8a">
@@ -473,460 +469,438 @@ Kandasamy, K., Mohan, S. S., Raju, R., Keerthikumar, S., Kumar, G. S. S., Venugo
     <Xref Database="" ID="" />
   </State>
   <Interaction GraphId="a2312">
-    <Comment>IL-1 stimulates the polyubiquitination of TAK1 by TRAF6 in mouse embryonic fibroblasts (MEF) cells.
-</Comment>
+    <Comment>IL-1 stimulates the polyubiquitination of TAK1 by TRAF6 in mouse embryonic fibroblasts (MEF) cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="cc00cc">
-      <Point X="434.5" Y="697.0" GraphRef="cf4ad" RelX="0.0" RelY="1.0" />
-      <Point X="430.5" Y="794.0" GraphRef="c5660" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f5df7" X="434.5" Y="697.0" GraphRef="cf4ad" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a71a8" X="430.5" Y="794.0" GraphRef="c5660" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a40da">
-    <Comment>IL-1 stimulates the interaction of activated IRAK1 with IL1R1 in human osteosarcoma cells and in human 293 cells upon IL-1 stimulation.
-</Comment>
-    <Comment>IL-1 stimulates the interaction of activated IRAK1 with IL-1RAcP in a constitutive manner in 293 cells and promotes signaling.
-</Comment>
+    <Comment>IL-1 stimulates the interaction of activated IRAK1 with IL1R1 in human osteosarcoma cells and in human 293 cells upon IL-1 stimulation.</Comment>
+    <Comment>IL-1 stimulates the interaction of activated IRAK1 with IL-1RAcP in a constitutive manner in 293 cells and promotes signaling.</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="385.61403508771923" Y="399.140350877193" GraphRef="acd41" RelX="0.0" RelY="1.0" />
-      <Point X="398.5" Y="562.0" GraphRef="c1c4f" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f08dc" X="385.61403508771923" Y="399.14035087719304" GraphRef="ba41a" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ff78d" X="398.5" Y="562.0" GraphRef="c1c4f" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a54d9">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="244.0" Y="981.0" GraphRef="f54dd" RelX="0.0" RelY="1.0" />
-      <Point X="244.0" Y="1064.0" GraphRef="bedd5" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="dc99c" X="244.0" Y="981.0" GraphRef="f54dd" RelX="0.0" RelY="1.0" />
+      <Point GraphId="bd755" X="244.0" Y="1064.0" GraphRef="bedd5" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a5d87">
-    <Comment>IL-1 stimulates the recruitment of IRAK1 to IL-1 receptor complex, followed by interaction of activated IRAK1 with TRAF6 in 293T cells, leading to NFKB activation.
-</Comment>
+    <Comment>IL-1 stimulates the recruitment of IRAK1 to IL-1 receptor complex, followed by interaction of activated IRAK1 with TRAF6 in 293T cells, leading to NFKB activation.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="379.0" Y="582.0" GraphRef="c1c4f" RelX="0.0" RelY="1.0" />
-      <Point X="379.0" Y="679.0" ArrowHead="Arrow" />
+      <Point GraphId="c125e" X="379.0" Y="582.0" GraphRef="c1c4f" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e689f" X="379.0" Y="679.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a8448">
     <Comment>Type your comment here</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="459.25" Y="474.0" GraphRef="bf0bd" RelX="-0.5" RelY="1.0" />
-      <Point X="398.5" Y="562.0" GraphRef="c1c4f" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="d9dba" X="459.25" Y="474.0" GraphRef="bf0bd" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="d5ce9" X="398.5" Y="562.0" GraphRef="c1c4f" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a99a0">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0" Color="00cccc">
-      <Point X="457.5" Y="1116.0" GraphRef="a367b" RelX="0.0" RelY="1.0" />
-      <Point X="457.5" Y="1230.0" GraphRef="e5522" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e1d52" X="457.5" Y="1116.0" GraphRef="a367b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d5a8a" X="457.5" Y="1230.0" GraphRef="e5522" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ac82e">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="170.5" Y="981.0" GraphRef="eeb2d" RelX="0.0" RelY="1.0" />
-      <Point X="170.0" Y="1062.0" GraphRef="e73b2" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ddc06" X="170.5" Y="981.0" GraphRef="eeb2d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b7ee6" X="170.0" Y="1062.0" GraphRef="e73b2" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b0360">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="292.0" Y="1074.0" GraphRef="bedd5" RelX="1.0" RelY="0.0" />
-      <Point X="329.0" Y="1074.0" GraphRef="d712e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="ba58c" X="292.0" Y="1074.0" GraphRef="bedd5" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e3160" X="329.0" Y="1074.0" GraphRef="d712e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b13fd">
     <Graphics ZOrder="12288" LineThickness="3.0" Color="ff00ff">
-      <Point X="573.0" Y="1168.0" />
-      <Point X="573.0" Y="1183.0" ArrowHead="Arrow" />
+      <Point GraphId="de1ae" X="573.0" Y="1168.0" />
+      <Point GraphId="a54f4" X="573.0" Y="1183.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b3562">
-    <Comment>IL-1 stimulates the ubiquitination of TAB3 by TRAF6 in 293 cells.
-</Comment>
+    <Comment>IL-1 stimulates the ubiquitination of TAB3 by TRAF6 in 293 cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="cc00cc">
-      <Point X="464.0" Y="687.0" GraphRef="cf4ad" RelX="1.0" RelY="0.0" />
-      <Point X="464.5" Y="773.0" GraphRef="db920" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e905d" X="464.0" Y="687.0" GraphRef="cf4ad" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d8e28" X="464.5" Y="773.0" GraphRef="db920" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b3bf7">
-    <Comment>IL-1 stimulates the activation and phosphorylation of MKK6, thus activating the p38MAPK pathway in HeLa cells.
-</Comment>
+    <Comment>IL-1 stimulates the activation and phosphorylation of MKK6, thus activating the p38MAPK pathway in HeLa cells.</Comment>
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="333.3529411764706" Y="900.0" GraphRef="a359b" RelX="0.0" RelY="0.0" />
-      <Point X="333.0" Y="963.0" GraphRef="dbc27" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ac5ec" X="333.3529411764706" Y="900.0" GraphRef="a359b" RelX="0.0" RelY="0.0" />
+      <Point GraphId="d47d8" X="333.0" Y="963.0" GraphRef="dbc27" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b5109">
-    <Comment>IL-1 stimulates the phosphorylation of TOLLIP by activated IRAK1 in 293-Luc cells.
-</Comment>
+    <Comment>IL-1 stimulates the phosphorylation of TOLLIP by activated IRAK1 in 293-Luc cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="359.5" Y="562.0" GraphRef="c1c4f" RelX="-0.5" RelY="-1.0" />
-      <Point X="296.5" Y="494.0" GraphRef="af4c2" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="e72e5" X="359.5" Y="562.0" GraphRef="c1c4f" RelX="-0.5" RelY="-1.0" />
+      <Point GraphId="b5a82" X="296.5" Y="494.0" GraphRef="af4c2" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b639e">
-    <Comment>IL-1 stimulates the ubiquitination of TAB2 by TRAF6 in 293 cells.
-</Comment>
+    <Comment>IL-1 stimulates the ubiquitination of TAB2 by TRAF6 in 293 cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="cc00cc">
-      <Point X="492.5" Y="697.0" GraphRef="f77df" RelX="0.0" RelY="1.0" />
-      <Point X="497.75" Y="794.0" GraphRef="ab8b2" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ec9ad" X="492.5" Y="697.0" GraphRef="f77df" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d68ec" X="497.75" Y="794.0" GraphRef="ab8b2" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b709d">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="372.0" Y="1084.0" GraphRef="d712e" RelX="0.0" RelY="1.0" />
-      <Point X="372.0" Y="1117.0" GraphRef="a5a3a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="b595a" X="372.0" Y="1084.0" GraphRef="d712e" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ffab1" X="372.0" Y="1117.0" GraphRef="a5a3a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b95e1">
-    <Comment>IL-1 stimulates the recruitment of IRAK2 to IL-1 receptor complex, followed by interaction of activated IRAK2 with TRAF6 in 293T cells, leading to NFKB activation.
-</Comment>
+    <Comment>IL-1 stimulates the recruitment of IRAK2 to IL-1 receptor complex, followed by interaction of activated IRAK2 with TRAF6 in 293T cells, leading to NFKB activation.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="260.5" Y="582.0" GraphRef="fe64e" RelX="0.0" RelY="1.0" />
-      <Point X="260.5" Y="677.0" GraphRef="ae19d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="b5aba" X="260.5" Y="582.0" GraphRef="fe64e" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ade3a" X="260.5" Y="677.0" GraphRef="ae19d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="bc98a">
     <Comment>IL-1 stimulates the phossphorylation of MKK3 in HeLa cells and the phosphorylation is activated by Hsp27.</Comment>
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="412.5764705882353" Y="900.0" GraphRef="a6625" RelX="0.0" RelY="0.0" />
-      <Point X="412.5" Y="962.0" GraphRef="ca274" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ca6a6" X="412.5764705882353" Y="900.0" GraphRef="a6625" RelX="0.0" RelY="0.0" />
+      <Point GraphId="f6941" X="412.5" Y="962.0" GraphRef="ca274" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="bed07">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="245.0" Y="814.0" GraphRef="eea63" RelX="0.0" RelY="1.0" />
-      <Point X="244.0" Y="961.0" GraphRef="f54dd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="cb5d1" X="245.0" Y="814.0" GraphRef="eea63" RelX="0.0" RelY="1.0" />
+      <Point GraphId="eae70" X="244.0" Y="961.0" GraphRef="f54dd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c11d6" GroupRef="ba41a">
     <Graphics ZOrder="12288" LineThickness="2.0" Color="ff00cc">
-      <Point X="489.0" Y="258.0" GraphRef="d9512" RelX="0.0" RelY="1.0" />
-      <Point X="489.5" Y="292.0" GraphRef="f1a07" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="b359d" X="489.0" Y="258.0" GraphRef="d9512" RelX="0.0" RelY="1.0" />
+      <Point GraphId="eb4ec" X="489.5" Y="292.0" GraphRef="f1a07" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c2493">
     <Comment>p65 NFKB(RELA) is phosphorylated by IKK beta upon IL-1 stimulation in HeLa cells.</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="514.5" Y="983.0" GraphRef="bd5b2" RelX="0.5" RelY="1.0" />
-      <Point X="536.25" Y="983.8383838383838" />
-      <Point X="558.0" Y="1096.0" GraphRef="bec0c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="b18c4" X="514.5" Y="983.0" GraphRef="bd5b2" RelX="0.5" RelY="1.0" />
+      <Point GraphId="c9040" X="536.25" Y="983.8383838383838" />
+      <Point GraphId="e32ff" X="558.0" Y="1096.0" GraphRef="bec0c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c2e36" GroupRef="ba41a">
     <Graphics ZOrder="12288" LineThickness="2.0" Color="ff00cc">
-      <Point X="281.0" Y="258.0" GraphRef="e424b" RelX="0.0" RelY="1.0" />
-      <Point X="281.5" Y="293.0" GraphRef="aed71" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="e3137" X="281.0" Y="258.0" GraphRef="e424b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e16bf" X="281.5" Y="293.0" GraphRef="aed71" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c4489">
     <Graphics ZOrder="12288" LineThickness="3.0" Color="ff00ff">
-      <Point X="519.0" Y="1168.0" />
-      <Point X="519.0" Y="1183.0" ArrowHead="Arrow" />
+      <Point GraphId="eb18a" X="519.0" Y="1168.0" />
+      <Point GraphId="f93ab" X="519.0" Y="1183.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c601f">
     <Comment>IL-1 stimulates the interaction of the adapter protein ECSIT with MEKK1 in 293 cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="260.0" Y="756.0" GraphRef="b54e0" RelX="0.0" RelY="1.0" />
-      <Point X="260.5" Y="794.0" GraphRef="eea63" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="bfd35" X="260.0" Y="756.0" GraphRef="b54e0" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d6b93" X="260.5" Y="794.0" GraphRef="eea63" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="cd1c8">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="318.5" Y="814.0" GraphRef="ef92b" RelX="0.0" RelY="1.0" />
-      <Point X="318.0" Y="963.0" GraphRef="dbc27" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f2cd9" X="318.5" Y="814.0" GraphRef="ef92b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="bfd24" X="318.0" Y="963.0" GraphRef="dbc27" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ce1ea">
     <Graphics ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="260.0" Y="1234.0" GraphRef="a9163" RelX="0.0" RelY="1.0" />
-      <Point X="260.0" Y="1287.0" GraphRef="f06cc" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c2705" X="260.0" Y="1234.0" GraphRef="a9163" RelX="0.0" RelY="1.0" />
+      <Point GraphId="be570" X="260.0" Y="1287.0" GraphRef="f06cc" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d19e9">
-    <Comment>IL-1 stimulates the interaction of MAP3K3 and TRAF6 in mouse embryonic fibroblasts(MEF) cells.
-</Comment>
+    <Comment>IL-1 stimulates the interaction of MAP3K3 and TRAF6 in mouse embryonic fibroblasts(MEF) cells.</Comment>
     <Comment>RING and zinc finger domains of TRAF6 were involved in the activation of MEKK3</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="318.5" Y="697.0" GraphRef="d9207" RelX="0.0" RelY="1.0" />
-      <Point X="318.5" Y="794.0" GraphRef="ef92b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a5461" X="318.5" Y="697.0" GraphRef="d9207" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d208e" X="318.5" Y="794.0" GraphRef="ef92b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d1a34">
     <Graphics ZOrder="12288" LineThickness="3.0" Color="ff00ff">
-      <Point X="518.0" Y="1175.0" />
-      <Point X="519.0" Y="1151.0" ArrowHead="Arrow" />
+      <Point GraphId="d201b" X="518.0" Y="1175.0" />
+      <Point GraphId="d2fa8" X="519.0" Y="1151.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d7b09">
-    <Comment> IL1A,IL1R1,IL1RAP,MYD88,IRAK4 forms a complex upon stimulation with IL-1 in mouse (EL4 6.1)cells.
-</Comment>
+    <Comment>IL1A,IL1R1,IL1RAP,MYD88,IRAK4 forms a complex upon stimulation with IL-1 in mouse (EL4 6.1)cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="382.0" Y="464.0" GraphRef="cfff0" RelX="1.0" RelY="0.0" />
-      <Point X="440.0" Y="464.0" GraphRef="bf0bd" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="df89a" X="382.0" Y="464.0" GraphRef="cfff0" RelX="1.0" RelY="0.0" />
+      <Point GraphId="cf3bc" X="440.0" Y="464.0" GraphRef="bf0bd" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d99d8">
-    <Comment>IL-1 stimulates the interaction of activated IRAK4 with TRAF6 in 293 cells which results in the induction of NFKB activity.
-</Comment>
+    <Comment>IL-1 stimulates the interaction of activated IRAK4 with TRAF6 in 293 cells which results in the induction of NFKB activity.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="478.5" Y="474.0" GraphRef="bf0bd" RelX="0.0" RelY="1.0" />
-      <Point X="477.75" Y="677.0" GraphRef="f77df" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="d3719" X="478.5" Y="474.0" GraphRef="bf0bd" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f0cbb" X="477.75" Y="677.0" GraphRef="f77df" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d9ed2">
     <Graphics ZOrder="12288" LineThickness="3.0" Color="ff00ff">
-      <Point X="472.0" Y="1175.0" />
-      <Point X="473.0" Y="1151.0" ArrowHead="Arrow" />
+      <Point GraphId="d8941" X="472.0" Y="1175.0" />
+      <Point GraphId="ba4bc" X="473.0" Y="1151.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e3841">
     <Comment>Type your comment here</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="418.0" Y="572.0" GraphRef="c1c4f" RelX="1.0" RelY="0.0" />
-      <Point X="496.0" Y="572.0" GraphRef="b6f6f" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="c43a3" X="418.0" Y="572.0" GraphRef="c1c4f" RelX="1.0" RelY="0.0" />
+      <Point GraphId="c19e1" X="496.0" Y="572.0" GraphRef="b6f6f" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e498c">
-    <Comment>IL-1 stimulates the phosphorylation of NIK by activated TAK1, followed by its association with IKK-alpha in 293 cells. Thus, TAK1 induced activation of IKK-alpha is achieved through activation of NIK.
-</Comment>
+    <Comment>IL-1 stimulates the phosphorylation of NIK by activated TAK1, followed by its association with IKK-alpha in 293 cells. Thus, TAK1 induced activation of IKK-alpha is achieved through activation of NIK.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="503.0" Y="929.0" GraphRef="aba92" RelX="0.0" RelY="1.0" />
-      <Point X="503.0" Y="963.0" GraphRef="bd5b2" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f0e06" X="503.0" Y="929.0" GraphRef="aba92" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cf9fe" X="503.0" Y="963.0" GraphRef="bd5b2" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e5abf">
     <Comment>IL-1 stimulated active IRAK1 phosphorylates IRAK2 in 293 cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="340.0" Y="572.0" GraphRef="c1c4f" RelX="-1.0" RelY="0.0" />
-      <Point X="290.0" Y="572.0" GraphRef="fe64e" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="c2b49" X="340.0" Y="572.0" GraphRef="c1c4f" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="d0aa0" X="290.0" Y="572.0" GraphRef="fe64e" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e7941">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="602.25" Y="475.0" GraphRef="d2e9d" RelX="0.5" RelY="1.0" />
-      <Point X="599.0" Y="562.0" GraphRef="d91d6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ce7f4" X="602.25" Y="475.0" GraphRef="d2e9d" RelX="0.5" RelY="1.0" />
+      <Point GraphId="bdb55" X="599.0" Y="562.0" GraphRef="d91d6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e90ee">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="599.7280674498497" Y="656.3356317583728" GraphRef="a98e3" RelX="0.0" RelY="1.0" />
-      <Point X="599.5" Y="863.0" GraphRef="ac6ca" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a149a" X="599.7280674498497" Y="656.3356317583728" GraphRef="a98e3" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fc02f" X="599.5" Y="863.0" GraphRef="ac6ca" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e9f05">
-    <Comment> IkappaB alpha (NFKBIA) undergoes phosphorylation upon IL-1 stimulation in HeLa cells.</Comment>
+    <Comment>IkappaB alpha (NFKBIA) undergoes phosphorylation upon IL-1 stimulation in HeLa cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="479.0" Y="993.0" GraphRef="a6dbb" RelX="-1.0" RelY="0.0" />
-      <Point X="479.25" Y="1038.0" GraphRef="c1945" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="b7208" X="479.0" Y="993.0" GraphRef="a6dbb" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="c2fdb" X="479.25" Y="1038.0" GraphRef="c1945" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ec4c8">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="599.0" Y="582.0" GraphRef="d91d6" RelX="0.0" RelY="1.0" />
-      <Point X="599.7280674498497" Y="640.165363197433" GraphRef="a98e3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e4056" X="599.0" Y="582.0" GraphRef="d91d6" RelX="0.0" RelY="1.0" />
+      <Point GraphId="eb818" X="599.7280674498497" Y="640.165363197433" GraphRef="a98e3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ecbbd">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="562.0" Y="537.0" GraphRef="ac9e3" RelX="0.0" RelY="1.0" />
-      <Point X="562.5" Y="791.5" GraphRef="c2de7" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a6821" X="562.0" Y="537.0" GraphRef="ac9e3" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f6028" X="562.5" Y="791.5" GraphRef="c2de7" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ed8f2">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0" Color="00cccc">
-      <Point X="558.0" Y="1116.0" GraphRef="bec0c" RelX="0.0" RelY="1.0" />
-      <Point X="558.0" Y="1230.0" GraphRef="d8b28" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e2e5c" X="558.0" Y="1116.0" GraphRef="bec0c" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f28a3" X="558.0" Y="1230.0" GraphRef="d8b28" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f059d">
     <Graphics ZOrder="12288" LineThickness="3.0" Color="ff00ff">
-      <Point X="572.0" Y="1175.0" />
-      <Point X="573.0" Y="1151.0" ArrowHead="Arrow" />
+      <Point GraphId="de167" X="572.0" Y="1175.0" />
+      <Point GraphId="f4622" X="573.0" Y="1151.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f1bf7">
     <Graphics ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="170.0" Y="1253.0" GraphRef="f7ad4" RelX="0.0" RelY="1.0" />
-      <Point X="170.0" Y="1287.0" GraphRef="d07b4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="d7ef0" X="170.0" Y="1253.0" GraphRef="f7ad4" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cd7f9" X="170.0" Y="1287.0" GraphRef="d07b4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f4f79">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="599.5" Y="905.5" GraphRef="d8e8d" RelX="0.0" RelY="1.0" />
-      <Point X="599.5" Y="1009.5" GraphRef="d7f2f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f0ff1" X="599.5" Y="905.5" GraphRef="d8e8d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c96fc" X="599.5" Y="1009.5" GraphRef="d7f2f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f7644">
-    <Comment>IL-1 induces the recruitment of IRAK2 to receptor leading to interaction via NH2 terminal segment with cytoplasmic domain of Type I IL-1 receptor in 293 cells.
-</Comment>
+    <Comment>IL-1 induces the recruitment of IRAK2 to receptor leading to interaction via NH2 terminal segment with cytoplasmic domain of Type I IL-1 receptor in 293 cells.</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="312.2280701754386" Y="399.140350877193" GraphRef="acd41" RelX="-0.5" RelY="1.0" />
-      <Point X="286.3640350877193" Y="411.4035087719298" />
-      <Point X="260.5" Y="562.0" GraphRef="fe64e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="d0e15" X="312.2280701754386" Y="399.14035087719304" GraphRef="ba41a" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="a4b47" X="286.3640350877193" Y="411.4035087719298" />
+      <Point GraphId="d6ef8" X="260.5" Y="562.0" GraphRef="fe64e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f80ad">
-    <Comment>IL-1 stimulates the recruitment of MYD88 to the IL-1 receptor complex, further associates with IL-1RAcP in 293T cells which results in the induction of NFKB activity.
-</Comment>
+    <Comment>IL-1 stimulates the recruitment of MYD88 to the IL-1 receptor complex, further associates with IL-1RAcP in 293T cells which results in the induction of NFKB activity.</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="385.61403508771923" Y="399.140350877193" GraphRef="acd41" RelX="0.0" RelY="1.0" />
-      <Point X="357.0" Y="454.0" GraphRef="cfff0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c4fa9" X="385.61403508771923" Y="399.14035087719304" GraphRef="ba41a" RelX="0.0" RelY="1.0" />
+      <Point GraphId="bbfb3" X="357.0" Y="454.0" GraphRef="cfff0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f9af6" GroupRef="ba41a">
-    <Comment>IL-1 stimulates the interaction of IL-1RAcP with IL-1 alpha and type 1 IL-1 receptor complex in Sw3T3 fibroblasts and the CHO-IR/AcP cells.
-</Comment>
+    <Comment>IL-1 stimulates the interaction of IL-1RAcP with IL-1 alpha and type 1 IL-1 receptor complex in Sw3T3 fibroblasts and the CHO-IR/AcP cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0">
-      <Point X="489.0" Y="320.0" GraphRef="ede13" RelX="0.0" RelY="1.0" />
-      <Point X="489.5" Y="361.0" GraphRef="eac9c" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="a9c7f" X="489.0" Y="320.0" GraphRef="ede13" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cf99e" X="489.5" Y="361.0" GraphRef="eac9c" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="fa0f9">
-    <Comment>IL-1 stimulates the formation of  a complex consisting of MAP3K3,TRAF6 and MAP3K7 in mouse embryonic fibroblasts cells.
-</Comment>
+    <Comment>IL-1 stimulates the formation of  a complex consisting of MAP3K3,TRAF6 and MAP3K7 in mouse embryonic fibroblasts cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="395.0" Y="804.0" GraphRef="c5660" RelX="-1.0" RelY="0.0" />
-      <Point X="348.0" Y="804.0" GraphRef="ef92b" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="d2ecd" X="395.0" Y="804.0" GraphRef="c5660" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="c4e97" X="348.0" Y="804.0" GraphRef="ef92b" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="fa8e0">
-    <Comment>IL-1 stimulates the interaction of ECSIT with TRAF6 and promotes TRAF6 dependent IRAK mediated activation of NFKB in 293T cells.
-</Comment>
+    <Comment>IL-1 stimulates the interaction of ECSIT with TRAF6 and promotes TRAF6 dependent IRAK mediated activation of NFKB in 293T cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="260.5" Y="697.0" GraphRef="ae19d" RelX="0.0" RelY="1.0" />
-      <Point X="260.0" Y="736.0" GraphRef="b54e0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ad85c" X="260.5" Y="697.0" GraphRef="ae19d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a5ad5" X="260.0" Y="736.0" GraphRef="b54e0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="fb712">
-    <Comment>IL-1 stimulates the interaction of  N-terminal domain of activated TRAF6 with PRKCZ in 293 cells.
-</Comment>
+    <Comment>IL-1 stimulates the interaction of  N-terminal domain of activated TRAF6 with PRKCZ in 293 cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="522.0" Y="687.0" GraphRef="f77df" RelX="1.0" RelY="0.0" />
-      <Point X="619.0" Y="687.0" GraphRef="a6fa8" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="b2307" X="522.0" Y="687.0" GraphRef="f77df" RelX="1.0" RelY="0.0" />
+      <Point GraphId="bc0dc" X="619.0" Y="687.0" GraphRef="a6fa8" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="fd122">
     <Graphics ZOrder="12288" LineThickness="3.0" Color="ff00ff">
-      <Point X="473.0" Y="1168.0" />
-      <Point X="473.0" Y="1183.0" ArrowHead="Arrow" />
+      <Point GraphId="d0fad" X="473.0" Y="1168.0" />
+      <Point GraphId="d4b84" X="473.0" Y="1183.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="fd764">
-    <Comment>IL-1 stimulates the recruitment of MYD88 to IL-1 functional receptor complex and subsequent association with underphosphorylated IRAK1 in 293 cells, thereby MYD88 participates in connecting receptors with a downstream kinase IRAK1.
-</Comment>
+    <Comment>IL-1 stimulates the recruitment of MYD88 to IL-1 functional receptor complex and subsequent association with underphosphorylated IRAK1 in 293 cells, thereby MYD88 participates in connecting receptors with a downstream kinase IRAK1.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="357.0" Y="494.0" GraphRef="ae4a7" RelX="0.0" RelY="1.0" />
-      <Point X="359.5" Y="562.0" GraphRef="c1c4f" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c8d05" X="357.0" Y="494.0" GraphRef="ae4a7" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a315b" X="359.5" Y="562.0" GraphRef="c1c4f" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="fec04" GroupRef="ba41a">
-    <Comment>IL1 beta forms a complex with type I IL-1 receptor as shown by crystal structure analysis.
-</Comment>
-    <Comment>IL-1 stimulates the interaction of IL-1RAcP with IL-1 beta and type 1 IL-1 receptor complex in Sw3T3 fibroblasts and the CHO-IR/AcP cells.
-</Comment>
+    <Comment>IL1 beta forms a complex with type I IL-1 receptor as shown by crystal structure analysis.</Comment>
+    <Comment>IL-1 stimulates the interaction of IL-1RAcP with IL-1 beta and type 1 IL-1 receptor complex in Sw3T3 fibroblasts and the CHO-IR/AcP cells.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0">
-      <Point X="281.0" Y="321.0" GraphRef="ce844" RelX="0.0" RelY="1.0" />
-      <Point X="281.5" Y="361.5" GraphRef="f839a" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="edf44" X="281.0" Y="321.0" GraphRef="ce844" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ab77b" X="281.5" Y="361.5" GraphRef="f839a" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id1638925b">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="303.75" Y="814.0" GraphRef="ef92b" RelX="-0.5" RelY="1.0" />
-      <Point X="244.5" Y="888.0" />
-      <Point X="185.25" Y="961.0" GraphRef="eeb2d" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c4bd2" X="303.75" Y="814.0" GraphRef="ef92b" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="fd219" X="244.5" Y="888.0" />
+      <Point GraphId="c5563" X="185.25" Y="961.0" GraphRef="eeb2d" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id22748fdf">
     <Graphics ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="493.0" Y="1048.0" GraphRef="c1945" RelX="1.0" RelY="0.0" />
-      <Point X="490.5" Y="1096.0" GraphRef="c19bf" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="fa5b3" X="493.0" Y="1048.0" GraphRef="c1945" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d6c36" X="490.5" Y="1096.0" GraphRef="c19bf" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id23063df6">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="318.0" Y="983.0" GraphRef="dbc27" RelX="0.0" RelY="1.0" />
-      <Point X="289.0" Y="1010.0" />
-      <Point X="260.0" Y="1064.0" GraphRef="bedd5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="bbbb2" X="318.0" Y="983.0" GraphRef="dbc27" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e8bbe" X="289.0" Y="1010.0" />
+      <Point GraphId="d743e" X="260.0" Y="1064.0" GraphRef="bedd5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2be2282a" GroupRef="ba41a">
     <Graphics ZOrder="12288" LineThickness="2.0">
-      <Point X="385.0" Y="355.0" />
-      <Point X="385.0" Y="385.0" />
+      <Point GraphId="e4323" X="385.0" Y="355.0" />
+      <Point GraphId="ff898" X="385.0" Y="385.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id40fe106c">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="344.5" Y="494.0" GraphRef="ae4a7" RelX="-0.5" RelY="1.0" />
-      <Point X="309.875" Y="531.0" />
-      <Point X="275.25" Y="562.0" GraphRef="fe64e" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e983a" X="344.5" Y="494.0" GraphRef="ae4a7" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="f9399" X="309.875" Y="531.0" />
+      <Point GraphId="aa2e1" X="275.25" Y="562.0" GraphRef="fe64e" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id4282dd79">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="448.25" Y="814.0" GraphRef="c5660" RelX="0.5" RelY="1.0" />
-      <Point X="475.625" Y="877.0" />
-      <Point X="503.0" Y="909.0" GraphRef="aba92" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e7d92" X="448.25" Y="814.0" GraphRef="c5660" RelX="0.5" RelY="1.0" />
+      <Point GraphId="e0139" X="475.625" Y="877.0" />
+      <Point GraphId="ed6f5" X="503.0" Y="909.0" GraphRef="aba92" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id63450004">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="430.5" Y="814.0" GraphRef="c5660" RelX="0.0" RelY="1.0" />
-      <Point X="344.75" Y="900.0" />
-      <Point X="259.0" Y="961.0" GraphRef="f54dd" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e5828" X="430.5" Y="814.0" GraphRef="c5660" RelX="0.0" RelY="1.0" />
+      <Point GraphId="da29e" X="344.75" Y="900.0" />
+      <Point GraphId="e4d6d" X="259.0" Y="961.0" GraphRef="f54dd" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.575030012004802" Shape="None" GraphId="a359b" />
       <Anchor Position="0.32629051620648264" Shape="None" GraphId="a6625" />
     </Graphics>
@@ -934,391 +908,388 @@ Kandasamy, K., Mohan, S. S., Raju, R., Keerthikumar, S., Kumar, G. S. S., Venugo
   </Interaction>
   <Interaction GraphId="id6776a558">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="231.0" Y="687.0" GraphRef="ae19d" RelX="-1.0" RelY="0.0" />
-      <Point X="184.5" Y="738.0" GraphRef="ba9f6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="add48" X="231.0" Y="687.0" GraphRef="ae19d" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="a0d88" X="184.5" Y="738.0" GraphRef="ba9f6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id721d146d">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="458.9999999999999" Y="399.140350877193" GraphRef="acd41" RelX="0.5" RelY="1.0" />
-      <Point X="523.25" Y="400.35087719298247" />
-      <Point X="587.5" Y="455.0" GraphRef="d2e9d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f1bf8" X="458.9999999999999" Y="399.14035087719304" GraphRef="ba41a" RelX="0.5" RelY="1.0" />
+      <Point GraphId="a3851" X="523.25" Y="400.35087719298247" />
+      <Point GraphId="bf6bd" X="587.5" Y="455.0" GraphRef="d2e9d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id85ff3355">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="398.5" Y="582.0" GraphRef="c1c4f" RelX="0.5" RelY="1.0" />
-      <Point X="408.625" Y="605.0" />
-      <Point X="418.75" Y="636.0" GraphRef="cfddc" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="aca3d" X="398.5" Y="582.0" GraphRef="c1c4f" RelX="0.5" RelY="1.0" />
+      <Point GraphId="d3b66" X="408.625" Y="605.0" />
+      <Point GraphId="e8396" X="418.75" Y="636.0" GraphRef="cfddc" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id89ff9a33">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="359.5" Y="582.0" GraphRef="c1c4f" RelX="-0.5" RelY="1.0" />
-      <Point X="348.75" Y="605.0" />
-      <Point X="338.0" Y="636.0" GraphRef="ed51c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="dee48" X="359.5" Y="582.0" GraphRef="c1c4f" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="d356f" X="348.75" Y="605.0" />
+      <Point GraphId="d2fb3" X="338.0" Y="636.0" GraphRef="ed51c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id97dc4493">
-    <Comment>IL-1 stimulates the recruitment of TOLLIP to the IL-1 receptor complex where it binds with IL-1RAcP in HEK293T cells.
-</Comment>
-    <Comment>IL-1 stimulates the interaction of recruited TOLLIP with type I IL-1 receptor and IL-1RAcP through IRAK recruitment and activation in HEK293T cells.
-</Comment>
+    <Comment>IL-1 stimulates the recruitment of TOLLIP to the IL-1 receptor complex where it binds with IL-1RAcP in HEK293T cells.</Comment>
+    <Comment>IL-1 stimulates the interaction of recruited TOLLIP with type I IL-1 receptor and IL-1RAcP through IRAK recruitment and activation in HEK293T cells.</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="312.2280701754386" Y="399.140350877193" GraphRef="acd41" RelX="-0.5" RelY="1.0" />
-      <Point X="304.3640350877193" Y="411.4035087719298" />
-      <Point X="296.5" Y="454.0" GraphRef="b217a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ed431" X="312.2280701754386" Y="399.14035087719304" GraphRef="ba41a" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="aee9a" X="304.3640350877193" Y="411.4035087719298" />
+      <Point GraphId="ce772" X="296.5" Y="454.0" GraphRef="b217a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id98ce6815">
     <Comment>NFKB activates MCP1 expression upon IL-1 stimulation.</Comment>
     <Graphics ZOrder="12288" LineThickness="2.0">
-      <Point X="504.0" Y="1250.0" GraphRef="c33b5" RelX="0.0" RelY="1.0" />
-      <Point X="504.5" Y="1313.0" GraphRef="bfec9" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
+      <Point GraphId="dba44" X="504.0" Y="1250.0" GraphRef="c33b5" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c5cd0" X="504.5" Y="1313.0" GraphRef="bfec9" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9c41a2e3">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="178.0" Y="814.0" GraphRef="a1150" RelX="0.0" RelY="1.0" />
-      <Point X="203.5" Y="877.0" />
-      <Point X="229.0" Y="961.0" GraphRef="f54dd" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a93c0" X="178.0" Y="814.0" GraphRef="a1150" RelX="0.0" RelY="1.0" />
+      <Point GraphId="def9f" X="203.5" Y="877.0" />
+      <Point GraphId="a0b53" X="229.0" Y="961.0" GraphRef="f54dd" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.33258983890954175" Shape="None" GraphId="e6f2c" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida2136ecc">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="394.8576785426329" Y="888.0" GraphRef="a276c" RelX="0.0" RelY="0.0" />
-      <Point X="420.67883927131646" Y="888.0" />
-      <Point X="446.5" Y="963.0" GraphRef="f7e24" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="faf8b" X="394.8576785426329" Y="888.0" GraphRef="a276c" RelX="0.0" RelY="0.0" />
+      <Point GraphId="fae25" X="420.67883927131646" Y="888.0" />
+      <Point GraphId="a83cc" X="446.5" Y="963.0" GraphRef="f7e24" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida8ff1620">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="229.5" Y="814.0" GraphRef="eea63" RelX="-0.5" RelY="1.0" />
-      <Point X="200.0" Y="865.0" />
-      <Point X="170.5" Y="961.0" GraphRef="eeb2d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e675f" X="229.5" Y="814.0" GraphRef="eea63" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="e4932" X="200.0" Y="865.0" />
+      <Point GraphId="a853c" X="170.5" Y="961.0" GraphRef="eeb2d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idbfd38319">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="397.0" Y="982.0" GraphRef="ca274" RelX="0.0" RelY="1.0" />
-      <Point X="336.5" Y="1025.0" />
-      <Point X="276.0" Y="1064.0" GraphRef="bedd5" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a1545" X="397.0" Y="982.0" GraphRef="ca274" RelX="0.0" RelY="1.0" />
+      <Point GraphId="eb0b6" X="336.5" Y="1025.0" />
+      <Point GraphId="bcd78" X="276.0" Y="1064.0" GraphRef="bedd5" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc0e03833">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="229.0" Y="981.0" GraphRef="f54dd" RelX="-0.5" RelY="1.0" />
-      <Point X="207.0" Y="1011.0" />
-      <Point X="185.0" Y="1062.0" GraphRef="e73b2" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f4a3b" X="229.0" Y="981.0" GraphRef="f54dd" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="a942c" X="207.0" Y="1011.0" />
+      <Point GraphId="c45b9" X="185.0" Y="1062.0" GraphRef="e73b2" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idca61f76d">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="2.0" Color="00cccc">
-      <Point X="504.0" Y="1116.0" GraphRef="c19bf" RelX="0.0" RelY="1.0" />
-      <Point X="504.0" Y="1230.0" GraphRef="c33b5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ba685" X="504.0" Y="1116.0" GraphRef="c19bf" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d0f9f" X="504.0" Y="1230.0" GraphRef="c33b5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd0569a61">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="459.25" Y="474.0" GraphRef="bf0bd" RelX="-0.5" RelY="1.0" />
-      <Point X="450.75" Y="556.0" />
-      <Point X="442.25" Y="636.0" GraphRef="cfddc" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f28b9" X="459.25" Y="474.0" GraphRef="bf0bd" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="fa11d" X="450.75" Y="556.0" />
+      <Point GraphId="d043c" X="442.25" Y="636.0" GraphRef="cfddc" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd2469ac4">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="2.0">
-      <Point X="333.25" Y="814.0" GraphRef="ef92b" RelX="0.5" RelY="1.0" />
-      <Point X="365.125" Y="888.0" />
-      <Point X="397.0" Y="962.0" GraphRef="ca274" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="cd941" X="333.25" Y="814.0" GraphRef="ef92b" RelX="0.5" RelY="1.0" />
+      <Point GraphId="ccb99" X="365.125" Y="888.0" />
+      <Point GraphId="a76a9" X="397.0" Y="962.0" GraphRef="ca274" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.6404140663170387" Shape="None" GraphId="a276c" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd3196d5f">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="0000ff">
-      <Point X="180.85278810408926" Y="877.0" GraphRef="e6f2c" RelX="0.0" RelY="0.0" />
-      <Point X="168.30139405204463" Y="877.0" />
-      <Point X="155.75" Y="961.0" GraphRef="eeb2d" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="b9c2f" X="180.85278810408926" Y="877.0" GraphRef="e6f2c" RelX="0.0" RelY="0.0" />
+      <Point GraphId="af68d" X="168.30139405204463" Y="877.0" />
+      <Point GraphId="df9aa" X="155.75" Y="961.0" GraphRef="eeb2d" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd983e8fd">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="00cc00">
-      <Point X="458.9999999999999" Y="399.140350877193" GraphRef="acd41" RelX="0.5" RelY="1.0" />
-      <Point X="548.5" Y="497.0" GraphRef="c6a8b" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e4567" X="458.9999999999999" Y="399.14035087719304" GraphRef="ba41a" RelX="0.5" RelY="1.0" />
+      <Point GraphId="eebf1" X="548.5" Y="497.0" GraphRef="c6a8b" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf8fcd60">
     <Graphics ZOrder="12288" LineThickness="2.0">
-      <Point X="484.0" Y="1076.0" />
-      <Point X="499.0" Y="1076.0" />
+      <Point GraphId="baa07" X="484.0" Y="1076.0" />
+      <Point GraphId="ef970" X="499.0" Y="1076.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idfa124209">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="2.0" Color="cc00cc">
-      <Point X="531.5" Y="825.0" GraphRef="a06a4" RelX="0.0" RelY="-1.0" />
-      <Point X="519.375" Y="759.0" />
-      <Point X="507.25" Y="697.0" GraphRef="f77df" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="c2185" X="531.5" Y="825.0" GraphRef="a06a4" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="b2281" X="519.375" Y="759.0" />
+      <Point GraphId="a35f4" X="507.25" Y="697.0" GraphRef="f77df" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="cf470">
     <Graphics ZOrder="33321" LineThickness="2.0" Color="0000ff">
-      <Point X="479.12022666666803" Y="447.66666666666674" />
-      <Point X="485.7868933333348" Y="454.33333333333337" ArrowHead="Arrow" />
+      <Point GraphId="b551e" X="479.12022666666803" Y="447.66666666666674" />
+      <Point GraphId="f4966" X="485.7868933333348" Y="454.33333333333337" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b2057">
     <Graphics ZOrder="33324" LineThickness="2.0" Color="0000ff">
-      <Point X="383.12022666666803" Y="555.6666666666667" />
-      <Point X="389.7868933333348" Y="562.3333333333334" ArrowHead="Arrow" />
+      <Point GraphId="c2280" X="383.12022666666803" Y="555.6666666666667" />
+      <Point GraphId="fc614" X="389.7868933333348" Y="562.3333333333334" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c656d">
     <Graphics ZOrder="33328" LineThickness="2.0" Color="0000ff">
-      <Point X="529.120226666668" Y="555.6666666666667" />
-      <Point X="535.7868933333348" Y="562.3333333333334" ArrowHead="Arrow" />
+      <Point GraphId="c1448" X="529.120226666668" Y="555.6666666666667" />
+      <Point GraphId="a556a" X="535.7868933333348" Y="562.3333333333334" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="fead8">
     <Graphics ZOrder="33331" LineThickness="2.0" Color="0000ff">
-      <Point X="248.56322810966947" Y="555.1856661856663" />
-      <Point X="260.5" Y="562.0" GraphRef="fe64e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="adae7" X="248.56322810966947" Y="555.1856661856663" />
+      <Point GraphId="ae71e" X="260.5" Y="562.0" GraphRef="fe64e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c2a16">
     <Graphics ZOrder="33334" LineThickness="2.0" Color="0000ff">
-      <Point X="421.12022666666803" Y="787.6666666666667" />
-      <Point X="427.7868933333348" Y="794.3333333333334" ArrowHead="Arrow" />
+      <Point GraphId="eeb4b" X="421.12022666666803" Y="787.6666666666667" />
+      <Point GraphId="b7258" X="427.7868933333348" Y="794.3333333333334" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c2a7d">
     <Graphics ZOrder="33338" LineStyle="Broken" LineThickness="2.0" Color="00cccc">
-      <Point X="170.0" Y="1101.0" GraphRef="eaf32" RelX="0.0" RelY="1.0" />
-      <Point X="170.0" Y="1212.0" GraphRef="ec1ff" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a2129" X="170.0" Y="1101.0" GraphRef="eaf32" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e1855" X="170.0" Y="1212.0" GraphRef="ec1ff" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c9abe">
-    <Comment></Comment>
     <Graphics ZOrder="33339" LineThickness="2.0" Color="00cc00">
-      <Point X="229.0" Y="1297.0" GraphRef="f06cc" RelX="-1.0" RelY="0.0" />
-      <Point X="190.0" Y="1297.0" GraphRef="d07b4" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="e4aac" X="229.0" Y="1297.0" GraphRef="f06cc" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="cd11c" X="190.0" Y="1297.0" GraphRef="d07b4" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="beb33">
     <Graphics ZOrder="33340" LineStyle="Broken" LineThickness="2.0" Color="00cccc">
-      <Point X="260.0" Y="1084.0" GraphRef="bedd5" RelX="0.0" RelY="1.0" />
-      <Point X="260.0" Y="1214.0" GraphRef="a9163" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a9f97" X="260.0" Y="1084.0" GraphRef="bedd5" RelX="0.0" RelY="1.0" />
+      <Point GraphId="de634" X="260.0" Y="1214.0" GraphRef="a9163" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b72ac">
     <Graphics ZOrder="33348" LineThickness="3.0" Color="ff00ff">
-      <Point X="276.0" Y="1175.0" />
-      <Point X="277.0" Y="1151.0" ArrowHead="Arrow" />
+      <Point GraphId="f89a8" X="276.0" Y="1175.0" />
+      <Point GraphId="a2dfa" X="277.0" Y="1151.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d0c8c">
     <Graphics ZOrder="33349" LineThickness="3.0" Color="ff00ff">
-      <Point X="185.0" Y="1168.0" />
-      <Point X="185.0" Y="1183.0" ArrowHead="Arrow" />
+      <Point GraphId="cec00" X="185.0" Y="1168.0" />
+      <Point GraphId="c33c1" X="185.0" Y="1183.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ee77c">
     <Graphics ZOrder="33350" LineThickness="3.0" Color="ff00ff">
-      <Point X="277.0" Y="1168.0" />
-      <Point X="277.0" Y="1183.0" ArrowHead="Arrow" />
+      <Point GraphId="a45e6" X="277.0" Y="1168.0" />
+      <Point GraphId="c82df" X="277.0" Y="1183.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b0f8d">
     <Graphics ZOrder="33351" LineThickness="3.0" Color="ff00ff">
-      <Point X="184.0" Y="1175.0" />
-      <Point X="185.0" Y="1151.0" ArrowHead="Arrow" />
+      <Point GraphId="f5bea" X="184.0" Y="1175.0" />
+      <Point GraphId="f1b10" X="185.0" Y="1151.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c385a">
     <Graphics ZOrder="33654" LineThickness="3.0">
-      <Point X="799.0952380952383" Y="460.0" GraphRef="a532d" RelX="0.0" RelY="1.0" />
-      <Point X="799.5" Y="485.95238095238096" GraphRef="cae59" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="b4d96" X="799.0952380952383" Y="460.0" GraphRef="a532d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cc76e" X="799.5" Y="485.95238095238096" GraphRef="cae59" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a57ea">
     <Graphics ZOrder="33657" LineThickness="3.0" Color="ff3399">
-      <Point X="722.5485028072367" Y="483.08182574339844" GraphRef="d8bab" RelX="0.0" RelY="-1.0" />
-      <Point X="722.5" Y="462.95238095238096" GraphRef="d54bb" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f33e6" X="722.5485028072367" Y="483.08182574339844" GraphRef="d8bab" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="dafb9" X="722.5" Y="462.95238095238096" GraphRef="d54bb" RelX="0.0" RelY="1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <GraphicalLine GraphId="acb27">
     <Graphics ZOrder="33584" LineThickness="2.0" Color="00cc00">
-      <Point X="696.0" Y="563.0" />
-      <Point X="753.0" Y="563.0" ArrowHead="Arrow" />
+      <Point GraphId="f8eb2" X="696.0" Y="563.0" />
+      <Point GraphId="ae600" X="753.0" Y="563.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="cf72d">
     <Graphics ZOrder="33585" LineThickness="2.0">
-      <Point X="723.0" Y="557.0" />
-      <Point X="723.0" Y="569.0" />
+      <Point GraphId="c4bb1" X="723.0" Y="557.0" />
+      <Point GraphId="e2f50" X="723.0" Y="569.0" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="a2207">
     <Graphics ZOrder="33587" LineThickness="2.0" Color="ff0033">
-      <Point X="697.0" Y="909.0" />
-      <Point X="762.0" Y="909.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="fce4d" X="697.0" Y="909.0" />
+      <Point GraphId="fd4a3" X="762.0" Y="909.0" ArrowHead="mim-inhibition" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="abc30">
     <Graphics ZOrder="33588" LineThickness="2.0" Color="9900cc">
-      <Point X="697.0" Y="810.0" />
-      <Point X="755.0" Y="810.5024647292423" ArrowHead="Arrow" />
+      <Point GraphId="b89cd" X="697.0" Y="810.0" />
+      <Point GraphId="cf14f" X="755.0" Y="810.5024647292423" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="daff7">
     <Graphics ZOrder="33589" LineThickness="3.0" Color="ff00ff">
-      <Point X="750.0" Y="1001.0" />
-      <Point X="751.0" Y="977.0" ArrowHead="Arrow" />
+      <Point GraphId="d0ff8" X="750.0" Y="1001.0" />
+      <Point GraphId="b8a2f" X="751.0" Y="977.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="d9270">
     <Graphics ZOrder="33590" LineThickness="2.0" Color="cc00cc">
-      <Point X="697.0" Y="790.658208482304" />
-      <Point X="755.0" Y="790.658208482304" ArrowHead="Arrow" />
+      <Point GraphId="ba91c" X="697.0" Y="790.658208482304" />
+      <Point GraphId="e2b37" X="755.0" Y="790.658208482304" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="a977a">
     <Graphics ZOrder="33591" LineThickness="2.0" Color="999900">
-      <Point X="697.0" Y="750.6593972779119" />
-      <Point X="755.0" Y="750.6593972779119" ArrowHead="Arrow" />
+      <Point GraphId="a6a62" X="697.0" Y="750.6593972779119" />
+      <Point GraphId="fd176" X="755.0" Y="750.6593972779119" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="c23c0">
     <Graphics ZOrder="33592" LineStyle="Broken" LineThickness="2.0" Color="00cccc">
-      <Point X="698.0" Y="929.0" />
-      <Point X="756.0" Y="929.5012759336341" ArrowHead="Arrow" />
+      <Point GraphId="ce1d4" X="698.0" Y="929.0" />
+      <Point GraphId="ebcce" X="756.0" Y="929.5012759336341" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="a0daa">
     <Graphics ZOrder="33593" LineThickness="2.0" Color="00ffff">
-      <Point X="697.0" Y="730.6593972779119" />
-      <Point X="755.0" Y="730.6593972779119" ArrowHead="Arrow" />
+      <Point GraphId="b59bb" X="697.0" Y="730.6593972779119" />
+      <Point GraphId="e1b56" X="755.0" Y="730.6593972779119" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="c4cc3">
     <Graphics ZOrder="33594" LineThickness="2.0" Color="ffcc33">
-      <Point X="697.0" Y="670.0" />
-      <Point X="755.0000017000198" Y="670.6593972779119" ArrowHead="Arrow" />
+      <Point GraphId="eee86" X="697.0" Y="670.0" />
+      <Point GraphId="e4f51" X="755.0000017000198" Y="670.6593972779119" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="d5274">
     <Graphics ZOrder="33595" LineThickness="3.0" Color="ff00ff">
-      <Point X="751.0" Y="994.0" />
-      <Point X="751.0" Y="1009.0" ArrowHead="Arrow" />
+      <Point GraphId="a1fcc" X="751.0" Y="994.0" />
+      <Point GraphId="d6a2b" X="751.0" Y="1009.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="e625b">
     <Graphics ZOrder="33612" LineThickness="2.0" Color="0000ff">
-      <Point X="697.0" Y="710.6593972779119" />
-      <Point X="755.0" Y="710.6593972779119" ArrowHead="Arrow" />
+      <Point GraphId="db3ff" X="697.0" Y="710.6593972779119" />
+      <Point GraphId="f0dfe" X="755.0" Y="710.6593972779119" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="f7360">
     <Graphics ZOrder="33613" LineThickness="2.0" Color="ff9933">
-      <Point X="697.0" Y="690.6593972779119" />
-      <Point X="755.0" Y="690.6593972779119" ArrowHead="Arrow" />
+      <Point GraphId="b3dd0" X="697.0" Y="690.6593972779119" />
+      <Point GraphId="ec206" X="755.0" Y="690.6593972779119" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="e9cb0">
     <Graphics ZOrder="33620" LineThickness="2.0" Color="cccc00">
-      <Point X="696.0" Y="770.0" />
-      <Point X="755.0" Y="770.5036535248503" ArrowHead="Arrow" />
+      <Point GraphId="b36d6" X="696.0" Y="770.0" />
+      <Point GraphId="d4ac8" X="755.0" Y="770.5036535248503" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="a36dd">
     <Graphics ZOrder="33622" LineThickness="2.0" Color="770000">
-      <Point X="697.0" Y="830.6570196866958" />
-      <Point X="755.0" Y="830.6570196866958" ArrowHead="Arrow" />
+      <Point GraphId="a8505" X="697.0" Y="830.6570196866958" />
+      <Point GraphId="a15a4" X="755.0" Y="830.6570196866958" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="ba38a">
     <Graphics ZOrder="33624" LineThickness="2.0" Color="775200">
-      <Point X="697.0" Y="850.6570196866958" />
-      <Point X="755.0" Y="850.6570196866958" ArrowHead="Arrow" />
+      <Point GraphId="ceebb" X="697.0" Y="850.6570196866958" />
+      <Point GraphId="e663e" X="755.0" Y="850.6570196866958" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="dad15">
     <Graphics ZOrder="33626" LineThickness="2.0" Color="ff6666">
-      <Point X="697.0" Y="870.6570196866958" />
-      <Point X="755.0" Y="870.6570196866958" ArrowHead="Arrow" />
+      <Point GraphId="d5e22" X="697.0" Y="870.6570196866958" />
+      <Point GraphId="bbf63" X="755.0" Y="870.6570196866958" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="e3e56">
     <Graphics ZOrder="33640" LineThickness="2.0" Color="999999">
-      <Point X="697.0" Y="890.6570196866958" />
-      <Point X="755.0" Y="890.6570196866958" ArrowHead="Arrow" />
+      <Point GraphId="cf630" X="697.0" Y="890.6570196866958" />
+      <Point GraphId="d4021" X="755.0" Y="890.6570196866958" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="e0d80">
     <Graphics ZOrder="33642" LineThickness="2.0">
-      <Point X="722.0" Y="625.0" />
-      <Point X="755.0" Y="625.0" ArrowHead="mim-transcription-translation" />
+      <Point GraphId="d1fdc" X="722.0" Y="625.0" />
+      <Point GraphId="e62b1" X="755.0" Y="625.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="c68dc">
     <Graphics ZOrder="33643" LineThickness="2.0">
-      <Point X="698.0" Y="625.0" />
-      <Point X="723.0" Y="625.0" ArrowHead="TBar" />
+      <Point GraphId="a9ce7" X="698.0" Y="625.0" />
+      <Point GraphId="fd616" X="723.0" Y="625.0" ArrowHead="mim-inhibition" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="ebf7d">
     <Graphics ZOrder="33644" LineThickness="2.0">
-      <Point X="696.0" Y="602.0" />
-      <Point X="754.0" Y="602.0" ArrowHead="mim-transcription-translation" />
+      <Point GraphId="de4ac" X="696.0" Y="602.0" />
+      <Point GraphId="d4c15" X="754.0" Y="602.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="a96ee">
     <Graphics ZOrder="33645" LineThickness="2.0" Color="00cc00">
-      <Point X="696.0" Y="544.0" />
-      <Point X="754.0" Y="544.0" ArrowHead="Arrow" />
+      <Point GraphId="d92e3" X="696.0" Y="544.0" />
+      <Point GraphId="f9c07" X="754.0" Y="544.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="c8764">
     <Graphics ZOrder="33646" LineStyle="Broken" LineThickness="2.0">
-      <Point X="696.0" Y="584.0" />
-      <Point X="754.0" Y="584.0" ArrowHead="Arrow" />
+      <Point GraphId="bdaca" X="696.0" Y="584.0" />
+      <Point GraphId="f22a7" X="754.0" Y="584.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="da3fc">
     <Graphics ZOrder="33647" LineThickness="2.0">
-      <Point X="743.3333333333335" Y="650.3333333333326" />
-      <Point X="750.0" Y="656.9999999999991" ArrowHead="Arrow" />
+      <Point GraphId="dc7bc" X="743.3333333333335" Y="650.3333333333326" />
+      <Point GraphId="bedb0" X="750.0" Y="656.9999999999991" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="CY" GraphId="a760a">
@@ -1558,23 +1529,28 @@ Kandasamy, K., Mohan, S. S., Raju, R., Keerthikumar, S., Kumar, G. S. S., Venugo
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="722.5485028072367" CenterY="494.6175400291123" Width="23.357142857143003" Height="23.071428571427703" ZOrder="33658" FillColor="ff3399" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ff00cc" Rotation="0.0" />
   </Shape>
-  <Group GroupId="b6468" GraphId="a239a" Style="Group" />
-  <Group GroupId="c1510" GraphId="a34c3" Style="Group" />
-  <Group GroupId="ba41a" GraphId="acd41" Style="Group" />
-  <Group GroupId="b792e" GraphId="b043f" Style="Group" />
-  <Group GroupId="e7695" GraphId="b2cae" Style="Group" />
-  <Group GroupId="b1090" GraphId="b7c39" Style="Group" />
-  <Group GroupId="ce3e4" GraphId="be30e" Style="Group" />
-  <Group GroupId="a2357" GraphId="bed7f" Style="Group" />
-  <Group GroupId="c344d" GraphId="c2c3a" Style="Group" />
-  <Group GroupId="d4388" GraphId="c2ceb" Style="Group" />
-  <Group GroupId="ab6a8" GraphId="c6d64" Style="Group" />
-  <Group GroupId="ed25e" GraphId="e66f3" Style="Group" />
+  <Group GroupId="b6468" GraphId="b6468" Style="Group" />
+  <Group GroupId="c1510" GraphId="c1510" Style="Group" />
+  <Group GroupId="ba41a" GraphId="ba41a" Style="Group" />
+  <Group GroupId="b792e" GraphId="b792e" Style="Group" />
+  <Group GroupId="e7695" GraphId="e7695" Style="Group" />
+  <Group GroupId="b1090" GraphId="b1090" Style="Group" />
+  <Group GroupId="ce3e4" GraphId="ce3e4" Style="Group" />
+  <Group GroupId="a2357" GraphId="a2357" Style="Group" />
+  <Group GroupId="c344d" GraphId="c344d" Style="Group" />
+  <Group GroupId="d4388" GraphId="d4388" Style="Group" />
+  <Group GroupId="ab6a8" GraphId="ab6a8" Style="Group" />
+  <Group GroupId="ed25e" GraphId="ed25e" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interleukin mediated signaling pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000512</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxidative phosphorylation pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001059</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
@@ -1585,11 +1561,6 @@ Kandasamy, K., Mohan, S. S., Raju, R., Keerthikumar, S., Kumar, G. S. S., Venugo
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway in the adaptive immune response</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000820</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxidative phosphorylation pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001059</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f60">
@@ -1641,4 +1612,3 @@ Kandasamy, K., Mohan, S. S., Raju, R., Keerthikumar, S., Kumar, G. S. S., Venugo
     </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

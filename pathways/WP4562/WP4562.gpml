@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Canonical NF-kB pathway" Data-Source="WikiPathways" Version="WP4562_r117956" Author="[Mkutmon, AlexanderPico, Eweitz]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Canonical NF-kB pathway" Data-Source="WikiPathways" Version="WP4562_r117956" Author="[Mkutmon, AlexanderPico, Eweitz]" Last-Modified="20210523105153" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">The canonical NF-KB pathway is induced by the ligand-dependent activation of a variety of receptors. Stimulus-dependent activation of the IKK complex results in the phosphorylation and subsequent proteasomal degradation of IκBα and IκBε (NFKBIA and NFKBIE). This allows the nuclear translocation of transcriptionally active RelA/p50 (RELA, NFKB1) or c-Rel/p50 heterodimers (REL, NFKB1).</Comment>
   <BiopaxRef>be8</BiopaxRef>
-  <Graphics BoardWidth="743.0509939498703" BoardHeight="760.3370786516855" />
-  <DataNode TextLabel="RELA" Type="GeneProduct" GroupRef="c03e9">
+  <Graphics BoardWidth="866.0890233362143" BoardHeight="998.0207433016421" />
+  <DataNode TextLabel="RELA" GraphId="d3942" Type="GeneProduct" GroupRef="c03e9">
     <Comment Source="OCR">RelA</Comment>
     <Graphics CenterX="218.84615384615336" CenterY="421.56871218668977" Width="89.99999999999997" Height="25.00000000000001" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000173039" />
@@ -39,12 +39,12 @@
     <Graphics CenterX="454.8012100259291" CenterY="294.04062229904923" Width="90.0" Height="25.00000000000001" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000269335" />
   </DataNode>
-  <DataNode TextLabel="RELA" Type="GeneProduct" GroupRef="c41ce">
+  <DataNode TextLabel="RELA" GraphId="b7722" Type="GeneProduct" GroupRef="c41ce">
     <Comment Source="OCR">RelA</Comment>
     <Graphics CenterX="220.2031114952456" CenterY="606.1581676750218" Width="89.99999999999997" Height="25.00000000000001" ZOrder="32770" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000173039" />
   </DataNode>
-  <DataNode TextLabel="REL" Type="GeneProduct" GroupRef="c41ce">
+  <DataNode TextLabel="REL" GraphId="c987e" Type="GeneProduct" GroupRef="c41ce">
     <Comment Source="OCR">c-Rel</Comment>
     <Graphics CenterX="220.20311149524554" CenterY="631.1581676750216" Width="89.99999999999997" Height="25.00000000000001" ZOrder="32771" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000162924" />
@@ -61,7 +61,7 @@
     <Graphics CenterX="503.5177182368192" CenterY="440.3586862575628" Width="90.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000146232" />
   </DataNode>
-  <DataNode TextLabel="RELA" Type="GeneProduct" GroupRef="db377">
+  <DataNode TextLabel="RELA" GraphId="f6159" Type="GeneProduct" GroupRef="db377">
     <Comment Source="OCR">RelA</Comment>
     <Graphics CenterX="218.47450302506365" CenterY="255.25064822817674" Width="89.99999999999997" Height="25.00000000000001" ZOrder="32776" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000173039" />
@@ -83,10 +83,6 @@
     <Graphics CenterX="256.3267070008642" CenterY="229.4684528954193" Width="90.0" Height="25.0" ZOrder="32780" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000146232" />
   </DataNode>
-  <State GraphRef="f5a4f" TextLabel="P" GraphId="d9f16">
-    <Graphics RelX="1.0" RelY="0.7925669835782228" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
   <State GraphRef="b0712" TextLabel="P" GraphId="dae25">
     <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
@@ -95,53 +91,57 @@
     <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <Interaction GraphId="id20bf485">
+  <State GraphRef="f5a4f" TextLabel="P" GraphId="d9f16">
+    <Graphics RelX="1.0" RelY="0.7925669835782228" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <Interaction GraphId="c295a">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="455.460242005186" Y="90.28738115816758" GraphRef="ec833" RelX="0.0" RelY="1.0" />
-      <Point X="454.8012100259291" Y="269.54062229904923" GraphRef="d7e97" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="bb981" X="264.5656871218665" Y="471.0687121866897" GraphRef="c03e9" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f16a6" X="265.922644770959" Y="581.6581676750218" GraphRef="c41ce" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id3a2bba47">
+  <Interaction GraphId="d953e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="397.8012100259291" Y="319.04062229904923" GraphRef="d7e97" RelX="-1.0" RelY="0.0" />
-      <Point X="264.3426966292128" Y="321.36499567847903" GraphRef="c3099" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="ae5f0" X="367.28522039757974" Y="408.6776145203112" GraphRef="c03e9" RelX="1.0" RelY="0.0" />
+      <Point GraphId="ef765" X="446.5177182368192" Y="427.8586862575628" GraphRef="f7bb1" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id8d0ae9fa">
+  <Interaction GraphId="ccb5b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="264.5656871218665" Y="471.0687121866897" GraphRef="f5593" RelX="0.0" RelY="1.0" />
-      <Point X="265.922644770959" Y="581.6581676750218" GraphRef="d229c" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="fc398" X="560.5177182368194" Y="427.8586862575628" GraphRef="f7bb1" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f64b8" X="624.5851339671559" Y="428.69490060501226" GraphRef="fa6bc" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id8d8d3998">
+  <Interaction GraphId="cdf13">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="367.28522039757974" Y="408.6776145203112" GraphRef="f5593" RelX="1.0" RelY="0.0" />
-      <Point X="446.5177182368192" Y="427.8586862575628" GraphRef="a1e09" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="c006a" X="455.460242005186" Y="90.28738115816758" GraphRef="ec833" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cae35" X="454.8012100259291" Y="269.54062229904923" GraphRef="d4ced" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idda38de35">
+  <Interaction GraphId="b8e50">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="560.5177182368194" Y="427.8586862575628" GraphRef="a1e09" RelX="1.0" RelY="0.0" />
-      <Point X="624.5851339671559" Y="428.69490060501226" GraphRef="fa6bc" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ide3b47b5e">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="264.19403630077704" Y="304.7506482281766" GraphRef="e3505" RelX="0.0" RelY="1.0" />
-      <Point X="264.5656871218665" Y="346.28651685393265" GraphRef="f5593" RelX="0.0" RelY="-1.0" ArrowHead="mim-modification" />
+      <Point GraphId="a9ffe" X="264.19403630077704" Y="304.7506482281766" GraphRef="db377" RelX="0.0" RelY="1.0" />
+      <Point GraphId="eb8a3" X="264.5656871218665" Y="346.28651685393265" GraphRef="c03e9" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4" Shape="None" GraphId="c3099" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <GraphicalLine GraphId="ida017b09a">
+  <Interaction GraphId="d79af">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="368.6421780466725" Y="618.6581676750217" GraphRef="d229c" RelX="1.0" RelY="0.0" />
-      <Point X="467.5885911840968" Y="618.6581676750217" ArrowHead="mim-transcription-translation" />
+      <Point GraphId="daefd" X="397.8012100259291" Y="319.04062229904923" GraphRef="d4ced" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="cb4a1" X="264.3426966292128" Y="321.36499567847903" GraphRef="c3099" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="bd5f8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="d8972" X="368.6421780466725" Y="618.6581676750217" GraphRef="c41ce" RelX="1.0" RelY="0.0" />
+      <Point GraphId="c7809" X="467.5885911840968" Y="618.6581676750217" ArrowHead="mim-transcription-translation" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="NFKB stimuli" GraphId="ec833">
@@ -160,30 +160,29 @@
   <Shape GraphId="fa6bc">
     <Graphics CenterX="639.5851339671559" CenterY="428.69490060501226" Width="30.0" Height="30.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="mim-degradation" Rotation="0.0" />
   </Shape>
-  <Group GroupId="f7bb1" GraphId="a1e09" Style="Complex" />
-  <Group GroupId="c41ce" GraphId="d229c" Style="Complex" />
-  <Group GroupId="d4ced" GraphId="d7e97" Style="Complex" />
-  <Group GroupId="db377" GraphId="e3505" Style="Complex" />
-  <Group GroupId="c03e9" GraphId="f5593" Style="Complex" />
+  <Group GroupId="f7bb1" GraphId="f7bb1" Style="Complex" />
+  <Group GroupId="c41ce" GraphId="c41ce" Style="Complex" />
+  <Group GroupId="d4ced" GraphId="d4ced" Style="Complex" />
+  <Group GroupId="db377" GraphId="db377" Style="Complex" />
+  <Group GroupId="c03e9" GraphId="c03e9" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nuclear factor kappa B signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000499</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="be8">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29587428</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
       <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NF-κB Activation in Lymphoid Malignancies: Genetics, Signaling, and Targeted Therapy.</bp:TITLE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
       <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biomedicines</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grondona P</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bucher P</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schulze-OsthoffK</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hailfinger S</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schmitt A</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nuclear factor kappa B signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000499</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-

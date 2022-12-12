@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="FABP4 in ovarian cancer" Data-Source="WikiPathways" Version="WP4400_r108112" Author="[Khanspers, Fehrhart]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="FABP4 in ovarian cancer" Data-Source="WikiPathways" Version="WP4400_r108112" Author="[Khanspers, Fehrhart]" Last-Modified="20191129101931" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Regulation of FABP4 in ovarian cancer. FABP4 (fatty acid binding protein) can substantially increase metastatic potential of ovarian cancer cells, and leads to more aggressive disease. Mir-409-3p negatively regulates FABP4 in ovarian cancer cells, and mir-409-3p is decreased in hypoxic conditions. Pink arrows indicates potential therapuetic therapeutic stratgeies; in Gharpure et al, DOPC nanoliposomes containing either miR-409-3p mimic or FABP4 siRNA was shown to inhibit tumor progression. 
-Description was adapted from Gharpure et al. </Comment>
+Description was adapted from Gharpure et al.</Comment>
   <BiopaxRef>cf7</BiopaxRef>
-  <Graphics BoardWidth="823.0" BoardHeight="551.5" />
+  <Graphics BoardWidth="907.0" BoardHeight="551.5" />
   <DataNode TextLabel="FABP4" GraphId="cce25" Type="GeneProduct">
     <Graphics CenterX="293.5" CenterY="358.0" Width="63.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000170323" />
   </DataNode>
-  <DataNode TextLabel="MIR409" GraphId="d26ef" Type="Rna">
+  <DataNode TextLabel="MIR409" GraphId="d26ef" Type="RNA">
     <Graphics CenterX="293.5" CenterY="233.0" Width="64.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="990099" />
     <Xref Database="Ensembl" ID="ENSG00000199107" />
   </DataNode>
-  <Interaction GraphId="id374425a1">
+  <Interaction GraphId="c0459">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="a8737" X="293.5" Y="245.5" GraphRef="d26ef" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c8271" X="293.5" Y="345.5" GraphRef="cce25" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b3a49">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="d6ae3" X="293.5" Y="96.5" GraphRef="ecf0a" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fad04" X="293.5" Y="220.5" GraphRef="d26ef" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d62f4">
     <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0066">
-      <Point X="516.5" Y="232.5" GraphRef="d9a66" RelX="-1.0" RelY="0.0" />
-      <Point X="325.0" Y="351.75" GraphRef="cce25" RelX="1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
+      <Point GraphId="a949e" X="516.5" Y="232.5" GraphRef="cfc14" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b880f" X="325.0" Y="351.75" GraphRef="cce25" RelX="1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id8bef8d3e">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="293.5" Y="96.5" GraphRef="ecf0a" RelX="0.0" RelY="1.0" />
-      <Point X="293.5" Y="220.5" GraphRef="d26ef" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id9d7db212">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="293.5" Y="245.5" GraphRef="d26ef" RelX="0.0" RelY="1.0" />
-      <Point X="293.5" Y="345.5" GraphRef="cce25" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ida26f0a21">
+  <Interaction GraphId="d3d71">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="293.5" Y="370.5" GraphRef="cce25" RelX="0.0" RelY="1.0" />
-      <Point X="294.0" Y="496.5" GraphRef="ddb85" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="bfeb1" X="293.5" Y="370.5" GraphRef="cce25" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f3d86" X="294.0" Y="496.5" GraphRef="ddb85" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="aec65">
     <Graphics ZOrder="32772" LineThickness="1.0" Color="ff0066">
-      <Point X="516.5" Y="363.5" GraphRef="be356" RelX="-1.0" RelY="0.0" />
-      <Point X="325.0" Y="364.25" GraphRef="cce25" RelX="1.0" RelY="0.5" ArrowHead="mim-inhibition" />
+      <Point GraphId="a2014" X="516.5" Y="363.5" GraphRef="b76a3" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="aa765" X="325.0" Y="364.25" GraphRef="cce25" RelX="1.0" RelY="0.5" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <GraphicalLine GraphId="aa89a" GroupRef="c0227">
     <Graphics ZOrder="32773" LineThickness="1.0" Color="ff0066">
-      <Point X="594.0" Y="75.0" />
-      <Point X="551.0" Y="75.25" />
+      <Point GraphId="e0a4e" X="594.0" Y="75.0" />
+      <Point GraphId="ec94d" X="551.0" Y="75.25" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="Potential therapeutic strategies" GraphId="aa4b7" GroupRef="c0227">
@@ -74,7 +74,7 @@ Description was adapted from Gharpure et al. </Comment>
   <Shape TextLabel="Tumor cell" GraphId="af894">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="296.0" CenterY="297.5" Width="342.0" Height="305.0" ZOrder="16384" FontWeight="Bold" FontSize="12" Valign="Bottom" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="296.0" CenterY="297.5" Width="342.0" Height="305.0" ZOrder="16384" FontWeight="Bold" FontSize="12" Valign="Bottom" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape GraphId="ce409" GroupRef="cfc14">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
@@ -84,12 +84,26 @@ Description was adapted from Gharpure et al. </Comment>
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="569.5" CenterY="363.5" Width="75.0" Height="75.0" ZOrder="32770" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Group GroupId="c0227" Style="Group" />
-  <Group GroupId="b76a3" GraphId="be356" Style="Group" />
-  <Group GroupId="d567c" GraphId="d7327" Style="Group" />
-  <Group GroupId="cfc14" GraphId="d9a66" Style="Group" />
+  <Group GroupId="c0227" GraphId="c0227" Style="Group" />
+  <Group GroupId="b76a3" GraphId="b76a3" Style="Group" />
+  <Group GroupId="cfc14" GraphId="cfc14" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovarian cancer</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2394</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microRNA pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000808</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cf7">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30050129</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -125,21 +139,5 @@ Description was adapted from Gharpure et al. </Comment>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S Eberlin L</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sood AK</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovarian cancer</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2394</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microRNA pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000808</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-

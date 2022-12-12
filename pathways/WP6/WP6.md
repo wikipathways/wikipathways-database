@@ -13,8 +13,6 @@ authors:
 - Mkutmon
 - DeSl
 - Eweitz
-citedin:
-- link: PMC9033237
 description: 'Integrins are receptors that mediate attachment between a cell and the
   tissues surrounding it, which may be other cells or the extracellular matrix (ECM).
   They also play a role in cell signaling and thereby define cellular shape, mobility,
@@ -25,7 +23,8 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP6
 - /instance/WP6
-revision: null
+- /instance/WP6_rr116713
+revision: r116713
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP6.html
@@ -94,7 +93,6 @@ schema-jsonld:
   - Itgb6
   - Itgb7
   - Itgb8
-  - MYO-P
   - Map2k1
   - Map2k2
   - Map2k3
@@ -108,7 +106,6 @@ schema-jsonld:
   - Mapk7
   - Mylk2
   - Myo
-  - PI5K
   - Pak1
   - Pak2
   - Pak3
@@ -141,7 +138,6 @@ schema-jsonld:
   - Vav3
   - Vcl
   - Zyx
-  - p110
   license: CC0
   name: Integrin-mediated cell adhesion
 seo: CreativeWork

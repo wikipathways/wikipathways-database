@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cancer immunotherapy by PD-1 blockade" Data-Source="WikiPathways" Version="WP4585_r108119" Author="[Khanspers, Fehrhart]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cancer immunotherapy by PD-1 blockade" Data-Source="WikiPathways" Version="WP4585_r123436" Author="[Khanspers, Fehrhart, Egonw]" Last-Modified="20220727043717" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Immune checkpoints are hardwired into the immune system and are crucial for maintaining self-tolerance. Tumors can use these checkpoints to protect themselves from immune system attacks. 
 One such immune checkpoint is PD-1 (programmed cell death 1 protein), which binds to its ligand PD-L1 and inhibits immune cell activity, including T cell activity. By upregulating PD-L1, cancer cells can inhibit T cells that might otherwise attack.  One strategy for cancer immunotherapy is to block this kind of negative feedback, thereby increasing anti-cancer T-cell activity. For the PD-1 checkpoint, cancer immunotherapeutics block either the PD-1 receptor, or the PD-L1 ligand.
 The [https://www.nobelprize.org/prizes/medicine/2018/summary/ 2018 Nobel prize in Physiology or Medicine] was awarded to jointly to James Allison and Tasuku Honjo for their discovery of cancer therapy by inhibition of negative immune regulation.
 
-Based on and figure 4B in the review by [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4856023/ Pardoll] and figure 1 in the review by [https://www.ncbi.nlm.nih.gov/pubmed/28990585 Sharpe and Pauken].
-</Comment>
+Based on and figure 4B in the review by [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4856023/ Pardoll] and figure 1 in the review by [https://www.ncbi.nlm.nih.gov/pubmed/28990585 Sharpe and Pauken].</Comment>
   <BiopaxRef>c58</BiopaxRef>
   <BiopaxRef>f89</BiopaxRef>
   <BiopaxRef>bda</BiopaxRef>
@@ -35,7 +34,7 @@ Based on and figure 4B in the review by [https://www.ncbi.nlm.nih.gov/pmc/articl
     <Xref Database="Ensembl" ID="ENSG00000197646" />
   </DataNode>
   <DataNode TextLabel="Ras signaling" GraphId="ca322" Type="Pathway">
-    <Graphics CenterX="607.0" CenterY="552.0" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Graphics CenterX="607.0" CenterY="552.0" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP4223" />
   </DataNode>
   <DataNode TextLabel="Nivolumab" GraphId="cc867" Type="Metabolite" GroupRef="b5431">
@@ -140,7 +139,7 @@ Based on and figure 4B in the review by [https://www.ncbi.nlm.nih.gov/pmc/articl
     <Xref Database="Ensembl" ID="ENSG00000109320" />
   </DataNode>
   <DataNode TextLabel="PI3K signaling" GraphId="deab0" Type="Pathway">
-    <Graphics CenterX="701.0" CenterY="516.0" Width="90.0" Height="25.0" ZOrder="32781" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Graphics CenterX="701.0" CenterY="516.0" Width="90.0" Height="25.0" ZOrder="32781" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP4172" />
   </DataNode>
   <DataNode TextLabel="CD8B" GraphId="c5d3d" Type="GeneProduct" GroupRef="d89f0">
@@ -163,97 +162,93 @@ Based on and figure 4B in the review by [https://www.ncbi.nlm.nih.gov/pmc/articl
     <Graphics CenterX="697.5000000000001" CenterY="725.0" Width="60.99999999999977" Height="25.0" ZOrder="32786" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000102908" />
   </DataNode>
-  <State GraphRef="fb005" TextLabel="P" GraphId="ac39e">
-    <Comment>parentid=Q15116; parentsymbol=PDCD1; site=CVPEQTEyATIVFPS; position=tyr248; sitegrpid=50293001; ptm=p; direction=u
-</Comment>
-    <Graphics RelX="1.0" RelY="-0.68" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
   <State GraphRef="ef0fd" TextLabel="P" GraphId="d4b68">
-    <Comment>parentid=P43403; parentsymbol=ZAP70; site=tsVyEsPysDPEELk; position=tyr319; sitegrpid=447587; ptm=p; direction=u
-</Comment>
+    <Comment>parentid=P43403; parentsymbol=ZAP70; site=tsVyEsPysDPEELk; position=tyr319; ptm=p; direction=u; sitegrpid=447587</Comment>
     <Graphics RelX="1.0" RelY="-0.8113207547169812" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
+    <Xref Database="phosphositeplus" ID="447587" />
   </State>
   <State GraphRef="ef0fd" TextLabel="P" GraphId="e9c50">
-    <Comment>parentid=P43403; parentsymbol=ZAP70; site=VLLVNRHyAkISDFG; position=tyr474; sitegrpid=455368; ptm=p; direction=u
-</Comment>
+    <Comment>parentid=P43403; parentsymbol=ZAP70; site=VLLVNRHyAkISDFG; position=tyr474; ptm=p; direction=u; sitegrpid=455368</Comment>
     <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
+    <Xref Database="phosphositeplus" ID="455368" />
+  </State>
+  <State GraphRef="fb005" TextLabel="P" GraphId="ac39e">
+    <Comment>parentid=Q15116; parentsymbol=PDCD1; site=CVPEQTEyATIVFPS; position=tyr248; ptm=p; direction=u; sitegrpid=50293001</Comment>
+    <Graphics RelX="1.0" RelY="-0.68" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="phosphositeplus" ID="50293001" />
   </State>
   <State GraphRef="fb005" TextLabel="P" GraphId="f35c8">
-    <Comment>parentid=Q15116; parentsymbol=PDCD1; site=VPVFSVDyGELDFQW; position=tyr223; sitegrpid=450293000; ptm=p; direction=u
-</Comment>
+    <Comment>parentid=Q15116; parentsymbol=PDCD1; site=VPVFSVDyGELDFQW; position=tyr223; ptm=p; direction=u; sitegrpid=450293000</Comment>
     <Graphics RelX="-0.9661016949152542" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
+    <Xref Database="phosphositeplus" ID="450293000" />
   </State>
   <Interaction GraphId="id12ce76b1">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="480.1666666666666" Y="416.3333333333333" GraphRef="fb739" RelX="1.0" RelY="0.0" />
-      <Point X="614.6666666666658" Y="457.75" GraphRef="ef0fd" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="da9a7" X="480.1666666666666" Y="416.3333333333333" GraphRef="fb739" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e6b53" X="614.6666666666658" Y="457.75" GraphRef="ef0fd" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id165d1846">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="607.0" Y="564.5" GraphRef="ca322" RelX="0.0" RelY="1.0" />
-      <Point X="694.5000000000001" Y="654.5" GraphRef="d0d3d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="cf839" X="607.0" Y="564.5" GraphRef="ca322" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b7f63" X="694.5000000000001" Y="654.5" GraphRef="ceb71" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id1e85e2e8">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="660.0000000000003" Y="161.33333333333334" GraphRef="cf68e" RelX="-1.0" RelY="0.0" />
-      <Point X="589.1666666666664" Y="360.83333333333326" GraphRef="dee64" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point GraphId="ea010" X="660.0000000000003" Y="161.33333333333334" GraphRef="cf68e" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="a199c" X="589.1666666666664" Y="360.83333333333326" GraphRef="d89f0" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id233b9269">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="367.16666666666845" Y="195.16666666666669" GraphRef="ae75d" RelX="0.0" RelY="1.0" />
-      <Point X="415.16666666666686" Y="379.2765002362576" GraphRef="fb005" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point GraphId="fd4ff" X="367.16666666666845" Y="195.16666666666669" GraphRef="ae75d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d3f5a" X="415.16666666666686" Y="379.2765002362576" GraphRef="fb005" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id3dfabd77">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="447.1666666666666" Y="428.8333333333333" GraphRef="fb739" RelX="0.0" RelY="1.0" />
-      <Point X="447.1666666666666" Y="526.5" GraphRef="e8b31" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e2f7e" X="447.1666666666666" Y="428.8333333333333" GraphRef="fb739" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f2e55" X="447.1666666666666" Y="526.5" GraphRef="e8b31" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id4edd403d">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="694.5000000000001" Y="745.5" GraphRef="d0d3d" RelX="0.0" RelY="1.0" />
-      <Point X="694.6666666666667" Y="765.5000000000005" GraphRef="d7a36" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="fa082" X="694.5000000000001" Y="745.5" GraphRef="ceb71" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f8566" X="694.6666666666667" Y="765.5000000000005" GraphRef="d7a36" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id52d664a5">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="655.1666666666658" Y="471.0" GraphRef="ef0fd" RelX="0.5" RelY="1.0" />
-      <Point X="701.0" Y="503.5" GraphRef="deab0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="b709a" X="655.1666666666658" Y="471.0" GraphRef="ef0fd" RelX="0.5" RelY="1.0" />
+      <Point GraphId="d8b01" X="701.0" Y="503.5" GraphRef="deab0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id546b3fb4">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="519.1964351341406" Y="347.6708930540236" GraphRef="d76c9" RelX="0.0" RelY="1.0" />
-      <Point X="429.91666666666686" Y="379.2765002362576" GraphRef="fb005" RelX="0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="b2087" X="519.1964351341406" Y="347.6708930540236" GraphRef="b5431" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cc531" X="429.91666666666686" Y="379.2765002362576" GraphRef="fb005" RelX="0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7ed4b1c1">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="628.1666666666658" Y="471.0" GraphRef="ef0fd" RelX="-0.5" RelY="1.0" />
-      <Point X="607.0" Y="539.5" GraphRef="ca322" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a3ceb" X="628.1666666666658" Y="471.0" GraphRef="ef0fd" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="cc93b" X="607.0" Y="539.5" GraphRef="ca322" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9baa23b1">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="414.1666666666666" Y="416.3333333333333" GraphRef="fb739" RelX="-1.0" RelY="0.0" />
-      <Point X="104.53840499816266" Y="306.08654906284517" GraphRef="bbd24" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="c8b23" X="414.1666666666666" Y="416.3333333333333" GraphRef="fb739" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="a30c5" X="104.53840499816266" Y="306.08654906284517" GraphRef="bbd24" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -262,64 +257,64 @@ Based on and figure 4B in the review by [https://www.ncbi.nlm.nih.gov/pmc/articl
     <BiopaxRef>e61</BiopaxRef>
     <BiopaxRef>ca1</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="310.0211319367875" Y="222.8509739066514" GraphRef="cf802" RelX="0.0" RelY="-1.0" />
-      <Point X="352.34523809523984" Y="195.16666666666669" GraphRef="ae75d" RelX="-0.5" RelY="1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="e00e4" X="310.0211319367875" Y="222.8509739066514" GraphRef="b6590" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="e4ded" X="352.34523809523984" Y="195.16666666666669" GraphRef="ae75d" RelX="-0.5" RelY="1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd2218871">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="684.0000000000003" Y="229.33333333333334" GraphRef="a8e9d" RelX="0.0" RelY="1.0" />
-      <Point X="683.5000000000002" Y="347.8333333333333" GraphRef="ac0b9" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point GraphId="ccca5" X="684.0000000000003" Y="229.33333333333334" GraphRef="a8e9d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="eec29" X="683.5000000000002" Y="347.8333333333333" GraphRef="e28a1" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="iddb7061af">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="366.1666666666665" Y="116.27650023625763" GraphRef="d1337" RelX="0.0" RelY="1.0" />
-      <Point X="367.16666666666845" Y="170.16666666666669" GraphRef="ae75d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c977c" X="366.1666666666665" Y="116.27650023625763" GraphRef="d1337" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d16a7" X="367.16666666666845" Y="170.16666666666669" GraphRef="ae75d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="iddd6753bb">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="104.53840499816266" Y="281.08654906284517" GraphRef="bbd24" RelX="0.0" RelY="-1.0" />
-      <Point X="336.23809523809496" Y="103.77650023625763" GraphRef="d1337" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="b6cbd" X="104.53840499816266" Y="281.08654906284517" GraphRef="bbd24" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="b7b42" X="336.23809523809496" Y="103.77650023625763" GraphRef="d1337" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide1f72d6e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="448.16666666666714" Y="195.16666666666669" GraphRef="c29ad" RelX="0.0" RelY="1.0" />
-      <Point X="415.16666666666686" Y="379.2765002362576" GraphRef="fb005" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point GraphId="bb47e" X="448.16666666666714" Y="195.16666666666669" GraphRef="c29ad" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e3f1e" X="415.16666666666686" Y="379.2765002362576" GraphRef="fb005" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idfba37d0">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="480.1666666666666" Y="416.3333333333333" GraphRef="fb739" RelX="1.0" RelY="0.0" />
-      <Point X="656.0" Y="516.0" GraphRef="deab0" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="dbc21" X="480.1666666666666" Y="416.3333333333333" GraphRef="fb739" RelX="1.0" RelY="0.0" />
+      <Point GraphId="dc7cf" X="656.0" Y="516.0" GraphRef="deab0" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idfbed420c">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="447.1666666666666" Y="551.5" GraphRef="e8b31" RelX="0.0" RelY="1.0" />
-      <Point X="447.1666666666666" Y="671.5" GraphRef="ad8ad" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f0bba" X="447.1666666666666" Y="551.5" GraphRef="e8b31" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cdf4d" X="447.1666666666666" Y="671.5" GraphRef="ad8ad" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d1188">
     <Graphics ConnectorType="Elbow" ZOrder="32775" LineThickness="1.0">
-      <Point X="480.1666666666666" Y="416.3333333333333" GraphRef="fb739" RelX="1.0" RelY="0.0" />
-      <Point X="562.0" Y="552.0" GraphRef="ca322" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="d7e92" X="480.1666666666666" Y="416.3333333333333" GraphRef="fb739" RelX="1.0" RelY="0.0" />
+      <Point GraphId="ce16e" X="562.0" Y="552.0" GraphRef="ca322" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="dcb2a">
     <Graphics ZOrder="32779" LineThickness="1.0">
-      <Point X="701.0" Y="528.5" GraphRef="deab0" RelX="0.0" RelY="1.0" />
-      <Point X="694.5000000000001" Y="654.5" GraphRef="d0d3d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f7909" X="701.0" Y="528.5" GraphRef="deab0" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a9888" X="694.5000000000001" Y="654.5" GraphRef="ceb71" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -342,22 +337,67 @@ Based on and figure 4B in the review by [https://www.ncbi.nlm.nih.gov/pmc/articl
   <Shape TextLabel="Nucleus" GraphId="e6439">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="576.3333333333335" CenterY="731.6666666666667" Width="461.33333333333303" Height="198.66666666666652" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="576.3333333333335" CenterY="731.6666666666667" Width="461.33333333333303" Height="198.66666666666652" ZOrder="16384" FontSize="12" Valign="Bottom" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Group GroupId="e28a1" GraphId="ac0b9" Style="Complex" />
-  <Group GroupId="fcdac" GraphId="cf5ce" Style="Complex" />
-  <Group GroupId="b6590" GraphId="cf802" Style="Group" />
-  <Group GroupId="ceb71" GraphId="d0d3d" Style="Group" />
-  <Group GroupId="b5431" GraphId="d76c9" Style="Group" />
-  <Group GroupId="d89f0" GraphId="dee64" Style="Group" />
-  <Group GroupId="d0469" GraphId="e03e1" Style="Group" />
+  <Group GroupId="e28a1" GraphId="e28a1" Style="Complex" />
+  <Group GroupId="fcdac" GraphId="fcdac" Style="Complex" />
+  <Group GroupId="b6590" GraphId="b6590" Style="Group" />
+  <Group GroupId="ceb71" GraphId="ceb71" Style="Group" />
+  <Group GroupId="b5431" GraphId="b5431" Style="Group" />
+  <Group GroupId="d89f0" GraphId="d89f0" Style="Group" />
+  <Group GroupId="d0469" GraphId="d0469" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:162</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adaptive immune response pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000235</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000084</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c58">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30511409</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immune checkpoint blockade opens a new way to cancer immunotherapy.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Cell Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sadreddini S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baradaran B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aghebati-Maleki A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shanehbandi D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fotouhi A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aghebati-Maleki L</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f89">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28990585</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The diverse functions of the PD1 inhibitory pathway.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sharpe AH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pauken KE</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bda">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22437870</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The blockade of immune checkpoints in cancer immunotherapy.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Cancer</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pardoll DM</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="abc">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30345906</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -405,15 +445,6 @@ Based on and figure 4B in the review by [https://www.ncbi.nlm.nih.gov/pmc/articl
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hennessy M</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nghiem P</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f89">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28990585</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The diverse functions of the PD1 inhibitory pathway.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Immunol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sharpe AH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pauken KE</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ca1">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28643244</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -422,42 +453,5 @@ Based on and figure 4B in the review by [https://www.ncbi.nlm.nih.gov/pmc/articl
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syed YY</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c58">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30511409</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immune checkpoint blockade opens a new way to cancer immunotherapy.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Cell Physiol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sadreddini S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baradaran B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aghebati-Maleki A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shanehbandi D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fotouhi A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aghebati-Maleki L</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bda">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22437870</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The blockade of immune checkpoints in cancer immunotherapy.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Cancer</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pardoll DM</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000084</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:162</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-

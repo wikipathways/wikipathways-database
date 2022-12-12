@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="LDLRAD4 and what we know about it" Data-Source="WikiPathways" Version="WP4904_r120598" Author="[Egonw, Fehrhart, Eweitz]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="LDLRAD4 and what we know about it" Data-Source="WikiPathways" Version="WP4904_r124593" Author="[Egonw, Fehrhart, Eweitz]" Last-Modified="20221113063419" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">A recent GWAS study was tweeted (https://twitter.com/BrentRichards19/status/1251550109931888643) showing an intronic SNP in LDLRAD4 as relevant. This pathway summarizes what is known of the biological role of this gene and its proteins.</Comment>
   <Graphics BoardWidth="593.9331713244223" BoardHeight="522.4362089914945" />
   <DataNode TextLabel="Autophagosome&#xA;formation" GraphId="a5486" Type="Pathway">
@@ -31,7 +31,7 @@
     <Graphics CenterX="375.47326852976903" CenterY="154.79434993924653" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000069869" />
   </DataNode>
-  <DataNode TextLabel="LDLRAD4-AS1" GraphId="c9042" Type="Rna">
+  <DataNode TextLabel="LDLRAD4-AS1" GraphId="c9042" Type="RNA">
     <Comment>lncRNA</Comment>
     <Graphics CenterX="73.35176184690147" CenterY="225.06682867557717" Width="108.18347509112999" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000267690" />
@@ -45,7 +45,7 @@
     <Graphics CenterX="375.47326852976903" CenterY="299.2405832320776" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000175387" />
   </DataNode>
-  <DataNode TextLabel="hsa-miR-20a-5p" GraphId="f25b2" Type="Rna">
+  <DataNode TextLabel="hsa-miR-20a-5p" GraphId="f25b2" Type="RNA">
     <Graphics CenterX="86.31287970838414" CenterY="282.1749696233293" Width="100.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="990099" />
     <Xref Database="miRBase mature sequence" ID="MIMAT0000075" />
   </DataNode>
@@ -82,15 +82,15 @@
   <Interaction GraphId="id3b8d16d5">
     <BiopaxRef>a15</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="86.31287970838414" Y="294.6749696233293" GraphRef="f25b2" RelX="0.0" RelY="1.0" />
-      <Point X="86.31287970838414" Y="345.0091130012148" GraphRef="f314c" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="ad545" X="86.31287970838414" Y="294.6749696233293" GraphRef="f25b2" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a9bcf" X="86.31287970838414" Y="345.0091130012148" GraphRef="f314c" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id4fe61d16">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="375.47326852976903" Y="142.29434993924653" GraphRef="c276a" RelX="0.0" RelY="-1.0" />
-      <Point X="375.47326852976903" Y="106.4592799452708" GraphRef="c628c" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="beb82" X="375.47326852976903" Y="142.29434993924653" GraphRef="c276a" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="b7def" X="375.47326852976903" Y="106.4592799452708" GraphRef="c628c" RelX="0.0" RelY="1.0" ArrowHead="mim-translocation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -99,33 +99,33 @@
     <BiopaxRef>f1b</BiopaxRef>
     <BiopaxRef>f55</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="281.6913730255162" Y="380.0637910085047" GraphRef="b0004" RelX="1.0" RelY="0.0" />
-      <Point X="375.47326852976903" Y="380.16075334143346" GraphRef="e236b" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="d8054" X="281.6913730255162" Y="380.0637910085047" GraphRef="dd3b2" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f06db" X="375.47326852976903" Y="380.16075334143346" GraphRef="e236b" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id61a8eeaa">
     <BiopaxRef>fea</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="295.4366950182256" Y="154.79434993924653" GraphRef="beba2" RelX="0.0" RelY="0.0" />
-      <Point X="335.4549817739973" Y="187.0" />
-      <Point X="375.47326852976903" Y="227.2023086269739" GraphRef="bab41" RelX="0.0" RelY="-1.0" ArrowHead="TBar" />
+      <Point GraphId="d0501" X="295.4366950182256" Y="154.79434993924653" GraphRef="beba2" RelX="0.0" RelY="0.0" />
+      <Point GraphId="cd02e" X="335.4549817739973" Y="187.0" />
+      <Point GraphId="af458" X="375.47326852976903" Y="227.2023086269739" GraphRef="bab41" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id694a53fa">
     <BiopaxRef>a15</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="86.31287970838414" Y="418.009113001215" GraphRef="a5486" RelX="0.0" RelY="-1.0" />
-      <Point X="86.31287970838414" Y="370.0091130012148" GraphRef="f314c" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e59cc" X="86.31287970838414" Y="418.009113001215" GraphRef="a5486" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="d4deb" X="86.31287970838414" Y="370.0091130012148" GraphRef="f314c" RelX="0.0" RelY="1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6cc9fb0d">
     <BiopaxRef>fea</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="272.07897934386324" Y="154.79434993924653" GraphRef="e9bfd" RelX="1.0" RelY="0.0" />
-      <Point X="330.47326852976903" Y="154.79434993924653" GraphRef="c276a" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b45bf" X="272.07897934386324" Y="154.79434993924653" GraphRef="e9bfd" RelX="1.0" RelY="0.0" />
+      <Point GraphId="aa444" X="330.47326852976903" Y="154.79434993924653" GraphRef="c276a" RelX="-1.0" RelY="0.0" />
       <Anchor Position="0.4" Shape="None" GraphId="beba2" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -133,29 +133,29 @@
   <Interaction GraphId="id6fa109c9">
     <BiopaxRef>f37</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="226.45018226002384" Y="80.47387606318344" GraphRef="e1533" RelX="0.0" RelY="1.0" />
-      <Point X="227.07897934386324" Y="142.29434993924653" GraphRef="e9bfd" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="d56a6" X="226.45018226002384" Y="80.47387606318344" GraphRef="e1533" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b85dc" X="227.07897934386324" Y="142.29434993924653" GraphRef="e9bfd" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id71ecd0f3">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="420.47326852976903" Y="154.79434993924653" GraphRef="c276a" RelX="1.0" RelY="0.0" />
-      <Point X="446.0291616038876" Y="154.79434993924653" GraphRef="b8756" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="cc663" X="420.47326852976903" Y="154.79434993924653" GraphRef="c276a" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f12dd" X="446.0291616038876" Y="154.79434993924653" GraphRef="b8756" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7947a72f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="249.57897934386324" Y="142.29434993924653" GraphRef="e9bfd" RelX="0.5" RelY="-1.0" />
-      <Point X="330.47326852976903" Y="68.9592799452708" GraphRef="d98b8" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="a577b" X="249.57897934386324" Y="142.29434993924653" GraphRef="e9bfd" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="b45de" X="330.47326852976903" Y="68.9592799452708" GraphRef="d98b8" RelX="-1.0" RelY="0.0" ArrowHead="mim-translocation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide33a2255">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="375.47326852976903" Y="401.10753341433735" GraphRef="e3254" RelX="0.0" RelY="-1.0" />
-      <Point X="375.47326852976903" Y="348.7405832320776" GraphRef="df78d" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="dac60" X="375.47326852976903" Y="401.10753341433735" GraphRef="d001a" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="b1ca5" X="375.47326852976903" Y="348.7405832320776" GraphRef="c7bcc" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
       <Anchor Position="0.4" Shape="None" GraphId="e236b" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -164,96 +164,55 @@
     <Comment>Association based on rs8096897 being linked to systolic blood pressure</Comment>
     <BiopaxRef>b9d</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="125.81895504252736" Y="155.8080194410693" GraphRef="e3ffd" RelX="1.0" RelY="0.0" />
-      <Point X="182.07897934386324" Y="154.79434993924653" GraphRef="e9bfd" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="eb994" X="125.81895504252736" Y="155.8080194410693" GraphRef="e3ffd" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e9077" X="182.07897934386324" Y="154.79434993924653" GraphRef="e9bfd" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf54d419">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="227.07897934386324" Y="167.29434993924653" GraphRef="e9bfd" RelX="0.0" RelY="1.0" />
-      <Point X="224.6913730255162" Y="355.0637910085047" GraphRef="ca96b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f3b39" X="227.07897934386324" Y="167.29434993924653" GraphRef="e9bfd" RelX="0.0" RelY="1.0" />
+      <Point GraphId="dcd6f" X="224.6913730255162" Y="355.0637910085047" GraphRef="ca96b" RelX="0.0" RelY="-1.0" ArrowHead="mim-translocation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idfb4f20fd">
     <BiopaxRef>ef9</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="100.39763061968397" Y="212.56682867557717" GraphRef="c9042" RelX="0.5" RelY="-1.0" />
-      <Point X="204.57897934386324" Y="167.29434993924653" GraphRef="e9bfd" RelX="-0.5" RelY="1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="dc2cc" X="100.39763061968397" Y="212.56682867557717" GraphRef="c9042" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="c651e" X="204.57897934386324" Y="167.29434993924653" GraphRef="e9bfd" RelX="-0.5" RelY="1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idfdf4dec2">
     <BiopaxRef>d3e</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="227.07897934386324" Y="167.29434993924653" GraphRef="e9bfd" RelX="0.0" RelY="1.0" />
-      <Point X="111.31287970838414" Y="269.6749696233293" GraphRef="f25b2" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="a573e" X="227.07897934386324" Y="167.29434993924653" GraphRef="e9bfd" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d7027" X="111.31287970838414" Y="269.6749696233293" GraphRef="f25b2" RelX="0.5" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Shape GraphId="f5f9d">
     <Graphics CenterX="376.061360874848" CenterY="349.21810449574724" Width="157.87727825030402" Height="286.4362089914945" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
-  <Group GroupId="dd3b2" GraphId="b0004" Style="Complex" />
-  <Group GroupId="c7bcc" GraphId="df78d" Style="Complex" />
-  <Group GroupId="d001a" GraphId="e3254" Style="Complex" />
-  <Group GroupId="d40bc" GraphId="ea922" Style="Complex">
+  <Group GroupId="dd3b2" GraphId="dd3b2" Style="Complex" />
+  <Group GroupId="c7bcc" GraphId="c7bcc" Style="Complex" />
+  <Group GroupId="d001a" GraphId="d001a" Style="Complex" />
+  <Group GroupId="d40bc" GraphId="d40bc" Style="Complex">
     <BiopaxRef>ae5</BiopaxRef>
   </Group>
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b9d">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19430479</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genome-wide association study of blood pressure and hypertension.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Genet</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Levy D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ehret GB</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rice K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verwoert GC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Launer LJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dehghan A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glazer NL</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morrison AC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnson AD</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspelund T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aulchenko Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lumley T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Köttgen A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vasan RS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rivadeneira F</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eiriksdottir G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guo X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arking DE</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitchell GF</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mattace-Raso FU</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith AV</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taylor K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scharpf RB</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hwang SJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sijbrands EJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bis J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harris TB</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ganesh SK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Donnell CJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hofman A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rotter JI</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coresh J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benjamin EJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uitterlinden AG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heiss G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fox CS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Witteman JC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boerwinkle E</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang TJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gudnason V</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Larson MG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chakravarti A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Psaty BM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Duijn CM</bp:AUTHORS>
-    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000013</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease by infectious agent</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050117</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ae5">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26186194</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -290,40 +249,22 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harper JW</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gygi SP</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f1b">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24438557</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a15">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26165754</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TMEPAI/PMEPA1 enhances tumorigenic activities in lung cancer cells.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer Sci</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vo Nguyen TT</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watanabe Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shiba A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noguchi M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Itoh S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kato M</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000013</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d3e">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31819986</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Association Between Side Effects and Blood microRNA Expression Levels and Their Targeted Pathways in Patients With Major Depressive Disorder Treated by a Selective Serotonin Reuptake Inhibitor, Escitalopram: A CAN-BIND-1 Report.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Int J Neuropsychopharmacol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yrondi A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiori LM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frey BN</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lam RW</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MacQueen GM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milev R</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Müller DJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foster JA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kennedy SH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turecki G</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MiR-20a-5p mediates hypoxia-induced autophagy by targeting ATG16L1 in ischemic kidney injury.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang IK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun KT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tsai TH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen CW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chang SS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu TM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yen TH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin FY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang CC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li CY</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f47">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24627487</bp:ID>
@@ -344,6 +285,19 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watanabe Y</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kato M</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Itoh S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f1b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24438557</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TMEPAI/PMEPA1 enhances tumorigenic activities in lung cancer cells.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vo Nguyen TT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watanabe Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shiba A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noguchi M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Itoh S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kato M</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f55">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29945215</bp:ID>
@@ -439,11 +393,57 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anagnostou E</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scherer SW</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease by infectious agent</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050117</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b9d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19430479</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genome-wide association study of blood pressure and hypertension.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Levy D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ehret GB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rice K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verwoert GC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Launer LJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dehghan A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glazer NL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morrison AC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnson AD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aspelund T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aulchenko Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lumley T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Köttgen A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vasan RS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rivadeneira F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eiriksdottir G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guo X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arking DE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitchell GF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mattace-Raso FU</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith AV</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taylor K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scharpf RB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hwang SJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sijbrands EJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bis J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harris TB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ganesh SK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Donnell CJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hofman A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rotter JI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coresh J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benjamin EJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uitterlinden AG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heiss G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fox CS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Witteman JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boerwinkle E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang TJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gudnason V</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Larson MG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chakravarti A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Psaty BM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Duijn CM</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ef9">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32111819</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -463,23 +463,22 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cai S</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cai G</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a15">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26165754</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d3e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31819986</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MiR-20a-5p mediates hypoxia-induced autophagy by targeting ATG16L1 in ischemic kidney injury.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Sci</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang IK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun KT</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tsai TH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen CW</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chang SS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu TM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yen TH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin FY</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang CC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li CY</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Association Between Side Effects and Blood microRNA Expression Levels and Their Targeted Pathways in Patients With Major Depressive Disorder Treated by a Selective Serotonin Reuptake Inhibitor, Escitalopram: A CAN-BIND-1 Report.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Int J Neuropsychopharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yrondi A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiori LM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frey BN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lam RW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MacQueen GM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milev R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Müller DJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foster JA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kennedy SH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turecki G</bp:AUTHORS>
     </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

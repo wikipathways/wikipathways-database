@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="COVID-19 adverse outcome pathway" Data-Source="WikiPathways" Version="WP4891_r120510" Author="[Penny, Fehrhart, Egonw, Evelo, Eweitz]" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">Experimental pathway to investigate overlap of Covid-19 downstream effects and adverse outcome pathways related to lung injury.</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="COVID-19 adverse outcome pathway" Data-Source="WikiPathways" Version="WP4891_r120510" Author="[Penny, Fehrhart, Egonw, Evelo, Eweitz]" Last-Modified="20211210120201" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Experimenting with links in line with bioinformatics analysis of COVID-19 genes and AOP knowledge. Work in progress!</Comment>
-  <Graphics BoardWidth="1070.8450704225356" BoardHeight="681.3044505765847" />
+  <Graphics BoardWidth="1302.0" BoardHeight="892.0" />
   <DataNode TextLabel="CCL3" GraphId="eb71b" Type="GeneProduct" GroupRef="c757c">
     <Graphics CenterX="578.2714843681865" CenterY="464.230232726809" Width="80.0" Height="20.0" ZOrder="-22" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="6348" />
@@ -15,7 +14,7 @@
     <Graphics CenterX="500.22877313300984" CenterY="422.0525096046233" Width="117.75526975989933" Height="39.58508991996632" ZOrder="-20" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP75" />
   </DataNode>
-  <DataNode TextLabel="TNF" Type="GeneProduct" GroupRef="c757c">
+  <DataNode TextLabel="TNF" GraphId="e87cf" Type="GeneProduct" GroupRef="c757c">
     <Graphics CenterX="751.6585491719566" CenterY="564.4029643090937" Width="80.0" Height="20.0" ZOrder="-19" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="7124" />
   </DataNode>
@@ -27,7 +26,7 @@
     <Graphics CenterX="749.2599471972103" CenterY="475.7932459560015" Width="80.0" Height="20.0" ZOrder="-17" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="3558" />
   </DataNode>
-  <DataNode TextLabel="CSF3" Type="GeneProduct" GroupRef="c757c">
+  <DataNode TextLabel="CSF3" GraphId="d59c0" Type="GeneProduct" GroupRef="c757c">
     <Graphics CenterX="748.6278196029466" CenterY="505.6096423035253" Width="80.0" Height="20.0" ZOrder="-16" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="1440" />
   </DataNode>
@@ -43,11 +42,11 @@
     <Graphics CenterX="750.5811144790446" CenterY="591.1886310876084" Width="80.0" Height="20.0" ZOrder="-13" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="3569" />
   </DataNode>
-  <DataNode TextLabel="IL7" Type="GeneProduct" GroupRef="c757c">
+  <DataNode TextLabel="IL7" GraphId="f1779" Type="GeneProduct" GroupRef="c757c">
     <Graphics CenterX="747.6214945774645" CenterY="445.9916036225911" Width="80.0" Height="20.0" ZOrder="-12" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="3574" />
   </DataNode>
-  <DataNode TextLabel="IL1B" Type="GeneProduct" GroupRef="c757c">
+  <DataNode TextLabel="IL1B" GraphId="cd7db" Type="GeneProduct" GroupRef="c757c">
     <Graphics CenterX="746.7052542958586" CenterY="417.9333613277106" Width="80.0" Height="20.0" ZOrder="-11" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="3553" />
   </DataNode>
@@ -55,7 +54,7 @@
     <Graphics CenterX="935.2714843681856" CenterY="503.28459307776853" Width="80.0" Height="20.0" ZOrder="-10" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="6347" />
   </DataNode>
-  <DataNode TextLabel="IL10" Type="GeneProduct" GroupRef="c757c">
+  <DataNode TextLabel="IL10" GraphId="cb0f1" Type="GeneProduct" GroupRef="c757c">
     <Graphics CenterX="749.6214945774645" CenterY="534.3044505765839" Width="80.0" Height="20.0" ZOrder="-9" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="3586" />
   </DataNode>
@@ -94,44 +93,44 @@
   <Interaction GraphId="idf55cb6e4" GroupRef="c757c">
     <Comment>GeneMANIA predicted interaction</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="-31" LineStyle="Broken" LineThickness="1.0">
-      <Point X="710.5811144790446" Y="591.1886310876084" GraphRef="f425c" RelX="-1.0" RelY="0.0" />
-      <Point X="669.1549295774639" Y="566.4224892575176" />
-      <Point X="467.2714843681874" Y="541.6563474274268" GraphRef="cf7c5" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b0569" X="710.5811144790446" Y="591.1886310876084" GraphRef="f425c" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="f87d9" X="669.1549295774639" Y="566.4224892575176" />
+      <Point GraphId="b3d3f" X="467.2714843681874" Y="541.6563474274268" GraphRef="cf7c5" RelX="1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id981d12bb" GroupRef="c757c">
     <Comment>GeneMANIA predicted interaction</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="-30" LineStyle="Broken" LineThickness="1.0">
-      <Point X="790.5811144790446" Y="591.1886310876084" GraphRef="f425c" RelX="1.0" RelY="0.0" />
-      <Point X="828.154929577464" Y="547.2366120826885" />
-      <Point X="895.2714843681856" Y="503.2845930777685" GraphRef="ee6e7" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b32fe" X="790.5811144790446" Y="591.1886310876084" GraphRef="f425c" RelX="1.0" RelY="0.0" />
+      <Point GraphId="c3c72" X="828.154929577464" Y="547.2366120826885" />
+      <Point GraphId="a9bf8" X="895.2714843681856" Y="503.2845930777685" GraphRef="ee6e7" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idfc67b63" GroupRef="c757c">
     <Comment>GeneMANIA predicted interaction</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="-29" LineStyle="Broken" LineThickness="1.0">
-      <Point X="467.2714843681874" Y="541.6563474274268" GraphRef="cf7c5" RelX="1.0" RelY="0.0" />
-      <Point X="511.6214945774645" Y="517.8994692459594" />
-      <Point X="537.6214945774644" Y="494.142591064492" GraphRef="feac7" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="a4d17" X="467.2714843681874" Y="541.6563474274268" GraphRef="cf7c5" RelX="1.0" RelY="0.0" />
+      <Point GraphId="a3fa0" X="511.6214945774645" Y="517.8994692459594" />
+      <Point GraphId="ac181" X="537.6214945774644" Y="494.142591064492" GraphRef="feac7" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6de06d86" GroupRef="c757c">
     <Comment>GeneMANIA predicted interaction</Comment>
     <Graphics ConnectorType="Elbow" ZOrder="-28" LineStyle="Broken" LineThickness="1.0">
-      <Point X="467.2714843681874" Y="541.6563474274268" GraphRef="cf7c5" RelX="1.0" RelY="0.0" />
-      <Point X="511.154929577464" Y="502.9432900771179" />
-      <Point X="538.2714843681865" Y="464.230232726809" GraphRef="eb71b" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="d91ee" X="467.2714843681874" Y="541.6563474274268" GraphRef="cf7c5" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d7c33" X="511.154929577464" Y="502.9432900771179" />
+      <Point GraphId="f5a34" X="538.2714843681865" Y="464.230232726809" GraphRef="eb71b" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idfe2de42e" GroupRef="c757c">
     <Comment>GeneMANIA identified physical interaction</Comment>
     <Graphics ZOrder="-27" LineThickness="1.0">
-      <Point X="789.2599471972103" Y="475.7932459560015" GraphRef="d380c" RelX="1.0" RelY="0.0" />
-      <Point X="893.2599471972071" Y="476.62051437371696" GraphRef="f59b7" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="fced8" X="789.2599471972103" Y="475.7932459560015" GraphRef="d380c" RelX="1.0" RelY="0.0" />
+      <Point GraphId="a0041" X="893.2599471972071" Y="476.62051437371696" GraphRef="f59b7" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -139,21 +138,18 @@
     <Comment>Proteolytic processing</Comment>
     <BiopaxRef>f09</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="154.46392624095142" Y="549.4630483343346" GraphRef="f33e8" RelX="1.0" RelY="0.0" />
-      <Point X="214.8785037705917" Y="549.6466519868097" GraphRef="b6003" RelX="-1.0" RelY="0.0" ArrowHead="mim-modification" />
+      <Point GraphId="ec15b" X="154.46392624095142" Y="549.4630483343346" GraphRef="f33e8" RelX="1.0" RelY="0.0" />
+      <Point GraphId="a51f2" X="214.8785037705917" Y="549.6466519868097" GraphRef="b6003" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="BioGrid" ID="882484" />
   </Interaction>
   <Label TextLabel="KE2" GraphId="bb627" GroupRef="c757c">
-    <Comment></Comment>
     <Graphics CenterX="748.9669577420332" CenterY="619.6691061391846" Width="90.0" Height="25.0" ZOrder="-4" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" />
   </Label>
   <Label TextLabel="KE1" GraphId="b61bc" GroupRef="c757c">
-    <Comment></Comment>
     <Graphics CenterX="559.9669577420328" CenterY="559.6691061391846" Width="90.0" Height="25.0" ZOrder="-3" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" />
   </Label>
   <Label TextLabel="KE3" GraphId="f446c" GroupRef="c757c">
-    <Comment></Comment>
     <Graphics CenterX="930.9669577420303" CenterY="525.6691061391846" Width="90.0" Height="25.0" ZOrder="-2" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" />
   </Label>
   <Label TextLabel="AO (KE:1751) - Increased mortality" GraphId="a32e5" GroupRef="c404e">
@@ -222,34 +218,54 @@
     <Comment>Associated with the MIE in Lung fibrosis AOP:173</Comment>
     <Graphics CenterX="805.5681534191424" CenterY="129.49944942125097" Width="466.97636921805315" Height="215.31096031242805" ZOrder="32770" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0" />
   </Shape>
-  <Group GroupId="c757c" Style="Group" />
-  <Group GroupId="c404e" Style="Group" />
-  <Group GroupId="a3e09" Style="Group" />
+  <Group GroupId="c757c" GraphId="c757c" Style="Group" />
+  <Group GroupId="c404e" GraphId="c404e" Style="Group" />
+  <Group GroupId="a3e09" GraphId="a3e09" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">severe acute respiratory syndrome</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2945</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory system disease pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001308</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pulmonary fibrosis</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3770</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f09">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10969042</bp:ID>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">viral infectious disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:934</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COVID-19</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0080600</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000003</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c88">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26979667</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A novel angiotensin-converting enzyme-related carboxypeptidase (ACE2) converts angiotensin I to angiotensin 1-9.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circ Res</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donoghue M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hsieh F</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baronas E</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Godbout K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gosselin M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stagliano N</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donovan M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Woolf B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robison K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeyaseelan R</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breitbart RE</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acton S</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nano-risk Science: application of toxicogenomics in an adverse outcome pathway framework for risk assessment of multi-walled carbon nanotubes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part Fibre Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Labib S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williams A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yauk CL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikota JK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wallin H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vogel U</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Halappanavar S</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bab">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29149350</bp:ID>
@@ -269,45 +285,24 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willighagen E</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grafström RC</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COVID-19</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0080600</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000003</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">viral infectious disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:934</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory system disease pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001308</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">severe acute respiratory syndrome</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2945</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c88">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26979667</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f09">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10969042</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nano-risk Science: application of toxicogenomics in an adverse outcome pathway framework for risk assessment of multi-walled carbon nanotubes.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part Fibre Toxicol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Labib S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williams A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yauk CL</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikota JK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wallin H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vogel U</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Halappanavar S</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A novel angiotensin-converting enzyme-related carboxypeptidase (ACE2) converts angiotensin I to angiotensin 1-9.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circ Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donoghue M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hsieh F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baronas E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Godbout K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gosselin M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stagliano N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donovan M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Woolf B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robison K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeyaseelan R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breitbart RE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acton S</bp:AUTHORS>
     </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

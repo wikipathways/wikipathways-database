@@ -10,8 +10,6 @@ authors:
 - Christine Chichester
 - Mkutmon
 - Eweitz
-citedin:
-- link: PMC7645421
 description: ''
 last-edited: 2021-05-16
 organisms:
@@ -19,7 +17,8 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP8
 - /instance/WP8
-revision: null
+- /instance/WP8_rr116988
+revision: r116988
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP8.html

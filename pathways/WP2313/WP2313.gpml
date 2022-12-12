@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Aging" Data-Source="WikiPathways" Version="WP2313_r107082" Author="[Kyook, MaintBot, Aks20588, Mkutmon, Cgrove, Ariutta]" Organism="Caenorhabditis elegans">
-  <Comment Source="WikiPathways-description">Aging in C. elegans involves measurable declines in morphology, reproduction, and behavior.  Understanding the cellular and molecular processes leading to senescence in this nematode began in the early 1980s with the targeted identification of mutants that extended life span (an AGE phenotype). These studies identified at least two key regulators of life span, DAF-2, an insulin/IGF receptor ortholog, and DAF-16, a Forkhead-related transcription factor. Since then many more genes and pathways involved in senescence have been identified. Almost all of these genes play important roles in cellular and organismal-level processes other than aging, such as dauer formation, stress response, feeding, and chemosensation. </Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Aging" Data-Source="WikiPathways" Version="WP2313_r107082" Author="[Kyook, MaintBot, Aks20588, Mkutmon, Cgrove, Ariutta]" Last-Modified="20190917141652" Organism="Caenorhabditis elegans">
+  <Comment Source="WikiPathways-description">Aging in C. elegans involves measurable declines in morphology, reproduction, and behavior.  Understanding the cellular and molecular processes leading to senescence in this nematode began in the early 1980s with the targeted identification of mutants that extended life span (an AGE phenotype). These studies identified at least two key regulators of life span, DAF-2, an insulin/IGF receptor ortholog, and DAF-16, a Forkhead-related transcription factor. Since then many more genes and pathways involved in senescence have been identified. Almost all of these genes play important roles in cellular and organismal-level processes other than aging, such as dauer formation, stress response, feeding, and chemosensation.</Comment>
   <BiopaxRef>c18</BiopaxRef>
   <BiopaxRef>d3a</BiopaxRef>
   <Graphics BoardWidth="954.0000000000001" BoardHeight="963.3471227520777" />
@@ -53,20 +53,17 @@
     <Xref Database="ChEBI" ID="CHEBI:16618" />
   </DataNode>
   <DataNode TextLabel="PDK-1/PKD1" GraphId="fd8e3" Type="GeneProduct">
-    <Comment></Comment>
     <BiopaxRef>d91</BiopaxRef>
     <Graphics CenterX="208.0" CenterY="345.0" Width="80.0" Height="20.0" ZOrder="32772" FontWeight="Bold" FontSize="10" Valign="Middle" ShapeType="Oval" />
     <Xref Database="WormBase" ID="H42K12.1" />
   </DataNode>
   <DataNode TextLabel="AKT-1/Akt/PKB" GraphId="be992" Type="GeneProduct" GroupRef="cffec">
-    <Comment></Comment>
     <BiopaxRef>d91</BiopaxRef>
     <BiopaxRef>a81</BiopaxRef>
     <Graphics CenterX="364.0" CenterY="344.0" Width="80.0" Height="20.0" ZOrder="32773" FontWeight="Bold" FontSize="10" Valign="Middle" ShapeType="Oval" />
     <Xref Database="WormBase" ID="C12D8.10" />
   </DataNode>
   <DataNode TextLabel="AKT-2/Akt/PKB" GraphId="a64c1" Type="GeneProduct" GroupRef="cffec">
-    <Comment></Comment>
     <BiopaxRef>d91</BiopaxRef>
     <BiopaxRef>a81</BiopaxRef>
     <Graphics CenterX="448.0" CenterY="344.0" Width="80.0" Height="20.0" ZOrder="32774" FontWeight="Bold" FontSize="10" Valign="Middle" ShapeType="Oval" />
@@ -103,7 +100,6 @@
     <Xref Database="WormBase" ID="F35C8.3" />
   </DataNode>
   <DataNode TextLabel="PRMT-1" GraphId="c1060" Type="GeneProduct">
-    <Comment></Comment>
     <BiopaxRef>ed9</BiopaxRef>
     <Graphics CenterX="337.0" CenterY="407.0" Width="80.0" Height="20.0" ZOrder="32783" FontWeight="Bold" FontSize="10" Valign="Middle" />
     <Xref Database="WormBase" ID="Y113G7B.17" />
@@ -111,7 +107,6 @@
   <DataNode TextLabel="DAF-16/FOXO" GraphId="dd9c0" Type="GeneProduct">
     <Comment>DAF-16 bound directly to PRMT-1 in  in vitro pulldown assays , HA-PRMT-1 was coimmunoprecipitated with FLAG-DAF-16 only when the both proteins were
 coexpressed.</Comment>
-    <Comment></Comment>
     <BiopaxRef>ed9</BiopaxRef>
     <Graphics CenterX="233.0" CenterY="483.0" Width="80.0" Height="20.0" ZOrder="32784" FontWeight="Bold" FontSize="10" Valign="Middle" />
     <Xref Database="WormBase" ID="R13H8.1" />
@@ -198,8 +193,8 @@ the transcriptional repressor activity of DAF-16</Comment>
   <Interaction GraphId="id1f4633b6">
     <BiopaxRef>d91</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="248.0" Y="345.0" GraphRef="fd8e3" RelX="1.0" RelY="0.0" />
-      <Point X="316.0" Y="344.0" GraphRef="a59bc" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="e984a" X="248.0" Y="345.0" GraphRef="fd8e3" RelX="1.0" RelY="0.0" />
+      <Point GraphId="dee42" X="316.0" Y="344.0" GraphRef="cffec" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="WormBase" ID="WBInteraction000518714" />
   </Interaction>
@@ -208,8 +203,8 @@ the transcriptional repressor activity of DAF-16</Comment>
     <BiopaxRef>e0e</BiopaxRef>
     <BiopaxRef>fa0</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="288.0" Y="106.0" GraphRef="ee0b6" RelX="0.5" RelY="1.0" />
-      <Point X="392.8432563790981" Y="119.82381530984202" GraphRef="c5a5d" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="e202a" X="288.0" Y="106.0" GraphRef="ee0b6" RelX="0.5" RelY="1.0" />
+      <Point GraphId="b34ce" X="392.8432563790981" Y="119.82381530984202" GraphRef="c5a5d" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -218,23 +213,23 @@ the transcriptional repressor activity of DAF-16</Comment>
 showing that akt-1 is the major output of PI3K signaling but not the only output of the DAF-2 insulinlike receptor</Comment>
     <BiopaxRef>a81</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="320.5" Y="208.0" GraphRef="ab2b3" RelX="0.5" RelY="1.0" />
-      <Point X="406.0" Y="326.0" GraphRef="a59bc" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="eeb50" X="320.5" Y="208.0" GraphRef="ab2b3" RelX="0.5" RelY="1.0" />
+      <Point GraphId="d8776" X="406.0" Y="326.0" GraphRef="cffec" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2b98bb7b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="557.0" Y="353.0" GraphRef="a9aac" RelX="0.0" RelY="1.0" />
-      <Point X="570.0" Y="432.0" GraphRef="fc419" RelX="0.0" RelY="-1.0" ArrowHead="mim-modification" />
+      <Point GraphId="ec7b5" X="557.0" Y="353.0" GraphRef="a9aac" RelX="0.0" RelY="1.0" />
+      <Point GraphId="bbd80" X="570.0" Y="432.0" GraphRef="fc419" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id3be9044e">
     <BiopaxRef>d91</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="208.0" Y="208.0" GraphRef="f7754" RelX="-0.5" RelY="1.0" />
-      <Point X="208.0" Y="335.0" GraphRef="fd8e3" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="a5160" X="208.0" Y="208.0" GraphRef="f7754" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="a18b2" X="208.0" Y="335.0" GraphRef="fd8e3" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="WormBase" ID="WBInteraction000518714" />
   </Interaction>
@@ -242,25 +237,24 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
     <BiopaxRef>a81</BiopaxRef>
     <BiopaxRef>ed9</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="570.0" Y="452.0" GraphRef="fc419" RelX="0.0" RelY="1.0" />
-      <Point X="570.0" Y="468.0" GraphRef="e9b6a" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="cda9a" X="570.0" Y="452.0" GraphRef="fc419" RelX="0.0" RelY="1.0" />
+      <Point GraphId="bcbf4" X="570.0" Y="468.0" GraphRef="e9b6a" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id45855ca0">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="267.0" Y="235.0" GraphRef="f4b20" RelX="0.0" RelY="-1.0" />
-      <Point X="266.92456479690526" Y="208.0" GraphRef="e3f96" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="a45a9" X="267.0" Y="235.0" GraphRef="f4b20" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="af7f1" X="266.92456479690526" Y="208.0" GraphRef="e3f96" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id4c215f69">
-    <Comment>JKK-1 is the upstream kinase of JNK-1 and phosphorylation of JNK-1 is required for lifespan extension.
-</Comment>
+    <Comment>JKK-1 is the upstream kinase of JNK-1 and phosphorylation of JNK-1 is required for lifespan extension.</Comment>
     <BiopaxRef>f8b</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="115.0" Y="415.0" GraphRef="fe08c" RelX="0.0" RelY="1.0" />
-      <Point X="171.0" Y="440.0" GraphRef="e2e8a" RelX="-0.5" RelY="-1.0" ArrowHead="mim-modification" />
+      <Point GraphId="a4466" X="115.0" Y="415.0" GraphRef="fe08c" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d5a67" X="171.0" Y="440.0" GraphRef="e2e8a" RelX="-0.5" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -268,23 +262,23 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
     <Comment>AGE-1 works in a parallel pathway downstream of daf-2 signaling.</Comment>
     <BiopaxRef>d91</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="268.0" Y="106.0" GraphRef="ee0b6" RelX="0.0" RelY="1.0" />
-      <Point X="267.0" Y="152.0" GraphRef="c95c0" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="d896d" X="268.0" Y="106.0" GraphRef="ee0b6" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d19db" X="267.0" Y="152.0" GraphRef="c95c0" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id66f46233">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="368.0" Y="450.0" GraphRef="d29ee" RelX="-1.0" RelY="0.0" />
-      <Point X="273.0" Y="483.0" GraphRef="dd9c0" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="ede88" X="368.0" Y="450.0" GraphRef="d29ee" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="c8f75" X="273.0" Y="483.0" GraphRef="dd9c0" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4" Shape="None" GraphId="b68c2" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7c2bea8f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="448.0" Y="450.0" GraphRef="d29ee" RelX="1.0" RelY="0.0" />
-      <Point X="530.0" Y="442.0" GraphRef="fc419" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="a3c40" X="448.0" Y="450.0" GraphRef="d29ee" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d57b7" X="530.0" Y="442.0" GraphRef="fc419" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.5554672845887629" Shape="None" GraphId="b7101" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -295,8 +289,8 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
     <Comment>PRMT-1 upregulates DAF-16 activity by inhibiting AKT-mediated phosphorylation of DAF-16 at T242.</Comment>
     <BiopaxRef>ed9</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="337.0" Y="417.0" GraphRef="c1060" RelX="0.0" RelY="1.0" />
-      <Point X="330.0" Y="463.2" GraphRef="b68c2" RelX="0.0" RelY="0.0" ArrowHead="mim-modification" />
+      <Point GraphId="b9743" X="337.0" Y="417.0" GraphRef="c1060" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ce7e0" X="330.0" Y="463.2" GraphRef="b68c2" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -306,22 +300,22 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
     <BiopaxRef>ed9</BiopaxRef>
     <BiopaxRef>f8b</BiopaxRef>
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="233.0" Y="493.0" GraphRef="dd9c0" RelX="0.0" RelY="1.0" />
-      <Point X="407.0" Y="603.0" GraphRef="bb21e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="e8c92" X="233.0" Y="493.0" GraphRef="dd9c0" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b019f" X="407.0" Y="603.0" GraphRef="bb21e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9f3c866">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="268.0" Y="52.0" GraphRef="f4db3" RelX="0.0" RelY="1.0" />
-      <Point X="268.0" Y="86.0" GraphRef="ee0b6" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="c69c1" X="268.0" Y="52.0" GraphRef="f4db3" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e0fe6" X="268.0" Y="86.0" GraphRef="ee0b6" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9fa508f8">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="267.0" Y="172.0" GraphRef="c95c0" RelX="0.0" RelY="1.0" />
-      <Point X="266.92456479690526" Y="189.0" GraphRef="c531f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="b017b" X="267.0" Y="172.0" GraphRef="c95c0" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cfc05" X="266.92456479690526" Y="189.0" GraphRef="c531f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -329,8 +323,8 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
     <Comment>RLE-1 physically interacts with DAF-16.  RLE-1 C terminus is required for the interaction of RLE-1 with DAF-16.</Comment>
     <BiopaxRef>ee4</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="365.0" Y="792.0" GraphRef="d0ba6" RelX="0.5" RelY="1.0" />
-      <Point X="365.00000000000006" Y="811.0" GraphRef="a11d5" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="e8d77" X="365.0" Y="792.0" GraphRef="d0ba6" RelX="0.5" RelY="1.0" />
+      <Point GraphId="a33a9" X="365.00000000000006" Y="811.0" GraphRef="a11d5" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -338,15 +332,15 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
     <Comment>RLE-1 regulates the cytoplasmic sequestration of DAF-16.</Comment>
     <BiopaxRef>ee4</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="365.00000000000006" Y="831.0" GraphRef="a11d5" RelX="0.0" RelY="1.0" />
-      <Point X="433.82352941176475" Y="883.2842596796161" GraphRef="b81d1" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+      <Point GraphId="b5439" X="365.00000000000006" Y="831.0" GraphRef="a11d5" RelX="0.0" RelY="1.0" />
+      <Point GraphId="abf6d" X="433.82352941176475" Y="883.2842596796161" GraphRef="b81d1" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idef34bebb">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="407.0" Y="623.0" GraphRef="bb21e" RelX="0.0" RelY="1.0" />
-      <Point X="385.00000000000006" Y="811.0" GraphRef="a11d5" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f845f" X="407.0" Y="623.0" GraphRef="bb21e" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f4717" X="385.00000000000006" Y="811.0" GraphRef="a11d5" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -354,24 +348,24 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
     <Comment>AKT phosphorylates DAF-16 at site T242, promoting its binding to 14-3-3.</Comment>
     <BiopaxRef>ed9</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="406.0" Y="362.0" GraphRef="a59bc" RelX="0.0" RelY="1.0" />
-      <Point X="493.54831733627856" Y="445.5562617232899" GraphRef="b7101" RelX="0.0" RelY="0.0" ArrowHead="mim-modification" />
+      <Point GraphId="d6639" X="406.0" Y="362.0" GraphRef="cffec" RelX="0.0" RelY="1.0" />
+      <Point GraphId="ae012" X="493.54831733627856" Y="445.5562617232899" GraphRef="b7101" RelX="0.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
-    <Xref Database="WormBase" ID="" />
+    <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf5d46ea5">
     <BiopaxRef>ee0</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="299.5" Y="208.0" GraphRef="ab2b3" RelX="-0.5" RelY="1.0" />
-      <Point X="230.0" Y="208.0" GraphRef="f7754" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="b21e3" X="299.5" Y="208.0" GraphRef="ab2b3" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="c9f43" X="230.0" Y="208.0" GraphRef="f7754" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
       <Anchor Position="0.46871129788625526" Shape="None" GraphId="e3f96" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ea1de">
     <Graphics ZOrder="32771" LineThickness="1.0">
-      <Point X="230.0" Y="189.0" GraphRef="f7754" RelX="0.5" RelY="-1.0" />
-      <Point X="299.5" Y="189.0" GraphRef="ab2b3" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="aac74" X="230.0" Y="189.0" GraphRef="f7754" RelX="0.5" RelY="-1.0" />
+      <Point GraphId="c50b0" X="299.5" Y="189.0" GraphRef="ab2b3" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.5312887021137447" Shape="None" GraphId="c531f" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -380,74 +374,74 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
     <Comment>JNK-1 phosphorylates DAF-16 leading to its translocation to the nucleus.</Comment>
     <BiopaxRef>f8b</BiopaxRef>
     <Graphics ZOrder="32781" LineThickness="1.0">
-      <Point X="191.0" Y="460.0" GraphRef="e2e8a" RelX="0.0" RelY="1.0" />
-      <Point X="213.0" Y="473.0" GraphRef="dd9c0" RelX="-0.5" RelY="-1.0" />
+      <Point GraphId="e3050" X="191.0" Y="460.0" GraphRef="e2e8a" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f5b5c" X="213.0" Y="473.0" GraphRef="dd9c0" RelX="-0.5" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ffa37">
     <Graphics ZOrder="32797" LineThickness="1.0">
-      <Point X="288.0" Y="106.0" GraphRef="ee0b6" RelX="0.5" RelY="1.0" />
-      <Point X="391.3487241798291" Y="163.52065613608738" GraphRef="cd6e7" RelX="-1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
+      <Point GraphId="a98c4" X="288.0" Y="106.0" GraphRef="ee0b6" RelX="0.5" RelY="1.0" />
+      <Point GraphId="cafbf" X="391.3487241798291" Y="163.52065613608738" GraphRef="cd6e7" RelX="-1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <GraphicalLine GraphId="id1a1510f9">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="711.2139107142856" Y="54.35305435305435" />
-      <Point X="740.554940055315" Y="54.35305435305435" ArrowHead="TBar" />
+      <Point GraphId="b9e08" X="711.2139107142856" Y="54.35305435305435" />
+      <Point GraphId="d5fe1" X="740.554940055315" Y="54.35305435305435" ArrowHead="mim-inhibition" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="id470cff36">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="345.6108041743401" Y="640.8839779005525" />
-      <Point X="346.22467771639043" Y="631.3689379987723" />
-      <Point X="324.1252302025783" Y="621.853898096992" ArrowHead="TBar" />
+      <Point GraphId="c9d6e" X="345.6108041743401" Y="640.8839779005525" />
+      <Point GraphId="ad808" X="346.22467771639043" Y="631.3689379987723" />
+      <Point GraphId="a96b0" X="324.1252302025783" Y="621.853898096992" ArrowHead="mim-inhibition" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="id5e1c090">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="708.3325925860305" Y="114.47811447811446" />
-      <Point X="734.3066185600566" Y="114.47811447811446" ArrowHead="mim-stimulation" />
+      <Point GraphId="abdbc" X="708.3325925860305" Y="114.47811447811446" />
+      <Point GraphId="dbd86" X="734.3066185600566" Y="114.47811447811446" ArrowHead="mim-stimulation" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="id8bcbba03">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="219.53327571305098" Y="641.3137424373379" />
-      <Point X="616.2489196197062" Y="641.3137424373379" />
+      <Point GraphId="c50af" X="219.53327571305098" Y="641.3137424373379" />
+      <Point GraphId="c9483" X="616.2489196197062" Y="641.3137424373379" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="idc547796a">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="709.6825927350576" Y="75.51707551707551" />
-      <Point X="735.6566187090837" Y="75.51707551707551" ArrowHead="mim-binding" />
+      <Point GraphId="c908d" X="709.6825927350576" Y="75.51707551707551" />
+      <Point GraphId="feaf0" X="735.6566187090837" Y="75.51707551707551" ArrowHead="mim-binding" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="idc7e0d5ef">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="710.0474090522636" Y="96.71909571909572" />
-      <Point X="736.0214350262896" Y="96.71909571909572" />
+      <Point GraphId="b31ff" X="710.0474090522636" Y="96.71909571909572" />
+      <Point GraphId="ed142" X="736.0214350262896" Y="96.71909571909572" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="idd40ab9d9">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="706.5438514259205" Y="153.16239316239316" />
-      <Point X="736.0959067406875" Y="153.45854328905173" ArrowHead="mim-conversion" />
+      <Point GraphId="e38f4" X="706.5438514259205" Y="153.16239316239316" />
+      <Point GraphId="d4081" X="736.0959067406875" Y="153.45854328905173" ArrowHead="mim-conversion" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="idec31a51b">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="706.038854404954" Y="135.74982231698652" />
-      <Point X="736.6003327276256" Y="135.7498223169865" ArrowHead="mim-conversion" />
+      <Point GraphId="a1a20" X="706.038854404954" Y="135.74982231698652" />
+      <Point GraphId="aa4ff" X="736.6003327276256" Y="135.7498223169865" ArrowHead="mim-conversion" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="fbdab">
     <Graphics ConnectorType="Elbow" ZOrder="32801" LineThickness="1.0">
-      <Point X="463.78708551483425" Y="640.9249563699826" />
-      <Point X="463.91082442252497" Y="636.8856383581515" />
-      <Point X="463.91082442252497" Y="632.8463203463203" />
-      <Point X="463.91082442252497" Y="628.884793076782" />
-      <Point X="484.16865131018614" Y="624.9232658072438" ArrowHead="Arrow" />
+      <Point GraphId="d22dc" X="463.78708551483425" Y="640.9249563699826" />
+      <Point GraphId="b7ff5" X="463.91082442252497" Y="636.8856383581515" />
+      <Point GraphId="ea76a" X="463.91082442252497" Y="632.8463203463203" />
+      <Point GraphId="daa68" X="463.91082442252497" Y="628.884793076782" />
+      <Point GraphId="b2130" X="484.16865131018614" Y="624.9232658072438" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="Activates through modification" GraphId="a3eae">
@@ -515,47 +509,38 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
   <Shape TextLabel="Me" GraphId="e8d54">
     <Graphics CenterX="723.0344036432701" CenterY="207.0" Width="16.0" Height="16.0" ZOrder="32805" FillColor="a3c1ff" FontSize="9" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
-  <Group GroupId="ce35a" GraphId="a3e69" Style="Complex" />
-  <Group GroupId="cffec" GraphId="a59bc" Style="Group" />
+  <Group GroupId="ce35a" GraphId="ce35a" Style="Complex" />
+  <Group GroupId="cffec" GraphId="cffec" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ee0">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9885576</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The C. elegans PTEN homolog, DAF-18, acts in the insulin receptor-like metabolic signaling pathway.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ogg S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a81">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9716402</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caenorhabditis elegans Akt/PKB transduces insulin receptor-like signals from AGE-1 PI3 kinase to the DAF-16 transcription factor.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes Dev</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9716402</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caenorhabditis elegans Akt/PKB transduces insulin receptor-like signals from AGE-1 PI3 kinase to the DAF-16 transcription factor.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes Dev</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paradis S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insulin signaling pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000143</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e61">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7789761</bp:ID>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aging pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000651</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c18">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22939742</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes that regulate both development and longevity in Caenorhabditis elegans.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genetics</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Larsen PL</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albert PS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Riddle DL</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lessons from C. elegans: signaling pathways for longevity.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trends Endocrinol Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lapierre LR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hansen M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d3a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21937765</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Longevity and stress in Caenorhabditis elegans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aging (Albany NY)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou KI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pincus Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slack FJ</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f57">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8700226</bp:ID>
@@ -566,6 +551,82 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morris JZ</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tissenbaum HA</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ee0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9885576</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The C. elegans PTEN homolog, DAF-18, acts in the insulin receptor-like metabolic signaling pathway.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ogg S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e61">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7789761</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes that regulate both development and longevity in Caenorhabditis elegans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genetics</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Larsen PL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albert PS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Riddle DL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eef">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9252323</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">daf-2, an insulin receptor-like gene that regulates longevity and diapause in Caenorhabditis elegans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kimura KD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tissenbaum HA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d91">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10364160</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A PDK1 homolog is necessary and sufficient to transduce AGE-1 PI3 kinase signals that regulate diapause in Caenorhabditis elegans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes Dev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paradis S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ailion M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toker A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas JH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a81">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9716402</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caenorhabditis elegans Akt/PKB transduces insulin receptor-like signals from AGE-1 PI3 kinase to the DAF-16 transcription factor.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes Dev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paradis S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a47">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9353126</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Fork head transcription factor DAF-16 transduces insulin-like metabolic and longevity signals in C. elegans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ogg S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paradis S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gottlieb S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patterson GI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tissenbaum HA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b69">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9360933</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">daf-16: An HNF-3/forkhead family member that can function to double the life-span of Caenorhabditis elegans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorman JB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodan A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenyon C</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ed9">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21531333</bp:ID>
@@ -588,17 +649,30 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ishii N</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fukamizu A</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d91">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10364160</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f8b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15767565</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A PDK1 homolog is necessary and sufficient to transduce AGE-1 PI3 kinase signals that regulate diapause in Caenorhabditis elegans.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes Dev</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paradis S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ailion M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toker A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas JH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JNK regulates lifespan in Caenorhabditis elegans by modulating nuclear translocation of forkhead transcription factor/DAF-16.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh SW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mukhopadhyay A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Svrzikapa N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davis RJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tissenbaum HA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ee4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17276341</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RLE-1, an E3 ubiquitin ligase, regulates C. elegans aging by catalyzing DAF-16 polyubiquitination.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dev Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gao B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee SM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bennett K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fang D</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e0e">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16530049</bp:ID>
@@ -623,101 +697,5 @@ showing that akt-1 is the major output of PI3K signaling but not the only output
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crawford DK</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenyon C</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ee4">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17276341</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RLE-1, an E3 ubiquitin ligase, regulates C. elegans aging by catalyzing DAF-16 polyubiquitination.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dev Cell</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17276341</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RLE-1, an E3 ubiquitin ligase, regulates C. elegans aging by catalyzing DAF-16 polyubiquitination.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dev Cell</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li W</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gao B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee SM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bennett K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fang D</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aging pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000651</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b69">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9360933</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">daf-16: An HNF-3/forkhead family member that can function to double the life-span of Caenorhabditis elegans.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorman JB</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodan A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenyon C</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a47">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9353126</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Fork head transcription factor DAF-16 transduces insulin-like metabolic and longevity signals in C. elegans.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ogg S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paradis S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gottlieb S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patterson GI</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee L</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tissenbaum HA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c18">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22939742</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lessons from C. elegans: signaling pathways for longevity.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trends Endocrinol Metab</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lapierre LR</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hansen M</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d3a">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21937765</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Longevity and stress in Caenorhabditis elegans.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aging (Albany NY)</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou KI</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pincus Z</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slack FJ</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f8b">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15767565</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JNK regulates lifespan in Caenorhabditis elegans by modulating nuclear translocation of forkhead transcription factor/DAF-16.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15767565</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JNK regulates lifespan in Caenorhabditis elegans by modulating nuclear translocation of forkhead transcription factor/DAF-16.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh SW</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mukhopadhyay A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Svrzikapa N</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang F</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davis RJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tissenbaum HA</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eef">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9252323</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">daf-2, an insulin receptor-like gene that regulates longevity and diapause in Caenorhabditis elegans.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kimura KD</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tissenbaum HA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruvkun G</bp:AUTHORS>
-    </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="NRP1-triggered signaling pathways in pancreatic cancer " Data-Source="WikiPathways" Version="WP5144_r120537" Author="[Nadiapan1, Mkutmon, Eweitz]" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="NRP1-triggered signaling pathways in pancreatic cancer " Data-Source="WikiPathways" Version="WP5144_r120537" Author="[Nadiapan1, Mkutmon, Eweitz]" Last-Modified="20211212184204" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">This pathway model provides a holistic overview of the various signalling pathways which promote pancreatic cancer with the direct involvment of neuropilin 1, commonly known as NRP1. The multifaceted role of NRP1 in pancreatic ductal adenocarcinoma (PDAC) constitutes it as a promising therapeutic target for the fatal disease. The curation of the model was conducted by using the review done by Matkar et al. as a starting point and combining information gathered by several other studies investigating this particular phenomenon.</Comment>
   <Graphics BoardWidth="2074.5524808731975" BoardHeight="1042.6886870450185" />
   <DataNode TextLabel="AKT1" GraphId="a1ded" Type="Protein" GroupRef="b4347">
@@ -151,7 +151,7 @@
     <Graphics CenterX="1681.2668930853333" CenterY="776.2840788556255" Width="111.40939597315442" Height="28.687919463087173" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="Q05397" />
   </DataNode>
-  <DataNode TextLabel="MiR-141" GraphId="f2c3f" Type="Rna">
+  <DataNode TextLabel="MiR-141" GraphId="f2c3f" Type="RNA">
     <Graphics CenterX="521.6820194390187" CenterY="334.2464578334216" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000207708" />
   </DataNode>
@@ -263,7 +263,15 @@
     <Graphics CenterX="1171.8676255605706" CenterY="681.2837389552034" Width="110.56711409396017" Height="28.68791946308713" ZOrder="32820" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="O96020" />
   </DataNode>
-  <State GraphRef="f4f85" TextLabel="P" GraphId="a1f9a">
+  <State GraphRef="a1ded" TextLabel="P" GraphId="f440d">
+    <Graphics RelX="-0.9760101103625174" RelY="0.44842756343784673" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="a31c2" TextLabel="P" GraphId="f4730">
+    <Graphics RelX="-0.9738338909985327" RelY="0.3500338524035215" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="b96e6" TextLabel="P" GraphId="e0de0">
     <Graphics RelX="-0.9760101103625174" RelY="0.44842756343785056" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
@@ -275,24 +283,16 @@
     <Graphics RelX="-0.9755063492083986" RelY="0.43358898121489664" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="b96e6" TextLabel="P" GraphId="e0de0">
-    <Graphics RelX="-0.9760101103625174" RelY="0.44842756343785056" Width="15.0" Height="15.0" ShapeType="Oval" />
+  <State GraphRef="e3da2" TextLabel="P" GraphId="eae08">
+    <Graphics RelX="-0.9738338909985327" RelY="0.3500338524035215" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="f2a58" TextLabel="P" GraphId="e9a3f">
     <Graphics RelX="-0.9756915271104738" RelY="0.4335889812149046" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="e3da2" TextLabel="P" GraphId="eae08">
-    <Graphics RelX="-0.9738338909985327" RelY="0.3500338524035215" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="a1ded" TextLabel="P" GraphId="f440d">
-    <Graphics RelX="-0.9760101103625174" RelY="0.44842756343784673" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="a31c2" TextLabel="P" GraphId="f4730">
-    <Graphics RelX="-0.9738338909985327" RelY="0.3500338524035215" Width="15.0" Height="15.0" ShapeType="Oval" />
+  <State GraphRef="f4f85" TextLabel="P" GraphId="a1f9a">
+    <Graphics RelX="-0.9760101103625174" RelY="0.44842756343785056" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="ec4f8" TextLabel="P" GraphId="bd39b">
@@ -318,63 +318,63 @@
   <Interaction GraphId="id12cd98a6">
     <BiopaxRef>d06</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="543.1863875894118" Y="524.1415366802036" GraphRef="a0e41" RelX="0.0" RelY="-1.0" />
-      <Point X="668.6379122517641" Y="492.7172198631981" GraphRef="c7104" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="e372f" X="543.1863875894118" Y="524.1415366802036" GraphRef="aeda6" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="fe220" X="668.6379122517641" Y="492.7172198631981" GraphRef="c7104" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id13c5c74f">
     <BiopaxRef>c75</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="588.1863875894118" Y="750.0465316029894" GraphRef="bf0b8" RelX="1.0" RelY="0.0" />
-      <Point X="661.8879122517642" Y="700.6066484369773" GraphRef="d8239" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="d73cf" X="588.1863875894118" Y="750.0465316029894" GraphRef="bf0b8" RelX="1.0" RelY="0.0" />
+      <Point GraphId="edfe3" X="661.8879122517642" Y="700.6066484369773" GraphRef="d8239" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id22bde1a3">
     <BiopaxRef>caf</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1171.8676255605706" Y="447.4778536039332" GraphRef="d4e41" RelX="0.0" RelY="1.0" />
-      <Point X="1171.8676255605706" Y="597.5639402974857" GraphRef="e9188" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="fdbfc" X="1171.8676255605706" Y="447.4778536039332" GraphRef="d4e41" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a74a3" X="1171.8676255605706" Y="597.5639402974856" GraphRef="df68c" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id299457c3">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1070.1864491003012" Y="849.122544598436" GraphRef="ca1c9" RelX="-1.0" RelY="0.5" />
-      <Point X="388.2836950687214" Y="798.8694835325765" GraphRef="f88f0" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="fe917" X="1070.1864491003012" Y="849.122544598436" GraphRef="ca1c9" RelX="-1.0" RelY="0.5" />
+      <Point GraphId="cc78c" X="388.2836950687214" Y="798.8694835325765" GraphRef="f2cc8" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2be569f3">
     <BiopaxRef>a26</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="929.3100640751045" Y="134.3128244665475" GraphRef="eb4bd" RelX="-0.5" RelY="1.0" />
-      <Point X="871.2531798958153" Y="176.66677420167287" GraphRef="f0371" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="b6d72" X="929.3100640751045" Y="134.3128244665475" GraphRef="c777b" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="f3b32" X="871.2531798958153" Y="176.66677420167287" GraphRef="f0371" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2f3b1141">
     <BiopaxRef>d06</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="440.0336950687214" Y="749.3694835325765" GraphRef="a31c2" RelX="1.0" RelY="0.0" />
-      <Point X="447.0210979482751" Y="689.3376371974122" />
-      <Point X="498.18638758941177" Y="629.3057908622478" GraphRef="f93df" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="f62d8" X="440.0336950687214" Y="749.3694835325765" GraphRef="a31c2" RelX="1.0" RelY="0.0" />
+      <Point GraphId="bcde4" X="447.0210979482751" Y="689.3376371974122" />
+      <Point GraphId="f6266" X="498.18638758941177" Y="629.3057908622478" GraphRef="f93df" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id334284de">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1311.9974452429715" Y="110.68564656472805" GraphRef="da457" RelX="0.5" RelY="1.0" />
-      <Point X="1571.1563168978519" Y="434.35418301291617" GraphRef="e339b" RelX="-1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
+      <Point GraphId="b2f0b" X="1311.9974452429715" Y="110.68564656472805" GraphRef="d3e58" RelX="0.5" RelY="1.0" />
+      <Point GraphId="e093d" X="1571.1563168978519" Y="434.3541830129161" GraphRef="a9f8a" RelX="-1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id353ffbf5">
     <BiopaxRef>fdc</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1131.7154078403091" Y="857.1979147195666" GraphRef="ca1c9" RelX="0.0" RelY="1.0" />
-      <Point X="1131.7154078403094" Y="904.7776790292686" GraphRef="e33a4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a9d62" X="1131.7154078403091" Y="857.1979147195666" GraphRef="ca1c9" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a1b05" X="1131.7154078403094" Y="904.7776790292686" GraphRef="e33a4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -383,16 +383,16 @@
     <BiopaxRef>cdf</BiopaxRef>
     <BiopaxRef>b68</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1571.1563168978519" Y="454.02626093499407" GraphRef="e339b" RelX="-1.0" RelY="0.0" />
-      <Point X="1420.22168244174" Y="536.1793541716462" GraphRef="d1033" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="ec709" X="1571.1563168978519" Y="454.02626093499407" GraphRef="a9f8a" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="d4f36" X="1420.22168244174" Y="536.1793541716462" GraphRef="bfb1b" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id41399760">
     <BiopaxRef>c75</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="452.8654195136366" Y="284.33508755739837" GraphRef="bf212" RelX="1.0" RelY="0.0" />
-      <Point X="606.4492388119119" Y="284.33508755739825" GraphRef="a91f5" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
+      <Point GraphId="ab96c" X="452.8654195136366" Y="284.33508755739837" GraphRef="bf212" RelX="1.0" RelY="0.0" />
+      <Point GraphId="c787a" X="606.4492388119119" Y="284.33508755739825" GraphRef="a91f5" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
       <Anchor Position="0.45231118569915135" Shape="None" GraphId="ee609" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -401,65 +401,65 @@
     <BiopaxRef>c75</BiopaxRef>
     <BiopaxRef>caf</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1171.8676255605706" Y="707.627698686747" GraphRef="e9188" RelX="0.0" RelY="1.0" />
-      <Point X="1240.7518994959742" Y="746.3135578605446" GraphRef="c68ec" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="bf123" X="1171.8676255605706" Y="707.6276986867471" GraphRef="df68c" RelX="0.0" RelY="1.0" />
+      <Point GraphId="dbe1f" X="1240.7518994959742" Y="746.3135578605446" GraphRef="c68ec" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5bdd2984">
     <BiopaxRef>d06</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="596.1863875894118" Y="557.1415366802036" GraphRef="a0e41" RelX="1.0" RelY="0.0" />
-      <Point X="869.9052357287119" Y="738.5143630912086" GraphRef="ff1df" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="cef21" X="596.1863875894118" Y="557.1415366802036" GraphRef="aeda6" RelX="1.0" RelY="0.0" />
+      <Point GraphId="fd49f" X="869.9052357287119" Y="738.5143630912086" GraphRef="ff1df" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6cb6b53b">
     <BiopaxRef>d06</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="440.0336950687214" Y="749.3694835325765" GraphRef="a31c2" RelX="1.0" RelY="0.0" />
-      <Point X="447.0210979482751" Y="718.4940157982359" />
-      <Point X="498.18638758941177" Y="687.6185480638952" GraphRef="ff3af" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="c67ae" X="440.0336950687214" Y="749.3694835325765" GraphRef="a31c2" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f242e" X="447.0210979482751" Y="718.4940157982359" />
+      <Point GraphId="eb93c" X="498.18638758941177" Y="687.6185480638952" GraphRef="ff3af" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id75867bf8">
     <BiopaxRef>c75</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="765.3879122517642" Y="812.8051250598606" GraphRef="eb990" RelX="1.0" RelY="0.0" />
-      <Point X="813.8982024806301" Y="788.9171076656361" GraphRef="ff1df" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="d3036" X="765.3879122517642" Y="812.8051250598606" GraphRef="eb990" RelX="1.0" RelY="0.0" />
+      <Point GraphId="fee17" X="813.8982024806301" Y="788.9171076656361" GraphRef="ff1df" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7a8d6f14">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1070.1864491003012" Y="832.9718043561747" GraphRef="ca1c9" RelX="-1.0" RelY="-0.5" />
-      <Point X="1036.9549466082274" Y="574.0746953541197" />
-      <Point X="1107.4231749487385" Y="315.1775863520646" GraphRef="dfd06" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="da490" X="1070.1864491003012" Y="832.9718043561747" GraphRef="ca1c9" RelX="-1.0" RelY="-0.5" />
+      <Point GraphId="c2d85" X="1036.9549466082274" Y="574.0746953541197" />
+      <Point GraphId="e59a8" X="1107.4231749487383" Y="315.1775863520646" GraphRef="b4347" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7d9169d3">
     <BiopaxRef>d06</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="713.6379122517641" Y="591.5037450106428" GraphRef="c25d1" RelX="0.0" RelY="-1.0" />
-      <Point X="713.6379122517641" Y="505.2172198631981" GraphRef="c7104" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="a7f4b" X="713.6379122517641" Y="591.5037450106428" GraphRef="eddfa" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="b6856" X="713.6379122517641" Y="505.2172198631981" GraphRef="c7104" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id87114224">
     <BiopaxRef>cdf</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1286.0890318212605" Y="957.9367201857044" GraphRef="b8c17" RelX="-1.0" RelY="0.5" />
-      <Point X="388.2836950687214" Y="798.8694835325765" GraphRef="f88f0" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="aeac5" X="1286.0890318212605" Y="957.9367201857044" GraphRef="d512c" RelX="-1.0" RelY="0.5" />
+      <Point GraphId="aa71e" X="388.2836950687214" Y="798.8694835325765" GraphRef="f2cc8" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id890dda6b">
     <BiopaxRef>d06</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="588.1863875894118" Y="629.3057908622478" GraphRef="f93df" RelX="1.0" RelY="0.0" />
-      <Point X="650.0883066706027" Y="628.5037450106414" GraphRef="c25d1" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="daabd" X="588.1863875894118" Y="629.3057908622478" GraphRef="f93df" RelX="1.0" RelY="0.0" />
+      <Point GraphId="ac162" X="650.0883066706027" Y="628.5037450106414" GraphRef="eddfa" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -468,8 +468,8 @@
     <BiopaxRef>cdf</BiopaxRef>
     <BiopaxRef>b68</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1826.1854718230043" Y="289.6924113603902" GraphRef="ed1ae" RelX="-1.0" RelY="0.0" />
-      <Point X="1639.471251962787" Y="414.68210509083826" GraphRef="e339b" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="a49d6" X="1826.1854718230043" Y="289.6924113603902" GraphRef="e0e1a" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="f7c29" X="1639.471251962787" Y="414.6821050908382" GraphRef="a9f8a" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -477,56 +477,56 @@
     <BiopaxRef>c75</BiopaxRef>
     <BiopaxRef>caf</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1171.8676255605706" Y="367.3671232455042" GraphRef="dfd06" RelX="0.0" RelY="1.0" />
-      <Point X="1171.8676255605706" Y="418.78993414084607" GraphRef="d4e41" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="aaa81" X="1171.8676255605706" Y="367.3671232455043" GraphRef="b4347" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cc70f" X="1171.8676255605706" Y="418.78993414084607" GraphRef="d4e41" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id968d0403">
     <BiopaxRef>b68</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1653.9140109357136" Y="110.29502666619157" GraphRef="ae6ef" RelX="0.0" RelY="1.0" />
-      <Point X="1599.1096033749095" Y="178.7419818742186" GraphRef="ddf4b" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="d322d" X="1653.9140109357136" Y="110.29502666619157" GraphRef="c41f6" RelX="0.0" RelY="1.0" />
+      <Point GraphId="eb548" X="1599.1096033749095" Y="178.7419818742186" GraphRef="ddf4b" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id976c43e9">
     <BiopaxRef>cdf</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1410.8217824531007" Y="789.7736558719507" GraphRef="fd976" RelX="-1.0" RelY="0.0" />
-      <Point X="1296.6986115141158" Y="771.6229983824088" GraphRef="c68ec" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="bba35" X="1410.8217824531007" Y="789.7736558719507" GraphRef="fd976" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b176e" X="1296.6986115141158" Y="771.6229983824088" GraphRef="c68ec" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9c66cfea">
     <BiopaxRef>cdf</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1286.0890318212605" Y="920.6867201857044" GraphRef="b8c17" RelX="-1.0" RelY="0.0" />
-      <Point X="1202.0136763667426" Y="921.3637682561174" GraphRef="e33a4" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="aca62" X="1286.0890318212605" Y="920.6867201857044" GraphRef="d512c" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="c4b01" X="1202.0136763667426" Y="921.3637682561174" GraphRef="e33a4" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida20151bc">
     <BiopaxRef>caf</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1283.2861831373796" Y="110.68564656472805" GraphRef="da457" RelX="0.0" RelY="1.0" />
-      <Point X="1171.8676255605706" Y="262.988049458625" GraphRef="dfd06" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="e9e1d" X="1283.2861831373796" Y="110.68564656472805" GraphRef="d3e58" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a4815" X="1171.8676255605706" Y="262.98804945862497" GraphRef="b4347" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida39d6ed8">
     <BiopaxRef>a74</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1848.4994636978952" Y="620.0214007031317" GraphRef="d6a36" RelX="-0.5" RelY="-1.0" />
-      <Point X="1236.3120761724026" Y="341.2723547987844" GraphRef="dfd06" RelX="1.0" RelY="0.5" ArrowHead="mim-stimulation" />
+      <Point GraphId="c2ec8" X="1848.4994636978952" Y="620.0214007031317" GraphRef="e23a1" RelX="-0.5" RelY="-1.0" />
+      <Point GraphId="db6b3" X="1236.3120761724028" Y="341.2723547987845" GraphRef="b4347" RelX="1.0" RelY="0.5" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida6eb32f2">
     <BiopaxRef>cdf</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1420.22168244174" Y="609.5551930978205" GraphRef="d1033" RelX="0.0" RelY="1.0" />
-      <Point X="1352.6453235322574" Y="746.3135578605446" GraphRef="c68ec" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="b67ef" X="1420.22168244174" Y="609.5551930978205" GraphRef="bfb1b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e1317" X="1352.6453235322574" Y="746.3135578605446" GraphRef="c68ec" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -534,113 +534,113 @@
     <BiopaxRef>cdf</BiopaxRef>
     <BiopaxRef>caf</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1783.1484579727944" Y="708.7676165236707" GraphRef="d6a36" RelX="-1.0" RelY="0.0" />
-      <Point X="1681.266893085333" Y="749.9401191240819" GraphRef="bebf9" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="fc77c" X="1783.1484579727944" Y="708.7676165236707" GraphRef="e23a1" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="cd5f7" X="1681.266893085333" Y="749.9401191240819" GraphRef="fa50f" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idbb593d77">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1848.4994636978952" Y="797.5138323442096" GraphRef="d6a36" RelX="-0.5" RelY="1.0" />
-      <Point X="1193.244366580317" Y="841.0471744773054" GraphRef="ca1c9" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="d7183" X="1848.4994636978952" Y="797.5138323442096" GraphRef="e23a1" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="ef554" X="1193.244366580317" Y="841.0471744773054" GraphRef="ca1c9" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idbd222ec6">
     <BiopaxRef>d06</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="777.1875178329254" Y="628.5037450106414" GraphRef="c25d1" RelX="1.0" RelY="0.0" />
-      <Point X="869.9052357287119" Y="738.5143630912086" GraphRef="ff1df" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="b4ae5" X="777.1875178329254" Y="628.5037450106414" GraphRef="eddfa" RelX="1.0" RelY="0.0" />
+      <Point GraphId="df1f0" X="869.9052357287119" Y="738.5143630912086" GraphRef="ff1df" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idcb1436e2">
     <BiopaxRef>cdf</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="878.3100640751043" Y="109.56282446654751" GraphRef="eb4bd" RelX="-1.0" RelY="0.5" />
-      <Point X="808.3293251365185" Y="117.49153913336468" GraphRef="e18af" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="c3d34" X="878.3100640751043" Y="109.5628244665475" GraphRef="c777b" RelX="-1.0" RelY="0.5" />
+      <Point GraphId="df1e3" X="808.3293251365185" Y="117.49153913336468" GraphRef="e18af" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idcd433313">
     <BiopaxRef>b68</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1710.9140109357136" Y="71.62835999952492" GraphRef="ae6ef" RelX="1.0" RelY="0.0" />
-      <Point X="2063.27073608191" Y="368.011434306463" />
-      <Point X="2044.5524808731975" Y="664.3945086134012" GraphRef="d6a36" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
+      <Point GraphId="ff7dd" X="1710.9140109357136" Y="71.62835999952492" GraphRef="c41f6" RelX="1.0" RelY="0.0" />
+      <Point GraphId="fecc1" X="2063.27073608191" Y="368.011434306463" />
+      <Point GraphId="a6282" X="2044.5524808731975" Y="664.3945086134012" GraphRef="e23a1" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idcec03411">
     <BiopaxRef>a26</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1031.3100640751047" Y="134.3128244665475" GraphRef="eb4bd" RelX="0.5" RelY="1.0" />
-      <Point X="1075.8915017071274" Y="177.45822651667095" GraphRef="a2f1f" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="c7201" X="1031.3100640751047" Y="134.3128244665475" GraphRef="c777b" RelX="0.5" RelY="1.0" />
+      <Point GraphId="d570d" X="1075.8915017071274" Y="177.45822651667095" GraphRef="a2f1f" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd3b4485b">
     <BiopaxRef>c75</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="588.1863875894118" Y="750.0465316029894" GraphRef="bf0b8" RelX="1.0" RelY="0.0" />
-      <Point X="661.8879122517642" Y="812.8051250598606" GraphRef="eb990" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="dedb4" X="588.1863875894118" Y="750.0465316029894" GraphRef="bf0b8" RelX="1.0" RelY="0.0" />
+      <Point GraphId="af53b" X="661.8879122517642" Y="812.8051250598606" GraphRef="eb990" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="iddd5b0d4b">
     <BiopaxRef>d06</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="440.0336950687214" Y="749.3694835325765" GraphRef="a31c2" RelX="1.0" RelY="0.0" />
-      <Point X="447.84414321576475" Y="653.25551010639" />
-      <Point X="490.18638758941177" Y="557.1415366802036" GraphRef="a0e41" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="fd4e9" X="440.0336950687214" Y="749.3694835325765" GraphRef="a31c2" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d4371" X="447.84414321576475" Y="653.25551010639" />
+      <Point GraphId="b22b7" X="490.18638758941177" Y="557.1415366802036" GraphRef="aeda6" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide52f07de">
     <BiopaxRef>c75</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="452.0336950687214" Y="749.3694835325765" GraphRef="f88f0" RelX="1.0" RelY="0.0" />
-      <Point X="498.18638758941177" Y="750.0465316029894" GraphRef="bf0b8" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="fa5ca" X="452.0336950687214" Y="749.3694835325765" GraphRef="f2cc8" RelX="1.0" RelY="0.0" />
+      <Point GraphId="c4ff5" X="498.18638758941177" Y="750.0465316029894" GraphRef="bf0b8" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ideb31bfdb">
     <BiopaxRef>cdf</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1613.5621950987556" Y="788.9461005029144" GraphRef="bebf9" RelX="-1.0" RelY="0.0" />
-      <Point X="1522.2311784262552" Y="789.7736558719507" GraphRef="fd976" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="df36a" X="1613.5621950987556" Y="788.9461005029144" GraphRef="fa50f" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="dee2d" X="1522.2311784262552" Y="789.7736558719507" GraphRef="fd976" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idebf77e67">
     <BiopaxRef>c75</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="521.6820194390187" Y="346.7464578334216" GraphRef="f2c3f" RelX="0.0" RelY="1.0" />
-      <Point X="522.3330989246437" Y="284.3350875573983" GraphRef="ee609" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="feaf3" X="521.6820194390187" Y="346.7464578334216" GraphRef="f2c3f" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d5f0d" X="522.3330989246437" Y="284.3350875573983" GraphRef="ee609" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf07312bb">
     <BiopaxRef>caf</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1826.1854718230043" Y="289.6924113603902" GraphRef="ed1ae" RelX="-1.0" RelY="0.0" />
-      <Point X="1236.3120761724026" Y="289.0828179053448" GraphRef="dfd06" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
+      <Point GraphId="adfc2" X="1826.1854718230043" Y="289.6924113603902" GraphRef="e0e1a" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="dc120" X="1236.3120761724028" Y="289.08281790534477" GraphRef="b4347" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf3ae543f">
     <BiopaxRef>c75</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="765.3879122517642" Y="700.6066484369773" GraphRef="d8239" RelX="1.0" RelY="0.0" />
-      <Point X="813.8982024806301" Y="738.5143630912086" GraphRef="ff1df" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="c2217" X="765.3879122517642" Y="700.6066484369773" GraphRef="d8239" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e3964" X="813.8982024806301" Y="738.5143630912086" GraphRef="ff1df" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf413d303">
     <BiopaxRef>b68</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1653.9140109357136" Y="110.29502666619157" GraphRef="ae6ef" RelX="0.0" RelY="1.0" />
-      <Point X="1718.116096881403" Y="178.74198187421857" GraphRef="c871e" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="e6fce" X="1653.9140109357136" Y="110.29502666619157" GraphRef="c41f6" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fb32f" X="1718.116096881403" Y="178.74198187421857" GraphRef="c871e" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -648,24 +648,24 @@
     <BiopaxRef>c75</BiopaxRef>
     <BiopaxRef>cdf</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="265.70335177917264" Y="749.1795870977876" GraphRef="cc033" RelX="1.0" RelY="0.0" />
-      <Point X="324.5336950687214" Y="749.3694835325765" GraphRef="f88f0" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="b9f98" X="265.70335177917264" Y="749.1795870977876" GraphRef="efa67" RelX="1.0" RelY="0.0" />
+      <Point GraphId="db0de" X="324.5336950687214" Y="749.3694835325765" GraphRef="f2cc8" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf6c7bbda">
     <BiopaxRef>cdf</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="1848.4994636978952" Y="797.5138323442096" GraphRef="d6a36" RelX="-0.5" RelY="1.0" />
-      <Point X="1400.0890318212605" Y="883.4367201857044" GraphRef="b8c17" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
+      <Point GraphId="bd255" X="1848.4994636978952" Y="797.5138323442096" GraphRef="e23a1" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="c53c4" X="1400.0890318212605" Y="883.4367201857044" GraphRef="d512c" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf7c9d8c3">
     <BiopaxRef>a26</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="980.3100640751046" Y="134.3128244665475" GraphRef="eb4bd" RelX="0.0" RelY="1.0" />
-      <Point X="1356.93812539476" Y="572.8672736347334" GraphRef="d1033" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Point GraphId="ca23d" X="980.3100640751046" Y="134.3128244665475" GraphRef="c777b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d3238" X="1356.93812539476" Y="572.8672736347334" GraphRef="bfb1b" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -715,77 +715,43 @@
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="385.39063934074034" CenterY="270.51520159527945" Width="214.65523736780403" Height="121.79707039807879" ZOrder="16384" FontSize="15" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Group GroupId="b1cce" Style="Complex" />
-  <Group GroupId="a6d39" Style="Complex" />
-  <Group GroupId="aeda6" GraphId="a0e41" />
-  <Group GroupId="c41f6" GraphId="ae6ef" Style="Complex" />
-  <Group GroupId="d512c" GraphId="b8c17" Style="Complex" />
-  <Group GroupId="fa50f" GraphId="bebf9" Style="Complex" />
-  <Group GroupId="eddfa" GraphId="c25d1" Style="Complex" />
-  <Group GroupId="efa67" GraphId="cc033" Style="Complex">
+  <Group GroupId="aeda6" GraphId="aeda6" />
+  <Group GroupId="c41f6" GraphId="c41f6" Style="Complex" />
+  <Group GroupId="d512c" GraphId="d512c" Style="Complex" />
+  <Group GroupId="fa50f" GraphId="fa50f" Style="Complex" />
+  <Group GroupId="eddfa" GraphId="eddfa" Style="Complex" />
+  <Group GroupId="efa67" GraphId="efa67" Style="Complex">
     <BiopaxRef>c75</BiopaxRef>
     <BiopaxRef>d06</BiopaxRef>
   </Group>
-  <Group GroupId="bfb1b" GraphId="d1033" />
-  <Group GroupId="e23a1" GraphId="d6a36" Style="Complex" />
-  <Group GroupId="d3e58" GraphId="da457" Style="Complex">
+  <Group GroupId="bfb1b" GraphId="bfb1b" />
+  <Group GroupId="e23a1" GraphId="e23a1" Style="Complex" />
+  <Group GroupId="d3e58" GraphId="d3e58" Style="Complex">
     <BiopaxRef>b7d</BiopaxRef>
   </Group>
-  <Group GroupId="b4347" GraphId="dfd06">
+  <Group GroupId="b4347" GraphId="b4347">
     <BiopaxRef>b7d</BiopaxRef>
   </Group>
-  <Group GroupId="a9f8a" GraphId="e339b" />
-  <Group GroupId="a0396" GraphId="e50cc" Style="Complex">
-    <BiopaxRef>c75</BiopaxRef>
-    <BiopaxRef>d06</BiopaxRef>
-  </Group>
-  <Group GroupId="df68c" GraphId="e9188" Style="Complex">
+  <Group GroupId="a9f8a" GraphId="a9f8a" />
+  <Group GroupId="df68c" GraphId="df68c" Style="Complex">
     <BiopaxRef>b7d</BiopaxRef>
     <BiopaxRef>c75</BiopaxRef>
   </Group>
-  <Group GroupId="c777b" GraphId="eb4bd" Style="Complex" />
-  <Group GroupId="e0e1a" GraphId="ed1ae" Style="Complex" />
-  <Group GroupId="f2cc8" GraphId="f88f0" Style="Complex" />
+  <Group GroupId="c777b" GraphId="c777b" Style="Complex" />
+  <Group GroupId="e0e1a" GraphId="e0e1a" Style="Complex" />
+  <Group GroupId="f2cc8" GraphId="f2cc8" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b7d">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17974973</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hepatocyte growth factor-mediated cell invasion in pancreatic cancer cells is dependent on neuropilin-1.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer Res</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matsushita A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Götze T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korc M</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a74">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26209534</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VEGF-A/NRP1 stimulates GIPC1 and Syx complex formation to promote RhoA activation and proliferation in skin cancer cells.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biol Open</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yoshida A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shimizu A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asano H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kadonosono T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kondoh SK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geretti E</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mammoto A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klagsbrun M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seo MK</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ff0">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34039996</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Architecture of the Sema3A/PlexinA4/Neuropilin tripartite complex.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Commun</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lu D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shang G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bai XC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang X</bp:AUTHORS>
-    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pancreatic adenocarcinoma</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4074</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000003</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c75">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31572065</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -803,45 +769,6 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang X</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun X</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ee5">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28618167</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuropilin-1 regulated by miR-320 contributes to the growth and metastasis of cholangiocarcinoma cells.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liver Int</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhu H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dong X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xie K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang C</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lu J</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000003</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a26">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17631638</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Association of axon guidance factor semaphorin 3A with poor outcome in pancreatic cancer.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Int J Cancer</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Müller MW</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giese NA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swiercz JM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ceyhan GO</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esposito I</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hinz U</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Büchler P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giese T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Büchler MW</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Offermanns S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friess H</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d06">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27542226</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -857,11 +784,16 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hedley DW</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leong-Poi H</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pancreatic adenocarcinoma</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4074</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b7d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17974973</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hepatocyte growth factor-mediated cell invasion in pancreatic cancer cells is dependent on neuropilin-1.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matsushita A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Götze T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korc M</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cdf">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30216699</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -874,35 +806,6 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prud'homme GJ</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Singh KK</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leong-Poi H</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b68">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20104017</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ZIP4 pathway in pancreatic cancer.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer Biol Ther</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donahue T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hines OJ</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c0e">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22948112</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuropilins are multifunctional coreceptors involved in tumor initiation, growth, metastasis and immunity.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oncotarget</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prud'homme GJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glinka Y</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fdc">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19909241</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role of neuropilins in cell signalling.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Soc Trans</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zachary IC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frankel P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evans IM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pellet-Many C</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="caf">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26795388</bp:ID>
@@ -921,6 +824,59 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xie X</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun X</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a26">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17631638</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Association of axon guidance factor semaphorin 3A with poor outcome in pancreatic cancer.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Int J Cancer</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Müller MW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giese NA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swiercz JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ceyhan GO</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esposito I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hinz U</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Büchler P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giese T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Büchler MW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Offermanns S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friess H</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fdc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19909241</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role of neuropilins in cell signalling.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Soc Trans</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zachary IC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frankel P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evans IM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pellet-Many C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b68">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20104017</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ZIP4 pathway in pancreatic cancer.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer Biol Ther</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donahue T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hines OJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a74">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26209534</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VEGF-A/NRP1 stimulates GIPC1 and Syx complex formation to promote RhoA activation and proliferation in skin cancer cells.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biol Open</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yoshida A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shimizu A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asano H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kadonosono T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kondoh SK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geretti E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mammoto A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klagsbrun M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seo MK</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

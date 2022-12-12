@@ -22,8 +22,6 @@ authors:
 - Nsalomonis
 - Zari
 - Eweitz
-communities:
-- CPTAC
 description: Based on [http://www.nature.com/nrc/journal/v3/n10/fig_tab/nrc1189_F4.html
   Surh, 2003, figure 4].  NRF2 is a transcription factor that regulates expression
   of many detoxification or antioxidant enzymes. The Kelch-like-ECH-associated protein
@@ -54,13 +52,13 @@ description: Based on [http://www.nature.com/nrc/journal/v3/n10/fig_tab/nrc1189_
   (6-HITC) — a sulphoraphane analogue from Japanese horseradish wasabi — stimulates
   nuclear translocation of NRF2, which subsequently activates ARE.
 last-edited: 2021-10-15
-ndex: e285ccb0-8b61-11eb-9e72-0ac135e8bacf
 organisms:
 - Homo sapiens
 redirect_from:
 - /index.php/Pathway:WP3
 - /instance/WP3
-revision: null
+- /instance/WP3_rr120028
+revision: r120028
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP3.html

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Target of rapamycin (TOR) signaling" Data-Source="WikiPathways" Version="WP3256_r116795" Author="[Mkutmon, Mick Eikelhof, L Dupuis, Eweitz]" Organism="Bos taurus">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Target of rapamycin (TOR) signaling" Data-Source="WikiPathways" Version="WP3256_r123266" Author="[Mkutmon, Mick Eikelhof, L Dupuis, Eweitz, Egonw]" Last-Modified="20220709090634" Organism="Bos taurus">
   <Comment Source="WikiPathways-description">TOR signaling is responsible for a cellular reaction towards nutrient and energy availability and hypoxia/stress. The mammalian Target Of Rapamycin (mTOR), a serine/threonine kinase, is the central regulator that consists in two different complexes: a rapamycin-sensitive complex (mTORC1) consisting of mTOR, Raptor and GbetaL that regulates mRNA translation, ribosome biogenesis and autophagy and a second rapamycin-insensitive complex (mTORC2) consisting of mTOR, Rictor GbetaL, Sin1 and Protor 1/2 that regulates survival and a cytoskeletal response.
 TOR signaling is highly integrated in other signaling pathways that respond to external conditions, such as the insulin-signaling cascade and AMPK signaling.</Comment>
   <Comment Source="HomologyConvert">This pathway was inferred from Homo sapiens pathway [http://wikipathways.org/instance/WP1471_r70031 WP1471(70031)]  with a 100.0% conversion rate.</Comment>
@@ -7,7 +7,7 @@ TOR signaling is highly integrated in other signaling pathways that respond to e
   <BiopaxRef>a76</BiopaxRef>
   <BiopaxRef>fbe</BiopaxRef>
   <BiopaxRef>f9c</BiopaxRef>
-  <Graphics BoardWidth="910.0" BoardHeight="742.0" />
+  <Graphics BoardWidth="910.0" BoardHeight="749.6666666666667" />
   <DataNode TextLabel="Amino acids" GraphId="d698f" Type="Metabolite">
     <Graphics CenterX="213.0" CenterY="37.0" Width="80.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" />
     <Xref Database="ChEBI" ID="CHEBI:33709" />
@@ -102,7 +102,7 @@ TOR signaling is highly integrated in other signaling pathways that respond to e
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Insulin signaling" GraphId="d2206" Type="Pathway">
-    <Graphics CenterX="702.5" CenterY="54.0" Width="117.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Graphics CenterX="702.5" CenterY="54.0" Width="117.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP481" />
   </DataNode>
   <DataNode TextLabel="MLST8" GraphId="d442e" Type="GeneProduct" GroupRef="b8ba3">
@@ -141,7 +141,7 @@ TOR signaling is highly integrated in other signaling pathways that respond to e
     <Xref Database="Ensembl" ID="ENSBTAG00000032651" />
   </DataNode>
   <DataNode TextLabel="Insulin signaling" GraphId="df0d6" Type="Pathway">
-    <Graphics CenterX="352.5" CenterY="702.0" Width="117.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Graphics CenterX="352.5" CenterY="702.0" Width="117.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP481" />
   </DataNode>
   <DataNode TextLabel="ULK2" GraphId="e15c9" Type="GeneProduct" GroupRef="ef616">
@@ -160,7 +160,7 @@ TOR signaling is highly integrated in other signaling pathways that respond to e
     <Xref Database="Ensembl" ID="ENSBTAG00000010610" />
   </DataNode>
   <DataNode TextLabel="mRNA translation" GraphId="e498c" Type="Pathway">
-    <Graphics CenterX="440.5" CenterY="664.0" Width="135.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Graphics CenterX="440.5" CenterY="664.0" Width="135.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP107" />
   </DataNode>
   <DataNode TextLabel="AKT1S1" GraphId="e8d15" Type="GeneProduct">
@@ -226,225 +226,225 @@ TOR signaling is highly integrated in other signaling pathways that respond to e
   </DataNode>
   <Interaction GraphId="a2d4f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="440.0" Y="596.0" GraphRef="fae34" RelX="0.0" RelY="1.0" />
-      <Point X="440.5" Y="654.0" GraphRef="e498c" RelX="0.0" RelY="-1.0" ArrowHead="TBar" />
+      <Point GraphId="f1b5c" X="440.0" Y="596.0" GraphRef="fae34" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a5a20" X="440.5" Y="654.0" GraphRef="e498c" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a9b20">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="494.0" Y="384.0" GraphRef="bc4e4" RelX="-1.0" RelY="0.0" />
-      <Point X="348.0" Y="482.0" GraphRef="fb66f" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a932f" X="494.0" Y="384.0" GraphRef="bc4e4" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="cfc82" X="348.0" Y="482.0" GraphRef="fb66f" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="aaa15">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="328.0" Y="502.0" GraphRef="fb66f" RelX="0.0" RelY="1.0" />
-      <Point X="384.0" Y="530.0" />
-      <Point X="440.0" Y="576.0" GraphRef="fae34" RelX="0.0" RelY="-1.0" ArrowHead="TBar" />
+      <Point GraphId="d3918" X="328.0" Y="502.0" GraphRef="fb66f" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c2065" X="384.0" Y="530.0" />
+      <Point GraphId="c73b3" X="440.0" Y="576.0" GraphRef="fae34" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ad572">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="394.0" Y="443.0" GraphRef="e8d15" RelX="0.0" RelY="1.0" />
-      <Point X="393.5" Y="470.0" GraphRef="a0a3c" RelX="0.5" RelY="-1.0" ArrowHead="TBar" />
+      <Point GraphId="e936b" X="394.0" Y="443.0" GraphRef="e8d15" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e19b9" X="393.5" Y="470.0" GraphRef="b8ba3" RelX="0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="beb55">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="352.5" Y="596.0" GraphRef="ce4fa" RelX="0.0" RelY="1.0" />
-      <Point X="406.75" Y="654.0" GraphRef="e498c" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ef903" X="352.5" Y="596.0" GraphRef="ce4fa" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fc314" X="406.75" Y="654.0" GraphRef="e498c" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="cb36d">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="682.5" Y="196.0" GraphRef="d8f29" RelX="-0.5" RelY="1.0" />
-      <Point X="434.0" Y="433.0" GraphRef="e8d15" RelX="1.0" RelY="0.0" ArrowHead="TBar" />
+      <Point GraphId="febaa" X="682.5" Y="196.0" GraphRef="d8f29" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="c2fde" X="434.0" Y="433.0" GraphRef="e8d15" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ccb4c">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="328.0" Y="514.0" GraphRef="a0a3c" RelX="0.0" RelY="1.0" />
-      <Point X="352.5" Y="576.0" GraphRef="ce4fa" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c5759" X="328.0" Y="514.0" GraphRef="b8ba3" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c9393" X="352.5" Y="576.0" GraphRef="ce4fa" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="cd781">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="328.0" Y="514.0" GraphRef="a0a3c" RelX="0.0" RelY="1.0" />
-      <Point X="182.5" Y="674.0" GraphRef="cf883" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f0203" X="328.0" Y="514.0" GraphRef="b8ba3" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f3240" X="182.5" Y="674.0" GraphRef="cf883" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d8ac2">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="534.0" Y="329.0" GraphRef="febf6" RelX="0.0" RelY="1.0" />
-      <Point X="534.0" Y="374.0" GraphRef="bc4e4" RelX="0.0" RelY="-1.0" ArrowHead="TBar" />
+      <Point GraphId="b51c8" X="534.0" Y="329.0" GraphRef="f5cf0" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a3d6f" X="534.0" Y="374.0" GraphRef="bc4e4" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e38b5">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="352.5" Y="596.0" GraphRef="ce4fa" RelX="0.0" RelY="1.0" />
-      <Point X="312.75" Y="643.0" GraphRef="f367a" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ad097" X="352.5" Y="596.0" GraphRef="ce4fa" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c9c89" X="312.75" Y="643.0" GraphRef="f367a" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="fe13e">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="264.0" Y="414.0" GraphRef="b918b" RelX="0.0" RelY="1.0" />
-      <Point X="262.5" Y="470.0" GraphRef="a0a3c" RelX="-0.5" RelY="-1.0" ArrowHead="TBar" />
+      <Point GraphId="b6ed4" X="264.0" Y="414.0" GraphRef="c93f3" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e998c" X="262.5" Y="470.0" GraphRef="b8ba3" RelX="-0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id1b78c135">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="534.0" Y="214.0" GraphRef="e1f1e" RelX="0.0" RelY="1.0" />
-      <Point X="534.0" Y="265.0" GraphRef="febf6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c25c4" X="534.0" Y="214.0" GraphRef="e1f1e" RelX="0.0" RelY="1.0" />
+      <Point GraphId="cd72c" X="534.0" Y="265.0" GraphRef="f5cf0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2c93f8d">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="701.0" Y="536.0" GraphRef="f0cf7" RelX="0.0" RelY="1.0" />
-      <Point X="758.0" Y="578.0" GraphRef="b95e4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="ad427" X="701.0" Y="536.0" GraphRef="a7e6b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e7b17" X="758.0" Y="578.0" GraphRef="b95e4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id503dd6c1">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="702.5" Y="64.0" GraphRef="d2206" RelX="0.0" RelY="1.0" />
-      <Point X="702.5" Y="176.0" GraphRef="d8f29" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="bd6fb" X="702.5" Y="64.0" GraphRef="d2206" RelX="0.0" RelY="1.0" />
+      <Point GraphId="d6eb4" X="702.5" Y="176.0" GraphRef="d8f29" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5ab10303">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="682.5" Y="196.0" GraphRef="d8f29" RelX="-0.5" RelY="1.0" />
-      <Point X="586.0" Y="297.0" GraphRef="febf6" RelX="1.0" RelY="0.0" ArrowHead="TBar" />
+      <Point GraphId="e303c" X="682.5" Y="196.0" GraphRef="d8f29" RelX="-0.5" RelY="1.0" />
+      <Point GraphId="e63a2" X="586.0" Y="297.0" GraphRef="f5cf0" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5e956ca7">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="657.0" Y="598.0" GraphRef="f443a" RelX="0.0" RelY="1.0" />
-      <Point X="666.0833333333334" Y="661.6666666666667" GraphRef="c7f8d" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="fbfaa" X="657.0" Y="598.0" GraphRef="f443a" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a0cdc" X="666.0833333333334" Y="661.6666666666667" GraphRef="a9c35" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5f7a5080">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="352.5" Y="596.0" GraphRef="ce4fa" RelX="0.0" RelY="1.0" />
-      <Point X="352.5" Y="692.0" GraphRef="df0d6" RelX="0.0" RelY="-1.0" ArrowHead="TBar" />
+      <Point GraphId="aafe9" X="352.5" Y="596.0" GraphRef="ce4fa" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c9462" X="352.5" Y="692.0" GraphRef="df0d6" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id732ecbfe">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="157.0" Y="247.0" GraphRef="e3c37" RelX="1.0" RelY="0.0" />
-      <Point X="514.0" Y="374.0" GraphRef="bc4e4" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f5ec4" X="157.0" Y="247.0" GraphRef="b8bd5" RelX="1.0" RelY="0.0" />
+      <Point GraphId="f126b" X="514.0" Y="374.0" GraphRef="bc4e4" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7a55e72f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="534.0" Y="68.0" GraphRef="e8d52" RelX="0.0" RelY="1.0" />
-      <Point X="534.0" Y="174.0" GraphRef="ba77d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="dd53a" X="534.0" Y="68.0" GraphRef="e8d52" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f3e00" X="534.0" Y="174.0" GraphRef="ba77d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7fd79be7">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="133.0" Y="160.24166666666665" GraphRef="a188d" RelX="-1.0" RelY="0.5" />
-      <Point X="105.0" Y="195.0" GraphRef="e3c37" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f4365" X="133.0" Y="160.24166666666667" GraphRef="aad9f" RelX="-1.0" RelY="0.5" />
+      <Point GraphId="e8fd8" X="105.0" Y="195.0" GraphRef="b8bd5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id83bd086">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="105.0" Y="299.0" GraphRef="e3c37" RelX="0.0" RelY="1.0" />
-      <Point X="209.0" Y="492.0" GraphRef="c5db8" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="d59b0" X="105.0" Y="299.0" GraphRef="b8bd5" RelX="0.0" RelY="1.0" />
+      <Point GraphId="bb46e" X="209.0" Y="492.0" GraphRef="c5db8" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id900af8a7">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="328.0" Y="204.0" GraphRef="a2b76" RelX="0.0" RelY="1.0" />
-      <Point X="482.0" Y="297.0" GraphRef="febf6" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point GraphId="b5444" X="328.0" Y="204.0" GraphRef="a2b76" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a47bc" X="482.0" Y="297.0" GraphRef="f5cf0" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9a7b92fa">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="758.0" Y="618.0" GraphRef="bb287" RelX="0.0" RelY="1.0" />
-      <Point X="745.5833333333334" Y="661.6666666666667" GraphRef="c7f8d" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="fb535" X="758.0" Y="618.0" GraphRef="bb287" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c8bb1" X="745.5833333333334" Y="661.6666666666667" GraphRef="a9c35" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida289d9dc">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="742.5" Y="186.0" GraphRef="d8f29" RelX="1.0" RelY="0.0" />
-      <Point X="840.0" Y="677.0" GraphRef="f04e6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="eb482" X="742.5" Y="186.0" GraphRef="d8f29" RelX="1.0" RelY="0.0" />
+      <Point GraphId="c9de4" X="840.0" Y="677.0" GraphRef="f04e6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida3fec34e">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="328.0" Y="204.0" GraphRef="a2b76" RelX="0.0" RelY="1.0" />
-      <Point X="328.0" Y="470.0" GraphRef="a0a3c" RelX="0.0" RelY="-1.0" ArrowHead="TBar" />
+      <Point GraphId="f208d" X="328.0" Y="204.0" GraphRef="a2b76" RelX="0.0" RelY="1.0" />
+      <Point GraphId="a3980" X="328.0" Y="470.0" GraphRef="b8ba3" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idaa0aece">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="701.0" Y="536.0" GraphRef="f0cf7" RelX="0.0" RelY="1.0" />
-      <Point X="657.0" Y="578.0" GraphRef="f443a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="abaaf" X="701.0" Y="536.0" GraphRef="a7e6b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b6981" X="657.0" Y="578.0" GraphRef="f443a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc02ec660">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="701.0" Y="472.0" GraphRef="f0cf7" RelX="0.0" RelY="-1.0" />
-      <Point X="702.5" Y="196.0" GraphRef="d8f29" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point GraphId="cedbb" X="701.0" Y="472.0" GraphRef="a7e6b" RelX="0.0" RelY="-1.0" />
+      <Point GraphId="ec2ff" X="702.5" Y="196.0" GraphRef="d8f29" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd80a5174">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="252.98333333333335" Y="611.4833333333333" GraphRef="d72a2" RelX="0.0" RelY="1.0" />
-      <Point X="283.5" Y="643.0" GraphRef="f367a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="c3393" X="252.98333333333335" Y="611.4833333333333" GraphRef="d72a2" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e3408" X="283.5" Y="643.0" GraphRef="f367a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide66d7a56">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="328.0" Y="67.0" GraphRef="fc626" RelX="0.0" RelY="1.0" />
-      <Point X="328.0" Y="156.0" GraphRef="f6609" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f7885" X="328.0" Y="67.0" GraphRef="fc626" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e177e" X="328.0" Y="156.0" GraphRef="c6324" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide69c4855">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="328.0" Y="514.0" GraphRef="a0a3c" RelX="0.0" RelY="1.0" />
-      <Point X="252.98333333333335" Y="551.4833333333333" GraphRef="b6c1f" RelX="0.0" RelY="-1.0" ArrowHead="TBar" />
+      <Point GraphId="bfead" X="328.0" Y="514.0" GraphRef="b8ba3" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f21d5" X="252.98333333333335" Y="551.4833333333333" GraphRef="b6c1f" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <GraphicalLine GraphId="a0318">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="28.0" Y="95.0" />
-      <Point X="872.0" Y="95.0" />
+      <Point GraphId="e2b24" X="28.0" Y="95.0" />
+      <Point GraphId="b455a" X="872.0" Y="95.0" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="e8b5b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="28.0" Y="113.0" />
-      <Point X="876.0" Y="113.0" />
+      <Point GraphId="ab83a" X="28.0" Y="113.0" />
+      <Point GraphId="fecfc" X="876.0" Y="113.0" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="mTORC1" GraphId="bb893">
@@ -513,20 +513,30 @@ TOR signaling is highly integrated in other signaling pathways that respond to e
   <Shape GraphId="ffd5a">
     <Graphics CenterX="167.0" CenterY="75.48333333333333" Width="10.0" Height="9.033333333333333" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
   </Shape>
-  <Group GroupId="b8ba3" GraphId="a0a3c" Style="Complex" />
-  <Group GroupId="aad9f" GraphId="a188d" Style="Group" />
-  <Group GroupId="c93f3" GraphId="b918b" Style="Complex" />
-  <Group GroupId="a9c35" GraphId="c7f8d" Style="Group" />
-  <Group GroupId="aeb29" GraphId="d4550" Style="Group" />
-  <Group GroupId="b8bd5" GraphId="e3c37" Style="Complex">
+  <Group GroupId="b8ba3" GraphId="b8ba3" Style="Complex" />
+  <Group GroupId="aad9f" GraphId="aad9f" Style="Group" />
+  <Group GroupId="c93f3" GraphId="c93f3" Style="Complex" />
+  <Group GroupId="a9c35" GraphId="a9c35" Style="Group" />
+  <Group GroupId="aeb29" GraphId="aeb29" Style="Group" />
+  <Group GroupId="b8bd5" GraphId="b8bd5" Style="Complex">
     <BiopaxRef>b36</BiopaxRef>
   </Group>
-  <Group GroupId="ef616" GraphId="e7ba6" Style="Group" />
-  <Group GroupId="a7e6b" GraphId="f0cf7" Style="Complex" />
-  <Group GroupId="c6324" GraphId="f6609" Style="Group" />
-  <Group GroupId="f5cf0" GraphId="febf6" Style="Complex" />
+  <Group GroupId="ef616" GraphId="ef616" Style="Group" />
+  <Group GroupId="a7e6b" GraphId="a7e6b" Style="Complex" />
+  <Group GroupId="c6324" GraphId="c6324" Style="Group" />
+  <Group GroupId="f5cf0" GraphId="f5cf0" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMPK signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000542</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insulin signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000143</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mTOR signaling pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000180</bp:ID>
@@ -540,30 +550,6 @@ TOR signaling is highly integrated in other signaling pathways that respond to e
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corradetti MN</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guan KL</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMPK signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000542</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b36">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19143648</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rag proteins regulate amino-acid-induced mTORC1 signalling.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Soc Trans</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sancak Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sabatini DM</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f9c">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16469695</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TOR signaling in growth and metabolism.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wullschleger S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loewith R</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hall MN</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a76">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16516475</bp:ID>
@@ -583,11 +569,24 @@ TOR signaling is highly integrated in other signaling pathways that respond to e
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang Q</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guan KL</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insulin signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000143</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f9c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16469695</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TOR signaling in growth and metabolism.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wullschleger S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loewith R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hall MN</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b36">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19143648</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rag proteins regulate amino-acid-induced mTORC1 signalling.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Soc Trans</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sancak Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sabatini DM</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
-

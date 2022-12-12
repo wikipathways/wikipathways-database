@@ -20,7 +20,8 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP7
 - /instance/WP7
-revision: null
+- /instance/WP7_rr117342
+revision: r117342
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP7.html

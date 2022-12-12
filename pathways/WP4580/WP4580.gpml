@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Blood clotting and drug effects" Data-Source="WikiPathways" Version="WP4580_r119307" Author="[Chris, DeSl, Egonw, Khanspers, AlexanderPico, Finterly]" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">Formation of a blood clot by arachidonic acid. This pathway also shows various stimulants/inhibitors that have an effect on the pathway, while also showing the two compounds which respectively cause vasoconstriction/vasodilation and inhibit/stimulate platelet aggregation.
-</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Blood clotting and drug effects" Data-Source="WikiPathways" Version="WP4580_r123582" Author="[Chris, DeSl, Egonw, Khanspers, AlexanderPico, Finterly]" Last-Modified="20220804123913" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Formation of a blood clot by arachidonic acid. This pathway also shows various stimulants/inhibitors that have an effect on the pathway, while also showing the two compounds which respectively cause vasoconstriction/vasodilation and inhibit/stimulate platelet aggregation.</Comment>
   <BiopaxRef>e5c</BiopaxRef>
-  <Graphics BoardWidth="1036.3708022891694" BoardHeight="655.5" />
+  <Graphics BoardWidth="1141.0" BoardHeight="815.7114794352365" />
+  <DataNode TextLabel="Cross-linked fibrin" GraphId="eca77" Type="Pathway">
+    <Graphics CenterX="567.5755064456719" CenterY="604.25" Width="134.33947206875376" Height="42.5" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP4927" />
+  </DataNode>
+  <DataNode TextLabel="Vitamin K &#xA;pathway" GraphId="a391b" Type="Pathway">
+    <Graphics CenterX="638.5" CenterY="413.25" Width="115.0" Height="39.5" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP5186" />
+  </DataNode>
   <DataNode TextLabel="Thromboxane A2" GraphId="ab25e" Type="Metabolite">
     <Graphics CenterX="363.5" CenterY="305.5" Width="111.0" Height="38.5" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:15627" />
@@ -44,7 +51,7 @@
     <Graphics CenterX="567.5" CenterY="467.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:28384" />
   </DataNode>
-  <DataNode TextLabel="Thromboxane A2" GraphId="e4fda" Type="Protein">
+  <DataNode TextLabel="Thromboxane A2" GraphId="e4fda" Type="Metabolite">
     <Graphics CenterX="363.5" CenterY="365.8141884328358" Width="133.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="ChEBI" ID="CHEBI:15627" />
   </DataNode>
@@ -53,161 +60,206 @@
     <Xref Database="ChEBI" ID="CHEBI:5054" />
   </DataNode>
   <DataNode TextLabel="NSAIDs" GraphId="f884e" Type="Metabolite">
-    <Graphics CenterX="272.90709421641793" CenterY="153.09290578358213" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="263.90709421641793" CenterY="171.09290578358213" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:35475" />
   </DataNode>
+  <DataNode TextLabel="Eicosanoid&#xA;synthesis" GraphId="e6eab" Type="Pathway">
+    <Graphics CenterX="208.5" CenterY="112.25" Width="115.0" Height="39.5" ZOrder="32769" FontWeight="Bold" FontSize="12" Valign="Middle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP167" />
+  </DataNode>
+  <Interaction GraphId="ae26e">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="d7e66" X="638.5" Y="433.0" GraphRef="a391b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="bdb79" X="612.5" Y="467.0" GraphRef="dd27b" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d7e50">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="eb0ea" X="266.0" Y="112.25" GraphRef="e6eab" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b9648" X="363.5" Y="153.4" GraphRef="ea490" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a0d93">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point GraphId="a0124" X="723.756906077348" Y="517.4953959484346" />
+      <Point GraphId="a4963" X="815.2240638428484" Y="517.4953959484346" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Interaction GraphId="id13750a96">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="426.5" Y="215.5" GraphRef="aee9b" RelX="1.0" RelY="0.0" />
-      <Point X="527.0" Y="215.5" GraphRef="d1c0d" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="ed4e3" X="426.5" Y="215.5" GraphRef="aee9b" RelX="1.0" RelY="0.0" />
+      <Point GraphId="a449b" X="527.0" Y="215.5" GraphRef="d1c0d" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id18b4e8a4">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="567.5" Y="539.5" GraphRef="ebbba" RelX="0.0" RelY="1.0" />
-      <Point X="567.5" Y="583.0" GraphRef="bb818" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="fdd40" X="567.5" Y="539.5" GraphRef="ebbba" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f039b" X="567.5755064456719" Y="583.0" GraphRef="eca77" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2386e7dc">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="634.0" Y="215.5" GraphRef="d1c0d" RelX="1.0" RelY="0.0" />
-      <Point X="705.0" Y="215.5" GraphRef="dfe96" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="a7d6b" X="634.0" Y="215.5" GraphRef="d1c0d" RelX="1.0" RelY="0.0" />
+      <Point GraphId="aca0f" X="705.0" Y="215.5" GraphRef="dfe96" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id33793819">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="319.0" Y="410.75" GraphRef="d879b" RelX="1.0" RelY="0.0" />
-      <Point X="410.0" Y="410.75" GraphRef="b3dec" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="c7296" X="319.0" Y="410.75" GraphRef="d879b" RelX="1.0" RelY="0.0" />
+      <Point GraphId="e1d13" X="410.0" Y="410.75" GraphRef="b3dec" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4945054945054945" Shape="None" GraphId="f1ede" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id37c70a1f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="317.90709421641793" Y="153.09290578358213" GraphRef="f884e" RelX="1.0" RelY="0.0" />
-      <Point X="363.5" Y="153.4" GraphRef="ea490" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="f37d5" X="308.90709421641793" Y="171.09290578358213" GraphRef="f884e" RelX="1.0" RelY="0.0" />
+      <Point GraphId="ecd02" X="363.5" Y="153.4" GraphRef="ea490" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id54f5a436">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="480.0" Y="431.0" GraphRef="b3dec" RelX="0.0" RelY="1.0" />
-      <Point X="480.0" Y="523.75" GraphRef="fd1ee" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="c4641" X="480.0" Y="431.0" GraphRef="b3dec" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e9525" X="480.0" Y="523.75" GraphRef="fd1ee" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
       <Anchor Position="0.40970350404312667" Shape="None" GraphId="c79a3" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id604ee21e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="522.5" Y="467.0" GraphRef="dd27b" RelX="-1.0" RelY="0.0" />
-      <Point X="480.0" Y="469.0" GraphRef="c79a3" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="be050" X="522.5" Y="467.0" GraphRef="dd27b" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b3347" X="480.0" Y="469.0" GraphRef="c79a3" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6fd1374f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="363.5" Y="378.3141884328358" GraphRef="e4fda" RelX="0.0" RelY="1.0" />
-      <Point X="364.0" Y="410.75" GraphRef="f1ede" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="dacd2" X="363.5" Y="378.3141884328358" GraphRef="e4fda" RelX="0.0" RelY="1.0" />
+      <Point GraphId="de1dc" X="364.0" Y="410.75" GraphRef="f1ede" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id8377d099">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="446.0" Y="523.75" GraphRef="d8c6e" RelX="1.0" RelY="0.0" />
-      <Point X="517.0" Y="523.75" GraphRef="ebbba" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point GraphId="dde5d" X="446.0" Y="523.75" GraphRef="d8c6e" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b0742" X="517.0" Y="523.75" GraphRef="ebbba" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4788732394366197" Shape="None" GraphId="fd1ee" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id89bb56bc">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="449.5" Y="468.15709421641793" GraphRef="af2d0" RelX="1.0" RelY="0.0" />
-      <Point X="480.0" Y="469.0" GraphRef="c79a3" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point GraphId="b7edc" X="449.5" Y="468.15709421641793" GraphRef="af2d0" RelX="1.0" RelY="0.0" />
+      <Point GraphId="b8ca7" X="480.0" Y="469.0" GraphRef="c79a3" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9bda1e4f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="363.5" Y="238.75" GraphRef="aee9b" RelX="0.0" RelY="1.0" />
-      <Point X="363.5" Y="286.25" GraphRef="ab25e" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="c666a" X="363.5" Y="238.75" GraphRef="aee9b" RelX="0.0" RelY="1.0" />
+      <Point GraphId="b9222" X="363.5" Y="286.25" GraphRef="ab25e" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9e74b264">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="419.0" Y="305.5" GraphRef="ab25e" RelX="1.0" RelY="0.0" />
-      <Point X="705.5" Y="305.5" GraphRef="d2b61" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point GraphId="fe205" X="419.0" Y="305.5" GraphRef="ab25e" RelX="1.0" RelY="0.0" />
+      <Point GraphId="d1c17" X="705.5" Y="305.5" GraphRef="d2b61" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idb305ca09">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="363.5" Y="324.75" GraphRef="ab25e" RelX="0.0" RelY="1.0" />
-      <Point X="363.5" Y="353.3141884328358" GraphRef="e4fda" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="a1740" X="363.5" Y="324.75" GraphRef="ab25e" RelX="0.0" RelY="1.0" />
+      <Point GraphId="fe44b" X="363.5" Y="353.3141884328358" GraphRef="e4fda" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idcf0470ab">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="363.5" Y="127.5" GraphRef="c5385" RelX="0.0" RelY="1.0" />
-      <Point X="363.5" Y="192.25" GraphRef="aee9b" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point GraphId="b27b6" X="363.5" Y="127.5" GraphRef="c5385" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f905f" X="363.5" Y="192.25" GraphRef="aee9b" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4" Shape="None" GraphId="ea490" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idfac10fcc">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="416.0" Y="153.0" GraphRef="b0a17" RelX="-1.0" RelY="0.0" />
-      <Point X="363.5" Y="153.4" GraphRef="ea490" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point GraphId="d8762" X="416.0" Y="153.0" GraphRef="b0a17" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="ad332" X="363.5" Y="153.4" GraphRef="ea490" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <GraphicalLine GraphId="cbdab">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="736.853471547349" Y="490.6597559658784" />
-      <Point X="853.4715473490983" Y="490.6597559658784" ArrowHead="mim-catalysis" />
+      <Point GraphId="a38a3" X="721.338336633481" Y="481.4516528351231" />
+      <Point GraphId="cdc1c" X="815.4113877419777" Y="481.4516528351231" ArrowHead="mim-catalysis" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="fe855">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="734.2619587517546" Y="453.5147392290249" />
-      <Point X="849.1523593564409" Y="454.37857682755634" ArrowHead="mim-conversion" />
+      <Point GraphId="df89c" X="721.338336633481" Y="445.1704736968011" />
+      <Point GraphId="ac5c6" X="811.0921997493203" Y="445.1704736968011" ArrowHead="mim-conversion" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="Catalysis" GraphId="a42e7">
-    <Graphics CenterX="933.8084440125255" CenterY="491.52359356441" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="888.2750153468385" CenterY="482.31549043365476" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Legend" GraphId="a8ef6">
+    <Graphics CenterX="835.9626409243041" CenterY="400.5666973481975" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Causes vasoconstriction" GraphId="b1324" GroupRef="a30b8">
-    <Graphics CenterX="815.0" CenterY="286.75" Width="160.0" Height="34.5" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="805.5000000000001" CenterY="286.75" Width="160.0" Height="34.5" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Inhibits platelet aggregation" GraphId="b1c2b" GroupRef="ee22e">
-    <Graphics CenterX="806.5" CenterY="227.75" Width="159.0" Height="48.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="805.5" CenterY="227.75" Width="217.75138121546945" Height="48.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Stimulates platelet aggregation" GraphId="b5d04" GroupRef="a30b8">
-    <Graphics CenterX="811.25" CenterY="321.0" Width="171.5" Height="50.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="805.5000000000001" CenterY="321.0" Width="223.77363413136865" Height="50.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Causes vasodilation" GraphId="b9541" GroupRef="ee22e">
     <Graphics CenterX="805.5" CenterY="200.25" Width="156.0" Height="50.5" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="Cross-linked fibrin" GraphId="bb818">
-    <Graphics CenterX="567.5" CenterY="604.25" Width="117.0" Height="42.5" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  <Label TextLabel="Inhibition" GraphId="beeba">
+    <Graphics CenterX="888.2750153468384" CenterY="518.109269490485" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="Metabolite conversion" GraphId="fa072">
-    <Graphics CenterX="936.7916531692042" CenterY="452.8540384407731" Width="139.15829823993064" Height="24.59372637944068" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  <Label TextLabel="Metabolic conversion" GraphId="fa072">
+    <Graphics CenterX="888.2750153468385" CenterY="443.6459353100178" Width="139.15829823993064" Height="24.59372637944068" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
+  <Shape TextLabel="Pathway" GraphId="c0b85">
+    <Graphics CenterX="772.6167894413751" CenterY="558.552946593002" Width="86.4422958870473" Height="36.104665438919554" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="14931d" Rotation="0.0" />
+  </Shape>
   <Shape GraphId="d2b61">
     <Graphics CenterX="805.5" CenterY="305.5" Width="200.0" Height="81.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d498e">
+    <Graphics CenterX="836.7048802946603" CenterY="526.1227747084098" Width="246.78667894413576" Height="203.8723143032534" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
   <Shape GraphId="dfe96">
     <Graphics CenterX="802.5" CenterY="215.5" Width="195.0" Height="69.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0" />
   </Shape>
-  <Group GroupId="a30b8" Style="Group" />
-  <Group GroupId="ee22e" Style="Group" />
+  <Shape TextLabel="Metabolite" GraphId="d4a67">
+    <Graphics CenterX="875.9255678330259" CenterY="558.552946593002" Width="86.4422958870473" Height="36.104665438919554" ZOrder="32770" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="0000ff" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Protein" GraphId="ed6ee">
+    <Graphics CenterX="826.9937077961931" CenterY="603.5437384898715" Width="86.4422958870473" Height="36.104665438919554" ZOrder="32771" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="a30b8" GraphId="a30b8" Style="Group" />
+  <Group GroupId="ee22e" GraphId="ee22e" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coagulation cascade pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000474</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e5c">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9780813546773</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN</bp:DB>
@@ -216,11 +268,5 @@
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glen D. Lawrence</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coagulation cascade pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000474</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-

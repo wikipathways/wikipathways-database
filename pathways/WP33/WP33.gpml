@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Fatty acid omega-oxidation" Data-Source="WikiPathways" Version="WP33_r117885" Author="[Evelo, MaintBot, Thomas, Christine Chichester, Eweitz]" Organism="Mus musculus">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Fatty acid omega-oxidation" Data-Source="WikiPathways" Version="WP33_r124578" Author="[Evelo, MaintBot, Thomas, Christine Chichester, Eweitz, Egonw]" Last-Modified="20221113045259" Organism="Mus musculus">
+  <Comment Source="WikiPathways-description" />
+  <Comment Source="GenMAPP notes">Created by Magali Jaillard, Marijke Vermeer, Michiel Adrieans, Ron Schormans and Chris Evelo, see website.</Comment>
+  <Comment Source="GenMAPP remarks">http://www.bigcat.unimaas.nl/mapps/</Comment>
   <Graphics BoardWidth="630.0" BoardHeight="869.5" />
+  <DataNode TextLabel="HOC-(CH2)10-COO-" GraphId="c9a1f" Type="Metabolite">
+    <Graphics CenterX="316.6666666666667" CenterY="616.6666666666666" Width="153.33333333333334" Height="19.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Beta Oxidation" GraphId="c9a97" Type="Pathway">
+    <Graphics CenterX="316.6666666666667" CenterY="830.0" Width="117.33333333333333" Height="19.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="CH3-(CH2)10-COO-" GraphId="cd5a7" Type="Metabolite">
+    <Graphics CenterX="318.6666666666667" CenterY="152.0" Width="150.33333333333334" Height="19.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="HO-CH-(CH2)10-COO-" GraphId="ee4d4" Type="Metabolite">
+    <Graphics CenterX="316.6666666666667" CenterY="413.3333333333333" Width="170.33333333333334" Height="19.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="-OOC-(CH2)10-COO-" GraphId="efd6d" Type="Metabolite">
+    <Graphics CenterX="316.6666666666667" CenterY="746.6666666666666" Width="158.33333333333334" Height="19.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
   <DataNode TextLabel="CYP2D6" GraphId="a09" Type="GeneProduct" GroupRef="daf66">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CYP2D6 | cytochrome P450 family 2 subfamily D..." />
     <Graphics CenterX="316.6666666666667" CenterY="314.0" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -78,74 +101,59 @@
   </DataNode>
   <Interaction GraphId="d170d">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="318.6666666666667" Y="161.5" GraphRef="eb3" RelX="0.0" RelY="1.0" />
-      <Point X="316.6666666666667" Y="403.8333333333333" GraphRef="f84" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="a60fb" X="318.6666666666667" Y="161.5" GraphRef="cd5a7" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f7164" X="316.6666666666667" Y="403.8333333333333" GraphRef="ee4d4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.4" Shape="None" GraphId="cffe9" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d5bbf">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="316.6666666666667" Y="626.1666666666666" GraphRef="b32" RelX="0.0" RelY="1.0" />
-      <Point X="316.6666666666667" Y="737.1666666666666" GraphRef="d34" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f19ac" X="316.6666666666667" Y="626.1666666666666" GraphRef="c9a1f" RelX="0.0" RelY="1.0" />
+      <Point GraphId="e86fc" X="316.6666666666667" Y="737.1666666666666" GraphRef="efd6d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.4" Shape="None" GraphId="afd25" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e10c2">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="316.6666666666667" Y="756.1666666666666" GraphRef="d34" RelX="0.0" RelY="1.0" />
-      <Point X="316.66666666666663" Y="820.5" GraphRef="dfd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="dbe0c" X="316.6666666666667" Y="756.1666666666666" GraphRef="efd6d" RelX="0.0" RelY="1.0" />
+      <Point GraphId="f3ac7" X="316.66666666666663" Y="820.5" GraphRef="c9a97" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e7a6a">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="316.6666666666667" Y="422.8333333333333" GraphRef="f84" RelX="0.0" RelY="1.0" />
-      <Point X="316.6666666666667" Y="607.1666666666666" GraphRef="b32" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point GraphId="f46f8" X="316.6666666666667" Y="422.8333333333333" GraphRef="ee4d4" RelX="0.0" RelY="1.0" />
+      <Point GraphId="c32aa" X="316.6666666666667" Y="607.1666666666666" GraphRef="c9a1f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.4" Shape="None" GraphId="dfcff" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id96fab666">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="317.8666666666667" Y="258.43333333333334" GraphRef="cffe9" RelX="0.0" RelY="0.0" />
-      <Point X="271.33333333333337" Y="274.0" GraphRef="dba4c" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="f24b7" X="317.8666666666667" Y="258.43333333333334" GraphRef="cffe9" RelX="0.0" RelY="0.0" />
+      <Point GraphId="d3e72" X="271.33333333333337" Y="274.0" GraphRef="daf66" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idaeb22c3e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="316.6666666666667" Y="496.56666666666666" GraphRef="dfcff" RelX="0.0" RelY="0.0" />
-      <Point X="278.0" Y="511.66666666666663" GraphRef="b39b3" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="b6d3b" X="316.6666666666667" Y="496.56666666666666" GraphRef="dfcff" RelX="0.0" RelY="0.0" />
+      <Point GraphId="be6ea" X="278.0" Y="511.66666666666663" GraphRef="bc5d2" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idbb46d237">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="316.6666666666667" Y="670.5666666666666" GraphRef="afd25" RelX="0.0" RelY="0.0" />
-      <Point X="274.33333333333337" Y="676.3333333333334" GraphRef="bf159" RelX="-1.0" RelY="0.0" />
+      <Point GraphId="df184" X="316.6666666666667" Y="670.5666666666666" GraphRef="afd25" RelX="0.0" RelY="0.0" />
+      <Point GraphId="b846f" X="274.33333333333337" Y="676.3333333333334" GraphRef="ba935" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Label TextLabel="HOC-(CH2)10-COO-" GraphId="b32">
-    <Graphics CenterX="316.6666666666667" CenterY="616.6666666666666" Width="153.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="-OOC-(CH2)10-COO-" GraphId="d34">
-    <Graphics CenterX="316.6666666666667" CenterY="746.6666666666666" Width="158.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="Beta Oxidation" GraphId="dfd">
-    <Graphics CenterX="316.6666666666667" CenterY="830.0" Width="117.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
-  </Label>
-  <Label TextLabel="CH3-(CH2)10-COO-" GraphId="eb3">
-    <Graphics CenterX="318.6666666666667" CenterY="152.0" Width="150.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="HO-CH-(CH2)10-COO-" GraphId="f84">
-    <Graphics CenterX="316.6666666666667" CenterY="413.3333333333333" Width="170.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Group GroupId="bc5d2" GraphId="b39b3" Style="Complex" />
-  <Group GroupId="ba935" GraphId="bf159" Style="Complex" />
-  <Group GroupId="daf66" GraphId="dba4c" Style="Complex" />
+  <Group GroupId="bc5d2" GraphId="bc5d2" Style="Complex" />
+  <Group GroupId="ba935" GraphId="ba935" Style="Complex" />
+  <Group GroupId="daf66" GraphId="daf66" Style="Complex" />
   <InfoBox CenterX="5.0" CenterY="78.33333333333333" />
   <Legend CenterX="600.0" CenterY="113.33333333333333" />
   <Biopax>
@@ -156,4 +164,3 @@
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-
