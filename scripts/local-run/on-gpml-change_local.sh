@@ -8,7 +8,7 @@ exec >local-run.log 2>&1
 echo "1. Define list of GPML files"
 
 # 1A. Either as a local folder containing GPML files
-changed_dir="wikipathways-tina/pathways" #set to "" to use 1B instead
+changed_dir="local_gpml_files" #set to "" to use 1B instead
 
 # 1B. Or as a list of WPIDs referencing GPMLs in existing pathway subfolders
 changed_wpids=() #WPIDs or use keyword "ALL"
@@ -97,8 +97,8 @@ echo "3. ACTION: metadata"
 #NOTE: requires Java 11 to be accessible localy
 
 # cache dependencies
-if [ ! -e ./meta-data-action-1.0.3-jar-with-dependencies.jar ]; then
-    wget -O meta-data-action-1.0.3-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/1.0.0/meta-data-action-1.0.3-jar-with-dependencies.jar
+if [ ! -e ./meta-data-action-1.0.4-jar-with-dependencies.jar ]; then
+    wget -O meta-data-action-1.0.4-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/1.1.0/meta-data-action-1.0.4-jar-with-dependencies.jar
     chmod 777 meta-data-action-1.0.3-jar-with-dependencies.jar
 fi
 
@@ -125,17 +125,14 @@ for f in ${changed_gpmls[@]}; do
 
     #FOR BULK ACTION ONLY: hack to set last edited to previous info (if available)    
     prevInfo="../wikipathways-database/pathways/$wpid/$wpid-info.json"
-    if [ -z $prevInfo ]; then
+    if [ -f $prevInfo ]; then
         prevLastEd="$(sed -n '/\"last-edited\": .*/p' $prevInfo)"
-        prevDate="$(sed -n '/\"last-edited\"\: /s/.*\: \(.*\)/\1/p' $prevInfo |tr -d '"' | tr -d ',' )"
-        thisInfo="pathways/$wpid/$wpid-info.json"
         sed -i '' 's/.*\"last-edited\"\: .*/'"$prevLastEd"'/' "$thisInfo"
     fi
 
     #BUG FIX: fix authors due to meta-data-action bug
     gpmlAuthors="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $f)"
-    gpmlAuthorsArr=(`echo $gpmlAuthors | sed 's/, /\n/g'`)
-    newAuthors=(`echo $gpmlAuthors | sed 's/^/\"authors\"\: \[\"/;s/, /\",\"/g;s/$/\"\],/'`)
+    newAuthors=(`echo $gpmlAuthors | sed 's/\&amp\;amp\;/and/;s/^/\"authors\"\: \[\"/;s/, /\",\"/g;s/$/\"\],/'`)
     sed -i '' 's/\"authors\"\: \[\],/'"$newAuthors"'/' "$thisInfo"
 
 done
@@ -176,24 +173,6 @@ for f in ${changed_gpmls[@]}; do
     echo "perfoming homology conversion for $wpid ($f)"
     java -jar HomologyMapperAuto-WithDependencies.jar scripts/homology-converter/properties/autorun.properties $wpid
 done
-
-#HM_PATH="wikipathways-homology"
-#mkdir $HM_PATH
-#for f in ${changed_gpmls[@]}; do
-#    wpid="$(basename ""$f"" | sed 's/.gpml//')"
-#    echo "copying gpml files for $wpid for all species"
-#            
-#    for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss; do
-#        mkdir -p "$HM_PATH"/pathways/$value/"$wpid"
-#        for old_f in "$HM_PATH"/pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
-#            echo "for $old_f in $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml"
-#            if [ -e "$old_f" ]; then
-#                rm "$old_f"
-#                echo "rm $old_f"
-#            fi
-#        done
-#    done  
-#done
 
 echo "TODO: Manually copy scripts/homology-converter/outputs folder content to wikipathways-homology repo for commit/push"
 
