@@ -182,8 +182,8 @@ jobs:
             chmod 777 meta-data-action-1.0.4-jar-with-dependencies.jar
             cat gdb.config
             echo "replacing blank publication Xrefs with NA to avoid NPE"
-            sed -i '' 's/><\/bp:ID>/>NA<\/bp:ID>/' "$f"
-            sed -i '' 's/><\/bp:DB>/>NA<\/bp:DB>/' "$f"
+            sed -i 's/><\/bp:ID>/>NA<\/bp:ID>/' "$f"
+            sed -i 's/><\/bp:DB>/>NA<\/bp:DB>/' "$f"
             echo "generating info and datanode files for $wpid"
             java -jar meta-data-action-1.0.4-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
           done
