@@ -99,7 +99,7 @@ echo "3. ACTION: metadata"
 # cache dependencies
 if [ ! -e ./meta-data-action-1.0.4-jar-with-dependencies.jar ]; then
     wget -O meta-data-action-1.0.4-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/1.1.0/meta-data-action-1.0.4-jar-with-dependencies.jar
-    chmod 777 meta-data-action-1.0.3-jar-with-dependencies.jar
+    chmod 777 meta-data-action-1.0.4-jar-with-dependencies.jar
 fi
 
 for f in ${changed_gpmls[@]}; do
