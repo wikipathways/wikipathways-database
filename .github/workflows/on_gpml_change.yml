@@ -120,15 +120,9 @@ jobs:
       - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
         name: Install deps
         run: |
-          if [ ! -e ./meta-data-action-1.0.3-jar-with-dependencies.jar ]; then
-            wget -O meta-data-action-1.0.3-jar-with-dependencies.jar https://github.com/hbasaric/meta-data-action/releases/download/v1.0.0/meta-data-action-1.0.3-jar-with-dependencies.jar
+          if [ ! -e ./meta-data-action-1.0.4-jar-with-dependencies.jar ]; then
+            wget -O meta-data-action-1.0.4-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.0/meta-data-action-1.0.4-jar-with-dependencies.jar
           fi
-              
-      - name: Generate gdb.config, fileNames.config, and fileDownloads.config
-        run: |
-          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
-            scripts/meta-data-action/configGenerator.sh $f
-          done
 
       - name: Cache dependencies
         uses: actions/cache@v2
@@ -176,22 +170,22 @@ jobs:
             ${{ runner.os }}-java-${{ hashFiles('**/*.bridge') }}
             ${{ runner.os }}-java-
             
-      - name: Install all bridge files
+      - name: Generate configs, install bridgeDb, generate info and datanode files
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            echo "generating configuration files for $f"
+            scripts/meta-data-action/configGenerator.sh $f
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
+            echo "installing bridgedb files for $org"
             scripts/meta-data-action/installDependencies.sh $org
-          done
-          
-      - name: Generate info and datanode files
-        run: |
-          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
-            org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
-            echo "generating info and datanode files for $wpid ($f)"
-            chmod 777 meta-data-action-1.0.3-jar-with-dependencies.jar
+            chmod 777 meta-data-action-1.0.4-jar-with-dependencies.jar
             cat gdb.config
-            java -jar meta-data-action-1.0.3-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
+            echo "replacing blank publication Xrefs with NA to avoid NPE"
+            sed -i '' 's/><\/bp:ID>/>NA<\/bp:ID>/' "$f"
+            sed -i '' 's/><\/bp:DB>/>NA<\/bp:DB>/' "$f"
+            echo "generating info and datanode files for $wpid"
+            java -jar meta-data-action-1.0.4-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
           done
       
       - name: Commit report
@@ -277,13 +271,10 @@ jobs:
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "generating frontmatter file for $wpid"
             json_info_f=./pathways/"$wpid"/"$wpid"-info.json
-            old_info_f=./pathways/"$wpid"/"$wpid".info
             if [ -e "$json_info_f" ]; then
               python scripts/create_pathway_frontmatter.py "$json_info_f"
-            elif [ -e "$old_info_f" ]; then
-              python scripts/create_pathway_frontmatter.py "$old_info_f"
             else
-              echo "info file missing for $wpid" >2
+              echo "info.json file missing for $wpid" >2
             fi
           done
 
@@ -317,7 +308,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
-          java-version: '8'
+          java-version: '11'
           
       - name: Cache and install dependencies
         uses: actions/cache@v3
