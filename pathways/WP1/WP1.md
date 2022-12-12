@@ -12,26 +12,14 @@ annotations:
   parent: cardiovascular system disease
   type: Disease Ontology
   value: cardiovascular system disease
-authors:
-- Nsalomonis
-- MaintBot
-- Khanspers
-- BruceConklin
-- TestUser
-- AlexanderPico
-- Thomas
-- Mkutmon
-- Andra
-- Egonw
-- Ddigles
-- Eweitz
+authors: []
 description: 'Statins inhibit endogenous cholesterol production by competitive inhibition
   of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion of HMG-CoA to
   mevalonate, an early rate-limiting step in cholesterol synthesis. This pathway delineates
   genes involved in statin pharmacogenomics, including genes involved in mediating
   the effects of statins on plasma lipoprotein metabolism.   Sources: [https://www.pharmgkb.org/pathway/PA2031
   PharmGKB] and [http://en.wikipedia.org/wiki/Statin Wikipedia]'
-last-edited: 2022-10-04
+last-edited: 2022-12-12
 organisms:
 - Mus musculus
 redirect_from:
