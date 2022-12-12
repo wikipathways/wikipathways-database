@@ -12,7 +12,19 @@ annotations:
   parent: cardiovascular system disease
   type: Disease Ontology
   value: cardiovascular system disease
-authors: []
+authors:
+- Nsalomonis
+- MaintBot
+- Khanspers
+- BruceConklin
+- TestUser
+- AlexanderPico
+- Thomas
+- Mkutmon
+- Andra
+- Egonw
+- Ddigles
+- Eweitz
 description: 'Statins inhibit endogenous cholesterol production by competitive inhibition
   of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion of HMG-CoA to
   mevalonate, an early rate-limiting step in cholesterol synthesis. This pathway delineates
