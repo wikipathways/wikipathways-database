@@ -97,5 +97,8 @@ jobs:
         run: |
           declare -a OrganismNames=("Anopheles gambiae" "Aspergillus niger" "Arabidopsis thaliana" "Bacillus subtilis" "Bos taurus" "Caenorhabditis elegans" "Canis familiaris" "Ciona intestinalis" "Danio rerio" "Daphnia magna" "Daphnia pulex" "Drosophila melanogaster" "Escherichia coli" "Gallus gallus" "Fusarium graminearum"  "Glycine max" "Homo sapiens" "Hordeum vulgare" "Macaca mulatta" "Mus musculus" "Mycobacterium tuberculosis" "Ornithorhynchus anatinus" "Ovis aries" "Oryza indica" "Oryza japonica" "Populus trichocarpa" "Pan troglodytes" "Equus caballus" "Rattus norvegicus" "Saccharomyces cerevisiae" "Solanum lycopersicum" "Sus scrofa" "Vitis vinifera" "Xenopus tropicalis" "Zea mays")
           for org in ${OrganismNames[@]}; do
+            echo "generating configuration files for $org"
+            scripts/meta-data-action/configGenerator.sh $org
+            echo "installing bridgedb files for $org"
             scripts/meta-data-action/installDependencies.sh $org
           done
