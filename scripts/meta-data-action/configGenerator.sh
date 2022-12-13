@@ -1,16 +1,6 @@
 #!/bin/bash
-# pass wp file in as argument
-wpFile="$1"
-
-ORGANISM=""
-FILENAME=""
-ORGANISM="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $wpFile | tr -d '"' | tr -d '>' | tr -d '\r')"            
-            
-org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $wpFile | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
-echo "adding organism $org to changedSpecies list"
-changedSpecies+=("$org")
-echo "$changedSpecies"
-
+# pass organism in as argument
+ORGANISM="$1"
 
 echo organism:
 ORGANISM=`echo $ORGANISM | sed -e 's/^[[:space:]]*//'`
@@ -62,10 +52,6 @@ echo "$metabolitesURL"
 
 echo metabolitesFilename:
 echo "$metabolitesFilename"
-
-wpid=$(basename ""$wpFile"" | sed 's/.gpml//')
-echo "$wpid"
-echo "$wpFile"
 
 #create gdb.config file with correct filename
 CFG_FILE="gdb.config"
