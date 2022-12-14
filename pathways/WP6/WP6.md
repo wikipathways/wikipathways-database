@@ -13,6 +13,8 @@ authors:
 - Mkutmon
 - DeSl
 - Eweitz
+citedin:
+- link: PMC9033237
 description: 'Integrins are receptors that mediate attachment between a cell and the
   tissues surrounding it, which may be other cells or the extracellular matrix (ECM).
   They also play a role in cell signaling and thereby define cellular shape, mobility,
