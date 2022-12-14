@@ -22,6 +22,8 @@ authors:
 - Nsalomonis
 - Zari
 - Eweitz
+communities:
+- CPTAC
 description: Based on [http://www.nature.com/nrc/journal/v3/n10/fig_tab/nrc1189_F4.html
   Surh, 2003, figure 4].  NRF2 is a transcription factor that regulates expression
   of many detoxification or antioxidant enzymes. The Kelch-like-ECH-associated protein
