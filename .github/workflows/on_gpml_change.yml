@@ -112,16 +112,16 @@ jobs:
         uses: actions/cache@v3
         id: cacheMetaJar
         with:
-          path: ./meta-data-action-1.0.4-jar-with-dependencies.jar
-          key: ${{ runner.os }}-meta-data-action-1.0.4.jar
+          path: ./meta-data-action-1.0.5-jar-with-dependencies.jar
+          key: ${{ runner.os }}-meta-data-action-1.0.5.jar
           restore-keys: |
-            ${{ runner.os }}-java-meta-data-action-1.0.4.jar
+            ${{ runner.os }}-java-meta-data-action-1.0.5.jar
     
       - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
         name: Install deps
         run: |
-          if [ ! -e ./meta-data-action-1.0.4-jar-with-dependencies.jar ]; then
-            wget -O meta-data-action-1.0.4-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.0/meta-data-action-1.0.4-jar-with-dependencies.jar
+          if [ ! -e ./meta-data-action-1.0.5-jar-with-dependencies.jar ]; then
+            wget -O meta-data-action-1.0.5-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.0/meta-data-action-1.0.5-jar-with-dependencies.jar
           fi
 
       - name: Cache dependencies
@@ -180,13 +180,13 @@ jobs:
             echo "installing bridgedb files for $org"
             scripts/meta-data-action/installDependencies.sh $org
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
-            chmod 777 meta-data-action-1.0.4-jar-with-dependencies.jar
+            chmod 777 meta-data-action-1.0.5-jar-with-dependencies.jar
             cat gdb.config
             echo "replacing blank publication Xrefs with NA to avoid NPE"
             sed -i 's/><\/bp:ID>/>NA<\/bp:ID>/' "$f"
             sed -i 's/><\/bp:DB>/>NA<\/bp:DB>/' "$f"
             echo "generating info and datanode files for $wpid"
-            java -jar meta-data-action-1.0.4-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
+            java -jar meta-data-action-1.0.5-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
           done
       
       - name: Commit report
