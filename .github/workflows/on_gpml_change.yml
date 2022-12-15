@@ -175,7 +175,7 @@ jobs:
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             echo "generating configuration files for $f"
             ORGANISM="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
-            scripts/meta-data-action/configGenerator.sh $ORGANISM
+            scripts/meta-data-action/configGenerator.sh "$ORGANISM"
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
             echo "installing bridgedb files for $org"
             scripts/meta-data-action/installDependencies.sh $org
