@@ -173,8 +173,8 @@ jobs:
       - name: Generate configs, install bridgeDb, generate info and datanode files
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
-            echo "generating configuration files for $f"
             ORGANISM="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
+            echo "generating configuration files for "$ORGANISM""
             scripts/meta-data-action/configGenerator.sh "$ORGANISM"
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
             echo "installing bridgedb files for $org"
@@ -185,7 +185,7 @@ jobs:
             echo "replacing blank publication Xrefs with NA to avoid NPE"
             sed -i 's/><\/bp:ID>/>NA<\/bp:ID>/' "$f"
             sed -i 's/><\/bp:DB>/>NA<\/bp:DB>/' "$f"
-            echo "generating info and datanode files for $wpid"
+            echo "generating info and datanode files for $wpid, organism "$org""
             java -jar meta-data-action-1.0.6-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
           done
       
