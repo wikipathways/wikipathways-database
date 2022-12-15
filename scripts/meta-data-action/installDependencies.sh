@@ -9,6 +9,11 @@ do
 	organismName="${NAME%=*}"
 	bridgeFileName="${NAME#*=}"
 	if [[ $org == $organismName ]]; then
+		echo "org:"
+		echo "$org"
+		echo $org
+		echo "organismName:"
+		echo $organismName
 		requiredFile=$bridgeFileName
     fi
 	if [[ "Metabolites" == $organismName ]]; then
@@ -24,6 +29,7 @@ do
 	bridgeFile="${LINK%%=*}"
 	downloadURL="${LINK#*=}"
 	if [[ $requiredFile == $bridgeFile ]]; then
+		echo "$requiredFile"
 		if [ ! -e ./$bridgeFile ]; then
 			echo "wget $downloadURL"
 			wget -O $bridgeFile $downloadURL
