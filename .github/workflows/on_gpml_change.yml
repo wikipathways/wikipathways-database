@@ -155,7 +155,9 @@ jobs:
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
             echo "generating configuration files for "$org""
             scripts/meta-data-action/configGenerator.sh "$org"
-            scripts/meta-data-action/installDependencies.sh $org
+            scripts/meta-data-action/installDependencies.sh "$org"
+            echo "install deps anyways"
+            ls -lh
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             chmod 777 meta-data-action-1.0.7-jar-with-dependencies.jar
             cat gdb.config
