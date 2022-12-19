@@ -1,5 +1,6 @@
 #!/bin/bash
 org="$1" | tr -d ' '
+echo "fileNames org: $org"
 
 # determine which organism .bridge file needs to be downloaded
 FILENAMES="fileNames.config"
@@ -8,6 +9,7 @@ for NAME in $NAMES
 do
 	organismName="${NAME%=*}"
 	bridgeFileName="${NAME#*=}"
+	echo "organismName: $organismName"
 	if [[ $org == $organismName ]]; then
 		requiredFile=$bridgeFileName
     fi
@@ -15,6 +17,7 @@ do
 		metabolitesFile=$bridgeFileName
     fi
 done
+echo "requiredFile: $requiredFile"
 
 # iterate through each line in fileDownloads.config and download from the URLs
 FILEDOWNLOADS="fileDownloads.config"
