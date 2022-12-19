@@ -9,11 +9,6 @@ do
 	organismName="${NAME%=*}"
 	bridgeFileName="${NAME#*=}"
 	if [[ $org == $organismName ]]; then
-		echo "org:"
-		echo "$org"
-		echo $org
-		echo "organismName:"
-		echo $organismName
 		requiredFile=$bridgeFileName
     fi
 	if [[ "Metabolites" == $organismName ]]; then
