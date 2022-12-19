@@ -13,7 +13,6 @@ annotations:
   type: Disease Ontology
   value: cardiovascular system disease
 authors:
-- ''
 - Nsalomonis
 - ' MaintBot'
 - ' Khanspers'
