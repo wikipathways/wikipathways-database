@@ -61,7 +61,7 @@ jobs:
             cached-bridge-files
             
       - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
-      - name: Install all bridge files
+        name: Install all bridge files
         run: |
           echo "Cache not found: cached-bridge-files"
           declare -a OrganismNames=("Metabolites" "Mus musculus")
