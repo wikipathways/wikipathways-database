@@ -1,5 +1,6 @@
 #!/bin/bash
-org="$1" | tr -d ' '
+org="$1" 
+org=`echo $org | tr -d ' '`
 echo "fileNames org: $org"
 
 # determine which organism .bridge file needs to be downloaded
