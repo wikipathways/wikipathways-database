@@ -108,76 +108,53 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
             
-      - name: Cache dependencies
+      - name: Cache meta-data-action with dependencies
         uses: actions/cache@v3
         id: cacheMetaJar
         with:
           path: ./meta-data-action-1.0.7-jar-with-dependencies.jar
-          key: ${{ runner.os }}-meta-data-action-1.0.7.jar
+          key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.0.7-jar-with-dependencies.jar') }}
           restore-keys: |
-            ${{ runner.os }}-java-meta-data-action-1.0.7.jar
+            cached-meta-data-action-${{ hashFiles('meta-data-action-1.0.7-jar-with-dependencies.jar') }}
+            cached-meta-data-action-
     
       - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
         name: Install deps
         run: |
+          echo "Cache not found: cached-meta-data-action"
           if [ ! -e ./meta-data-action-1.0.7-jar-with-dependencies.jar ]; then
             wget -O meta-data-action-1.0.7-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.0/meta-data-action-1.0.7-jar-with-dependencies.jar
           fi
 
-      - name: Cache dependencies
+      - name: Cache all bridge files
         uses: actions/cache@v2
         id: cacheAllBridge
         with:
           path: |
             ./metabolites*.bridge
-            ./Ag*.bridge
-            ./An*.bridge
-            ./At*.bridge
-            ./Bs*.bridge
-            ./Bt*.bridge
-            ./Ce*.bridge
-            ./Cf*.bridge
-            ./Ci*.bridge
-            ./Dr*.bridge
-            ./Da*.bridge
-            ./Dp*.bridge
-            ./Dm*.bridge
-            ./Ec*.bridge
-            ./Gg*.bridge
-            ./Fg*.bridge
-            ./Gm*.bridge
-            ./Hs*.bridge
-            ./Hv*.bridge
-            ./Ml*.bridge
             ./Mm*.bridge
-            ./Mx*.bridge
-            ./Oa*.bridge
-            ./Ova*.bridge
-            ./Oi*.bridge
-            ./Oj*.bridge
-            ./Pi*.bridge
-            ./Pt*.bridge
-            ./Qc*.bridge
-            ./Rn*.bridge
-            ./Sc*.bridge
-            ./Sl*.bridge
-            ./Ss*.bridge
-            ./Vv*.bridge
-            ./Xt*.bridge
-            ./Zm*.bridge
-          key: ${{ runner.os }}-java-${{ hashFiles('**/*.bridge') }}
+          key: cached-bridge-files
           restore-keys: |
-            ${{ runner.os }}-java-${{ hashFiles('**/*.bridge') }}
-            ${{ runner.os }}-java-
+            cached-bridge-files
+            
+      - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
+        name: Install all bridge files
+        run: |
+          echo "Cache not found: cached-bridge-files"
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
+            echo "generating configuration files for "$org""
+            scripts/meta-data-action/configGenerator.sh "$org"
+            echo "installing bridgedb files for "$org""
+            scripts/meta-data-action/installDependencies.sh "$org"
+          done
             
       - name: Generate configs, install bridgeDb, generate info and datanode files
         run: |
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
-            ORGANISM="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
-            echo "generating configuration files for "$ORGANISM""
-            scripts/meta-data-action/configGenerator.sh "$ORGANISM"
-            org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
-            echo "installing bridgedb files for $org"
+            org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
+            echo "generating configuration files for "$org""
+            scripts/meta-data-action/configGenerator.sh "$org"
             scripts/meta-data-action/installDependencies.sh $org
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             chmod 777 meta-data-action-1.0.7-jar-with-dependencies.jar
@@ -185,8 +162,8 @@ jobs:
             echo "replacing blank publication Xrefs with NA to avoid NPE"
             sed -i 's/><\/bp:ID>/>NA<\/bp:ID>/' "$f"
             sed -i 's/><\/bp:DB>/>NA<\/bp:DB>/' "$f"
-            echo "generating info and datanode files for $wpid, organism "$ORGANISM""
-            java -jar meta-data-action-1.0.7-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$ORGANISM"
+            echo "generating info and datanode files for $wpid, organism "$org""
+            java -jar meta-data-action-1.0.7-jar-with-dependencies.jar wikipathways/wikipathways-database pathways/"$wpid"/"$wpid".gpml $(date --utc +%F) gdb.config "$org"
           done
       
       - name: Commit report
