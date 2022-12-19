@@ -39,7 +39,7 @@ else
         echo "Set either changed_dir or changed_wpids."
         echo "EXITING"
         exit 1;
-    elif [ "${changed_wpids[@]}"=="ALL" ]; then
+    elif [ "${changed_wpids[1]}" = "ALL" ]; then
         for i in pathways/*/*.gpml; do
             echo "$i"
             changed_gpmls+="$i"
@@ -96,22 +96,22 @@ echo "3. ACTION: metadata"
 
 #NOTE: requires Java 11 to be accessible localy
 
+# download all species and metabolite derby database files into top level dir
+
 # cache dependencies
-if [ ! -e ./meta-data-action-1.0.4-jar-with-dependencies.jar ]; then
-    wget -O meta-data-action-1.0.4-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/1.1.0/meta-data-action-1.0.4-jar-with-dependencies.jar
-    chmod 777 meta-data-action-1.0.4-jar-with-dependencies.jar
+if [ ! -e ./meta-data-action-1.0.8-jar-with-dependencies.jar ]; then
+    wget -O meta-data-action-1.0.8-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/1.1.0/meta-data-action-1.0.8-jar-with-dependencies.jar
+    chmod 777 meta-data-action-1.0.8-jar-with-dependencies.jar
 fi
 
 for f in ${changed_gpmls[@]}; do
     scripts/meta-data-action/configGenerator.sh $f
-    # installDependencies, a.k.a. BridgeDb files; each only has to be downloaded once 
-    org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r'| tr -d ' ')"
-    scripts/meta-data-action/installDependencies.sh $org
-    # generate info and datanodes files (NOTE: Adapted date for macOS (-u instead of --utc))
+    org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"
     wpid="$(basename ""$f"" | sed 's/.gpml//')"
     echo "generating info and datanode files for $wpid ($f)"
     cat gdb.config
-    java -jar meta-data-action-1.0.4-jar-with-dependencies.jar local pathways/"$wpid"/"$wpid".gpml $(date -u +%F) gdb.config "$org" || echo "$wpid FAILED"
+    # NOTE: Adapt date arg for macOS (-u) or linux (--utc)
+    java -jar meta-data-action-1.0.8-jar-with-dependencies.jar local pathways/"$wpid"/"$wpid".gpml $(date -u +%F) gdb.config "$org" || echo "$wpid FAILED"
 done
 
 ##############################
