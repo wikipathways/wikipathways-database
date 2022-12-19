@@ -1,5 +1,5 @@
 #!/bin/bash
-org="$1"
+org="$1" | tr -d ' '
 
 # determine which organism .bridge file needs to be downloaded
 FILENAMES="fileNames.config"
