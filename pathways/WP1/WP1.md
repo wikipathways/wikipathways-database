@@ -14,17 +14,17 @@ annotations:
   value: cardiovascular system disease
 authors:
 - Nsalomonis
-- ' MaintBot'
-- ' Khanspers'
-- ' BruceConklin'
-- ' TestUser'
-- ' AlexanderPico'
-- ' Thomas'
-- ' Mkutmon'
-- ' Andra'
-- ' Egonw'
-- ' Ddigles'
-- ' Eweitz'
+- MaintBot
+- Khanspers
+- BruceConklin
+- TestUser
+- AlexanderPico
+- Thomas
+- Mkutmon
+- Andra
+- Egonw
+- Ddigles
+- Eweitz
 citedin:
 - link: PMC5075206
 - link: PMC4723140
