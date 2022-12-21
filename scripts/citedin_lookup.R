@@ -20,13 +20,13 @@
 #'
 #' @examples
 updateCitedIn<-function(from_date=NULL){
-  ci.path = '../downstream/citedin_lookup.yml'  
+  ci.path = './downstream/citedin_lookup.yml'  
   ci.yml = yaml::read_yaml(ci.path)
   
   if(is.null(from_date))
     from_date = ci.yml$last_run
 
-  wpid.list = read.table('../wpid_list.txt', header = F, stringsAsFactors = F)
+  wpid.list = read.table('./wpid_list.txt', header = F, stringsAsFactors = F)
   for (p in wpid.list[,1]){
     q = paste0('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=wikipathways+AND+',
                p,'+AND+(',from_date,'[pdat]:3000[pdat])&retmode=json')
@@ -51,3 +51,6 @@ updateCitedIn<-function(from_date=NULL){
   yaml::write_yaml('---', ci.path)
   
 }
+                       
+# Run the function when called by GH Action:
+updateCitedIn()
