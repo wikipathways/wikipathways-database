@@ -30,7 +30,7 @@ updateCitedIn<-function(from_date=NULL){
   for (p in wpid.list[,1]){
     q = paste0('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=wikipathways+AND+',
                p,'+AND+(',from_date,'[pdat]:3000[pdat])&retmode=json')
-    res <- httr::GET(url=URLencode(q))
+    res <- httr::GET(url=URLencode(q), config = httr::config(connecttimeout = 60))
     res.char <- rawToChar(res$content)
     res.json <- RJSONIO::fromJSON(res.char)
     ids <- res.json$esearchresult$idlist
@@ -44,7 +44,8 @@ updateCitedIn<-function(from_date=NULL){
         for (n in novel.pmcids){
         # collect metadata
           md.query <- paste0("https://www.ncbi.nlm.nih.gov/pmc/oai/oai.cgi?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:",gsub("PMC","", n),"&metadataPrefix=pmc_fm")
-          md.source <- xml2::read_html(md.query) 
+          md.source <- xml2::read_html(md.query,
+                                       options = c("RECOVER", "NOERROR")) 
           year <- md.source %>%
             rvest::html_node(xpath=".//year") %>%
             rvest::html_text()
