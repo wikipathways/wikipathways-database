@@ -39,10 +39,10 @@ updateCitedIn<-function(from_date=NULL){
     if(ids.len > 0){
       pmcids <- lapply(ids, function(id) list(link=paste0("PMC",id)))
       novel.pmcids <- setdiff(unlist(pmcids),unlist(ci.yml[[p]]))
-      novel.yml <- list()
-      if(length(novel.pmcids) > 0)
+      if(length(novel.pmcids) > 0){
+        novel.yml <- list()
         for (n in novel.pmcids){
-        # collect metadata
+          # collect metadata
           md.query <- paste0("https://www.ncbi.nlm.nih.gov/pmc/oai/oai.cgi?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:",gsub("PMC","", n),"&metadataPrefix=pmc_fm")
           md.source <- xml2::read_html(md.query,
                                        options = c("RECOVER", "NOERROR")) 
@@ -57,6 +57,7 @@ updateCitedIn<-function(from_date=NULL){
           Sys.sleep(1) #API rate limit
         }
         ci.yml[[p]] <- append(ci.yml[[p]],list(novel.yml))
+      }
     }
     Sys.sleep(1) #API rate limit
   }
