@@ -5,7 +5,7 @@
 #' date is also stored to be used in subsequent updates.
 #' 
 #' @param from_date (String) the oldest publication date to search. If left 
-#' NULL, then the last_run date is used. Format: MM/DD/YYYY (e.g.,'01/01/2008')
+#' NULL, then the last_run date is used. Format: YYYY/MM/DD (e.g.,'2008/01/01')
 #'
 #' @details With a rate limit of one query per second for eutils API, this
 #' function takes ~2000 seconds (or 33 min) for 2000 pathways. Should be run
@@ -15,7 +15,9 @@
 #' @importFrom RJSONIO fromJSON
 #' @importFrom utils URLencode
 #' @importFrom httr GET
-#' @importFrom yaml read_yaml write_yaml
+#' @import yaml
+#' @import xml2
+#' @import rvest
 #' @export
 #'
 #' @examples
@@ -39,17 +41,32 @@ updateCitedIn<-function(from_date=NULL){
     if(ids.len > 0){
       pmcids <- lapply(ids, function(id) list(link=paste0("PMC",id)))
       novel.pmcids <- setdiff(unlist(pmcids),unlist(ci.yml[[p]]))
+      novel.yml <- list()
       if(length(novel.pmcids) > 0)
-        ci.yml[[p]] <- append(ci.yml[[p]],pmcids)
+        for (n in novel.pmcids){
+        # collect metadata
+          md.query <- paste0("https://www.ncbi.nlm.nih.gov/pmc/oai/oai.cgi?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:",gsub("PMC","", n),"&metadataPrefix=pmc_fm")
+          md.source <- xml2::read_html(md.query) 
+          year <- md.source %>%
+            rvest::html_node(xpath=".//year") %>%
+            rvest::html_text()
+          article_title <- md.source %>%
+            rvest::html_node(xpath=".//article-title") %>%
+            rvest::html_text()
+          t <- paste0(article_title, " (",year,")")
+          novel.yml <- append(novel.yml, list(link=n, title=t))
+          Sys.sleep(1) #API rate limit
+        }
+        ci.yml[[p]] <- append(ci.yml[[p]],list(novel.yml))
     }
     Sys.sleep(1) #API rate limit
   }
   
-  ci.yml$last_run = format(Sys.time(), "%m/%d/%Y")
-  yaml::write_yaml('---', ci.path)
-  yaml::write_yaml(ci.yml, ci.path)
-  yaml::write_yaml('---', ci.path)
-  
+  ci.yml$last_run = format(Sys.time(), "%Y/%m/%d")
+  write("---", ci.path, append = F)
+  write(yaml::as.yaml(ci.yml), ci.path, append = T)
+  write("---", ci.path, append = T)
+
 }
                        
 # Run the function when called by GH Action:
