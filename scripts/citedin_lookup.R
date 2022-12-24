@@ -32,7 +32,7 @@ updateCitedIn<-function(from_date=NULL){
   for (p in wpid.list[,1]){
     q = paste0('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=wikipathways+AND+',
                p,'+AND+(',from_date,'[pdat]:3000[pdat])&retmode=json')
-    res <- GET(url=URLencode(q))
+    res <- httr::GET(url=URLencode(q))
     res.char <- rawToChar(res$content)
     res.json <- RJSONIO::fromJSON(res.char)
     ids <- res.json$esearchresult$idlist
