@@ -10,17 +10,15 @@
 #' @details With a rate limit of one query per second for eutils API, this
 #' function takes ~2000 seconds (or 33 min) for 2000 pathways. Should be run
 #' quarterly or even annually for best ROI.
-#' 
-#' @return writes to citedin.yml
-#' @importFrom RJSONIO fromJSON
-#' @importFrom utils URLencode
-#' @importFrom httr GET
-#' @import yaml
-#' @import xml2
-#' @import rvest
-#' @export
-#'
-#' @examples
+
+library(rvest)
+library(xml2)
+library(dplyr)
+library(magrittr)
+library(RJSONIO)
+library(yaml)
+library(httr)
+
 updateCitedIn<-function(from_date=NULL){
   ci.path = './downstream/citedin_lookup.yml'  
   ci.yml = yaml::read_yaml(ci.path)
