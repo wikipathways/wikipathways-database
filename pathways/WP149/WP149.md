@@ -12,6 +12,8 @@ authors:
 - Eweitz
 citedin:
 - link: PMC7645421
+  title: Unraveling the blood transcriptome after real-life exposure of Wistar-rats
+    to PM2.5, PM1 and water-soluble metals in the ambient air (2020)
 description: ''
 last-edited: 2021-05-16
 organisms:

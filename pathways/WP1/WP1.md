@@ -27,8 +27,16 @@ authors:
 - Eweitz
 citedin:
 - link: PMC5075206
+  title: Hepatic transcriptome implications for palm fruit juice deterrence of type
+    2 diabetes mellitus in young male Nile rats (2016)
 - link: PMC4723140
+  title: Advanced Running Performance by Genetic Predisposition in Male Dummerstorf
+    Marathon Mice (DUhTP) Reveals Higher Sterol Regulatory Element-Binding Protein
+    (SREBP) Related mRNA Expression in the Liver and Higher Serum Levels of Progesterone
+    (2016)
 - link: PMC4546821
+  title: Automatically visualise and analyse data on pathways using PathVisioRPC from
+    any programming environment (2015)
 description: 'Statins inhibit endogenous cholesterol production by competitive inhibition
   of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion of HMG-CoA to
   mevalonate, an early rate-limiting step in cholesterol synthesis. This pathway delineates
