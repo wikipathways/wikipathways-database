@@ -103,7 +103,6 @@ jobs:
             if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
               echo "Adding $a"
               echo $a","$a",," >> scripts/author_list.csv
-              cd "${{ github.workspace }}"
               echo "---" > "wikipathways.github.io/_authors/$a.md"
               echo "username: $a" >> "wikipathways.github.io/_authors/$a.md"
               echo "realname: $a" >> "wikipathways.github.io/_authors/$a.md"
@@ -120,7 +119,6 @@ jobs:
               echo "meta:" >> "wikipathways.github.io/_authors/$a.md"
               echo "instagram:" >> "wikipathways.github.io/_authors/$a.md"
               echo "---" >> "wikipathways.github.io/_authors/$a.md"
-              cd "${{ github.workspace }}/wikipathways-database"
             fi
           done
 
