@@ -90,12 +90,14 @@ jobs:
               authorList+=("$username") 
             done 
           }< scripts/author_list.csv
+          echo ${#authorList[@]}
           checkAuthors=()
           for f in ${changed_gpmls[@]}; do
             auth="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $f )"
             checkAuthors+=("${(@s:,:)auth}") 
             checkAuthors=("${(@u)checkAuthors}") 
           done
+          echo ${#checkAuthors[@]}
           for a in ${checkAuthors[@]}; do
             a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
             if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
