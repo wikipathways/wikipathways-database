@@ -92,7 +92,7 @@ jobs:
           }< scripts/author_list.csv
           echo ${#authorList[@]}
           checkAuthors=()
-          for f in ${changed_gpmls[@]}; do
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             auth="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $f )"
             IFS=', ' read -r -a checkAuthors <<< "$auth"
             checkAuthors=($(echo "${checkAuthors[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
