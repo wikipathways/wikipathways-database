@@ -82,14 +82,49 @@ done
 
 
 ##############################
-echo "2. ACTION: wpid-list"
+echo "2. ACTION: author-list"
 
-cd pathways
-cat /dev/null > ../wpid_list.txt
-for d in ./*; do
-    [[ -d "$d" ]] && echo "${d##./}" >> ../wpid_list.txt; 
+authorList=() 
+{
+    read #skip header line
+    while IFS=, read -r username realname orcid wikidata; do
+        authorList+=("$username") 
+    done 
+}< scripts/author_list.csv
+echo ${#authorList[@]}
+
+checkAuthors=()
+for f in ${changed_gpmls[@]}; do
+ auth="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $f )"
+ checkAuthors+=("${(@s:,:)auth}") 
+ checkAuthors=("${(@u)checkAuthors}") 
 done
-cd ../
+echo ${#checkAuthors[@]}
+#echo ${checkAuthors[@]}
+
+for a in ${checkAuthors[@]}; do
+    a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+    if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
+        echo "Adding $a"
+        echo $a","$a",," >> scripts/author_list.csv
+        echo "---" > "wikipathways.github.io/_authors/$a.md"
+        echo "username: $a" >> "wikipathways.github.io/_authors/$a.md"
+        echo "realname: $a" >> "wikipathways.github.io/_authors/$a.md"
+        echo "website: " >> "wikipathways.github.io/_authors/$a.md"
+        echo "affiliation: " >> "wikipathways.github.io/_authors/$a.md"
+        echo "bio: " >> "wikipathways.github.io/_authors/$a.md"
+        echo "github: " >> "wikipathways.github.io/_authors/$a.md"
+        echo "orcid: " >> "wikipathways.github.io/_authors/$a.md"
+        echo "linkedin: " >> "wikipathways.github.io/_authors/$a.md"
+        echo "googlescholar: " >> "wikipathways.github.io/_authors/$a.md"
+        echo "wikidata: " >> "wikipathways.github.io/_authors/$a.md"
+        echo "twitter: " >> "wikipathways.github.io/_authors/$a.md"
+        echo "mastodon-url: " >> "wikipathways.github.io/_authors/$a.md"
+        echo "meta:" >> "wikipathways.github.io/_authors/$a.md"
+        echo "instagram:" >> "wikipathways.github.io/_authors/$a.md"
+        echo "---" >> "wikipathways.github.io/_authors/$a.md"
+    fi
+done
 
 ##############################
 echo "3. ACTION: metadata"
