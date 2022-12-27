@@ -89,7 +89,7 @@ jobs:
             while IFS=, read -r username realname orcid wikidata; do
               authorList+=("$username") 
             done 
-          }< wikipathways-database/scripts/author_list.csv
+          }< scripts/author_list.csv
           checkAuthors=()
           for f in ${changed_gpmls[@]}; do
             auth="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $f )"
@@ -101,6 +101,7 @@ jobs:
             if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
               echo "Adding $a"
               echo $a","$a",," >> scripts/author_list.csv
+              cd "${{ github.workspace }}"
               echo "---" > "wikipathways.github.io/_authors/$a.md"
               echo "username: $a" >> "wikipathways.github.io/_authors/$a.md"
               echo "realname: $a" >> "wikipathways.github.io/_authors/$a.md"
@@ -117,6 +118,7 @@ jobs:
               echo "meta:" >> "wikipathways.github.io/_authors/$a.md"
               echo "instagram:" >> "wikipathways.github.io/_authors/$a.md"
               echo "---" >> "wikipathways.github.io/_authors/$a.md"
+              cd "${{ github.workspace }}/wikipathways-database"
             fi
           done
 
@@ -124,7 +126,6 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          cd wikipathways-database
           git add scripts/author_list.csv
           if git diff --exit-code --staged; then
               echo "No changes"
@@ -133,7 +134,7 @@ jobs:
               git commit -m 'Update author_list file'
               git push
           fi
-          cd ../wikipathways.github.io/_authors
+          cd "${{ github.workspace }}/wikipathways.github.io/_authors"
           git add .
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
