@@ -94,8 +94,8 @@ jobs:
           checkAuthors=()
           for f in ${changed_gpmls[@]}; do
             auth="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $f )"
-            checkAuthors+=("${(@s:,:)auth}") 
-            checkAuthors=("${(@u)checkAuthors}") 
+            IFS=', ' read -r -a checkAuthors <<< "$auth"
+            checkAuthors=($(echo "${checkAuthors[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
           done
           echo ${#checkAuthors[@]}
           for a in ${checkAuthors[@]}; do
