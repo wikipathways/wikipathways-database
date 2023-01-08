@@ -27,7 +27,7 @@ updateCitedIn<-function(from_date=NULL){
     from_date = ci.yml$last_run
 
   wpid.list = list.dirs("./pathways",FALSE,FALSE)
-  for (p in wpid.list[,1]){
+  for (p in wpid.list){
     q = paste0('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=wikipathways+AND+',
                p,'+AND+(',from_date,'[pdat]:3000[pdat])&retmode=json')
     res <- httr::GET(url=URLencode(q), config = httr::config(connecttimeout = 60))
