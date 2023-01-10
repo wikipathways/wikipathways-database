@@ -25,6 +25,7 @@ jobs:
 
       - name: Install packages
         run: |
+          sudo apt-get update
           sudo apt-get install libcurl4-openssl-dev
           Rscript -e 'install.packages(c("utils","httr","xml2","dplyr","magrittr","RJSONIO","yaml","rvest"))'
 
