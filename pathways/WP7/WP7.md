@@ -13,15 +13,16 @@ authors:
 - DeSl
 - AlexanderPico
 - Eweitz
-description: ''
-last-edited: 2021-05-20
+description: The synthesis of methionine and cysteine (among other sulfur-containing
+  compounds) from sulfate, ATP, NADPH, and serine.
+last-edited: 2023-01-17
 organisms:
 - Saccharomyces cerevisiae
 redirect_from:
 - /index.php/Pathway:WP7
 - /instance/WP7
-- /instance/WP7_rr117342
-revision: r117342
+- /instance/WP7_rr124904
+revision: r124904
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP7.html
@@ -29,7 +30,8 @@ schema-jsonld:
   creator:
     '@type': Organization
     name: WikiPathways
-  description: ''
+  description: The synthesis of methionine and cysteine (among other sulfur-containing
+    compounds) from sulfate, ATP, NADPH, and serine.
   keywords:
   - 3 NADPH
   - ADP
