@@ -28,14 +28,14 @@ description: 'Sphingolipids are essential components of the plasma membrane in a
   are unique to fungi, the sphingolipid biosynthesis pathway is considered a target
   for antifungal drugs (CITS: [9092515])(CITS: [15578972]).  SOURCE: SGD pathways,
   http://pathway.yeastgenome.org/server.html'
-last-edited: 2021-05-20
+last-edited: 2023-01-18
 organisms:
 - Saccharomyces cerevisiae
 redirect_from:
 - /index.php/Pathway:WP9
 - /instance/WP9
-- /instance/WP9_rr117325
-revision: r117325
+- /instance/WP9_rr124935
+revision: r124935
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP9.html
