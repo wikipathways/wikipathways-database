@@ -1,0 +1,65 @@
+name: Sync GPML changes
+
+on:
+  workflow_dispatch:
+  schedule:
+  - cron: "0 0 * * 0"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true # to cancel a run if another is triggered
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+        
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: main
+          
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+            
+      - name: Cache gpml-sync-action
+        uses: actions/cache@v3
+        id: cacheSyncJar
+        with:
+          path: ./SyncAction.jar
+          key: cached-gpml-sync-action-${{ hashFiles('SyncAction.jar') }}
+          restore-keys: |
+            cached-gpml-sync-action-${{ hashFiles('SyncAction.jar') }}
+            cached-gpml-sync-action-
+    
+      - if: steps.cacheSyncJar.outputs.cache-hit != 'true'
+        name: Install jar
+        run: |
+          echo "Cache not found: cached-gpml-sync-action"
+          if [ ! -e ./SyncAction.jar ]; then
+            wget -O SyncAction.jar https://github.com/wikipathways/gpml-sync-action/releases/download/v1.0/SyncAction.jar
+          fi
+      
+      - name: Run SyncAction
+        run: |
+          chmod 777 SyncAction.jar
+          SyncDate=date --utc +%Y%m%d%H%M%S -d "1 day ago"
+          echo $SyncDate
+          #java -jar SyncAction.jar $SyncDate
+      
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add pathways/WP*/WP*.gpml
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Sync GPML files'
+              git push
+          fi
