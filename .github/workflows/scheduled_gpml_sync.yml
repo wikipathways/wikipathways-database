@@ -3,7 +3,7 @@ name: Sync GPML changes
 on:
   workflow_dispatch:
   schedule:
-  - cron: "0 0 * * 0"
+  - cron: "0 2 * * *"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
@@ -49,7 +49,7 @@ jobs:
           chmod 777 SyncAction.jar
           SyncDate=$(date --utc +%Y%m%d%H%M%S -d "1 day ago")
           echo $SyncDate
-          #java -jar SyncAction.jar $SyncDate
+          java -jar SyncAction.jar $SyncDate
       
       - name: Commit report
         run: |
