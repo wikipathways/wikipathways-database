@@ -48,7 +48,7 @@ jobs:
         run: |
           chmod 777 SyncAction.jar
           SyncDate=$(date --utc +%Y%m%d%H%M%S -d "1 day ago")
-          echo $(SyncDate)
+          echo $SyncDate
           #java -jar SyncAction.jar $SyncDate
       
       - name: Commit report
