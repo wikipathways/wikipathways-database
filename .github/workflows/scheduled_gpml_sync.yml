@@ -58,6 +58,11 @@ jobs:
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add pathways/WP*/WP*.gpml
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Sync GPML files'
+          fi
       
       - name: Push as user
         uses: ad-m/github-push-action@master
