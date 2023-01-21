@@ -87,7 +87,7 @@ echo "2. ACTION: author-list"
 authorList=() 
 {
     read #skip header line
-    while IFS=, read -r username realname orcid wikidata; do
+    while IFS=, read -r username realname orcid wikidata github; do
         authorList+=("$username") 
     done 
 }< scripts/author_list.csv
