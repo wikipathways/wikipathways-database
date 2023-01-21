@@ -1,0 +1,147 @@
+name: Handle GPML changes
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - pathways/**/*.gpml
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: false # to allow multiple runs to queue up rather than clobber
+
+jobs:
+  # inspired by https://dev.to/scienta/get-changed-files-in-github-actions-1p36
+  changed-gpmls:
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      added-modified: ${{ steps.changes.outputs.added-modified }}
+      copied: ${{ steps.changes.outputs.copied }}
+      deleted: ${{ steps.changes.outputs.deleted }}
+      renamed: ${{ steps.changes.outputs.renamed }}
+    steps:
+        # Make sure we have some code to diff.
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: Get changed files
+        id: changes
+        # Set outputs using the command.
+        run: |
+          echo "GPML files were changed in pull request ${{ github.event.before }} -> ${{ github.event.after }}"
+          
+          echo "::set-output name=added-modified::$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'added or modified:'
+            git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+          
+          echo "::set-output name=copied::$(git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'copied:'
+            git diff --name-only --diff-filter=C ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+
+          echo "::set-output name=deleted::$(git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'deleted:'
+            git diff --name-only --diff-filter=D ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+            
+          echo "::set-output name=renamed::$(git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$ | xargs)"
+          if git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$; then
+            echo 'renamed:'
+            git diff --name-only --diff-filter=R ${{ github.event.before }} ${{ github.event.after }} | grep .gpml$
+          fi
+          
+  author-list:
+    runs-on: ubuntu-latest
+    needs: changed-gpmls
+    # only run if gpmls were added or modified
+    if: ${{needs.changed-gpmls.outputs.added-modified}}
+    steps:
+      - name: Checkout wikipathways-database repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+                
+      - name: Checkout jekyll repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways.github.io
+          path: wikipathways.github.io
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          
+      - name: Update author list and create md profiles
+        run: |
+          authorList=() 
+          {
+            read #skip header line
+            while IFS=, read -r username realname orcid wikidata; do
+              authorList+=("$username") 
+            done 
+          }< scripts/author_list.csv
+          echo ${#authorList[@]}
+          checkAuthors=()
+          for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
+            auth="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $f )"
+            IFS=', ' read -r -a checkAuthors <<< "$auth"
+            checkAuthors=($(echo "${checkAuthors[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '))
+          done
+          echo ${#checkAuthors[@]}
+          for a in ${checkAuthors[@]}; do
+            echo "Checking $a"
+            a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            echo "Cleaned $a"
+            if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
+              echo "Adding $a"
+              echo $a","$a",," >> scripts/author_list.csv
+              echo "---" > "wikipathways.github.io/_authors/$a.md"
+              echo "username: $a" >> "wikipathways.github.io/_authors/$a.md"
+              echo "realname: $a" >> "wikipathways.github.io/_authors/$a.md"
+              echo "website: " >> "wikipathways.github.io/_authors/$a.md"
+              echo "affiliation: " >> "wikipathways.github.io/_authors/$a.md"
+              echo "bio: " >> "wikipathways.github.io/_authors/$a.md"
+              echo "github: " >> "wikipathways.github.io/_authors/$a.md"
+              echo "orcid: " >> "wikipathways.github.io/_authors/$a.md"
+              echo "linkedin: " >> "wikipathways.github.io/_authors/$a.md"
+              echo "googlescholar: " >> "wikipathways.github.io/_authors/$a.md"
+              echo "wikidata: " >> "wikipathways.github.io/_authors/$a.md"
+              echo "twitter: " >> "wikipathways.github.io/_authors/$a.md"
+              echo "mastodon-url: " >> "wikipathways.github.io/_authors/$a.md"
+              echo "meta:" >> "wikipathways.github.io/_authors/$a.md"
+              echo "instagram:" >> "wikipathways.github.io/_authors/$a.md"
+              echo "---" >> "wikipathways.github.io/_authors/$a.md"
+            fi
+          done
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add scripts/author_list.csv
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update author_list file'
+              git push
+          fi
+          cd "${{ github.workspace }}/wikipathways.github.io/_authors"
+          git add .
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Created new author profiles'
+              git push
+          fi
