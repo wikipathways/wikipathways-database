@@ -47,7 +47,7 @@ jobs:
       - name: Run SyncAction
         run: |
           chmod 777 SyncAction.jar
-          SyncDate=date -u -v-1d +%Y%m%d%H%M%S
+          SyncDate=$(date -u -v-1d +%Y%m%d%H%M%S)
           echo $SyncDate
           java -jar SyncAction.jar $SyncDate
       
