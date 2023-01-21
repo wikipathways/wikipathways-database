@@ -7,10 +7,6 @@ on:
       - main
     paths:
       - pathways/**/*.gpml
-  workflow_run:
-    workflows: ["Sync GPML changes"]
-    types:
-      - completed
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
