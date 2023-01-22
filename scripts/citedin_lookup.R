@@ -33,7 +33,7 @@ updateCitedIn<-function(from_date=NULL){
     res <- httr::GET(url=URLencode(q), config = httr::config(connecttimeout = 60))
     res.char <- rawToChar(res$content)
     res.json <- RJSONIO::fromJSON(res.char)
-    ids <- ()
+    ids <- list()
     if (!is.null(res.json))
       if (!is.null(es.json$esearchresult))
         ids <- res.json$esearchresult$idlist
