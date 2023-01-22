@@ -35,7 +35,7 @@ updateCitedIn<-function(from_date=NULL){
     res.json <- RJSONIO::fromJSON(res.char)
     ids <- list()
     if (!is.null(res.json))
-      if (!is.null(es.json$esearchresult))
+      if (!is.null(res.json$esearchresult))
         ids <- res.json$esearchresult$idlist
     ids.len <- length(ids)
     cat(sprintf("%s cited in %i articles\n", p,ids.len ))
