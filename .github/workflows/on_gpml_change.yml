@@ -102,7 +102,7 @@ jobs:
             a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
             if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
               echo "Adding $a"
-              echo $a","$a",," >> scripts/author_list.csv
+              echo $a","$a",,," >> scripts/author_list.csv
               echo "---" > "wikipathways.github.io/_authors/$a.md"
               echo "username: $a" >> "wikipathways.github.io/_authors/$a.md"
               echo "realname: $a" >> "wikipathways.github.io/_authors/$a.md"
