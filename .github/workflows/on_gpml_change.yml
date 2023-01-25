@@ -167,18 +167,18 @@ jobs:
         uses: actions/cache@v3
         id: cacheMetaJar
         with:
-          path: ./meta-data-action-1.0.9-jar-with-dependencies.jar
-          key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.0.9-jar-with-dependencies.jar') }}
+          path: ./meta-data-action-1.1.0-jar-with-dependencies.jar
+          key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.0-jar-with-dependencies.jar') }}
           restore-keys: |
-            cached-meta-data-action-${{ hashFiles('meta-data-action-1.0.9-jar-with-dependencies.jar') }}
+            cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.0-jar-with-dependencies.jar') }}
             cached-meta-data-action-
     
       - if: steps.cacheMetaJar.outputs.cache-hit != 'true'
         name: Install deps
         run: |
           echo "Cache not found: cached-meta-data-action"
-          if [ ! -e ./meta-data-action-1.0.9-jar-with-dependencies.jar ]; then
-            wget -O meta-data-action-1.0.9-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.0/meta-data-action-1.0.9-jar-with-dependencies.jar
+          if [ ! -e ./meta-data-action-1.1.0-jar-with-dependencies.jar ]; then
+            wget -O meta-data-action-1.1.0-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.0/meta-data-action-1.1.0-jar-with-dependencies.jar
           fi
 
       - name: Cache all bridge files
@@ -240,7 +240,7 @@ jobs:
             
       - name: Generate configs, install bridgeDb, generate info and datanode files
         run: |
-          chmod 777 meta-data-action-1.0.9-jar-with-dependencies.jar
+          chmod 777 meta-data-action-1.1.0-jar-with-dependencies.jar
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
             echo "generating configuration files for "$org""
@@ -248,7 +248,7 @@ jobs:
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             cat gdb.config
             echo "generating info and datanode files for $wpid, organism "$org""
-            java -jar meta-data-action-1.0.9-jar-with-dependencies.jar wikipathways/wikipathways-database "$f" $(date --utc +%F) gdb.config "$org"
+            java -jar meta-data-action-1.1.0-jar-with-dependencies.jar wikipathways/wikipathways-database "$f" $(date --utc +%F) gdb.config "$org"
           done
       
       - name: Commit report
