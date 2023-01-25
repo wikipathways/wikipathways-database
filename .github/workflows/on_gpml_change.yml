@@ -247,9 +247,6 @@ jobs:
             scripts/meta-data-action/configGenerator.sh "$org"
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             cat gdb.config
-            echo "replacing blank publication Xrefs with NA to avoid NPE"
-            sed -i 's/><\/bp:ID>/>NA<\/bp:ID>/' "$f"
-            sed -i 's/><\/bp:DB>/>NA<\/bp:DB>/' "$f"
             echo "generating info and datanode files for $wpid, organism "$org""
             java -jar meta-data-action-1.0.9-jar-with-dependencies.jar wikipathways/wikipathways-database "$f" $(date --utc +%F) gdb.config "$org"
           done
