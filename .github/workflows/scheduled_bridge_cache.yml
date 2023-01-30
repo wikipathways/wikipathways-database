@@ -30,17 +30,17 @@ jobs:
         uses: actions/cache@v3
         id: cacheMetaJar
         with:
-          path: ./meta-data-action-1.0.9-jar-with-dependencies.jar
-          key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.0.9-jar-with-dependencies.jar') }}
+          path: ./meta-data-action-1.1.0-jar-with-dependencies.jar
+          key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.0-jar-with-dependencies.jar') }}
           restore-keys: |
-            cached-meta-data-action-${{ hashFiles('meta-data-action-1.0.9-jar-with-dependencies.jar') }}
+            cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.0-jar-with-dependencies.jar') }}
             cached-meta-data-action-
     
       - name: Install deps
         run: |
           echo "Refreshing cached-meta-data-action"
-          if [ ! -e ./meta-data-action-1.0.9-jar-with-dependencies.jar ]; then
-            wget -O meta-data-action-1.0.9-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.0/meta-data-action-1.0.9-jar-with-dependencies.jar
+          if [ ! -e ./meta-data-action-1.1.0-jar-with-dependencies.jar ]; then
+            wget -O meta-data-action-1.1.0-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.0/meta-data-action-1.1.0-jar-with-dependencies.jar
           fi
               
       - name: Generate gdb.config, fileNames.config, and fileDownloads.config
