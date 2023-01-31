@@ -1,6 +1,8 @@
 const path = require('path')
 const { promises: fs, existsSync } = require('fs')
 const { Cite } = require('@citation-js/core')
+require('@citation-js/plugin-doi')
+require('@citation-js/plugin-isbn')
 require('@citation-js/plugin-pubmed')
 require('@citation-js/plugin-csl')
 
@@ -9,6 +11,9 @@ function readCsv (file, cache) {
     for (const line of lines.slice(1)) {
         if (!line.length) continue
         const [id, database, ...reference] = line.split('\t')
+        if (reference.join('') === '') {
+            continue
+        }
         cache.set(`${database}:${id}`, reference.join('\t'))
     }
 
@@ -25,7 +30,9 @@ function escapeCsvValue (value) {
 }
 
 const DATABASE_TYPE_MAP = {
-    'Pubmed': '@pubmed/id'
+    'Pubmed': '@pubmed/id',
+    'DOI': ['@doi/id', '@doi/api', '@doi/short-url'],
+    'ISBN': ['@isbn/isbn-10', '@isbn/isbn-13']
 }
 
 const DATABASE_LINKS = {
@@ -33,6 +40,13 @@ const DATABASE_LINKS = {
         ['PubMed', id => `http://www.ncbi.nlm.nih.gov/pubmed/${id}`],
         ['Europe PMC', id => `https://europepmc.org/abstract/MED/${id}`],
         ['Scholia', id => `https://scholia.toolforge.org/pubmed/${id}`]
+    ],
+    'DOI': [
+        ['DOI', id => id.replace(/^\s*(https?:\/\/)?(dx\.)?/, 'https://')]
+    ],
+    'ISBN': [
+        ['OpenLibrary', id => `https://openlibrary.org/search?isbn=${id}`],
+        ['Worldcat', id => `https://www.worldcat.org/search?qt=wikipathways&q=isbn%3A${id}`]
     ]
 }
 
@@ -41,12 +55,20 @@ function formatLink (text, url) {
 }
 
 async function format (id, database) {
-    const forceType = DATABASE_TYPE_MAP[database]
-    const append = DATABASE_LINKS[database]
-        .map(([text, url]) => ' ' + formatLink(text, url(id)))
-        .join('')
+    const options = {}
+    if (!Array.isArray(DATABASE_TYPE_MAP[database])) {
+        options.forceType = DATABASE_TYPE_MAP[database]
+    }
 
-    return Cite.async(id, { forceType })
+    let append = ''
+    if (database in DATABASE_LINKS) {
+        append = DATABASE_LINKS[database]
+            .map(([text, url]) => ' ' + formatLink(text, url(id)))
+            .join('')
+    }
+
+    return Cite.async(id, options)
+        .then(cite => new Cite(cite.data[0]))
         .then(cite => cite.format('bibliography', { template: 'vancouver', append }))
         .then(ref => ref.trim().replace(/^1.\s+/, ''))
 }
@@ -102,6 +124,8 @@ async function main () {
             const cacheKey = `${database}:${id}`
             if (cache.has(cacheKey)) {
                 console.log(`  ${cacheKey}: using cache`)
+            } else if (!DATABASE_TYPE_MAP[database]) {
+                console.log(`  ${cacheKey}: database (${database}) not supported`)
             } else {
                 console.log(`  ${cacheKey}: generating reference`)
                 try {
