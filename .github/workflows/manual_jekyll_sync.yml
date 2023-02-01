@@ -43,7 +43,6 @@ jobs:
             cp wikipathways-database/pathways/"$wpid"/"$wpid".md wikipathways.github.io/_pathways/
             cp wikipathways-database/pathways/"$wpid"/"$wpid"-bibliography.tsv wikipathways.github.io/_data/
             cp wikipathways-database/pathways/"$wpid"/"$wpid"-datanodes.tsv wikipathways.github.io/_data/
-            cp wikipathways-database/pathways/"$wpid"/"$wpid"-thumb.png wikipathways.github.io/assets/img/"$wpid"/
           done
           cd wikipathways.github.io
           git add .
@@ -51,6 +50,6 @@ jobs:
               echo "No changes"
           else
               git pull
-              git commit -m 'Update tsv, md and png files'
+              git commit -m 'Update tsv and md files'
               git push
           fi
