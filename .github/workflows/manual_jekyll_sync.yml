@@ -1,0 +1,56 @@
+name: Sync all files derived from GPML
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: false # to allow multiple runs to queue up rather than clobber
+
+jobs:
+  sync-site-repo-added-modified:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: wikipathways-database
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          
+      - name: Checkout jekyll repo
+        uses: actions/checkout@v2
+        with:
+          repository: wikipathways/wikipathways.github.io
+          path: wikipathways.github.io
+          submodules: true
+          fetch-depth: 0
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+
+      - name: Set up ssh-agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io repo
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          for f in wikipathways-database/pathways/*/*.gpml; do
+            wpid="$(basename ""$f"" | sed 's/.gpml//')"
+            cp wikipathways-database/pathways/"$wpid"/"$wpid".md wikipathways.github.io/_pathways/
+            cp wikipathways-database/pathways/"$wpid"/"$wpid"-bibliography.tsv wikipathways.github.io/_data/
+            cp wikipathways-database/pathways/"$wpid"/"$wpid"-datanodes.tsv wikipathways.github.io/_data/
+            cp wikipathways-database/pathways/"$wpid"/"$wpid"-thumb.png wikipathways.github.io/assets/img/"$wpid"/
+          done
+          cd wikipathways.github.io
+          git add .
+          if git diff --exit-code --staged > /dev/null; then
+              echo "No changes"
+          else
+              git pull
+              git commit -m 'Update tsv, md and png files'
+              git push
+          fi
