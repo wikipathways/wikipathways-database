@@ -26,7 +26,7 @@ updateCitedIn<-function(from_date=NULL){
   if(is.null(from_date))
     from_date = ci.yml$last_run
 
-  wpid.list = list.dirs("./pathways",FALSE,FALSE)
+  wpid.list = c("WP4725") #list.dirs("./pathways",FALSE,FALSE)
   for (p in wpid.list){
     q = paste0('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=wikipathways+AND+',
                p,'+AND+(',from_date,'[pdat]:3000[pdat])&retmode=json')
@@ -63,6 +63,7 @@ updateCitedIn<-function(from_date=NULL){
   }
   
   ci.yml$last_run = format(Sys.time(), "%Y/%m/%d")
+  ci.yml <- ci.yml[sort(names(ci.yml))] #keep sorted
   write("---", ci.path, append = F)
   write(yaml::as.yaml(ci.yml), ci.path, append = T)
   write("---", ci.path, append = T)
