@@ -178,7 +178,7 @@ post['redirect_from'] = [
 ]
 if 'revision' in post and (not post['revision'] is None):
     post['redirect_from'].append(
-            '/instance/' + wpid + '_r' + post['revision']
+            '/instance/' + wpid + '_' + post['revision']
             )
 
 post['seo'] = 'CreativeWork'
