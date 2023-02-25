@@ -573,6 +573,9 @@ jobs:
             # mv thumbnail png
             mv $AS_PATH/pathways/"$wpid"/"$wpid"-thumb.png $DB_PATH/pathways/"$wpid"/
 
+            # cp gpml to assets
+            mv $DB_PATH/pathways/"$wpid"/"$wpid".gpml $AS_PATH/pathways/"$wpid"/
+
             # pretty print the JSON
             for json_f in $AS_PATH/pathways/"$wpid"/"$wpid".json; do
               mv "$json_f" "$json_f".tmp.json 
@@ -586,12 +589,12 @@ jobs:
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           cd wikipathways-assets
-          git add pathways/WP*/WP*.{json,svg,png}
+          git add pathways/WP*/WP*.{json,svg,png,gpml}
           if git diff --exit-code --staged; then
               echo "No changes"
           else
               git pull
-              git commit -m 'Update JSON, SVG and PNG files'
+              git commit -m 'Update JSON, SVG, PNG and GPML files'
               git push
           fi
           
