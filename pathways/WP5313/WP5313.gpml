@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Carnosine metabolism of glial cells" Data-Source="WikiPathways" Version="WP5313_r125524" Author="[Jasmijnvanzaanen, Ticha, Eweitz, Egonw]" Last-Modified="20230225164759" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway shows the synthesis and degradation of Carnosine as well as the distribution within glial cells in the brain. 
+The synthesis pathway starts at two different locations, with beta-alanine being transported from the liver and l-histidine being transported from the intestines, since it needs to be ingested. As can be seen, various transports bring these two amino acids across the blood brain barrier and into the oligodendrocyte where the actual synthesis of carnosine happens by CARNS1. The degradation of carnosine also occurs within the oligodendrocyte by CN1 and CN2. 
+The oligdendrocytes are the only glial cells in the brain which produce carnosine, but all of them use it, so distribution to other glial cells is necessary. The transport to microglia is done by SLC14A2 and 4, while transport to astrocytes only requires SLC14A2.
+Carnosine also has an impact on the glutamate transporter of the astrocyte, which is SLC1A2, also known as GLT-1. Carnosine stimulates the transporter, which brings more glutamate and sodium into the cell. The sodium concentration within the cell will be increased, leading to a higher activity of the ATPase. This generates more ADP, which can be used within glycolysis. This then builds a connected to the lactate shuttle which occurs between the astrocyte and neurons, in which the astrocyte produces lactate from pyruvate to give the neurons additional energy support.</Comment>
+  <Comment>Type your comment here</Comment>
+  <Comment>Type your comment here</Comment>
+  <BiopaxRef>b82</BiopaxRef>
+  <BiopaxRef>a21</BiopaxRef>
+  <BiopaxRef>b0b</BiopaxRef>
+  <Graphics BoardWidth="1311.9036898061333" BoardHeight="1221.0" />
+  <DataNode TextLabel="CARNS1" GraphId="a09d3" Type="GeneProduct">
+    <BiopaxRef>b0b</BiopaxRef>
+    <Graphics CenterX="448.8203564727962" CenterY="574.6149155722346" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000172508" />
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="a6c78" Type="Metabolite">
+    <Graphics CenterX="413.1953564727962" CenterY="637.1149155722346" Width="66.25" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="ChEBI" ID="CHEBI:30616" />
+  </DataNode>
+  <DataNode TextLabel="Glycolysis" GraphId="b557f" Type="Pathway">
+    <Comment>https://www.wikipathways.org/index.php/Pathway:WP4629</Comment>
+    <BiopaxRef>e8d</BiopaxRef>
+    <Graphics CenterX="622.5703564727962" CenterY="1010.8649155722338" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP4629" />
+  </DataNode>
+  <DataNode TextLabel="lactate" GraphId="b5e47" Type="Metabolite">
+    <Graphics CenterX="764.5703564727962" CenterY="1010.8649155722338" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:24996" />
+  </DataNode>
+  <DataNode TextLabel="CN1" GraphId="b9a8f" Type="GeneProduct" GroupRef="db5ea">
+    <Graphics CenterX="887.7370231394627" CenterY="538.2399155722345" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="CN1" />
+  </DataNode>
+  <DataNode TextLabel="Carnosine" GraphId="bc0f8" Type="Metabolite">
+    <Graphics CenterX="613.5703564727962" CenterY="868.1149155722322" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15727" />
+  </DataNode>
+  <DataNode TextLabel="L-histidine" GraphId="bf9f0" Type="Metabolite">
+    <Graphics CenterX="822.1536898061299" CenterY="193.01047529706003" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15971" />
+  </DataNode>
+  <DataNode TextLabel="BETA-ALANINE" GraphId="bff2a" Type="Metabolite">
+    <Graphics CenterX="558.7775171982496" CenterY="194.34615384615344" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16958" />
+  </DataNode>
+  <DataNode TextLabel="SLC7A5" GraphId="cb510" Type="GeneProduct">
+    <BiopaxRef>a28</BiopaxRef>
+    <Graphics CenterX="470.18398695914885" CenterY="294.73111689003963" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="ADP" GraphId="cd5fd" Type="Metabolite">
+    <Graphics CenterX="493.8203564727962" CenterY="637.1149155722346" Width="66.25" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="ChEBI" ID="CHEBI:456216" />
+  </DataNode>
+  <DataNode TextLabel="K+" GraphId="cd68b" Type="Metabolite">
+    <Graphics CenterX="290.0" CenterY="1131.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29103" />
+  </DataNode>
+  <DataNode TextLabel="Lactate Shuttle" GraphId="d1166" Type="Pathway">
+    <Comment>https://www.wikipathways.org/index.php/Pathway:WP5314</Comment>
+    <BiopaxRef>c42</BiopaxRef>
+    <Graphics CenterX="764.5703564727972" CenterY="1079.963925473221" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP5314" />
+  </DataNode>
+  <DataNode TextLabel="Na+" GraphId="d509c" Type="Metabolite">
+    <Graphics CenterX="273.0" CenterY="932.8649155722338" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29101" />
+  </DataNode>
+  <DataNode TextLabel="ATPase" GraphId="dc901" Type="Protein">
+    <Graphics CenterX="338.570356472796" CenterY="1058.8649155722337" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Carnosine" GraphId="dd3ab" Type="Metabolite">
+    <Graphics CenterX="1023.0703564727962" CenterY="847.3649155722322" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15727" />
+  </DataNode>
+  <DataNode TextLabel="Carnosine degradation " GraphId="e7056" Type="Pathway">
+    <Graphics CenterX="896.903689806129" CenterY="471.2399155722339" Width="123.33333333333303" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="SLC6A6" GraphId="ec34e" Type="GeneProduct">
+    <BiopaxRef>ce4</BiopaxRef>
+    <Graphics CenterX="458.0042523940348" CenterY="418.57089874209436" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000131389" />
+  </DataNode>
+  <DataNode TextLabel="glutamate" GraphId="f21af" Type="Metabolite">
+    <Graphics CenterX="217.57035647279537" CenterY="890.8649155722338" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:14321" />
+  </DataNode>
+  <DataNode TextLabel="L-carnosine" GraphId="fc0f7" Type="Metabolite">
+    <Graphics CenterX="616.8203564727962" CenterY="620.8649155722346" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15727" />
+  </DataNode>
+  <DataNode TextLabel="SLC1A2/GLT-1" GraphId="ff44e" Type="GeneProduct">
+    <Comment>GLT-1 is the name used in mouse and rat studies, and SLC1A2 in humans, however neither can be found in the database.</Comment>
+    <BiopaxRef>e0c</BiopaxRef>
+    <Graphics CenterX="340.570356472796" CenterY="850.8649155722338" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="BETA-ALANINE" GraphId="be914" Type="Metabolite">
+    <Graphics CenterX="556.3203564727962" CenterY="500.8649155722339" Width="90.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16958" />
+  </DataNode>
+  <DataNode TextLabel="SLC15A2" GraphId="ffa23" Type="GeneProduct">
+    <Graphics CenterX="458.00425239403484" CenterY="444.31070183632914" Width="90.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000163406" />
+  </DataNode>
+  <DataNode TextLabel="SLC15A2" GraphId="c6320" Type="GeneProduct">
+    <Graphics CenterX="693.8203564727962" CenterY="788.6149155722331" Width="90.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000163406" />
+  </DataNode>
+  <DataNode TextLabel="SLC15A2" GraphId="f4c3b" Type="GeneProduct" GroupRef="bfe43">
+    <Graphics CenterX="1048.8203564727955" CenterY="778.7399155722346" Width="90.0" Height="26.25" ZOrder="32772" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000163406" />
+  </DataNode>
+  <DataNode TextLabel="SLC15A4" GraphId="f8f45" Type="GeneProduct" GroupRef="bfe43">
+    <Graphics CenterX="1048.8203564727955" CenterY="805.1149155722346" Width="90.0" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000139370" />
+  </DataNode>
+  <DataNode TextLabel="L-histidine" GraphId="a1eec" Type="Metabolite">
+    <Graphics CenterX="676.3620231394632" CenterY="502.7815822389004" Width="91.08333333333283" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15971" />
+  </DataNode>
+  <DataNode TextLabel="Na+" GraphId="b3a85" Type="Metabolite">
+    <Graphics CenterX="416.5703564727962" CenterY="933.8649155722338" Width="90.0" Height="25.0" ZOrder="32775" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29101" />
+  </DataNode>
+  <DataNode TextLabel="glutamate" GraphId="e97ff" Type="Metabolite">
+    <Graphics CenterX="454.5703564727962" CenterY="890.8649155722338" Width="90.0" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:14321" />
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="bb143" Type="Metabolite">
+    <Graphics CenterX="457.1953564727962" CenterY="1039.1149155722346" Width="66.25" Height="20.0" ZOrder="32777" FontSize="12" Valign="Middle" />
+    <Xref Database="ChEBI" ID="CHEBI:30616" />
+  </DataNode>
+  <DataNode TextLabel="ADP" GraphId="bed25" Type="Metabolite">
+    <Graphics CenterX="457.1953564727962" CenterY="1079.1149155722337" Width="66.25" Height="20.0" ZOrder="32778" FontSize="12" Valign="Middle" />
+    <Xref Database="ChEBI" ID="CHEBI:456216" />
+  </DataNode>
+  <DataNode TextLabel="CN2" GraphId="fbb72" Type="GeneProduct" GroupRef="db5ea">
+    <Graphics CenterX="887.7370231394627" CenterY="564.2399155722345" Width="90.0" Height="25.0" ZOrder="32782" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="CN1" />
+  </DataNode>
+  <DataNode TextLabel="Na+" GraphId="a7abb" Type="Metabolite">
+    <Graphics CenterX="273.0" CenterY="996.0" Width="90.0" Height="25.0" ZOrder="32784" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29101" />
+  </DataNode>
+  <DataNode TextLabel="K+" GraphId="f8c7f" Type="Metabolite">
+    <Graphics CenterX="392.0" CenterY="1131.0" Width="90.0" Height="25.0" ZOrder="32785" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:29103" />
+  </DataNode>
+  <Interaction GraphId="id15575f0f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="613.8203564727962" Y="632.1149155722346" />
+      <Point X="613.5703564727962" Y="855.6149155722322" GraphRef="bc0f8" RelX="0.0" RelY="-1.0" />
+      <Anchor Position="0.6957809993602883" Shape="None" GraphId="d9e59" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id24e33f9b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="822.1536898061299" Y="205.51047529706003" GraphRef="bf9f0" RelX="0.0" RelY="1.0" />
+      <Point X="676.3620231394632" Y="490.28158223890046" GraphRef="a1eec" RelX="0.0" RelY="-1.0" />
+      <Anchor Position="0.32093142443340633" Shape="None" GraphId="f6055" />
+      <Anchor Position="0.7803749357255835" Shape="None" GraphId="c77bd" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id342b537">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="416.5703564727962" Y="946.3649155722338" GraphRef="b3a85" RelX="0.0" RelY="1.0" />
+      <Point X="344.7851782363981" Y="1050.0" />
+      <Point X="273.0" Y="1008.5" GraphRef="a7abb" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3497070e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="470.1839869591488" Y="307.23111689003963" GraphRef="cb510" RelX="0.0" RelY="1.0" />
+      <Point X="775.3645625522762" Y="296.90247228538277" GraphRef="f6055" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id366a1620">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="503.00425239403484" Y="438.06070183632914" GraphRef="ffa23" RelX="1.0" RelY="-0.5" />
+      <Point X="556.863299907353" Y="426.1594758545866" GraphRef="f4546" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id47ea18cd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="490.3203564727962" Y="1079.1149155722337" GraphRef="bed25" RelX="1.0" RelY="0.0" />
+      <Point X="577.5703564727962" Y="1010.8649155722338" GraphRef="b557f" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id49033cc6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="558.8203564727962" Y="514.6149155722342" />
+      <Point X="594.3203564727962" Y="608.3649155722346" GraphRef="fc0f7" RelX="-0.5" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.3968244096300119" Shape="None" GraphId="e1b14" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5416c030">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="738.8203564727962" Y="788.6149155722331" GraphRef="c6320" RelX="1.0" RelY="0.0" />
+      <Point X="613.6464112229562" Y="787.6219689292574" GraphRef="d9e59" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5d116fe7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="340.570356472796" Y="863.3649155722338" GraphRef="ff44e" RelX="0.0" RelY="1.0" />
+      <Point X="326.19722214443755" Y="890.8649155722338" GraphRef="d70c4" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id637b8faa">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="493.8203564727962" Y="580.8649155722346" GraphRef="a09d3" RelX="1.0" RelY="0.5" />
+      <Point X="655.5465961463941" Y="567.5894156500549" GraphRef="fe76c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id736719c0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="667.5703564727962" Y="1010.8649155722338" GraphRef="b557f" RelX="1.0" RelY="0.0" />
+      <Point X="719.5703564727962" Y="1010.8649155722338" GraphRef="b5e47" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id76ff5eaa">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="594.3203564727962" Y="633.3649155722346" GraphRef="fc0f7" RelX="-0.5" RelY="1.0" />
+      <Point X="363.070356472796" Y="838.3649155722338" GraphRef="ff44e" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8963773d">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="290.0" Y="1118.5" GraphRef="cd68b" RelX="0.0" RelY="-1.0" />
+      <Point X="341.0" Y="1069.0" />
+      <Point X="392.0" Y="1118.5" GraphRef="f8c7f" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8b07df6a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="995.8203564727955" Y="791.6149155722346" GraphRef="caec5" RelX="-1.0" RelY="0.0" />
+      <Point X="906.6846640565209" Y="793.9172997529815" GraphRef="b52db" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id93dafafe">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="676.3620231394632" Y="515.2815822389005" GraphRef="a1eec" RelX="0.0" RelY="1.0" />
+      <Point X="639.3203564727962" Y="608.3649155722346" GraphRef="fc0f7" RelX="0.5" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5619462855271693" Shape="None" GraphId="fe76c" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9a19e084">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="834.7370231394627" Y="551.2399155722345" GraphRef="fad09" RelX="-1.0" RelY="0.0" />
+      <Point X="746.9973770420875" Y="547.2632637957955" GraphRef="ad67a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida03a5130">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="661.8203564727962" Y="614.6149155722346" GraphRef="fc0f7" RelX="1.0" RelY="-0.5" />
+      <Point X="835.2370231394625" Y="477.4899155722339" GraphRef="e7056" RelX="-1.0" RelY="0.5" ArrowHead="mim-stimulation" />
+      <Anchor Position="0.4911697485975481" Shape="None" GraphId="ad67a" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idae97c20a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="493.8203564727962" Y="568.3649155722346" GraphRef="a09d3" RelX="1.0" RelY="-0.5" />
+      <Point X="572.9076230146617" Y="551.817203975048" GraphRef="e1b14" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd37ec57b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="558.7775171982496" Y="206.84615384615344" GraphRef="bff2a" RelX="0.0" RelY="1.0" />
+      <Point X="556.3203564727962" Y="488.36491557223394" GraphRef="be914" RelX="0.0" RelY="-1.0" />
+      <Anchor Position="0.7790362555722892" Shape="None" GraphId="f4546" />
+      <Anchor Position="0.31922059121089574" Shape="None" GraphId="e1d3f" />
+      <Anchor Position="0.6246226579042274" Shape="None" GraphId="eecfc" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idde8697b7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="660.0703564727962" Y="630.8649155722346" />
+      <Point X="978.0703564727962" Y="841.1149155722322" GraphRef="dd3ab" RelX="-1.0" RelY="-0.5" />
+      <Anchor Position="0.7755166905148573" Shape="None" GraphId="b52db" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide29f66b7">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="295.5" Y="920.3649155722338" GraphRef="d509c" RelX="0.5" RelY="-1.0" />
+      <Point X="344.7851782363981" Y="859.8649155722338" />
+      <Point X="394.0703564727962" Y="921.3649155722338" GraphRef="b3a85" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idebc7416">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="503.0042523940348" Y="418.57089874209436" GraphRef="ec34e" RelX="1.0" RelY="0.0" />
+      <Point X="557.2427189350191" Y="382.68915104540474" GraphRef="eecfc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf26da21c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="515.1839869591488" Y="294.73111689003963" GraphRef="cb510" RelX="1.0" RelY="0.0" />
+      <Point X="557.9931408987702" Y="296.71273940131215" GraphRef="e1d3f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf6b8aaa7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="764.5703564727962" Y="1023.3649155722338" GraphRef="b5e47" RelX="0.0" RelY="1.0" />
+      <Point X="764.5703564727972" Y="1067.463925473221" GraphRef="d1166" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bc150">
+    <Graphics ConnectorType="Curved" ZOrder="32779" LineThickness="1.0">
+      <Point X="424.0703564727962" Y="1039.1149155722346" GraphRef="bb143" RelX="-1.0" RelY="0.0" />
+      <Point X="381.0" Y="1059.1149155722342" />
+      <Point X="424.0703564727962" Y="1079.1149155722337" GraphRef="bed25" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e1f69">
+    <Graphics ConnectorType="Curved" ZOrder="32780" LineThickness="1.0">
+      <Point X="413.1953564727962" Y="627.1149155722346" GraphRef="a6c78" RelX="0.0" RelY="-1.0" />
+      <Point X="453.5078564727962" Y="583.8649155722338" />
+      <Point X="493.8203564727962" Y="627.1149155722346" GraphRef="cd5fd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d3416">
+    <Graphics ZOrder="32783" LineThickness="1.0">
+      <Point X="503.00425239403484" Y="438.06070183632914" GraphRef="ffa23" RelX="1.0" RelY="-0.5" />
+      <Point X="708.3815273018042" Y="427.738709573302" GraphRef="c77bd" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="id3ab32cfa">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="262.57035647279537" Y="890.8649155722338" GraphRef="f21af" RelX="1.0" RelY="0.0" />
+      <Point X="409.5703564727962" Y="890.8649155722338" GraphRef="e97ff" RelX="-1.0" RelY="0.0" />
+      <Anchor Position="0.43283582089552236" Shape="None" GraphId="d70c4" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="idd152323f">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="320.2370231394627" Y="295.8649155722327" />
+      <Point X="1160.2370231394596" Y="294.53158223889943" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Astrocyte" GraphId="a814f">
+    <Graphics CenterX="790.0703564727962" CenterY="774.6149155722335" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Oligodendrocyte" GraphId="aaa6f">
+    <Graphics CenterX="986.3203564727962" CenterY="412.1149155722334" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Uracil and Thymine degradation " GraphId="ab67e">
+    <BiopaxRef>b0b</BiopaxRef>
+    <Graphics CenterX="556.0" CenterY="76.0" Width="208.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Macrophages &amp; Microglia " GraphId="bd4f9">
+    <Graphics CenterX="1185.0703564727928" CenterY="777.1149155722334" Width="150.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Blood Brain Barrier" GraphId="cb04b">
+    <BiopaxRef>a13</BiopaxRef>
+    <Graphics CenterX="1226.7370231394666" CenterY="295.61491557223263" Width="110.33333333333326" Height="37.83333333333372" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Liver" GraphId="e4780">
+    <BiopaxRef>c26</BiopaxRef>
+    <Graphics CenterX="560.0475297060702" CenterY="118.58974358974322" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Intestines" GraphId="e5b9a">
+    <BiopaxRef>c26</BiopaxRef>
+    <Graphics CenterX="823.8474046278945" CenterY="124.38850670557923" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Shape GraphId="a3560">
+    <Graphics CenterX="565.9488806646199" CenterY="123.19440344756016" Width="111.57953128469725" Height="43.0576828140051" ZOrder="16384" FillColor="cc6600" FontSize="12" Valign="Middle" ShapeType="Arc" Color="990000" Rotation="3.5437288667998206" />
+  </Shape>
+  <Shape GraphId="a7bbe">
+    <Graphics CenterX="825.9437148217645" CenterY="124.76547842401501" Width="75.90243902439035" Height="65.66604127579745" ZOrder="16384" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bd524">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="694.9453564727962" CenterY="592.6149155722322" Width="697.75" Height="330.5" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="00cc66" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e62bd">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="1086.0703564727946" CenterY="954.3649155722329" Width="380.5" Height="328.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="33ccff" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f66ed">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="608.5703564727962" CenterY="988.8074577861166" Width="530.5" Height="404.38508442776674" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="ffcc33" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e1fd1">
+    <Graphics CenterX="565.9488806646198" CenterY="124.19440344756018" Width="111.57953128469725" Height="43.0576828140051" ZOrder="32781" FillColor="cc6600" FontSize="12" Valign="Middle" ShapeType="Arc" Color="990000" Rotation="0.36245563195407027" />
+  </Shape>
+  <Group GroupId="bfe43" GraphId="caec5" Style="Group" />
+  <Group GroupId="db5ea" GraphId="fad09" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a28">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33071801</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transport of Amino Acids Across the Blood-Brain Barrier.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Front Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zaragozá R</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b0b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30593839</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pivotal role of carnosine in the modulation of brain cells activity: Multimodal mechanism of action and therapeutic potential in neurodegenerative disorders.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prog Neurobiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caruso G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caraci F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jolivet RB</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a13">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31141890</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Potential of Carnosine in Brain-Related Disorders: A Comprehensive Review of Current Evidence.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nutrients</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schön M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mousa A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berk M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chia WL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ukropec J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Majid A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ukropcová B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de Courten B</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e8d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikipathways.org/index.php/Pathway:WP4629</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aerobic glycolysis (Homo sapiens)</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikipathways.org/index.php/Pathway:WP4629</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ce4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23773890</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Β-alanine and l-histidine transport across the inner blood-retinal barrier: potential involvement in L-carnosine supply.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exp Eye Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Usui T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kubo Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akanuma S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hosoya K</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c26">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34203479</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carnosine, Small but Mighty-Prospect of Use as Functional Ingredient for Functional Food Formulation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antioxidants (Basel)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jukić I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolobarić N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stupin A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matić A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kozina N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mihaljević Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mihalj M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Šušnjara P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stupin M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ćurić ŽB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selthofer-Relatić K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kibel A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lukinac A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolar L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kralik G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kralik Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Széchenyi A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jozanović M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galović O</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medvidović-Kosanović M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drenjančević I</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c42">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lactate shuttle in glial cells (Homo sapiens)</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikipathways.org/index.php/Pathway:WP5314</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023</bp:YEAR>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a21">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35624713</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antioxidant and Neuroprotective Effects of Carnosine: Therapeutic Implications in Neurodegenerative Diseases.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antioxidants (Basel)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solana-Manrique C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sanz FJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martínez-Carrión G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paricio N</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b82">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24137022</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physiology and pathophysiology of carnosine.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physiol Rev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boldyrev AA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aldini G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derave W</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e0c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27040711</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carnosine decreased neuronal cell death through targeting glutamate system and astrocyte mitochondrial bioenergetics in cultured neuron/astrocyte exposed to OGD/recovery.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brain Res Bull</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ouyang L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tian Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bao Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xu H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheng J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shen Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyu J</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+
