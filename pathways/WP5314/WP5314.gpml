@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Lactate shuttle in glial cells" Data-Source="WikiPathways" Version="WP5314_r125568" Author="[Celestecurreri, Cleopheebruchou, Ellaverheggen, Eweitz, Egonw, Andra, AlexanderPico]" Last-Modified="20230227225416" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Lactate shuttle in glial cells" Data-Source="WikiPathways" Version="WP5314_r125793" Author="[Celestecurreri, Cleopheebruchou, Ellaverheggen, Eweitz, Egonw, Andra, AlexanderPico, DeSl]" Last-Modified="20230310112022" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Astrocyte-Neuron lactate shuttle in Homo Sapiens. The pathway shows the relation between neuronal activity and lactate production in astrocytes. These shuttles show how lactate can be broken down by lactate dehydrogenase into pyruvate which enters the TCA cycle in neurons. 
 In the astrocytes, the glucose undergoes glycolysis to be converted into pyruvate, which is then converted into lactate with the help of the LDHA enzyme. Lactate is then transported from the astrocytes to the neurons through the transporters SLC16A1, SLC16A3 and SLC16A7. There, lactate is converted to pyruvate with the help of the LDHB enzyme. Pyruvate formation is also increased by glucose entering the neuron through the SLC2A3 transporter, which undergoes glycolysis. Pyruvate enters the TCA cycle in the mitochondria of the neuron and ATP is produced. 
 The ATP generated in the neurons is required for the glutamate neurotransmitters to be excreted from the neurons into the synaptic cleft. The astrocytes take up the glutamate neurotransmitters through the transporter SLC1A2. For glutamate to be transported into the cell by the SLC1A2 transporter, Na+ must be cotransported into the cell. This increase in concentration of sodium ions inside of the astrocyte is balanced by Na+/K+ ATPase which transports Na+ out of the cell while simultaneously transporting K+ into the cell. This transporter requires ATP to be activated, and the ADP produced can be regenerated into ATP during glycolysis in the astrocytes. 
@@ -165,10 +165,6 @@ This lactate shuttle theory explains that lactate from astrocytes is preferentia
     <Graphics CenterX="542.0" CenterY="152.29166666666674" Width="68.0" Height="31.416666666666515" ZOrder="32840" FontSize="15" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000134333" />
   </DataNode>
-  <DataNode TextLabel="Neuron" GraphId="ba342">
-    <Graphics CenterX="2124.333333333333" CenterY="959.083333333332" Width="150.0" Height="56.5" ZOrder="32842" FontSize="30" Valign="Middle" ShapeType="None" Color="00ccff" />
-    <Xref Database="" ID="" />
-  </DataNode>
   <DataNode TextLabel="ammonia&#xA;" GraphId="d466d" Type="Metabolite">
     <Graphics CenterX="1171.0" CenterY="908.75" Width="114.0" Height="50.5" ZOrder="32844" FontSize="20" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:16134" />
@@ -252,22 +248,6 @@ This lactate shuttle theory explains that lactate from astrocytes is preferentia
   <DataNode TextLabel="SLC2A1" GraphId="eed3d" Type="Protein">
     <Graphics CenterX="143.33333333333337" CenterY="76.33333333333348" Width="88.00000000000006" Height="58.0" ZOrder="32884" FontSize="20" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P11166" />
-  </DataNode>
-  <DataNode TextLabel="Astrocyte" GraphId="ebd02">
-    <Graphics CenterX="317.0" CenterY="1245.75" Width="150.0" Height="56.5" ZOrder="32886" FontSize="30" Valign="Middle" ShapeType="None" Color="ffcc00" />
-    <Xref Database="" ID="" />
-  </DataNode>
-  <DataNode TextLabel="Capillary" GraphId="c02da">
-    <Graphics CenterX="89.0" CenterY="613.75" Width="150.0" Height="56.5" ZOrder="32888" FontSize="30" Valign="Middle" ShapeType="None" Color="ff3333" />
-    <Xref Database="" ID="" />
-  </DataNode>
-  <DataNode TextLabel="Neuron" GraphId="dedbf">
-    <Graphics CenterX="1448.3333333333333" CenterY="1251.0833333333321" Width="150.0" Height="56.5" ZOrder="32890" FontSize="30" Valign="Middle" ShapeType="None" Color="00ccff" />
-    <Xref Database="" ID="" />
-  </DataNode>
-  <DataNode TextLabel="Synaptic cleft" GraphId="cb1a1">
-    <Graphics CenterX="1867.6666666666665" CenterY="1081.0833333333321" Width="220.66666666666697" Height="56.5" ZOrder="32892" FontSize="30" Valign="Middle" ShapeType="None" Color="00ccff" />
-    <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="glutamate" GraphId="df376" Type="Metabolite">
     <Graphics CenterX="1360.75" CenterY="1077.75" Width="110.5" Height="56.5" ZOrder="32894" FontSize="20" Valign="Middle" Color="0000ff" />
@@ -845,25 +825,28 @@ This lactate shuttle theory explains that lactate from astrocytes is preferentia
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Shape GraphId="ab180">
+  <Label TextLabel="Synaptic cleft" GraphId="ee1bd">
+    <Graphics CenterX="1751.5174672489081" CenterY="1092.0032751091735" Width="256.79039301310047" Height="29.967248908296995" ZOrder="28672" FillColor="ffffff" FontSize="30" Valign="Middle" Color="00cbff" />
+  </Label>
+  <Shape TextLabel="&#xA;   Neuron" GraphId="ab180">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="1787.0" CenterY="1234.0" Width="854.0" Height="124.0" ZOrder="-8" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="00ccff" Rotation="0.0" />
+    <Graphics CenterX="1787.0" CenterY="1234.0" Width="854.0" Height="124.0" ZOrder="-8" FontSize="30" Valign="Bottom" Align="Left" ShapeType="RoundedRectangle" LineThickness="3.0" Color="00ccff" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="b4c76">
+  <Shape TextLabel="Neuron" GraphId="b4c76">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="1780.0" CenterY="553.4166666666667" Width="852.0" Height="901.1666666666665" ZOrder="-6" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="00ccff" Rotation="0.0" />
+    <Graphics CenterX="1780.0" CenterY="553.4166666666667" Width="852.0" Height="901.1666666666665" ZOrder="-6" FontSize="30" Valign="Bottom" Align="Right" ShapeType="RoundedRectangle" LineThickness="3.0" Color="00ccff" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="ab5b1">
+  <Shape TextLabel="&#xA;&#xA;&#xA;&#xA;&#xA;    Astrocyte" GraphId="ab5b1">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="586.0" CenterY="800.3333333333333" Width="756.0" Height="1419.3333333333335" ZOrder="-4" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+    <Graphics CenterX="586.0" CenterY="800.3333333333333" Width="756.0" Height="1419.3333333333335" ZOrder="-4" FontWeight="Bold" FontSize="30" Valign="Bottom" Align="Left" ShapeType="RoundedRectangle" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="fb98a">
+  <Shape TextLabel="Capillary" GraphId="fb98a">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="91.00000000000001" CenterY="374.6666666666666" Width="142.00000000000003" Height="554.0" ZOrder="-2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="ff3333" Rotation="0.0" />
+    <Graphics CenterX="91.00000000000001" CenterY="374.6666666666666" Width="142.00000000000003" Height="554.0" ZOrder="-2" FontSize="30" Valign="Bottom" ShapeType="RoundedRectangle" LineThickness="3.0" Color="ff3333" Rotation="0.0" />
   </Shape>
   <Shape GraphId="b6af2">
     <Graphics CenterX="1953.0" CenterY="1168.0" Width="370.0" Height="56.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0" />
@@ -897,22 +880,6 @@ This lactate shuttle theory explains that lactate from astrocytes is preferentia
   <Group GroupId="d8fed" GraphId="f1d69" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bac">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brain Energy Metabolism: Focus on Astrocyte-Neuron Metabolic Cooperation.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1016/j.cmet.2011.08.016</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bélanger, M., Allaman, I., &amp; Magistretti, Pierre J.</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab8">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glycogen synthesis in brain and astrocytes is inhibited by chronic lithium treatment.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1016/j.neulet.2010.07.016</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Souza, A. de A., da Silva, G. S. S., Velez, B. S., Santoro, A. B. M., &amp; Montero-Lomelí, M.</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e98">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -920,6 +887,14 @@ This lactate shuttle theory explains that lactate from astrocytes is preferentia
       <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.3389/fphys.2021.825816</bp:SOURCE>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beard, E., Lengacher, S., Dias, S., Magistretti, P. J., &amp; Finsterwald, C.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bac">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brain Energy Metabolism: Focus on Astrocyte-Neuron Metabolic Cooperation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1016/j.cmet.2011.08.016</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bélanger, M., Allaman, I., &amp; Magistretti, Pierre J.</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fab">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
@@ -929,21 +904,18 @@ This lactate shuttle theory explains that lactate from astrocytes is preferentia
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koch, H., &amp; Weber, Y. G.</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c42">
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glial cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000125</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ba2">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Astrocytes: Role and Functions in Brain Pathologies. Frontiers in Pharmacology,</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> https://doi.org/10.3389/fphar.2019.01114</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siracusa, R., Fusco, R., &amp; Cuzzocrea, S.</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e39">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lactate flux in astrocytes is enhanced by a non-catalytic action of carbonic anhydrase II.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1113/jphysiol.2011.220152</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stridh, M. H., Alt, M. D., Wittmann, S., Heidtmann, H., Aggarwal, M., Riederer, B., Seidler, U., Wennemuth, G., McKenna, R., Deitmer, J. W., &amp; Becker, H. M.</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carnosine decreased neuronal cell death through targeting glutamate system and astrocyte mitochondrial bioenergetics in cultured neuron/astrocyte exposed to OGD/recovery.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> https://doi.org/10.1016/j.brainresbull.2016.03.019</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ouyang, L., Tian, Y., Bao, Y., Xu, H., Cheng, J., Wang, B., Shen, Y., Chen, Z., &amp; Lyu, J.</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f7f">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
@@ -953,11 +925,6 @@ This lactate shuttle theory explains that lactate from astrocytes is preferentia
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valvona, C. J., Fillmore, H. L., Nunn, P. B., &amp; Pilkington, G. J.</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glial cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000125</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a59">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -974,13 +941,29 @@ This lactate shuttle theory explains that lactate from astrocytes is preferentia
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bröer, S. and Brookes, N.</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ba2">
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e39">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carnosine decreased neuronal cell death through targeting glutamate system and astrocyte mitochondrial bioenergetics in cultured neuron/astrocyte exposed to OGD/recovery.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> https://doi.org/10.1016/j.brainresbull.2016.03.019</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ouyang, L., Tian, Y., Bao, Y., Xu, H., Cheng, J., Wang, B., Shen, Y., Chen, Z., &amp; Lyu, J.</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lactate flux in astrocytes is enhanced by a non-catalytic action of carbonic anhydrase II.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1113/jphysiol.2011.220152</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stridh, M. H., Alt, M. D., Wittmann, S., Heidtmann, H., Aggarwal, M., Riederer, B., Seidler, U., Wennemuth, G., McKenna, R., Deitmer, J. W., &amp; Becker, H. M.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c42">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Astrocytes: Role and Functions in Brain Pathologies. Frontiers in Pharmacology,</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> https://doi.org/10.3389/fphar.2019.01114</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siracusa, R., Fusco, R., &amp; Cuzzocrea, S.</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab8">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glycogen synthesis in brain and astrocytes is inhibited by chronic lithium treatment.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1016/j.neulet.2010.07.016</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Souza, A. de A., da Silva, G. S. S., Velez, B. S., Santoro, A. B. M., &amp; Montero-Lomelí, M.</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e0a">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</bp:ID>
