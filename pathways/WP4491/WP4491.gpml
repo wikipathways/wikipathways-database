@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Elongation of (very) long chain fatty acids" Data-Source="WikiPathways" Version="WP4491_r125771" Author="[DeSl, MaintBot, Egonw]" Last-Modified="20230309151217" Organism="Mus musculus">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Elongation of (very) long chain fatty acids" Data-Source="WikiPathways" Version="WP4491_r125884" Author="[DeSl, MaintBot, Egonw, Conroy lipids]" Last-Modified="20230316143710" Organism="Mus musculus">
   <Comment Source="WikiPathways-description">This pathway depicts the key steps in (very) long-chain fatty acid biosynthesis, belonging to the n-10, 9 and 7 series (counting first double bond from the methyl side).
 These are mainly synthesised from palmitic acid (C16:0), which is produced by FAS (fatty acid synthase).
 The n-6 and 3 series can only be obtained from precursors in food.
@@ -10,18 +10,19 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <DataNode TextLabel="C18:2" GraphId="c1e5e" Type="Metabolite">
     <Comment>AKA Linoleic Acid</Comment>
     <Graphics CenterX="305.9781287970835" CenterY="716.2499999999997" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q407426" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030120" />
   </DataNode>
   <DataNode TextLabel="C16:1" GraphId="d76d1" Type="Metabolite">
     <Comment>CCCCCCCCCC=CCCCCC(=O)O C16:1 (omega-10)</Comment>
     <Comment>AKA Sapienic acid</Comment>
-    <Graphics CenterX="474.0" CenterY="120.69866342648851" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q2823304" />
+    <Graphics CenterX="472.0" CenterY="120.69866342648851" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030267" />
   </DataNode>
   <DataNode TextLabel="C18:2" GraphId="da6e8" Type="Metabolite">
     <Comment>CCCCCCC=CCC=CCCCCCCC(=O)O C18:2 (omega-7)(delta6)</Comment>
+    <Comment>8Z,11Z-octadecadienoic acid</Comment>
     <Graphics CenterX="755.0" CenterY="273.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="WBTBKRBXTLZUJG-ZDVGBALWSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030116" />
   </DataNode>
   <DataNode TextLabel="Fads2" GraphId="de596" Type="Protein">
     <Comment>Annotated for gene, since:"Fatty acid desaturase 2 (FADS2) is encoded by the FADS2 gene, the associated enzyme is sometimes known as FADS2 as well.[5][6] Its main associated enzyme is Delta 6 desaturase (D6D) however the human enzyme been shown to also catalyze some delta-8 and delta-4 desaturases in spite of naming conventions."(source: Wikipedia)</Comment>
@@ -29,9 +30,9 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
     <Xref Database="Ensembl" ID="ENSMUSG00000024665" />
   </DataNode>
   <DataNode TextLabel="C20:2" GraphId="e8bf3" Type="Metabolite">
-    <Comment>CCCCCC=CCC=CCCCCCCCCCC(=O)O Linoleic Acid; C20:2 (omega 6)</Comment>
+    <Comment>CCCCCC=CCC=CCCCCCCCCCC(=O)O dihomoLinoleic Acid; C20:2 (omega 6)</Comment>
     <Graphics CenterX="457.0833333333331" CenterY="648.148148148148" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="XSXIVVZCUAHUJO-AVQMFFATSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01031043" />
   </DataNode>
   <DataNode TextLabel="Elovl6" GraphId="eea01" Type="Protein" GroupRef="e060c">
     <Graphics CenterX="549.5" CenterY="168.9540775534679" Width="57.0" Height="20.5" ZOrder="32768" FontSize="12" Valign="Middle" />
@@ -47,42 +48,43 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   </DataNode>
   <DataNode TextLabel="C18:1" GraphId="b8cff" Type="Metabolite">
     <Comment>CCCCCCCCCC=CCCCCCCC(=O)O C18:1 (omega-10)</Comment>
-    <Comment>aka sebaleic acid (LMFA01030323 contains 2 double bonds iso 1, so not correct structure it seems?) or cis-8-octadecanoate (unknown in LIPID MAPS) ; both names unknown in Wikidata!</Comment>
+    <Comment>cis-8-oleic acid, 
+cis-8-octadecenoic acid</Comment>
     <Graphics CenterX="626.0" CenterY="120.69866342648851" Width="90.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="WRIDQFICGBMAFQ-ZHACJKMWSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030070" />
   </DataNode>
   <DataNode TextLabel="C16:0" GraphId="d575d" Type="Metabolite">
     <Comment>AKA Palmitic Acid</Comment>
     <Graphics CenterX="305.9781287970835" CenterY="221.0" Width="90.0" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:15756" />
+    <Xref Database="LIPID MAPS" ID="LMFA01010001" />
   </DataNode>
   <DataNode TextLabel="C18:0" GraphId="f2e95" Type="Metabolite">
     <Comment>AKA Stearic acid</Comment>
     <Graphics CenterX="305.9781287970835" CenterY="381.9075630252102" Width="90.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q209685" />
+    <Xref Database="LIPID MAPS" ID="LMFA01010018" />
   </DataNode>
   <DataNode TextLabel="C20:0" GraphId="cfab0" Type="Metabolite">
     <Comment>AKA Arachidic acid</Comment>
     <Graphics CenterX="305.9781287970835" CenterY="483.9075630252102" Width="90.0" Height="25.0" ZOrder="32772" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:28822" />
+    <Xref Database="LIPID MAPS" ID="LMFA01010020" />
   </DataNode>
   <DataNode TextLabel="C16:1" GraphId="d8cdc" Type="Metabolite">
     <Comment>CCCCCCCCC=CCCCCCC(=O)O C16:1 (omega-9)</Comment>
     <Comment>AKA Palmitoleic acid</Comment>
     <Graphics CenterX="474.0" CenterY="221.0" Width="90.0" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q412366" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030056" />
   </DataNode>
   <DataNode TextLabel="C18:1" GraphId="db6dd" Type="Metabolite">
     <Comment>CCCCCCCCC=CCCCCCCCC(=O)O C18:1 (omega-9)</Comment>
     <Comment>AKA Vaccenic acid</Comment>
-    <Comment>Annotated as cis/trans group.</Comment>
-    <Graphics CenterX="626.1998800719568" CenterY="220.8001199280432" Width="90.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q27116670" />
+    <Graphics CenterX="627.2503002400241" CenterY="220.8001199280432" Width="90.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030076" />
   </DataNode>
   <DataNode TextLabel="C16:2" GraphId="e5b46" Type="Metabolite">
     <Comment>CCCCCCC=CCC=CCCCCC(=O)O C16:2 (omega-7)(delta6)</Comment>
-    <Graphics CenterX="626.0" CenterY="273.0" Width="90.0" Height="25.0" ZOrder="32778" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="JZJWNDAFHKZSNQ-ZDVGBALWSA-N" />
+    <Comment>6Z,9Z-hexadecadienoic acid</Comment>
+    <Graphics CenterX="629.0" CenterY="273.0" Width="90.0" Height="25.0" ZOrder="32778" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030273" />
   </DataNode>
   <DataNode TextLabel="C18:3" GraphId="f3d38" Type="Metabolite">
     <Graphics CenterX="881.9495798319327" CenterY="273.0" Width="90.0" Height="25.0" ZOrder="32779" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -90,74 +92,78 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   </DataNode>
   <DataNode TextLabel="C20:3" GraphId="fe676" Type="Metabolite">
     <Graphics CenterX="1028.0" CenterY="273.0" Width="90.0" Height="25.0" ZOrder="32780" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030384" />
   </DataNode>
   <DataNode TextLabel="C18:2" GraphId="ba729" Type="Metabolite">
     <Comment>CCCCCCCCC=CCC=CCCCCC(=O)O C18:2 (omega-9)(delta6)</Comment>
+    <Comment>6Z,9Z-octadecadienoic acid</Comment>
     <Graphics CenterX="626.0" CenterY="362.76783033991256" Width="90.0" Height="25.0" ZOrder="32781" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="ZMKDEQUXYDZSNN-OKLKQMLOSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030332" />
   </DataNode>
   <DataNode TextLabel="C20:2" GraphId="e3374" Type="Metabolite">
     <Comment>CCCCCCCCC=CCC=CCCCCCCC(=O)O C20:2 (omega-9)(delta6)</Comment>
     <Graphics CenterX="755.0" CenterY="362.76783033991256" Width="90.0" Height="25.0" ZOrder="32782" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="XUJWOMMOEOHPFP-OKLKQMLOSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030377" />
   </DataNode>
   <DataNode TextLabel="C20:3" GraphId="f041c" Type="Metabolite">
     <Comment>AKA Mead acid</Comment>
     <Comment>CCCCCCCCC=CCC=CCC=CCCCCCC(=O)O C20:2 (omega-9)(delta6)(delta5)</Comment>
     <Graphics CenterX="881.9495798319327" CenterY="362.76783033991256" Width="90.0" Height="25.0" ZOrder="32783" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q416610" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030381" />
   </DataNode>
   <DataNode TextLabel="C22:3" GraphId="d6a76" Type="Metabolite">
-    <Comment>CCCCCCCCC=CCC=CCC=CCCCCCCCC(=O)O C22:2 (omega-9)(delta6)(delta5)</Comment>
+    <Comment>C(CCCCC/C=C\C/C=C\C/C=C\CCCCCCCC)(=O)O</Comment>
+    <Comment>Dihomo Mead's acid</Comment>
     <Graphics CenterX="1028.0" CenterY="362.76783033991256" Width="90.0" Height="25.0" ZOrder="32784" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="NMHWYOYEAAARBH-WYTUUNCASA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030411" />
   </DataNode>
   <DataNode TextLabel="C18:1" GraphId="a867f" Type="Metabolite">
     <Comment>AKA oleic acid</Comment>
     <Graphics CenterX="474.0" CenterY="381.9075630252102" Width="90.0" Height="25.0" ZOrder="32790" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q207688" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030002" />
   </DataNode>
   <DataNode TextLabel="C20:1" GraphId="e8ad5" Type="Metabolite">
-    <Comment>AKA gadoleic acid and eicosenoic acid</Comment>
-    <Comment>CCCCCCCCC=CCCCCCCCCCC(=O)O C20:1 (omega-9) aka eicosenoic acid</Comment>
+    <Comment>cis-gondoic acid</Comment>
+    <Comment>C20:1 (omega-9) aka eicosenoic acid</Comment>
     <Graphics CenterX="626.0" CenterY="409.32676108110314" Width="90.0" Height="25.0" ZOrder="32793" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q5516412" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030085" />
   </DataNode>
   <DataNode TextLabel="C22:1" GraphId="b9353" Type="Metabolite">
     <Comment>AKA Erucic acid</Comment>
     <Comment>CCCCCCCCC=CCCCCCCCCCCCC(=O)O C22:1 (omega-9)</Comment>
     <Graphics CenterX="755.0" CenterY="409.32676108110314" Width="90.0" Height="25.0" ZOrder="32794" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q413531" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030089" />
   </DataNode>
   <DataNode TextLabel="C24:1" GraphId="a3661" Type="Metabolite">
     <Comment>CCCCCCCCC=CCCCCCCCCCCCCCC(=O)O C24:1 (omega-9)</Comment>
+    <Comment>Nervonic acid</Comment>
     <Graphics CenterX="881.9495798319327" CenterY="409.32676108110314" Width="90.0" Height="25.0" ZOrder="32795" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="GWHCXVQVJPWHRF-MDZDMXLPSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030092" />
   </DataNode>
   <DataNode TextLabel="C22:0" GraphId="f79ec" Type="Metabolite">
     <Comment>AKA Behenic Acid</Comment>
     <Graphics CenterX="474.0" CenterY="483.9075630252102" Width="90.0" Height="25.0" ZOrder="32801" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q422590" />
+    <Xref Database="LIPID MAPS" ID="LMFA01010022" />
   </DataNode>
   <DataNode TextLabel="C24:0" GraphId="a81a8" Type="Metabolite">
     <Comment>AKA Lignoceric acid</Comment>
     <Graphics CenterX="626.0" CenterY="483.9075630252102" Width="90.0" Height="25.0" ZOrder="32802" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q422634" />
+    <Xref Database="LIPID MAPS" ID="LMFA01010024" />
   </DataNode>
   <DataNode TextLabel="C26:0" GraphId="eb9f0" Type="Metabolite">
+    <Comment>Cerotic acid</Comment>
     <Graphics CenterX="755.0" CenterY="483.9075630252102" Width="90.0" Height="25.0" ZOrder="32803" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q903348" />
+    <Xref Database="LIPID MAPS" ID="LMFA01010026" />
   </DataNode>
   <DataNode TextLabel="C28:0" GraphId="b8159" Type="Metabolite">
     <Comment>AKA montanic acid (not mentioned in main article).</Comment>
     <Graphics CenterX="881.9495798319327" CenterY="483.9075630252102" Width="90.0" Height="25.0" ZOrder="32804" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q911196" />
+    <Xref Database="LIPID MAPS" ID="LMFA01010028" />
   </DataNode>
   <DataNode TextLabel="C30:0" GraphId="ef0be" Type="Metabolite">
     <Comment>AKA melissic acid or triacontanoic acid not mentioned in main article).</Comment>
     <Graphics CenterX="1028.0" CenterY="483.9075630252102" Width="90.0" Height="25.0" ZOrder="32805" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q420731" />
+    <Xref Database="LIPID MAPS" ID="LMFA01010030" />
   </DataNode>
   <DataNode TextLabel="Elovl5" GraphId="e91da" Type="Protein" GroupRef="e060c">
     <Graphics CenterX="549.5" CenterY="189.4540775534679" Width="57.0" Height="20.5" ZOrder="32811" FontSize="12" Valign="Middle" />
@@ -276,107 +282,107 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <DataNode TextLabel="C18:3" GraphId="dd584" Type="Metabolite">
     <Comment>AKA alpha-linolenic acid</Comment>
     <Graphics CenterX="305.9781287970835" CenterY="851.2499999999989" Width="90.0" Height="25.0" ZOrder="32843" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q256502" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030152" />
   </DataNode>
   <DataNode TextLabel="C18:3" GraphId="f8754" Type="Metabolite">
-    <Comment>CCCCCC=CCC=CCC=CCCCCC(=O)O Linoleic Acid; C18:3 (omega 6)(delta6)</Comment>
+    <Comment>CCCCCC=CCC=CCC=CCCCCC(=O)O gammaLinoleic Acid; C18:3 (omega 6)(delta6)</Comment>
     <Graphics CenterX="457.0833333333331" CenterY="716.2499999999997" Width="90.0" Height="25.0" ZOrder="32845" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="VZCCETWTMQHEPK-YHTMAJSVSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030141" />
   </DataNode>
   <DataNode TextLabel="C18:3" GraphId="cc575" Type="Metabolite">
-    <Comment>CCCCCC=CCC=CCCC=CCCCC(=O)O Linoleic Acid; C18:3 (omega 6)(delta5?)</Comment>
+    <Comment>Pinolenic acid</Comment>
     <Graphics CenterX="457.0833333333331" CenterY="776.944444444443" Width="90.0" Height="25.0" ZOrder="32846" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="HXQHFNIKBKZGRP-JRVLCRGASA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030344" />
   </DataNode>
   <DataNode TextLabel="C20:3" GraphId="ecc43" Type="Metabolite">
-    <Comment>CCCCCC=CCC=CCC=CCCCCCCC(=O)O Linoleic Acid; C20:3 (omega 6)(delta8)</Comment>
-    <Graphics CenterX="582.0833333333329" CenterY="716.2499999999998" Width="90.0" Height="25.0" ZOrder="32847" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="HOBAELRKJCKHQD-YHTMAJSVSA-N" />
+    <Comment>bishomo-gamma-linolenic acid</Comment>
+    <Graphics CenterX="583.0833333333329" CenterY="716.2499999999998" Width="90.0" Height="25.0" ZOrder="32847" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030158" />
   </DataNode>
   <DataNode TextLabel="C20:3" GraphId="ddae5" Type="Metabolite">
-    <Comment>CCCCCC=CCC=CCCC=CCCCCCC(=O)O Linoleic Acid; C20:3 (omega 6)(delta5?)</Comment>
+    <Comment>Bishomopinolenic acid</Comment>
     <Graphics CenterX="582.0833333333329" CenterY="776.944444444443" Width="90.0" Height="25.0" ZOrder="32848" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="PTZVBFWVXXLKST-JRVLCRGASA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030386" />
   </DataNode>
   <DataNode TextLabel="C20:4" GraphId="e9624" Type="Metabolite">
     <Comment>AKA arachidonic acid</Comment>
-    <Comment>CCCCCC=CCC=CCC=CCC=CCCCC(=O)O Linoleic Acid; C20:4 (omega 6)(delta8)(delta5)</Comment>
+    <Comment></Comment>
     <Graphics CenterX="729.9682061579645" CenterY="716.2499999999997" Width="90.0" Height="25.0" ZOrder="32849" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q407699" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030001" />
   </DataNode>
   <DataNode TextLabel="C22:4" GraphId="d375a" Type="Metabolite">
-    <Comment>CCCCCC=CCC=CCC=CCC=CCCCCCC(=O)O Linoleic Acid; C22:4 (omega 6)(delta8)(delta5)</Comment>
+    <Comment>Adrenic acid</Comment>
     <Graphics CenterX="855.7089468987053" CenterY="716.2499999999997" Width="90.0" Height="25.0" ZOrder="32850" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="TWSWSIQAPQLDBP-CGRWFSSPSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030178" />
   </DataNode>
   <DataNode TextLabel="C24:4" GraphId="dd8eb" Type="Metabolite">
-    <Comment>CCCCCC=CCC=CCC=CCC=CCCCCCCCC(=O)O Linoleic Acid; C24:4 (omega 6)(delta8)(delta5)</Comment>
-    <Graphics CenterX="982.6070950468529" CenterY="716.2499999999995" Width="90.0" Height="25.0" ZOrder="32851" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="MMJZTSLHOIGZPU-CGRWFSSPSA-N" />
+    <Comment>9Z,12Z,15Z,18Z-Tetracosatetraenoic acid</Comment>
+    <Graphics CenterX="982.6070950468529" CenterY="717.3004201680668" Width="90.0" Height="25.0" ZOrder="32851" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030819" />
   </DataNode>
   <DataNode TextLabel="C24:5" GraphId="d9d87" Type="Metabolite">
-    <Comment>CCCCCC=CCC=CCC=CCC=CCC=CCCCCC(=O)O Linoleic Acid; C24:5 (omega 6)(delta8)(delta5)(delta6)</Comment>
+    <Comment>6Z,9Z,12Z,15Z,18Z-tetracosapentaenoic acid</Comment>
     <Graphics CenterX="1110.6626506024086" CenterY="716.2499999999997" Width="90.0" Height="25.0" ZOrder="32852" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="VENRYLMOFDSSDJ-GUTOPQIJSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030820" />
   </DataNode>
   <DataNode TextLabel="C22:5" GraphId="b9e59" Type="Metabolite">
     <Comment>AKA Docosapentaenoic acid</Comment>
-    <Comment>CCCCCC=CCC=CCC=CCC=CCC=CCCC(=O)O Linoleic Acid; C22:5 (omega 6)(delta8)(delta5)(delta6)</Comment>
+    <Comment></Comment>
     <Graphics CenterX="1240.6163543061118" CenterY="716.2499999999997" Width="90.0" Height="25.0" ZOrder="32853" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q2823253" />
+    <Xref Database="LIPID MAPS" ID="LMFA04000064" />
   </DataNode>
   <DataNode TextLabel="C34:5" GraphId="a26e6" Type="Metabolite">
-    <Comment>CCCCCC=CCC=CCC=CCC=CCC=CCCCCCCCCCCCCCCC(=O)O Linoleic Acid; C34:5 (omega 6)(delta8)(delta5)(delta6)</Comment>
+    <Comment>16Z,19Z,22Z,25Z,28Z-tetratriacontapentaenoic acid</Comment>
     <Graphics CenterX="1240.6163543061118" CenterY="643.950245426149" Width="90.0" Height="25.0" ZOrder="32854" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="ASKJBTPRRSQTPM-GUTOPQIJSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030849" />
   </DataNode>
   <DataNode TextLabel="C18:4" GraphId="afe08" Type="Metabolite">
     <Comment>CCC=CCC=CCC=CCC=CCCCCC(=O)O C18:4(omega 3)(delta6)</Comment>
-    <Graphics CenterX="457.0833333333331" CenterY="851.2499999999987" Width="90.0" Height="25.0" ZOrder="32864" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="JIWBIWFOSCKQMA-GFRMADBLSA-N" />
+    <Comment>Stearidonic acid</Comment>
+    <Graphics CenterX="456.0329131652659" CenterY="851.2499999999987" Width="90.0" Height="25.0" ZOrder="32864" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030357" />
   </DataNode>
   <DataNode TextLabel="C20:4" GraphId="d136b" Type="Metabolite">
-    <Comment>CCC=CCC=CCC=CCC=CCCCCCCC(=O)O C20:4(omega 3)(delta6)</Comment>
-    <Comment>Following other route: CCC=CCC=CCC=CCC=CCCCCCCC(=O)O C20:4(omega 3)(delta8)</Comment>
     <Graphics CenterX="582.0833333333329" CenterY="851.2499999999987" Width="90.0" Height="25.0" ZOrder="32865" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030818" />
   </DataNode>
   <DataNode TextLabel="C20:5" GraphId="a44f4" Type="Metabolite">
     <Comment>AKA eicosapentaenoic acid</Comment>
-    <Comment>CCC=CCC=CCC=CCC=CCC=CCCCC(=O)O C20:5(omega 3)(delta6)(delta5)</Comment>
+    <Comment></Comment>
     <Graphics CenterX="729.9682061579645" CenterY="851.2499999999987" Width="90.0" Height="25.0" ZOrder="32866" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q409990" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030759" />
   </DataNode>
   <DataNode TextLabel="C22:5" GraphId="d5985" Type="Metabolite">
-    <Comment>CCC=CCC=CCC=CCC=CCC=CCCCCCC(=O)O C22:5(omega 3)(delta6)(delta5)</Comment>
+    <Comment>Clupanodonic acid; DPA
+</Comment>
     <Graphics CenterX="855.7089468987053" CenterY="851.2499999999987" Width="90.0" Height="25.0" ZOrder="32867" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="YUFFSWGQGVEMMI-RCHUDCCISA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA04000044" />
   </DataNode>
   <DataNode TextLabel="C24:5" GraphId="e1d79" Type="Metabolite">
     <Comment>CCC=CCC=CCC=CCC=CCC=CCCCCCCCC(=O)O C24:5(omega 3)(delta6)(delta5)</Comment>
     <Graphics CenterX="982.6070950468529" CenterY="851.2499999999986" Width="90.0" Height="25.0" ZOrder="32868" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="NPTIBOCVSPURCS-RCHUDCCISA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030821" />
   </DataNode>
   <DataNode TextLabel="C24:6" GraphId="d296c" Type="Metabolite">
-    <Comment>CCC=CCC=CCC=CCC=CCC=CCC=CCCCCC(=O)O C24:6(omega 3)(delta6)(delta5)(delta6)</Comment>
+    <Comment>Nisinic acid; THA</Comment>
     <Graphics CenterX="1110.6626506024086" CenterY="851.2499999999987" Width="90.0" Height="25.0" ZOrder="32869" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="YHGJECVSSKXFCJ-SFGLVEFQSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030822" />
   </DataNode>
   <DataNode TextLabel="C22:6" GraphId="a5d5c" Type="Metabolite">
-    <Comment>AKA docosahexaenoic acid (currently annotated with all-cis version of lipid, however there is an all trans version: Q27094656)</Comment>
-    <Comment>CCC=CCC=CCC=CCC=CCC=CCC=CCCC(=O)O C22:6(omega 3)(delta6)(delta5)(delta6)</Comment>
+    <Comment>AKA docosahexaenoic acid</Comment>
+    <Comment></Comment>
     <Graphics CenterX="1240.6163543061118" CenterY="851.2499999999987" Width="90.0" Height="25.0" ZOrder="32870" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="Wikidata" ID="Q423345" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030185" />
   </DataNode>
   <DataNode TextLabel="C20:3" GraphId="df049" Type="Metabolite">
-    <Comment>CCC=CCC=CCC=CCCCCCCCCCC(=O)O C20:3(omega 3)</Comment>
+    <Comment>Dihomo-alpha-linolenic acid</Comment>
     <Graphics CenterX="457.0833333333331" CenterY="902.0929749318418" Width="90.0" Height="25.0" ZOrder="32877" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="AHANXAKGNAKFSK-IUQGRGSQSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030378" />
   </DataNode>
   <DataNode TextLabel="C34:6" GraphId="ea095" Type="Metabolite">
-    <Comment>CCC=CCC=CCC=CCC=CCC=CCC=CCCCCCCCCCCCCCCC(=O)O C34:6(omega 3)(delta6)(delta5)(delta6)</Comment>
+    <Comment></Comment>
     <Graphics CenterX="1239.2098845452117" CenterY="902.0929749318418" Width="90.0" Height="25.0" ZOrder="32880" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="InChIKey" ID="TZKUXMFOWSEBLN-SFGLVEFQSA-N" />
+    <Xref Database="LIPID MAPS" ID="LMFA01030842" />
   </DataNode>
   <DataNode TextLabel="Elovl5" GraphId="d07f6" Type="GeneProduct">
     <Graphics CenterX="383.9540450176558" CenterY="620.3557002519595" Width="57.0" Height="20.5" ZOrder="32882" FontSize="12" Valign="Middle" />
@@ -481,7 +487,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="id1e89aad">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="549.5" Y="207.7040775534679" GraphRef="b210b" RelX="0.0" RelY="1.0" />
-      <Point X="549.8682580922722" Y="220.90080447676866" GraphRef="bc2da" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="550.3895555741277" Y="220.90080447676866" GraphRef="bc2da" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -510,7 +516,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="id361c0a35">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
       <Point X="305.9781287970835" Y="208.5" GraphRef="d575d" RelX="0.0" RelY="-1.0" />
-      <Point X="429.0" Y="120.69866342648851" GraphRef="d76d1" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="427.0" Y="120.69866342648851" GraphRef="d76d1" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.7690762647147822" Shape="None" GraphId="af343" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -518,7 +524,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="id38907941">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="518.0008991006546" Y="832.6761088672278" GraphRef="fc1bc" RelX="0.0" RelY="1.0" />
-      <Point X="519.1326530612245" Y="851.2499999999987" GraphRef="be87a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="518.5939171587002" Y="851.2499999999987" GraphRef="be87a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -556,7 +562,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
     <BiopaxRef>b9f</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="550.0345211581292" Y="97.43681697440331" GraphRef="c1d09" RelX="0.0" RelY="1.0" />
-      <Point X="549.870077953228" Y="120.69866342648851" GraphRef="e03f9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="548.8658869194612" Y="120.69866342648851" GraphRef="e03f9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -570,7 +576,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="id5c30aac2">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="350.9781287970835" Y="851.2499999999989" GraphRef="dd584" RelX="1.0" RelY="0.0" />
-      <Point X="412.0833333333331" Y="851.2499999999987" GraphRef="afe08" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="411.0329131652659" Y="851.2499999999987" GraphRef="afe08" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.5437401289153514" Shape="None" GraphId="efe7f" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -592,14 +598,14 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="id6fdbfecb">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="520.8389178422879" Y="691.1082045970861" GraphRef="b2eeb" RelX="0.0" RelY="1.0" />
-      <Point X="520.7496653279786" Y="716.2499999999998" GraphRef="fa20e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="521.2829890992542" Y="716.2499999999998" GraphRef="fa20e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id79feae16">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="380.6713244228432" Y="99.00000000000001" GraphRef="de596" RelX="0.0" RelY="1.0" />
-      <Point X="380.3159173754557" Y="120.69866342648851" GraphRef="af343" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="378.7777648460261" Y="120.69866342648851" GraphRef="af343" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -635,7 +641,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="id9aef5c1a">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="382.95404501765574" Y="832.091746818304" GraphRef="e3e4d" RelX="0.0" RelY="1.0" />
-      <Point X="384.2034805890228" Y="851.2499999999987" GraphRef="efe7f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="383.6323249914226" Y="851.2499999999987" GraphRef="efe7f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -731,7 +737,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="idd61631a0">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="474.0" Y="271.14326956587274" GraphRef="ec847" RelX="0.0" RelY="-1.0" />
-      <Point X="530.3" Y="249.3" GraphRef="f8d4a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="531.5" Y="249.3" GraphRef="f8d4a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -780,7 +786,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   </Interaction>
   <Interaction GraphId="da34d">
     <Graphics ZOrder="32773" LineThickness="1.0">
-      <Point X="519.0" Y="120.69866342648851" GraphRef="d76d1" RelX="1.0" RelY="0.0" />
+      <Point X="517.0" Y="120.69866342648851" GraphRef="d76d1" RelX="1.0" RelY="0.0" />
       <Point X="581.0" Y="120.69866342648851" GraphRef="b8cff" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.497904483116581" Shape="None" GraphId="e03f9" />
     </Graphics>
@@ -805,7 +811,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="ea0eb">
     <Graphics ZOrder="32785" LineThickness="1.0">
       <Point X="519.0" Y="221.0" GraphRef="d8cdc" RelX="1.0" RelY="0.0" />
-      <Point X="581.1998800719568" Y="220.8001199280432" GraphRef="db6dd" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="582.2503002400241" Y="220.8001199280432" GraphRef="db6dd" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.49627520272646486" Shape="None" GraphId="bc2da" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -813,14 +819,14 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="ce3f6">
     <Graphics ZOrder="32786" LineThickness="1.0">
       <Point X="496.5" Y="233.5" GraphRef="d8cdc" RelX="0.5" RelY="1.0" />
-      <Point X="581.0" Y="273.0" GraphRef="e5b46" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="584.0" Y="273.0" GraphRef="e5b46" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4" Shape="None" GraphId="f8d4a" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c5c50">
     <Graphics ZOrder="32787" LineThickness="1.0">
-      <Point X="671.0" Y="273.0" GraphRef="e5b46" RelX="1.0" RelY="0.0" />
+      <Point X="674.0" Y="273.0" GraphRef="e5b46" RelX="1.0" RelY="0.0" />
       <Point X="710.0" Y="273.0" GraphRef="da6e8" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -934,14 +940,14 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="ce974">
     <Graphics ZOrder="32855" LineThickness="1.0">
       <Point X="502.0833333333331" Y="716.2499999999997" GraphRef="f8754" RelX="1.0" RelY="0.0" />
-      <Point X="537.0833333333329" Y="716.2499999999998" GraphRef="ecc43" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="538.0833333333329" Y="716.2499999999998" GraphRef="ecc43" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.5333237712755892" Shape="None" GraphId="fa20e" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a68ed">
     <Graphics ZOrder="32856" LineThickness="1.0">
-      <Point X="627.0833333333329" Y="716.2499999999998" GraphRef="ecc43" RelX="1.0" RelY="0.0" />
+      <Point X="628.0833333333329" Y="716.2499999999998" GraphRef="ecc43" RelX="1.0" RelY="0.0" />
       <Point X="684.9682061579645" Y="716.2499999999997" GraphRef="e9624" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.6375751618871515" Shape="None" GraphId="a5a4a" />
     </Graphics>
@@ -958,14 +964,14 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="ce286">
     <Graphics ZOrder="32858" LineThickness="1.0">
       <Point X="900.7089468987053" Y="716.2499999999997" GraphRef="d375a" RelX="1.0" RelY="0.0" />
-      <Point X="937.6070950468529" Y="716.2499999999995" GraphRef="dd8eb" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="937.6070950468529" Y="717.3004201680668" GraphRef="dd8eb" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4778310229626415" Shape="None" GraphId="c2177" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f8fa3">
     <Graphics ZOrder="32859" LineThickness="1.0">
-      <Point X="1027.607095046853" Y="716.2499999999995" GraphRef="dd8eb" RelX="1.0" RelY="0.0" />
+      <Point X="1027.607095046853" Y="717.3004201680668" GraphRef="dd8eb" RelX="1.0" RelY="0.0" />
       <Point X="1065.6626506024086" Y="716.2499999999997" GraphRef="d9d87" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.5289511655706618" Shape="None" GraphId="ac51d" />
     </Graphics>
@@ -990,7 +996,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="ef1c1">
     <Graphics ConnectorType="Elbow" ZOrder="32862" LineThickness="1.0">
       <Point X="502.0833333333331" Y="648.148148148148" GraphRef="e8bf3" RelX="1.0" RelY="0.0" />
-      <Point X="582.0833333333329" Y="703.7499999999998" GraphRef="ecc43" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point X="583.0833333333329" Y="703.7499999999998" GraphRef="ecc43" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -1003,7 +1009,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   </Interaction>
   <Interaction GraphId="aedf6">
     <Graphics ZOrder="32871" LineThickness="1.0">
-      <Point X="502.0833333333331" Y="851.2499999999987" GraphRef="afe08" RelX="1.0" RelY="0.0" />
+      <Point X="501.0329131652659" Y="851.2499999999987" GraphRef="afe08" RelX="1.0" RelY="0.0" />
       <Point X="537.0833333333329" Y="851.2499999999987" GraphRef="d136b" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.48712342079689874" Shape="None" GraphId="be87a" />
     </Graphics>
@@ -1091,14 +1097,14 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="b6f6e">
     <Graphics ZOrder="32892" LineThickness="1.0">
       <Point X="664.4436533962028" Y="771.7436365821868" GraphRef="c5a63" RelX="0.0" RelY="-1.0" />
-      <Point X="663.9892904953145" Y="716.2499999999997" GraphRef="a5a4a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="664.3517153334274" Y="716.2499999999997" GraphRef="a5a4a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="a5cdb">
     <Graphics ZOrder="32894" LineThickness="1.0">
       <Point X="917.6394533175228" Y="770.7430159184617" GraphRef="e1678" RelX="0.0" RelY="-1.0" />
-      <Point X="918.3400267737618" Y="716.2499999999997" GraphRef="c2177" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="918.3400267737618" Y="716.7519233434477" GraphRef="c2177" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -1119,7 +1125,7 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Interaction GraphId="bd4d2">
     <Graphics ZOrder="32903" LineThickness="1.0">
       <Point X="1048.2820235986464" Y="770.7963690690956" GraphRef="e85c1" RelX="0.0" RelY="-1.0" />
-      <Point X="1047.7366255144032" Y="716.2499999999997" GraphRef="ac51d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="1047.7366255144032" Y="716.7447991958287" GraphRef="ac51d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -1240,25 +1246,9 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
   <Group GroupId="ec2ca" GraphId="fb74f" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ded">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20018209</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The key roles of elongases and desaturases in mammalian fatty acid metabolism: Insights from transgenic mice.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prog Lipid Res</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guillou H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zadravec D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin PG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacobsson A</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid elongation pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001136</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid biosynthetic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000029</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b9f">
@@ -1315,10 +1305,26 @@ The desaturation (removal of hydrogens, creating double bonds within the tail) a
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fendt SM</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid biosynthetic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000029</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid metabolic pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000058</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ded">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20018209</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The key roles of elongases and desaturases in mammalian fatty acid metabolism: Insights from transgenic mice.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prog Lipid Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guillou H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zadravec D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin PG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacobsson A</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
 
