@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Elongation of (very) long chain fatty acids" Data-Source="WikiPathways" Version="WP4491_r125917" Author="[DeSl, MaintBot, Egonw, Conroy lipids, AlexanderPico]" Last-Modified="20230318022631" Organism="Mus musculus">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Elongation of (very) long chain fatty acids" Data-Source="WikiPathways" Version="WP4491_r125976" Author="[DeSl, MaintBot, Egonw, Conroy lipids, AlexanderPico]" Last-Modified="20230323155803" Organism="Mus musculus">
   <Comment Source="WikiPathways-description">This pathway depicts the key steps in (very) long-chain fatty acid biosynthesis, belonging to the n-10, 9 and 7 series (counting first double bond from the methyl side).
 These are mainly synthesised from palmitic acid (C16:0), which is produced by FAS (fatty acid synthase). 
 The n-6 and 3 series can only be obtained from precursors in food.
@@ -87,6 +87,7 @@ cis-8-octadecenoic acid</Comment>
     <Xref Database="LIPID MAPS" ID="LMFA01030273" />
   </DataNode>
   <DataNode TextLabel="C18:3" GraphId="f3d38" Type="Metabolite">
+    <Comment>Existance of this lipids in samples is uncertain; not part of LIPID MAPS, therefore not annotated</Comment>
     <Graphics CenterX="881.9495798319327" CenterY="273.0" Width="90.0" Height="25.0" ZOrder="32779" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="" ID="" />
   </DataNode>
@@ -832,16 +833,16 @@ cis-8-octadecenoic acid</Comment>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="dd18e">
-    <Graphics ZOrder="32788" LineThickness="1.0">
+    <Graphics ZOrder="32788" LineStyle="Broken" LineThickness="1.0">
       <Point X="800.0" Y="273.0" GraphRef="da6e8" RelX="1.0" RelY="0.0" />
-      <Point X="836.9495798319327" Y="273.0" GraphRef="f3d38" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="836.9495798319327" Y="273.0" GraphRef="f3d38" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d7a8e">
-    <Graphics ZOrder="32789" LineThickness="1.0">
+    <Graphics ZOrder="32789" LineStyle="Broken" LineThickness="1.0">
       <Point X="926.9495798319327" Y="273.0" GraphRef="f3d38" RelX="1.0" RelY="0.0" />
-      <Point X="983.0" Y="273.0" GraphRef="fe676" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="983.0" Y="273.0" GraphRef="fe676" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -1158,6 +1159,9 @@ cis-8-octadecenoic acid</Comment>
   <Label TextLabel="Delta-5&#xA;Double bond" GraphId="ed76d">
     <Graphics CenterX="659.4448205822627" CenterY="754.2315504400808" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
+  <Label TextLabel="Existance of this lipids&#xA;in samples is uncertain" GraphId="edf86">
+    <Graphics CenterX="877.5" CenterY="231.0" Width="169.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" Color="404040" />
+  </Label>
   <Label TextLabel="Delta-6&#xA;Double bond" GraphId="fa325">
     <Graphics CenterX="380.6713244228432" CenterY="57.75" Width="90.0" Height="34.5" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
@@ -1247,13 +1251,29 @@ cis-8-octadecenoic acid</Comment>
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid biosynthetic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000029</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid elongation pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001136</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ded">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20018209</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The key roles of elongases and desaturases in mammalian fatty acid metabolism: Insights from transgenic mice.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prog Lipid Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guillou H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zadravec D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin PG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacobsson A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000058</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid elongation pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001136</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid biosynthetic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000029</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b9f">
@@ -1309,22 +1329,6 @@ cis-8-octadecenoic acid</Comment>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grünewald TGP</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fendt SM</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ded">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20018209</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The key roles of elongases and desaturases in mammalian fatty acid metabolism: Insights from transgenic mice.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prog Lipid Res</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guillou H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zadravec D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin PG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacobsson A</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000058</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
