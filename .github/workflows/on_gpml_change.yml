@@ -25,9 +25,9 @@ jobs:
     steps:
         # Make sure we have some code to diff.
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
       - name: Get changed files
         id: changes
@@ -66,18 +66,18 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
       - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
                 
       - name: Checkout jekyll repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: wikipathways/wikipathways.github.io
           path: wikipathways.github.io
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           
@@ -157,7 +157,7 @@ jobs:
       - name: Checkout wikipathways-database repo
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
           
       - name: Setup Java
@@ -287,7 +287,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: true
           fetch-depth: 1
@@ -319,10 +319,10 @@ jobs:
     needs: [changed-gpmls, metadata]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
 
       - name: Setup Python
@@ -368,9 +368,9 @@ jobs:
     steps:      
         
       - name: Checkout homologyConverterActions repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
           
       - name: Setup Java
@@ -427,20 +427,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: wikipathways-database
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
 
       - name: Checkout homology repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: wikipathways/wikipathways-homology
           path: wikipathways-homology
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
           ssh-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }}
 
@@ -500,24 +500,24 @@ jobs:
           fi
           
   json-svg:
-    needs: [changed-gpmls]
+    needs: [changed-gpmls, pubmed]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: wikipathways-database
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
 
       - name: Checkout assets repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: wikipathways/wikipathways-assets
           path: wikipathways-assets
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
           ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
 
@@ -619,20 +619,20 @@ jobs:
     needs: [changed-gpmls, metadata, pubmed, frontmatter, json-svg]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: wikipathways-database
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
           
       - name: Checkout jekyll repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: wikipathways/wikipathways.github.io
           path: wikipathways.github.io
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
@@ -670,20 +670,20 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.deleted}}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: wikipathways-database
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
           
       - name: Checkout assets repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: wikipathways/wikipathways-assets
           path: wikipathways-assets
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
           ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
 
@@ -717,20 +717,20 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.deleted}}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: wikipathways-database
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
 
       - name: Checkout jekyll repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: wikipathways/wikipathways.github.io
           path: wikipathways.github.io
           submodules: true
-          fetch-depth: 0
+          fetch-depth: 1
           ref: main
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
