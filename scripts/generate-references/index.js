@@ -1,6 +1,6 @@
 const path = require('path')
 const { promises: fs, existsSync } = require('fs')
-const { Cite } = require('@citation-js/core')
+const { Cite, plugins } = require('@citation-js/core')
 require('@citation-js/plugin-doi')
 require('@citation-js/plugin-isbn')
 require('@citation-js/plugin-pubmed')
@@ -50,11 +50,23 @@ const DATABASE_LINKS = {
     ]
 }
 
+const DATABASE_RATE_LIMITS = {
+    'Pubmed': { lastRequest: 0, timeDifference: 350 },
+    'DOI': { lastRequest: 0, timeDifference: 0 },
+    'ISBN': { lastRequest: 0, timeDifference: 0 }
+}
+
 function formatLink (text, url) {
     return `<a href="${url}" target="_blank" class="external" rel="nofollow">${text}</a>`
 }
 
 async function format (id, database) {
+    const wait = DATABASE_RATE_LIMITS[database].lastRequest + DATABASE_RATE_LIMITS[database].timeDifference - Date.now()
+    if (wait > 0) {
+      await new Promise(resolve => setTimeout(resolve, wait))
+    }
+    DATABASE_RATE_LIMITS[database].lastRequest = Date.now()
+
     const options = {}
     if (!Array.isArray(DATABASE_TYPE_MAP[database])) {
         options.forceType = DATABASE_TYPE_MAP[database]
@@ -63,14 +75,13 @@ async function format (id, database) {
     let append = ''
     if (database in DATABASE_LINKS) {
         append = DATABASE_LINKS[database]
-            .map(([text, url]) => ' ' + formatLink(text, url(id)))
+            .map(([text, url]) => ' [' + formatLink(text, url(id)) + ']')
             .join('')
     }
 
     return Cite.async(id, options)
         .then(cite => new Cite(cite.data[0]))
-        .then(cite => cite.format('bibliography', { template: 'vancouver', append }))
-        .then(ref => ref.trim().replace(/^1.\s+/, ''))
+        .then(cite => cite.format('bibliography', { template: 'gladstone', append }))
 }
 
 const PROJECT_DIR = path.join(__dirname, '..', '..')
@@ -90,6 +101,10 @@ function sortIdentifier (a, b) {
 }
 
 async function main () {
+    // Load style file
+    const styleFile = await fs.readFile(path.join(__dirname, 'gladstone.csl'), 'utf8')
+    plugins.config.get('@csl').templates.add('gladstone', styleFile)
+
     const cache = new Map()
     const pathways = await fs.readdir(PATHWAY_DIR)
 
@@ -116,7 +131,7 @@ async function main () {
 
         for (const row of file.trim().split('\n').slice(1)) {
             const [id, database] = row.split('\t').map(value => value.trim())
-            if (!id.length) {
+            if (!id.length || id === 'NA') {
                 console.log('  skipping empty row')
                 continue
             }
