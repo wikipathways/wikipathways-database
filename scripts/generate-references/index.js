@@ -75,13 +75,13 @@ async function format (id, database) {
     let append = ''
     if (database in DATABASE_LINKS) {
         append = DATABASE_LINKS[database]
-            .map(([text, url]) => ' [' + formatLink(text, url(id)) + ']')
+            .map(([text, url]) => ' ' + formatLink(text, url(id)))
             .join('')
     }
 
     return Cite.async(id, options)
         .then(cite => new Cite(cite.data[0]))
-        .then(cite => cite.format('bibliography', { template: 'gladstone', append }))
+        .then(cite => cite.format('bibliography', { template: 'wikipathways', append }).trim())
 }
 
 const PROJECT_DIR = path.join(__dirname, '..', '..')
@@ -102,8 +102,8 @@ function sortIdentifier (a, b) {
 
 async function main () {
     // Load style file
-    const styleFile = await fs.readFile(path.join(__dirname, 'gladstone.csl'), 'utf8')
-    plugins.config.get('@csl').templates.add('gladstone', styleFile)
+    const styleFile = await fs.readFile(path.join(__dirname, 'wikipathways.csl'), 'utf8')
+    plugins.config.get('@csl').templates.add('wikipathways', styleFile)
 
     const cache = new Map()
     const pathways = await fs.readdir(PATHWAY_DIR)
