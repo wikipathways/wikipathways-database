@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Biosynthesis and regeneration of tetrahydrobiopterin and catabolism of phenylalanine" Data-Source="WikiPathways" Version="WP4156_r124953" Author="[DeSl, Egonw, IreneHemel, Ddigles, Josienlandman, MaintBot, Fehrhart, Finterly]" Last-Modified="20230107081211" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Biosynthesis and regeneration of tetrahydrobiopterin and catabolism of phenylalanine" Data-Source="WikiPathways" Version="WP4156_r126053" Author="[DeSl, Egonw, IreneHemel, Ddigles, Josienlandman, MaintBot, Fehrhart, Finterly]" Last-Modified="20230331133001" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">This pathway shows disorders related to phenylalanine and tetrahydrobiopterin (BH4) metabolism. Disorders resulting from an enzyme defect are highlighted in pink. Pathological metabolites used as specific markers are highlighted in purple. BH4 is a natural cofactor for PAH, tyrosine-3-hydroxylase, tryptophan-5-hydroxylase and nitric oxide synthase (NOS), where the latter two are key enzymes in the biosynthesis of the neurotransmitters dopamine and serotonin. 
 
 This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 9783030677268) (Ed.4 Chapter 1).</Comment>
@@ -10,7 +10,7 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   <DataNode TextLabel="DHPR" GraphId="a09c0" Type="Protein">
     <Comment>dihydropteridine reductase</Comment>
     <Graphics CenterX="549.1666666666666" CenterY="465.7626811099276" Width="59.074074074073906" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Wikidata" ID="Q21145902" />
+    <Xref Database="Uniprot-TrEMBL" ID="P09417" />
   </DataNode>
   <DataNode TextLabel="3-OMD" GraphId="a2d2d" Type="Metabolite">
     <Comment>AKA 3-ortho-methyldopa (3-OMD)</Comment>
@@ -24,7 +24,7 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   <DataNode TextLabel="DHFR" GraphId="a5763" Type="Protein">
     <Comment>dihydrofolate reductase</Comment>
     <Graphics CenterX="469.5874286281321" CenterY="442.1426215993403" Width="47.694444444444514" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Wikidata" ID="Q417149" />
+    <Xref Database="Uniprot-TrEMBL" ID="P00374" />
   </DataNode>
   <DataNode TextLabel="SNA" GraphId="a8012" Type="Protein">
     <Comment>AKA serotonin N-acetylase;  "Aralkylamine N-acetyltransferase (AANAT) (EC 2.3.1.87), also known as arylalkylamine N-acetyltransferase or serotonin N-acetyltransferase (SNAT); an enzyme that is involved in the day/night rhythmic production of melatonin, by modification of serotonin. " Source: https://en.wikipedia.org/wiki/Aralkylamine_N-acetyltransferase]</Comment>
@@ -49,25 +49,20 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
     <Graphics CenterX="1101.8061062648694" CenterY="753.068001586043" Width="58.084853291038904" Height="21.223235527359293" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P09172" />
   </DataNode>
-  <DataNode TextLabel="PTPS" GraphId="b2bab" Type="GeneProduct">
-    <Comment>AKA 6-pyruvoyl-tetrahydropterin synthase</Comment>
-    <Graphics CenterX="467.9665071770335" CenterY="170.54886211512712" Width="52.61111111111119" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Uniprot-TrEMBL" ID="Q03393" />
-  </DataNode>
-  <DataNode TextLabel="GTPCH" GraphId="b30d6" Type="GeneProduct">
-    <Comment>aka GTP cyclohydrolase I</Comment>
-    <Graphics CenterX="467.96650717703346" CenterY="86.54886211512712" Width="56.083333333333314" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Uniprot-TrEMBL" ID="P30793" />
-  </DataNode>
   <DataNode TextLabel="PTP" GraphId="b31bb" Type="Metabolite">
     <Comment>6-pyruvoyl tetrahydropterin, 6PPH4</Comment>
     <Graphics CenterX="559.0" CenterY="215.54886211512712" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:136564" />
   </DataNode>
-  <DataNode TextLabel="DNAJC12" GraphId="b6870" Type="GeneProduct">
-    <Comment>co-chaperone of PAH</Comment>
-    <Graphics CenterX="792.6315789473679" CenterY="363.1578947368421" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Entrez Gene" ID="56521" />
+  <DataNode TextLabel="GTPCH" GraphId="b6521" Type="Protein">
+    <Comment>aka GTP cyclohydrolase I</Comment>
+    <Graphics CenterX="467.96650717703346" CenterY="86.54886211512712" Width="56.083333333333314" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P30793" />
+  </DataNode>
+  <DataNode TextLabel="SR" GraphId="b71d1" Type="Protein">
+    <Comment>sepiapterin reductase, gene SPR</Comment>
+    <Graphics CenterX="467.9665071770335" CenterY="262.9124984787634" Width="39.87962962962972" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="P35270" />
   </DataNode>
   <DataNode TextLabel="SAM" GraphId="b74a7" Type="Metabolite" GroupRef="dc345">
     <Comment>Necessary cofactor for enzymatic reaction (lead by enzyme catechol-O-methyltransferase) is s-adenosyl methionine (SAM).</Comment>
@@ -102,11 +97,6 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
     <Graphics CenterX="660.0" CenterY="556.0967953446443" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:15642" />
   </DataNode>
-  <DataNode TextLabel="SR" GraphId="c323a" Type="GeneProduct">
-    <Comment>sepiapterin reductase</Comment>
-    <Graphics CenterX="467.9665071770335" CenterY="262.9124984787634" Width="39.87962962962972" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Wikidata" ID="Q15331000" />
-  </DataNode>
   <DataNode TextLabel="PAH" GraphId="c443a" Type="Protein">
     <Comment>AKA phenylalanine hydroxylase</Comment>
     <Graphics CenterX="1086.8327402135235" CenterY="285.4092526690386" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
@@ -119,6 +109,11 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   <DataNode TextLabel="Dopamine" GraphId="c5a50" Type="Metabolite">
     <Graphics CenterX="957.6786055787782" CenterY="722.6302821243943" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q170304" />
+  </DataNode>
+  <DataNode TextLabel="PTPS" GraphId="c6ac4" Type="Protein">
+    <Comment>AKA 6-pyruvoyl-tetrahydropterin synthase</Comment>
+    <Graphics CenterX="467.9665071770335" CenterY="170.54886211512712" Width="52.61111111111119" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q03393" />
   </DataNode>
   <DataNode TextLabel="HVA" GraphId="c7e49" Type="Metabolite">
     <Comment>homovanillic acid</Comment>
@@ -149,7 +144,7 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   <DataNode TextLabel="TH" GraphId="d349a" Type="Protein">
     <Comment>tyrosine hydroxylase</Comment>
     <Graphics CenterX="1040.7108754866667" CenterY="556.0967953446444" Width="36.929607318161715" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Wikidata" ID="Q420766" />
+    <Xref Database="Uniprot-TrEMBL" ID="P07101" />
   </DataNode>
   <DataNode TextLabel="GTP" GraphId="d3b3b" Type="Metabolite">
     <Graphics CenterX="559.0" CenterY="49.548862115127164" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -214,9 +209,9 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
     <Xref Database="Wikidata" ID="Q26841327" />
   </DataNode>
   <DataNode TextLabel="CR" GraphId="f3537" Type="Protein">
-    <Comment>carbonyl reductase</Comment>
+    <Comment>carbonyl reductase, Wikidata:Q1145916</Comment>
     <Graphics CenterX="351.94466848953243" CenterY="370.9469156790978" Width="52.05555555555548" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Wikidata" ID="Q1145916" />
+    <Xref Database="Enzyme Nomenclature" ID="1.1.1.184" />
   </DataNode>
   <DataNode TextLabel="tyr" GraphId="f39b9" Type="Metabolite">
     <Graphics CenterX="957.6786055787783" CenterY="556.0967953446443" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -225,7 +220,7 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   <DataNode TextLabel="PAH" GraphId="f3c59" Type="Protein">
     <Comment>phenylalanine-4-hydroxylase</Comment>
     <Graphics CenterX="792.6315789473678" CenterY="430.07469333114756" Width="46.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Wikidata" ID="Q420604" />
+    <Xref Database="Uniprot-TrEMBL" ID="P00439" />
   </DataNode>
   <DataNode TextLabel="COMT" GraphId="f69e3" Type="Protein" GroupRef="dc345">
     <Graphics CenterX="881.1217345661768" CenterY="683.0540232182896" Width="46.789033059265776" Height="17.150949694789507" ZOrder="32768" FontSize="12" Valign="Middle" />
@@ -244,19 +239,24 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
     <Graphics CenterX="1376.5361445783124" CenterY="601.44578313253" Width="48.855421686746986" Height="24.999999999999996" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P46597" />
   </DataNode>
+  <DataNode TextLabel="DNAJC12" GraphId="ff5c9" Type="Protein">
+    <Comment>co-chaperone of PAH</Comment>
+    <Graphics CenterX="792.6315789473679" CenterY="363.1578947368421" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9UKB3" />
+  </DataNode>
   <DataNode TextLabel="O2" GraphId="ac05e" Type="Metabolite">
     <Graphics CenterX="1072.9356292554135" CenterY="596.0967953446441" Width="46.967652097354055" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:15379" />
   </DataNode>
-  <DataNode TextLabel="SR" GraphId="f903d" Type="GeneProduct">
+  <DataNode TextLabel="SR" GraphId="f903d" Type="Protein">
     <Comment>sepiapterin reductase</Comment>
     <Graphics CenterX="441.18044911443025" CenterY="357.4164214597244" Width="46.82407407407412" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" />
-    <Xref Database="Wikidata" ID="Q15331000" />
+    <Xref Database="Uniprot-TrEMBL" ID="P35270" />
   </DataNode>
-  <DataNode TextLabel="DNAJC12" GraphId="a6ee4" Type="GeneProduct">
+  <DataNode TextLabel="DNAJC12" GraphId="a6ee4" Type="Protein">
     <Comment>"DNAJC12 interacts with PAH, TH, and the TPHs, which indicates that DNAJC12 is a specific co-­chaperone for the aromatic amino acid hydroxylases that contributes to the maintenance of their intracellular stability"</Comment>
     <Graphics CenterX="1072.9356292554135" CenterY="504.66320023856696" Width="90.0" Height="25.0" ZOrder="32885" FontSize="12" Valign="Middle" />
-    <Xref Database="Entrez Gene" ID="56521" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9UKB3" />
   </DataNode>
   <DataNode TextLabel="CR" GraphId="b8b00" Type="Protein">
     <Comment>AKA carbonyl reductase</Comment>
@@ -271,9 +271,9 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
     <Xref Database="Enzyme Nomenclature" ID="1.1.1.21" />
   </DataNode>
   <DataNode TextLabel="AADC" GraphId="ebcba" Type="Protein">
-    <Comment>aromatic l-amino acid decarboxylase</Comment>
+    <Comment>aromatic l-amino acid decarboxylase; Wikidata: Q421186</Comment>
     <Graphics CenterX="1074.453847878895" CenterY="722.9828586519205" Width="49.58623382418625" Height="25.0" ZOrder="32897" FontSize="12" Valign="Middle" />
-    <Xref Database="Wikidata" ID="Q421186" />
+    <Xref Database="Enzyme Nomenclature" ID="4.1.1.28" />
   </DataNode>
   <DataNode TextLabel="MAO" GraphId="c86f0" Type="Protein">
     <Comment>AKA  monoamine oxidase</Comment>
@@ -317,12 +317,12 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
     <Graphics CenterX="1320.873493975904" CenterY="555.7205880982473" Width="146.68674698795195" Height="25.0" ZOrder="32917" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:16796" />
   </DataNode>
-  <Interaction GraphId="id10629ddb">
+  <Interaction GraphId="id1826379">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1090.9923332786918" Y="556.0967953446444" GraphRef="eb2b3" RelX="-1.0" RelY="0.0" />
+      <Point X="1109.4571369377727" Y="568.5967953446444" GraphRef="eb2b3" RelX="0.0" RelY="1.0" />
       <Point X="1188.9929279485375" Y="604.2942619592451" GraphRef="f752d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
-    <Xref Database="Rhea" ID="RHEA:16709" />
+    <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id1eb5096c">
     <Comment>Alternative PW</Comment>
@@ -339,7 +339,7 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
       <Point X="1188.9929279485375" Y="623.822997736801" GraphRef="c505d" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.655847474905527" Shape="None" GraphId="f752d" />
     </Graphics>
-    <Xref Database="" ID="" />
+    <Xref Database="Rhea" ID="16709" />
   </Interaction>
   <Interaction GraphId="id218a73f5">
     <BiopaxRef>bdb</BiopaxRef>
@@ -406,13 +406,6 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
       <Anchor Position="0.4" Shape="None" GraphId="a3043" />
     </Graphics>
     <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id3588f528">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="564.0740740740741" Y="501.723412926081" GraphRef="ede64" RelX="0.0" RelY="-1.0" />
-      <Point X="563.6574074074074" Y="556.0967953446443" GraphRef="eea33" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
-    </Graphics>
-    <Xref Database="Rhea" ID="RHEA:11920" />
   </Interaction>
   <Interaction GraphId="id3c385ad3">
     <Graphics ZOrder="12288" LineThickness="1.0">
@@ -593,7 +586,7 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   </Interaction>
   <Interaction GraphId="idab741d7e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="496.0081738437001" Y="86.54886211512712" GraphRef="b30d6" RelX="1.0" RelY="0.0" />
+      <Point X="496.0081738437001" Y="86.54886211512712" GraphRef="b6521" RelX="1.0" RelY="0.0" />
       <Point X="559.0" Y="87.24886211512715" GraphRef="b0ea7" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -606,7 +599,7 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
       <Point X="505.0" Y="556.0967953446443" GraphRef="b1119" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4667508417508419" Shape="None" GraphId="eea33" />
     </Graphics>
-    <Xref Database="" ID="" />
+    <Xref Database="Rhea" ID="11920" />
   </Interaction>
   <Interaction GraphId="idb61b60ed">
     <Graphics ZOrder="12288" LineThickness="1.0">
@@ -672,7 +665,7 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   <Interaction GraphId="idcd230f57">
     <BiopaxRef>bdb</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="487.9063219918485" Y="262.9124984787634" GraphRef="c323a" RelX="1.0" RelY="0.0" />
+      <Point X="487.9063219918485" Y="262.9124984787634" GraphRef="b71d1" RelX="1.0" RelY="0.0" />
       <Point X="536.5" Y="247.2488621151271" GraphRef="aaeb7" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -694,7 +687,7 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   </Interaction>
   <Interaction GraphId="idd348c017">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="494.2720627325891" Y="170.54886211512712" GraphRef="b2bab" RelX="1.0" RelY="0.0" />
+      <Point X="494.2720627325891" Y="170.54886211512712" GraphRef="c6ac4" RelX="1.0" RelY="0.0" />
       <Point X="559.0" Y="171.2488621151271" GraphRef="feee1" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -712,8 +705,15 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   <Interaction GraphId="idd98f6358">
     <BiopaxRef>ade</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="792.6315789473679" Y="375.6578947368421" GraphRef="b6870" RelX="0.0" RelY="1.0" />
+      <Point X="792.6315789473679" Y="375.6578947368421" GraphRef="ff5c9" RelX="0.0" RelY="1.0" />
       <Point X="792.6315789473678" Y="417.57469333114756" GraphRef="f3c59" RelX="0.0" RelY="-1.0" ArrowHead="mim-modification" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddf08bbd6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="564.0740740740741" Y="526.723412926081" GraphRef="ede64" RelX="0.0" RelY="1.0" />
+      <Point X="563.6574074074074" Y="556.0967953446443" GraphRef="eea33" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -1019,7 +1019,7 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   </GraphicalLine>
   <GraphicalLine GraphId="fd3d3">
     <Graphics ZOrder="32882" LineStyle="Broken" LineThickness="1.0">
-      <Point X="792.6315789473679" Y="350.6578947368421" GraphRef="b6870" RelX="0.0" RelY="-1.0" />
+      <Point X="792.6315789473679" Y="350.6578947368421" GraphRef="ff5c9" RelX="0.0" RelY="-1.0" />
       <Point X="792.6315789473679" Y="317.9712107488496" GraphRef="dbe01" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
   </GraphicalLine>
@@ -1220,45 +1220,17 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
   <Group GroupId="dc345" GraphId="a765a" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aromatic L-amino acid decarboxylase deficiency</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0090123</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenylketonuria</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:9281</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b06">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19130291</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ea8">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30372766</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sepiapterin reductase deficiency in a 2-year-old girl with incomplete response to treatment during short-term follow-up</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Inherit Metab Dis .</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K Kusmierska</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E E W Jansen</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C Jakobs</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K Szymanska</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E Malunowicz</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D Meilei</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B Thony</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N Blau</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Tryfon</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D Rokicki</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E Pronicka</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Sykut-Cegielska</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inherited Disorders of Neurotransmitters: Classification and Practical Approaches for Diagnosis and Treatment</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuropediatrics . </bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heiko Brennenstuhl</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sabine Jung-Klawitter</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Birgit Assmann</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas Opladen</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">megaloblastic anemia</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:13382</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenylalanine degradation pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001288</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ce4">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9783642403361</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN</bp:DB>
@@ -1275,39 +1247,6 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibson, K. Michael</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dionisi-Vici, Carlo</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tetrahydrobiopterin metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000217</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ea8">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30372766</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inherited Disorders of Neurotransmitters: Classification and Practical Approaches for Diagnosis and Treatment</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuropediatrics . </bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heiko Brennenstuhl</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sabine Jung-Klawitter</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Birgit Assmann</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas Opladen</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ade">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30667134</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">henylalanine hydroxylase variants interact with the co-­ chaperone DNAJC12.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hum Mutat.</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kunwar Jung-Kc</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nastassja Himmelreich</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karina S Prestegård</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tie-Jun Sten Shi</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tanja Scherer</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ming Ying</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ana Jorge-Finnigan</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beat Thöny</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nenad Blau</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aurora Martinez</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bbd">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34244591</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -1323,67 +1262,15 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dong-Pyo Jang</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C Justin Lee</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f99">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14984687</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pediatric neurotransmitter diseases</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curr Neurol Neurosci Rep.</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phillip L Pearl</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Denise D Wallis</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K Michael Gibson</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Segawa syndrome pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001612</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tetrahydrobiopterin metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000217</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dystonia 5</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0090043</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenylketonuria pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001805</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bdb">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21550412</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synthesis and recycling of tetrahydrobiopterin in endothelial function and vascular disease</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nitric Oxide .</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark J Crabtree</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keith M Channon</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dopa responsive dystonia pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0002105</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b92">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10407772</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurochemistry and defects of biogenic amine neurotransmitter metabolism</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J  Inherit Metab Dis .</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K Hyland</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sepiapterin reductase deficiency</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0111168</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bh4-deficient hyperphenylalaninemia A</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0090106</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BH4-deficient hyperphenylalaninemia B</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0112225</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e14">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28132689</bp:ID>
@@ -1432,6 +1319,119 @@ This pathway was inspired by Edition 5, Chapter 20 of the book of Blau (ISBN 978
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas Opladen</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manuel Schiff</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sepiapterin reductase deficiency</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0111168</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ade">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30667134</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">henylalanine hydroxylase variants interact with the co-­ chaperone DNAJC12.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hum Mutat.</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kunwar Jung-Kc</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nastassja Himmelreich</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karina S Prestegård</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tie-Jun Sten Shi</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tanja Scherer</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ming Ying</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ana Jorge-Finnigan</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beat Thöny</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nenad Blau</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aurora Martinez</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenylketonuria pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001805</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b06">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19130291</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sepiapterin reductase deficiency in a 2-year-old girl with incomplete response to treatment during short-term follow-up</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Inherit Metab Dis .</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K Kusmierska</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E E W Jansen</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C Jakobs</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K Szymanska</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E Malunowicz</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D Meilei</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B Thony</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N Blau</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Tryfon</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D Rokicki</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E Pronicka</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Sykut-Cegielska</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f99">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14984687</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pediatric neurotransmitter diseases</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curr Neurol Neurosci Rep.</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phillip L Pearl</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Denise D Wallis</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K Michael Gibson</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b92">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10407772</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurochemistry and defects of biogenic amine neurotransmitter metabolism</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J  Inherit Metab Dis .</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K Hyland</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BH4-deficient hyperphenylalaninemia B</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0112225</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenylalanine degradation pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001288</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bh4-deficient hyperphenylalaninemia A</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0090106</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">megaloblastic anemia</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:13382</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dystonia 5</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0090043</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenylketonuria</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:9281</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aromatic L-amino acid decarboxylase deficiency</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0090123</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bdb">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21550412</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synthesis and recycling of tetrahydrobiopterin in endothelial function and vascular disease</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nitric Oxide .</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark J Crabtree</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keith M Channon</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Segawa syndrome pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001612</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
