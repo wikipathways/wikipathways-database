@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Heme biosynthesis" Data-Source="WikiPathways" Version="WP102_r126075" Author="[Kdahlquist, MaintBot, Thomas, Mills42, Christine Chichester, Egonw, Mkutmon, Eweitz, Khanspers]" Last-Modified="20230331234647" Organism="Saccharomyces cerevisiae">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Heme biosynthesis" Data-Source="WikiPathways" Version="WP102_r126086" Author="[Kdahlquist, MaintBot, Thomas, Mills42, Christine Chichester, Egonw, Mkutmon, Eweitz, Khanspers]" Last-Modified="20230404003649" Organism="Saccharomyces cerevisiae">
   <Comment Source="WikiPathways-description">The enzymatic process that produces heme is properly called porphyrin synthesis, as all the intermediates are tetrapyrroles that are chemically classified are porphyrins. The process is highly conserved across biology. In humans, this pathway serves almost exclusively to form heme. In other species, it also produces similar substances such as cobalamin (vitamin B12).
 
 The pathway is initiated by the synthesis of D-Aminolevulinic acid (dALA or δALA) from the amino acid glycine and succinyl-CoA from the citric acid cycle (Krebs cycle). The rate-limiting enzyme responsible for this reaction, ALA synthase, is strictly regulated by intracellular iron levels and heme concentration. A low-iron level, e.g., in iron deficiency, leads to decreased porphyrin synthesis, which prevents accumulation of the toxic intermediates. This mechanism is of therapeutic importance: infusion of heme arginate or hematin can abort attacks of porphyria in patients with an inborn error of metabolism of this process, by reducing transcription of ALA synthase.
@@ -9,7 +9,7 @@ The organs mainly involved in heme synthesis are the liver and the bone marrow, 
 Based on Glycolysis and Gluconeogenesis Pathways at SGD and on Kruckeberg, AL and Dickinson, JR (2004) Carbon Metabolism in The Metabolism and Molecular Physiology of Saccharomyces cerevisiae, Dickinson, JR and Schweizer, M, eds, CRC Press.
 
 Description source: Wikipedia http://en.wikipedia.org/wiki/Heme</Comment>
-  <Graphics BoardWidth="820.5000000000001" BoardHeight="798.5" />
+  <Graphics BoardWidth="668.9" BoardHeight="798.5" />
   <DataNode TextLabel="delta-aminolevulinate" GraphId="bce" Type="Metabolite">
     <Graphics CenterX="125.99999999999997" CenterY="135.33333333333343" Width="119.99999999999994" Height="25.0" ZOrder="28672" FontWeight="Bold" FontSize="11" Valign="Middle" ShapeType="None" />
     <Xref Database="" ID="" />
@@ -67,9 +67,9 @@ Description source: Wikipedia http://en.wikipedia.org/wiki/Heme</Comment>
     <Graphics CenterX="316.6666666666667" CenterY="222.33333333333334" Width="100.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="CAS" ID="487-90-1" />
   </DataNode>
-  <DataNode TextLabel="Succinyl-CoA" GraphId="c8324" Type="Metabolite" GroupRef="a2682">
+  <DataNode TextLabel="succinyl-CoA" GraphId="c8324" Type="Metabolite" GroupRef="a2682">
     <Graphics CenterX="287.0370370370372" CenterY="35.87962962962962" Width="80.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="ChEBI" ID="CHEBI:15380" />
   </DataNode>
   <DataNode TextLabel="Porphobilinogen" GraphId="cf33c" Type="Metabolite" GroupRef="df577">
     <Graphics CenterX="138.0" CenterY="217.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -84,9 +84,9 @@ Description source: Wikipedia http://en.wikipedia.org/wiki/Heme</Comment>
     <Graphics CenterX="257.6666666666667" CenterY="263.6666666666667" Width="60.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="YDL205C" />
   </DataNode>
-  <DataNode TextLabel="Glycine" GraphId="d49cc" Type="Metabolite" GroupRef="a2682">
+  <DataNode TextLabel="glycine" GraphId="d49cc" Type="Metabolite" GroupRef="a2682">
     <Graphics CenterX="356.2962962962964" CenterY="35.87962962962962" Width="58.51851851851856" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="ChEBI" ID="CHEBI:57305" />
   </DataNode>
   <DataNode TextLabel="HEM14" GraphId="dba" Type="GeneProduct">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="HEM14 | Protoporphyrinogen oxidase a mitochon..." />
@@ -151,14 +151,14 @@ Description source: Wikipedia http://en.wikipedia.org/wiki/Heme</Comment>
     <Xref Database="ChEBI" ID="CHEBI:16526" />
   </DataNode>
   <Interaction GraphId="id11742a1c">
-    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+    <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="316.53873308581854" Y="98.56969192622975" GraphRef="dc1c4" RelX="0.0" RelY="0.0" />
       <Point X="412.375" Y="120.25" GraphRef="abf7f" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id15b443b4">
-    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+    <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="316.6666666666667" Y="279.42219274977896" GraphRef="cd9ea" RelX="0.0" RelY="0.0" />
       <Point X="415.0" Y="301.0" GraphRef="f206c" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
@@ -196,7 +196,7 @@ Description source: Wikipedia http://en.wikipedia.org/wiki/Heme</Comment>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id423eda3e">
-    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+    <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="316.66666666666674" Y="720.7666666666667" GraphRef="faf1a" RelX="0.0" RelY="0.0" />
       <Point X="409.0" Y="738.0" GraphRef="c16f9" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
@@ -220,7 +220,7 @@ Description source: Wikipedia http://en.wikipedia.org/wiki/Heme</Comment>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id549569a8">
-    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+    <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="316.6666666666667" Y="355.60669426113213" GraphRef="cf7b3" RelX="0.0" RelY="0.0" />
       <Point X="418.0" Y="374.0" GraphRef="ae40d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
@@ -273,7 +273,7 @@ Description source: Wikipedia http://en.wikipedia.org/wiki/Heme</Comment>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id838dcfa3">
-    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+    <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="316.6666666666667" Y="193.24074074074073" GraphRef="f9433" RelX="0.0" RelY="0.0" />
       <Point X="410.0" Y="211.0" GraphRef="e920b" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
@@ -306,14 +306,14 @@ Description source: Wikipedia http://en.wikipedia.org/wiki/Heme</Comment>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id97b6a934">
-    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+    <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="316.6666666666667" Y="621.1203703703704" GraphRef="f880c" RelX="0.0" RelY="0.0" />
       <Point X="415.0" Y="633.0" GraphRef="ffe2d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida0f21168">
-    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+    <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="316.6666666666667" Y="432.1666666666667" GraphRef="fddf0" RelX="0.0" RelY="0.0" />
       <Point X="426.0" Y="450.0" GraphRef="fe491" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
@@ -354,7 +354,7 @@ Description source: Wikipedia http://en.wikipedia.org/wiki/Heme</Comment>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf2ea1df9">
-    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+    <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="316.6666666666667" Y="523.7777777777778" GraphRef="b92fe" RelX="0.0" RelY="0.0" />
       <Point X="418.0" Y="544.0" GraphRef="dfbfd" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
@@ -374,14 +374,8 @@ Description source: Wikipedia http://en.wikipedia.org/wiki/Heme</Comment>
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Label TextLabel="Black - reactants" GraphId="c74">
-    <Graphics CenterX="700.0" CenterY="50.0" Width="132.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
   <Label TextLabel="rate limiting step" GraphId="f54">
     <Graphics CenterX="130.0" CenterY="83.33333333333333" Width="123.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="11" Valign="Middle" Color="0000ff" />
-  </Label>
-  <Label TextLabel="Red - side products" GraphId="fe8">
-    <Graphics CenterX="713.3333333333334" CenterY="70.0" Width="154.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="ff0000" />
   </Label>
   <Group GroupId="ddbbb" GraphId="abf7f" Style="Group" />
   <Group GroupId="df577" GraphId="e435f" Style="Group" />
