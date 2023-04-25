@@ -21,7 +21,7 @@ jobs:
           ref: main
 
       - name: Setup Java
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '11'
@@ -50,7 +50,7 @@ jobs:
           done
           
       - name: Cache all bridge files
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cacheAllBridge
         with:
           path: |
