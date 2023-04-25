@@ -469,8 +469,8 @@ jobs:
             
             for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
             do
-                mkdir -p pathways/$value/"$wpid"
-                for old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
+                mkdir -p pathways/$value/$wpid
+                for old_f in pathways/$value/$wpid/$wpid_$value.gpml; do 
                   echo "For $old_f"
                   if [ -e "$old_f" ]; then
                     rm "$old_f"
@@ -481,9 +481,9 @@ jobs:
                 pwd
                 ls ../
                 ls $DB_PATH
-                if [-e "../wikipathways-database/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml"]; then
+                if [ -e "$DB_PATH/scripts/homology-converter/outputs/$value/$wpid/$wpid_$value.gpml"]; then
                     echo "cp to wikipathways-homology" 
-                    mv ../wikipathways-database/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml
+                    mv $DB_PATH/scripts/homology-converter/outputs/$value/$wpid/$wpid_$value.gpml $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml
                 fi
             done  
           done
