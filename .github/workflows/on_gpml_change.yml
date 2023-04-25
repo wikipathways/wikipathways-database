@@ -420,7 +420,7 @@ jobs:
           cd "${{ github.workspace }}/wikipathways-database"
           for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
             do   
-            mkdir -p scripts/homology-converter/output/"$value"
+            mkdir -p scripts/homology-converter/outputs/"$value"
           done
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
