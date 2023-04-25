@@ -369,13 +369,27 @@ jobs:
     needs: changed-gpmls
     # only run if gpmls were added or modified
     if: ${{needs.changed-gpmls.outputs.added-modified}}
-    steps:      
-        
-      - name: Checkout homologyConverterActions repo
+    steps:
+      - name: Checkout wikipathways-database repo
         uses: actions/checkout@v3
         with:
+          path: wikipathways-database
           fetch-depth: 1
           ref: main
+
+      - name: Checkout homology repo
+        uses: actions/checkout@v3
+        with:
+          repository: wikipathways/wikipathways-homology
+          path: wikipathways-homology
+          fetch-depth: 1
+          ref: main
+          ssh-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }}
+
+      - name: Set up ssh-agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }} ## for push into wp-homology repo      
           
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -387,7 +401,7 @@ jobs:
         uses: actions/cache@v3
         id: cache
         with:
-          path: ./Hs_Derby_Ensembl_104.bridge
+          path: ${{ github.workspace }}/wikipathways-database/Hs_Derby_Ensembl_104.bridge
           key: ${{ runner.os }}-java-Hs_Derby_Ensembl_104
           restore-keys: |
             ${{ runner.os }}-java-Hs_Derby_Ensembl_104
@@ -396,74 +410,24 @@ jobs:
       - if: steps.cache.outputs.cache-hit != 'true'
         name: Install deps
         run: |
+          cd "${{ github.workspace }}/wikipathways-database"
           if [ ! -e ./Hs_Derby_Ensembl_104.bridge ]; then
             wget -O Hs_Derby_Ensembl_104.bridge https://zenodo.org/record/6367091/files/Hs_Derby_Ensembl_104.bridge?download=1
           fi
             
       - name: Perform homology conversion
         run: |
+          cd "${{ github.workspace }}/wikipathways-database"
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "perfoming homology conversion for $wpid ($f)"
             java -jar HomologyMapperAuto-WithDependencies.jar scripts/homology-converter/properties/autorun.properties $wpid
           done
-          
-      - name: Commit report
-        run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
-          git diff
-          for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
-          do
-            git add scripts/homology-converter/outputs/$value/WP*/WP*_$value.gpml
-          done
-          git add scripts/homology-converter/logs/*.txt
-          if git diff --exit-code --staged; then
-              echo "No changes"
-          else
-              git commit -m 'Update homology converted pathway files'
-              git pull --rebase
-              git push
-          fi
-          
-  commit-to-homology:
-    needs: [changed-gpmls,homologyConversion]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v3
-        with:
-          path: wikipathways-database
-          submodules: true
-          fetch-depth: 1
-          ref: main
-
-      - name: Checkout homology repo
-        uses: actions/checkout@v3
-        with:
-          repository: wikipathways/wikipathways-homology
-          path: wikipathways-homology
-          submodules: true
-          fetch-depth: 1
-          ref: main
-          ssh-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }}
-
-      - name: Set up ssh-agent
-        uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }} ## for push into wp-homology repo
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
             
-      - name: Copy gpml files from database repo to homology repo
+      - name: Move gpml files from database repo to homology repo
         run: |
-          DB_PATH="${{ github.workspace }}/wikipathways-database"
+          cd "${{ github.workspace }}/wikipathways-database"
           HM_PATH="${{ github.workspace }}/wikipathways-homology"
-
-          cd "$DB_PATH"
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "copying gpml files for $wpid for all species"
@@ -472,13 +436,12 @@ jobs:
             do             
               for hom_f in scripts/homology-converter/outputs/$value/$wpid/"$wpid"_"$value".gpml; do 
                 echo "For $hom_f"
-                echo "DEBUG:"
                 ls scripts/homology-converter/outputs/$value/$wpid/
                 cat "$hom_f"
                 if [ -e "$hom_f" ]; then
-                  echo "cp to wikipathways-homology" 
+                  echo "move to wikipathways-homology" 
                   mkdir -p $HM_PATH/pathways/$value/$wpid
-                  cp "$hom_f" $HM_PATH/pathways/$value/$wpid/"$wpid"_"$value".gpml
+                  mv "$hom_f" $HM_PATH/pathways/$value/$wpid/"$wpid"_"$value".gpml
                 fi
               done
             done  
@@ -486,14 +449,13 @@ jobs:
 
       - name: Commit gpml to homology repo
         run: |
-          HM_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-homology"
+          cd "${{ github.workspace }}/wikipathways-homology"
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          cd "$HM_PATH"
           
           for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
           do
-            git add $HM_PATH/pathways/$value/WP*/WP*_$value.gpml
+            git add pathways/$value/WP*/WP*_$value.gpml
           done
           
           if git diff --exit-code --staged; then
