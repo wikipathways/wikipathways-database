@@ -477,9 +477,12 @@ jobs:
                     echo "rm $old_f"
                   fi
                 done
-                if [-e "$DB_PATH/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml"]; then
+                echo "DEBUG:"
+                echo "pwd"
+                echo "ls ../"
+                if [-e "../wikipathways-database/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml"]; then
                     echo "cp to wikipathways-homology" 
-                    mv $DB_PATH/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml
+                    mv ../wikipathways-database/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml
                 fi
             done  
           done
