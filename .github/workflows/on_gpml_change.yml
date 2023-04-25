@@ -418,20 +418,26 @@ jobs:
       - name: Perform homology conversion
         run: |
           cd "${{ github.workspace }}/wikipathways-database"
+          for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
+            do   
+            mkdir -p scripts/homology-converter/output/"$value"
+          done
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "perfoming homology conversion for $wpid ($f)"
             java -jar HomologyMapperAuto-WithDependencies.jar scripts/homology-converter/properties/autorun.properties $wpid
           done
             
-      - name: Move gpml files from database repo to homology repo
+      - name: Move gpml and logs files from database repo to homology repo
         run: |
           cd "${{ github.workspace }}/wikipathways-database"
           HM_PATH="${{ github.workspace }}/wikipathways-homology"
+          echo "move logs to wikipathways-homology"
+          mkdir -p $HM_PATH/logs
+          mv scripts/homology-converter/logs/*.txt $HM_PATH/logs/.
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             wpid="$(basename ""$f"" | sed 's/.gpml//')"
             echo "copying gpml files for $wpid for all species"
-            
             for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
             do             
               for hom_f in scripts/homology-converter/outputs/$value/$wpid/"$wpid"_"$value".gpml; do 
@@ -452,12 +458,11 @@ jobs:
           cd "${{ github.workspace }}/wikipathways-homology"
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          
+          git add logs/*
           for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
           do
             git add pathways/$value/WP*/WP*_$value.gpml
           done
-          
           if git diff --exit-code --staged; then
               echo "No changes"
           else
