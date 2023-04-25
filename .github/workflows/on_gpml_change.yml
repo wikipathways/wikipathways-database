@@ -471,13 +471,14 @@ jobs:
             do
                 mkdir -p pathways/$value/"$wpid"
                 for old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml; do 
-                  echo "for $old_f in pathways/$value/"$wpid"/"$wpid"_"$value".gpml"
+                  echo "For $old_f"
                   if [ -e "$old_f" ]; then
                     rm "$old_f"
                     echo "rm $old_f"
                   fi
                 done
                 if [-e $DB_PATH/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml]; then
+                    echo "cp to wikipathways-homology" 
                     cp $DB_PATH/scripts/homology-converter/outputs/$value/"$wpid"/"$wpid"_"$value".gpml $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml
                 fi
             done  
@@ -488,7 +489,7 @@ jobs:
           HM_PATH="/home/runner/work/wikipathways-database/wikipathways-database/wikipathways-homology"
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          cd wikipathways-homology
+          cd "$HM_PATH"
           
           for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
           do
