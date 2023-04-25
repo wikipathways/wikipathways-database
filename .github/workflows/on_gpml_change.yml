@@ -137,7 +137,7 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Update author_list file'
               git push
           fi
@@ -146,7 +146,7 @@ jobs:
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Created new author profiles'
               git push
           fi
@@ -266,7 +266,7 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Update metadata files'
               git push
           fi
@@ -313,7 +313,7 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Update formatted references'
               git push
           fi
@@ -359,7 +359,7 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Update frontmatter .md files'
               git push
           fi
@@ -421,7 +421,7 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Update homology converted pathway files'
               git push
           fi
@@ -477,11 +477,7 @@ jobs:
                     echo "rm $old_f"
                   fi
                 done
-                echo "DEBUG:"
-                pwd
-                ls ../
-                ls $DB_PATH
-                if [ -e "$DB_PATH/scripts/homology-converter/outputs/$value/$wpid/$wpid_$value.gpml"]; then
+                if [ -e "$DB_PATH/scripts/homology-converter/outputs/$value/$wpid/$wpid_$value.gpml" ]; then
                     echo "cp to wikipathways-homology" 
                     mv $DB_PATH/scripts/homology-converter/outputs/$value/$wpid/$wpid_$value.gpml $HM_PATH/pathways/$value/"$wpid"/"$wpid"_"$value".gpml
                 fi
@@ -503,7 +499,7 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Update GPML files'
               git push
           fi
@@ -604,7 +600,7 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Update JSON, SVG, PNG, TSV and GPML files'
               git push
           fi
@@ -618,7 +614,7 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Update PNG files'
               git push
           fi
@@ -667,7 +663,7 @@ jobs:
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Update tsv, md and png files'
               git push
           fi
@@ -714,7 +710,7 @@ jobs:
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Remove deleted asset files'
               git push
           fi
@@ -772,7 +768,7 @@ jobs:
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
-              git pull
+              git pull --rebase
               git commit -m 'Remove deleted tsv, md and png file(s)'
               git push
           fi
