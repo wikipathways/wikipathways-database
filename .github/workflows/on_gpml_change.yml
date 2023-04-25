@@ -470,17 +470,15 @@ jobs:
             
             for value in Bt Cf Dr Qc Gg Mm Pt Rn Ss
             do             
-              for hom_f in scripts/homology-converter/outputs/$value/$wpid/$wpid_$value.gpml; do 
+              for hom_f in scripts/homology-converter/outputs/$value/$wpid/"$wpid"_"$value".gpml; do 
                 echo "For $hom_f"
                 echo "DEBUG:"
-                pwd
-                ls
-                ls scripts/homology-converter/outputs/Bt/
+                ls scripts/homology-converter/outputs/$value/$wpid/
                 cat "$hom_f"
                 if [ -e "$hom_f" ]; then
                   echo "cp to wikipathways-homology" 
                   mkdir -p $HM_PATH/pathways/$value/$wpid
-                  cp "$hom_f" $HM_PATH/pathways/$value/$wpid/$wpid_$value.gpml
+                  cp "$hom_f" $HM_PATH/pathways/$value/$wpid/"$wpid"_"$value".gpml
                 fi
               done
             done  
