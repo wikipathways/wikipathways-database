@@ -472,6 +472,11 @@ jobs:
             do             
               for hom_f in scripts/homology-converter/outputs/$value/$wpid/$wpid_$value.gpml; do 
                 echo "For $hom_f"
+                echo "DEBUG:"
+                pwd
+                ls
+                ls scripts/homology-converter/outputs/Bt/
+                cat "$hom_f"
                 if [ -e "$hom_f" ]; then
                   echo "cp to wikipathways-homology" 
                   mkdir -p $HM_PATH/pathways/$value/$wpid
