@@ -62,6 +62,7 @@ jobs:
               echo "No changes"
           else
               git commit -m 'Sync GPML files'
+              git pull --rebase
           fi
       
       - name: Push as user

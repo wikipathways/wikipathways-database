@@ -50,6 +50,7 @@ jobs:
               echo "No changes"
           else
               git commit -m 'Update communities in frontmatter .md files'
+              git pull --rebase
               git push
           fi
           
@@ -92,5 +93,6 @@ jobs:
           else
               git diff --name-only
               git commit -m 'Update communities in frontmatter .md files'
+              git pull --rebase
               git push
           fi

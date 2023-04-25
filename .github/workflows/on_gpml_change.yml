@@ -137,8 +137,8 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Update author_list file'
+              git pull --rebase
               git push
           fi
           cd "${{ github.workspace }}/wikipathways.github.io/_authors"
@@ -146,8 +146,8 @@ jobs:
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Created new author profiles'
+              git pull --rebase
               git push
           fi
 
@@ -266,8 +266,8 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Update metadata files'
+              git pull --rebase
               git push
           fi
           
@@ -313,8 +313,8 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Update formatted references'
+              git pull --rebase
               git push
           fi
           
@@ -359,8 +359,8 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Update frontmatter .md files'
+              git pull --rebase
               git push
           fi
 
@@ -421,8 +421,8 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Update homology converted pathway files'
+              git pull --rebase
               git push
           fi
           
@@ -499,8 +499,8 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Update GPML files'
+              git pull --rebase
               git push
           fi
           
@@ -600,8 +600,8 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Update JSON, SVG, PNG, TSV and GPML files'
+              git pull --rebase
               git push
           fi
           
@@ -614,8 +614,8 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Update PNG files'
+              git pull --rebase
               git push
           fi
 
@@ -663,8 +663,8 @@ jobs:
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Update tsv, md and png files'
+              git pull --rebase
               git push
           fi
 
@@ -710,8 +710,8 @@ jobs:
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Remove deleted asset files'
+              git pull --rebase
               git push
           fi
 
@@ -768,7 +768,7 @@ jobs:
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
-              git pull --rebase
               git commit -m 'Remove deleted tsv, md and png file(s)'
+              git pull --rebase
               git push
           fi

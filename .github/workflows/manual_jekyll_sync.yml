@@ -51,7 +51,7 @@ jobs:
           if git diff --exit-code --staged > /dev/null; then
               echo "No changes"
           else
-              git pull
               git commit -m 'Update tsv and md files'
+              git pull --rebase
               git push
           fi
