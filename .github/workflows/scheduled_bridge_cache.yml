@@ -1,4 +1,4 @@
-name: Refresh bridge and meta-data-action cache weekly
+name: Weekly caching of bridge and meta-data-action
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false # to allow multiple runs to queue up rather than clobber
 
 jobs:
-  dependencies:
+  refresh-cache:
     runs-on: ubuntu-latest
     steps:
     

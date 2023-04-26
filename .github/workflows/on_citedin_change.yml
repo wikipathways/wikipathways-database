@@ -1,4 +1,4 @@
-name: When citedin lookup yaml changes, update frontmatter .md files
+name: When new citations, update frontmatter
 
 on:
   workflow_dispatch:
@@ -50,7 +50,7 @@ jobs:
           fi
           
   copy-to-site-repo:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     needs: [frontmatter]
     steps:
       - name: Checkout
