@@ -61,7 +61,7 @@ jobs:
           if git diff --exit-code --staged; then
               echo "No changes"
           else
-              git commit -m 'Sync GPML files'
+              git commit -m 'Process GPML changes'
               git pull --rebase
           fi
       
