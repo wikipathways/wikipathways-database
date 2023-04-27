@@ -428,7 +428,7 @@ jobs:
             java -jar HomologyMapperAuto-WithDependencies.jar scripts/homology-converter/properties/autorun.properties $wpid
           done
             
-      - name: Move gpml and logs files from database repo to homology repo
+      - name: Move gpml and log files from database repo to homology repo
         run: |
           cd "${{ github.workspace }}/wikipathways-database"
           HM_PATH="${{ github.workspace }}/wikipathways-homology"
@@ -580,7 +580,7 @@ jobs:
               echo "No changes"
           else
               git commit -m 'Update PNG files'
-              git pull --rebase
+              git pull --rebase --autostash
               git push
           fi
 
