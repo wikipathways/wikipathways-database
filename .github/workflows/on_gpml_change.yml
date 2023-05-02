@@ -259,7 +259,7 @@ jobs:
             echo "generating info and datanode files for $wpid, organism "$org""
             echo "HACK: Fixing citations until meta-data-action is updated"
             sed -i 's/><\/bp:ID>/>NA<\/bp:ID>/' "$f"
-            echo "$f"
+            cat "$f"
             java -jar meta-data-action-1.1.0-jar-with-dependencies.jar wikipathways/wikipathways-database "$f" $(date --utc +%F) gdb.config "$org"
           done
       
