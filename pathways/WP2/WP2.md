@@ -41,7 +41,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP2
 - /instance/WP2
-- /instance/WP2_rr118865
+- /instance/WP2_r118865
 revision: r118865
 schema-jsonld:
 - '@context': https://schema.org/

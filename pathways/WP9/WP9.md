@@ -34,7 +34,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP9
 - /instance/WP9
-- /instance/WP9_rr124935
+- /instance/WP9_r124935
 revision: r124935
 schema-jsonld:
 - '@context': https://schema.org/

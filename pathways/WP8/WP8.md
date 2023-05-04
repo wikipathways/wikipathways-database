@@ -21,7 +21,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP8
 - /instance/WP8
-- /instance/WP8_rr116988
+- /instance/WP8_r116988
 revision: r116988
 schema-jsonld:
 - '@context': https://schema.org/

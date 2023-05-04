@@ -49,7 +49,7 @@ organisms:
 redirect_from:
 - /index.php/Pathway:WP1
 - /instance/WP1
-- /instance/WP1_rr117947
+- /instance/WP1_r117947
 revision: r117947
 schema-jsonld:
 - '@context': https://schema.org/
