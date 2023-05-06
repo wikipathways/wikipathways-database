@@ -83,15 +83,15 @@ jobs:
         id: cache
         with:
           path: ~/
-          key: ${{ runner.os }}-java-Hs_Derby_Ensembl_104.bridge
+          key: ${{ runner.os }}-java-Hs_Derby_Ensembl_108.bridge
           restore-keys: |
             ${{ runner.os }}-java-
             
       - if: steps.cache.outputs.cache-hit != 'true'
         name: Install deps
         run: |
-          if [ ! -e ./Hs_Derby_Ensembl_104.bridge ]; then
-            wget -O Hs_Derby_Ensembl_104.bridge https://zenodo.org/record/6367091/files/Hs_Derby_Ensembl_104.bridge?download=1
+          if [ ! -e ./Hs_Derby_Ensembl_108.bridge ]; then
+            wget -O Hs_Derby_Ensembl_108.bridge https://zenodo.org/record/6367091/files/Hs_Derby_Ensembl_108.bridge?download=1
           fi
             
       - name: Perform homology conversion
