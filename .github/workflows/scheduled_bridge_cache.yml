@@ -1,6 +1,8 @@
 name: Weekly caching of bridge and meta-data-action
 
 on:
+  repository_dispatch:
+    types: [update-event]
   workflow_dispatch:
   schedule:
   - cron: "0 0 * * 0"
