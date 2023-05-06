@@ -1,8 +1,8 @@
 name: Weekly caching of bridge and meta-data-action
 
 on:
-  repository_dispatch:
-    types: [update-event]
+  repository_dispatch: # triggered by https://github.com/bridgedb/data/blob/main/.github/workflows/geneUpdates.yml
+    types: [bridgedb-data-update-event]
   workflow_dispatch:
   schedule:
   - cron: "0 0 * * 0"
