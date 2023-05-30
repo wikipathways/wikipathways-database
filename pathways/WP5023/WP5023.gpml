@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Hypoxia-dependent self-renewal of myoblasts" Data-Source="WikiPathways" Version="WP5023_r119055" Author="[ExperiMed, Andra, Eweitz, Khanspers]" Last-Modified="20210613234827" Organism="Mus musculus">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Hypoxia-dependent self-renewal of myoblasts" Data-Source="WikiPathways" Version="WP5023_r126538" Author="[ExperiMed, Andra, Eweitz, Khanspers, Egonw]" Last-Modified="20230529095140" Organism="Mus musculus">
   <Comment Source="WikiPathways-description">Molecular mechanisms involved in self-renewal of satellite cells in hypoxia. Black arrows: activation of the signaling pathway / protein / molecule. Blunt red arrow: inhibition of the signaling pathway / protein / molecule. Round blue arrow: interaction between two pathways.</Comment>
   <Graphics BoardWidth="1055.0" BoardHeight="575.5" />
   <DataNode TextLabel="Hey1" GraphId="ef539" Type="GeneProduct" GroupRef="a0ce9">
@@ -14,7 +14,7 @@
     <Graphics CenterX="332.563946406821" CenterY="288.67733620372195" Width="90.0" Height="25.0" ZOrder="16386" FontStyle="Italic" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="15214" />
   </DataNode>
-  <DataNode TextLabel="Hypoxia" GraphId="a2211">
+  <DataNode TextLabel="Hypoxia" GraphId="a2211" Type="Pathway">
     <Graphics CenterX="563.0" CenterY="56.0" Width="68.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="0033ff" />
     <Xref Database="" ID="" />
   </DataNode>
@@ -42,7 +42,7 @@
     <Graphics CenterX="688.0" CenterY="132.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="12575" />
   </DataNode>
-  <DataNode TextLabel="Self renewal" GraphId="e0572">
+  <DataNode TextLabel="Self renewal" GraphId="e0572" Type="Pathway">
     <Graphics CenterX="571.0" CenterY="533.0" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="0033ff" />
     <Xref Database="" ID="" />
   </DataNode>
@@ -54,11 +54,11 @@
     <Graphics CenterX="565.5" CenterY="368.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="17928" />
   </DataNode>
-  <DataNode TextLabel="miR206" GraphId="b30cf" Type="RNA" GroupRef="aa776">
+  <DataNode TextLabel="miR206" GraphId="b30cf" Type="Rna" GroupRef="aa776">
     <Graphics CenterX="335.00000000000006" CenterY="404.4619292324346" Width="90.0" Height="31.514631181902985" ZOrder="32770" FontStyle="Italic" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="Notch-pathway" GraphId="edda2" Type="Pathway">
+  <DataNode TextLabel="Notch-pathway" GraphId="edda2" Type="GeneProduct">
     <Graphics CenterX="332.5116279069767" CenterY="258.8372093023256" Width="90.0" Height="25.0" ZOrder="32772" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="009900" />
     <Xref Database="Entrez Gene" ID="18128" />
   </DataNode>
@@ -78,7 +78,7 @@
     <Graphics CenterX="565.5" CenterY="260.0" Width="129.0" Height="25.0" ZOrder="32786" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="miR1&#xA;" GraphId="d68cb" Type="RNA" GroupRef="aa776">
+  <DataNode TextLabel="miR1&#xA;" GraphId="d68cb" Type="Rna" GroupRef="aa776">
     <Graphics CenterX="335.00000000000006" CenterY="366.5799404386984" Width="89.99999999999999" Height="29.324893787645887" ZOrder="32788" FontStyle="Italic" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
@@ -89,16 +89,16 @@
   <Interaction GraphId="id11455e68">
     <BiopaxRef>a05</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="d873f" X="462.0" Y="141.0" GraphRef="b4faf" RelX="0.0" RelY="1.0" />
-      <Point GraphId="dfa92" X="521.0" Y="201.0" GraphRef="dda42" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="462.0" Y="141.0" GraphRef="b4faf" RelX="0.0" RelY="1.0" />
+      <Point X="521.0" Y="201.0" GraphRef="dda42" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id118dfbb2">
     <BiopaxRef>ccd</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0" Color="007aff">
-      <Point GraphId="c6399" X="182.0" Y="260.0" GraphRef="d56ff" RelX="1.0" RelY="0.0" />
-      <Point GraphId="cad12" X="287.5116279069767" Y="258.8372093023256" GraphRef="edda2" RelX="-1.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="182.0" Y="260.0" GraphRef="d56ff" RelX="1.0" RelY="0.0" />
+      <Point X="287.5116279069767" Y="258.8372093023256" GraphRef="edda2" RelX="-1.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -106,9 +106,9 @@
     <BiopaxRef>e33</BiopaxRef>
     <BiopaxRef>ed3</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="d42bf" X="565.5" Y="272.5" GraphRef="d4e1f" RelX="0.0" RelY="1.0" />
-      <Point GraphId="c53fd" X="614.75" Y="313.0" />
-      <Point GraphId="a5fe3" X="664.0" Y="355.5" GraphRef="a8a0b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="565.5" Y="272.5" GraphRef="d4e1f" RelX="0.0" RelY="1.0" />
+      <Point X="614.75" Y="313.0" />
+      <Point X="664.0" Y="355.5" GraphRef="a8a0b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -116,41 +116,41 @@
     <BiopaxRef>e33</BiopaxRef>
     <BiopaxRef>ed3</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="bfdb5" X="565.5" Y="272.5" GraphRef="d4e1f" RelX="0.0" RelY="1.0" />
-      <Point GraphId="e13f6" X="664.75" Y="313.03288672350794" />
-      <Point GraphId="be662" X="764.0" Y="355.5" GraphRef="aa10a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="565.5" Y="272.5" GraphRef="d4e1f" RelX="0.0" RelY="1.0" />
+      <Point X="664.75" Y="313.03288672350794" />
+      <Point X="764.0" Y="355.5" GraphRef="aa10a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2e2e3f42">
     <BiopaxRef>bda</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="ff0000">
-      <Point GraphId="aedfe" X="563.0" Y="68.5" GraphRef="a2211" RelX="0.0" RelY="1.0" />
-      <Point GraphId="e0b6a" X="688.0" Y="119.5" GraphRef="c1d4d" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point X="563.0" Y="68.5" GraphRef="a2211" RelX="0.0" RelY="1.0" />
+      <Point X="688.0" Y="119.5" GraphRef="c1d4d" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id38ba60f4">
     <BiopaxRef>d79</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="ff3b30">
-      <Point GraphId="a4188" X="335.00000000000006" Y="420.21924482338613" GraphRef="b30cf" RelX="0.0" RelY="1.0" />
-      <Point GraphId="ea944" X="526.0" Y="451.0" GraphRef="e51d5" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="335.00000000000006" Y="420.21924482338613" GraphRef="b30cf" RelX="0.0" RelY="1.0" />
+      <Point X="526.0" Y="451.0" GraphRef="e51d5" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5a5754f0">
     <BiopaxRef>a05</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="f7fc6" X="563.0" Y="68.5" GraphRef="a2211" RelX="0.0" RelY="1.0" />
-      <Point GraphId="d2197" X="462.0" Y="115.25" GraphRef="b4faf" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="563.0" Y="68.5" GraphRef="a2211" RelX="0.0" RelY="1.0" />
+      <Point X="462.0" Y="115.25" GraphRef="b4faf" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id65d2d6f2">
     <BiopaxRef>c12</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="ff3b30">
-      <Point GraphId="ad39c" X="1025.0" Y="58.0" GraphRef="def2d" RelX="1.0" RelY="0.0" />
-      <Point GraphId="d19aa" X="616.0" Y="451.0" GraphRef="e51d5" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="1025.0" Y="58.0" GraphRef="def2d" RelX="1.0" RelY="0.0" />
+      <Point X="616.0" Y="451.0" GraphRef="e51d5" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -158,8 +158,8 @@
     <BiopaxRef>e33</BiopaxRef>
     <BiopaxRef>ed3</BiopaxRef>
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="b6378" X="565.5" Y="272.5" GraphRef="d4e1f" RelX="0.0" RelY="1.0" />
-      <Point GraphId="f307a" X="565.5" Y="355.5" GraphRef="eb01e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="565.5" Y="272.5" GraphRef="d4e1f" RelX="0.0" RelY="1.0" />
+      <Point X="565.5" Y="355.5" GraphRef="eb01e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -167,17 +167,17 @@
     <BiopaxRef>e33</BiopaxRef>
     <BiopaxRef>ed3</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="e3245" X="565.5" Y="272.5" GraphRef="d4e1f" RelX="0.0" RelY="1.0" />
-      <Point GraphId="e7ba9" X="510.5" Y="313.0" />
-      <Point GraphId="f911b" X="455.5" Y="355.5" GraphRef="b7445" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="565.5" Y="272.5" GraphRef="d4e1f" RelX="0.0" RelY="1.0" />
+      <Point X="510.5" Y="313.0" />
+      <Point X="455.5" Y="355.5" GraphRef="b7445" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id93c4d003">
     <BiopaxRef>bda</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="e1893" X="688.0000000000001" Y="214.5" GraphRef="b120c" RelX="0.0" RelY="1.0" />
-      <Point GraphId="cddc5" X="757.0" Y="237.0" GraphRef="a9102" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="688.0000000000001" Y="214.5" GraphRef="b120c" RelX="0.0" RelY="1.0" />
+      <Point X="757.0" Y="237.0" GraphRef="a9102" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -185,94 +185,141 @@
     <BiopaxRef>e28</BiopaxRef>
     <BiopaxRef>ccb</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="ce273" X="571.0" Y="463.5" GraphRef="e51d5" RelX="0.0" RelY="1.0" />
-      <Point GraphId="bb2e7" X="571.0" Y="520.5" GraphRef="e0572" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="571.0" Y="463.5" GraphRef="e51d5" RelX="0.0" RelY="1.0" />
+      <Point X="571.0" Y="520.5" GraphRef="e0572" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id9997977f">
     <BiopaxRef>e58</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="ff3b30">
-      <Point GraphId="a3bcf" X="455.5" Y="380.5" GraphRef="b7445" RelX="0.5" RelY="1.0" />
-      <Point GraphId="c2af9" X="571.0" Y="438.5" GraphRef="e51d5" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point X="455.5" Y="380.5" GraphRef="b7445" RelX="0.5" RelY="1.0" />
+      <Point X="571.0" Y="438.5" GraphRef="e51d5" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida69d0d48">
     <BiopaxRef>d79</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
-      <Point GraphId="db516" X="334.38952780216994" Y="309.17733620372195" GraphRef="a0ce9" RelX="0.0" RelY="1.0" />
-      <Point GraphId="e2d70" X="335.00000000000006" Y="351.91749354487547" GraphRef="d68cb" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point X="334.38952780216994" Y="309.17733620372195" GraphRef="b687e" RelX="0.0" RelY="1.0" />
+      <Point X="335.00000000000006" Y="351.91749354487547" GraphRef="d68cb" RelX="0.0" RelY="-1.0" ArrowHead="TBar" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idaa74012b">
     <BiopaxRef>c12</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0" Color="007aff">
-      <Point GraphId="a570e" X="501.0" Y="260.0" GraphRef="d4e1f" RelX="-1.0" RelY="0.0" />
-      <Point GraphId="f106b" X="377.5116279069767" Y="258.8372093023256" GraphRef="edda2" RelX="1.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="501.0" Y="260.0" GraphRef="d4e1f" RelX="-1.0" RelY="0.0" />
+      <Point X="377.5116279069767" Y="258.8372093023256" GraphRef="edda2" RelX="1.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idb462921a">
     <BiopaxRef>bda</BiopaxRef>
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="ea688" X="688.0" Y="144.5" GraphRef="c1d4d" RelX="0.0" RelY="1.0" />
-      <Point GraphId="c760c" X="688.0000000000001" Y="189.5" GraphRef="b120c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="688.0" Y="144.5" GraphRef="c1d4d" RelX="0.0" RelY="1.0" />
+      <Point X="688.0000000000001" Y="189.5" GraphRef="b120c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idbcd3ef34">
     <BiopaxRef>e58</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="e01b9" X="433.0" Y="380.5" GraphRef="b7445" RelX="0.0" RelY="1.0" />
-      <Point GraphId="b5284" X="388.00000000000006" Y="407.1438070037584" GraphRef="aa776" RelX="1.0" RelY="0.5" ArrowHead="Arrow" />
+      <Point X="433.0" Y="380.5" GraphRef="b7445" RelX="0.0" RelY="1.0" />
+      <Point X="388.00000000000006" Y="407.1438070037584" GraphRef="adef2" RelX="1.0" RelY="0.5" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd2179ee7">
     <BiopaxRef>d79</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="ff0000">
-      <Point GraphId="fd4a4" X="334.38952780216994" Y="309.17733620372195" GraphRef="a0ce9" RelX="0.0" RelY="1.0" />
-      <Point GraphId="f2f34" X="383.69476390108497" Y="318.0" />
-      <Point GraphId="b66d3" X="433.0" Y="355.5" GraphRef="b7445" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point X="334.38952780216994" Y="309.17733620372195" GraphRef="b687e" RelX="0.0" RelY="1.0" />
+      <Point X="383.69476390108497" Y="318.0" />
+      <Point X="433.0" Y="355.5" GraphRef="b7445" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id310688c9">
     <BiopaxRef>c12</BiopaxRef>
     <Graphics ZOrder="12298" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="a1522" X="597.0" Y="56.0" GraphRef="a2211" RelX="1.0" RelY="0.0" />
-      <Point GraphId="accac" X="935.0" Y="58.0" GraphRef="def2d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="597.0" Y="56.0" GraphRef="a2211" RelX="1.0" RelY="0.0" />
+      <Point X="935.0" Y="58.0" GraphRef="def2d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6e0ddcba">
     <Graphics ZOrder="12300" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="d473a" X="566.0" Y="213.5" GraphRef="dda42" RelX="0.0" RelY="1.0" />
-      <Point GraphId="d6c5f" X="565.5" Y="247.5" GraphRef="d4e1f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="566.0" Y="213.5" GraphRef="dda42" RelX="0.0" RelY="1.0" />
+      <Point X="565.5" Y="247.5" GraphRef="d4e1f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Group GroupId="aa776" GraphId="aa776" Style="Group" />
-  <Group GroupId="a0ce9" GraphId="a0ce9" Style="Group" />
+  <Group GroupId="aa776" GraphId="adef2" Style="Group" />
+  <Group GroupId="a0ce9" GraphId="b687e" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">myoblast</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000056</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notch signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000204</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wnt signaling pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000008</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ed3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22006022</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O(2) regulates skeletal muscle progenitor differentiation through phosphatidylinositol 3-kinase/AKT signaling.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Majmundar AJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skuli N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mesquita RC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim MN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yodh AG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nguyen-McCarty M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon MC</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ccb">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21041476</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">miR-206 and -486 induce myoblast differentiation by downregulating Pax7.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dey BK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gagan J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dutta A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d79">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22764051</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoxia promotes satellite cell self-renewal and enhances the efficiency of myoblast transplantation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Development</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wen Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bi P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lai X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu XS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuang S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notch signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000204</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e28">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20819939</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microRNA-1 and microRNA-206 regulate skeletal muscle satellite cell proliferation and differentiation by repressing Pax7.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Cell Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen JF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tao Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deng Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yan Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xiao X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang DZ</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a05">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17395396</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -283,6 +330,60 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhu L</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen X</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fan M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e58">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26708096</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muscle-specific microRNAs in skeletal muscle development.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dev Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horak M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novak J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bienertova-Vasku J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">myoblast</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000056</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e33">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30970214</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoxia-inducible factor 1α (HIF-1α) is a major determinant in the enhanced function of muscle-derived progenitors from MRL/MpJ mice.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FASEB J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sinha KM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tseng C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guo P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lu A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pan H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gao X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrews R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eltzschig H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huard J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c12">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20231451</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoxia converts the myogenic action of insulin-like growth factors into mitogenic action by differentially regulating multiple signaling pathways.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ren H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accili D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duan C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bda">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14754880</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoxia inhibits myogenic differentiation through accelerated MyoD degradation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Di Carlo A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De Mori R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martelli F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pompilio G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capogrossi MC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germani A</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ccd">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17717603</bp:ID>
@@ -300,106 +401,6 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kitajewski J</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accili D</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e33">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30970214</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoxia-inducible factor 1α (HIF-1α) is a major determinant in the enhanced function of muscle-derived progenitors from MRL/MpJ mice.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FASEB J</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sinha KM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tseng C</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guo P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lu A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pan H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gao X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrews R</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eltzschig H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huard J</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ed3">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22006022</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O(2) regulates skeletal muscle progenitor differentiation through phosphatidylinositol 3-kinase/AKT signaling.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Biol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Majmundar AJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skuli N</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mesquita RC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim MN</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yodh AG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nguyen-McCarty M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon MC</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bda">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14754880</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoxia inhibits myogenic differentiation through accelerated MyoD degradation.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Di Carlo A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De Mori R</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martelli F</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pompilio G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capogrossi MC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germani A</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d79">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22764051</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoxia promotes satellite cell self-renewal and enhances the efficiency of myoblast transplantation.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Development</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu W</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wen Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bi P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lai X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu XS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuang S</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c12">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20231451</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoxia converts the myogenic action of insulin-like growth factors into mitogenic action by differentially regulating multiple signaling pathways.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ren H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accili D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duan C</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e28">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20819939</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microRNA-1 and microRNA-206 regulate skeletal muscle satellite cell proliferation and differentiation by repressing Pax7.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Cell Biol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen JF</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tao Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deng Z</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yan Z</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xiao X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang DZ</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ccb">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21041476</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">miR-206 and -486 induce myoblast differentiation by downregulating Pax7.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Biol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dey BK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gagan J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dutta A</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e58">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26708096</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muscle-specific microRNAs in skeletal muscle development.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dev Biol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horak M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novak J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bienertova-Vasku J</bp:AUTHORS>
-    </bp:PublicationXref>
   </Biopax>
 </Pathway>
+
