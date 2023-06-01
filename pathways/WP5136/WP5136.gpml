@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Alpha-linolenic acid oxylipin metabolism" Data-Source="WikiPathways" Version="WP5136_r126446" Author="[Lcayer, Mkutmon, AlexanderPico, Khanspers]" Last-Modified="20230430192705" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">Alpha-linolenic acid (ALA) oxylipin metabolism by ALOX5, ALOX15, and cytochrome P450.</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="ALA oxylipin metabolism" Data-Source="WikiPathways" Version="WP5136_r126553" Author="[Lcayer, Mkutmon, AlexanderPico, Khanspers]" Last-Modified="20230531180130" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Alpha-Linolenic acid (ALA) oxylipin metabolism by ALOX5, ALOX15, and cytochrome P450.</Comment>
   <BiopaxRef>b6c</BiopaxRef>
-  <Graphics BoardWidth="1189.2249864542164" BoardHeight="668.6574074074074" />
+  <Graphics BoardWidth="1189.2249864542164" BoardHeight="664.023" />
   <DataNode TextLabel="9(10)-EpODE" GraphId="ad228" Type="Metabolite">
     <Graphics CenterX="822.3067788504673" CenterY="261.2222397227906" Width="120.0" Height="25.00000000000001" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="HMDB" ID="HMDB10220"/>
+    <Xref Database="HMDB" ID="HMDB10220" />
   </DataNode>
-  <DataNode TextLabel="Linolenic acid" GraphId="c5c4d" Type="Metabolite">
+  <DataNode TextLabel="α-Linolenic acid" GraphId="c5c4d" Type="Metabolite">
     <Graphics CenterX="500.95238095238074" CenterY="321.27777777777777" Width="95.80952380952363" Height="29.444444444444457" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" Color="000099" />
-    <Xref Database="ChEBI" ID="CHEBI:25048" />
+    <Xref Database="ChEBI" ID="27432" />
+  </DataNode>
+  <DataNode TextLabel="13-OxoOTrE" GraphId="c71b6" Type="Metabolite">
+    <Graphics CenterX="500.952" CenterY="621.523" Width="120.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="15(16)-EpODE" GraphId="c7c3c" Type="Metabolite">
     <Graphics CenterX="822.3067788504671" CenterY="387.86955982695906" Width="120.0" Height="25.00000000000001" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="HMDB" ID="HMDB10206" />
   </DataNode>
-  <DataNode TextLabel="13-HODE" GraphId="c8a4b" Type="Metabolite">
+  <DataNode TextLabel="13-HOTrE" GraphId="c8a4b" Type="Metabolite">
     <Graphics CenterX="500.95238095238074" CenterY="547.8749616718651" Width="120.0" Height="25.000000000000025" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:137495" />
+    <Xref Database="PubChem-compound" ID="10469728" />
   </DataNode>
   <DataNode TextLabel="sEH" GraphId="c94f5" Type="GeneProduct">
     <Graphics CenterX="977.2685185185172" CenterY="455.5925925925929" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000120915" />
   </DataNode>
-  <DataNode TextLabel="13-OxoODE" GraphId="ca92b" Type="Metabolite">
-    <Graphics CenterX="500.95238095238074" CenterY="626.1574074074074" Width="120.0" Height="25.000000000000025" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="HMDB" ID="HMDB0004668" />
-  </DataNode>
   <DataNode TextLabel="9-OxoOTrE" GraphId="ce73e" Type="Metabolite">
-    <Graphics CenterX="289.96692392502814" CenterY="621.5234083216129" Width="120.0" Height="24.99999999999995" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="289.96692392502814" CenterY="621.523" Width="120.0" Height="24.99999999999995" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="CAS" ID="125559-74-2" />
   </DataNode>
-  <DataNode TextLabel="13-HpODE" GraphId="cfe77" Type="Metabolite">
+  <DataNode TextLabel="13-HpOTrE" GraphId="cfe77" Type="Metabolite">
     <Graphics CenterX="500.95238095238074" CenterY="466.37265711135615" Width="120.0" Height="25.00000000000001" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="HMDB" ID="HMDB0003871" />
+    <Xref Database="ChEBI" ID="CHEBI:145300" />
   </DataNode>
   <DataNode TextLabel="9,10-DiHODE" GraphId="d20c1" Type="Metabolite">
     <Graphics CenterX="1099.2249864542164" CenterY="261.22223972279056" Width="120.0" Height="25.00000000000001" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -130,7 +130,7 @@
   <Interaction GraphId="id6b8f4ed9">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="500.95238095238074" Y="560.3749616718651" GraphRef="c8a4b" RelX="0.0" RelY="1.0" />
-      <Point X="500.95238095238074" Y="613.6574074074074" GraphRef="ca92b" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point X="500.95238095238074" Y="613.6574074074074" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -219,7 +219,7 @@
   <Interaction GraphId="idf67ed5b5">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="289.96692392502814" Y="560.3749616718651" GraphRef="dc3b9" RelX="0.0" RelY="1.0" />
-      <Point X="289.96692392502814" Y="609.0234083216129" GraphRef="ce73e" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point X="289.96692392502814" Y="609.023" GraphRef="ce73e" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -233,6 +233,20 @@
   </Interaction>
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ed0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5003472</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lipoxygenase from potato tubers. Partial purification and properties of an enzyme that specifically oxygenates the 9-position of linoleic acid.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1971</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galliard T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phillips DR</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b6c">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26374175</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -246,24 +260,10 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aukema HM</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lipid metabolic pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000010</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ed0">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5003472</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lipoxygenase from potato tubers. Partial purification and properties of an enzyme that specifically oxygenates the 9-position of linoleic acid.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem J</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1971</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galliard T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phillips DR</bp:AUTHORS>
-    </bp:PublicationXref>
   </Biopax>
 </Pathway>
 
