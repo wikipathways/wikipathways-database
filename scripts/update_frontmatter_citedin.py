@@ -17,13 +17,16 @@ var_path = lambda wpid: temp_path.format(wpid=wpid)
 for wpid in wpids:
     print(wpid)
     p = repo_dir.joinpath(var_path(wpid))
-    post = frontmatter.load(str(p), handler=YAMLHandler())
-    
-    old_citedin = post.get('citedin', str())
-    new_citedin = citedin.get(wpid, str())
-    
-    if new_citedin:
-        print(f"updating {wpid} citedin from {old_citedin} to {new_citedin}")
-        post['citedin'] = new_citedin
-        with Path(p).open('wb') as f:
-            frontmatter.dump(post, f)      
+    if p.is_file():
+        post = frontmatter.load(str(p), handler=YAMLHandler())
+        
+        old_citedin = post.get('citedin', str())
+        new_citedin = citedin.get(wpid, str())
+        
+        if new_citedin:
+            print(f"updating {wpid} citedin from {old_citedin} to {new_citedin}")
+            post['citedin'] = new_citedin
+            with Path(p).open('wb') as f:
+                frontmatter.dump(post, f)
+    else:
+        print(f'The file {p} does not exist, possibly deleted')
