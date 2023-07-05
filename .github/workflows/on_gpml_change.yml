@@ -108,6 +108,7 @@ jobs:
           echo ${#checkAuthors[@]}
           for a in ${checkAuthors[@]}; do
             a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            a2=$(echo "$a" | tr ' ' '_')
             if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
               echo "Adding $a"
               echo $a","$a",,," >> scripts/author_list.csv
@@ -127,8 +128,8 @@ jobs:
               echo "meta:" >> "wikipathways.github.io/_authors/$a.md"
               echo "instagram:" >> "wikipathways.github.io/_authors/$a.md"
               echo "redirect_from:" >> "wikipathways.github.io/_authors/$a.md"
-              echo "- /index.php/User:$a" >> "wikipathways.github.io/_authors/$a.md"
-              echo "- /index.php/Special:Contributions/$a" >> "wikipathways.github.io/_authors/$a.md"
+              echo "- /index.php/User:$a2" >> "wikipathways.github.io/_authors/$a.md"
+              echo "- /index.php/Special:Contributions/$a2" >> "wikipathways.github.io/_authors/$a.md"
               echo "---" >> "wikipathways.github.io/_authors/$a.md"
             fi
           done
