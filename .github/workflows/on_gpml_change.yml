@@ -96,7 +96,6 @@ jobs:
           }< scripts/author_list.csv
           echo ${#authorList[@]}
           checkAuthors=()
-          typeset -U checkAuthors
           for f in ${{needs.changed-gpmls.outputs.added-modified}}; do
             auth="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $f )"
             IFS=',' read -r -a curAuthors <<< "$auth"
@@ -104,9 +103,14 @@ jobs:
             echo ${#curAuthors[@]}
             checkAuthors+=("${(@)curAuthors}")
           done
-          echo ${checkAuthors[@]}
-          echo ${#checkAuthors[@]}
-          for a in ${checkAuthors[@]}; do
+          declare -A uniqueAuthorHash
+          for auth in "${checkAuthors[@]}"; do
+            uniqueAuthorHash["$auth"]=1
+          done
+          uniqueAuthors=("${!uniqueAuthorHash[@]}")
+          echo ${uniqueAuthors[@]}
+          echo ${#uniqueAuthors[@]}
+          for a in ${uniqueAuthors[@]}; do
             a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
             a2=$(echo "$a" | tr ' ' '_')
             if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
