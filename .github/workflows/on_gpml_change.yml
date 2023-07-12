@@ -111,7 +111,7 @@ jobs:
           done
           echo ${uniqueAuthors[@]}
           echo ${#uniqueAuthors[@]}
-          for a in ${uniqueAuthors[@]}; do
+          for a in "${uniqueAuthors[@]}"; do
             a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
             a2=$(echo "$a" | tr ' ' '_')
             if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
