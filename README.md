@@ -1,5 +1,5 @@
 # Welcome to the WikiPathways Database
-This repository is the primary database for pathway content for the WikiPathways project, including the source for content at https:www.wikipathways.org.
+This repository is the primary database for pathway content for the WikiPathways project, including the source for content at www.wikipathways.org.
 
 ## General Usage
 Users may be directed here by edit links on the website (e.g., pencil icons). Changes made to the files here will be reflected on the website after a few minutes.
