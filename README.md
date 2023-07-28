@@ -6,6 +6,8 @@ Users may be directed here by edit links on the website (e.g., pencil icons). Ch
 
 Technically, edits made using the pathway editor, PathVisio, also update the files here. However, most users do not need to worry about this.
 
+If you want to make edits to a pathway at WikiPathways, DO NOT create pull requests directly for this repo. Instead, use the PathVisio tool with the WikiPathways plugin to edit existing pathways and contribute new pathways.
+
 ## Development
 Please use caution when commit directly to this repository. Various GitHub Action are triggered by new commits. Please review the workflows in the `.github/workflows` directory and ask other developers on Slack if uncertain before making changes.
 
