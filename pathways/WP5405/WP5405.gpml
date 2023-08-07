@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="13q12 or CRYL1 copy number variation " Data-Source="WikiPathways" Version="WP5405_r127147" Author="[Fehrhart]" Last-Modified="20230806134938" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Deletion or duplication of the CRYL1 gene located at chromosome 13q12 (chr13:20977806-21100012 (GRCh37)) is a risk factor for psychiatric disorders (Kirov et al. 2014). 
+</Comment>
+  <Graphics BoardWidth="419.08141700694756" BoardHeight="346.4732430689883" />
+  <DataNode TextLabel="NAD+" GraphId="a2cad" Type="Metabolite">
+    <Graphics CenterX="132.13697256250435" CenterY="303.9732430689883" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15846" />
+  </DataNode>
+  <DataNode TextLabel="Cibacron blue" GraphId="a4adc" Type="Metabolite">
+    <Graphics CenterX="282.5999355254679" CenterY="97.26028010602477" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="172469" />
+  </DataNode>
+  <DataNode TextLabel="3-dehydro-L-gulonate" GraphId="bad7a" Type="Metabolite">
+    <Graphics CenterX="321.4425281180585" CenterY="278.97324306898776" Width="135.27777777777823" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="57655" />
+  </DataNode>
+  <DataNode TextLabel="Malonate" GraphId="c42dd" Type="Metabolite">
+    <Graphics CenterX="151.42560355326322" CenterY="97.79756787735505" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:38083" />
+  </DataNode>
+  <DataNode TextLabel="CRYL1" GraphId="df3a3" Type="GeneProduct">
+    <Graphics CenterX="216.6277133032458" CenterY="172.4917615875058" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000165475" />
+  </DataNode>
+  <DataNode TextLabel="NADH" GraphId="f45a4" Type="Metabolite">
+    <Graphics CenterX="321.4425281180607" CenterY="303.973243068988" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:16908" />
+  </DataNode>
+  <DataNode TextLabel="L-gulonate" GraphId="f5d3b" Type="Metabolite">
+    <Graphics CenterX="132.13697256250435" CenterY="278.9732430689882" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="13115" />
+  </DataNode>
+  <Interaction GraphId="id7a599d82">
+    <BiopaxRef>c6e</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="216.6277133032458" Y="184.9917615875058" GraphRef="df3a3" RelX="0.0" RelY="1.0" />
+      <Point X="215.47764998428735" Y="278.973243068988" GraphRef="b2475" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id87e7c9a8">
+    <BiopaxRef>c6e</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="151.42560355326322" Y="110.29756787735505" GraphRef="c42dd" RelX="0.0" RelY="1.0" />
+      <Point X="194.1277133032458" Y="159.9917615875058" GraphRef="df3a3" RelX="-0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc33a099b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="177.13697256250435" Y="278.9732430689882" GraphRef="f5d3b" RelX="1.0" RelY="0.0" />
+      <Point X="253.80363922916933" Y="278.97324306898776" GraphRef="bad7a" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5000957924580502" Shape="None" GraphId="b2475" />
+    </Graphics>
+    <Xref Database="Rhea" ID="12889" />
+  </Interaction>
+  <Interaction GraphId="df7b1">
+    <BiopaxRef>c6e</BiopaxRef>
+    <Graphics ZOrder="32769" LineThickness="1.0">
+      <Point X="282.5999355254679" Y="109.76028010602477" GraphRef="a4adc" RelX="0.0" RelY="1.0" />
+      <Point X="239.1277133032458" Y="159.9917615875058" GraphRef="df3a3" RelX="0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosomal duplication syndrome</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0060429</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosomal deletion syndrome</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0060388</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c6e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15809331</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structural and functional characterization of rabbit and human L-gulonate 3-dehydrogenase.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biochem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ishikura S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Usami N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Araki M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hara A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000013</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>
+
