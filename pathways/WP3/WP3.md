@@ -53,15 +53,15 @@ description: Based on [http://www.nature.com/nrc/journal/v3/n10/fig_tab/nrc1189_
   KEAP1 by covalent binding to its thiol groups. 6-(Methylsulfinyl)hexyl isothiocyanate
   (6-HITC) — a sulphoraphane analogue from Japanese horseradish wasabi — stimulates
   nuclear translocation of NRF2, which subsequently activates ARE.
-last-edited: 2023-04-17
+last-edited: 2023-08-10
 ndex: e285ccb0-8b61-11eb-9e72-0ac135e8bacf
 organisms:
 - Homo sapiens
 redirect_from:
 - /index.php/Pathway:WP3
 - /instance/WP3
-- /instance/WP3_r126220
-revision: r126220
+- /instance/WP3_r127189
+revision: r127189
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP3.html
