@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Chromosomal and microsatellite instability in colorectal cancer " Data-Source="WikiPathways" Version="WP4216_r123363" Author="[Khanspers, Egonw, AMTan, Fehrhart]" Last-Modified="20220718050455" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Chromosomal and microsatellite instability in colorectal cancer " Data-Source="WikiPathways" Version="WP4216_r127238" Author="[Khanspers, Egonw, AMTan, Fehrhart]" Last-Modified="20230825201944" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">CRC arises from the colorectal epithelium as a result of the accumulation of genetic alterations in defined oncogenes and tumour suppressor genes (TSG). Two major mechanisms of genomic instability have been identified in sporadic CRC progression. The first, known as chromosomal instability (CIN), results from a series of genetic changes that involve the activation of oncogenes such as K-ras and inactivation of TSG such as p53, DCC/Smad4, and APC. The second, known as  microsatellite instability (MSI), results from inactivation of the DNA mismatch repair genes MLH1 and/or MSH2 by hypermethylation of their promoter, and secondary mutation of genes with coding microsatellites, such as transforming growth factor receptor II (TGF-RII) and BAX. Hereditary syndromes have germline mutations in specific genes (mutation in the tumour suppressor gene APC on chromosome 5q in FAP, mutated DNA mismatch repair genes in HNPCC).
 
 This pathway is based on information from [http://www.genome.jp/dbget-bin/www_bget?map05210 KEGG]
@@ -12,9 +12,10 @@ DCC can be considered a conditional tumor suppressor gene as well as a condition
 
 [https://www.ncbi.nlm.nih.gov/pubmed/25736321 de Miranda et al] suggest that TGFβ signaling remains active in some CRC cells with MSI mutations in the TGFBR2 gene, because the mutated gene still expresses a functional protein. 
 
-Aberrant overexpression of cyclooxygenase-2 (COX-2) is thought to have an important role in development of CRC. The tumorigenic effects of COX-2 can be attributed to the production of PGE2; increased levels of PGE2 have been reported in colorectal adenomas as well as carcinomas. COX-2 and PGE2 regulate proliferation, survival, migration, and invasion in colorectal tumors. Source: [https://www.ncbi.nlm.nih.gov/pubmed/20420946 Pino et al].
+Aberrant overexpression of cyclooxygenase-2 (COX-2) is thought to have an important role in development of CRC. The tumorigenic effects of COX-2 can be attributed to the production of PGE2; increased levels of PGE2 have been reported in colorectal adenomas as well as carcinomas. COX-2 and PGE2 regulate proliferation, survival, migration, and invasion in colorectal tumors. Source: [https://www.ncbi.nlm.nih.gov/pubmed/20420946 Pino et al]. Phosphorylation sites were added based on information from PhosphoSitePlus (R), www.phosphosite.org.
 
 Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP4216 CPTAC Assay Portal]</Comment>
+  <BiopaxRef>bd7</BiopaxRef>
   <Graphics BoardWidth="1611.2324929971987" BoardHeight="994.4970414201184" />
   <DataNode TextLabel="ARAF" GraphId="a8a6e" Type="GeneProduct" GroupRef="e1741">
     <Graphics CenterX="1026.3507219005758" CenterY="362.6816461106363" Width="49.21052631578926" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
@@ -394,51 +395,19 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="72.86729023397142" CenterY="395.60019538405186" Width="70.52204176334087" Height="25.0" ZOrder="32868" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000141646" />
   </DataNode>
-  <State GraphRef="b84f1" TextLabel="P" GraphId="b5d22">
-    <Comment>parentid=P36897; parentsymbol=TGFBR1; site=LPLLVQRtIARtIVL; position=thr200; ptm=p; direction=u; sitegrpid=4325704</Comment>
-    <Graphics RelX="-1.0" RelY="-0.8989473684210212" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="4325704" />
-  </State>
-  <State GraphRef="b84f1" TextLabel="P" GraphId="e53dc">
-    <Comment>parentid=P36897; parentsymbol=TGFBR1; site=VQRtIARtIVLQEsI; position=thr204; ptm=p; direction=u; sitegrpid=4325703</Comment>
-    <Graphics RelX="-1.0" RelY="0.8400000000000192" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="4325703" />
-  </State>
   <State GraphRef="c057d" TextLabel="" GraphId="a38f7">
     <Comment>allelic loss at chromosome 18</Comment>
     <BiopaxRef>de4</BiopaxRef>
     <Graphics RelX="-1.0" RelY="-0.8759336697909066" Width="15.0" Height="15.0" ShapeType="Hexagon" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="c057d" TextLabel="P" GraphId="dc489">
-    <Comment>parentid=Q15796; parentsymbol=SMAD2; site=sPsVRCssMs_____; position=ser465; ptm=p; direction=u; sitegrpid=447494</Comment>
-    <Graphics RelX="1.0" RelY="0.28" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="447494" />
-  </State>
-  <State GraphRef="c057d" TextLabel="P" GraphId="dd41b">
-    <Comment>parentid=Q15796; parentsymbol=SMAD2; site=GsPsVRCssMs____; position=ser464; ptm=p; direction=u; sitegrpid=447567</Comment>
-    <Graphics RelX="1.0" RelY="-0.9230569574621632" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="447567" />
-  </State>
-  <State GraphRef="c30eb" TextLabel="P" GraphId="f2415">
-    <Comment>parentid=Q02750; parentsymbol=MAP2K1; site=VsGQLIDsMANsFVG; position=ser218; ptm=p; direction=u; sitegrpid=448514</Comment>
-    <Graphics RelX="0.9999999999999124" RelY="-0.856148491879353" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="448514" />
-  </State>
-  <State GraphRef="c30eb" TextLabel="P" GraphId="f43c8">
-    <Comment>parentid=Q02750; parentsymbol=MAP2K1; site=LIDsMANsFVGTRSY; position=ser222; ptm=p; direction=u; sitegrpid=448513</Comment>
-    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="448513" />
-  </State>
-  <State GraphRef="cef50" TextLabel="" GraphId="e0c57">
-    <Comment>Activating mutation (by single amino acid substitution) or amplification (mutually exclusive). Source: https://en.wikipedia.org/wiki/KRAS#Colorectal_cancer</Comment>
-    <Comment>Type your comment here</Comment>
-    <Graphics RelX="-1.0" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Triangle" />
+  <State GraphRef="b84f1" TextLabel="P" GraphId="b5d22">
+    <Comment>parentid=P36897; parentsymbol=TGFBR1; site=LPLLVQRtIARtIVL; position=thr200; sitegrpid=4325704; ptm=p; direction=u</Comment>
+    <Graphics RelX="-1.0" RelY="-0.8989473684210212" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="e03cc" TextLabel="" GraphId="bbebc">
-    <Comment>LOH on 18q21</Comment>
-    <Graphics RelX="-0.9999999999999958" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Hexagon" />
+  <State GraphRef="f6873" TextLabel="" GraphId="b70a9">
+    <Graphics RelX="-0.9999999999999846" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Hexagon" />
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="eac33" TextLabel="" GraphId="b77c0">
@@ -446,17 +415,49 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics RelX="-0.9555555555555556" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Hexagon" />
     <Xref Database="" ID="" />
   </State>
+  <State GraphRef="e03cc" TextLabel="" GraphId="bbebc">
+    <Comment>LOH on 18q21</Comment>
+    <Graphics RelX="-0.9999999999999958" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Hexagon" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="ecdcd" TextLabel="P" GraphId="c78d5">
+    <Comment>parentid=P55211; parentsymbol=CASP9; site=kLRRRFssLHFMVEV; position=ser196; sitegrpid=448454;  ptm=p; direction=d</Comment>
+    <Graphics RelX="1.0" RelY="-0.9489559164733146" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="c057d" TextLabel="P" GraphId="dc489">
+    <Comment>parentid=Q15796; parentsymbol=SMAD2; site=sPsVRCssMs_____; position=ser465; sitegrpid=447494; ptm=p; direction=u</Comment>
+    <Graphics RelX="1.0" RelY="0.28" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="c057d" TextLabel="P" GraphId="dd41b">
+    <Comment>parentid=Q15796; parentsymbol=SMAD2; site=GsPsVRCssMs____; position=ser464; sitegrpid=447567; ptm=p; direction=u</Comment>
+    <Graphics RelX="1.0" RelY="-0.9230569574621632" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="cef50" TextLabel="" GraphId="e0c57">
+    <Comment>Activating mutation (by single amino acid substitution) or amplification (mutually exclusive). Source: https://en.wikipedia.org/wiki/KRAS#Colorectal_cancer</Comment>
+    <Comment>Type your comment here</Comment>
+    <Graphics RelX="-1.0" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Triangle" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="b84f1" TextLabel="P" GraphId="e53dc">
+    <Comment>parentid=P36897; parentsymbol=TGFBR1; site=VQRtIARtIVLQEsI; position=thr204; sitegrpid=4325703; ptm=p; direction=u</Comment>
+    <Graphics RelX="-1.0" RelY="0.8400000000000192" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
   <State GraphRef="ebcc3" TextLabel="" GraphId="f11c1">
     <Graphics RelX="-1.0" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Hexagon" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="ecdcd" TextLabel="P" GraphId="c78d5">
-    <Comment>parentid=P55211; parentsymbol=CASP9; site=kLRRRFssLHFMVEV; position=ser196; ptm=p; direction=d; sitegrpid=448454</Comment>
-    <Graphics RelX="1.0" RelY="-0.9489559164733146" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="448454" />
+  <State GraphRef="c30eb" TextLabel="P" GraphId="f2415">
+    <Comment>parentid=Q02750; parentsymbol=MAP2K1; site=VsGQLIDsMANsFVG; position=ser218; sitegrpid=448514; ptm=p; direction=u</Comment>
+    <Graphics RelX="0.9999999999999124" RelY="-0.856148491879353" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
   </State>
-  <State GraphRef="f6873" TextLabel="" GraphId="b70a9">
-    <Graphics RelX="-0.9999999999999846" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Hexagon" />
+  <State GraphRef="c30eb" TextLabel="P" GraphId="f43c8">
+    <Comment>parentid=Q02750; parentsymbol=MAP2K1; site=LIDsMANsFVGTRSY; position=ser222; sitegrpid=448513; ptm=p; direction=u</Comment>
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="b8cce" TextLabel="" GraphId="ce1d3">
@@ -465,14 +466,14 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="bf0ca" TextLabel="P" GraphId="a035f">
-    <Comment>parentid=P84022; parentsymbol=SMAD3; site=sPsIRCssVs_____; position=ser423; ptm=p; direction=u; sitegrpid=448335</Comment>
+    <Comment>parentid=P84022; parentsymbol=SMAD3; site=sPsIRCssVs_____; position=ser423; sitegrpid=448335; ptm=p; direction=u</Comment>
     <Graphics RelX="1.0" RelY="-0.5000432588320245" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="448335" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="bf0ca" TextLabel="P" GraphId="b9187">
-    <Comment>parentid=P84022; parentsymbol=SMAD3; site=sIRCssVs_______; position=ser425; ptm=p; direction=u; sitegrpid=448336</Comment>
+    <Comment>parentid=P84022; parentsymbol=SMAD3; site=sIRCssVs_______; position=ser425; sitegrpid=448336; ptm=p; direction=u</Comment>
     <Graphics RelX="0.9660563102973024" RelY="0.68" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="448336" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="a1c3d" TextLabel="" GraphId="f8367">
     <Comment>mutations in microsatellite sequence</Comment>
@@ -492,7 +493,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="d3afd" TextLabel="P" GraphId="ce4af">
-    <Comment>parentid=P49841; position=ser9; ptm=p; direction=u</Comment>
+    <Comment>parent=P49841; position=ser9; ptm=p; direction=u</Comment>
     <Graphics RelX="-1.0" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
@@ -507,48 +508,48 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="f01e8" TextLabel="P" GraphId="c489d">
-    <Comment>parentid=P28482; parentsymbol=MAPK1; site=HDHtGFLtEyVAtRW; position=thr185; ptm=p; direction=u; sitegrpid=447593</Comment>
+    <Comment>parentid=P28482; parentsymbol=MAPK1; site=HDHtGFLtEyVAtRW; position=thr185; sitegrpid=447593; ptm=p; direction=u</Comment>
     <Graphics RelX="1.0" RelY="-0.8689559164732873" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="447593" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="f01e8" TextLabel="P" GraphId="d4dc9">
-    <Comment>parentid=P28482; parentsymbol=MAPK1; site=HtGFLtEyVAtRWyR; position=tyr187; ptm=p; direction=u; sitegrpid=447594</Comment>
+    <Comment>parentid=P28482; parentsymbol=MAPK1; site=HtGFLtEyVAtRWyR; position=tyr187; sitegrpid=447594; ptm=p; direction=u</Comment>
     <Graphics RelX="1.0" RelY="0.44" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="447594" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="cad74" TextLabel="P" GraphId="a7a0f">
-    <Comment>parentid=P27361; parentsymbol=MAPK3; site=HDHtGFLtEyVAtRW; position=thr202; ptm=p; direction=u; sitegrpid=447542</Comment>
+    <Comment>parentid=P27361; parentsymbol=MAPK3; site=HDHtGFLtEyVAtRW; position=thr202; sitegrpid=447542; ptm=p; direction=u</Comment>
     <Graphics RelX="1.0" RelY="-0.3150248963737431" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="447542" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="cad74" TextLabel="P" GraphId="cbae9">
-    <Comment>parentid=P27361; parentsymbol=MAPK3; site=HtGFLtEyVAtRWyR; position=tyr204; ptm=p; direction=u; sitegrpid=447543</Comment>
+    <Comment>parentid=P27361; parentsymbol=MAPK3; site=HtGFLtEyVAtRWyR; position=tyr204; sitegrpid=447543; ptm=p; direction=u</Comment>
     <Graphics RelX="1.0" RelY="0.7925669835782082" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="447543" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="e55ff" TextLabel="P" GraphId="cbc4b">
     <Graphics RelX="1.0" RelY="-0.7215777262181018" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="cf97e" TextLabel="P" GraphId="e7697">
-    <Comment>parentid=P01100; parentsymbol=FOS; site=GGLPEVAtPESEEAF; position=thr232; ptm=p; direction=u; sitegrpid=448491</Comment>
+    <Comment>parentid=P01100; parentsymbol=FOS; site=GGLPEVAtPESEEAF; position=thr232; sitegrpid=448491; ptm=p; direction=u</Comment>
     <Graphics RelX="1.0" RelY="-0.7633410672853824" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="448491" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="f03fd" TextLabel="P" GraphId="c26f1">
-    <Comment>parentid=P01106; parentsymbol=MYC; site=LLPtPPLsPsRRsGL; position=ser62; ptm=p; direction=u; sitegrpid=448586</Comment>
+    <Comment>parentid=P01106; parentsymbol=MYC; site=LLPtPPLsPsRRsGL; position=ser62; sitegrpid=448586; ptm=p; direction=u</Comment>
     <Graphics RelX="1.0" RelY="0.3777009507346429" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="448586" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="f03fd" TextLabel="P" GraphId="d7c0c">
-    <Comment>parentid=P01106; parentsymbol=MYC; site=kkFELLPtPPLsPsR; position=thr58; ptm=p; direction=u; sitegrpid=448496</Comment>
+    <Comment>parentid=P01106; parentsymbol=MYC; site=kkFELLPtPPLsPsR; position=thr58; sitegrpid=448496; ptm=p; direction=u</Comment>
     <Graphics RelX="1.0" RelY="-0.8561484918793485" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="448496" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="d9f5e" TextLabel="P" GraphId="fb3ed">
-    <Comment>parentid=Q92934; parentsymbol=BAD; site=PFrGrsRsAPPNLWA; position=ser99; ptm=p; direction=d; sitegrpid=447862</Comment>
+    <Comment>parentid=Q92934; parentsymbol=BAD; site=PFrGrsRsAPPNLWA; position=ser99; sitegrpid=447862; ptm=p; direction=d</Comment>
     <Graphics RelX="1.0" RelY="0.5038515081205504" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="447862" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="fe6a3" TextLabel="" GraphId="de38a">
     <Graphics RelX="0.9746341463414617" RelY="-0.9242105263157918" Width="15.0" Height="15.0" ShapeType="Hexagon" />
@@ -559,23 +560,23 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="d6faf" TextLabel="P" GraphId="a54fb">
-    <Comment>parentid=P35222; parentsymbol=CTNNB1; site=GIHsGATtTAPsLsG; position=thr41; ptm=p; direction=u; sitegrpid=447583</Comment>
+    <Comment>parent=P35222; parentsymbol=CTNNB1; site=GIHsGATtTAPsLsG; position=thr41; sitegrpid=447583; ptm=p; direction=u</Comment>
     <Graphics RelX="-0.9675126903551672" RelY="-0.76" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="447583" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="d6faf" TextLabel="P" GraphId="a7a76">
-    <Comment>parentid=P35222; parentsymbol=CTNNB1; site=yLDsGIHsGATtTAP; position=ser37; ptm=p; direction=u; sitegrpid=447582</Comment>
+    <Comment>parent=P35222; parentsymbol=CTNNB1; site=yLDsGIHsGATtTAP; position=ser37; sitegrpid=447582; ptm=p; direction=u</Comment>
     <Graphics RelX="1.0" RelY="-0.68" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="447582" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="d6faf" TextLabel="" GraphId="adc25">
     <Graphics RelX="-0.9492385786800401" RelY="0.9115789473683799" Width="15.0" Height="15.0" ShapeType="Triangle" />
     <Xref Database="" ID="" />
   </State>
   <State GraphRef="d6faf" TextLabel="P" GraphId="c7650">
-    <Comment>parentid=P35222; parentsymbol=CTNNB1; site=QQQsyLDsGIHsGAT; position=ser33; ptm=p; direction=u; sitegrpid=447487</Comment>
+    <Comment>parent=P35222; parentsymbol=CTNNB1; site=QQQsyLDsGIHsGAT; position=ser33; sitegrpid=447487; ptm=p; direction=u</Comment>
     <Graphics RelX="1.0" RelY="0.7557894736842354" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="phosphositeplus" ID="447487" />
+    <Xref Database="" ID="" />
   </State>
   <State GraphRef="d4c60" TextLabel="" GraphId="aa389">
     <Graphics RelX="-1.0" RelY="-0.8487394957983179" Width="15.0" Height="15.0" ShapeType="Triangle" />
@@ -589,314 +590,314 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   </State>
   <Interaction GraphId="id14db90b0">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="b4384" X="623.5789473684288" Y="617.6842105263153" GraphRef="d3afd" RelX="1.0" RelY="0.0" />
-      <Point GraphId="e984e" X="650.1578947368434" Y="617.0657894736839" GraphRef="d6faf" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="623.5789473684288" Y="617.6842105263153" GraphRef="d3afd" RelX="1.0" RelY="0.0" />
+      <Point X="650.1578947368434" Y="617.0657894736839" GraphRef="d6faf" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id19aca234">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="c7edd" X="1202.6370427316876" Y="453.93883319599615" GraphRef="fb6ce" RelX="0.0" RelY="1.0" />
-      <Point GraphId="a544d" X="1202.6370427316876" Y="483.0564802548196" GraphRef="c84fc" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point X="1202.6370427316876" Y="453.93883319599615" GraphRef="fb6ce" RelX="0.0" RelY="1.0" />
+      <Point X="1202.6370427316876" Y="483.0564802548196" GraphRef="c84fc" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id1cb17e40">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="a9660" X="72.86729023397142" Y="416.10019538405186" GraphRef="a3655" RelX="0.0" RelY="1.0" />
-      <Point GraphId="fa6a2" X="74.19879225095244" Y="856.8260111858634" GraphRef="bf7cb" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="72.86729023397142" Y="416.10019538405186" GraphRef="b7ffa" RelX="0.0" RelY="1.0" />
+      <Point X="74.19879225095244" Y="856.8260111858634" GraphRef="bf7cb" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id20e37f01">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d9f3b" X="421.093905104298" Y="413.5390896532647" GraphRef="d3644" RelX="0.5" RelY="1.0" />
-      <Point GraphId="e97e8" X="442.20173403346047" Y="485.5852362925873" GraphRef="d8ec5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="421.093905104298" Y="413.5390896532647" GraphRef="d3644" RelX="0.5" RelY="1.0" />
+      <Point X="442.20173403346047" Y="485.5852362925873" GraphRef="d8ec5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id232ebc78">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="f9350" X="1304.012605042017" Y="188.9705882352941" GraphRef="d3db7" RelX="0.0" RelY="1.0" />
-      <Point GraphId="ef183" X="1305.0470566193408" Y="241.05043779135565" GraphRef="e03cc" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point X="1304.012605042017" Y="188.9705882352941" GraphRef="d3db7" RelX="0.0" RelY="1.0" />
+      <Point X="1305.0470566193408" Y="241.05043779135565" GraphRef="e03cc" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2691c4b5">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="b6efe" X="1497.990196078429" Y="574.3207282913163" GraphRef="fd1bb" RelX="0.0" RelY="1.0" />
-      <Point GraphId="fae2a" X="1497.9901960784293" Y="647.1638655462177" GraphRef="e89a5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1497.990196078429" Y="574.3207282913163" GraphRef="fd1bb" RelX="0.0" RelY="1.0" />
+      <Point X="1497.9901960784293" Y="647.1638655462177" GraphRef="e89a5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2ccef0c0">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="a75c2" X="926.5" Y="799.7229147607128" GraphRef="e45d5" RelX="1.0" RelY="0.5" />
-      <Point GraphId="a9d31" X="932.75" Y="890.3767123287671" GraphRef="e732e" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="926.5" Y="799.7229147607128" GraphRef="e45d5" RelX="1.0" RelY="0.5" />
+      <Point X="932.75" Y="890.3767123287671" GraphRef="e732e" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id33778d4b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="edf12" X="1120.6622528157206" Y="319.9892533640631" GraphRef="b4715" RelX="0.0" RelY="1.0" />
-      <Point GraphId="db6eb" X="1120.6622528157209" Y="340.97614498235475" GraphRef="f79d6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1120.6622528157206" Y="319.9892533640631" GraphRef="b4715" RelX="0.0" RelY="1.0" />
+      <Point X="1120.6622528157209" Y="340.97614498235475" GraphRef="a417d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id356753f5">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="eee52" X="904.2195385724573" Y="838.9729147607128" GraphRef="e8f3e" RelX="0.0" RelY="1.0" />
-      <Point GraphId="c6b06" X="903.5" Y="890.3767123287671" GraphRef="e732e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="904.2195385724573" Y="838.9729147607128" GraphRef="e8f3e" RelX="0.0" RelY="1.0" />
+      <Point X="903.5" Y="890.3767123287671" GraphRef="e732e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id3c34780c">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="b2d09" X="809.6776907123822" Y="405.4117282766073" GraphRef="c2c2e" RelX="0.0" RelY="1.0" />
-      <Point GraphId="e4da3" X="809.7581645187079" Y="454.85266821345704" GraphRef="e8a5e" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point X="809.6776907123822" Y="405.4117282766073" GraphRef="d56ed" RelX="0.0" RelY="1.0" />
+      <Point X="809.7581645187079" Y="454.85266821345704" GraphRef="a886a" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id473ad81">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="a2afb" X="1476.740320932025" Y="385.71162929201137" GraphRef="a31e3" RelX="1.0" RelY="0.0" />
-      <Point GraphId="bbb75" X="1497.9901960784293" Y="384.57282913165204" GraphRef="c1ecc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="1476.740320932025" Y="385.71162929201137" GraphRef="a31e3" RelX="1.0" RelY="0.0" />
+      <Point X="1497.9901960784293" Y="384.57282913165204" GraphRef="c1ecc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id47983721">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d138d" X="1025.5396020722765" Y="796.0811588214717" GraphRef="df7fa" RelX="0.0" RelY="1.0" />
-      <Point GraphId="d40c4" X="989.7698010361382" Y="809.0" />
-      <Point GraphId="fe00a" X="954.0" Y="801.2364573803563" />
-      <Point GraphId="b84e8" X="926.5" Y="793.4729147607128" GraphRef="e45d5" RelX="1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
+      <Point X="1025.5396020722765" Y="796.0811588214717" GraphRef="bc86d" RelX="0.0" RelY="1.0" />
+      <Point X="989.7698010361382" Y="809.0" />
+      <Point X="954.0" Y="801.2364573803563" />
+      <Point X="926.5" Y="793.4729147607128" GraphRef="e45d5" RelX="1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id497388c7">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d968a" X="351.115289930846" Y="511.4672731713272" GraphRef="cb30b" RelX="0.0" RelY="-1.0" />
-      <Point GraphId="c275f" X="350.7730625526558" Y="482.54151911100297" GraphRef="add85" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
+      <Point X="351.115289930846" Y="511.46727317132724" GraphRef="fc278" RelX="0.0" RelY="-1.0" />
+      <Point X="350.7730625526558" Y="482.54151911100297" GraphRef="add85" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id54b25761">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d1222" X="1202.4076873352915" Y="824.217801442956" GraphRef="dfee3" RelX="1.0" RelY="0.0" />
-      <Point GraphId="a5b2f" X="1232.4237515923196" Y="824.217801442956" GraphRef="eac33" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="1202.4076873352915" Y="824.217801442956" GraphRef="dfee3" RelX="1.0" RelY="0.0" />
+      <Point X="1232.4237515923196" Y="824.217801442956" GraphRef="eac33" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5cc960d4">
     <BiopaxRef>bad</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="ff38e" X="74.53321528880164" Y="258.97026498962066" GraphRef="b84f1" RelX="0.0" RelY="1.0" />
-      <Point GraphId="da3d8" X="72.86729023397142" Y="325.10019538405186" GraphRef="a3655" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point X="74.53321528880164" Y="258.97026498962066" GraphRef="b84f1" RelX="0.0" RelY="1.0" />
+      <Point X="72.86729023397142" Y="325.10019538405186" GraphRef="b7ffa" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6c96b863">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="a06c9" X="911.4759089617039" Y="360.53878896777906" GraphRef="bd731" RelX="-1.0" RelY="0.0" />
-      <Point GraphId="a40a9" X="844.3882170281718" Y="359.9117282766073" GraphRef="c2c2e" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="911.4759089617039" Y="360.53878896777906" GraphRef="bd731" RelX="-1.0" RelY="0.0" />
+      <Point X="844.3882170281718" Y="359.9117282766073" GraphRef="d56ed" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id724a47d1">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d3b5d" X="1025.8134157581926" Y="500.89907192575413" GraphRef="c30eb" RelX="0.0" RelY="1.0" />
-      <Point GraphId="f7103" X="1025.3725804913715" Y="545.1844547563803" GraphRef="ac45d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1025.8134157581926" Y="500.89907192575413" GraphRef="c30eb" RelX="0.0" RelY="1.0" />
+      <Point X="1025.3725804913715" Y="545.1844547563803" GraphRef="c1581" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id793e2bad">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="a3383" X="1202.6370427316874" Y="571.627908826248" GraphRef="f1940" RelX="0.0" RelY="1.0" />
-      <Point GraphId="bd1aa" X="1201.8962242431217" Y="617.981754345574" GraphRef="bfcde" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point X="1202.6370427316874" Y="571.627908826248" GraphRef="f1940" RelX="0.0" RelY="1.0" />
+      <Point X="1201.8962242431217" Y="617.981754345574" GraphRef="bfcde" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id8f4dede4">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="b84bb" X="1025.3725804913715" Y="611.1844547563803" GraphRef="ac45d" RelX="0.0" RelY="1.0" />
-      <Point GraphId="ccf47" X="1025.5396020722765" Y="699.280694784349" GraphRef="df7fa" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1025.3725804913715" Y="611.1844547563803" GraphRef="c1581" RelX="0.0" RelY="1.0" />
+      <Point X="1025.5396020722765" Y="699.280694784349" GraphRef="bc86d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida77f02f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="eb972" X="133.5761387226762" Y="175.96098424716087" GraphRef="d74a4" RelX="0.0" RelY="1.0" />
-      <Point GraphId="e66a0" X="133.81975821223534" Y="233.97026498962066" GraphRef="b8cce" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point X="133.5761387226762" Y="175.96098424716087" GraphRef="c3ff7" RelX="0.0" RelY="1.0" />
+      <Point X="133.81975821223534" Y="233.97026498962066" GraphRef="b8cce" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida8681a1f">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="f90a8" X="1120.6622528157209" Y="406.976144982355" GraphRef="f79d6" RelX="0.0" RelY="1.0" />
-      <Point GraphId="d7913" X="1120.6622528157209" Y="425.35807873033275" GraphRef="e0fae" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1120.6622528157209" Y="406.976144982355" GraphRef="a417d" RelX="0.0" RelY="1.0" />
+      <Point X="1120.6622528157209" Y="425.35807873033275" GraphRef="f9fa1" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idaa364110">
     <BiopaxRef>de4</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="a5b88" X="1152.9023920268578" Y="373.97614498235487" GraphRef="f79d6" RelX="1.0" RelY="0.0" />
-      <Point GraphId="bd1c4" X="1202.6370427316876" Y="428.93883319599615" GraphRef="fb6ce" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point X="1152.9023920268578" Y="373.97614498235487" GraphRef="a417d" RelX="1.0" RelY="0.0" />
+      <Point X="1202.6370427316876" Y="428.93883319599615" GraphRef="fb6ce" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idac69dcc2">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="e88d3" X="774.9671643965926" Y="359.9117282766073" GraphRef="c2c2e" RelX="-1.0" RelY="0.0" />
-      <Point GraphId="ad0d5" X="600.552631578953" Y="605.1842105263153" GraphRef="d3afd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="774.9671643965926" Y="359.9117282766073" GraphRef="d56ed" RelX="-1.0" RelY="0.0" />
+      <Point X="600.552631578953" Y="605.1842105263153" GraphRef="d3afd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idb0e6dff6">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="f9606" X="370.94736842105027" Y="759.2393655371308" GraphRef="c3133" RelX="-1.0" RelY="0.0" />
-      <Point GraphId="d04c4" X="332.66937354988454" Y="758.8806526295714" GraphRef="afdc3" RelX="1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
+      <Point X="370.94736842105027" Y="759.2393655371308" GraphRef="f6fce" RelX="-1.0" RelY="0.0" />
+      <Point X="332.66937354988454" Y="758.8806526295714" GraphRef="f94ea" RelX="1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idb9ca51e0">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="f3c3c" X="1052.0086166374206" Y="274.2760733552184" GraphRef="cef50" RelX="1.0" RelY="0.0" />
-      <Point GraphId="ef52f" X="1120.6622528157206" Y="294.9892533640631" GraphRef="b4715" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1052.0086166374206" Y="274.2760733552184" GraphRef="cef50" RelX="1.0" RelY="0.0" />
+      <Point X="1120.6622528157206" Y="294.9892533640631" GraphRef="b4715" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idba1a2295">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="dc61b" X="350.7730625526558" Y="457.54151911100297" GraphRef="add85" RelX="0.0" RelY="-1.0" />
-      <Point GraphId="bfa71" X="351.232872914849" Y="413.5390896532647" GraphRef="d3644" RelX="-0.5" RelY="1.0" ArrowHead="mim-inhibition" />
+      <Point X="350.7730625526558" Y="457.54151911100297" GraphRef="add85" RelX="0.0" RelY="-1.0" />
+      <Point X="351.232872914849" Y="413.5390896532647" GraphRef="d3644" RelX="-0.5" RelY="1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idbeb1e0c3">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="af99c" X="289.4263646354873" Y="715.5078354357746" GraphRef="f6873" RelX="0.0" RelY="-1.0" />
-      <Point GraphId="e2cf5" X="316.3023568201245" Y="376.35374314144485" GraphRef="d3644" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="289.4263646354873" Y="715.5078354357746" GraphRef="f6873" RelX="0.0" RelY="-1.0" />
+      <Point X="316.3023568201245" Y="376.35374314144485" GraphRef="d3644" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc476affe">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="df898" X="1120.6622528157209" Y="648.2004815847462" GraphRef="f18a0" RelX="0.0" RelY="1.0" />
-      <Point GraphId="ea436" X="1120.4886612179125" Y="664.200241740532" GraphRef="e4041" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point X="1120.6622528157209" Y="648.2004815847462" GraphRef="e856b" RelX="0.0" RelY="1.0" />
+      <Point X="1120.4886612179125" Y="664.200241740532" GraphRef="e4041" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc73866bf">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="cf9de" X="684.5789473684217" Y="630.1315789473679" GraphRef="d6faf" RelX="0.0" RelY="1.0" />
-      <Point GraphId="b2ed5" X="684.0705440070769" Y="771.6441839893846" GraphRef="d4c60" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="684.5789473684217" Y="630.1315789473679" GraphRef="d6faf" RelX="0.0" RelY="1.0" />
+      <Point X="684.0705440070769" Y="771.6441839893846" GraphRef="d4c60" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc839638a">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d745d" X="1497.9901960784296" Y="329.02661064425706" GraphRef="adfdf" RelX="0.0" RelY="1.0" />
-      <Point GraphId="ee5f4" X="1497.990196078429" Y="467.8921568627445" GraphRef="dad2c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1497.9901960784296" Y="329.02661064425706" GraphRef="adfdf" RelX="0.0" RelY="1.0" />
+      <Point X="1497.990196078429" Y="467.8921568627445" GraphRef="dad2c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.4" Shape="None" GraphId="c1ecc" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idcf695cfc">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="aa73a" X="778.4120191695994" Y="808.9542813520497" GraphRef="a6853" RelX="1.0" RelY="0.0" />
-      <Point GraphId="ffd55" X="812.2811824080727" Y="809.6044937080813" GraphRef="ea8da" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
+      <Point X="778.4120191695994" Y="808.9542813520497" GraphRef="b44d3" RelX="1.0" RelY="0.0" />
+      <Point X="812.2811824080727" Y="809.6044937080813" GraphRef="f0a8c" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd249b0bb">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="f0c8c" X="1248.6433443223575" Y="327.7667645711818" GraphRef="dde79" RelX="0.0" RelY="-1.0" />
-      <Point GraphId="b32f1" X="1305.0470566193408" Y="266.05043779135565" GraphRef="e03cc" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point X="1248.6433443223575" Y="327.7667645711818" GraphRef="dde79" RelX="0.0" RelY="-1.0" />
+      <Point X="1305.0470566193408" Y="266.05043779135565" GraphRef="e03cc" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd7f6aab0">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d3281" X="1277.4237515923196" Y="824.217801442956" GraphRef="eac33" RelX="1.0" RelY="0.0" />
-      <Point GraphId="fd617" X="1329.127080313367" Y="825.3632122177077" GraphRef="c8c3a" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
+      <Point X="1277.4237515923196" Y="824.217801442956" GraphRef="eac33" RelX="1.0" RelY="0.0" />
+      <Point X="1329.127080313367" Y="825.3632122177077" GraphRef="faa2f" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idddf4855a">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="ecd65" X="846.4653929343885" Y="805.2360726554499" GraphRef="cfa55" RelX="0.0" RelY="1.0" />
-      <Point GraphId="decdf" X="846.0684931506846" Y="867.3767123287671" GraphRef="dcb9e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="846.4653929343885" Y="805.2360726554499" GraphRef="cfa55" RelX="0.0" RelY="1.0" />
+      <Point X="846.0684931506846" Y="867.3767123287671" GraphRef="dcb9e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide030da99">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="d717b" X="1305.0470566193405" Y="578.6878197682029" GraphRef="eb786" RelX="0.0" RelY="1.0" />
-      <Point GraphId="d7a19" X="1305.0470566193403" Y="638.4439392195237" GraphRef="a6c1c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1305.0470566193405" Y="578.6878197682029" GraphRef="eb786" RelX="0.0" RelY="1.0" />
+      <Point X="1305.0470566193403" Y="638.4439392195237" GraphRef="a6c1c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf8bbee9d">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="bc94c" X="262.604408352669" Y="789.7534698233682" GraphRef="a1c3d" RelX="-1.0" RelY="0.0" />
-      <Point GraphId="cbf03" X="149.33599951153926" Y="258.97026498962066" GraphRef="b8cce" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Point X="262.604408352669" Y="789.7534698233682" GraphRef="a1c3d" RelX="-1.0" RelY="0.0" />
+      <Point X="149.33599951153926" Y="258.97026498962066" GraphRef="b8cce" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf91c8fc7">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="c3bb2" X="1120.6622528157209" Y="541.3580787303335" GraphRef="e0fae" RelX="0.0" RelY="1.0" />
-      <Point GraphId="cab97" X="1120.6622528157209" Y="557.2004815847464" GraphRef="f18a0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1120.6622528157209" Y="541.3580787303335" GraphRef="f9fa1" RelX="0.0" RelY="1.0" />
+      <Point X="1120.6622528157209" Y="557.2004815847464" GraphRef="e856b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idfd6382aa">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="ab679" X="1026.3507219005758" Y="433.1816461106363" GraphRef="e1741" RelX="0.0" RelY="1.0" />
-      <Point GraphId="f4cc0" X="1025.8134157581926" Y="475.89907192575413" GraphRef="c30eb" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1026.3507219005758" Y="433.1816461106363" GraphRef="abd49" RelX="0.0" RelY="1.0" />
+      <Point X="1025.8134157581926" Y="475.89907192575413" GraphRef="c30eb" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c24e2">
     <Graphics ZOrder="32809" LineThickness="1.0">
-      <Point GraphId="da8e9" X="1026.3507219005785" Y="286.7760733552184" GraphRef="cef50" RelX="0.0" RelY="1.0" />
-      <Point GraphId="d98f6" X="1026.3507219005758" Y="342.1816461106363" GraphRef="e1741" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1026.3507219005785" Y="286.7760733552184" GraphRef="cef50" RelX="0.0" RelY="1.0" />
+      <Point X="1026.3507219005758" Y="342.1816461106363" GraphRef="abd49" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="eabe2">
     <Graphics ConnectorType="Elbow" ZOrder="32810" LineThickness="1.0">
-      <Point GraphId="c5523" X="1000.6928271637364" Y="274.2760733552184" GraphRef="cef50" RelX="-1.0" RelY="0.0" />
-      <Point GraphId="de88e" X="940.2916984353881" Y="348.03878896777906" GraphRef="bd731" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1000.6928271637364" Y="274.2760733552184" GraphRef="cef50" RelX="-1.0" RelY="0.0" />
+      <Point X="940.2916984353881" Y="348.03878896777906" GraphRef="bd731" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="bdf9a">
     <Graphics ZOrder="32835" LineThickness="1.0">
-      <Point GraphId="d434b" X="1305.0470566193408" Y="266.05043779135565" GraphRef="e03cc" RelX="0.0" RelY="1.0" />
-      <Point GraphId="f8861" X="1305.0470566193403" Y="422.7179821811953" GraphRef="dc1cc" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1305.0470566193408" Y="266.05043779135565" GraphRef="e03cc" RelX="0.0" RelY="1.0" />
+      <Point X="1305.0470566193403" Y="422.7179821811953" GraphRef="f351d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="eb9b7">
     <Graphics ZOrder="32836" LineThickness="1.0">
-      <Point GraphId="bd79f" X="1305.0470566193403" Y="488.7179821811953" GraphRef="dc1cc" RelX="0.0" RelY="1.0" />
-      <Point GraphId="deecb" X="1305.0470566193405" Y="553.6878197682029" GraphRef="eb786" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1305.0470566193403" Y="488.7179821811953" GraphRef="f351d" RelX="0.0" RelY="1.0" />
+      <Point X="1305.0470566193405" Y="553.6878197682029" GraphRef="eb786" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="bef10">
     <Graphics ZOrder="32859" LineThickness="1.0">
-      <Point GraphId="f3c96" X="1202.6370427316876" Y="508.0564802548196" GraphRef="c84fc" RelX="0.0" RelY="1.0" />
-      <Point GraphId="d4b9c" X="1202.6370427316874" Y="546.627908826248" GraphRef="f1940" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1202.6370427316876" Y="508.0564802548196" GraphRef="c84fc" RelX="0.0" RelY="1.0" />
+      <Point X="1202.6370427316874" Y="546.627908826248" GraphRef="f1940" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d7ec9">
     <Graphics ZOrder="32866" LineThickness="1.0">
-      <Point GraphId="f20af" X="1497.990196078429" Y="492.8921568627445" GraphRef="dad2c" RelX="0.0" RelY="1.0" />
-      <Point GraphId="c962b" X="1497.990196078429" Y="549.3207282913163" GraphRef="fd1bb" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="1497.990196078429" Y="492.8921568627445" GraphRef="dad2c" RelX="0.0" RelY="1.0" />
+      <Point X="1497.990196078429" Y="549.3207282913163" GraphRef="fd1bb" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -957,7 +958,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Shape TextLabel="Nucleus" GraphId="cf223">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="788.4981741561909" CenterY="821.8316851746779" Width="1550.222586598861" Height="249.82775391099943" ZOrder="16384" FontSize="12" Align="Right" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="788.4981741561909" CenterY="821.8316851746779" Width="1550.222586598861" Height="249.82775391099943" ZOrder="16384" FontSize="12" Align="Right" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape GraphId="cfdfe" GroupRef="a74e4">
     <Graphics CenterX="733.7829131652654" CenterY="71.1344537815126" Width="17.0" Height="20.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Triangle" Rotation="0.0" />
@@ -974,59 +975,49 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="792.7962280802731" CenterY="606.1981005419921" Width="1576.8725298338513" Height="716.5978817562526" ZOrder="16384" FontSize="12" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Group GroupId="cd86d" GraphId="cd86d" Style="Complex" />
-  <Group GroupId="a74e4" GraphId="a74e4" Style="Group" />
-  <Group GroupId="f79d6" GraphId="f79d6" Style="Group" />
-  <Group GroupId="eca98" GraphId="eca98" Style="Group" />
-  <Group GroupId="e8a5e" GraphId="e8a5e" Style="Group" />
-  <Group GroupId="e1741" GraphId="e1741" Style="Group" />
-  <Group GroupId="a6853" GraphId="a6853" Style="Complex" />
-  <Group GroupId="a3655" GraphId="a3655" Style="Group" />
-  <Group GroupId="df7fa" GraphId="df7fa" Style="Group" />
-  <Group GroupId="ac45d" GraphId="ac45d" Style="Group" />
-  <Group GroupId="d74a4" GraphId="d74a4" Style="Group" />
-  <Group GroupId="c2c2e" GraphId="c2c2e" Style="Group" />
-  <Group GroupId="f18a0" GraphId="f18a0" Style="Group" />
-  <Group GroupId="ea8da" GraphId="ea8da" Style="Group" />
-  <Group GroupId="dc1cc" GraphId="dc1cc" Style="Group" />
-  <Group GroupId="c3133" GraphId="c3133" Style="Group" />
-  <Group GroupId="afdc3" GraphId="afdc3" Style="Group" />
-  <Group GroupId="e0fae" GraphId="e0fae" Style="Group" />
-  <Group GroupId="c8c3a" GraphId="c8c3a" Style="Group" />
-  <Group GroupId="cb30b" GraphId="cb30b" Style="Group" />
+  <Group GroupId="e227d" Style="Group" />
+  <Group GroupId="cd86d" Style="Complex" />
+  <Group GroupId="a74e4" Style="Group" />
+  <Group GroupId="f79d6" GraphId="a417d" Style="Group" />
+  <Group GroupId="eca98" GraphId="a6afd" Style="Group" />
+  <Group GroupId="e8a5e" GraphId="a886a" Style="Group" />
+  <Group GroupId="e1741" GraphId="abd49" Style="Group" />
+  <Group GroupId="bf601" GraphId="ad985" Style="Complex" />
+  <Group GroupId="a6853" GraphId="b44d3" Style="Complex" />
+  <Group GroupId="a3655" GraphId="b7ffa" Style="Group" />
+  <Group GroupId="df7fa" GraphId="bc86d" Style="Group" />
+  <Group GroupId="ac45d" GraphId="c1581" Style="Group" />
+  <Group GroupId="d74a4" GraphId="c3ff7" Style="Group" />
+  <Group GroupId="c2c2e" GraphId="d56ed" Style="Group" />
+  <Group GroupId="f18a0" GraphId="e856b" Style="Group" />
+  <Group GroupId="ea8da" GraphId="f0a8c" Style="Group" />
+  <Group GroupId="dc1cc" GraphId="f351d" Style="Group" />
+  <Group GroupId="c3133" GraphId="f6fce" Style="Group" />
+  <Group GroupId="afdc3" GraphId="f94ea" Style="Group" />
+  <Group GroupId="e0fae" GraphId="f9fa1" Style="Group" />
+  <Group GroupId="c8c3a" GraphId="faa2f" Style="Group" />
+  <Group GroupId="cb30b" GraphId="fc278" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">epithelial cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000066</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered Wnt signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000598</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered DNA repair pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000292</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colorectal cancer pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000612</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bad">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25736321</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transforming Growth Factor β Signaling in Colorectal Cancer Cells With Microsatellite Instability Despite Biallelic Mutations in TGFBR2.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gastroenterology</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de Miranda NF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Dinther M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van den Akker BE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Wezel T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ten Dijke P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morreau H</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colorectal cancer</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:9256</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human Disease Ontology</bp:Ontology>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aa2">
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d92">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19679400</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
       <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency and type of KRAS mutations in routine diagnostic analysis of metastatic colorectal cancer.</bp:TITLE>
@@ -1037,6 +1028,45 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kirchner T</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jung A</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="de4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20420946</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The chromosomal instability pathway in colon cancer.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gastroenterology</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pino MS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chung DC</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="db0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10479724</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inactivation of both alleles of the DPC4/SMAD4 gene in advanced colorectal cancers: identification of seven novel somatic mutations in tumors from Japanese patients.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutat Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koyama M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ito M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagai H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emi M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moriyama Y</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bd7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25514926</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PhosphoSitePlus, 2014: mutations, PTMs and recalibrations.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleic Acids Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hornbeck PV</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murray B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kornhauser JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latham V</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skrzypek E</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered Wnt signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000598</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="daf">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18316791</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -1056,54 +1086,24 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patterson SD</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chang DD</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="de4">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20420946</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d1e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18316791</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The chromosomal instability pathway in colon cancer.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gastroenterology</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pino MS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chung DC</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bf9">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25236910</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AXIN1 and AXIN2 variants in gastrointestinal cancers.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer Lett</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mazzoni SM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fearon ER</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="de3">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14715079</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular and functional consequences of Smad4 C-terminal missense mutations in colorectal tumour cells.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem J</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De Bosscher K</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hill CS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicolás FJ</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fc4">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12821112</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of Smad4 (DPC4) inactivation in human cancer.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Biophys Res Commun</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miyaki M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuroki T</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="db0">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10479724</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inactivation of both alleles of the DPC4/SMAD4 gene in advanced colorectal cancers: identification of seven novel somatic mutations in tumors from Japanese patients.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutat Res</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koyama M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ito M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagai H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emi M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moriyama Y</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wild-type KRAS is required for panitumumab efficacy in patients with metastatic colorectal cancer.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Oncol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amado RG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolf M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peeters M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Van Cutsem E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siena S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Freeman DJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sikorski R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suggs S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radinsky R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patterson SD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chang DD</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e4b">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8898652</bp:ID>
@@ -1119,18 +1119,65 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shimokawa K</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saji S</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bad">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25736321</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bf9">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25236910</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transforming Growth Factor β Signaling in Colorectal Cancer Cells With Microsatellite Instability Despite Biallelic Mutations in TGFBR2.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gastroenterology</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de Miranda NF</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Dinther M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van den Akker BE</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Wezel T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ten Dijke P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morreau H</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AXIN1 and AXIN2 variants in gastrointestinal cancers.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancer Lett</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mazzoni SM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fearon ER</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aa2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19679400</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency and type of KRAS mutations in routine diagnostic analysis of metastatic colorectal cancer.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathol Res Pract</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neumann J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeindl-Eberhart E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kirchner T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jung A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">epithelial cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000066</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fc4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12821112</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of Smad4 (DPC4) inactivation in human cancer.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Biophys Res Commun</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miyaki M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuroki T</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered DNA repair pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000292</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colorectal cancer pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000612</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="de3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14715079</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular and functional consequences of Smad4 C-terminal missense mutations in colorectal tumour cells.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De Bosscher K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hill CS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicolás FJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
+
