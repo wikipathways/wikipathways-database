@@ -1,13 +1,13 @@
 ---
 annotations:
-- id: PW:0000378
-  parent: regulatory pathway
-  type: Pathway Ontology
-  value: oxidative stress response pathway
 - id: PW:0000369
   parent: regulatory pathway
   type: Pathway Ontology
   value: nuclear factor, erythroid 2 like 2 signaling pathway
+- id: PW:0000378
+  parent: regulatory pathway
+  type: Pathway Ontology
+  value: oxidative stress response pathway
 authors:
 - Hubert
 - MaintBot
@@ -52,16 +52,17 @@ description: Based on [http://www.nature.com/nrc/journal/v3/n10/fig_tab/nrc1189_
   leading to increased NRF2 binding to ARE. Sulphoraphane directly interacts with
   KEAP1 by covalent binding to its thiol groups. 6-(Methylsulfinyl)hexyl isothiocyanate
   (6-HITC) — a sulphoraphane analogue from Japanese horseradish wasabi — stimulates
-  nuclear translocation of NRF2, which subsequently activates ARE.
-last-edited: 2023-08-10
+  nuclear translocation of NRF2, which subsequently activates ARE. Protein phosphorylation
+  sites were added based on information from PhosphoSitePlus (R), www.phosphosite.org.
+last-edited: 2023-08-29
 ndex: e285ccb0-8b61-11eb-9e72-0ac135e8bacf
 organisms:
 - Homo sapiens
 redirect_from:
 - /index.php/Pathway:WP3
 - /instance/WP3
-- /instance/WP3_r127189
-revision: r127189
+- /instance/WP3_r127249
+revision: r127249
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP3.html
@@ -97,7 +98,8 @@ schema-jsonld:
     complex, leading to increased NRF2 binding to ARE. Sulphoraphane directly interacts
     with KEAP1 by covalent binding to its thiol groups. 6-(Methylsulfinyl)hexyl isothiocyanate
     (6-HITC) — a sulphoraphane analogue from Japanese horseradish wasabi — stimulates
-    nuclear translocation of NRF2, which subsequently activates ARE.
+    nuclear translocation of NRF2, which subsequently activates ARE. Protein phosphorylation
+    sites were added based on information from PhosphoSitePlus (R), www.phosphosite.org.
   keywords:
   - 6-HITC
   - C/EBP-beta
