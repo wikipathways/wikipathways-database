@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cell cycle" Data-Source="WikiPathways" Version="WP179_r127172" Author="[Nsalomonis, MaintBot, Susan, IlianaSach, BruceConklin, Dmitriev200, BadrulYahaya, Thomas, MartijnVanIersel, AlexanderPico, Christine Chichester, Mkutmon, JosipMadunic, Khanspers, DeSl, Egonw, Eweitz, Fehrhart]" Last-Modified="20230809062039" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cell cycle" Data-Source="WikiPathways" Version="WP179_r127255" Author="[Nsalomonis, MaintBot, Susan, IlianaSach, BruceConklin, Dmitriev200, BadrulYahaya, Thomas, MartijnVanIersel, AlexanderPico, Christine Chichester, Mkutmon, JosipMadunic, Khanspers, DeSl, Egonw, Eweitz, Fehrhart]" Last-Modified="20230828181637" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">The cell cycle is the series of events that takes place in a cell leading to its division and duplication (replication). Regulation of the cell cycle involves processes crucial to the survival of a cell, including the detection and repair of genetic damage as well as the prevention of uncontrolled cell division. Two key classes of regulatory molecules, cyclins and cyclin-dependent kinases (CDKs), determine a cell's progress through the cell cycle.
 
-Sources: [http://en.wikipedia.org/wiki/Cell_cycle Wikipedia:Cell cycle], [http://www.genome.ad.jp/kegg/pathway/hsa/hsa04110.html KEGG]
+Sources: [http://en.wikipedia.org/wiki/Cell_cycle Wikipedia:Cell cycle], [http://www.genome.ad.jp/kegg/pathway/hsa/hsa04110.html KEGG]. Protein phosphorylation sites were added based on information from PhosphoSitePlus (R), www.phosphosite.org.
 
 Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP179 CPTAC Assay Portal]</Comment>
+  <BiopaxRef>ead</BiopaxRef>
   <Graphics BoardWidth="1453.25" BoardHeight="1014.5595238095249" />
   <DataNode TextLabel="CDC7" GraphId="fc1" Type="GeneProduct" GroupRef="abfb0">
     <Comment Source="GenMAPP remarks">CDC7L1; CDC7 cell division cycle 7-like 1 (S. cerevisiae) [EC:2.7.1.-]</Comment>
@@ -1721,11 +1722,19 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Group GroupId="d1697" GraphId="fbd5f" Style="Group" />
   <InfoBox CenterX="2.3" CenterY="3.566666666666667" />
   <Biopax>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell cycle pathway, mitotic</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000086</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ead">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25514926</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PhosphoSitePlus, 2014: mutations, PTMs and recalibrations.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleic Acids Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hornbeck PV</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murray B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kornhauser JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latham V</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skrzypek E</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c78">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9733515</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -1742,6 +1751,11 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kastan MB</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siliciano JD</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell cycle pathway, mitotic</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000086</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
