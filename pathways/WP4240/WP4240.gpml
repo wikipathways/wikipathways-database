@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Regulation of sister chromatid separation at the metaphase-anaphase transition" Data-Source="WikiPathways" Version="WP4240_r127250" Author="[Khanspers]" Last-Modified="20230828173812" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Regulation of sister chromatid separation at the metaphase-anaphase transition" Data-Source="WikiPathways" Version="WP4240_r127399" Author="[Khanspers]" Last-Modified="20230929204026" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">In prometaphase, highly condensed chromosomes establish bipolar attachments to the mitotic spindle. Unattached or mal-orientated chromosomes generate a signal to delay the onset of anaphase until all pairs of sister chromatids are properly aligned on the metaphase plate. This signal is transduced by a relay of spindle-checkpoint proteins, including MAD1, MAD2, BUB1, BUBR1, BUB3 and centrosome protein E (CENPE), which inhibits cell division cycle 20 (CDC20)-mediated activation of an E3 ubiquitin ligase, the anaphase promoting complex/cyclosome (APC/C). Following attachment and alignment of all the chromosomes at metaphase, the checkpoint signal is silenced and APC/C initiates the ubiquitin-dependent degradation of securin and activation of separase. Separase in turn cleaves a multiprotein complex termed cohesin, which creates physical links between sister chromatids to initiate anaphase.
 This process may be of interest in colorectal cancer, specifically in terms of the chromosome instability phenotype, which could result from defects in pathways that ensure accurate chromosome segregation. Protein phosphorylation sites were added based on information from PhosphoSitePlus (R), www.phosphosite.org.
 
@@ -7,18 +7,17 @@ Adapted from Pino et al.
 
 Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP4240 CPTAC Assay Portal]</Comment>
   <BiopaxRef>ece</BiopaxRef>
-  <BiopaxRef>f30</BiopaxRef>
   <Graphics BoardWidth="798.0" BoardHeight="577.0" />
   <DataNode TextLabel="MAD1L1" GraphId="a6d12" Type="GeneProduct" GroupRef="e2f67">
     <Graphics CenterX="150.12885154061624" CenterY="195.33613445378148" Width="64.25770308123248" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000002822" />
   </DataNode>
   <DataNode TextLabel="ESPL1" GraphId="c4e29" Type="GeneProduct" GroupRef="e2ad7">
-    <Graphics CenterX="417.5" CenterY="262.0" Width="63.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="417.5" CenterY="261.33333333333337" Width="63.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000135476" />
   </DataNode>
   <DataNode TextLabel="CDC20" GraphId="e552f" Type="GeneProduct" GroupRef="ac837">
-    <Graphics CenterX="196.0" CenterY="333.0" Width="60.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="196.0" CenterY="345.0" Width="60.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000117399" />
   </DataNode>
   <DataNode TextLabel="SMC1A" GraphId="ea8de" Type="GeneProduct" GroupRef="de6b8">
@@ -45,13 +44,9 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="150.12885154061624" CenterY="245.33613445378148" Width="64.25770308123248" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000138778" />
   </DataNode>
-  <DataNode TextLabel="ANAPC2" GraphId="b3e8b" Type="GeneProduct" GroupRef="ac837">
-    <Graphics CenterX="168.0" CenterY="358.0" Width="60.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" />
-    <Xref Database="Ensembl" ID="ENSG00000176248" />
-  </DataNode>
-  <DataNode TextLabel="ANAPC11" GraphId="f743f" Type="GeneProduct" GroupRef="ac837">
-    <Graphics CenterX="168.0" CenterY="383.0" Width="60.0" Height="25.0" ZOrder="32775" FontSize="12" Valign="Middle" />
-    <Xref Database="Ensembl" ID="ENSG00000141552" />
+  <DataNode TextLabel="APC" GraphId="b3e8b" Type="GeneProduct" GroupRef="ac837">
+    <Graphics CenterX="168.0" CenterY="370.0" Width="60.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="324" />
   </DataNode>
   <DataNode TextLabel="PTTG1" GraphId="f4452" Type="GeneProduct" GroupRef="e2ad7">
     <Graphics CenterX="417.5" CenterY="287.0" Width="63.0" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" />
@@ -81,18 +76,8 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="493.5" CenterY="403.0" Width="63.0" Height="25.0" ZOrder="32787" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000135476" />
   </DataNode>
-  <State GraphRef="c4e29" TextLabel="P" GraphId="f5d99">
-    <Comment>parent=Q14674; position=ser1126; ptm=p; direction=u</Comment>
-    <Graphics RelX="1.0" RelY="-0.84" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
   <State GraphRef="cc4a3" TextLabel="Ub" GraphId="cb304">
     <Graphics RelX="1.0" RelY="1.0" Width="17.0" Height="17.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
-  <State GraphRef="d3a9c" TextLabel="P" GraphId="f5bec">
-    <Comment>parent=Q14674; position=ser1126; ptm=p; direction=u</Comment>
-    <Graphics RelX="1.0" RelY="-0.84" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
   <Interaction GraphId="id399c0f7f">
@@ -111,7 +96,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   </Interaction>
   <Interaction GraphId="id73072d11">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="238.0" Y="358.0" GraphRef="b18ae" RelX="1.0" RelY="0.0" />
+      <Point X="238.0" Y="357.5" GraphRef="b18ae" RelX="1.0" RelY="0.0" />
       <Point X="417.8" Y="358.3" GraphRef="f3f25" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -141,7 +126,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   </Interaction>
   <Interaction GraphId="idf95bd9a0">
     <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
-      <Point X="238.0" Y="358.0" GraphRef="b18ae" RelX="1.0" RelY="0.0" />
+      <Point X="238.0" Y="357.5" GraphRef="b18ae" RelX="1.0" RelY="0.0" />
       <Point X="236.0" Y="563.0" />
       <Point X="569.0" Y="563.0" />
       <Point X="568.5714285714286" Y="403.0" GraphRef="e2540" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
@@ -151,7 +136,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Interaction GraphId="idfa797d66">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="182.25770308123253" Y="265.8361344537815" GraphRef="ed2e2" RelX="0.0" RelY="1.0" />
-      <Point X="182.0" Y="308.5" GraphRef="b18ae" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point X="182.0" Y="320.5" GraphRef="b18ae" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -201,19 +186,6 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pino MS</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chung DC</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f30">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25514926</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PhosphoSitePlus, 2014: mutations, PTMs and recalibrations.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleic Acids Res</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hornbeck PV</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murray B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kornhauser JM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latham V</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skrzypek E</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell cycle pathway, mitotic</bp:TERM>
