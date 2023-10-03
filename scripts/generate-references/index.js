@@ -42,7 +42,8 @@ const DATABASE_LINKS = {
         ['Scholia', id => `https://scholia.toolforge.org/pubmed/${id}`]
     ],
     'DOI': [
-        ['DOI', id => id.replace(/^\s*((https?:\/\/)?(dx\.)?doi\.org\/)?/, 'https://doi.org/')]
+        ['DOI', id => id.replace(/^\s*((https?:\/\/)?(dx\.)?doi\.org\/)?/, 'https://doi.org/')],
+        ['Scholia', id => `https://scholia.toolforge.org/doi/${id}`]
     ],
     'ISBN': [
         ['OpenLibrary', id => `https://openlibrary.org/search?isbn=${id}`],
