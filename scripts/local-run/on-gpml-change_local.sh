@@ -134,9 +134,9 @@ echo "3. ACTION: metadata"
 # download all species and metabolite derby database files into top level dir
 
 # cache dependencies
-if [ ! -e ./meta-data-action-1.1.1-jar-with-dependencies.jar ]; then
-    wget -O meta-data-action-1.1.1-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/1.1.1/meta-data-action-1.1.1-jar-with-dependencies.jar
-    chmod 777 meta-data-action-1.1.1-jar-with-dependencies.jar
+if [ ! -e ./meta-data-action-1.1.2-jar-with-dependencies.jar ]; then
+    wget -O meta-data-action-1.1.2-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/1.1.2/meta-data-action-1.1.2-jar-with-dependencies.jar
+    chmod 777 meta-data-action-1.1.2-jar-with-dependencies.jar
 fi
 
 for f in ${changed_gpmls[@]}; do
@@ -146,7 +146,7 @@ for f in ${changed_gpmls[@]}; do
     echo "generating info and datanode files for $wpid ($f)"
     cat gdb.config
     # NOTE: Adapt date arg for macOS (-u) or linux (--utc)
-    java -jar meta-data-action-1.1.1-jar-with-dependencies.jar local pathways/"$wpid"/"$wpid".gpml $(date -u +%F) gdb.config "$org" || echo "$wpid FAILED"
+    java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local pathways/"$wpid"/"$wpid".gpml $(date -u +%F) gdb.config "$org" || echo "$wpid FAILED"
 done
 
 ##############################
