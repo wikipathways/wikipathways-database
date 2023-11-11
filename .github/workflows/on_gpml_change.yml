@@ -397,7 +397,7 @@ jobs:
           ssh-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }}
 
       - name: Set up ssh-agent
-        uses: webfactory/ssh-agent@v0.5.4
+        uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.ACTIONS_HOMOLOGY_KEY }} ## for push into wp-homology repo      
           
@@ -502,7 +502,7 @@ jobs:
           ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
 
       - name: Set up ssh-agent
-        uses: webfactory/ssh-agent@v0.5.4
+        uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.ACTIONS_ASSETS_KEY }} ## for push into wp-assets repo
 
@@ -617,7 +617,7 @@ jobs:
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
       - name: Set up ssh-agent
-        uses: webfactory/ssh-agent@v0.5.4
+        uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io repo
 
@@ -668,7 +668,7 @@ jobs:
           ssh-key: ${{ secrets.ACTIONS_ASSETS_KEY }}
 
       - name: Set up ssh-agent
-        uses: webfactory/ssh-agent@v0.5.4
+        uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.ACTIONS_ASSETS_KEY }}   ## for push into wp-assets rep 
 
@@ -715,7 +715,7 @@ jobs:
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
       - name: Set up ssh-agent
-        uses: webfactory/ssh-agent@v0.5.4
+        uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io rep
 
