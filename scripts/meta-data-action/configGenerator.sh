@@ -13,10 +13,10 @@ wget -O other.json https://www.bridgedb.org/data/other.json
 # these files will be used in the installDependencies bash script
 
 jq -r '.mappingFiles | .[] | "\(.species)=\(.file)"' gene.json | tr -d ' ' > fileNames.config
-jq -r '.mappingFiles | .[2] | "\(.type)=\(.file)"' other.json | tr -d ' ' >> fileNames.config
+jq -r '.mappingFiles | .[] | "\(.type)=\(.file)"' other.json | tr -d ' ' >> fileNames.config
 
 jq -r '.mappingFiles | .[] | "\(.file)=\(.downloadURL)"' gene.json | tr -d ' ' > fileDownloads.config
-jq -r '.mappingFiles | .[2] | "\(.file)=\(.downloadURL)"' other.json | tr -d ' ' >> fileDownloads.config
+jq -r '.mappingFiles | .[] | "\(.file)=\(.downloadURL)"' other.json | tr -d ' ' >> fileDownloads.config
 
 
 ORGANISM="$ORGANISM" jq -n 'env.ORGANISM'
