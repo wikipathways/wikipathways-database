@@ -113,12 +113,13 @@ jobs:
           echo ${#uniqueAuthors[@]}
           for a in "${uniqueAuthors[@]}"; do
             a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            a1=${a//&/and}
             a2=$(echo "$a" | tr ' ' '_')
             if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
               echo "Adding $a"
               echo $a","$a",,," >> scripts/author_list.csv
               echo "---" > "wikipathways.github.io/_authors/$a.md"
-              echo "username: $a" >> "wikipathways.github.io/_authors/$a.md"
+              echo "username: $a1" >> "wikipathways.github.io/_authors/$a.md"
               echo "realname: $a" >> "wikipathways.github.io/_authors/$a.md"
               echo "website: " >> "wikipathways.github.io/_authors/$a.md"
               echo "affiliation: " >> "wikipathways.github.io/_authors/$a.md"
@@ -357,6 +358,7 @@ jobs:
             json_info_f=./pathways/"$wpid"/"$wpid"-info.json
             if [ -e "$json_info_f" ]; then
               python scripts/create_pathway_frontmatter.py "$json_info_f"
+              sed -i 's/&amp;/and/g' /pathways/"$wpid"/"$wpid".md
             else
               echo "info.json file missing for $wpid" >2
             fi
