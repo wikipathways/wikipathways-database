@@ -358,7 +358,7 @@ jobs:
             json_info_f=./pathways/"$wpid"/"$wpid"-info.json
             if [ -e "$json_info_f" ]; then
               python scripts/create_pathway_frontmatter.py "$json_info_f"
-              sed -i 's/&amp;/and/g' /pathways/"$wpid"/"$wpid".md
+              sed -i 's/&amp;/and/g' ./pathways/"$wpid"/"$wpid".md
             else
               echo "info.json file missing for $wpid" >2
             fi
