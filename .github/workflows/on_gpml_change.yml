@@ -113,7 +113,8 @@ jobs:
           echo ${#uniqueAuthors[@]}
           for a in "${uniqueAuthors[@]}"; do
             a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
-            a1=${a//&/and}
+            a1=${a//AAR&Co/AARandCo}
+            a1=${a//Önder/Onder}
             a2=$(echo "$a" | tr ' ' '_')
             if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
               echo "Adding $a"
@@ -358,7 +359,8 @@ jobs:
             json_info_f=./pathways/"$wpid"/"$wpid"-info.json
             if [ -e "$json_info_f" ]; then
               python scripts/create_pathway_frontmatter.py "$json_info_f"
-              sed -i 's/&amp;/and/g' ./pathways/"$wpid"/"$wpid".md
+              sed -i 's/AAR&amp;Co/AARandCo/g' ./pathways/"$wpid"/"$wpid".md
+              sed -i 's/&Ouml;nder/Onder/g' ./pathways/"$wpid"/"$wpid".md
             else
               echo "info.json file missing for $wpid" >2
             fi
