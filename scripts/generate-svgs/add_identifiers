@@ -1,0 +1,96 @@
+#!/usr/bin/env node
+
+const fs = require("fs");
+const path = require("path");
+
+const pathwayFile = process.argv[2];
+if (!pathwayFile) {
+  throw new Error("Must specify a pathway");
+}
+const { pathway, entitiesById } = JSON.parse(fs.readFileSync(pathwayFile));
+const pathwayId = pathway.id;
+
+// Find the corresponding datanodes.tsv file of the given pathway
+const parsedPath = path.parse(pathwayFile);
+const pathToDatanodes = path.join("../../metadata/", parsedPath.name + "-datanodes.tsv");
+
+// Read datanodes.tsv file
+const datanodesData = fs.readFileSync(pathToDatanodes, 'utf8');
+
+// Create a map between labels and compact identifiers
+let dataNodesMap = new Map();
+datanodesData.split(/\r?\n/).forEach((line, index) => {
+  if (index != 0) { // index 0 has titles
+    let lineArray = line.split('\t');
+    dataNodesMap.set(lineArray[0], lineArray);
+  }
+})
+
+// DataNodes
+let dataNodes = Object.values(entitiesById).filter(
+  entityById =>
+    entityById.type !== undefined &&
+    entityById.type.indexOf("DataNode") > -1 &&
+    entityById.xrefDataSource &&
+    entityById.xrefIdentifier
+)
+
+// Add identifiers in datanodes file
+dataNodes.forEach(function(entityById) {
+  let label = entityById.textContent;
+  let entityInfo = dataNodesMap.get(label);
+  if(entityInfo !== undefined){
+    let compactIdentifier = entityInfo[2];
+    // Add compact identifier
+    entityById.type.push("CompactIdentifier:" + compactIdentifier);
+    // Add label
+    entityById.type.push(label);
+    /* Add other identifiers (First 4 indexes correspond to "Label", "Type", 
+       "Identifier" and "Comment" columns in datanodes file, so skip them.) */
+    for(let i = 4; i < entityInfo.length; i++) {
+      let idList = entityInfo[i].split(';');
+      if(!(idList.length == 1 && idList[0] == '')) {
+        idList.forEach(singleId => {
+        let idSplitted = singleId.split(/:(.*)/s);
+        let idType = idSplitted[0];
+        let idValue = idSplitted[1];
+        let idToAdd = "";
+        if(idType == "ensembl") {
+          idToAdd = "Ensembl:" + idValue;
+        }
+        else if(idType == "ncbigene") {
+          idToAdd = "Entrez Gene:" + idValue;
+        }
+        else if(idType == "hgnc.symbol") {
+          idToAdd = "HGNC:" + idValue;
+        }
+        else if(idType == "uniprot") {
+          idToAdd = "UniProt:" + idValue;
+        }
+        else if(idType == "wikidata") {
+          idToAdd = "Wikidata:" + idValue;
+        }
+        else if(idType == "chebi") {
+          idToAdd = "ChEBI:" + idValue;
+        }
+        else if(idType == "inchikey") {
+          idToAdd = "InChI:" + idValue;
+        }
+        entityById.type.push(idToAdd);
+        });
+      }
+    }
+  }
+});
+
+fs.writeFile(
+  pathwayFile,
+  JSON.stringify({ pathway, entitiesById }),
+  function(err) {
+    if (err) {
+      console.error(`Error adding compact identifier:
+      ${errString}
+      ${__filename}`);
+    }
+  }
+);

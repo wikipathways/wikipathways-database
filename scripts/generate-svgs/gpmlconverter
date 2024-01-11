@@ -204,19 +204,21 @@ elif [[ "$ext_out" =~ ^(json|jsonld)$ ]]; then
   if [ -z "$organism" ] || [ -z "$xref_identifiers" ]; then
     echo 'No xrefs to process.'
   else
-    mv "$path_out" "$path_out.b4bridgedb.json"
-    bridgedb xrefs -f json \
-        -i '.entitiesById[].type' "$organism" '.entitiesById[].xrefDataSource' '.entitiesById[].xrefIdentifier' \
-        ChEBI P683 Ensembl P594 "Entrez Gene" P351 HGNC P353 HMDB P2057 Wikidata \
-       < "$path_out.b4bridgedb.json" > "$path_out"
+    #mv "$path_out" "$path_out.b4bridgedb.json"
+    #bridgedb xrefs -f json \
+    #    -i '.entitiesById[].type' "$organism" '.entitiesById[].xrefDataSource' '.entitiesById[].xrefIdentifier' \
+    #    ChEBI P683 Ensembl P594 "Entrez Gene" P351 HGNC P353 HMDB P2057 Wikidata \
+    #   < "$path_out.b4bridgedb.json" > "$path_out"
 
     # Add Wikidata ids
     #"$SCRIPT_DIR/add_wd_ids" "$path_out"
-    add_wd_ids "$path_out"
+    #add_wd_ids "$path_out"
 
     # Add HGNC Symbols, without the "HGNC:" namespace prefixed
     #"$SCRIPT_DIR/add_hgnc_symbols" "$path_out"
-    add_hgnc_symbols "$path_out"
+    #add_hgnc_symbols "$path_out"
+    # Add compact identifier
+    add_identifiers "$path_out"
   fi
 
 elif [[ "$ext_out" =~ ^(svg|pvjssvg)$ ]]; then
@@ -424,21 +426,22 @@ r '"$SCRIPT_DIR/plain.css"'
     cp "$path_out" "$path_out_tmp"
     el_count=$(xmlstarlet sel -N svg='http://www.w3.org/2000/svg' -t -v "count(/svg:svg/svg:g//*[@class])" "$path_out_tmp")
     for i in $(seq $el_count); do
-    	readarray -t wditems <<<$(xmlstarlet sel -N svg='http://www.w3.org/2000/svg' -t \
+    	readarray -t ciItems <<<$(xmlstarlet sel -N svg='http://www.w3.org/2000/svg' -t \
     			-v "(/svg:svg/svg:g//*[@class])[$i]/@class" "$path_out_tmp" | \
-    		awk '/Wikidata_Q[0-9]+/' | tr ' ' '\n' | awk '/Wikidata_Q[0-9]+/');
-	wditems_len="${#wditems[@]}"
-    	if [[ wditems_len -eq 1 ]]; then
-		wditem=${wditems[0]}
-		if [ ! -z $wditem ]; then
-
+    		awk '/CompactIdentifier/' | tr ' ' '\n' | awk '/CompactIdentifier/');
+	ciItems_len="${#ciItems[@]}"
+    	if [[ ciItems_len -eq 1 ]]; then
+		ciItem=${ciItems[0]}
+		if [ ! -z $ciItem ]; then
+      ciItem=$(echo "$ciItem" | sed 's/\(.*\)_/\1:/')	# remove last '_' to ':'
+      ciItem=${ciItem#*_} # remove after CompactIdentifier_
 			#wikidata_iri=$(echo "$wditem" | awk -F'_' '{print "https://www.wikidata.org/wiki/"$NF}')
-			scholia_iri=$(echo "$wditem" | awk -F'_' '{print "https://tools.wmflabs.org/scholia/"$NF}')
+			link_iri=$(echo "$ciItem" | awk '{print "https://bioregistry.io/"$NF}')
 
 			xmlstarlet ed -L -N svg='http://www.w3.org/2000/svg' \
 						-i "(/svg:svg/svg:g//*[@class])[$i]" \
 						-t attr -n "xlink:href" \
-						-v "$scholia_iri" \
+						-v "$link_iri" \
 						"$path_out_tmp";
 	    
 			xmlstarlet ed -L -N svg='http://www.w3.org/2000/svg' \
