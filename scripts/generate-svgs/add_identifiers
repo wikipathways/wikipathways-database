@@ -12,7 +12,7 @@ const pathwayId = pathway.id;
 
 // Find the corresponding datanodes.tsv file of the given pathway
 const parsedPath = path.parse(pathwayFile);
-const pathToDatanodes = path.join("../../metadata/", parsedPath.name + "-datanodes.tsv");
+const pathToDatanodes = path.join(parsedPath.dir, parsedPath.name + "-datanodes.tsv"); //TODO: swap dir with ../../metadata?
 
 // Read datanodes.tsv file
 const datanodesData = fs.readFileSync(pathToDatanodes, 'utf8');
