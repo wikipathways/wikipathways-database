@@ -546,6 +546,11 @@ jobs:
                 rm "$old_f"
               fi
             done
+
+            # cp gpml and tsv to assets
+            cp $DB_PATH/pathways/"$wpid"/"$wpid".gpml $AS_PATH/pathways/"$wpid"/
+            cp $DB_PATH/pathways/"$wpid"/"$wpid"-bibliography.tsv $AS_PATH/pathways/"$wpid"/
+            cp $DB_PATH/pathways/"$wpid"/"$wpid"-datanodes.tsv $AS_PATH/pathways/"$wpid"/
             
             cd "$DB_PATH/scripts/generate-svgs"
             ./gpmlconverter --id "$wpid" -i $DB_PATH/pathways/"$wpid"/"$wpid".gpml -o $AS_PATH/pathways/"$wpid"/"$wpid".svg
@@ -558,11 +563,6 @@ jobs:
             # mv thumbnail png
             mv $AS_PATH/pathways/"$wpid"/"$wpid"-thumb.png $DB_PATH/pathways/"$wpid"/
 
-            # cp gpml and tsv to assets
-            cp $DB_PATH/pathways/"$wpid"/"$wpid".gpml $AS_PATH/pathways/"$wpid"/
-            cp $DB_PATH/pathways/"$wpid"/"$wpid"-bibliography.tsv $AS_PATH/pathways/"$wpid"/
-            cp $DB_PATH/pathways/"$wpid"/"$wpid"-datanodes.tsv $AS_PATH/pathways/"$wpid"/
-            
             # pretty print the JSON
             for json_f in $AS_PATH/pathways/"$wpid"/"$wpid".json; do
               mv "$json_f" "$json_f".tmp.json 
