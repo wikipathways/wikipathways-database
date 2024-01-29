@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="FGFR4 p.G388R signaling pathway" Data-Source="WikiPathways" Version="WP5428_r127764" Author="[Ulaganathan, Egonw]" Last-Modified="20231203100048" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="FGFR4 p.G388R signaling pathway" Data-Source="WikiPathways" Version="WP5428_r128235" Author="[Ulaganathan, Egonw, Khanspers]" Last-Modified="20240129184640" Organism="Homo sapiens">
   <Comment>A germline variant rs351855-G/A, FGFR c.1162G&gt;A (p.Gly388Arg), activates the proximal STAT3 signaling pathway. This germline receptor variant FGFR p.Gly388Arg, recruits STAT3 to inner cell membranes, resulting in increased levels of STAT3 tyrosine phosphorylation. This heritable variant-specific signaling pathway enhances both tumor-intrinsic proliferation and tumor-extrinsic immune evasion within the tumor microenvironment.</Comment>
   <Comment>The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-phosphorylated STAT3 in tumor cells, promoting cell division and enhancing proliferation. Meanwhile, the tumor-extrinsic molecular function is influenced by increased levels of tyrosine-phosphorylated STAT3 in regulatory T cells and CD8 T cells. This activates STAT3 signaling pathway predominantly in Tregs and alters the Treg/CD8 T cell ratio in lymphoid organs, thereby limiting immune surveillance within the tumor microenvironment.</Comment>
   <Comment Source="WikiPathways-description">A germline variant rs351855-G/A, FGFR c.1162G&gt;A (p.Gly388Arg), activates the proximal STAT3 signaling pathway. This germline receptor variant FGFR p.Gly388Arg, recruits STAT3 to inner cell membranes, resulting in increased levels of STAT3 tyrosine phosphorylation. This heritable variant-specific signaling pathway enhances both tumor-intrinsic proliferation and tumor-extrinsic immune evasion within the tumor microenvironment.
@@ -26,10 +26,10 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
     <Xref Database="Uniprot-TrEMBL" ID="P40763" />
   </DataNode>
   <DataNode TextLabel="Cell Cycle Progression" GraphId="c15ac" Type="Pathway">
-    <Graphics CenterX="587.1361716931924" CenterY="366.52576372189606" Width="184.15025194686234" Height="19.281493357764475" ZOrder="32773" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Graphics CenterX="587.1361716931924" CenterY="369.52576372189606" Width="184.15025194686234" Height="19.281493357764475" ZOrder="32773" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP179" />
   </DataNode>
-  <DataNode TextLabel="STAT3" GraphId="c2008" Type="Protein" GroupRef="d5e21">
+  <DataNode TextLabel="STAT3" GraphId="c2008" Type="Protein" GroupRef="db9ea">
     <BiopaxRef>bb4</BiopaxRef>
     <Graphics CenterX="338.91404778593255" CenterY="350.04901637996085" Width="90.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P40763" />
@@ -77,13 +77,13 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
     <Graphics CenterX="1099.4604050918858" CenterY="277.15232655980003" Width="90.0" Height="25.0" ZOrder="32840" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P40763" />
   </DataNode>
-  <DataNode TextLabel="STAT3" GraphId="d68d9" Type="Protein">
+  <DataNode TextLabel="STAT3" GraphId="d68d9" Type="Protein" GroupRef="db9ea">
     <BiopaxRef>bb4</BiopaxRef>
     <Graphics CenterX="328.1828001417552" CenterY="377.38787804599997" Width="90.0" Height="25.0" ZOrder="32842" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P40763" />
   </DataNode>
   <DataNode TextLabel="Proliferation" GraphId="bd269" Type="Pathway">
-    <Graphics CenterX="1513.1415138659272" CenterY="280.1871251753522" Width="184.15025194686234" Height="19.281493357764475" ZOrder="32847" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Graphics CenterX="1512.1415138659272" CenterY="279.8168151447663" Width="184.15025194686234" Height="19.281493357764475" ZOrder="32847" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP179" />
   </DataNode>
   <State GraphRef="c73af" TextLabel="" GraphId="d95bb">
@@ -124,81 +124,78 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
   </State>
   <Interaction GraphId="id103ac82b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1392.502756339581" Y="280.0441014332966" />
-      <Point X="1460.8599779492833" Y="278.94156560088203" ArrowHead="TBar" />
+      <Point X="1387.5278396436536" Y="279.8168151447663" GraphRef="c0bb9" RelX="1.0" RelY="0.0" />
+      <Point X="1420.066387892496" Y="279.8168151447663" GraphRef="bd269" RelX="-1.0" RelY="0.0" ArrowHead="TBar" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id1c10ba75">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="1046.770601336303" Y="303.4521158129176" />
-      <Point X="965.478841870824" Y="390.8685968819599" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id3ff792c9">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1748.7179487179505" Y="490.59829059829013" />
-      <Point X="1521.3675213675215" Y="700.8547008547009" />
+      <Point X="1073.8429062370997" Y="301.65232655980003" GraphRef="c6ad9" RelX="-0.5" RelY="1.0" />
+      <Point X="960.6000864934022" Y="392.79801995840296" GraphRef="d30f9" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7e4af476">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="1249.2307692307693" Y="283.0769230769231" />
-      <Point X="1324.6102449888642" Y="282.8507795100223" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idb9c8c882">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="85.47008547008548" Y="466.6666666666667" />
-      <Point X="343.5897435897436" Y="699.1452991452992" />
+      <Point X="1257.3333333333333" Y="280.0" />
+      <Point X="1332.4621380846336" Y="279.8168151447663" GraphRef="c0bb9" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id2196a4aa" GroupRef="ed07c">
     <Graphics ZOrder="12289" LineStyle="Broken" LineThickness="1.0">
-      <Point X="185.96881959910914" Y="231.06904231625833" />
-      <Point X="234.96659242761692" Y="196.5478841870824" />
+      <Point X="175.93314759238945" Y="239.31371566079588" GraphRef="a0784" RelX="0.0" RelY="-1.0" />
+      <Point X="242.2480668067633" Y="177.30776573681027" GraphRef="c73af" RelX="0.0" RelY="1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd092eedf">
     <Graphics ZOrder="12292" LineThickness="1.0">
-      <Point X="451.0022271714922" Y="366.369710467706" />
-      <Point X="495.0610457197613" Y="366.52576372189606" GraphRef="c15ac" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="427.9337151341618" Y="369.89327932793486" GraphRef="af57a" RelX="1.0" RelY="0.5" />
+      <Point X="495.0610457197613" Y="369.52576372189606" GraphRef="c15ac" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id3fe4d585">
+  <Interaction GraphId="id3fe4d585" GroupRef="db9ea">
     <Graphics ZOrder="12294" LineStyle="Broken" LineThickness="1.0">
-      <Point X="293.9866369710468" Y="199.33184855233853" />
-      <Point X="332.4053452115813" Y="329.62138084632517" />
+      <Point X="264.7480668067633" Y="177.30776573681027" GraphRef="c73af" RelX="0.5" RelY="1.0" />
+      <Point X="338.91404778593255" Y="337.54901637996085" GraphRef="c2008" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d8594">
     <Graphics ZOrder="32794" LineStyle="Broken" LineThickness="1.0">
-      <Point X="902.212555547317" Y="232.63932159138898" />
-      <Point X="951.2103283758248" Y="198.1181634622133" />
+      <Point X="892.7357083003924" Y="239.5688020190119" GraphRef="c8326" RelX="0.0" RelY="-1.0" />
+      <Point X="937.4346339709432" Y="184.32269110994477" GraphRef="ee0eb" RelX="0.5" RelY="1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e69af">
     <Graphics ZOrder="32802" LineStyle="Broken" LineThickness="1.0">
-      <Point X="970.8377518557795" Y="193.00106044538708" />
-      <Point X="1060.4453870625664" Y="258.2184517497349" />
+      <Point X="937.4346339709432" Y="184.32269110994477" GraphRef="ee0eb" RelX="0.5" RelY="1.0" />
+      <Point X="1042.4604050918858" Y="263.21966508476544" GraphRef="c6ad9" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="d5de7">
+  <GraphicalLine GraphId="b3d4a">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="1748.7179487179505" Y="490.59829059829013" />
+      <Point X="1521.3675213675215" Y="700.8547008547009" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ff22a">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="85.47008547008548" Y="466.6666666666667" />
+      <Point X="343.5897435897436" Y="699.1452991452992" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f56c7">
     <Graphics ZOrder="32829" LineThickness="1.0">
       <Point X="1106.1091510449442" Y="297.19550886255735" />
       <Point X="1171.1297271766298" Y="298.0185541300471" ArrowHead="mim-transcription-translation" />
     </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
+  </GraphicalLine>
   <Label TextLabel="Elevated Treg/CD8 T cell ratio in the tumor microenvironment (For genotype rs351855-A/A)" GraphId="aa8e3">
     <Graphics CenterX="702.2985184810416" CenterY="725.3548118378809" Width="672.350427350427" Height="25.0" ZOrder="28672" FillColor="ffffff" FontName="Dialog" FontStyle="Italic" FontSize="14" Valign="Middle" />
   </Label>
@@ -221,7 +218,7 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
     <Graphics CenterX="381.4139991752837" CenterY="481.2630298608065" Width="448.57389801210013" Height="25.0" ZOrder="32849" FillColor="ffffff" FontName="Dialog" FontStyle="Italic" FontSize="14" Valign="Middle" />
   </Label>
   <Label TextLabel="Tumor Cell" GraphId="ea2d6">
-    <Graphics CenterX="617.9420009793439" CenterY="175.7065234961857" Width="219.89142986501065" Height="38.760703564857806" ZOrder="32850" FillColor="ffffff" FontName="Dialog" FontWeight="Bold" FontSize="14" Valign="Middle" Color="0066cc" />
+    <Graphics CenterX="619.9420009793439" CenterY="175.7065234961857" Width="219.89142986501065" Height="38.760703564857806" ZOrder="32850" FillColor="ffffff" FontName="Dialog" FontWeight="Bold" FontSize="14" Valign="Middle" Color="0066cc" />
   </Label>
   <Shape GraphId="fb6bd">
     <BiopaxRef>dbc</BiopaxRef>
@@ -245,7 +242,7 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
     <BiopaxRef>e07</BiopaxRef>
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="395.82142857142856" CenterY="300.32142857142884" Width="632.6428571428571" Height="309.64285714285654" ZOrder="-8" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="380.48809523809547" CenterY="307.9880952380955" Width="632.6428571428571" Height="309.64285714285654" ZOrder="-8" FillColor="ccddf9" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape GraphId="ed91d" GroupRef="ed07c">
     <Graphics CenterX="300.97199788481856" CenterY="153.96690222093986" Width="7.037832900682676" Height="5.307230074031338" ZOrder="-5" FillColor="ff3333" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="ffffff" Rotation="0.0" />
@@ -266,7 +263,7 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
   <Shape GraphId="d3a7c" GroupRef="ed07c">
     <Graphics CenterX="290.4642857142773" CenterY="144.8928571428573" Width="7.166666666666661" Height="60.5" ZOrder="16390" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="ffb1a">
+  <Shape GraphId="ffb1a" GroupRef="db9ea">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="340.88609608654247" CenterY="372.5646410011667" Width="158.09523809523864" Height="112.38095238095275" ZOrder="16392" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
@@ -402,21 +399,11 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
     <Graphics CenterX="1101.2725344644746" CenterY="280.48780487804873" Width="186.63838812301051" Height="145.2810180275717" ZOrder="32836" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Group GroupId="ed07c" Style="Group" />
-  <Group GroupId="b7566" Style="Complex" />
-  <Group GroupId="d5e21" Style="Group" />
   <Group GroupId="e8be0" Style="Group" />
+  <Group GroupId="db9ea" GraphId="af57a" Style="Group" />
+  <Group GroupId="b7566" GraphId="c6ad9" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bb4">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17186030</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crosstalk between cancer and immune cells: role of STAT3 in the tumour microenvironment.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Immunol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kortylewski M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pardoll D</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e07">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26675719</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -428,17 +415,29 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rapp UR</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ullrich A</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dbc">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29438108</bp:ID>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000815</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ee4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27314095</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAT3-enhancing germline mutations contribute to tumor-extrinsic immune evasion.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kogan D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grabner A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yanucil C</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faul C</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Membrane-proximal binding of STAT3 revealed by cancer-associated receptor variants.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Oncol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulaganathan VK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ullrich A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bb4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17186030</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crosstalk between cancer and immune cells: role of STAT3 in the tumour microenvironment.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kortylewski M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pardoll D</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f7a">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14966128</bp:ID>
@@ -454,6 +453,11 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legge GB</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tweardy DJ</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fibroblast growth factor signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000328</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dd6">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11244051</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -465,6 +469,23 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coffman RL</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Garra A</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dbc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29438108</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAT3-enhancing germline mutations contribute to tumor-extrinsic immune evasion.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kogan D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grabner A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yanucil C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faul C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulaganathan VK</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">effector CD8-positive, alpha-beta T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0001050</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a6f">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32929195</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -475,30 +496,6 @@ The tumor-intrinsic molecular function is driven by elevated levels of tyrosine-
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orhan A</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christensen JP</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gögenur I</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fibroblast growth factor signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000328</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory T cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000815</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">effector CD8-positive, alpha-beta T cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0001050</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ee4">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27314095</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Membrane-proximal binding of STAT3 revealed by cancer-associated receptor variants.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Oncol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulaganathan VK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ullrich A</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
