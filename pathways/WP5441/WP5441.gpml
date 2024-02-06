@@ -1,137 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Artemisinin inhibition of uveal melanoma" Data-Source="WikiPathways" Version="WP5441_r128352" Author="[Eweitz]" Last-Modified="20240202133939" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">Farhan et al. (2021) note: "By acting in PI3K/AKT/mTOR, a pathway with recognized importance in cancer, artemisinin was shown to be able to impair the migration, invasion, and proliferation of UM cells."  This pathway diagram was derived from https://pfocr.wikipathways.org/figures/PMC8684509__OMCL2021-9911537.012.html.</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Artemisinin inhibition of uveal melanoma" Data-Source="WikiPathways" Version="WP5441_r128482" Author="[Eweitz]" Last-Modified="20240205235801" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Farhan et al. (2021) note: "By acting in PI3K/AKT/mTOR, a pathway with recognized importance in cancer, artemisinin was shown to be able to impair the migration, invasion, and proliferation of UM cells."  Triangles indicate an increase or decrease in the adjacent entity.
+This pathway diagram was derived from https://pfocr.wikipathways.org/figures/PMC8684509__OMCL2021-9911537.012.html.</Comment>
   <BiopaxRef>b64</BiopaxRef>
-  <Graphics BoardWidth="551.0" BoardHeight="454.0" />
+  <Graphics BoardWidth="563.0" BoardHeight="544.0" />
   <DataNode TextLabel="Receptor &#xA;tyrosine &#xA;kinase" GraphId="b64cb" Type="GeneProduct">
-    <Graphics CenterX="237.0" CenterY="83.0" Width="70.0" Height="50.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="234.0" CenterY="83.0" Width="70.0" Height="50.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="2.7.10.1" />
   </DataNode>
   <DataNode TextLabel="Apoptosis" GraphId="de1ef" Type="Pathway">
-    <Graphics CenterX="112.0" CenterY="273.0" Width="90.0" Height="25.0" ZOrder="32770" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Graphics CenterX="112.0" CenterY="319.0" Width="90.0" Height="25.0" ZOrder="32770" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP254" />
   </DataNode>
   <DataNode TextLabel="Artemisinin" GraphId="e17e3" Type="Metabolite">
-    <Graphics CenterX="119.0" CenterY="199.0" Width="90.0" Height="25.0" ZOrder="32772" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="119.0" CenterY="225.0" Width="90.0" Height="25.0" ZOrder="32772" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="223316" />
   </DataNode>
   <DataNode TextLabel="PI3K" GraphId="d0f54" Type="GeneProduct">
-    <Graphics CenterX="237.0" CenterY="132.0" Width="60.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="234.0" CenterY="158.0" Width="60.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" />
     <Xref Database="Enzyme Nomenclature" ID="2.7.1.137" />
   </DataNode>
-  <DataNode TextLabel="AKT" GraphId="b3a2c" Type="GeneProduct">
-    <Graphics CenterX="235.0" CenterY="202.0" Width="60.0" Height="25.0" ZOrder="32776" FontSize="12" Valign="Middle" />
-    <Xref Database="Enzyme Nomenclature" ID="2.7.11.1" />
-  </DataNode>
   <DataNode TextLabel="MTOR" GraphId="dbaaa" Type="GeneProduct">
-    <Graphics CenterX="234.0" CenterY="268.0" Width="60.0" Height="25.0" ZOrder="32778" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="234.0" CenterY="354.0" Width="60.0" Height="25.0" ZOrder="32778" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000198793" />
   </DataNode>
   <DataNode TextLabel="AKT1" GraphId="d1652" Type="GeneProduct" GroupRef="fdb29">
-    <Graphics CenterX="479.0" CenterY="177.0" Width="60.0" Height="25.0" ZOrder="32798" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="234.0" CenterY="249.0" Width="60.0" Height="20.0" ZOrder="32798" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000142208" />
   </DataNode>
   <DataNode TextLabel="AKT2" GraphId="cce80" Type="GeneProduct" GroupRef="fdb29">
-    <Graphics CenterX="479.0" CenterY="202.0" Width="60.0" Height="25.0" ZOrder="32800" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="234.0" CenterY="269.0" Width="60.0" Height="20.0" ZOrder="32800" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000105221" />
   </DataNode>
   <DataNode TextLabel="AKT3" GraphId="c2a84" Type="GeneProduct" GroupRef="fdb29">
-    <Graphics CenterX="479.0" CenterY="227.0" Width="60.0" Height="25.0" ZOrder="32802" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="234.0" CenterY="289.0" Width="60.0" Height="20.0" ZOrder="32802" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000117020" />
   </DataNode>
   <Interaction GraphId="id279ec618">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="237.0" Y="144.5" GraphRef="d0f54" RelX="0.0" RelY="1.0" />
-      <Point X="235.0" Y="189.5" GraphRef="b3a2c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="234.0" Y="170.5" GraphRef="d0f54" RelX="0.0" RelY="1.0" />
+      <Point X="235.0" Y="211.0" GraphRef="d339c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb36be5b1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="234.0" Y="108.0" GraphRef="b64cb" RelX="0.0" RelY="1.0" />
+      <Point X="234.0" Y="145.5" GraphRef="d0f54" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idccdf8281">
     <Graphics ZOrder="12290" LineThickness="1.0">
-      <Point X="119.0" Y="186.5" GraphRef="e17e3" RelX="0.0" RelY="-1.0" />
-      <Point X="207.0" Y="132.0" GraphRef="d0f54" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="119.0" Y="212.5" GraphRef="e17e3" RelX="0.0" RelY="-1.0" />
+      <Point X="204.0" Y="158.0" GraphRef="d0f54" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="dd38c">
     <Graphics ZOrder="32780" LineThickness="1.0">
-      <Point X="235.0" Y="214.5" GraphRef="b3a2c" RelX="0.0" RelY="1.0" />
-      <Point X="234.0" Y="255.5" GraphRef="dbaaa" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="235.0" Y="307.0" GraphRef="d339c" RelX="0.0" RelY="1.0" />
+      <Point X="234.0" Y="341.5" GraphRef="dbaaa" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e0595">
     <Graphics ZOrder="32784" LineThickness="1.0">
-      <Point X="205.0" Y="202.0" GraphRef="b3a2c" RelX="-1.0" RelY="0.0" />
-      <Point X="157.0" Y="266.75" GraphRef="de1ef" RelX="1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
+      <Point X="196.0" Y="283.0" GraphRef="d339c" RelX="-1.0" RelY="0.5" />
+      <Point X="157.0" Y="312.75" GraphRef="de1ef" RelX="1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f3800">
     <Graphics ZOrder="32786" LineThickness="1.0">
-      <Point X="220.0" Y="214.5" GraphRef="b3a2c" RelX="-0.5" RelY="1.0" />
-      <Point X="134.0" Y="341.5" GraphRef="d54b6" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="215.5" Y="307.0" GraphRef="d339c" RelX="-0.5" RelY="1.0" />
+      <Point X="134.0" Y="427.5" GraphRef="d54b6" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="c541c">
     <Graphics ZOrder="32792" LineThickness="1.0">
-      <Point X="264.0" Y="268.0" GraphRef="dbaaa" RelX="1.0" RelY="0.0" />
-      <Point X="323.5" Y="285.0" GraphRef="f5934" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="264.0" Y="354.0" GraphRef="dbaaa" RelX="1.0" RelY="0.0" />
+      <Point X="323.5" Y="371.0" GraphRef="f5934" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ca313">
     <Graphics ZOrder="32794" LineThickness="1.0">
-      <Point X="264.0" Y="268.0" GraphRef="dbaaa" RelX="1.0" RelY="0.0" />
-      <Point X="325.5" Y="331.0" GraphRef="af873" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="264.0" Y="354.0" GraphRef="dbaaa" RelX="1.0" RelY="0.0" />
+      <Point X="325.5" Y="417.0" GraphRef="af873" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="b22b2">
     <Graphics ZOrder="32796" LineThickness="1.0">
-      <Point X="264.0" Y="268.0" GraphRef="dbaaa" RelX="1.0" RelY="0.0" />
-      <Point X="311.5" Y="374.0" GraphRef="b60ac" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="264.0" Y="354.0" GraphRef="dbaaa" RelX="1.0" RelY="0.0" />
+      <Point X="311.5" Y="460.0" GraphRef="b60ac" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Label TextLabel="AKT" GraphId="c3358" GroupRef="fdb29">
-    <Graphics CenterX="479.0" CenterY="152.0" Width="60.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="236.0" CenterY="229.0" Width="60.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Increase" GraphId="cfa2c">
+    <Graphics CenterX="493.0" CenterY="151.0" Width="70.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Legend" GraphId="f7e48">
-    <Graphics CenterX="475.0" CenterY="103.0" Width="90.0" Height="25.0" ZOrder="28674" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" />
+    <Graphics CenterX="485.0" CenterY="103.0" Width="90.0" Height="25.0" ZOrder="28674" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Decrease" GraphId="d7810">
+    <Graphics CenterX="495.0" CenterY="187.0" Width="70.0" Height="25.0" ZOrder="32805" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Shape GraphId="f3f1d">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Mitochondria" />
-    <Graphics CenterX="118.5" CenterY="363.75" Width="161.0" Height="82.5" ZOrder="-2" FontSize="12" Valign="Middle" ShapeType="Mitochondria" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="118.5" CenterY="449.75" Width="161.0" Height="82.5" ZOrder="-2" FontSize="12" Valign="Middle" ShapeType="Mitochondria" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape GraphId="fd348">
-    <Graphics CenterX="57.0" CenterY="275.0" Width="15.0" Height="15.0" ZOrder="16384" FillColor="00ff00" FontSize="12" Valign="Middle" ShapeType="Triangle" Color="008800" Rotation="4.71238898038469" />
+    <Graphics CenterX="57.0" CenterY="321.0" Width="15.0" Height="15.0" ZOrder="16384" FillColor="00ff00" FontSize="12" Valign="Middle" ShapeType="Triangle" Color="008800" Rotation="4.71238898038469" />
   </Shape>
   <Shape TextLabel="Growth" GraphId="f5934">
-    <Graphics CenterX="353.5" CenterY="285.0" Width="60.0" Height="25.0" ZOrder="16386" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" Rotation="0.0" />
+    <Graphics CenterX="353.5" CenterY="371.0" Width="60.0" Height="25.0" ZOrder="16386" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" Rotation="0.0" />
   </Shape>
   <Shape GraphId="e4ba0">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="217.5" CenterY="254.0" Width="377.0" Height="340.0" ZOrder="16390" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="217.5" CenterY="298.5" Width="377.0" Height="431.0" ZOrder="16390" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape TextLabel="Mitochondrial&#xA;potential" GraphId="d54b6">
-    <Graphics CenterX="111.5" CenterY="359.0" Width="90.0" Height="35.0" ZOrder="16392" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0" />
+    <Graphics CenterX="111.5" CenterY="445.0" Width="90.0" Height="35.0" ZOrder="16392" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Rotation="0.0" />
   </Shape>
   <Shape GraphId="a8b6d">
-    <Graphics CenterX="479.0" CenterY="173.5" Width="84.0" Height="175.0" ZOrder="16394" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="a0a0a0" Rotation="0.0" />
+    <Graphics CenterX="485.0" CenterY="150.5" Width="96.0" Height="129.0" ZOrder="16394" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="a0a0a0" Rotation="0.0" />
   </Shape>
   <Shape GraphId="d40f8">
-    <Graphics CenterX="55.0" CenterY="359.0" Width="15.0" Height="15.0" ZOrder="32782" FillColor="00ff00" FontSize="12" Valign="Middle" ShapeType="Triangle" Color="008800" Rotation="1.5707963267948966" />
+    <Graphics CenterX="55.0" CenterY="445.0" Width="15.0" Height="15.0" ZOrder="32782" FillColor="00ff00" FontSize="12" Valign="Middle" ShapeType="Triangle" Color="008800" Rotation="1.5707963267948966" />
   </Shape>
   <Shape TextLabel="Migration" GraphId="af873">
-    <Graphics CenterX="355.5" CenterY="331.0" Width="60.0" Height="25.0" ZOrder="32788" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" Rotation="0.0" />
+    <Graphics CenterX="355.5" CenterY="417.0" Width="60.0" Height="25.0" ZOrder="32788" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" Rotation="0.0" />
   </Shape>
   <Shape TextLabel="Invasion" GraphId="b60ac">
-    <Graphics CenterX="341.5" CenterY="374.0" Width="60.0" Height="25.0" ZOrder="32790" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" Rotation="0.0" />
+    <Graphics CenterX="341.5" CenterY="460.0" Width="60.0" Height="25.0" ZOrder="32790" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" Rotation="0.0" />
   </Shape>
-  <Group GroupId="fdb29" Style="Group" />
+  <Shape GraphId="b973b">
+    <Graphics CenterX="451.0" CenterY="153.0" Width="15.0" Height="15.0" ZOrder="32803" FillColor="00ff00" FontSize="12" Valign="Middle" ShapeType="Triangle" Color="008800" Rotation="4.71238898038469" />
+  </Shape>
+  <Shape GraphId="d188b">
+    <Graphics CenterX="451.0" CenterY="184.0" Width="15.0" Height="15.0" ZOrder="32804" FillColor="00ff00" FontSize="12" Valign="Middle" ShapeType="Triangle" Color="008800" Rotation="1.5707963267948966" />
+  </Shape>
+  <Group GroupId="fdb29" GraphId="d339c" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
@@ -143,6 +159,16 @@
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">melanoma</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1909</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uveal cancer</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3479</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphatidylinositol 3-kinase-Akt signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000232</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b64">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34931134</bp:ID>
@@ -156,16 +182,6 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou Z</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zheng W</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uveal cancer</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3479</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphatidylinositol 3-kinase-Akt signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000232</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
