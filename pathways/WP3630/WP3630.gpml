@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="NAD metabolism, sirtuins and aging" Data-Source="WikiPathways" Version="WP3630_r128521" Author="[Khanspers, Susan, AlexanderPico, Jmelius, Mkutmon, MaintBot, Eweitz]" Last-Modified="20240211012847" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="NAD metabolism, sirtuins and aging" Data-Source="WikiPathways" Version="WP3630_r128523" Author="[Khanspers, Susan, AlexanderPico, Jmelius, Mkutmon, MaintBot, Eweitz]" Last-Modified="20240211142727" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">A model for DNA damage, inflammation, NAD+, and aging.
 Two key events, the activation of PARP by DNA damage and the decreased NAMPT expression associated with inflammation, lead to decreased SIRT1 and SIRT3 activity in the nucleus and mitochondria, respectively. Decreased SIRT1 activity is associated with further PARP activation and increased DNA damage. Decreased SIRT1 also leads to NF-kB activation and decreased FOXO3a activity, two factors that lead to increased inflammation. These contribute to the establishment of two parallel feed-forward self reinforcing loops that further accelerate the aging process. This process is initiated earlier and faster in patients with DNA damage repair defects (such as CS, XPA, and AT). Mitochondrial function is diminished as a result of decreased SIRT3 activity, leading to mitochondrial protein hyperacetylation, whereas decreased SIRT1 is associated with decreased TFAM (necessary for mitochondrial DNA replication and transcription) and decreased PGC-1a (necessary for mitochondrial biogenesis). Possible therapeutic interventions to restore NAD+ levels are illustrated for each of the key enzymes (red arrows). Based on fig 4 from http://science.sciencemag.org/content/350/6265/1208.long.
 
@@ -29,6 +29,10 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <DataNode TextLabel="P7C3" GraphId="c0187" Type="GeneProduct">
     <Graphics CenterX="382.1890756302514" CenterY="99.60504201680672" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Cockayne syndrome" GraphId="ccb75">
+    <Graphics CenterX="93.0" CenterY="338.0" Width="150.0" Height="25.0" ZOrder="32768" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q914389" />
   </DataNode>
   <DataNode TextLabel="NAD" GraphId="d2ede" Type="Metabolite">
     <Graphics CenterX="382.18907563025147" CenterY="256.5546218487396" Width="58.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
@@ -79,10 +83,25 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="508.08325895488633" CenterY="349.1992893349725" Width="60.0" Height="20.0" ZOrder="32794" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000142082" />
   </DataNode>
+  <DataNode TextLabel="Xeroderma pigmentosum" GraphId="d9a24">
+    <Graphics CenterX="93.0" CenterY="371.0" Width="150.0" Height="25.0" ZOrder="32813" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q612693" />
+  </DataNode>
+  <DataNode TextLabel="Ataxia telangiectasia" GraphId="fe4a5">
+    <Graphics CenterX="93.0" CenterY="404.0" Width="150.0" Height="25.0" ZOrder="32814" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q387082" />
+  </DataNode>
   <Interaction GraphId="id1549585d">
     <Graphics ZOrder="12288" LineThickness="1.0" Color="009999">
       <Point X="382.36974789915905" Y="360.9339350970843" GraphRef="a1e1d" RelX="0.0" RelY="-1.0" />
       <Point X="382.18907563025147" Y="266.5546218487396" GraphRef="d2ede" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1947cd81">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="168.0" Y="371.0" GraphRef="d9a24" RelX="1.0" RelY="0.0" />
+      <Point X="215.57744059547673" Y="370.7910779542274" GraphRef="d538c" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -96,7 +115,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   </Interaction>
   <Interaction GraphId="id51a6de8f">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="178.60645661070077" Y="307.05882352941245" GraphRef="f83b2" RelX="1.0" RelY="0.0" />
+      <Point X="178.60645661070077" Y="297.05882352941245" GraphRef="f83b2" RelX="1.0" RelY="0.0" />
       <Point X="263.57744059547673" Y="360.7910779542274" GraphRef="d538c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -125,8 +144,8 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   </Interaction>
   <Interaction GraphId="idb53f1655">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="177.73562250551507" Y="343.42772940839654" GraphRef="ef303" RelX="1.0" RelY="0.0" />
-      <Point X="190.0" Y="357.10940368131196" />
+      <Point X="168.0" Y="338.0" GraphRef="ccb75" RelX="1.0" RelY="0.0" />
+      <Point X="188.0" Y="354.3955389771137" />
       <Point X="215.57744059547673" Y="370.7910779542274" GraphRef="d538c" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -158,8 +177,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   </Interaction>
   <Interaction GraphId="ide61fe032">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="179.0" Y="394.42772940839643" GraphRef="b2fc4" RelX="1.0" RelY="0.0" />
-      <Point X="190.0" Y="382.6094036813119" />
+      <Point X="168.0" Y="404.0" GraphRef="fe4a5" RelX="1.0" RelY="0.0" />
       <Point X="215.57744059547673" Y="370.7910779542274" GraphRef="d538c" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -280,9 +298,6 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Label TextLabel="Increased inflammation" GraphId="e5fe5" GroupRef="f00ca">
     <Graphics CenterX="773.5029133898058" CenterY="365.3673565618632" Width="116.68067226890754" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
   </Label>
-  <Label TextLabel="Cockayne syndrome" GraphId="ef303">
-    <Graphics CenterX="109.73562250551507" CenterY="343.42772940839654" Width="136.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
   <Label TextLabel="Decreased insulin secretion" GraphId="f8e4b" GroupRef="f00ca">
     <Graphics CenterX="779.1961907007301" CenterY="155.2833229484179" Width="149.2436974789917" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
   </Label>
@@ -293,16 +308,10 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="263.57744059547673" CenterY="370.7910779542274" Width="96.0" Height="20.0" ZOrder="28674" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Aging" GraphId="f83b2">
-    <Graphics CenterX="146.7787255182636" CenterY="307.05882352941245" Width="63.655462184874374" Height="20.0" ZOrder="28675" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="146.7787255182636" CenterY="297.05882352941245" Width="63.655462184874374" Height="20.0" ZOrder="28675" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Pancreas" GraphId="ad499" GroupRef="f00ca">
     <Graphics CenterX="743.361015175173" CenterY="138.2332733806307" Width="108.0" Height="20.0" ZOrder="32784" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="Xeroderma pigmentosum" GraphId="fa525">
-    <Graphics CenterX="97.73562250551515" CenterY="369.42772940839654" Width="184.0" Height="20.0" ZOrder="32787" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="Ataxia telangiectasia" GraphId="b2fc4">
-    <Graphics CenterX="109.36781125275758" CenterY="394.42772940839643" Width="139.26437749448485" Height="20.0" ZOrder="32788" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Brain" GraphId="c67fd" GroupRef="f00ca">
     <Graphics CenterX="735.5038723180296" CenterY="203.90554228819377" Width="108.0" Height="20.0" ZOrder="32795" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
@@ -317,7 +326,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="783.9440898603939" CenterY="219.9051716879137" Width="149.2436974789917" Height="20.0" ZOrder="32798" FillColor="ffffff" FontSize="10" Valign="Middle" />
   </Label>
   <Label TextLabel="Decreased mitochondrial&#xA;function" GraphId="f838c" GroupRef="f00ca">
-    <Graphics CenterX="779.161120560449" CenterY="286.52702042740947" Width="125.67775887910193" Height="20.0" ZOrder="32799" FillColor="ffffff" FontSize="10" Valign="Middle" Align="Left" />
+    <Graphics CenterX="778.161120560449" CenterY="286.52702042740947" Width="125.67775887910193" Height="20.0" ZOrder="32799" FillColor="ffffff" FontSize="10" Valign="Middle" Align="Left" />
   </Label>
   <Label TextLabel="Decreased insulin sensitivity " GraphId="ee4bb" GroupRef="f00ca">
     <Graphics CenterX="785.0365268351838" CenterY="349.1488691669054" Width="149.2436974789917" Height="20.0" ZOrder="32800" FillColor="ffffff" FontSize="10" Valign="Middle" />
@@ -357,9 +366,27 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hottiger MO</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gupta MP</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f2f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26785480</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAD⁺ in aging, metabolism, and neurodegeneration.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verdin E</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sirtuin mediated pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0002584</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aging pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000651</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a72">
@@ -374,24 +401,6 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de Murcia G</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sassone-Corsi P</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f2f">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26785480</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAD⁺ in aging, metabolism, and neurodegeneration.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verdin E</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aging pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000651</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
