@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="miRNA role in immune response in sepsis" Data-Source="WikiPathways" Version="WP4329_r124845" Author="[Khanspers, Egonw, Eweitz]" Last-Modified="20221214210135" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="miRNA role in immune response in sepsis" Data-Source="WikiPathways" Version="WP4329_r128743" Author="[Khanspers, Egonw, Eweitz]" Last-Modified="20240221045845" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Involvement of cellular miRNAs in the signaling pathway of the immune response in sepsis. Cellular immune miRNAs target important components of the NF-κB signaling pathway at different levels regulating the inflammatory response in the pathogenesis of sepsis. Lower part of the figure illustrates the pathophysiological events in sepsis that lead to tissue injury and subsequent multiple organs failure.</Comment>
   <BiopaxRef>fa4</BiopaxRef>
   <Graphics BoardWidth="1215.3333333333333" BoardHeight="1304.0" />
@@ -27,7 +27,7 @@
     <Graphics CenterX="296.0" CenterY="76.0" Width="51.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:16412" />
   </DataNode>
-  <DataNode TextLabel="Inflammatory Response" GraphId="d7240" Type="Pathway">
+  <DataNode TextLabel="Inflammatory response" GraphId="d7240" Type="Pathway">
     <Graphics CenterX="883.8934554830845" CenterY="781.9642229336313" Width="182.95259095920642" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP453" />
   </DataNode>
@@ -417,6 +417,10 @@
     <Graphics CenterX="538.333333333333" CenterY="1148.6666666666665" Width="68.75000000000121" Height="23.0" ZOrder="32921" FontSize="12" Valign="Middle" Color="990099" />
     <Xref Database="Ensembl" ID="ENSG00000207797" />
   </DataNode>
+  <DataNode TextLabel="Hypoxia" GraphId="df39f" GroupRef="e59ba">
+    <Graphics CenterX="733.0" CenterY="1083.0" Width="60.0" Height="25.0" ZOrder="32970" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q105688" />
+  </DataNode>
   <State GraphRef="f8d97" TextLabel="P" GraphId="a7f95">
     <Graphics RelX="1.0" RelY="-0.7" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
@@ -600,7 +604,7 @@
   <Interaction GraphId="idc1dbaf5f">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="737.3467202141895" Y="1013.3273092369479" GraphRef="b4cc4" RelX="0.0" RelY="1.0" />
-      <Point X="737.3467202141896" Y="1044.4170013386888" GraphRef="f6932" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="737.3467202141896" Y="1037.4170013386888" GraphRef="f7ac3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -758,7 +762,7 @@
   </Interaction>
   <Interaction GraphId="b136c">
     <Graphics ZOrder="32846" LineThickness="1.0">
-      <Point X="737.3467202141896" Y="1069.4170013386888" GraphRef="f6932" RelX="0.0" RelY="1.0" />
+      <Point X="737.3467202141896" Y="1103.5" GraphRef="f7ac3" RelX="0.0" RelY="1.0" />
       <Point X="877.0025100401594" Y="1141.2389558232921" GraphRef="f865f" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -824,25 +828,25 @@
   <Label TextLabel="Intravascular coagulation" GraphId="da287" GroupRef="e2718">
     <Graphics CenterX="737.3467202141895" CenterY="925.0378179384205" Width="161.46586345381502" Height="27.22556894243644" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="Tissue Hypo-perfusion&#xA;(Hypoxia)" GraphId="f6932">
-    <Graphics CenterX="737.3467202141896" CenterY="1056.9170013386888" Width="154.77242302543482" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  <Label TextLabel="Tissue hypo-perfusion" GraphId="f6932" GroupRef="e59ba">
+    <Graphics CenterX="737.3467202141896" CenterY="1057.9170013386888" Width="154.77242302543482" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="NO-induced&#xA;Vasodilation-Hypotension" GraphId="b320e" GroupRef="e2718">
+  <Label TextLabel="NO-induced&#xA;vasodilation-hypotension" GraphId="b320e" GroupRef="e2718">
     <Graphics CenterX="737.3467202141894" CenterY="955.3761713520752" Width="155.48192771084314" Height="25.0" ZOrder="32839" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="COX2-induced&#xA;Hypotension" GraphId="c5fcf" GroupRef="e2718">
+  <Label TextLabel="COX2-induced&#xA;hypotension" GraphId="c5fcf" GroupRef="e2718">
     <Graphics CenterX="737.3467202141894" CenterY="992.8273092369479" Width="155.48192771084314" Height="25.0" ZOrder="32840" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Tissue injury" GraphId="f865f">
     <Graphics CenterX="903.3383534136534" CenterY="1153.7389558232921" Width="105.34337349397606" Height="25.0" ZOrder="32841" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="Multiple Organ Failure" GraphId="c396a">
+  <Label TextLabel="Multiple organ failure" GraphId="c396a">
     <Graphics CenterX="902.6238286479235" CenterY="1228.2864792503337" Width="168.49732262382827" Height="25.0" ZOrder="32842" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" Color="cc0000" />
   </Label>
   <Label TextLabel="Neutrophil &#xA;Infiltration/activation" GraphId="af640">
     <Graphics CenterX="929.4176706827301" CenterY="910.2048192771082" Width="154.77242302543482" Height="25.0" ZOrder="32843" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="Endothelial Permeability" GraphId="ec459">
+  <Label TextLabel="Endothelial permeability" GraphId="ec459">
     <Graphics CenterX="929.4176706827301" CenterY="1002.4779116465866" Width="154.77242302543482" Height="25.0" ZOrder="32844" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Anti-inflammatory cytokines" GraphId="f7ffb">
@@ -879,6 +883,7 @@
   <Group GroupId="ca76e" GraphId="e1b3b" Style="Group" />
   <Group GroupId="e1402" GraphId="ed316" Style="Group" />
   <Group GroupId="f7648" GraphId="f786a" Style="Group" />
+  <Group GroupId="e59ba" GraphId="f7ac3" Style="Group" />
   <Group GroupId="d6fff" GraphId="f8301" Style="Group" />
   <Group GroupId="b94cf" GraphId="f8cb8" Style="Complex" />
   <Group GroupId="dca8e" GraphId="fed56" Style="Group" />
