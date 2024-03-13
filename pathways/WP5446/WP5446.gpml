@@ -1,45 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="GLP-1 secretion from intestine to portal vein" Data-Source="WikiPathways" Version="WP5446_r129131" Author="[Eweitz]" Last-Modified="20240312034148" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="GLP-1 secretion from intestine to portal vein" Data-Source="WikiPathways" Version="WP5446_r129140" Author="[Eweitz]" Last-Modified="20240312222332" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Glucagon-like peptide-1 (GLP-1) is a short protein that suppresses feeding and helps manage glucose levels in diabetes.  It is encoded by the GCG gene.  This pathway depicts factors in GLP-1 secretion from L cells in the intestine into the portal vein, the primary entry port of digestion products into circulation.  This diagram is based on Figure 2 of https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9190119/.</Comment>
   <BiopaxRef>ad8</BiopaxRef>
-  <Graphics BoardWidth="574.0" BoardHeight="486.0" />
+  <Graphics BoardWidth="670.0" BoardHeight="486.0" />
   <DataNode TextLabel="" GraphId="d57c6">
-    <Graphics CenterX="276.5" CenterY="272.0" Width="533.0" Height="220.0" ZOrder="-4" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="777733" />
+    <Graphics CenterX="325.0" CenterY="269.0" Width="626.0" Height="220.0" ZOrder="-4" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="777733" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="" GraphId="ba809">
-    <Graphics CenterX="278.0" CenterY="421.0" Width="532.0" Height="70.0" ZOrder="-2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="ff0000" />
+    <Graphics CenterX="325.25" CenterY="421.0" Width="626.5" Height="70.0" ZOrder="-2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="ff0000" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="PCSK1" GraphId="af1ba" Type="GeneProduct">
     <Comment>"PC1/3" per main source</Comment>
-    <Graphics CenterX="221.0" CenterY="354.0" Width="60.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="276.0" CenterY="354.0" Width="60.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000175426" />
   </DataNode>
-  <DataNode TextLabel="SGLT1" GraphId="c1eac" Type="GeneProduct">
-    <Graphics CenterX="210.75" CenterY="160.5" Width="60.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="SGLT1" GraphId="c1eac" Type="GeneProduct" GroupRef="a17d0">
+    <Graphics CenterX="238.75" CenterY="160.5" Width="60.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000100170" />
   </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="ec5de" Type="Metabolite">
+    <Graphics CenterX="100.0" CenterY="279.0" Width="40.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="29108" />
+  </DataNode>
   <DataNode TextLabel="GLP-1" GraphId="ee1cd" Type="Protein">
-    <Graphics CenterX="300.5" CenterY="304.75" Width="60.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="378.5" CenterY="304.75" Width="60.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Other" ID="https://www.wikidata.org/wiki/Q424611" />
   </DataNode>
   <DataNode TextLabel="Sympathetic &#xA;nervous &#xA;system" GraphId="f182e">
-    <Graphics CenterX="376.0" CenterY="77.0" Width="90.0" Height="50.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="486.0" CenterY="77.0" Width="90.0" Height="50.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
+  <DataNode TextLabel="KATP&#xA;channel" GraphId="f53ab" Type="GeneProduct" GroupRef="c6515">
+    <Graphics CenterX="411.0" CenterY="160.0" Width="60.0" Height="40.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Other" ID="https://www.wikidata.org/wiki/Q4654794" />
+  </DataNode>
   <DataNode TextLabel="Parasympathetic&#xA;nervous &#xA;system" GraphId="d1a49">
-    <Graphics CenterX="490.0" CenterY="77.0" Width="100.0" Height="50.0" ZOrder="32769" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="590.0" CenterY="77.0" Width="100.0" Height="50.0" ZOrder="32769" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Alpha AR" GraphId="b0a64" Type="GeneProduct">
     <Comment>Alpha-andrenergic receptor</Comment>
-    <Graphics CenterX="376.0" CenterY="160.5" Width="60.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="486.0" CenterY="160.5" Width="60.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" />
     <Xref Database="Other" ID="https://www.wikidata.org/wiki/Q66563054" />
   </DataNode>
   <DataNode TextLabel="mAChR" GraphId="df82c" Type="GeneProduct">
     <Comment>Muscarinic acetylcholine receptor</Comment>
-    <Graphics CenterX="490.0" CenterY="160.5" Width="60.0" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="590.0" CenterY="160.5" Width="60.0" Height="25.0" ZOrder="32773" FontSize="12" Valign="Middle" />
     <Xref Database="Other" ID="https://www.wikidata.org/wiki/Q410959" />
   </DataNode>
   <DataNode TextLabel="GPCR" GraphId="fa3c1" Type="GeneProduct" GroupRef="d0ebf">
@@ -47,17 +55,17 @@
     <Graphics CenterX="92.0" CenterY="160.5" Width="60.0" Height="25.0" ZOrder="32774" FontSize="12" Valign="Middle" />
     <Xref Database="Other" ID="https://www.wikidata.org/wiki/Q38173" />
   </DataNode>
-  <DataNode TextLabel="SLC2A2" GraphId="d99b1" Type="GeneProduct">
+  <DataNode TextLabel="SLC2A2" GraphId="d99b1" Type="GeneProduct" GroupRef="c6515">
     <Comment>"GLUT2" per main source</Comment>
-    <Graphics CenterX="284.75" CenterY="160.5" Width="60.0" Height="25.0" ZOrder="32775" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="346.75" CenterY="160.5" Width="60.0" Height="25.0" ZOrder="32775" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000163581" />
   </DataNode>
   <DataNode TextLabel="GCG" GraphId="e7d41" Type="GeneProduct">
-    <Graphics CenterX="158.75" CenterY="304.75" Width="60.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="196.75" CenterY="304.75" Width="60.0" Height="25.0" ZOrder="32777" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000115263" />
   </DataNode>
   <DataNode TextLabel="GLP-1" GraphId="fe87c" Type="Protein">
-    <Graphics CenterX="300.5" CenterY="428.75" Width="60.0" Height="25.0" ZOrder="32782" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="378.5" CenterY="428.75" Width="60.0" Height="25.0" ZOrder="32782" FontSize="12" Valign="Middle" />
     <Xref Database="Other" ID="https://www.wikidata.org/wiki/Q424611" />
   </DataNode>
   <DataNode TextLabel="GNAQ" GraphId="b9eb5" Type="GeneProduct" GroupRef="d0ebf">
@@ -72,104 +80,122 @@
     <Graphics CenterX="70.0" CenterY="235.5" Width="60.0" Height="25.0" ZOrder="32789" FontSize="12" Valign="Middle" />
     <Xref Database="InterPro" ID="IPR016346" />
   </DataNode>
+  <DataNode TextLabel="Na+&#xA;channel" GraphId="c6274" Type="GeneProduct" GroupRef="a17d0">
+    <Graphics CenterX="206.0" CenterY="196.0" Width="60.0" Height="40.0" ZOrder="32791" FontSize="12" Valign="Middle" />
+    <Xref Database="Other" ID="https://www.wikidata.org/wiki/Q424960" />
+  </DataNode>
+  <DataNode TextLabel="Ca+&#xA;channel" GraphId="db86b" Type="GeneProduct" GroupRef="a17d0">
+    <Graphics CenterX="270.0" CenterY="196.0" Width="60.0" Height="40.0" ZOrder="32792" FontSize="12" Valign="Middle" />
+    <Xref Database="Other" ID="https://www.wikidata.org/wiki/Q15322916" />
+  </DataNode>
   <Interaction GraphId="idb4408842">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="376.0" Y="173.0" GraphRef="b0a64" RelX="0.0" RelY="1.0" />
-      <Point X="315.5" Y="292.25" GraphRef="ee1cd" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point X="486.0" Y="173.0" GraphRef="b0a64" RelX="0.0" RelY="1.0" />
+      <Point X="393.5" Y="292.25" GraphRef="ee1cd" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc7bc73b7">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="221.0" Y="341.5" GraphRef="af1ba" RelX="0.0" RelY="-1.0" />
-      <Point X="221.45" Y="304.75" GraphRef="b076c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="276.0" Y="341.5" GraphRef="af1ba" RelX="0.0" RelY="-1.0" />
+      <Point X="275.45" Y="304.75" GraphRef="b076c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide1cd5b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="120.0" Y="279.0" GraphRef="ec5de" RelX="1.0" RelY="0.0" />
+      <Point X="233.60000000000002" Y="256.8" GraphRef="cce5d" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ide39aa5b9">
     <Graphics ZOrder="32778" LineThickness="1.0">
-      <Point X="188.75" Y="304.75" GraphRef="e7d41" RelX="1.0" RelY="0.0" />
-      <Point X="270.5" Y="304.75" GraphRef="ee1cd" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
+      <Point X="226.75" Y="304.75" GraphRef="e7d41" RelX="1.0" RelY="0.0" />
+      <Point X="348.5" Y="304.75" GraphRef="ee1cd" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
       <Anchor Position="0.4" Shape="None" GraphId="b076c" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e4a17">
     <Graphics ZOrder="32779" LineThickness="1.0">
-      <Point X="490.0" Y="173.0" GraphRef="df82c" RelX="0.0" RelY="1.0" />
-      <Point X="330.5" Y="298.5" GraphRef="ee1cd" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
+      <Point X="590.0" Y="173.0" GraphRef="df82c" RelX="0.0" RelY="1.0" />
+      <Point X="408.5" Y="298.5" GraphRef="ee1cd" RelX="1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f9f0c">
     <Graphics ZOrder="32780" LineThickness="1.0">
-      <Point X="210.75" Y="173.0" GraphRef="c1eac" RelX="0.0" RelY="1.0" />
-      <Point X="285.5" Y="292.25" GraphRef="ee1cd" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point X="238.0" Y="224.0" GraphRef="db093" RelX="0.0" RelY="1.0" />
+      <Point X="363.5" Y="292.25" GraphRef="ee1cd" RelX="-0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="baa68">
     <Graphics ZOrder="32781" LineThickness="1.0">
-      <Point X="284.75" Y="173.0" GraphRef="d99b1" RelX="0.0" RelY="1.0" />
-      <Point X="300.5" Y="292.25" GraphRef="ee1cd" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point X="378.875" Y="188.0" GraphRef="c4f3a" RelX="0.0" RelY="1.0" />
+      <Point X="378.5" Y="292.25" GraphRef="ee1cd" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d9422">
     <Graphics ZOrder="32783" LineThickness="1.0">
-      <Point X="376.0" Y="102.0" GraphRef="f182e" RelX="0.0" RelY="1.0" />
-      <Point X="376.0" Y="148.0" GraphRef="b0a64" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point X="486.0" Y="102.0" GraphRef="f182e" RelX="0.0" RelY="1.0" />
+      <Point X="486.0" Y="148.0" GraphRef="b0a64" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id71d3b2ae">
     <Graphics ZOrder="32784" LineThickness="1.0">
-      <Point X="490.0" Y="102.0" GraphRef="d1a49" RelX="0.0" RelY="1.0" />
-      <Point X="490.0" Y="148.0" GraphRef="df82c" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point X="590.0" Y="102.0" GraphRef="d1a49" RelX="0.0" RelY="1.0" />
+      <Point X="590.0" Y="148.0" GraphRef="df82c" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id8cac31c7">
     <Graphics ZOrder="32785" LineStyle="Broken" LineThickness="1.0">
-      <Point X="300.5" Y="317.25" GraphRef="ee1cd" RelX="0.0" RelY="1.0" />
-      <Point X="300.5" Y="416.25" GraphRef="fe87c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="378.5" Y="317.25" GraphRef="ee1cd" RelX="0.0" RelY="1.0" />
+      <Point X="378.5" Y="416.25" GraphRef="fe87c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="da5f7">
     <Graphics ZOrder="32790" LineThickness="1.0">
       <Point X="157.0" Y="229.0" GraphRef="b00ad" RelX="1.0" RelY="0.5" />
-      <Point X="270.5" Y="298.5" ArrowHead="mim-stimulation" />
+      <Point X="348.5" Y="298.5" GraphRef="ee1cd" RelX="-1.0" RelY="-0.5" ArrowHead="mim-stimulation" />
+      <Anchor Position="0.4" Shape="None" GraphId="cce5d" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Label TextLabel="Portal vein" GraphId="b3695">
-    <Graphics CenterX="493.0" CenterY="404.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="593.0" CenterY="404.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Intestine" GraphId="c0eae">
-    <Graphics CenterX="494.0" CenterY="363.0" Width="90.0" Height="25.0" ZOrder="32776" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="594.0" CenterY="363.0" Width="90.0" Height="25.0" ZOrder="32776" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Group GroupId="d0ebf" GraphId="b00ad" Style="Complex" />
+  <Group GroupId="c6515" GraphId="c4f3a" Style="Group" />
+  <Group GroupId="a17d0" GraphId="db093" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enteroendocrine cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000164</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type L enteroendocrine cell</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002279</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diabetes mellitus pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000176</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enteroendocrine cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000164</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glucose homeostasis pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000553</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diabetes mellitus pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000176</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ad8">
