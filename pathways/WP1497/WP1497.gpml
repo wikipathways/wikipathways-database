@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Hedgehog-related genes" Data-Source="WikiPathways" Version="WP1497_r126386" Author="[Pieter Giesbertz, Khanspers, MaintBot, RaatsS, Egonw]" Last-Modified="20230426101233" Organism="Caenorhabditis elegans">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Hedgehog-related genes" Data-Source="WikiPathways" Version="WP1497_r129251" Author="[Pieter Giesbertz, Khanspers, MaintBot, RaatsS, Egonw]" Last-Modified="20240316100946" Organism="Caenorhabditis elegans">
+  <Comment Source="WikiPathways-description">List of hedgehog-related genes and their activation in several life stages from embryonic to adult.</Comment>
+  <BiopaxRef>e29</BiopaxRef>
   <Graphics BoardWidth="747.0" BoardHeight="794.0" />
   <DataNode TextLabel="grl-8" GraphId="a1539" Type="GeneProduct" GroupRef="b1e7c">
     <Graphics CenterX="189.5" CenterY="650.0" Width="331.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -7,7 +9,7 @@
   </DataNode>
   <DataNode TextLabel="grd-13" GraphId="a88e8" Type="GeneProduct" GroupRef="f3aae">
     <Graphics CenterX="585.5" CenterY="250.0" Width="263.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="WormBase" ID="W05E7.3"/>
+    <Xref Database="WormBase" ID="W05E7.3" />
   </DataNode>
   <DataNode TextLabel="wrt-10" GraphId="ae525" Type="GeneProduct" GroupRef="f3aae">
     <Graphics CenterX="551.5" CenterY="142.0" Width="331.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -215,6 +217,24 @@
   <Group GroupId="f0f1e" GraphId="d9854" Style="Group" />
   <Group GroupId="cd3c9" GraphId="f32f7" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
-  <Biopax />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000004</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e29">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31615656</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hedgehog-related genes regulate reactivation of quiescent neural progenitors in Caenorhabditis elegans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Biophys Res Commun</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kume M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiyoda H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kontani K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katada T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fukuyama M</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
 </Pathway>
 
