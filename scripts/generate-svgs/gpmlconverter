@@ -38,7 +38,7 @@ trap error_exit ERR
 trap cleanup EXIT INT QUIT TERM
 
 # to run locally installed npm pkgs and other scripts from command line
-PATH="$SCRIPT_DIR":"$(npm bin)":$PATH
+PATH="$SCRIPT_DIR":"$(npm root)/.bin":$PATH
 
 # TODO: fix these in pvjs instead of here
 fix_pvjs_bugs() {
