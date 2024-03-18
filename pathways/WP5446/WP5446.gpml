@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="GLP-1 secretion from intestine to portal vein" Data-Source="WikiPathways" Version="WP5446_r129189" Author="[Eweitz, Egonw]" Last-Modified="20240315100156" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="GLP-1 secretion from intestine to portal vein" Data-Source="WikiPathways" Version="WP5446_r129278" Author="[Eweitz, Egonw]" Last-Modified="20240317235952" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Glucagon-like peptide-1 (GLP-1) is a short protein that suppresses feeding and helps manage glucose levels in diabetes.  It is encoded by the GCG gene.  This pathway depicts factors in GLP-1 secretion from L cells in the intestine into the portal vein, the primary entry port of digestion products into circulation.  This diagram is based on Figure 2 of https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9190119/.</Comment>
   <BiopaxRef>ad8</BiopaxRef>
-  <Graphics BoardWidth="670.0" BoardHeight="486.0" />
+  <Graphics BoardWidth="670.0" BoardHeight="509.0" />
   <DataNode TextLabel="" GraphId="d57c6">
     <Graphics CenterX="325.0" CenterY="269.0" Width="626.0" Height="220.0" ZOrder="-4" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="777733" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="" GraphId="ba809">
-    <Graphics CenterX="325.25" CenterY="421.0" Width="626.5" Height="70.0" ZOrder="-2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="ff0000" />
+    <Graphics CenterX="325.25" CenterY="432.5" Width="626.5" Height="93.0" ZOrder="-2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="ff0000" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="PCSK1" GraphId="af1ba" Type="GeneProduct">
@@ -19,6 +19,10 @@
   <DataNode TextLabel="SGLT1" GraphId="c1eac" Type="GeneProduct" GroupRef="a17d0">
     <Graphics CenterX="238.75" CenterY="160.5" Width="60.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000100170" />
+  </DataNode>
+  <DataNode TextLabel="Insulin secretion &#xA;in pancreas" GraphId="eb173" Type="Pathway">
+    <Graphics CenterX="539.75" CenterY="452.75" Width="120.0" Height="35.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP5452" />
   </DataNode>
   <DataNode TextLabel="Ca2+" GraphId="ec5de" Type="Metabolite">
     <Graphics CenterX="100.0" CenterY="279.0" Width="40.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -65,7 +69,7 @@
     <Xref Database="Ensembl" ID="ENSG00000115263" />
   </DataNode>
   <DataNode TextLabel="GLP-1" GraphId="fe87c" Type="Protein">
-    <Graphics CenterX="378.5" CenterY="428.75" Width="60.0" Height="25.0" ZOrder="32782" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="378.5" CenterY="434.75" Width="60.0" Height="25.0" ZOrder="32782" FontSize="12" Valign="Middle" />
     <Xref Database="Wikidata" ID="Q424611" />
   </DataNode>
   <DataNode TextLabel="GNAQ" GraphId="b9eb5" Type="GeneProduct" GroupRef="d0ebf">
@@ -88,6 +92,17 @@
     <Graphics CenterX="270.0" CenterY="196.0" Width="60.0" Height="40.0" ZOrder="32792" FontSize="12" Valign="Middle" />
     <Xref Database="Wikidata" ID="Q15322916" />
   </DataNode>
+  <DataNode TextLabel="Decrease hunger&#xA;in hypothalamus" GraphId="e3cf9" Type="Pathway">
+    <Graphics CenterX="539.75" CenterY="411.75" Width="120.0" Height="35.0" ZOrder="32793" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP5445" />
+  </DataNode>
+  <Interaction GraphId="id41f0dffc">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="408.5" Y="434.75" GraphRef="fe87c" RelX="1.0" RelY="0.0" />
+      <Point X="479.75" Y="452.75" GraphRef="eb173" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Interaction GraphId="idb4408842">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="486.0" Y="173.0" GraphRef="b0a64" RelX="0.0" RelY="1.0" />
@@ -155,7 +170,7 @@
   <Interaction GraphId="id8cac31c7">
     <Graphics ZOrder="32785" LineStyle="Broken" LineThickness="1.0">
       <Point X="378.5" Y="317.25" GraphRef="ee1cd" RelX="0.0" RelY="1.0" />
-      <Point X="378.5" Y="416.25" GraphRef="fe87c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="378.5" Y="422.25" GraphRef="fe87c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -167,11 +182,18 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <Interaction GraphId="e523a">
+    <Graphics ZOrder="32794" LineThickness="1.0">
+      <Point X="408.5" Y="434.75" GraphRef="fe87c" RelX="1.0" RelY="0.0" />
+      <Point X="479.75" Y="411.75" GraphRef="e3cf9" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Label TextLabel="Portal vein" GraphId="b3695">
-    <Graphics CenterX="593.0" CenterY="404.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="53.0" CenterY="404.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Intestine" GraphId="c0eae">
-    <Graphics CenterX="594.0" CenterY="363.0" Width="90.0" Height="25.0" ZOrder="32776" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="54.0" CenterY="363.0" Width="90.0" Height="25.0" ZOrder="32776" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Group GroupId="d0ebf" GraphId="b00ad" Style="Complex" />
   <Group GroupId="c6515" GraphId="c4f3a" Style="Group" />
@@ -184,14 +206,14 @@
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type L enteroendocrine cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002279</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glucose homeostasis pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000553</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type L enteroendocrine cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002279</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ad8">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32163198</bp:ID>
