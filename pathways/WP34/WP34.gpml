@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Ovarian infertility" Data-Source="WikiPathways" Version="WP34_r127999" Author="[I.BenShlomo, MaintBot, Thomas, A.Hsueh, Khanspers, AlexanderPico, Andra, Fehrhart, Eweitz, VanessaSousa, Egonw, Larsgw]" Last-Modified="20240121025509" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Ovarian infertility" Data-Source="WikiPathways" Version="WP34_r129429" Author="[I.BenShlomo, MaintBot, Thomas, A.Hsueh, Khanspers, AlexanderPico, Andra, Fehrhart, Eweitz, VanessaSousa, Egonw, Larsgw]" Last-Modified="20240419084154" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Ovarian bottleneck genes associated with infertility.
 A valuable approach to the study of infertility is the comparison of mutations of individual human and mouse genes associated with infertility phenotypes. The individual gene pages in the OKdb (Ovarian Kaleidoscope Database: http://ovary.stanford.edu) contain information on associated fertility phenotypes sorted by ovarian and nonovarian defects and by subfertility or infertility. If one searches for null mutations (under mutation type) causing infertility (infertile - ovarian defect, under female fertility status) in mice (under species), 44 gene entries are found. The expression of these infertility genes in the oocyte and granulosa cells together with their cellular localization is presented in Ovarian Infertility gene map. The theca cell genes are not presented because most publications emphasize granulosa cell studies.
 
@@ -123,7 +123,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <DataNode TextLabel="TSC2" GraphId="ced77" Type="Protein">
     <BiopaxRef>e77</BiopaxRef>
     <Graphics CenterX="739.0000000000028" CenterY="213.7499999999999" Width="60.66666666666674" Height="19.166666666666273" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
+    <Xref Database="Uniprot-TrEMBL" ID="P49815" />
   </DataNode>
   <DataNode TextLabel="S6K" GraphId="cfc46" Type="Protein">
     <BiopaxRef>df3</BiopaxRef>
@@ -207,7 +207,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <DataNode TextLabel="FMR1" GraphId="ff981" Type="GeneProduct">
     <BiopaxRef>df3</BiopaxRef>
     <Graphics CenterX="842.4166666666661" CenterY="348.41666666666754" Width="52.4999999999999" Height="19.166666666666615" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="NCBI Protein" ID="Q06787" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q06787" />
   </DataNode>
   <DataNode TextLabel="NCOR1" GraphId="fff" Type="GeneProduct" GroupRef="afae8">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="NCOR1 | nuclear receptor co-repressor 1" />
@@ -230,21 +230,25 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="738.6666666666663" CenterY="156.66666666666686" Width="60.0" Height="20.0" ZOrder="32771" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000142208" />
   </DataNode>
-  <DataNode TextLabel="TSC2" GraphId="ef153" Type="Protein">
+  <DataNode TextLabel="TSC2" GraphId="ef153" Type="Protein" GroupRef="c098e">
     <BiopaxRef>e77</BiopaxRef>
     <Graphics CenterX="739.0000000000033" CenterY="271.75000000000006" Width="60.66666666666674" Height="19.166666666666273" ZOrder="32772" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
+    <Xref Database="Uniprot-TrEMBL" ID="P49815" />
   </DataNode>
-  <DataNode TextLabel="TSC1" GraphId="ee159" Type="Protein">
+  <DataNode TextLabel="TSC1" GraphId="ee159" Type="Protein" GroupRef="c098e">
     <BiopaxRef>df3</BiopaxRef>
     <Graphics CenterX="739.0833333333356" CenterY="291.33333333333263" Width="60.49999999999912" Height="18.66666666666633" ZOrder="32773" FontSize="12" Valign="Middle" />
-    <Xref Database="NCBI Protein" ID="Q92574" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q92574" />
   </DataNode>
   <DataNode TextLabel="RAD51" GraphId="fab21" Type="GeneProduct">
     <BiopaxRef>d61</BiopaxRef>
     <Graphics CenterX="847.4999999999995" CenterY="390.91666666666634" Width="45.0" Height="21.5" ZOrder="32774" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000051180" />
   </DataNode>
+  <State GraphRef="ff981" TextLabel="" GraphId="a145d">
+    <Graphics RelX="1.0" RelY="1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
   <Interaction GraphId="aa5ac">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="563.3333333333334" Y="180.0" GraphRef="caf" RelX="1.0" RelY="0.0" />
@@ -277,7 +281,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Interaction GraphId="id6b031b42">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="739.0000000000028" Y="223.33333333333303" GraphRef="ced77" RelX="0.0" RelY="1.0" />
-      <Point X="739.4166666666677" Y="241.50000000000028" GraphRef="d5cb9" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+      <Point X="739.0000000000033" Y="250.16666666666694" GraphRef="a68eb" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -296,26 +300,17 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id7c6b9eb9">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="868.0" Y="347.0" />
-      <Point X="883.0" Y="347.0" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
   <Interaction GraphId="ida0b89f08">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="771.3333333333333" Y="213.33333333333334" />
-      <Point X="751.3333333333333" Y="213.5" />
-      <Point X="828.0" Y="213.66666666666669" />
-      <Point X="904.6666666666666" Y="266.0833333333337" />
+      <Point X="769.3333333333362" Y="213.7499999999999" GraphRef="ced77" RelX="1.0" RelY="0.0" />
+      <Point X="881.5165876777252" Y="266.12500000000034" />
       <Point X="855.5416666666666" Y="318.50000000000074" GraphRef="f85c9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idcb4d8686">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="738.6666666666669" Y="317.33333333333314" />
+      <Point X="739.0000000000033" Y="312.66666666666583" GraphRef="a68eb" RelX="0.0" RelY="1.0" />
       <Point X="738.7500000000003" Y="345.4999999999998" GraphRef="ea464" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -328,20 +323,6 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="a9462">
-    <Graphics ZOrder="32775" LineThickness="1.0">
-      <Point X="738.6666666666666" Y="181.0" />
-      <Point X="753.6666666666666" Y="181.0" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="afb8a">
-    <Graphics ZOrder="32780" LineThickness="1.0">
-      <Point X="739.9999999999998" Y="377.66666666666697" />
-      <Point X="754.9999999999998" Y="377.66666666666697" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
   <Interaction GraphId="be432">
     <Graphics ZOrder="32783" LineThickness="1.0">
       <Point X="342.6225192385582" Y="214.27946537059532" GraphRef="e567c" RelX="1.0" RelY="0.0" />
@@ -349,6 +330,18 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <GraphicalLine GraphId="b105e">
+    <Graphics ZOrder="32775" LineThickness="1.0">
+      <Point X="738.6666666666666" Y="181.0" />
+      <Point X="753.6666666666666" Y="181.0" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a6a5b">
+    <Graphics ZOrder="32780" LineThickness="1.0">
+      <Point X="739.9999999999998" Y="377.66666666666697" />
+      <Point X="754.9999999999998" Y="377.66666666666697" />
+    </Graphics>
+  </GraphicalLine>
   <Label TextLabel="Granulosa cell" GraphId="b51">
     <Graphics CenterX="685.3333333333334" CenterY="57.0" Width="130.0" Height="30.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" />
   </Label>
@@ -368,13 +361,13 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="525.8333333333334" CenterY="111.66666666666666" Width="86.33333333333326" Height="29.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="999999" />
   </Label>
   <Label TextLabel="P" GraphId="b85a6">
-    <Graphics CenterX="760.0" CenterY="181.33333333333331" Width="90.0" Height="25.0" ZOrder="32777" FillColor="ffffff" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="758.6459038591743" CenterY="182.01038140374632" Width="90.0" Height="25.0" ZOrder="32777" FillColor="ffffff" FontSize="10" Valign="Middle" />
   </Label>
   <Label TextLabel="P" GraphId="e3b95">
-    <Graphics CenterX="889.9999999999994" CenterY="347.3333333333337" Width="90.0" Height="25.0" ZOrder="32778" FillColor="ffffff" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="869.0115098171976" CenterY="358.84315053035454" Width="90.0" Height="25.0" ZOrder="32778" FillColor="ffffff" FontSize="10" Valign="Middle" />
   </Label>
   <Label TextLabel="P" GraphId="a3e3e">
-    <Graphics CenterX="761.333333333333" CenterY="378.0" Width="90.0" Height="25.0" ZOrder="32782" FillColor="ffffff" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="762.0103814037458" CenterY="378.0" Width="90.0" Height="25.0" ZOrder="32782" FillColor="ffffff" FontSize="10" Valign="Middle" />
   </Label>
   <Shape GraphId="c1126">
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
@@ -384,15 +377,9 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="772.1666666666666" CenterY="289.8333333333334" Width="618.3333333333333" Height="421.6666666666665" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="d5cb9">
-    <Graphics CenterX="739.4166666666677" CenterY="281.41666666666714" Width="91.83333333333253" Height="79.83333333333367" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Hexagon" Rotation="0.0" />
-  </Shape>
   <Shape GraphId="f168a">
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="765.3333333333335" CenterY="289.33333333333337" Width="392.0" Height="376.0000000000001" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
-  </Shape>
-  <Shape GraphId="fe152">
-    <Graphics CenterX="888.75" CenterY="347.25" Width="10.5" Height="9.5" ZOrder="16384" FillColor="ffff00" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ffff00" Rotation="0.0" />
   </Shape>
   <Shape GraphId="fe396">
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
@@ -404,6 +391,7 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Shape GraphId="c736b">
     <Graphics CenterX="760.7499999999998" CenterY="377.91666666666697" Width="10.5" Height="9.5" ZOrder="32781" FillColor="ffff00" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ffff00" Rotation="0.0" />
   </Shape>
+  <Group GroupId="c098e" GraphId="a68eb" Style="Complex" />
   <Group GroupId="f8618" GraphId="c4727" />
   <Group GroupId="afae8" GraphId="d63d8" />
   <Group GroupId="a81ce" GraphId="e7c11" />
@@ -411,6 +399,11 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Group GroupId="adf26" GraphId="fb9d0" />
   <InfoBox CenterX="4.0" CenterY="5.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000023</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="df3">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34501340</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -428,11 +421,6 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strowitzki T</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vogt PH</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infertility</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:5223</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d61">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34786213</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -450,40 +438,6 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhao S</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qin Y</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f74">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32403258</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Combining Bioinformatics and Experiments to Identify CREB1 as a Key Regulator in Senescent Granulosa Cells</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI: 10.3390/diagnostics10050295</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin PH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin L</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li C</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kao PG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tsai HW</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen SN</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wen ZH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tsui KH</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b04">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30992313</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High-throughput Exploration of the Network Dependent on AKT1 in Mouse Ovarian Granulosa Cells</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi: 10.1074/mcp.RA119</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elzaiat M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herman L</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legois B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Léger T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Todeschini AL</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veitia RA</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oocyte</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000023</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e77">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34501340</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -502,15 +456,49 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vogt PH</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">granulosa cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000501</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f74">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32403258</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Combining Bioinformatics and Experiments to Identify CREB1 as a Key Regulator in Senescent Granulosa Cells</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI: 10.3390/diagnostics10050295</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin PH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kao PG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tsai HW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen SN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wen ZH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tsui KH</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urogenital disease pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001699</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">granulosa cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000501</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infertility</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:5223</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b04">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30992313</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">High-throughput Exploration of the Network Dependent on AKT1 in Mouse Ovarian Granulosa Cells</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doi: 10.1074/mcp.RA119</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elzaiat M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herman L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legois B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LÃƒÆ’Ã‚Â©ger T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Todeschini AL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veitia RA</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
 
