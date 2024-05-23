@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="miRNA regulation of prostate cancer signaling" Data-Source="WikiPathways" Version="WP3981_r129759" Author="[Khanspers, Egonw, Maxvanson, Fehrhart, Eweitz]" Last-Modified="20240522021849" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="miRNA regulation of prostate cancer signaling" Data-Source="WikiPathways" Version="WP3981_r129791" Author="[Khanspers, Egonw, Maxvanson, Fehrhart, Eweitz]" Last-Modified="20240522121254" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Diagrammatic scheme depicting potential survival pathway-related gene targets of the downregulated microRNAs and their signaling pathways in prostate cancer cells. An integrated in silico and computational prediction databases (DIANA-micro T-CDS, miRBase, and TargetScan) were employed to predict potential targets of a subset of highly downregulated miRNAs (&gt;2-fold) in prostate tumors.
 Note that some targeting miRNAs were removed from the original publication figure for clarity. These are represented in supplementary table S3: http://journals.sagepub.com/doi/suppl/10.1177/1535370216681554.</Comment>
   <BiopaxRef>ad0</BiopaxRef>
@@ -47,6 +47,10 @@ Note that some targeting miRNAs were removed from the original publication figur
   <DataNode TextLabel="NFKBIA" GraphId="ec9f3" Type="GeneProduct">
     <Graphics CenterX="887.5" CenterY="412.0" Width="56.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000100906" />
+  </DataNode>
+  <DataNode TextLabel="PI3K-Akt signaling" GraphId="ed21b" Type="Pathway">
+    <Graphics CenterX="530.0" CenterY="219.0" Width="120.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP4172" />
   </DataNode>
   <DataNode TextLabel="BCL2" GraphId="f9283" Type="GeneProduct">
     <Graphics CenterX="1136.0" CenterY="453.0" Width="52.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
@@ -265,6 +269,14 @@ Note that some targeting miRNAs were removed from the original publication figur
   <DataNode TextLabel="MAP2K2" GraphId="fd9c9" Type="GeneProduct" GroupRef="c3659">
     <Graphics CenterX="659.8821265085304" CenterY="511.6401693396076" Width="61.435609334485704" Height="25.0" ZOrder="32840" FillColor="Transparent" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000126934" />
+  </DataNode>
+  <DataNode TextLabel="MAPK signaling" GraphId="faa9d" Type="Pathway">
+    <Graphics CenterX="552.0" CenterY="452.0" Width="120.0" Height="25.0" ZOrder="32841" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP382" />
+  </DataNode>
+  <DataNode TextLabel="Cell cycle" GraphId="c7f80" Type="Pathway">
+    <Graphics CenterX="1044.0" CenterY="235.0" Width="80.0" Height="25.0" ZOrder="32842" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP179" />
   </DataNode>
   <State GraphRef="bfd7e" TextLabel="P" GraphId="b544a">
     <Graphics RelX="1.0" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
@@ -671,9 +683,6 @@ Note that some targeting miRNAs were removed from the original publication figur
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Label TextLabel="Cell cycle" GraphId="b5278">
-    <Graphics CenterX="1038.0" CenterY="235.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
-  </Label>
   <Label TextLabel="Cell proliferation&#xA;Survival" GraphId="b6067">
     <Graphics CenterX="1234.0" CenterY="570.0" Width="104.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
@@ -699,16 +708,10 @@ Note that some targeting miRNAs were removed from the original publication figur
     <Graphics CenterX="1367.5" CenterY="306.25" Width="159.0" Height="49.5" ZOrder="32833" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="p53 signaling&#xA;pathway" GraphId="a7f3b">
-    <Graphics CenterX="1151.0" CenterY="235.25" Width="90.0" Height="31.5" ZOrder="32835" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
-  </Label>
-  <Label TextLabel="PI3K-Akt&#xA;signaling pathway" GraphId="a04dd">
-    <Graphics CenterX="537.5" CenterY="219.75" Width="111.0" Height="33.5" ZOrder="32837" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
-  </Label>
-  <Label TextLabel="MAPK&#xA;signaling pathway" GraphId="b0424">
-    <Graphics CenterX="553.5" CenterY="438.75" Width="111.0" Height="33.5" ZOrder="32838" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Graphics CenterX="1151.0" CenterY="235.25" Width="90.0" Height="31.5" ZOrder="32835" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="14961e" />
   </Label>
   <Label TextLabel="Cytokine-cytokine&#xA;receptor interaction" GraphId="c82c6">
-    <Graphics CenterX="71.27777777777779" CenterY="281.12037037037044" Width="121.0" Height="33.5" ZOrder="32839" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Graphics CenterX="71.27777777777779" CenterY="281.12037037037044" Width="121.0" Height="33.5" ZOrder="32839" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="14961e" />
   </Label>
   <Shape GraphId="be249">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />

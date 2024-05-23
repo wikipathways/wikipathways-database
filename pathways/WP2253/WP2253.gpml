@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Pilocytic astrocytoma" Data-Source="WikiPathways" Version="WP2253_r128531" Author="[Devi, MaintBot, Ddigles, Khanspers, DeSl, Fehrhart, L Dupuis, Egonw, Eweitz]" Last-Modified="20240211152547" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Pilocytic astrocytoma" Data-Source="WikiPathways" Version="WP2253_r129826" Author="[Devi, MaintBot, Ddigles, Khanspers, DeSl, Fehrhart, L Dupuis, Egonw, Eweitz]" Last-Modified="20240522230910" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">This pathway shows the relationship between BRAF signalling and the development and behavior of pilocytic astrocytoma (PA), normally induced by MAPK pathway activation. 
 
 BRAF is related in two alternative mechanisms in MAPK activation; first oncogenic fusion between SRGAP3 and RAF1 (highlighted in yellow); second a 3 basepair insertion in BRAF (KIAA1549, again in yellow). 
@@ -8,7 +8,7 @@ This pathway is based on Figure 3" An overview of MAPK pathway alterations in PA
   <BiopaxRef>a4c</BiopaxRef>
   <Graphics BoardWidth="549.673063255153" BoardHeight="612.0" />
   <DataNode TextLabel="Regular MAPK &#xA;cascade pathway" GraphId="c142a" Type="Pathway">
-    <Graphics CenterX="112.56965174129357" CenterY="67.62704335465526" Width="120.0" Height="28.5" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" Color="14961e" />
+    <Graphics CenterX="112.56965174129357" CenterY="67.62704335465526" Width="120.0" Height="30.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP422" />
   </DataNode>
   <DataNode TextLabel="ERK" GraphId="c82b8" Type="GeneProduct">
@@ -47,10 +47,10 @@ This pathway is based on Figure 3" An overview of MAPK pathway alterations in PA
     <Graphics CenterX="98.5" CenterY="306.25" Width="46.0" Height="23.5" ZOrder="32768" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
     <Xref Database="HMDB" ID="HMDB0000960" />
   </DataNode>
-  <DataNode TextLabel="RTK" GraphId="f8fc1" Type="Protein">
+  <DataNode TextLabel="RTK" GraphId="f8fc1" Type="GeneProduct">
     <Comment>RTKs have to be activated first</Comment>
-    <Graphics CenterX="129.0" CenterY="124.0" Width="62.0" Height="18.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="Enzyme Nomenclature" ID="2.7.10.1" />
+    <Graphics CenterX="129.0" CenterY="124.0" Width="62.0" Height="18.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="562b00" />
+    <Xref Database="WikiPathways" ID="WP5471" />
   </DataNode>
   <DataNode TextLabel="BRAF" GraphId="fef72" Type="GeneProduct" GroupRef="e11c2">
     <Graphics CenterX="361.2460815047016" CenterY="320.9905956112859" Width="49.70219435736593" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
@@ -189,6 +189,16 @@ This pathway is based on Figure 3" An overview of MAPK pathway alterations in PA
   <Group GroupId="e11c2" GraphId="fa6b3" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pilocytic astrocytoma</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4851</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glioma pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000711</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="de1">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17496910</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -199,23 +209,8 @@ This pathway is based on Figure 3" An overview of MAPK pathway alterations in PA
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morrison DK</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mitogen activated protein kinase signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000007</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">astrocytoma</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3069</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glioma pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000711</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pilocytic astrocytoma</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:4851</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a4c">
@@ -231,6 +226,11 @@ This pathway is based on Figure 3" An overview of MAPK pathway alterations in PA
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ichimura K</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins VP</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mitogen activated protein kinase signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000007</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:162</bp:ID>
