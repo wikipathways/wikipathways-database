@@ -30,7 +30,7 @@ jobs:
           ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
       - name: Set up ssh-agent
-        uses: webfactory/ssh-agent@v0.8.0
+        uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into wp.gh.io repo
 
