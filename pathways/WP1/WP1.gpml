@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Statin pathway" Data-Source="WikiPathways" Version="WP1_r127970" Author="[Nsalomonis, MaintBot, Khanspers, BruceConklin, TestUser, AlexanderPico, Thomas, Mkutmon, Andra, Egonw, Ddigles, Eweitz]" Last-Modified="20240120153008" Organism="Mus musculus">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Statin pathway" Data-Source="WikiPathways" Version="WP1_r134140" Author="[Nsalomonis, MaintBot, Khanspers, BruceConklin, TestUser, AlexanderPico, Thomas, Mkutmon, Andra, Egonw, Ddigles, Eweitz]" Last-Modified="20240703124038" Organism="Mus musculus">
   <Comment Source="WikiPathways-description">Statins inhibit endogenous cholesterol production by competitive inhibition of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion of HMG-CoA to mevalonate, an early rate-limiting step in cholesterol synthesis. This pathway delineates genes involved in statin pharmacogenomics, including genes involved in mediating the effects of statins on plasma lipoprotein metabolism. 
 
 Sources: [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikipedia.org/wiki/Statin Wikipedia]</Comment>
@@ -13,7 +13,7 @@ Sources: [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikip
     <Graphics CenterX="756.6666666666667" CenterY="180.0" Width="104.33333333333337" Height="19.000000000000014" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" />
     <Xref Database="ChEBI" ID="CHEBI:16247" />
   </DataNode>
-  <DataNode TextLabel="Free FA" GraphId="fa9" Type="Metabolite">
+  <DataNode TextLabel="Fatty acid" GraphId="fa9" Type="Metabolite">
     <Graphics CenterX="552.3160678994171" CenterY="124.72359141038902" Width="64.33333333333333" Height="19.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" />
     <Xref Database="ChEBI" ID="CHEBI:35366" />
   </DataNode>
@@ -80,7 +80,7 @@ Sources: [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikip
   </DataNode>
   <DataNode TextLabel="Ldlr" GraphId="d72" Type="GeneProduct">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ldlr | low density lipoprotein receptor" />
-    <Graphics CenterX="231.66666666666666" CenterY="330.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="231.66666666666666" CenterY="330.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="16835" />
   </DataNode>
   <DataNode TextLabel="Abca1" GraphId="d75" Type="GeneProduct">
@@ -388,8 +388,8 @@ Sources: [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikip
   <Label TextLabel="LDL" GraphId="d57">
     <Graphics CenterX="186.66666666666666" CenterY="383.3333333333333" Width="37.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="Cell Membrane" GraphId="e46">
-    <Graphics CenterX="848.0952380952393" CenterY="68.09523809523814" Width="102.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  <Label TextLabel="Cell membrane" GraphId="e46">
+    <Graphics CenterX="848.0952380952393" CenterY="68.09523809523814" Width="102.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Tissues" GraphId="f20">
     <Graphics CenterX="361.01851851851836" CenterY="678.0092592592584" Width="65.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
@@ -412,8 +412,22 @@ Sources: [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikip
   </Shape>
   <Group GroupId="abe40" GraphId="f90e3" Style="Group" TextLabel="Group object" />
   <InfoBox CenterX="5.1" CenterY="8.333333333333334" />
-  <Legend CenterX="878.3333333333334" CenterY="65.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000182</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypercholesterolemia pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001933</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiovascular system disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1287</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ba0">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10770267</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -426,23 +440,8 @@ Sources: [https://www.pharmgkb.org/pathway/PA2031 PharmGKB] and [http://en.wikip
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shimada K</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiovascular system disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1287</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatocyte</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000182</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">statin drug pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000724</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypercholesterolemia pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001933</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
