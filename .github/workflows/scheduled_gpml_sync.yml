@@ -36,7 +36,7 @@ jobs:
         uses: actions/cache@v4
         id: cacheSyncJar
         with:
-          path: ./SyncAction.jar
+          path: ./$SYNC_ACTION_JAR
           key: cached-gpml-sync-action-${{ hashFiles('$SYNC_ACTION_JAR') }}
           restore-keys: |
             cached-gpml-sync-action-${{ hashFiles('$SYNC_ACTION_JAR') }}
@@ -52,10 +52,10 @@ jobs:
       
       - name: Run SyncAction
         run: |
-          chmod 777 SyncAction.jar
+          chmod 777 $SYNC_ACTION_JAR
           SyncDate=$(date --utc +%Y%m%d%H%M%S -d "1 day ago")
           echo $SyncDate
-          java -jar SyncAction.jar $SyncDate
+          java -jar $SYNC_ACTION_JAR $SyncDate
       
       - name: Commit report
         run: |
