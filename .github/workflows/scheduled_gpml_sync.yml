@@ -5,6 +5,10 @@ on:
   schedule:
   - cron: "0 2 * * *"
 
+env:
+  SYNC_ACTION_VERSION: 2.1
+  SYNC_ACTION_JAR: SyncAction-${SYNC_ACTION_VERSION}.jar
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true # to cancel a run if another is triggered
@@ -33,17 +37,17 @@ jobs:
         id: cacheSyncJar
         with:
           path: ./SyncAction.jar
-          key: cached-gpml-sync-action-${{ hashFiles('SyncAction.jar') }}
+          key: cached-gpml-sync-action-${{ hashFiles('$SYNC_ACTION_JAR') }}
           restore-keys: |
-            cached-gpml-sync-action-${{ hashFiles('SyncAction.jar') }}
+            cached-gpml-sync-action-${{ hashFiles('$SYNC_ACTION_JAR') }}
             cached-gpml-sync-action-
     
       - if: steps.cacheSyncJar.outputs.cache-hit != 'true'
         name: Install jar
         run: |
-          echo "Cache not found: cached-gpml-sync-action"
-          if [ ! -e ./SyncAction.jar ]; then
-            wget -O SyncAction.jar https://github.com/wikipathways/gpml-sync-action/releases/download/v1.0/SyncAction.jar
+          echo "Cache for $SYNC_ACTION_JAR not found: cached-gpml-sync-action"
+          if [ ! -e ./$SYNC_ACTION_JAR ]; then
+            wget -O $SYNC_ACTION_JAR https://github.com/wikipathways/gpml-sync-action/releases/download/v${SYNC_ACTION_VERSION}/SyncAction.jar
           fi
       
       - name: Run SyncAction
