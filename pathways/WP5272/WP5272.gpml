@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="LDL- influence on CD14 and TLR4" Data-Source="WikiPathways" Version="WP5272_r127745" Author="[DeSl]" Last-Modified="20231130112340" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">Electronegative LDL (LDL(-)) is a plasma LDL subfraction inducing induces cytokine release in monocytes by activating TLR4. The subsequent phosphorylation of p38 MAPK phosphorylation (which is higher compared to native LDL) through TLR4 and PI3k/Akt pathways activates NF-kB, AP-1 and CREB. These last three have a direct effect on four cytokines (IL1beta, IL6, IL10 and MCP1), with bold black letters for the highest level of cytokine induction, gray letters for the lowest level and regular letter for the intermediate induction.</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="LDL- influence on CD14 and TLR4" Data-Source="WikiPathways" Version="WP5272_r134510" Author="[DeSl, Eweitz]" Last-Modified="20240722115323" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Electronegative LDL (LDL(-)) is a plasma LDL subfraction inducing induces cytokine release in monocytes by activating TLR4. The subsequent phosphorylation of p38 MAPK phosphorylation (which is higher compared to native LDL) through TLR4 and PI3k/Akt pathways activates NF-kB, AP-1 and CREB. These last three have a direct effect on four cytokines (IL1B, IL6, IL10 and MCP1), with bold black letters for the highest level of cytokine induction, gray letters for the lowest level and regular letter for the intermediate induction.</Comment>
   <BiopaxRef>d81</BiopaxRef>
   <Graphics BoardWidth="1000.0" BoardHeight="754.8095238095243" />
   <DataNode TextLabel="P38 MAPK (14)" GraphId="d20c2" Type="Protein" GroupRef="e5874">
@@ -84,7 +84,7 @@
     <Graphics CenterX="276.0" CenterY="640.8095238095243" Width="90.0" Height="25.0" ZOrder="32781" FontSize="12" Valign="Middle" Color="999999" />
     <Xref Database="Ensembl" ID="ENSG00000136244" />
   </DataNode>
-  <DataNode TextLabel="IL1-beta" GraphId="b4ab9" Type="GeneProduct" GroupRef="f4e1a">
+  <DataNode TextLabel="IL1B" GraphId="b4ab9" Type="GeneProduct" GroupRef="f4e1a">
     <Graphics CenterX="276.0" CenterY="665.8095238095243" Width="90.0" Height="25.0" ZOrder="32782" FontSize="12" Valign="Middle" Color="999999" />
     <Xref Database="Ensembl" ID="ENSG00000125538" />
   </DataNode>
@@ -101,7 +101,7 @@
     <Graphics CenterX="761.0" CenterY="590.8095238095243" Width="90.0" Height="25.0" ZOrder="32785" FontWeight="Bold" FontSize="16" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000108691" />
   </DataNode>
-  <DataNode TextLabel="IL1-beta" GraphId="c155d" Type="GeneProduct" GroupRef="a5f41">
+  <DataNode TextLabel="IL1B" GraphId="c155d" Type="GeneProduct" GroupRef="a5f41">
     <Graphics CenterX="761.0" CenterY="665.8095238095243" Width="90.0" Height="25.0" ZOrder="32786" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000125538" />
   </DataNode>
@@ -109,7 +109,7 @@
     <Graphics CenterX="491.0" CenterY="590.8095238095243" Width="90.0" Height="25.0" ZOrder="32787" FontWeight="Bold" FontSize="16" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000136244" />
   </DataNode>
-  <DataNode TextLabel="IL1-beta" GraphId="c8bf1" Type="GeneProduct" GroupRef="b6770">
+  <DataNode TextLabel="IL1B" GraphId="c8bf1" Type="GeneProduct" GroupRef="b6770">
     <Graphics CenterX="491.0" CenterY="615.8095238095243" Width="90.0" Height="25.0" ZOrder="32788" FontSize="12" Valign="Middle" Color="999999" />
     <Xref Database="Ensembl" ID="ENSG00000125538" />
   </DataNode>
@@ -277,7 +277,7 @@
   <Label TextLabel="NF-κB" GraphId="b0531">
     <Graphics CenterX="758.0952380952382" CenterY="368.5714285714286" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="Cytokine&#xA;Release" GraphId="bb523">
+  <Label TextLabel="Cytokine&#xA;release" GraphId="bb523">
     <Graphics CenterX="925.0" CenterY="100.25" Width="90.0" Height="58.5" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Hexagon" />
   </Label>
   <Label TextLabel="CREBi measured &#xA;in study&#xA;[PMID:27235719]" GraphId="c10d6">
@@ -286,15 +286,21 @@
   <Label TextLabel="Cytoplasm" GraphId="e22c9">
     <Graphics CenterX="797.0" CenterY="181.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
+  <Label TextLabel="Monocyte" GraphId="ef42a">
+    <Graphics CenterX="165.0" CenterY="183.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="a0a0a0" />
+  </Label>
   <Label TextLabel="Extracellular media" GraphId="e641a">
     <Graphics CenterX="797.0" CenterY="140.0" Width="136.0" Height="25.0" ZOrder="32793" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
-  <Shape TextLabel="nucleus" GraphId="ecde8">
+  <Label TextLabel="Nucleus" GraphId="dd7f8">
+    <Graphics CenterX="622.0" CenterY="673.0" Width="90.0" Height="25.0" ZOrder="32805" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="a0a0a0" />
+  </Label>
+  <Shape GraphId="ecde8">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="503.25" CenterY="628.0595238095243" Width="679.5" Height="143.5" ZOrder="-12" FontSize="12" Align="Left" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Shape TextLabel="  Monocyte" GraphId="c5c7c">
+  <Shape GraphId="c5c7c">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="502.75" CenterY="443.3571428571431" Width="770.5" Height="562.9047619047624" ZOrder="16384" FontWeight="Bold" FontSize="12" Align="Left" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
@@ -312,21 +318,6 @@
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monocyte</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000576</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interleukin-1 family mediated signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000882</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphatidylinositol 3-kinase-Akt signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000232</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interleukin mediated signaling pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000512</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
@@ -334,16 +325,6 @@
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphatidylinositol 3-kinase signaling pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000595</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interleukin-10 signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000515</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cytokine mediated signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000828</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d81">
@@ -358,8 +339,33 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sonia Benitez</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000576</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphatidylinositol 3-kinase-Akt signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000232</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interleukin-10 signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000515</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000003</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interleukin-1 family mediated signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000882</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cytokine mediated signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000828</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>

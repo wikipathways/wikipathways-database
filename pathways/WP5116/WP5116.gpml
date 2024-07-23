@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="SARS-CoV-2 B.1.1.7 variant antagonises innate immune activation" Data-Source="WikiPathways" Version="WP5116_r125318" Author="[Khanspers, NhungP, Mkutmon, Larsgw]" Last-Modified="20230131214923" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="SARS-CoV-2 B.1.1.7 variant antagonises innate immune activation" Data-Source="WikiPathways" Version="WP5116_r134571" Author="[Khanspers, NhungP, Mkutmon, Larsgw, Eweitz]" Last-Modified="20240722232944" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">This pathway describes the antagonistic effects of the SARS-CoV-2 B.1.1.7 (Alpha) variant on innate immune activation. The pathway is based on Figure 5 from [https://www.biorxiv.org/content/10.1101/2021.06.06.446826v1.full Thorne et al.]
 
 SARS-CoV-2 is known to antagonize innate immune activation, and the highly transmissible B.1.1.7 variant does this more effectively by increased RNA synthesis and increased protein expression of key innate immune antagonists, orf9b, orf6 and N:
 N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear translocation and subsequent type 1 interferon production and orf9b inhibits RNA-sensing by binding to TOM70 (TOMM70). The latter interaction is regulated by phosphorylation of orf9b on Ser53; orf9b that is phosphorylated on Ser53 cannot bind to TOM70.</Comment>
   <BiopaxRef>d27</BiopaxRef>
-  <Graphics BoardWidth="878.7394957983192" BoardHeight="985.8823529411764" />
+  <Graphics BoardWidth="840.0" BoardHeight="868.75" />
   <DataNode TextLabel="IFNB1" GraphId="a3d27" Type="GeneProduct">
-    <Graphics CenterX="738.9424622086121" CenterY="850.1855905152775" Width="79.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="716.4424622086121" CenterY="775.1855905152775" Width="79.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000171855" />
   </DataNode>
   <DataNode TextLabel="TBK1" GraphId="b4c5d" Type="GeneProduct" GroupRef="f5c8d">
@@ -49,7 +49,7 @@ N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear tr
     <Xref Database="Uniprot-TrEMBL" ID="P0DTD2" />
   </DataNode>
   <DataNode TextLabel="orf6" GraphId="d7474" Type="GeneProduct">
-    <Graphics CenterX="738.9424622086121" CenterY="466.89526049664266" Width="95.16273653893899" Height="25.0" ZOrder="36848" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" />
+    <Graphics CenterX="716.4424622086121" CenterY="466.89526049664266" Width="95.16273653893899" Height="25.0" ZOrder="36848" FillColor="ffcccc" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" />
     <Xref Database="Uniprot-TrEMBL" ID="P0DTC6" />
   </DataNode>
   <DataNode TextLabel="IRF3" GraphId="de668" Type="GeneProduct">
@@ -62,7 +62,7 @@ N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear tr
     <Xref Database="Uniprot-TrEMBL" ID="P0DTD2" />
   </DataNode>
   <DataNode TextLabel="IRF3" GraphId="aaba9" Type="GeneProduct">
-    <Graphics CenterX="509.0" CenterY="850.1855905152775" Width="79.0" Height="25.0" ZOrder="36887" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="509.0" CenterY="775.1855905152775" Width="79.0" Height="25.0" ZOrder="36887" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000126456" />
   </DataNode>
   <DataNode TextLabel="N sgRNA" GraphId="a8959" Type="Rna" GroupRef="e546c">
@@ -96,22 +96,22 @@ N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear tr
   <Interaction GraphId="id2a86bd25">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="509.0" Y="686.391472868217" GraphRef="de668" RelX="0.0" RelY="1.0" />
-      <Point X="509.0" Y="837.6855905152775" GraphRef="aaba9" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
-      <Anchor Position="0.19641505880393847" Shape="None" GraphId="ad7dc" />
+      <Point X="509.0" Y="762.6855905152775" GraphRef="aaba9" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.43051391477369305" Shape="None" GraphId="ad7dc" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id3148b3d7">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="350.4496651796303" Y="185.397080869349" GraphRef="d7bb1" RelX="0.0" RelY="1.0" />
+      <Point X="350.4496651796303" Y="185.397080869349" />
       <Point X="350.5" Y="243.5" GraphRef="d6778" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id42df1d08">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="548.5" Y="850.1855905152775" GraphRef="aaba9" RelX="1.0" RelY="0.0" />
-      <Point X="699.4424622086121" Y="850.1855905152775" GraphRef="a3d27" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
+      <Point X="548.5" Y="775.1855905152775" GraphRef="aaba9" RelX="1.0" RelY="0.0" />
+      <Point X="676.9424622086121" Y="775.1855905152775" GraphRef="a3d27" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -139,8 +139,8 @@ N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear tr
   <Interaction GraphId="id7ab814f6">
     <BiopaxRef>c95</BiopaxRef>
     <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
-      <Point X="715.1517780738774" Y="479.39526049664266" GraphRef="d7474" RelX="-0.5" RelY="1.0" />
-      <Point X="509.0" Y="716.1079158825544" GraphRef="ad7dc" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="692.6517780738774" Y="479.39526049664266" GraphRef="d7474" RelX="-0.5" RelY="1.0" />
+      <Point X="509.0" Y="719.2371521306577" GraphRef="ad7dc" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -170,8 +170,8 @@ N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear tr
   </Interaction>
   <Interaction GraphId="idcfe5cb4d">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="738.9424622086121" Y="837.6855905152775" GraphRef="a3d27" RelX="0.0" RelY="-1.0" />
-      <Point X="738.9424622086121" Y="744.0798319327741" GraphRef="f3919" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point X="716.4424622086121" Y="762.6855905152775" GraphRef="a3d27" RelX="0.0" RelY="-1.0" />
+      <Point X="716.4424622086121" Y="694.0798319327741" GraphRef="f3919" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -191,15 +191,15 @@ N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear tr
   </Interaction>
   <Interaction GraphId="b2301">
     <Graphics ZOrder="36885" LineThickness="1.0">
-      <Point X="738.9424622086121" Y="479.39526049664266" GraphRef="d7474" RelX="0.0" RelY="1.0" />
-      <Point X="738.9424622086121" Y="719.0798319327741" GraphRef="f3919" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+      <Point X="716.4424622086121" Y="479.39526049664266" GraphRef="d7474" RelX="0.0" RelY="1.0" />
+      <Point X="716.4424622086121" Y="669.0798319327741" GraphRef="f3919" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e87dd">
     <Graphics ConnectorType="Elbow" ZOrder="36892" LineStyle="Broken" LineThickness="1.0">
       <Point X="390.0" Y="318.0" GraphRef="da33c" RelX="1.0" RelY="0.0" />
-      <Point X="738.9424622086121" Y="454.39526049664266" GraphRef="d7474" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="716.4424622086121" Y="454.39526049664266" GraphRef="d7474" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -210,82 +210,82 @@ N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear tr
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <GraphicalLine GraphId="cc4bc" GroupRef="d5b77">
+  <GraphicalLine GraphId="cc4bc">
     <Graphics ZOrder="36850" LineThickness="1.0" Color="ff0000">
       <Point X="368.19966517963053" Y="74.39708086934922" />
       <Point X="380.19966517963053" Y="49.39708086934934" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="e9d01" GroupRef="d5b77">
+  <GraphicalLine GraphId="e9d01">
     <Graphics ZOrder="36854" LineThickness="1.0" Color="ff0000">
       <Point X="384.19966517963053" Y="87.39708086934922" />
       <Point X="406.19966517963076" Y="68.39708086934934" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="b6ac9" GroupRef="d5b77">
+  <GraphicalLine GraphId="b6ac9">
     <Graphics ZOrder="36855" LineThickness="1.0" Color="ff0000">
       <Point X="388.19966517963053" Y="101.39708086934922" />
       <Point X="415.19966517963076" Y="101.39708086934922" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="bc060" GroupRef="d5b77">
+  <GraphicalLine GraphId="bc060">
     <Graphics ZOrder="36856" LineThickness="1.0" Color="ff0000">
       <Point X="385.19966517963053" Y="116.39708086934928" />
       <Point X="413.19966517963053" Y="130.39708086934922" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="cb639" GroupRef="d5b77">
+  <GraphicalLine GraphId="cb639">
     <Graphics ZOrder="36857" LineThickness="1.0" Color="ff0000">
       <Point X="375.1996651796303" Y="130.39708086934922" />
       <Point X="393.19966517963053" Y="152.39708086934917" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="d677a" GroupRef="d5b77">
+  <GraphicalLine GraphId="d677a">
     <Graphics ZOrder="36858" LineThickness="1.0" Color="ff0000">
       <Point X="347.19966517963053" Y="69.39708086934934" />
       <Point X="347.19966517963053" Y="43.39708086934934" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="f19d6" GroupRef="d5b77">
+  <GraphicalLine GraphId="f19d6">
     <Graphics ZOrder="36859" LineThickness="1.0" Color="ff0000">
       <Point X="327.1996651796303" Y="74.39708086934922" />
       <Point X="313.1996651796301" Y="49.39708086934934" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="e9eee" GroupRef="d5b77">
+  <GraphicalLine GraphId="e9eee">
     <Graphics ZOrder="36860" LineThickness="1.0" Color="ff0000">
       <Point X="312.1996651796301" Y="90.39708086934922" />
       <Point X="290.1996651796301" Y="75.39708086934922" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="faf71" GroupRef="d5b77">
+  <GraphicalLine GraphId="faf71">
     <Graphics ZOrder="36861" LineThickness="1.0" Color="ff0000">
       <Point X="312.1996651796301" Y="107.39708086934928" />
       <Point X="285.19966517962985" Y="109.39708086934928" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="cb9ec" GroupRef="d5b77">
+  <GraphicalLine GraphId="cb9ec">
     <Graphics ZOrder="36862" LineThickness="1.0" Color="ff0000">
       <Point X="317.1996651796301" Y="126.39708086934922" />
       <Point X="292.1996651796301" Y="139.39708086934922" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="ea234" GroupRef="d5b77">
+  <GraphicalLine GraphId="ea234">
     <Graphics ZOrder="36863" LineThickness="1.0" Color="ff0000">
       <Point X="333.1996651796303" Y="137.39708086934922" />
       <Point X="320.1996651796301" Y="163.39708086934888" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="a4a34" GroupRef="d5b77">
+  <GraphicalLine GraphId="a4a34">
     <Graphics ZOrder="36864" LineThickness="1.0" Color="ff0000">
       <Point X="353.19966517963076" Y="139.39708086934922" />
       <Point X="358.19966517963053" Y="165.39708086934888" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="IFN antiviral&#xA;signaling" GraphId="f3919">
-    <Graphics CenterX="738.9424622086121" CenterY="731.5798319327741" Width="96.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="716.4424622086121" CenterY="681.5798319327741" Width="96.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Label TextLabel="SARS-CoV-2" GraphId="fbcf5" GroupRef="d5b77">
+  <Label TextLabel="SARS-CoV-2" GraphId="fbcf5">
     <Graphics CenterX="348.1996651796301" CenterY="103.39708086934922" Width="80.0" Height="25.0" ZOrder="36852" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Subgenomic RNAs" GraphId="acf66">
@@ -294,97 +294,108 @@ N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear tr
   <Shape TextLabel="Respiratory epithelial cell" GraphId="d2163">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="508.36974789915945" CenterY="582.4411764705878" Width="680.7394957983196" Height="746.882352941177" ZOrder="16384" FontSize="12" Align="Left" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="488.99999999999983" CenterY="523.8749999999997" Width="642.0000000000003" Height="629.7500000000007" ZOrder="16384" FontSize="12" Align="Left" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape TextLabel="Nucleus" GraphId="e664f">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="618.5336134453783" CenterY="854.1806722689082" Width="388.32773109243635" Height="161.38655462184744" ZOrder="16384" FontWeight="Bold" FontSize="12" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="596.0336134453783" CenterY="771.875" Width="388.32773109243635" Height="81.25" ZOrder="16384" FontWeight="Bold" FontSize="12" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="a7288" GroupRef="d5b77">
+  <Shape GraphId="a7288">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="348.9496651796301" CenterY="104.14708086934934" Width="76.5" Height="68.5" ZOrder="36851" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="a5deb" GroupRef="d5b77">
+  <Shape GraphId="a5deb">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="421.44966517963076" CenterY="101.89708086934922" Width="11.5" Height="11.0" ZOrder="36865" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="e0e57" GroupRef="d5b77">
+  <Shape GraphId="e0e57">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="417.44966517963076" CenterY="132.89708086934922" Width="11.5" Height="11.0" ZOrder="36866" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="f8d46" GroupRef="d5b77">
+  <Shape GraphId="f8d46">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="397.44966517963053" CenterY="155.8970808693491" Width="11.5" Height="11.0" ZOrder="36867" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="a8f11" GroupRef="d5b77">
+  <Shape GraphId="a8f11">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="412.44966517963053" CenterY="63.897080869349224" Width="11.5" Height="11.0" ZOrder="36868" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="c6430" GroupRef="d5b77">
+  <Shape GraphId="c6430">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="286.44966517962985" CenterY="141.89708086934917" Width="11.5" Height="11.0" ZOrder="36869" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="aabd4" GroupRef="d5b77">
+  <Shape GraphId="aabd4">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="279.44966517962985" CenterY="108.89708086934928" Width="11.5" Height="11.0" ZOrder="36870" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="c4c33" GroupRef="d5b77">
+  <Shape GraphId="c4c33">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="286.44966517962985" CenterY="71.89708086934934" Width="11.5" Height="11.0" ZOrder="36871" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="cc448" GroupRef="d5b77">
+  <Shape GraphId="cc448">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="312.4496651796301" CenterY="44.89708086934934" Width="11.5" Height="11.0" ZOrder="36872" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="f5c90" GroupRef="d5b77">
+  <Shape GraphId="f5c90">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="346.44966517963053" CenterY="36.89708086934934" Width="11.5" Height="11.0" ZOrder="36873" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="be942" GroupRef="d5b77">
+  <Shape GraphId="be942">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="383.4496651796303" CenterY="44.89708086934934" Width="11.5" Height="11.0" ZOrder="36874" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="c5345" GroupRef="d5b77">
+  <Shape GraphId="c5345">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="318.4496651796301" CenterY="169.89708086934905" Width="11.5" Height="11.0" ZOrder="36875" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Shape GraphId="b9891" GroupRef="d5b77">
+  <Shape GraphId="b9891">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
     <Graphics CenterX="360.44966517963053" CenterY="171.897080869349" Width="11.5" Height="11.0" ZOrder="36876" FontSize="12" Valign="Middle" ShapeType="Oval" Color="ff0000" Rotation="0.0" />
   </Shape>
   <Group GroupId="eaa6f" GraphId="a29aa" Style="Group" />
   <Group GroupId="e6ffb" GraphId="b1bba" Style="Complex" />
   <Group GroupId="e546c" GraphId="b8d63" Style="Group" />
-  <Group GroupId="d5b77" GraphId="d7bb1" Style="Group" />
   <Group GroupId="f5c8d" GraphId="e24ca" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">severe acute respiratory syndrome</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2945</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eb7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32155444</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structure, Function, and Antigenicity of the SARS-CoV-2 Spike Glycoprotein.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walls AC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Park YJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tortorici MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wall A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McGuire AT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veesler D</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a5f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33801464</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARS-CoV-2 Nucleocapsid Protein Targets RIG-I-Like Receptor Pathways to Inhibit the Induction of Interferon Response.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cells</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh SJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shin OS</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">innate immune response pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000234</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">epithelial cell of upper respiratory tract</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002631</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ae3">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32728199</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARS-CoV-2 Orf9b suppresses type I interferon responses by targeting TOM70.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Mol Immunol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang HW</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang HN</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meng QF</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xie J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zheng YX</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang XN</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qi H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang PH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Han ZG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tao SC</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c95">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32733001</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -406,43 +417,6 @@ N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear tr
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou Z</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xiang Z</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang J</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COVID-19</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0080600</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">severe acute respiratory syndrome</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2945</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">innate immune response pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000234</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a5f">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33801464</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARS-CoV-2 Nucleocapsid Protein Targets RIG-I-Like Receptor Pathways to Inhibit the Induction of Interferon Response.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cells</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh SJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shin OS</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eb7">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32155444</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structure, Function, and Antigenicity of the SARS-CoV-2 Spike Glycoprotein.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walls AC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Park YJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tortorici MA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wall A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McGuire AT</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veesler D</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d27">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34127972</bp:ID>
@@ -483,6 +457,31 @@ N prevents activation of RNA sensor RIG-1 (DDX58), orf6 inhibits IRF3 nuclear tr
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clare Jolly</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greg J. Towers</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nevan J. Krogan</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COVID-19</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0080600</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ae3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32728199</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SARS-CoV-2 Orf9b suppresses type I interferon responses by targeting TOM70.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Mol Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang HW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang HN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meng QF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xie J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zheng YX</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang XN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qi H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang PH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Han ZG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tao SC</bp:AUTHORS>
     </bp:PublicationXref>
   </Biopax>
 </Pathway>
