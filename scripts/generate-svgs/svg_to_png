@@ -4,10 +4,17 @@ const { exec, execSync} = require("child_process");
 const { convertFile}  = require('convert-svg-to-png');
 const fs = require("fs");
 const path = require("path");
-const cheerio = require('cheerio'); // Add this line to require cheerio
 
-// Print the version of cheerio being used
-console.log(`Cheerio version: ${cheerio.version}`);
+// Function to print all modules and their versions using npm ls
+function printModulesAndVersions() {
+  const result = execSync('npm ls --depth=0 --json').toString();
+  const jsonResult = JSON.parse(result);
+  console.log("Dependencies and their versions:");
+  for (const [key, value] of Object.entries(jsonResult.dependencies)) {
+    console.log(`${key}: ${value.version}`);
+  }
+}
+printModulesAndVersions();
 
 const svgFile = process.argv[2];
 if (!svgFile) {

@@ -7,7 +7,6 @@
   "scripts": {
     "pvjs": "pvjs",
     "gpml2pvjson": "gpml2pvjson",
-    "preinstall": "npx npm-force-resolutions",
     "bridgedb": "bridgedb",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,14 +16,15 @@
     "@wikipathways/pvjs": "^4.0.5",
     "bridgedb": "^6.2.6",
     "convert-svg-to-png": "^0.6.1",
-    "cheerio": "^1.0.0-rc.11",
     "gpml2pvjson": "^4.1.8",
     "JSONStream": "^1.3.5",
     "rx-extra": "^2.1.1",
     "wikibase-cli": "^15.16.6",
     "wikibase-sdk": "^7.0.9"
   },
-  "resolutions": {
-    "cheerio": "^1.0.0-rc.11"
+  "pnpm": {
+    "overrides": {
+      "cheerio": "1.0.0-rc.11"
+    }
   }
 }
