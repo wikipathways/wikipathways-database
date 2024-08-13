@@ -4,6 +4,10 @@ const { exec, execSync} = require("child_process");
 const { convertFile}  = require('convert-svg-to-png');
 const fs = require("fs");
 const path = require("path");
+const cheerio = require('cheerio'); // Add this line to require cheerio
+
+// Print the version of cheerio being used
+console.log(`Cheerio version: ${cheerio.version}`);
 
 const svgFile = process.argv[2];
 if (!svgFile) {
