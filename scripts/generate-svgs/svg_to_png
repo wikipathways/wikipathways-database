@@ -7,7 +7,7 @@ const path = require("path");
 
 // Function to print all modules and their versions using npm ls
 function printModulesAndVersions() {
-  const result = execSync('npm ls --depth=0 --json').toString();
+  const result = execSync('npm ls --json').toString();
   const jsonResult = JSON.parse(result);
   console.log("Dependencies and their versions:");
   for (const [key, value] of Object.entries(jsonResult.dependencies)) {
