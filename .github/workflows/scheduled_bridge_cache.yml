@@ -23,13 +23,13 @@ jobs:
           ref: main
 
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '11'
             
       - name: Cache meta-data-action with dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cacheMetaJar
         with:
           path: ./meta-data-action-1.1.4-jar-with-dependencies.jar
@@ -47,7 +47,7 @@ jobs:
 
                 
       - name: Cache and install dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache
         with:
           path: ${{ github.workspace }}/wikipathways-database/Hs_Derby_Ensembl_108.bridge
@@ -71,7 +71,7 @@ jobs:
           done
           
       - name: Cache all bridge files
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cacheAllBridge
         with:
           path: |
