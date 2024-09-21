@@ -1,107 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Isoleucine degradation" Data-Source="WikiPathways" Version="WP178_r117305" Author="[J.Heckman, MaintBot, Ddigles, Egonw, Eweitz]" Last-Modified="20210520111811" Organism="Saccharomyces cerevisiae">
-  <Comment Source="WikiPathways-description">While Saccharomyces cerevisiae can use most amino acids as their sole nitrogen source, they can only use a few amino acids as a carbon source to support growth (CITS:[Large86][Cooper82]).  This is in contrast to most eukaryotes and some fungi, which can metabolize amino acids completely, utilizing them as sole sources of carbon and nitrogen (CITS:[Stryer88][Large 86]). S. cerevisiae degrade the branched-chain amino acids (iso-leucine, leucine, and valine) and the aromatic amino acids (tryptophan, phenylalanine, and tyrosine) via the Ehrlich pathway (CITS:[Sentheshanmuganathan60][10989420]).  This pathway is comprised of the following steps:  1) deamination of the amino acid to the corresponding alpha-keto acid; 2) decarboxylation of the resulting alpha-keto acid to the respective aldehyde; and, 3) reduction of the aldehyde to form the corresponding long chain or complex alcohol, known as a fusel alcohol or fusel oil (CITS:[10989420][Large 86]).  Fusel alcohols are important flavor and aroma compounds in yeast-fermented food products and beverages (as reported in (CITS:[9546164])  Each of the three steps in branched-chain amino acid degradation can be catalyzed by more than one isozyme; which enzyme is used appears to depend on the amino acid, the carbon source and the stage of growth of the culture (CITS:[12499363]). The initial transamination step in iso-leucine degradation can be catalyzed by either of the branched-chain amino acid transaminases BAT1 (mitochondrial) or BAT2 (cytosolic) (CITS:[10989445][8798704][8702755]). The subsequent decarboxylation step can be catalyzed by any one of the five decarboxylases (Pdc1p, Pdc5p, Pdc6p, Thi3p, and Aro10p) (CITS:[9546164][10753893]) and the final step can be catalyzed by any one of six alcohol dehydrogenases (Adh1p, Adh2p, Adh3p, Adh4p, Adh5p, and Sfa1p) (CITS:[12499363]). 
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Isoleucine degradation" Data-Source="WikiPathways" Version="WP178_r135519" Author="[J.Heckman, MaintBot, Ddigles, Egonw, Eweitz, Khanspers]" Last-Modified="20240921000613" Organism="Saccharomyces cerevisiae">
+  <Comment Source="WikiPathways-description">While Saccharomyces cerevisiae can use most amino acids as their sole nitrogen source, they can only use a few amino acids as a carbon source to support growth.  This is in contrast to most eukaryotes and some fungi, which can metabolize amino acids completely, utilizing them as sole sources of carbon and nitrogen. S. cerevisiae degrade the branched-chain amino acids (iso-leucine, leucine, and valine) and the aromatic amino acids (tryptophan, phenylalanine, and tyrosine) via the Ehrlich pathway.  This pathway is comprised of the following steps:  1) deamination of the amino acid to the corresponding alpha-keto acid; 2) decarboxylation of the resulting alpha-keto acid to the respective aldehyde; and, 3) reduction of the aldehyde to form the corresponding long chain or complex alcohol, known as a fusel alcohol or fusel oil.  Fusel alcohols are important flavor and aroma compounds in yeast-fermented food products and beverages  Each of the three steps in branched-chain amino acid degradation can be catalyzed by more than one isozyme; which enzyme is used appears to depend on the amino acid, the carbon source and the stage of growth of the culture. The initial transamination step in iso-leucine degradation can be catalyzed by either of the branched-chain amino acid transaminases BAT1 (mitochondrial) or BAT2 (cytosolic). The subsequent decarboxylation step can be catalyzed by any one of the five decarboxylases (Pdc1p, Pdc5p, Pdc6p, Thi3p, and Aro10p) and the final step can be catalyzed by any one of six alcohol dehydrogenases (Adh1p, Adh2p, Adh3p, Adh4p, Adh5p, and Sfa1p). 
 SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
-  <Comment Source="GenMAPP remarks">Based on http://pathway.yeastgenome.org/biocyc/</Comment>
   <BiopaxRef>n6r</BiopaxRef>
   <BiopaxRef>nf1</BiopaxRef>
   <BiopaxRef>f1r</BiopaxRef>
   <BiopaxRef>pvk</BiopaxRef>
-  <Graphics BoardWidth="674.5000000000001" BoardHeight="299.5" />
-  <DataNode TextLabel="BAT1" GraphId="b88" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="branched-chain amino acid aminotransferase, mitoch" />
-    <Graphics CenterX="180.0" CenterY="210.0" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000001251" />
+  <BiopaxRef>b20</BiopaxRef>
+  <Graphics BoardWidth="1041.5740740740775" BoardHeight="293.6574074074075" />
+  <DataNode TextLabel="L-isoleucine" GraphId="a702d" Type="Metabolite">
+    <Graphics CenterX="130.53703703703695" CenterY="189.5648148148149" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="58045" />
   </DataNode>
-  <DataNode TextLabel="BAT2" GraphId="a9a" Type="GeneProduct">
+  <DataNode TextLabel="BAT2" GraphId="a9a" Type="GeneProduct" GroupRef="b7e42">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="branched-chain amino acid aminotransferase" />
-    <Graphics CenterX="180.0" CenterY="190.0" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="233.24074074074082" CenterY="102.037037037037" Width="40.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="SGD" ID="S000003909" />
   </DataNode>
-  <DataNode TextLabel="PDC1" GraphId="beb" Type="GeneProduct">
+  <DataNode TextLabel="2-methylbutanal" GraphId="ae17b" Type="Metabolite">
+    <Graphics CenterX="693.9351851851875" CenterY="189.5648148148149" Width="114.44444444444457" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="16182" />
+  </DataNode>
+  <DataNode TextLabel="NAD+" GraphId="b6044" Type="Metabolite">
+    <Graphics CenterX="862.199074074075" CenterY="251.15740740740748" Width="62.36111111111108" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="57540" />
+  </DataNode>
+  <DataNode TextLabel="BAT1" GraphId="b88" Type="GeneProduct" GroupRef="b7e42">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="branched-chain amino acid aminotransferase, mitoch" />
+    <Graphics CenterX="233.24074074074082" CenterY="127.03703703703698" Width="40.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="SGD" ID="S000001251" />
+  </DataNode>
+  <DataNode TextLabel="NADH" GraphId="bc33d" Type="Metabolite">
+    <Graphics CenterX="768.0347222222229" CenterY="249.74999999999997" Width="63.84722222222196" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="57945" />
+  </DataNode>
+  <DataNode TextLabel="PDC1" GraphId="beb" Type="GeneProduct" GroupRef="d72ba">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="pyruvate decarboxylase isozyme 1" />
-    <Graphics CenterX="476.6666666666667" CenterY="203.33333333333334" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="572.7314814814833" CenterY="144.02777777777766" Width="40.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="SGD" ID="S000004034" />
   </DataNode>
-  <DataNode TextLabel="PDC5" GraphId="e36" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="pyruvate decarboxylase isozyme 2" />
-    <Graphics CenterX="476.6666666666667" CenterY="180.0" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000004124" />
-  </DataNode>
-  <DataNode TextLabel="PDC6" GraphId="da5" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="pyruvate decarboxylase isozyme 3" />
-    <Graphics CenterX="476.6666666666667" CenterY="156.66666666666666" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000003319" />
-  </DataNode>
-  <DataNode TextLabel="ARO10" GraphId="d89" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="decarboxylase" />
-    <Graphics CenterX="476.6666666666667" CenterY="133.33333333333334" Width="50.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000002788" />
-  </DataNode>
-  <DataNode TextLabel="THI3" GraphId="d60" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="thiamine metabolism regulatory protein THI3" />
-    <Graphics CenterX="476.6666666666667" CenterY="110.0" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000002238" />
-  </DataNode>
   <DataNode TextLabel="L-glutamate" GraphId="d5f" Type="Metabolite">
-    <Graphics CenterX="236.66666666666666" CenterY="253.33333333333334" Width="95.33333333333333" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="295.6944444444458" CenterY="245.12037037037024" Width="95.33333333333333" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="CAS" ID="56-86-0" />
   </DataNode>
-  <Interaction GraphId="id59c25f71">
+  <DataNode TextLabel="THI3" GraphId="d60" Type="GeneProduct" GroupRef="d72ba">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="thiamine metabolism regulatory protein THI3" />
+    <Graphics CenterX="572.7314814814833" CenterY="44.0277777777778" Width="40.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="SGD" ID="S000002238" />
+  </DataNode>
+  <DataNode TextLabel="ARO10" GraphId="d89" Type="GeneProduct" GroupRef="d72ba">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="decarboxylase" />
+    <Graphics CenterX="572.7314814814833" CenterY="69.02777777777781" Width="50.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="SGD" ID="S000002788" />
+  </DataNode>
+  <DataNode TextLabel="PDC6" GraphId="da5" Type="GeneProduct" GroupRef="d72ba">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="pyruvate decarboxylase isozyme 3" />
+    <Graphics CenterX="572.7314814814833" CenterY="94.02777777777781" Width="40.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="SGD" ID="S000003319" />
+  </DataNode>
+  <DataNode TextLabel="H+" GraphId="e284e" Type="Metabolite">
+    <Graphics CenterX="530.6018518518517" CenterY="249.99999999999991" Width="49.62962962962956" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15378" />
+  </DataNode>
+  <DataNode TextLabel="2-oxoglutarate" GraphId="e2f2a" Type="Metabolite">
+    <Graphics CenterX="182.23611111111111" CenterY="245.12037037037027" Width="96.17592592592587" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="16810" />
+  </DataNode>
+  <DataNode TextLabel="PDC5" GraphId="e36" Type="GeneProduct" GroupRef="d72ba">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="pyruvate decarboxylase isozyme 2" />
+    <Graphics CenterX="572.7314814814833" CenterY="119.02777777777786" Width="40.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="SGD" ID="S000004124" />
+  </DataNode>
+  <DataNode TextLabel="2-methylbutanol" GraphId="ec74f" Type="Metabolite">
+    <Graphics CenterX="950.1759259259295" CenterY="189.5648148148149" Width="122.79629629629608" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="48945" />
+  </DataNode>
+  <DataNode TextLabel="SFA1" GraphId="ef0ef" Type="GeneProduct" GroupRef="e5666">
+    <Graphics CenterX="807.2222222222229" CenterY="77.54629629629615" Width="56.57407407407413" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="YDL168W" />
+  </DataNode>
+  <DataNode TextLabel="CO2" GraphId="f1acf" Type="Metabolite">
+    <Graphics CenterX="613.935185185185" CenterY="249.9999999999999" Width="49.62962962962956" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="16526" />
+  </DataNode>
+  <DataNode TextLabel="(S)-3-methyl-2-oxopentanoate" GraphId="f7ede" Type="Metabolite">
+    <Graphics CenterX="411.9814814814814" CenterY="189.56481481481487" Width="182.98148148148152" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="35146" />
+  </DataNode>
+  <DataNode TextLabel="ADH5" GraphId="afbec" Type="GeneProduct" GroupRef="e5666">
+    <Graphics CenterX="807.2222222222229" CenterY="102.54629629629618" Width="56.57407407407413" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="YBR145W" />
+  </DataNode>
+  <DataNode TextLabel="ADH4" GraphId="ee6f3" Type="GeneProduct" GroupRef="e5666">
+    <Graphics CenterX="807.2222222222229" CenterY="127.54629629629613" Width="56.57407407407413" Height="25.0" ZOrder="32770" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="YGL256W" />
+  </DataNode>
+  <Interaction GraphId="id122c722">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="e8c2d" X="116.66666666666667" Y="223.33333333333334" />
-      <Point GraphId="fba93" X="250.0" Y="223.33333333333334" ArrowHead="Arrow" />
+      <Point X="572.4659777839156" Y="189.5648148148149" GraphRef="f6bb1" RelX="0.0" RelY="0.0" />
+      <Point X="613.935185185185" Y="237.4999999999999" GraphRef="f1acf" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idd61b8dfa">
+  <Interaction GraphId="id3c6e83b4">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="ca480" X="196.66666666666666" Y="230.0" />
-      <Point GraphId="ac827" X="200.0" Y="240.0" ArrowHead="Arrow" />
+      <Point X="807.2222222222229" Y="148.04629629629613" GraphRef="ff046" RelX="0.0" RelY="1.0" />
+      <Point X="806.2055555555585" Y="189.5648148148149" GraphRef="c4691" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id59c25f71">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="175.53703703703695" Y="189.5648148148149" GraphRef="a702d" RelX="1.0" RelY="0.0" />
+      <Point X="320.49074074074065" Y="189.56481481481487" GraphRef="f7ede" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="cefb4" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6ce772fa">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="233.24074074074082" Y="147.53703703703698" GraphRef="f07d2" RelX="0.0" RelY="1.0" />
+      <Point X="233.51851851851842" Y="189.5648148148149" GraphRef="cefb4" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6d78e0dd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="768.0347222222229" Y="237.25" GraphRef="bc33d" RelX="0.0" RelY="-1.0" />
+      <Point X="806.2055555555585" Y="189.5648148148149" GraphRef="c4691" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7aa61fb4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="806.2055555555585" Y="189.5648148148149" GraphRef="c4691" RelX="0.0" RelY="0.0" />
+      <Point X="862.199074074075" Y="238.6574074074075" GraphRef="b6044" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id88f86b02">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="572.7314814814833" Y="164.52777777777766" GraphRef="d7ff4" RelX="0.0" RelY="1.0" />
+      <Point X="572.4659777839156" Y="189.5648148148149" GraphRef="f6bb1" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb65db85">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="182.23611111111111" Y="232.62037037037027" GraphRef="e2f2a" RelX="0.0" RelY="-1.0" />
+      <Point X="233.51851851851842" Y="189.5648148148149" GraphRef="cefb4" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idba75f623">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="233.51851851851842" Y="189.5648148148149" GraphRef="cefb4" RelX="0.0" RelY="0.0" />
+      <Point X="295.6944444444458" Y="232.6203703703702" GraphRef="d5f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbcd10869">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="751.1574074074098" Y="189.5648148148149" GraphRef="ae17b" RelX="1.0" RelY="0.0" />
+      <Point X="888.7777777777815" Y="189.5648148148149" GraphRef="ec74f" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="c4691" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide5cba93b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="530.6018518518517" Y="237.4999999999999" GraphRef="e284e" RelX="0.0" RelY="-1.0" />
+      <Point X="572.4659777839156" Y="189.5648148148149" GraphRef="f6bb1" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf1c4befb">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d4cc3" X="443.3333333333333" Y="220.0" />
-      <Point GraphId="c9f40" X="536.6666666666666" Y="220.0" ArrowHead="Arrow" />
+      <Point X="503.4722222222222" Y="189.56481481481487" GraphRef="f7ede" RelX="1.0" RelY="0.0" />
+      <Point X="636.7129629629652" Y="189.5648148148149" GraphRef="ae17b" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.517812758906377" Shape="None" GraphId="f6bb1" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id664f04df">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="cbecf" X="510.0" Y="233.33333333333334" />
-      <Point GraphId="a2dff" X="513.3333333333334" Y="243.33333333333334" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Label TextLabel="L-iso-leucine" GraphId="dbd">
-    <Graphics CenterX="60.0" CenterY="223.33333333333334" Width="103.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="2-oxoglutarate" GraphId="d78">
-    <Graphics CenterX="120.0" CenterY="250.0" Width="115.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="2-keto-3-methyl-valerate" GraphId="f6f">
-    <Graphics CenterX="350.0" CenterY="220.0" Width="187.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="amyl-alcohol" GraphId="afa">
-    <Graphics CenterX="593.3333333333334" CenterY="216.66666666666666" Width="102.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="CO2" GraphId="a57">
-    <Graphics CenterX="516.6666666666666" CenterY="260.0" Width="38.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Shape GraphId="e06">
-    <Graphics CenterX="183.33333333333334" CenterY="236.66666666666666" Width="26.666666666666668" Height="26.666666666666668" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="3.141593" />
-  </Shape>
-  <Shape GraphId="a9d">
-    <Graphics CenterX="496.6666666666667" CenterY="230.0" Width="29.814239999999998" Height="13.333333333333334" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="3.729595" />
-  </Shape>
+  <Group GroupId="d72ba" GraphId="d7ff4" Style="Group" />
+  <Group GroupId="b7e42" GraphId="f07d2" Style="Group" />
+  <Group GroupId="e5666" GraphId="ff046" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
-  <Legend CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f1r">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10989445</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Branched-chain-amino-acid transaminases of yeast Saccharomyces cerevisiae.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods Enzymol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prohl C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kispal G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lill R</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isoleucine degradation pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001269</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="n6r">
@@ -115,6 +213,23 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dickinson JA</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hewlins MJ</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b20">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=PATHWAY&amp;object=PWY3O-4109</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isoleucine degradation</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yeast Pathways</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="pvk">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8702755</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two yeast homologs of ECA39, a target for c-Myc regulation, code for cytosolic and mitochondrial branched-chain amino acid aminotransferases.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eden A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simchen G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benvenisty N</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="nf1">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8798704</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -127,25 +242,11 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rolinski B</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lill R</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f1r">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10989445</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Branched-chain-amino-acid transaminases of yeast Saccharomyces cerevisiae.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Methods Enzymol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prohl C</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kispal G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lill R</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="pvk">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8702755</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two yeast homologs of ECA39, a target for c-Myc regulation, code for cytosolic and mitochondrial branched-chain amino acid aminotransferases.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eden A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simchen G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benvenisty N</bp:AUTHORS>
-    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isoleucine degradation pathway </bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001269</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
+

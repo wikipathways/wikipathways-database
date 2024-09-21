@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Regulation of cytotoxic T cell responses by Malat1 - miR-15/16 circuit " Data-Source="WikiPathways" Version="WP5489_r135486" Author="[Khanspers, Eweitz]" Last-Modified="20240919235504" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Regulation of cytotoxic T cell responses by Malat1 - miR-15/16 circuit " Data-Source="WikiPathways" Version="WP5489_r135496" Author="[Khanspers, Eweitz]" Last-Modified="20240920161253" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Regulation of activation and differentiation of cytotoxic T cells by long non-coding RNA Malat1 (Metastasis Associated Lung Adenocarcinoma Transcript 1) and the microRNA family miR-15/16.
 
 This pathway model is developed based on Figure 8 in (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10735224/ Wheeler et al).</Comment>
@@ -50,11 +50,11 @@ This pathway model is developed based on Figure 8 in (https://www.ncbi.nlm.nih.g
     <Xref Database="HGNC" ID="CD3D" />
   </DataNode>
   <DataNode TextLabel="CD27" GraphId="e0b2c" Type="GeneProduct">
-    <Graphics CenterX="42.0" CenterY="287.0" Width="60.0" Height="20.0" ZOrder="32790" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="39.0" CenterY="270.0" Width="60.0" Height="20.0" ZOrder="32790" FontSize="12" Valign="Middle" />
     <Xref Database="HGNC" ID="CD27" />
   </DataNode>
   <DataNode TextLabel="CD43" GraphId="aaece" Type="GeneProduct">
-    <Graphics CenterX="42.0" CenterY="267.0" Width="60.0" Height="20.0" ZOrder="32792" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="39.0" CenterY="250.0" Width="60.0" Height="20.0" ZOrder="32792" FontSize="12" Valign="Middle" />
     <Xref Database="HGNC" ID="SPN" />
   </DataNode>
   <DataNode TextLabel="MIR15B" GraphId="e2e51" Type="Rna" GroupRef="cf5fd">
@@ -90,9 +90,9 @@ This pathway model is developed based on Figure 8 in (https://www.ncbi.nlm.nih.g
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6883b40b">
-    <Graphics ZOrder="12290" LineThickness="1.0">
-      <Point X="321.0" Y="317.0" GraphRef="dbddc" RelX="0.0" RelY="1.0" />
-      <Point X="168.0" Y="277.0" GraphRef="bc3d7" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    <Graphics ConnectorType="Elbow" ZOrder="12290" LineThickness="1.0">
+      <Point X="291.0" Y="307.0" GraphRef="dbddc" RelX="-1.0" RelY="0.0" />
+      <Point X="119.0" Y="276.0" GraphRef="bc3d7" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -105,7 +105,7 @@ This pathway model is developed based on Figure 8 in (https://www.ncbi.nlm.nih.g
   </Interaction>
   <Interaction GraphId="ideb0d774c">
     <Graphics ZOrder="12294" LineThickness="1.0">
-      <Point X="340.0" Y="202.0" GraphRef="d0fa5" RelX="0.0" RelY="1.0" />
+      <Point X="359.0" Y="202.0" GraphRef="d0fa5" RelX="0.5" RelY="1.0" />
       <Point X="500.0" Y="254.0" GraphRef="a76e9" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -142,7 +142,7 @@ This pathway model is developed based on Figure 8 in (https://www.ncbi.nlm.nih.g
   <Interaction GraphId="b944f">
     <Graphics ZOrder="32802" LineThickness="1.0">
       <Point X="500.0" Y="259.0" GraphRef="a76e9" RelX="-1.0" RelY="0.5" />
-      <Point X="225.0" Y="259.75" GraphRef="bc3d7" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="176.0" Y="258.75" GraphRef="bc3d7" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -157,7 +157,7 @@ This pathway model is developed based on Figure 8 in (https://www.ncbi.nlm.nih.g
     <Graphics CenterX="762.5" CenterY="156.0" Width="60.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="Rectangle" />
   </Label>
   <Label TextLabel="Memory Cell &#xA;Persistance" GraphId="bc3d7">
-    <Graphics CenterX="168.0" CenterY="259.75" Width="114.0" Height="34.5" ZOrder="28674" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="119.0" CenterY="258.75" Width="114.0" Height="34.5" ZOrder="28674" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Shape TextLabel="Cytotoxic T cell" GraphId="c523a">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
@@ -191,6 +191,17 @@ This pathway model is developed based on Figure 8 in (https://www.ncbi.nlm.nih.g
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000813</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d89">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9199340</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD28 mediates transcriptional upregulation of the interleukin-2 (IL-2) promoter through a composite element containing the CD28RE and NF-IL-2B AP-1 sites.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shapiro VS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Truitt KE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imboden JB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weiss A</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adaptive immune response pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000235</bp:ID>
@@ -213,17 +224,6 @@ This pathway model is developed based on Figure 8 in (https://www.ncbi.nlm.nih.g
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spitzer MH</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marson A</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ansel KM</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d89">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9199340</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD28 mediates transcriptional upregulation of the interleukin-2 (IL-2) promoter through a composite element containing the CD28RE and NF-IL-2B AP-1 sites.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Biol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shapiro VS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Truitt KE</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imboden JB</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weiss A</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cytotoxic T cell</bp:TERM>
