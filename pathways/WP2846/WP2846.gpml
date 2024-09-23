@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="PCSK9-mediated LDL receptor degradation" Data-Source="WikiPathways" Version="WP2846_r135221" Author="[Susan, MaintBot, Fehrhart, Evelo, AlexanderPico, Eweitz]" Last-Modified="20240808114410" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="PCSK9-mediated LDL receptor degradation" Data-Source="WikiPathways" Version="WP2846_r135533" Author="[Susan, MaintBot, Fehrhart, Evelo, AlexanderPico, Eweitz]" Last-Modified="20240923014743" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Exogenously, circulating PCSK9 (Proprotein convertase subtilisin/kexin type 9) protein binds to LDLR (LDL receptor). Once internalized into the liver cell, the PCSK9 protein directs the LDLR to the lysosome for degradation. Intrinsically, PCSK9, which is secreted from the Golgi apparatus, binds the LDLR before it reaches the cell surface, leading it to lysosomal degradation. However, the precise mechanisms by which the intrinsic degradation pathway operates are still unknown. Abbreviations: LDLR, LDL receptor; PCSK9, proprotein convertase subtilisin/kexin type 9.</Comment>
   <BiopaxRef>f3f</BiopaxRef>
   <Graphics BoardWidth="828.22494375" BoardHeight="795.0174166666675" />
@@ -258,10 +258,10 @@
     <Graphics CenterX="159.14715624999994" CenterY="636.6178270833337" Width="90.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="LDL-receptor &#xA;synthesis" GraphId="d779d">
-    <Graphics CenterX="152.0" CenterY="485.33333333333354" Width="82.0" Height="20.0" ZOrder="32801" FillColor="ffffff" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="152.0" CenterY="485.33333333333354" Width="82.0" Height="25.0" ZOrder="32801" FillColor="ffffff" FontSize="10" Valign="Middle" />
   </Label>
   <Label TextLabel="Lysosomal&#xA;degradation" GraphId="ebcb8">
-    <Graphics CenterX="601.3534812500001" CenterY="593.4108645833336" Width="82.0" Height="20.0" ZOrder="32813" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="601.3534812500001" CenterY="593.4108645833336" Width="82.0" Height="30.0" ZOrder="32813" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Secretion" GraphId="eaa0d">
     <Graphics CenterX="211.83052812500011" CenterY="687.0031885416673" Width="86.12624374999956" Height="32.41545624999935" ZOrder="32841" FillColor="ffffff" FontSize="12" Valign="Middle" />
@@ -391,9 +391,14 @@
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatocyte</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000182</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lipoprotein metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000482</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cholesterol metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001304</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f3f">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21321561</bp:ID>
@@ -405,14 +410,9 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ballantyne CM</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cholesterol metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001304</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lipoprotein metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000482</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000182</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
