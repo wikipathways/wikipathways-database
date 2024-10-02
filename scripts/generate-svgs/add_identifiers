@@ -76,6 +76,21 @@ dataNodes.forEach(function(entityById) {
         else if(idType == "inchikey") {
           idToAdd = "InChI:" + idValue;
         }
+        else if(idType == "pubchem.compound") {
+          idToAdd = "PubChem:" + idValue;
+        }
+        else if(idType == "chemspider") {
+          idToAdd = "ChemSpider:" + idValue;
+        }
+        else if(idType == "hmdb") {
+          idToAdd = "HMDB:" + idValue;
+        }
+        else if(idType == "kegg.compound") {
+          idToAdd = "KEGG:" + idValue;
+        }
+        else if(idType == "lipidmaps") {
+          idToAdd = "LipidMaps:" + idValue;
+        }
         entityById.type.push(idToAdd);
         });
       }
