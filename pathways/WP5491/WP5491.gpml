@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Transcriptional regulation of memory B cell differentiation" Data-Source="WikiPathways" Version="WP5491_r135606" Author="[Eweitz]" Last-Modified="20241006180528" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Transcriptional regulation of memory B cell differentiation" Data-Source="WikiPathways" Version="WP5491_r135648" Author="[Eweitz]" Last-Modified="20241014153244" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Model for signaling pathways and transcription factors that regulate B cell commitment to the germinal center (GC) fate. Boxes that indicate signaling molecules are colored yellow, transcription regulators red, downstream gene targets turquoise and epigenetic modifiers purple. The B cell receptor (BCR), via its signaling subunits Igα and Igβ as well as downstream tyrosine kinases such as SYK and LYN, activates the mitogen-activated protein kinase (MAPK) and phosphoinositide 3-kinase (PI3K)/AKT pathways. MAPK signaling induces the expression of the transcriptional activator myocyte enhancer binding factor 2c (MEF2C), which promotes the transcription of B cell lymphoma-extra large (Bcl2l1) and cyclin D2 (Ccnd2). The expression of the transcriptional repressor inhibitor of DNA binding 3 (ID3) is reduced following B cell activation, allowing for transcription factor 3/4 (TCF3/4)-driven induction of Icosl and Mef2b transcription. PI3K/AKT and nuclear factor-κB (NF-κB) signaling also induce the expression of the transcription factor interferon regulatory factor 4 (IRF4). IRF4 and TCF3/4 induce the expression of the co-activator OBF1 (also known as POU class 2 homeobox associating factor 1 (POU2AF1)), which cooperates with OCT2 (also known as POU class 2 homeobox 2 (POU2F2)) to promote transcription of Slamf1, Syk and Il6. OBF1 and OCT2 can also induce the expression of the transcription factor SPI-B, which acts in a redundant fashion with PU.1 to enhance the transcription of genes encoding B cell surface receptors, such as Cd40, B cell activating factor receptor (Baffr), Toll-like receptor 4 (Tlr4) and Tlr9, and many components of the BCR signaling pathway, including Blnk and Btk. Although transiently elevated levels of IRF4 can induce the expression of B cell lymphoma 6 (BCL-6), sustained IRF4 levels will repress BCL-6 expression. BCL-6 expression is also induced by the transcription factors MEF2B and IRF8/PU.1 as well as the cytokines IL-4 and IL-21, which bind to their respective receptors (IL-4R and IL-21R) and induce signal transducer and activator of transcription 6 (STAT6)/STAT3 signaling. CD40 and/or TLR-driven NF-κB signaling, alongside PI3K/AKT signaling, will induce the expression of the transcription factor MYC, which promotes cellular proliferation by inducing the transcription of Ccnd2/Ccnd3 and the expression of the transcription factor E2F transcription factor 1 (E2F1). E2F1 induces expression of Ezh2 that encodes a Polycomb repressive complex 2 (PRC2) enzymatic component. Enhancer of zeste homologue 2 (EZH2) promotes cell cycle progression by repressing the expression of Cdkn1a, Cdkn2a and Cdkn1b, which encode cyclin-dependent kinase inhibitors. EZH2 also promotes E2F1 release from the retinoblastoma (Rb) protein via phosphorylation of Rb, thereby enhancing E2F1 activation and further EZH2 expression. BCL-6 can directly repress MYC expression, thereby limiting the number of cell divisions that GC B cells undergo. BCL-6 promotes GC B cell development through regulation of numerous genes controlling cellular processes including the DNA damage response, B cell migration, apoptosis, BCR and CD40 signaling, plasma cell differentiation and T cell:B cell interactions. Together, these transcriptional regulators allow for the precise control of GC initiation that is necessary to balance the competing needs of the immune system to induce a protective response while limiting immunopathology.
 
 Derived from https://pfocr.wikipathways.org/figures/PMC7538181__41577_2020_446_Fig1_HTML.html</Comment>
@@ -178,9 +178,9 @@ Derived from https://pfocr.wikipathways.org/figures/PMC7538181__41577_2020_446_F
     <Graphics CenterX="394.0" CenterY="128.0" Width="60.0" Height="20.0" ZOrder="32824" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000140968" />
   </DataNode>
-  <DataNode TextLabel="BCR signaling" GraphId="dee0b" Type="Pathway" GroupRef="b7a3b">
-    <Graphics CenterX="318.0" CenterY="518.5" Width="90.0" Height="25.0" ZOrder="32825" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
-    <Xref Database="" ID="" />
+  <DataNode TextLabel="B cell receptor signaling" GraphId="dee0b" Type="Pathway" GroupRef="b7a3b">
+    <Graphics CenterX="318.0" CenterY="518.5" Width="150.0" Height="25.0" ZOrder="32825" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP23" />
   </DataNode>
   <DataNode TextLabel="SPI1" GraphId="afa26" Type="GeneProduct" GroupRef="fb051">
     <Comment>PU.1 in source comment</Comment>
@@ -424,7 +424,7 @@ Derived from https://pfocr.wikipathways.org/figures/PMC7538181__41577_2020_446_F
   <Interaction GraphId="add1c">
     <Graphics ZOrder="32864" LineThickness="1.0">
       <Point X="376.0" Y="397.0" GraphRef="a23b8" RelX="-0.5" RelY="1.0" />
-      <Point X="344.5" Y="416.0" GraphRef="f1a4b" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
+      <Point X="359.5" Y="416.0" GraphRef="f1a4b" RelX="0.5" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -458,6 +458,16 @@ Derived from https://pfocr.wikipathways.org/figures/PMC7538181__41577_2020_446_F
   <Group GroupId="b3387" GraphId="f2036" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">memory B cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000787</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000236</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d5d">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33024284</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -477,11 +487,6 @@ Derived from https://pfocr.wikipathways.org/figures/PMC7538181__41577_2020_446_F
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laidlaw BJ</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyster JG</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">memory B cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000787</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
