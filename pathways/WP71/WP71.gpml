@@ -1,200 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Lipases biosynthesis" Data-Source="WikiPathways" Version="WP71_r70049" Author="[J.Heckman, MaintBot, Egonw, Ddigles]" Last-Modified="20130712055749" Organism="Saccharomyces cerevisiae">
-  <Comment Source="WikiPathways-description" />
-  <Comment Source="GenMAPP remarks">Based on http://pathway.yeastgenome.org/biocyc/</Comment>
-  <Graphics BoardWidth="855.6666666666667" BoardHeight="812.8333333333334" />
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Phospholipids degradation" Data-Source="WikiPathways" Version="WP71_r136181" Author="[J.Heckman, MaintBot, Egonw, Ddigles, Khanspers]" Last-Modified="20241223225019" Organism="Saccharomyces cerevisiae">
+  <Comment Source="WikiPathways-description">In addition to being a primary structural components of cell membranes, phospholipids may also be thought of as a reservoir of signaling molecules. Hydrolysis of phosphatidylinositol 4,5-biphosphate (PIP2) by phospholipase C, for instance, generates the signaling molecules inositol triphosphate (IP3) and diacylglycerol (DAG). S. cerevisiae catalyzes this reaction via Plc1p, a phosphatidylinositol-specific phospholipase C involved in a variety of biological processes including nutrient sensing and filamentous growth. On the other hand, degradation of phosphatidylcholine (PC) by phospholipase D (Spo14p) yields phosphatidic acid and choline; this activity generates PA required for sporulation in S. cerevisiae. A phospholipase C specific for PC has yet to be identified in S. cerevisiae, however PC may also serve as substrate for phospholipases B (Plb1-3p and Nte1p), which hydrolyze PC to yield glycerophosphocholine (GPC) and two fatty acids. Both phospholipases B and D are thought to mediate PC turnover in yeast, and phospholipase B (as Plb1p) has also been implicated in acyl chain remodeling.
+
+Source: https://pathway.yeastgenome.org/</Comment>
+  <BiopaxRef>efb</BiopaxRef>
+  <Graphics BoardWidth="658.0" BoardHeight="477.75" />
+  <DataNode TextLabel="1-phosphatidyl-1D-myo-inositol 4,5-bisphosphate" GraphId="a9a11" Type="Metabolite">
+    <Graphics CenterX="179.0" CenterY="86.0" Width="238.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="24742074" />
+  </DataNode>
   <DataNode TextLabel="PLC1" GraphId="b83" Type="GeneProduct">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="1-phosphatidylinositol-4,5-bisphosphate phosphodie" />
-    <Graphics CenterX="513.3333333333334" CenterY="96.66666666666667" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="367.33333333333337" CenterY="46.66666666666667" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="SGD" ID="S000006189" />
+  </DataNode>
+  <DataNode TextLabel="H+" GraphId="be139" Type="Metabolite">
+    <Graphics CenterX="399.375" CenterY="122.75" Width="48.75" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15378" />
   </DataNode>
   <DataNode TextLabel="ISC1" GraphId="c2c" Type="GeneProduct">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="inositol phosphosphingolipids phospholipase C" />
-    <Graphics CenterX="393.3333333333333" CenterY="373.3333333333333" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="353.33333333333326" CenterY="291.3333333333333" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="SGD" ID="S000000821" />
   </DataNode>
   <DataNode TextLabel="SPO14" GraphId="e31" Type="GeneProduct">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="phospholipase D1" />
-    <Graphics CenterX="426.6666666666667" CenterY="496.6666666666667" Width="50.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="105.66666666666669" CenterY="326.6666666666667" Width="50.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="SGD" ID="S000001739" />
   </DataNode>
-  <DataNode TextLabel="SPO22" GraphId="b8d" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="meiosis-specific phospholipase A2" />
-    <Graphics CenterX="456.6666666666667" CenterY="696.6666666666666" Width="50.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000001335" />
+  <DataNode TextLabel="inositol 1,4,5-trisphosphate" GraphId="ef2" Type="Metabolite" GroupRef="e1fa3">
+    <Graphics CenterX="553.6666666666666" CenterY="66.0" Width="148.66666666666674" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="203600" />
   </DataNode>
-  <DataNode TextLabel="inositol 1,4,5-trisphosphate" GraphId="ef2" Type="Metabolite">
-    <Graphics CenterX="720.0" CenterY="110.0" Width="211.33333333333334" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="98102-63-7" />
+  <DataNode TextLabel="H20" GraphId="d546f" Type="Metabolite">
+    <Graphics CenterX="335.375" CenterY="121.75" Width="48.75" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15377" />
   </DataNode>
-  <DataNode TextLabel="choline" GraphId="b20" Type="Metabolite">
-    <Graphics CenterX="556.6666666666666" CenterY="483.3333333333333" Width="61.333333333333336" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="62-49-7" />
+  <DataNode TextLabel="1,2-diacyl-sn-glycerol" GraphId="a5415" Type="Metabolite" GroupRef="e1fa3">
+    <Graphics CenterX="550.5" CenterY="108.75" Width="111.0" Height="20.0" ZOrder="32771" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="17815" />
   </DataNode>
-  <Interaction GraphId="ide5f1401e">
+  <DataNode TextLabel="phosphatidylcholine" GraphId="ee13a" Type="Metabolite">
+    <Graphics CenterX="169.5" CenterY="249.75" Width="111.0" Height="20.0" ZOrder="32772" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="16110" />
+  </DataNode>
+  <DataNode TextLabel="phosphocholine" GraphId="f1725" Type="Metabolite" GroupRef="a4b94">
+    <Graphics CenterX="396.5" CenterY="203.75" Width="91.0" Height="20.0" ZOrder="32773" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="295975" />
+  </DataNode>
+  <DataNode TextLabel="H+" GraphId="acd06" Type="Metabolite" GroupRef="a4b94">
+    <Graphics CenterX="397.375" CenterY="181.75" Width="48.75" Height="20.0" ZOrder="32774" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15378" />
+  </DataNode>
+  <DataNode TextLabel="H20" GraphId="fc296" Type="Metabolite">
+    <Graphics CenterX="317.375" CenterY="208.75" Width="48.75" Height="20.0" ZOrder="32775" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15377" />
+  </DataNode>
+  <DataNode TextLabel="1,2-diacyl-sn-glycerol 3-phosphate" GraphId="c42d6" Type="Metabolite">
+    <Graphics CenterX="169.5" CenterY="437.75" Width="165.0" Height="20.0" ZOrder="32776" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="29089" />
+  </DataNode>
+  <DataNode TextLabel="choline" GraphId="ad11f" Type="Metabolite" GroupRef="f770b">
+    <Graphics CenterX="234.0" CenterY="373.75" Width="60.0" Height="20.0" ZOrder="32777" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15354" />
+  </DataNode>
+  <DataNode TextLabel="H+" GraphId="ca3e3" Type="Metabolite" GroupRef="f770b">
+    <Graphics CenterX="234.375" CenterY="351.75" Width="48.75" Height="20.0" ZOrder="32778" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15378" />
+  </DataNode>
+  <DataNode TextLabel="H20" GraphId="bc483" Type="Metabolite">
+    <Graphics CenterX="226.375" CenterY="300.75" Width="48.75" Height="20.0" ZOrder="32779" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15377" />
+  </DataNode>
+  <Interaction GraphId="id153723c8">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="e42c6" X="410.66666666666663" Y="120.0" GraphRef="f99" RelX="1.0" RelY="0.0" />
-      <Point GraphId="e446b" X="606.6666666666666" Y="123.33333333333333" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id8bb37dbc">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="c57f9" X="351.0" Y="241.59663865546216" GraphRef="a09" RelX="1.0" RelY="0.0" />
-      <Point GraphId="e138b" X="538.0" Y="240.0" GraphRef="a3f" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
-      <Anchor Position="0.6394626625471895" Shape="None" GraphId="ad317" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idccca40a2">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="b8f7b" X="470.57951789632443" Y="240.57564784971456" GraphRef="ad317" RelX="0.0" RelY="0.0" />
-      <Point GraphId="f835e" X="540.8333333333333" Y="276.6666666666667" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idb4278428">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="f1cc7" X="523.3333333333334" Y="386.6666666666667" />
-      <Point GraphId="da684" X="284.0" Y="386.0" ArrowHead="Receptor" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="ide7df8634">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="a67db" X="523.3333333333334" Y="386.6666666666667" />
-      <Point GraphId="f19a1" X="556.5" Y="366.0" GraphRef="f0a" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idaab9d386">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="dc643" X="523.3333333333334" Y="386.6666666666667" />
-      <Point GraphId="ee24d" X="551.1666666666667" Y="406.6666666666667" GraphRef="f52" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="169.5" Y="326.95" GraphRef="a9cdf" RelX="0.0" RelY="0.0" />
+      <Point X="196.0" Y="362.75" GraphRef="c9d8e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id3a707ae4">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="b15df" X="270.0" Y="516.6666666666666" />
-      <Point GraphId="cdc65" X="530.0" Y="516.6666666666666" ArrowHead="Arrow" />
+      <Point X="169.5" Y="259.75" GraphRef="ee13a" RelX="0.0" RelY="1.0" />
+      <Point X="169.5" Y="427.75" GraphRef="c42d6" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="a9cdf" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idf0f502dd">
+  <Interaction GraphId="id58833e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d49d9" X="500.0" Y="516.6666666666666" />
-      <Point GraphId="ad27c" X="533.3333333333334" Y="496.6666666666667" ArrowHead="Arrow" />
+      <Point X="335.375" Y="111.75" GraphRef="d546f" RelX="0.0" RelY="-1.0" />
+      <Point X="367.3333333333333" Y="86.65" GraphRef="eb56f" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idefa6d1e8">
+  <Interaction GraphId="id8293ebf6">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="dc462" X="286.6666666666667" Y="716.6666666666666" />
-      <Point GraphId="a938f" X="526.6666666666666" Y="716.6666666666666" />
+      <Point X="130.66666666666669" Y="326.6666666666667" GraphRef="e31" RelX="1.0" RelY="0.0" />
+      <Point X="169.5" Y="326.95" GraphRef="a9cdf" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id836bc2e3">
+  <Interaction GraphId="idacb02841">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d38ae" X="526.6666666666666" Y="716.6666666666666" />
-      <Point GraphId="dbd37" X="546.6666666666666" Y="703.3333333333334" ArrowHead="Arrow" />
+      <Point X="317.375" Y="218.75" GraphRef="fc296" RelX="0.0" RelY="1.0" />
+      <Point X="352.7253886010363" Y="249.75" GraphRef="b240e" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idf4a6b6d2">
+  <Interaction GraphId="idb1638a08">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="fe513" X="526.6666666666666" Y="716.6666666666666" />
-      <Point GraphId="bf4b3" X="550.0" Y="716.6666666666666" ArrowHead="Arrow" />
+      <Point X="202.0" Y="300.75" GraphRef="bc483" RelX="-1.0" RelY="0.0" />
+      <Point X="169.5" Y="326.95" GraphRef="a9cdf" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="ide039ea9b">
+  <Interaction GraphId="idb4278428">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="550.5" Y="118.75" GraphRef="a5415" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point X="225.0" Y="249.75" GraphRef="ee13a" RelX="1.0" RelY="0.0" />
+      <Anchor Position="0.7202072538860104" Shape="None" GraphId="b240e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbcead8ea">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="e804c" X="530.0" Y="716.6666666666666" />
-      <Point GraphId="fcacf" X="543.3333333333334" Y="730.0" ArrowHead="Arrow" />
+      <Point X="352.7253886010363" Y="249.75" GraphRef="b240e" RelX="0.0" RelY="0.0" />
+      <Point X="396.5" Y="221.75" GraphRef="af2fa" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Label TextLabel="1-phosphatidyl-D-myo-inositol 4,5-biosphosphate" GraphId="f99">
-    <Graphics CenterX="220.0" CenterY="120.0" Width="381.3333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="H2O" GraphId="ea3">
-    <Graphics CenterX="520.0" CenterY="160.0" Width="38.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="1,2-diacylglycerol" GraphId="ade">
-    <Graphics CenterX="710.0" CenterY="133.33333333333334" Width="138.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="1-phosphatidyl-D-myo-inositol" GraphId="a09">
-    <Graphics CenterX="233.33333333333334" CenterY="241.59663865546216" Width="235.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="D-myo-inositol 1,2-cyclic phosphate" GraphId="a3f">
-    <Graphics CenterX="676.6666666666666" CenterY="240.0" Width="277.3333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="1,2-diacylglycerol" GraphId="f04">
-    <Graphics CenterX="610.0" CenterY="276.6666666666667" Width="138.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="phosphatidylcholine" GraphId="ad8">
-    <Graphics CenterX="183.33333333333334" CenterY="363.3333333333333" Width="161.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="lecithins" GraphId="e63">
-    <Graphics CenterX="230.0" CenterY="410.0" Width="69.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="1,2-diacylglycerol" GraphId="f0a">
-    <Graphics CenterX="625.6666666666666" CenterY="366.0" Width="138.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="phosphoryl-choline" GraphId="f52">
-    <Graphics CenterX="628.3333333333334" CenterY="406.6666666666667" Width="154.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="H2O" GraphId="bfc">
-    <Graphics CenterX="463.3333333333333" CenterY="423.3333333333333" Width="38.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="phosphatidylcholine" GraphId="ba1">
-    <Graphics CenterX="193.33333333333334" CenterY="516.6666666666666" Width="161.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="phosphatidic acid" GraphId="e77">
-    <Graphics CenterX="606.6666666666666" CenterY="520.0" Width="141.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="H2O" GraphId="b34">
-    <Graphics CenterX="426.6666666666667" CenterY="553.3333333333334" Width="38.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="phosphatidylcholine" GraphId="c10">
-    <Graphics CenterX="200.0" CenterY="720.0" Width="161.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="H2O" GraphId="e23">
-    <Graphics CenterX="456.6666666666667" CenterY="753.3333333333334" Width="38.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="lecithins" GraphId="ce0">
-    <Graphics CenterX="450.0" CenterY="773.3333333333334" Width="69.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="L-1-lysolecithin" GraphId="bb0">
-    <Graphics CenterX="610.0" CenterY="696.6666666666666" Width="121.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="a fatty acid" GraphId="d23">
-    <Graphics CenterX="600.0" CenterY="716.6666666666666" Width="87.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="L-1-lysolecithin" GraphId="c4c">
-    <Graphics CenterX="606.6666666666666" CenterY="736.6666666666666" Width="121.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Shape GraphId="dc8">
-    <Graphics CenterX="533.3333333333334" CenterY="133.33333333333334" Width="29.814239999999998" Height="9.428090666666666" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="2.498091" />
-  </Shape>
-  <Shape GraphId="e3b">
-    <Graphics CenterX="476.6666666666667" CenterY="396.6666666666667" Width="29.814239999999998" Height="9.428090666666666" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="2.498091" />
-  </Shape>
-  <Shape GraphId="d68">
-    <Graphics CenterX="440.0" CenterY="526.6666666666666" Width="29.814239999999998" Height="9.428090666666666" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="2.498091" />
-  </Shape>
-  <Shape GraphId="d71">
-    <Graphics CenterX="470.0" CenterY="726.6666666666666" Width="29.814239999999998" Height="9.428090666666666" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="2.498091" />
-  </Shape>
+  <Interaction GraphId="idc5b0b721">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="353.33333333333326" Y="281.3333333333333" GraphRef="c2c" RelX="0.0" RelY="-1.0" />
+      <Point X="352.7253886010363" Y="249.75" GraphRef="b240e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide5f1401e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="298.0" Y="86.0" GraphRef="a9a11" RelX="1.0" RelY="0.0" />
+      <Point X="471.33333333333326" Y="87.625" GraphRef="a745d" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="eb56f" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide84dbe2d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="367.3333333333333" Y="86.65" GraphRef="eb56f" RelX="0.0" RelY="0.0" />
+      <Point X="399.375" Y="112.75" GraphRef="be139" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf669de81">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="367.33333333333337" Y="56.66666666666667" GraphRef="b83" RelX="0.0" RelY="1.0" />
+      <Point X="367.3333333333333" Y="86.65" GraphRef="eb56f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Group GroupId="e1fa3" GraphId="a745d" />
+  <Group GroupId="a4b94" GraphId="af2fa" Style="Group" />
+  <Group GroupId="f770b" GraphId="c9d8e" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
-  <Legend CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="efb">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=PATHWAY&amp;object=LIPASYN-PWY-1</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phospholipids degradation</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YeastPathways</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycerophospholipid metabolic pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000354</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
+
