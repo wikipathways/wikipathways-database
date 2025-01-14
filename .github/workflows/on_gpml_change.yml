@@ -486,7 +486,7 @@ jobs:
           
   json-svg:
     needs: [changed-gpmls, pubmed, frontmatter]
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04 # do not upgrade as it breaks the puppeteer https://github.com/puppeteer/puppeteer/issues/12818
     steps:
       - name: Checkout wikipathways-database repo
         uses: actions/checkout@v4
