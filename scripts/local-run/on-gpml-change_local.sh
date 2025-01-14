@@ -199,8 +199,8 @@ done
 ##############################
 echo "6. ACTION: homologyConversion"
 # NOTE: requires Java 8 
-if [ ! -e ./Hs_Derby_Ensembl_108.bridge ]; then
-    wget -O Hs_Derby_Ensembl_108.bridge "https://zenodo.org/record/7781913/files/Hs_Derby_Ensembl_108.bridge?download=1"
+if [ ! -e ./Hs_Derby_Ensembl_111.bridge ]; then
+    wget -O Hs_Derby_Ensembl_111.bridge "https://zenodo.org/record/7781913/files/Hs_Derby_Ensembl_111.bridge?download=1"
 fi
 
 for f in ${changed_gpmls[@]}; do

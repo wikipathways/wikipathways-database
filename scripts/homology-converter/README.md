@@ -4,7 +4,7 @@ This repository is a prototype to test using GitHub Actions to trigger the autom
 
 When a new pathway is added  to the /pathways folder, or an existing pathway is modified, the on_gpml_change_auto_homology_conversion.yml file triggers a workflow run.
 
-The workflow run installs the necessary dependency; Hs_Derby_Ensembl_104.bridge from https://bridgedb.github.io/data/gene_database/ using a wget statement.
+The workflow run installs the necessary dependency; Hs_Derby_Ensembl_111.bridge from https://bridgedb.github.io/data/gene_database/ using a wget statement.
 
 The line java -jar HomologyMapperAuto-WithDependencies.jar properties/autorun.properties $wpid runs the automated Local Homology Converter (https://github.com/hbasaric/homology.mapper.automated/). The converted pathway will only be committed if the conversion rate is greater than 80%.
 
