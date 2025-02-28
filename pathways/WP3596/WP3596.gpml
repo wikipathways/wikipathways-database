@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="miR-517 relationship with ARCN1 and USP1" Data-Source="WikiPathways" Version="WP3596_r105860" Author="[Khanspers, Ryanmiller, Mkutmon]" Last-Modified="20190815232020" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="miR-517 relationship with ARCN1 and USP1" Data-Source="WikiPathways" Version="WP3596_r137164" Author="[Khanspers, Ryanmiller, Mkutmon]" Last-Modified="20250228010345" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Schematic summarizing predicted miR-517a relationships with ARCN1 and USP1.
 
 A genomewide miRNA mimic toxicity screen indicates common and selective vulnerabilities of epithelial ovarian cancer cells. miR-517a targets a common vulnerability, primarily via its target ARCN1.
 
-Proteins on this pathway have targeted assays available via the [https://assays.cancer.gov/available_assays?wp_id=WP3596 CPTAC Assay Portal].</Comment>
+Proteins on this pathway have targeted assays available via the [Assay Portal](https://assays.cancer.gov/available_assays?wp_id=WP3596 CPTAC).</Comment>
   <BiopaxRef>fb3</BiopaxRef>
-  <Graphics BoardWidth="546.4034021871198" BoardHeight="376.6269744835964" />
-  <DataNode TextLabel="USP1" GraphId="dc550" Type="GeneProduct">
-    <Graphics CenterX="152.44228432563784" CenterY="191.9805589307411" Width="61.87120291616043" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="Ensembl" ID="ENSG00000162607" />
-  </DataNode>
-  <DataNode TextLabel="ARCN1" GraphId="e5e24" Type="GeneProduct">
-    <Graphics CenterX="389.3803159173768" CenterY="172.5394896719319" Width="69.16160388821395" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="Ensembl" ID="ENSG00000095139" />
+  <Graphics BoardWidth="546.4034021871198" BoardHeight="368.6269744835964" />
+  <DataNode TextLabel="hsa-miR-517a-3p" GraphId="a1ea8" Type="Rna">
+    <Graphics CenterX="275.7715674362097" CenterY="76.54921020656145" Width="89.81773997569873" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0002852" />
   </DataNode>
   <DataNode TextLabel="p21" GraphId="a6245" Type="GeneProduct">
     <Graphics CenterX="276.37910085054443" CenterY="318.3475091130014" Width="64.3013365735116" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -23,53 +19,57 @@ Proteins on this pathway have targeted assays available via the [https://assays.
     <Graphics CenterX="151.22721749696365" CenterY="308.6269744835964" Width="57.0109356014581" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000125968" />
   </DataNode>
+  <DataNode TextLabel="USP1" GraphId="dc550" Type="GeneProduct">
+    <Graphics CenterX="152.44228432563784" CenterY="191.9805589307411" Width="61.87120291616043" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000162607" />
+  </DataNode>
+  <DataNode TextLabel="ARCN1" GraphId="e5e24" Type="GeneProduct">
+    <Graphics CenterX="389.3803159173768" CenterY="172.5394896719319" Width="69.16160388821395" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000095139" />
+  </DataNode>
   <DataNode TextLabel="ID2" GraphId="f31b9" Type="GeneProduct" GroupRef="b1247">
     <Graphics CenterX="151.22721749696365" CenterY="328.6269744835964" Width="57.0109356014581" Height="19.999999999999975" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000115738" />
   </DataNode>
-  <DataNode TextLabel="hsa-miR-517a-3p" GraphId="a1ea8" Type="RNA">
-    <Graphics CenterX="275.7715674362097" CenterY="76.54921020656145" Width="89.81773997569873" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099" />
-    <Xref Database="miRBase mature sequence" ID="MIMAT0002852" />
-  </DataNode>
-  <Interaction GraphId="id916949df">
-    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="dbc17" X="275.7715674362097" Y="86.54921020656145" GraphRef="a1ea8" RelX="0.0" RelY="1.0" />
-      <Point GraphId="ccf12" X="152.44228432563784" Y="181.9805589307411" GraphRef="dc550" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id53b70276">
-    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="f29e0" X="275.7715674362097" Y="86.54921020656145" GraphRef="a1ea8" RelX="0.0" RelY="1.0" />
-      <Point GraphId="a21b9" X="389.38031591737683" Y="162.5394896719319" GraphRef="e5e24" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idb11c7c85">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="fdb6d" X="389.38031591737683" Y="182.5394896719319" GraphRef="e5e24" RelX="0.0" RelY="1.0" />
-      <Point GraphId="f9e0b" X="388.8213851761841" Y="234.22843256379073" GraphRef="b7d34" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
   <Interaction GraphId="id1248fdcd">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="beaab" X="152.44228432563784" Y="201.9805589307411" GraphRef="dc550" RelX="0.0" RelY="1.0" />
-      <Point GraphId="e1617" X="151.22721749696365" Y="290.6269744835964" GraphRef="b1247" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id39f2e108">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="e420c" X="187.73268529769268" Y="318.6269744835964" GraphRef="b1247" RelX="1.0" RelY="0.0" />
-      <Point GraphId="baa91" X="244.2284325637886" Y="318.3475091130014" GraphRef="a6245" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="152.44228432563784" Y="201.9805589307411" GraphRef="dc550" RelX="0.0" RelY="1.0" />
+      <Point X="151.22721749696365" Y="290.6269744835964" GraphRef="a4704" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id1368493e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="bc5ab" X="308.52976913730026" Y="318.3475091130014" GraphRef="a6245" RelX="1.0" RelY="0.0" />
-      <Point GraphId="d5fc6" X="368.54191980558824" Y="318.6269744835967" GraphRef="b492b" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="308.52976913730026" Y="318.3475091130014" GraphRef="a6245" RelX="1.0" RelY="0.0" />
+      <Point X="368.54191980558824" Y="318.6269744835967" GraphRef="b492b" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id39f2e108">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="187.73268529769268" Y="318.6269744835964" GraphRef="a4704" RelX="1.0" RelY="0.0" />
+      <Point X="244.2284325637886" Y="318.3475091130014" GraphRef="a6245" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id53b70276">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="275.7715674362097" Y="86.54921020656145" GraphRef="a1ea8" RelX="0.0" RelY="1.0" />
+      <Point X="389.38031591737683" Y="162.5394896719319" GraphRef="e5e24" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id916949df">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="275.7715674362097" Y="86.54921020656145" GraphRef="a1ea8" RelX="0.0" RelY="1.0" />
+      <Point X="152.44228432563784" Y="181.9805589307411" GraphRef="dc550" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb11c7c85">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="389.38031591737683" Y="182.5394896719319" GraphRef="e5e24" RelX="0.0" RelY="1.0" />
+      <Point X="388.8213851761841" Y="234.22843256379073" GraphRef="b7d34" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -79,14 +79,9 @@ Proteins on this pathway have targeted assays available via the [https://assays.
   <Label TextLabel="Cell cycle progression" GraphId="b492b">
     <Graphics CenterX="442.472660996354" CenterY="318.6269744835967" Width="147.86148238153157" Height="20.0" ZOrder="32769" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
-  <Group GroupId="b1247" GraphId="b1247" Style="Group" />
+  <Group GroupId="b1247" GraphId="a4704" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000004</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fb3">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26655797</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -113,5 +108,11 @@ Proteins on this pathway have targeted assays available via the [https://assays.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sood AK</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White MA</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulatory pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000004</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
+
