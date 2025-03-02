@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="IL23 inhibitors in inflammatory bowel disease" Data-Source="WikiPathways" Version="WP5516_r137215" Author="[Eweitz, Egonw, AlexanderPico]" Last-Modified="20250301021119" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">IL-23 plays a crucial role in immune responses, especially in the intestinal mucosa. Unlike IL-12, IL-23 has distinct structural and functional properties. It has a novel p19 protein subunit, which interacts with the p40 subunit. This interaction activates the STAT4-JAK2 pathway. Major cells producing IL-23 include macrophages, neutrophils, and dendritic cells, particularly in response to microbial stimuli via Toll-like receptor 4 (TLR4). Intestinal epithelial cells (IECs) can also produce IL-23.
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="IL23 inhibitors in inflammatory bowel disease" Data-Source="WikiPathways" Version="WP5516_r137255" Author="[Eweitz, Egonw, AlexanderPico]" Last-Modified="20250301125753" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">IL23 inhibitor drugs decrease an intestinal immune response that contributes to inflammatory bowel disease (IBD), like Crohn's disease and ulcerative colitis.  IL23 inhibitors like risankizumab (Skyrizi), guselkumab (Tremfya), mirikizumab (Omvoh), and brazikumab (MEDI2070) bind to IL23p19 (a.k.a. p19), the protein product of gene IL23A.  That in turn blocks IL23A protein from binding to its receptor in immune cells, preventing the production of downstream inflammatory interleukins, cytokines, and other factors that manifest as IBD.
+
+IL-23 plays a crucial role in immune responses, especially in the intestinal mucosa. It has a novel p19 protein subunit, which interacts with the p40 subunit. This interaction activates the STAT4-JAK2 pathway. Major cells producing IL-23 include macrophages, neutrophils, and dendritic cells, particularly in response to microbial stimuli via Toll-like receptor 4 (TLR4). Intestinal epithelial cells (IECs) can also produce IL-23.
 
 IL-23 binds to its receptor, which consists of two subunits: IL12 receptor β1 (common to both IL-12 and IL-23 receptors) and IL23Rα. The binding triggers a conformational change in the receptor, activating the JAK2 and TYK2 kinases, which then phosphorylate each other and the receptor itself. This phosphorylation allows for the binding of STAT proteins, mainly STAT3. These phosphorylated STATs dimerize and translocate to the nucleus, where they activate RORγt, a master transcription factor that drives the expression of IL-17-related genes.
 
-This signaling pathway primarily promotes the proliferation of Th17 cells, rather than their differentiation, since naïve T cells lack IL-23 receptors. The activation also induces the production of various cytokines, including IL-17A/F, IL-22, IL-6, GM-CSF, TNFα, and antimicrobial peptides (AMPs) by IECs. In addition to Th17 cells, other immune cells, such as CD8+ T cells, natural killer T cells, γδ T cells, innate lymphoid cells (ILCs), and DCs, are also involved in this IL-23-driven immune response.
+This signaling pathway primarily promotes the proliferation of Th17 cells, rather than their differentiation, since naive T cells lack IL-23 receptors. The activation also induces the production of various cytokines, including IL-17A/F, IL-22, IL-6, GM-CSF, TNFα, and antimicrobial peptides (AMPs) by IECs. In addition to Th17 cells, other immune cells, such as CD8+ T cells, natural killer T cells, γδ T cells, type 3 innate lymphoid cells (ILC3), and dendritic cells, are also involved in this IL-23-driven immune response.
 
-Inspired by [figure 1, Bourgonje 2025](https://www.gastrojournal.org/article/S0016-5085(24)05124-2/fulltext).</Comment>
+Inspired by [figure 1, Bourgonje et al. 2025](https://www.gastrojournal.org/article/S0016-5085(24)05124-2/fulltext).</Comment>
+  <BiopaxRef>e98</BiopaxRef>
   <Graphics BoardWidth="940.0" BoardHeight="687.0" />
   <DataNode TextLabel="Glycocalyx" GraphId="c6b1b">
     <Graphics CenterX="225.0" CenterY="71.0" Width="424.0" Height="20.0" ZOrder="-6" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" />
@@ -425,6 +428,9 @@ Inspired by [figure 1, Bourgonje 2025](https://www.gastrojournal.org/article/S00
   <Label TextLabel="Intestinal&#xA;epithelial&#xA;cell" GraphId="aed59">
     <Graphics CenterX="188.0" CenterY="133.0" Width="70.0" Height="50.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
+  <Label TextLabel="Lamina propria" GraphId="e7b62">
+    <Graphics CenterX="63.0" CenterY="214.0" Width="100.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
   <Label TextLabel="Microbes" GraphId="f8599">
     <Graphics CenterX="179.0" CenterY="28.0" Width="60.0" Height="20.0" ZOrder="32845" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
@@ -460,6 +466,12 @@ Inspired by [figure 1, Bourgonje 2025](https://www.gastrojournal.org/article/S00
   </Label>
   <Label TextLabel="Nucleus" GraphId="a3697">
     <Graphics CenterX="278.0" CenterY="609.0" Width="80.0" Height="20.0" ZOrder="32907" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Immune cell" GraphId="aa959">
+    <Graphics CenterX="115.0" CenterY="633.0" Width="90.0" Height="20.0" ZOrder="32908" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Lumen" GraphId="fc33d">
+    <Graphics CenterX="63.0" CenterY="42.0" Width="80.0" Height="20.0" ZOrder="32909" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Shape GraphId="c009f">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
@@ -569,8 +581,49 @@ Inspired by [figure 1, Bourgonje 2025](https://www.gastrojournal.org/article/S00
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T-helper 17 cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000899</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">group 3 innate lymphoid cell, human</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0001078</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma-delta T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000798</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000754</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e98">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38945499</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Targeting the Interleukin 23 Pathway in Inflammatory Bowel Disease.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gastroenterology</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2025</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bourgonje AR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ungaro RC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mehandru S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colombel JF</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ulcerative colitis</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:8577</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflammatory bowel disease</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050589</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crohn's disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:8778</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
@@ -579,18 +632,18 @@ Inspired by [figure 1, Bourgonje 2025](https://www.gastrojournal.org/article/S00
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intestinal epithelial cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002563</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T-helper 17 cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000899</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interleukin-23 signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000915</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dendritic cell</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000451</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intestinal epithelial cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002563</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
