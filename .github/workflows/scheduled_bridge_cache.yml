@@ -59,6 +59,7 @@ jobs:
       - if: steps.cache.outputs.cache-hit != 'true'
         name: Install deps
         run: |
+          mkdir -p "${{ github.workspace }}/wikipathways-database"
           cd "${{ github.workspace }}/wikipathways-database"
           if [ ! -e ./Hs_Derby_Ensembl_111.bridge ]; then
             wget -O Hs_Derby_Ensembl_111.bridge https://zenodo.org/record/14779056/files/Hs_Derby_Ensembl_111.bridge?download=1
