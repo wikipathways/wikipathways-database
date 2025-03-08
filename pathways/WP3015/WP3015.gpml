@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="UDP-L-arabinose biosynthesis I from UDP-xylose" Data-Source="WikiPathways" Version="WP3015_r118606" Author="[Anwesha, Eweitz]" Last-Modified="20210528164235" Organism="Arabidopsis thaliana">
-  <Comment Source="WikiPathways-description">This event has been computationally inferred from an event that has been demonstrated in another species.&lt;p&gt;The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.&lt;p&gt;Details of projection methods and parameters may be found &lt;a href="/projection.html"&gt;here.&lt;/a&gt;&lt;p&gt;
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="UDP-L-arabinose biosynthesis I from UDP-xylose" Data-Source="WikiPathways" Version="WP3015_r137680" Author="[Anwesha, Eweitz, Egonw]" Last-Modified="20250307045221" Organism="Arabidopsis thaliana">
+  <Comment Source="WikiPathways-description">This event has been computationally inferred from an event that has been demonstrated in another species.
 
-Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
+The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.
+
+Source: [Plant Reactome](http://plantreactome.gramene.org/).</Comment>
   <Attribute Key="reactome_id" Value="5402192" />
-  <Graphics BoardWidth="319.0" BoardHeight="308.0" />
+  <Graphics BoardWidth="311.0" BoardHeight="300.0" />
+  <DataNode TextLabel="Homologues of NAD&#xA;dependent&#xA;epimerase/dehydratase&#xA;family domain&#xA;containing protein&#xA;(LOC_OS04G52730.1)" GraphId="ae28c" Type="Protein">
+    <Attribute Key="reactome_id" Value="5400401" />
+    <Graphics CenterX="183.5" CenterY="136.5" Width="137.0" Height="59.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Reactome" ID="5400401" />
+  </DataNode>
   <DataNode TextLabel="UDP-Xyl" GraphId="e1945" Type="Metabolite">
     <Attribute Key="reactome_id" Value="742353" />
     <Graphics CenterX="80.5" CenterY="73.0" Width="65.0" Height="30.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
@@ -15,41 +22,36 @@ Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
     <Graphics CenterX="81.5" CenterY="204.5" Width="101.0" Height="31.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:17983" />
   </DataNode>
-  <DataNode TextLabel="Homologues of NAD&#xA;dependent&#xA;epimerase/dehydratase&#xA;family domain&#xA;containing protein&#xA;(LOC_OS04G52730.1)" GraphId="ae28c" Type="Protein">
-    <Attribute Key="reactome_id" Value="5400401" />
-    <Graphics CenterX="183.5" CenterY="136.5" Width="137.0" Height="59.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="Reactome" ID="5400401" />
-  </DataNode>
   <Interaction GraphId="c20c2">
     <Comment Source="Reactome">This event has been computationally inferred from an event that has been demonstrated in another species.&lt;p&gt;The inference is based on Ensembl Compara orthology projection. Briefly, reactions for which all involved PhysicalEntities (in input, output and catalyst) have a mapped ortholog or paralog are inferred to the other species. High-level events are also inferred for these events to allow for easier navigation.&lt;p&gt;Details of projection methods and parameters may be found &lt;a href="/projection.html"&gt;here.&lt;/a&gt;&lt;p&gt;</Comment>
     <Attribute Key="reactome_id" Value="5400487" />
     <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="ef0d0" X="80.0" Y="91.0" />
-      <Point GraphId="c551d" X="80.0" Y="186.0" />
+      <Point X="80.0" Y="91.0" />
+      <Point X="80.0" Y="186.0" />
       <Anchor Position="0.0" Shape="None" GraphId="e99ee" />
       <Anchor Position="0.99" Shape="None" GraphId="fd576" />
       <Anchor Position="0.5" Shape="None" GraphId="e2783" />
     </Graphics>
     <Xref Database="Reactome" ID="5400487" />
   </Interaction>
+  <Interaction GraphId="d3d33">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="115.0" Y="136.0" GraphRef="ae28c" RelX="-1.0" RelY="-0.01694915254237288" />
+      <Point X="80.0" Y="186.0" GraphRef="e2783" RelX="0.0" RelY="47.5" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="Reactome" ID="5400487" />
+  </Interaction>
   <Interaction GraphId="d55c9">
     <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="bce0e" X="80.0" Y="88.0" GraphRef="e1945" RelX="-0.015384615384615385" RelY="1.0" />
-      <Point GraphId="f7750" X="80.0" Y="91.0" GraphRef="e99ee" RelX="0.0" RelY="0.0" />
+      <Point X="80.0" Y="88.0" GraphRef="e1945" RelX="-0.015384615384615385" RelY="1.0" />
+      <Point X="80.0" Y="91.0" GraphRef="e99ee" RelX="0.0" RelY="0.0" />
     </Graphics>
     <Xref Database="Reactome" ID="5400487" />
   </Interaction>
   <Interaction GraphId="fecd5">
     <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="a29d6" X="80.0" Y="186.0" GraphRef="fd576" RelX="0.0" RelY="0.9499999999999886" />
-      <Point GraphId="d9a06" X="81.0" Y="189.0" GraphRef="ee2ca" RelX="-0.009900990099009901" RelY="-1.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="Reactome" ID="5400487" />
-  </Interaction>
-  <Interaction GraphId="d3d33">
-    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="fe598" X="115.0" Y="136.0" GraphRef="ae28c" RelX="-1.0" RelY="-0.01694915254237288" />
-      <Point GraphId="b90d7" X="80.0" Y="186.0" GraphRef="e2783" RelX="0.0" RelY="47.5" ArrowHead="mim-catalysis" />
+      <Point X="80.0" Y="186.0" GraphRef="fd576" RelX="0.0" RelY="0.9499999999999886" />
+      <Point X="81.0" Y="189.0" GraphRef="ee2ca" RelX="-0.009900990099009901" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="Reactome" ID="5400487" />
   </Interaction>
@@ -60,7 +62,7 @@ Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="142.5" CenterY="137.0" Width="277.0" Height="266.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Group GroupId="b0320" GraphId="b0320" Style="Group" />
+  <Group GroupId="b0320" GraphId="c80f5" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
@@ -70,3 +72,4 @@ Source:[http://plantreactome.gramene.org/ Plant Reactome].</Comment>
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
+
