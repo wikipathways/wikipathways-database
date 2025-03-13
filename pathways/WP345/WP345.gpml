@@ -1,232 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glycine degradation" Data-Source="WikiPathways" Version="WP345_r117303" Author="[J.Heckman, MaintBot, Christine Chichester, Egonw, Eweitz]" Last-Modified="20210520111721" Organism="Saccharomyces cerevisiae">
-  <Comment Source="WikiPathways-description" />
-  <Comment Source="GenMAPP remarks">Based on http://pathway.yeastgenome.org/biocyc/</Comment>
-  <Graphics BoardWidth="790.0" BoardHeight="746.4117647058819" />
-  <DataNode TextLabel="GCV2" GraphId="ac5" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="glycine dehydrogenase" />
-    <Graphics CenterX="361.73669467787107" CenterY="101.23249299719888" Width="43.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000004801" />
-  </DataNode>
-  <DataNode TextLabel="GCV2" GraphId="f84" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="glycine dehydrogenase" />
-    <Graphics CenterX="600.0" CenterY="233.33333333333334" Width="43.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000004801" />
-  </DataNode>
-  <DataNode TextLabel="MTD1" GraphId="f8e" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="methylenetetrahydrofolate dehydrogenase" />
-    <Graphics CenterX="273.3333333333333" CenterY="353.3333333333333" Width="43.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000001788" />
-  </DataNode>
-  <DataNode TextLabel="MIS1" GraphId="b21" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="C-1-tetrahydrofolate synthase, mitochondrial" />
-    <Graphics CenterX="273.3333333333333" CenterY="333.3333333333333" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000000288" />
-  </DataNode>
-  <DataNode TextLabel="ADE3" GraphId="f72" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="C-1-tetrahydrofolate synthase" />
-    <Graphics CenterX="273.3333333333333" CenterY="313.3333333333333" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000003436" />
-  </DataNode>
-  <DataNode TextLabel="MIS1" GraphId="bb7" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="C-1-tetrahydrofolate synthase, mitochondrial" />
-    <Graphics CenterX="160.0" CenterY="480.0" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000000288" />
-  </DataNode>
-  <DataNode TextLabel="ADE3" GraphId="a98" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="C-1-tetrahydrofolate synthase" />
-    <Graphics CenterX="160.0" CenterY="460.0" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000003436" />
-  </DataNode>
-  <DataNode TextLabel="MIS1" GraphId="ff1" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="C-1-tetrahydrofolate synthase, mitochondrial" />
-    <Graphics CenterX="263.3333333333333" CenterY="550.0" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000000288" />
-  </DataNode>
-  <DataNode TextLabel="ADE3" GraphId="d96" Type="GeneProduct">
-    <Attribute Key="org.pathvisio.model.BackpageHead" Value="C-1-tetrahydrofolate synthase" />
-    <Graphics CenterX="263.3333333333333" CenterY="566.6666666666666" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="SGD" ID="S000003436" />
-  </DataNode>
-  <DataNode TextLabel="L-glycine" GraphId="a73" Type="Metabolite">
-    <Graphics CenterX="250.33333333333334" CenterY="76.65826330532207" Width="75.33333333333333" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glycine cleavage" Data-Source="WikiPathways" Version="WP345_r138040" Author="[J.Heckman, MaintBot, Christine Chichester, Egonw, Eweitz, Khanspers]" Last-Modified="20250312235608" Organism="Saccharomyces cerevisiae">
+  <Comment Source="WikiPathways-description">In eukaryotes the mitochondrial glycine cleavage complex (glycine decarboxylase complex) is a loosely-associated multienzyme complex that catalyzes the oxidative cleavage of glycine to carbon dioxide, ammonia, and a methylene group, in a multistep reaction (in [Nakai05]). The methylene group, carried by 5,10-methylenetetrahydropteroyl mono-L-glutamate, enters cellular one-carbon metabolism. In mammals, it is the primary pathway for glycine catabolism [Hampson83].
+
+The glycine cleavage complex is composed of four different proteins: the P-protein ( EC 1.4.4.2, glycine dehydrogenase (aminomethyl-transferring)); the T-protein ( EC 2.1.2.10, aminomethyltransferase); the L-protein ( EC 1.8.1.4, dihydrolipoyl dehydrogenase); and the H-protein (lipoyl-carrier protein, a non-enzyme that contains a lipoyl group that interacts successively with the three other components of the complex during the enzymatic reactions. The L-protein (also known as the E3 component) also participates in the pyruvate decarboxylation to acetyl CoA, the 2-oxoglutarate decarboxylation to succinyl-CoA, and the 2-oxoisovalerate decarboxylation to isobutanoyl-CoA multienzyme systems.
+
+Description from [YeastPathways](https://pathway.yeastgenome.org/).</Comment>
+  <BiopaxRef>ccf</BiopaxRef>
+  <Graphics BoardWidth="718.0" BoardHeight="398.0" />
+  <DataNode TextLabel="L-glycine" GraphId="a73" Type="Metabolite" GroupRef="e74b1">
+    <Graphics CenterX="294.50000000000006" CenterY="151.65826330532207" Width="75.33333333333333" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="CAS" ID="56-40-6" />
   </DataNode>
-  <DataNode TextLabel="5,10-methylene-THF" GraphId="c83" Type="Metabolite">
-    <Graphics CenterX="556.6666666666666" CenterY="366.6666666666667" Width="157.33333333333334" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="31690-11-6" />
+  <DataNode TextLabel="GCV2" GraphId="ac5" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="glycine dehydrogenase" />
+    <Graphics CenterX="331.73669467787107" CenterY="59.232492997198875" Width="43.333333333333336" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="SGD" ID="S000004801" />
   </DataNode>
-  <DataNode TextLabel="NADH" GraphId="fb1" Type="Metabolite">
-    <Graphics CenterX="336.6666666666667" CenterY="400.0" Width="52.333333333333336" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="53-84-9" />
+  <DataNode TextLabel="a [glycine-cleavage complex H protein] &#xA;N6-aminomethyldihydrolipoyl-L-lysine&#x9;" GraphId="ac630" Type="Metabolite">
+    <Graphics CenterX="572.5" CenterY="103.25" Width="228.0" Height="36.5" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="10-formyl-THF" GraphId="e69" Type="Metabolite">
-    <Graphics CenterX="103.66666666666667" CenterY="582.3333333333334" Width="113.33333333333333" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="2800-34-2" />
-  </DataNode>
-  <DataNode TextLabel="phosphate" GraphId="e68" Type="Metabolite">
-    <Graphics CenterX="203.33333333333334" CenterY="606.6666666666666" Width="87.33333333333333" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="14265-44-2" />
-  </DataNode>
-  <DataNode TextLabel="ADP" GraphId="f36" Type="Metabolite">
-    <Graphics CenterX="200.0" CenterY="623.3333333333334" Width="39.333333333333336" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="58-64-0" />
-  </DataNode>
-  <DataNode TextLabel="ATP" GraphId="dc7" Type="Metabolite">
-    <Graphics CenterX="280.0" CenterY="630.0" Width="37.333333333333336" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="CAS" ID="1927-31-7" />
-  </DataNode>
-  <DataNode TextLabel="CO2" GraphId="cb8b5" Type="Metabolite">
-    <Graphics CenterX="400.0" CenterY="167.0" Width="42.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:16526" />
+  <DataNode TextLabel="a [glycine-cleavage complex H protein] &#xA;N6-lipoyl-L-lysine" GraphId="b0b22" Type="Metabolite">
+    <Graphics CenterX="137.5" CenterY="103.25" Width="221.0" Height="36.5" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="THF" GraphId="bcaa2" Type="Metabolite">
-    <Graphics CenterX="506.0" CenterY="215.0" Width="38.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="523.0" CenterY="162.0" Width="38.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:26911" />
   </DataNode>
-  <DataNode TextLabel="NH3" GraphId="d93ec" Type="Metabolite">
-    <Graphics CenterX="506.0" CenterY="240.0" Width="38.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:16134" />
+  <DataNode TextLabel="NAD+" GraphId="c4750" Type="Metabolite">
+    <Graphics CenterX="215.0" CenterY="253.0" Width="50.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="57540" />
   </DataNode>
-  <DataNode TextLabel="NAD" GraphId="fb7c9" Type="Metabolite">
-    <Graphics CenterX="396.5" CenterY="400.0" Width="41.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:13389" />
+  <DataNode TextLabel="5,10-methylene-THF" GraphId="c83" Type="Metabolite" GroupRef="e193a">
+    <Graphics CenterX="479.16666666666663" CenterY="228.66666666666669" Width="124.33333333333326" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="CAS" ID="31690-11-6" />
   </DataNode>
-  <DataNode TextLabel="5,10-methenyl-THF" GraphId="ba3c9" Type="Metabolite">
-    <Graphics CenterX="135.5" CenterY="365.0" Width="131.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="Chemspider" ID="559356" />
-  </DataNode>
-  <DataNode TextLabel="formate" GraphId="c1b90" Type="Metabolite">
-    <Graphics CenterX="385.0" CenterY="583.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:15740" />
-  </DataNode>
-  <DataNode TextLabel="ferrocytochrome B1" GraphId="cd290" Type="Metabolite">
-    <Graphics CenterX="494.1806722689073" CenterY="633.4033613445372" Width="112.4789915966386" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:16762" />
-  </DataNode>
-  <DataNode TextLabel="CO2" GraphId="aded5" Type="Metabolite">
-    <Graphics CenterX="384.78991596638673" CenterY="706.4117647058819" Width="42.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" Color="0000ff" />
+  <DataNode TextLabel="CO2" GraphId="cb8b5" Type="Metabolite">
+    <Graphics CenterX="376.0" CenterY="152.0" Width="42.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:16526" />
   </DataNode>
+  <DataNode TextLabel="NH4+" GraphId="d93ec" Type="Metabolite" GroupRef="e193a">
+    <Graphics CenterX="479.16666666666663" CenterY="206.0" Width="38.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="28938" />
+  </DataNode>
+  <DataNode TextLabel="a [glycine-cleavage complex H protein] &#xA;N6-dihydrolipoyl-L-lysine&#x9;" GraphId="ebb3b" Type="Metabolite">
+    <Graphics CenterX="572.5" CenterY="304.75" Width="231.0" Height="38.5" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="LPD1" GraphId="ecd1f" Type="GeneProduct">
+    <Graphics CenterX="255.0" CenterY="358.0" Width="50.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="SGD" ID="S000001876" />
+  </DataNode>
+  <DataNode TextLabel="GCV1" GraphId="f84" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="glycine dehydrogenase" />
+    <Graphics CenterX="654.0" CenterY="193.33333333333334" Width="43.333333333333336" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="SGD" ID="S000002426" />
+  </DataNode>
+  <DataNode TextLabel="H+" GraphId="fe398" Type="Metabolite" GroupRef="e74b1">
+    <Graphics CenterX="294.5" CenterY="174.0" Width="41.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15378" />
+  </DataNode>
+  <DataNode TextLabel="NADH" GraphId="b1068" Type="Metabolite" GroupRef="f6f2a">
+    <Graphics CenterX="307.0" CenterY="241.0" Width="50.0" Height="20.0" ZOrder="32770" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="57945" />
+  </DataNode>
+  <DataNode TextLabel="H+" GraphId="d8ce9" Type="Metabolite" GroupRef="f6f2a">
+    <Graphics CenterX="307.0" CenterY="262.0" Width="41.0" Height="20.0" ZOrder="32771" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="15378" />
+  </DataNode>
+  <Interaction GraphId="id2772393">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="307.0" Y="280.0" GraphRef="ec10b" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point X="255.89999999999998" Y="304.75" GraphRef="ce830" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Interaction GraphId="id3bc7ca1">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="a968f" X="285.16666666666663" Y="122.64705882352939" GraphRef="cd6" RelX="1.0" RelY="0.0" />
-      <Point GraphId="d1341" X="490.33333333333326" Y="121.33333333333331" GraphRef="e35" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
-      <Anchor Position="0.30083869114400946" Shape="None" GraphId="b14cb" />
+      <Point X="248.0" Y="103.25" GraphRef="b0b22" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="458.5" Y="103.25" GraphRef="ac630" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.3984158688362711" Shape="None" GraphId="b14cb" />
+      <Anchor Position="0.4" Shape="None" GraphId="cf761" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="ida1d6abba">
+  <Interaction GraphId="id40220dc7">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="df65d" X="269.1666666666667" Y="86.15826330532207" GraphRef="a73" RelX="0.5" RelY="1.0" />
-      <Point GraphId="e5a9d" X="346.8887381330459" Y="122.25183936653629" GraphRef="b14cb" RelX="0.0" RelY="0.0" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idb9c3e546">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="e3540" X="400.0" Y="146.66666666666666" />
-      <Point GraphId="d5c69" X="400.0" Y="156.66666666666666" ArrowHead="Arrow" />
+      <Point X="331.736694677871" Y="69.23249299719888" GraphRef="ac5" RelX="0.0" RelY="1.0" />
+      <Point X="331.8665403900351" Y="103.25" GraphRef="b14cb" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id45d80999">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="dcab8" X="557.75" Y="130.83333333333331" GraphRef="e35" RelX="-0.5" RelY="1.0" />
-      <Point GraphId="e75c4" X="556.6666666666666" Y="357.1666666666667" GraphRef="c83" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="572.5" Y="121.5" GraphRef="ac630" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point X="572.5" Y="285.5" GraphRef="ebb3b" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.43597560975609756" Shape="None" GraphId="de968" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idc14e8966">
+  <Interaction GraphId="id6ed9b1df">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d5e77" X="546.6666666666666" Y="243.33333333333334" />
-      <Point GraphId="f77cd" X="536.6666666666666" Y="243.33333333333334" ArrowHead="Arrow" />
+      <Point X="331.8665403900351" Y="103.25" GraphRef="b14cb" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="376.0" Y="142.0" GraphRef="cb8b5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id733ee1">
+  <Interaction GraphId="ida1d6abba">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="b22e2" X="478.0" Y="366.6666666666667" GraphRef="c83" RelX="-1.0" RelY="0.0" />
-      <Point GraphId="dba0a" X="201.0" Y="365.0" GraphRef="ba3c9" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="294.5" Y="133.65826330532207" GraphRef="d6608" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="331.8665403900351" Y="103.25" GraphRef="b14cb" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id84c8da6c">
+  <Interaction GraphId="idac66c37c">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="f160e" X="353.3333333333333" Y="380.0" />
-      <Point GraphId="a864c" X="353.3333333333333" Y="386.6666666666667" ArrowHead="Arrow" />
+      <Point X="255.89999999999998" Y="304.75" GraphRef="ce830" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="215.0" Y="263.0" GraphRef="c4750" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id15da0caa">
+  <Interaction GraphId="idad7b5d82">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="a9731" X="102.75" Y="375.0" GraphRef="ba3c9" RelX="-0.5" RelY="1.0" />
-      <Point GraphId="d02e6" X="103.66666666666669" Y="572.8333333333334" GraphRef="e69" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="542.0" Y="162.0" GraphRef="bcaa2" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="572.5" Y="193.0" GraphRef="de968" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idef741d14">
+  <Interaction GraphId="idbd895a7e">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="457.0" Y="304.75" GraphRef="ebb3b" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="137.5" Y="121.5" GraphRef="b0b22" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="ce830" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc20b6571">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="dd568" X="160.33333333333337" Y="582.3333333333334" GraphRef="e69" RelX="1.0" RelY="0.0" />
-      <Point GraphId="b5581" X="345.0" Y="583.0" GraphRef="c1b90" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="255.0" Y="348.0" GraphRef="ecd1f" RelX="0.0" RelY="-1.0" />
+      <Point X="255.89999999999998" Y="304.75" GraphRef="ce830" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idf97e437c">
+  <Interaction GraphId="idcbbdbaf2">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="dc314" X="260.0" Y="593.3333333333334" />
-      <Point GraphId="c3dbf" X="263.3333333333333" Y="600.0" ArrowHead="Arrow" />
+      <Point X="572.5" Y="193.0" GraphRef="de968" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="549.3333333333333" Y="217.33333333333334" GraphRef="b95b1" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id6d5ae3cd">
+  <Interaction GraphId="ide85c3a13">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d500d" X="385.0" Y="593.0" GraphRef="c1b90" RelX="0.0" RelY="1.0" />
-      <Point GraphId="e1ce5" X="384.78991596638673" Y="696.4117647058819" GraphRef="aded5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
-      <Anchor Position="0.4" Shape="None" GraphId="d7e7d" />
+      <Point X="632.3333333333333" Y="193.33333333333334" GraphRef="f84" RelX="-1.0" RelY="0.0" />
+      <Point X="572.5" Y="193.0" GraphRef="de968" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="dc57d">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="cb43f" X="437.94117647058806" Y="633.4033613445372" GraphRef="cd290" RelX="-1.0" RelY="0.0" />
-      <Point GraphId="d870b" X="384.9159663865547" Y="634.3647058823527" GraphRef="d7e7d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Label TextLabel="lipoyl-FcvH-protein" GraphId="cd6">
-    <Graphics CenterX="209.99999999999994" CenterY="122.64705882352939" Width="150.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="S-aminomethyldihydrolipoyl-GcvH-protein" GraphId="e35">
-    <Graphics CenterX="625.1666666666666" CenterY="121.33333333333331" Width="269.66666666666674" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="dihydrolipoyl-GcvH-protein" GraphId="b20">
-    <Graphics CenterX="433.3333333333333" CenterY="260.0" Width="211.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="H2O" GraphId="a25">
-    <Graphics CenterX="43.333333333333336" CenterY="450.0" Width="38.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="THF" GraphId="d3c">
-    <Graphics CenterX="283.3333333333333" CenterY="613.3333333333334" Width="37.333333333333336" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Shape GraphId="c3a">
-    <Graphics CenterX="386.6610225094495" CenterY="136.7392134878322" Width="40.520524729022114" Height="17.936798953744763" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="3.926991" />
-  </Shape>
-  <Shape GraphId="deb">
-    <Graphics CenterX="543.3333333333334" CenterY="230.0" Width="26.666666666666668" Height="26.666666666666668" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="4.712389" />
-  </Shape>
-  <Shape GraphId="f0c">
-    <Graphics CenterX="366.6666666666667" CenterY="380.0" Width="26.666666666666668" Height="26.666666666666668" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="3.141593" />
-  </Shape>
-  <Shape GraphId="d61">
-    <Graphics CenterX="83.33333333333333" CenterY="473.3333333333333" Width="50.77182666666667" Height="14.907119999999999" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="3.926991" />
-  </Shape>
-  <Shape GraphId="fea">
-    <Graphics CenterX="246.66666666666666" CenterY="596.6666666666666" Width="26.666666666666668" Height="26.666666666666668" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Arc" Rotation="3.141593" />
-  </Shape>
+  <Group GroupId="e193a" GraphId="b95b1" Style="Group" />
+  <Group GroupId="e74b1" GraphId="d6608" Style="Group" />
+  <Group GroupId="f6f2a" GraphId="ec10b" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
-  <Legend CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ccf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=PATHWAY&amp;object=GLYCLEAV-PWY</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycine cleavage</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YeastPathways</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycine degradation pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001265</bp:ID>
@@ -234,3 +181,4 @@
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
+
