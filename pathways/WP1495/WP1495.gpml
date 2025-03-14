@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glycine metabolism" Data-Source="WikiPathways" Version="WP1495_r137537" Author="[Essam Sharaf, Khanspers, AlexanderPico, MaintBot, Egonw, Mkutmon, Eweitz]" Last-Modified="20250303192438" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glycine metabolism" Data-Source="WikiPathways" Version="WP1495_r138046" Author="[Essam Sharaf, Khanspers, AlexanderPico, MaintBot, Egonw, Mkutmon, Eweitz]" Last-Modified="20250313062306" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Glycine is degraded via three pathways. The predominant pathway in animals and plants is the reverse of the glycine synthase pathway. In this context, the enzyme system involved is usually called the glycine cleavage system.
 In the second pathway, glycine is degraded in two steps. The first step is the reverse of glycine biosynthesis from serine with serine hydroxymethyl transferase. Serine is then converted to pyruvate by serine dehydratase.
 In the third pathway of glycine degradation, glycine is converted to glyoxylate by D-amino acid oxidase. Glyoxylate is then oxidized by hepatic lactate dehydrogenase to oxalate in an NAD+-dependent reaction.
 Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism).</Comment>
   <Graphics BoardWidth="684.0" BoardHeight="447.0" />
+  <DataNode TextLabel="H2O2" GraphId="a7732" Type="Metabolite">
+    <Graphics CenterX="461.5" CenterY="256.0" Width="39.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
   <DataNode TextLabel="Serine" GraphId="a9c4a" Type="Metabolite">
     <Graphics CenterX="103.0" CenterY="168.0" Width="80.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="Chemspider" ID="597" />
+  </DataNode>
+  <DataNode TextLabel="H2O" GraphId="ac46e" Type="Metabolite">
+    <Graphics CenterX="395.0" CenterY="379.0" Width="42.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="FAD" GraphId="b002e" Type="Metabolite">
+    <Graphics CenterX="381.5" CenterY="250.0" Width="33.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="a-Ketoglutarate" GraphId="c5660" Type="Metabolite">
+    <Graphics CenterX="559.0" CenterY="236.0" Width="80.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="NH3" GraphId="cfe83" Type="Metabolite">
+    <Graphics CenterX="443.5" CenterY="379.0" Width="41.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="O2" GraphId="e2ab1" Type="Metabolite">
+    <Graphics CenterX="459.5" CenterY="311.0" Width="29.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Pyruvate" GraphId="ed114" Type="Metabolite">
     <Graphics CenterX="103.0" CenterY="108.0" Width="80.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="Chemspider" ID="96901" />
   </DataNode>
   <DataNode TextLabel="Glutamate" GraphId="f87e9" Type="Metabolite">
-    <Graphics CenterX="558.5" CenterY="314.0" Width="63.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="558.5" CenterY="314.0" Width="63.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="Chemspider" ID="4302384" />
+  </DataNode>
+  <DataNode TextLabel="FADH2" GraphId="fc69f" Type="Metabolite">
+    <Graphics CenterX="387.5" CenterY="314.0" Width="43.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="SHMT1" GraphId="a5f21" Type="GeneProduct" GroupRef="d24b2">
     <Graphics CenterX="217.5" CenterY="124.0" Width="58.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" />
@@ -87,8 +115,8 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
   <Interaction GraphId="be36e">
     <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
       <Point X="430.9941901657928" Y="346.5119739265977" GraphRef="a61d8" RelX="0.0" RelY="0.0" />
-      <Point X="444.7291341929998" Y="347.0" />
-      <Point X="457.0" Y="369.0" GraphRef="ac04a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="437.2470950828964" Y="347.0" />
+      <Point X="443.5" Y="369.0" GraphRef="cfe83" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -109,8 +137,8 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
   </Interaction>
   <Interaction GraphId="e7ec7">
     <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
-      <Point X="398.0" Y="369.0" GraphRef="a6f6e" RelX="0.0" RelY="-1.0" />
-      <Point X="415.2291341929998" Y="346.0" />
+      <Point X="395.0" Y="369.0" GraphRef="ac46e" RelX="0.0" RelY="-1.0" />
+      <Point X="412.9970950828964" Y="346.0" />
       <Point X="430.9941901657928" Y="346.5119739265977" GraphRef="a61d8" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -119,7 +147,7 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
     <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
       <Point X="494.0" Y="280.8085368745554" GraphRef="fa648" RelX="0.0" RelY="0.0" />
       <Point X="493.0" Y="258.40426843727766" />
-      <Point X="519.0" Y="236.0" GraphRef="d336d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="519.0" Y="236.0" GraphRef="c5660" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -139,8 +167,8 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
   </Interaction>
   <Interaction GraphId="id23f9ba93">
     <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
-      <Point X="409.0" Y="314.0" GraphRef="f9235" RelX="1.0" RelY="0.0" />
-      <Point X="398.0" Y="250.0" GraphRef="e2325" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="409.0" Y="314.0" GraphRef="fc69f" RelX="1.0" RelY="0.0" />
+      <Point X="398.0" Y="250.0" GraphRef="b002e" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -155,7 +183,7 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
     <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
       <Point X="348.28206569130896" Y="287.31097761844785" GraphRef="d7d2e" RelX="0.0" RelY="0.0" />
       <Point X="348.0" Y="300.6554888092239" />
-      <Point X="366.0" Y="314.0" GraphRef="f9235" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="366.0" Y="314.0" GraphRef="fc69f" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -206,8 +234,8 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
   </Interaction>
   <Interaction GraphId="id8d0c5f48">
     <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
-      <Point X="445.0" Y="311.0" GraphRef="dd2ff" RelX="-1.0" RelY="0.0" />
-      <Point X="442.0" Y="256.0" GraphRef="c102a" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="445.0" Y="311.0" GraphRef="e2ab1" RelX="-1.0" RelY="0.0" />
+      <Point X="442.0" Y="256.0" GraphRef="a7732" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -236,7 +264,7 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
   </Interaction>
   <Interaction GraphId="idd76463ad">
     <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
-      <Point X="365.0" Y="250.0" GraphRef="e2325" RelX="-1.0" RelY="0.0" />
+      <Point X="365.0" Y="250.0" GraphRef="b002e" RelX="-1.0" RelY="0.0" />
       <Point X="348.0" Y="268.6554888092239" />
       <Point X="348.28206569130896" Y="287.31097761844785" GraphRef="d7d2e" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
@@ -265,32 +293,11 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Label TextLabel="H2O" GraphId="a6f6e">
-    <Graphics CenterX="398.0" CenterY="379.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
-  </Label>
-  <Label TextLabel="NH3" GraphId="ac04a">
-    <Graphics CenterX="457.0" CenterY="379.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
-  </Label>
   <Label TextLabel="Glucogenic AA" GraphId="b4ef2">
     <Graphics CenterX="99.0" CenterY="90.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontStyle="Italic" FontSize="10" Valign="Middle" />
   </Label>
-  <Label TextLabel="H2O2" GraphId="c102a">
-    <Graphics CenterX="461.5" CenterY="256.0" Width="39.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
-  </Label>
-  <Label TextLabel="a-Ketoglutarate" GraphId="d336d">
-    <Graphics CenterX="559.0" CenterY="236.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
-  </Label>
-  <Label TextLabel="O2" GraphId="dd2ff">
-    <Graphics CenterX="459.5" CenterY="311.0" Width="29.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
-  </Label>
-  <Label TextLabel="FAD" GraphId="e2325">
-    <Graphics CenterX="381.5" CenterY="250.0" Width="33.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
-  </Label>
   <Label TextLabel="Spontaneous" GraphId="ed898">
     <Graphics CenterX="424.0" CenterY="337.5" Width="80.0" Height="17.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
-  </Label>
-  <Label TextLabel="FADH2" GraphId="f9235">
-    <Graphics CenterX="387.5" CenterY="314.0" Width="43.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
   </Label>
   <Group GroupId="d24b2" GraphId="a2fe0" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
@@ -302,5 +309,4 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
-
 
