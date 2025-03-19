@@ -50,8 +50,8 @@ description: 'Statins inhibit endogenous cholesterol production by competitive i
   mevalonate, an early rate-limiting step in cholesterol synthesis. This pathway delineates
   genes involved in statin pharmacogenomics, including genes involved in mediating
   the effects of statins on plasma lipoprotein metabolism.   Sources: [PharmGKB](https://www.pharmgkb.org/pathway/PA2031)
-  and [Wikipedia](http://en.wikipedia.org/wiki/Statin)'
-last-edited: 2025-03-03
+  and [Wikipedia](http://en.wikipedia.org/wiki/Statin).'
+last-edited: 2025-03-19
 ndex: null
 organisms:
 - Mus musculus
@@ -72,7 +72,7 @@ schema-jsonld:
     to mevalonate, an early rate-limiting step in cholesterol synthesis. This pathway
     delineates genes involved in statin pharmacogenomics, including genes involved
     in mediating the effects of statins on plasma lipoprotein metabolism.   Sources:
-    [PharmGKB](https://www.pharmgkb.org/pathway/PA2031) and [Wikipedia](http://en.wikipedia.org/wiki/Statin)'
+    [PharmGKB](https://www.pharmgkb.org/pathway/PA2031) and [Wikipedia](http://en.wikipedia.org/wiki/Statin).'
   keywords:
   - Abca1
   - Acetyl-CoA
