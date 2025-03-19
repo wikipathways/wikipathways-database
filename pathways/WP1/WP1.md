@@ -41,6 +41,9 @@ citedin:
 - link: PMC4546821
   title: Automatically visualise and analyse data on pathways using PathVisioRPC from
     any programming environment (2015)
+- link: 10.3390/nu17050757
+  title: Isoschaftoside in Fig Leaf Tea Alleviates Nonalcoholic Fatty Liver Disease
+    in Mice via the Regulation of Macrophage Polarity (2025)
 communities: []
 description: 'Statins inhibit endogenous cholesterol production by competitive inhibition
   of HMG-CoA reductase (HMGCR), the enzyme that catalyzes conversion of HMG-CoA to
