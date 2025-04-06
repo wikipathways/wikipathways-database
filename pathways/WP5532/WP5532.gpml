@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Retinoid metabolism in retina: healthy vs. RLBP1-deficient" Data-Source="WikiPathways" Version="WP5532_r138357" Author="[Eweitz]" Last-Modified="20250331234609" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Retinoid metabolism in retina: healthy vs. RLBP1-deficient" Data-Source="WikiPathways" Version="WP5532_r138396" Author="[Eweitz]" Last-Modified="20250405202325" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">RLBP1 encodes CRALBP, a cellular retinaldehyde-binding protein that functions as a soluble retinoid carrier in the visual cycle of the eye. Mutations in RLBP1 are linked to recessively inherited conditions, such as Bothnia dystrophy, retinitis pigmentosa, retinitis punctata albescens, fundus albipunctatus, and Newfoundland rod-cone dystrophy.</Comment>
   <BiopaxRef>c92</BiopaxRef>
   <Graphics BoardWidth="910.0" BoardHeight="658.0" />
@@ -96,7 +96,7 @@
     <Xref Database="ChEBI" ID="CHEBI:17336" />
   </DataNode>
   <DataNode TextLabel="11cisRE" GraphId="a55f2" Type="Metabolite" GroupRef="a05d4">
-    <Graphics CenterX="684.0" CenterY="109.0" Width="60.0" Height="20.0" ZOrder="32833" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="684.0" CenterY="109.0" Width="60.0" Height="20.0" ZOrder="32833" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:195358" />
   </DataNode>
   <DataNode TextLabel="atRE" GraphId="bc88a" Type="Metabolite" GroupRef="a05d4">
@@ -509,6 +509,13 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <Interaction GraphId="bb578">
+    <Graphics ZOrder="32889" LineThickness="1.0">
+      <Point X="538.0" Y="463.0" GraphRef="af2ed" RelX="0.0" RelY="1.0" />
+      <Point X="586.0" Y="562.0" GraphRef="c93a8" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Label TextLabel="Cone cell" GraphId="a5d97">
     <Graphics CenterX="353.0" CenterY="371.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="a0a0a0" />
   </Label>
@@ -585,12 +592,12 @@
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="682.75" CenterY="576.25" Width="386.5" Height="103.5" ZOrder="32840" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
-  <Group GroupId="bd9bb" Style="Complex" />
   <Group GroupId="e6888" Style="Complex" />
   <Group GroupId="b2fc2" GraphId="a5a1d" Style="Complex" />
   <Group GroupId="f6376" GraphId="ac6d1" Style="Complex" />
   <Group GroupId="b4e11" GraphId="b4297" Style="Complex" />
   <Group GroupId="f63fc" GraphId="b47dd" Style="Complex" />
+  <Group GroupId="bd9bb" GraphId="c93a8" Style="Complex" />
   <Group GroupId="c4045" GraphId="d04dd" Style="Complex" />
   <Group GroupId="aee4e" GraphId="d8a02" Style="Complex" />
   <Group GroupId="e9591" GraphId="dcfc7" Style="Complex" />
@@ -599,8 +606,8 @@
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mueller cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000636</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retinal pigment epithelial cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002586</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
@@ -620,13 +627,8 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuhauss SC</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retinal pigment epithelial cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002586</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compound eye cone cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000718</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mueller cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000636</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
@@ -642,6 +644,11 @@
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retinal rod cell</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000604</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compound eye cone cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000718</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
