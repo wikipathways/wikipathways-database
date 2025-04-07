@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Pathophysiology of age-related macular degeneration" Data-Source="WikiPathways" Version="WP5533_r138395" Author="[Eweitz]" Last-Modified="20250405192135" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Pathophysiology of age-related macular degeneration" Data-Source="WikiPathways" Version="WP5533_r138413" Author="[Eweitz]" Last-Modified="20250406135555" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Age-related macular degeneration (AMD) affects 13% of Americans aged 40 and older.  It degrades vision and, if severe, causes blindness. It is marked by the degeneration of photoreceptor cells and the retinal pigment epithelium (RPE), leading to distinct atrophic areas in the macula.  Individuals with geographic atrophy often experience a slow and painless decline in central vision.  This makes it difficult to read, recognize faces, or do other tasks that need good vision.
 
 Inspired by Figure 3 in [Rajanala et al. (2023)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11182118).</Comment>
@@ -77,9 +77,9 @@ Inspired by Figure 3 in [Rajanala et al. (2023)](https://pmc.ncbi.nlm.nih.gov/ar
     <Graphics CenterX="572.25" CenterY="217.25" Width="75.0" Height="20.0" ZOrder="32808" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="Defective visual cycle" GraphId="ee898" GroupRef="bd74f">
-    <Graphics CenterX="530.0" CenterY="274.0" Width="150.0" Height="20.0" ZOrder="32810" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="008080" />
-    <Xref Database="" ID="" />
+  <DataNode TextLabel="Defective visual cycle" GraphId="ee898" Type="Pathway" GroupRef="bd74f">
+    <Graphics CenterX="530.0" CenterY="274.0" Width="150.0" Height="20.0" ZOrder="32810" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP5534" />
   </DataNode>
   <DataNode TextLabel="Phagocytosis" GraphId="ce6f2" GroupRef="bd74f">
     <Graphics CenterX="490.0" CenterY="294.0" Width="90.0" Height="20.0" ZOrder="32812" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="008080" />
@@ -97,9 +97,9 @@ Inspired by Figure 3 in [Rajanala et al. (2023)](https://pmc.ncbi.nlm.nih.gov/ar
     <Graphics CenterX="885.0" CenterY="197.0" Width="80.0" Height="25.0" ZOrder="32824" FillColor="ffdddd" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="Complement cascade activation" GraphId="cd908" GroupRef="fd01c">
-    <Graphics CenterX="535.0" CenterY="429.0" Width="190.0" Height="20.0" ZOrder="32828" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="008080" />
-    <Xref Database="" ID="" />
+  <DataNode TextLabel="Complement cascade activation" GraphId="cd908" Type="Pathway" GroupRef="fd01c">
+    <Graphics CenterX="535.0" CenterY="429.0" Width="200.0" Height="20.0" ZOrder="32828" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP545" />
   </DataNode>
   <DataNode TextLabel="Chronic inflammation" GraphId="d2d5a" GroupRef="fd01c">
     <Graphics CenterX="535.0" CenterY="449.0" Width="150.0" Height="20.0" ZOrder="32830" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="008080" />
@@ -259,7 +259,7 @@ Inspired by Figure 3 in [Rajanala et al. (2023)](https://pmc.ncbi.nlm.nih.gov/ar
   <Interaction GraphId="d4e78">
     <Graphics ZOrder="32826" LineThickness="1.0">
       <Point X="405.0" Y="404.0" GraphRef="f5e63" RelX="1.0" RelY="0.0" />
-      <Point X="432.0" Y="439.0" GraphRef="ea577" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="427.0" Y="439.0" GraphRef="ea577" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -272,7 +272,7 @@ Inspired by Figure 3 in [Rajanala et al. (2023)](https://pmc.ncbi.nlm.nih.gov/ar
   </Interaction>
   <Interaction GraphId="c169e">
     <Graphics ConnectorType="Elbow" ZOrder="32854" LineThickness="1.0">
-      <Point X="638.0" Y="439.0" GraphRef="ea577" RelX="1.0" RelY="0.0" />
+      <Point X="643.0" Y="439.0" GraphRef="ea577" RelX="1.0" RelY="0.0" />
       <Point X="678.0" Y="463.0" />
       <Point X="845.0" Y="487.0" GraphRef="f4047" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
@@ -723,14 +723,14 @@ Inspired by Figure 3 in [Rajanala et al. (2023)](https://pmc.ncbi.nlm.nih.gov/ar
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retinal pigment epithelial cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002586</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age related macular degeneration</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10871</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retinal pigment epithelial cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002586</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bd3">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38983017</bp:ID>
