@@ -95,6 +95,10 @@ dataNodes.forEach(function(entityById) {
         });
       }
     }
+  } else {  // for other nodes that are not in datanodes table
+    let compactIdentifier = entityById.xrefDataSource.toLowerCase() + ":" + entityById.xrefIdentifier;
+    // Add compact identifier
+    entityById.type.push("CompactIdentifier:" + compactIdentifier);
   }
 });
 
