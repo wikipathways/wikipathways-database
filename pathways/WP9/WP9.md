@@ -1,13 +1,13 @@
 ---
 annotations:
-- id: PW:0000354
-  parent: classic metabolic pathway
-  type: Pathway Ontology
-  value: glycerophospholipid metabolic pathway
 - id: PW:0000002
   parent: classic metabolic pathway
   type: Pathway Ontology
   value: classic metabolic pathway
+- id: PW:0000354
+  parent: classic metabolic pathway
+  type: Pathway Ontology
+  value: glycerophospholipid metabolic pathway
 authors:
 - M.Braymer
 - MaintBot
@@ -38,15 +38,15 @@ description: 'Phospholipids are amphipathic molecules that consist of a glycerol
   mechanisms in mammalian cells; however, unlike yeast, mammals primarily synthesize
   PS from other phospholipids and not from CDP-DAG.  Description adapted from YeastPathways
   https://pathway.yeastgenome.org/.'
-last-edited: 2024-11-28
+last-edited: 2025-06-20
 ndex: null
 organisms:
 - Saccharomyces cerevisiae
 redirect_from:
 - /index.php/Pathway:WP9
 - /instance/WP9
-- /instance/WP9_r135923
-revision: r135923
+- /instance/WP9_r139464
+revision: r139464
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP9.html
@@ -81,10 +81,10 @@ schema-jsonld:
   - CHO1
   - CHO2
   - CMP
-  - CO2
+  - CO₂
   - CRD1
   - H+
-  - H2O
+  - H₂O
   - L-1-phosphatidylethanolamine
   - L-serine
   - OPI3
