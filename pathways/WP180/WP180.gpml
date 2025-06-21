@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Leucine biosynthesis" Data-Source="WikiPathways" Version="WP180_r135971" Author="[M.Braymer, MaintBot, Ddigles, Egonw, Mkutmon, Eweitz, Khanspers]" Last-Modified="20241205004219" Organism="Saccharomyces cerevisiae">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Leucine biosynthesis" Data-Source="WikiPathways" Version="WP180_r139499" Author="[M.Braymer, MaintBot, Ddigles, Egonw, Mkutmon, Eweitz, Khanspers]" Last-Modified="20250620070212" Organism="Saccharomyces cerevisiae">
   <Comment Source="WikiPathways-description">The biosynthesis of branched-chain amino acids (BCAA) in S. cerevisiae involves a common pathway that metabolizes pyruvate to valine or -ketobutyrate (derived from threonine) to isoleucine. This pathway occurs in the mitochondrion until the final step, where the immediate precursor to valine or isoleucine is converted to its respective amino acid either in the mitochondrion (via Bat1p) or the cytosol (via Bat2p). In a branch of the common pathway, valines immediate precursor can instead be converted to -isopropylmalate via -isopropylmalate synthase (Leu4p and Leu9p), which is subsequently exported to the cytosol and metabolized to leucine in three additional steps.
 
 Many genes in the common pathway of BCAA biosynthesis are induced by Gcn4 in response to starvation for any amino acid. Additionally, the flow of substrates into valine, isoleucine, or leucine biosynthesis is controlled depending on the concentration of each of the three amino acids. Threonine deaminase (Ilv1p), which converts threonine to -ketobutyrate for isoleucine biosynthesis, is inhibited by high concentrations of isoleucine. This inhibition is reversed by valine; however, high concentrations of both isoleucine and valine will also result in inhibition. Acetohydroxyacid synthase (AHAS; Ilv2p), which catalyzes the first step in the common pathway of BCAA biosynthesis, is subject to feedback inhibition by valine. Likewise, -isopropylmalate synthase (Leu4p and Leu9p) is also feedback inhibited by its end product, leucine.
@@ -63,11 +63,11 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
     <Graphics CenterX="429.33333333333337" CenterY="241.0" Width="40.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="SGD" ID="S000000523" />
   </DataNode>
-  <DataNode TextLabel="CO2" GraphId="ec86a" Type="Metabolite" GroupRef="f2d4d">
+  <DataNode TextLabel="CO₂" GraphId="ec86a" Type="Metabolite" GroupRef="f2d4d">
     <Graphics CenterX="382.0" CenterY="334.0" Width="46.0" Height="19.0" ZOrder="32769" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="16526" />
   </DataNode>
-  <DataNode TextLabel="H2O" GraphId="df01e" Type="Metabolite" GroupRef="cfe5d">
+  <DataNode TextLabel="H₂O" GraphId="df01e" Type="Metabolite" GroupRef="cfe5d">
     <Graphics CenterX="295.5" CenterY="164.0" Width="57.0" Height="19.0" ZOrder="32770" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="15377" />
   </DataNode>
@@ -83,7 +83,7 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
     <Graphics CenterX="555.5" CenterY="279.0" Width="131.0" Height="19.0" ZOrder="32773" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="35121" />
   </DataNode>
-  <DataNode TextLabel="H+" GraphId="b7077" Type="Metabolite" GroupRef="fda3e">
+  <DataNode TextLabel="H⁺" GraphId="b7077" Type="Metabolite" GroupRef="fda3e">
     <Graphics CenterX="412.0" CenterY="143.0" Width="46.0" Height="19.0" ZOrder="32774" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="15378" />
   </DataNode>
@@ -209,11 +209,13 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001270</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c19">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=PATHWAY&amp;object=LEUSYN-PWY-1</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L-leucine biosynthesis</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YeastPathways</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="rma">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12626680</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -222,13 +224,11 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kohlhaw GB</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c19">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=PATHWAY&amp;object=LEUSYN-PWY-1</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L-leucine biosynthesis</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YeastPathways</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
-    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
