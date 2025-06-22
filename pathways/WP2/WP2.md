@@ -31,16 +31,16 @@ description: 'The pathway of valine biosynthesis is a four-step pathway that sha
   to isoleucine biosynthesis, as explained in the L-isoleucine biosynthesis I (from
   threonine) summary. In this way, valine biosynthesis can be regulated independently
   of isoleucine biosynthesis, despite all four valine biosynthesis enzymes also participating
-  in isoleucine biosynthesis.  SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html'
-last-edited: 2025-05-02
+  in isoleucine biosynthesis.  SOURCE: SGD pathways, [yeastgenome.org](http://pathway.yeastgenome.org/server.html)'
+last-edited: 2025-06-22
 ndex: null
 organisms:
 - Saccharomyces cerevisiae
 redirect_from:
 - /index.php/Pathway:WP2
 - /instance/WP2
-- /instance/WP2_r138754
-revision: r138754
+- /instance/WP2_r139531
+revision: r139531
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP2.html
@@ -62,7 +62,7 @@ schema-jsonld:
     I (from threonine) summary. In this way, valine biosynthesis can be regulated
     independently of isoleucine biosynthesis, despite all four valine biosynthesis
     enzymes also participating in isoleucine biosynthesis.  SOURCE: SGD pathways,
-    http://pathway.yeastgenome.org/server.html'
+    [yeastgenome.org](http://pathway.yeastgenome.org/server.html)'
   keywords:
   - (R)-2,3-dihydroxy-3-methylbutanoate
   - 2 pyruvate
@@ -73,7 +73,7 @@ schema-jsonld:
   - BAT2
   - CO2
   - H+
-  - H2O
+  - H₂O
   - ILV2
   - ILV3
   - ILV5
