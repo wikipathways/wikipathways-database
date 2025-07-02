@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Celiac disease mechanism and therapies" Data-Source="WikiPathways" Version="WP5562_r139728" Author="[Eweitz]" Last-Modified="20250701114610" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">In celiac disease, gluten peptides breach the intestinal epithelial barrier and are deamidated by tissue transglutaminase 2 (TG2). These modified peptides are presented on HLA-DQ2 or HLA-DQ8 molecules by antigen-presenting cells (APCs), leading to the activation of gluten-specific CD4⁺ T cells. Once activated, these T cells produce inflammatory cytokines such as IFN-γ, IL-2, IL-21, and TNF-α, which contribute to small-intestinal mucosal damage, in part by acting alongside IL-15 secreted by inflamed epithelial cells.
+
+Intraepithelial cytotoxic CD8⁺ T cells are also activated, releasing granzyme B (GZMB) and IFN-γ, amplifying the cycle of inflammation. In the periphery, gluten-specific memory CD4⁺ T cells remain vigilant and rapidly respond to gluten exposure—within 6 hours—by releasing inflammatory mediators like IL-2.
+
+Emerging evidence suggests that bacterial or viral infections may disrupt oral tolerance to gluten. Current therapeutic approaches under investigation target multiple stages of CeD pathogenesis:
+
+* Glutenases and anti-gliadin antibody AGY degrade or neutralize gluten;
+
+* Integrin antagonists and tight junction modulators aim to restore epithelial barrier integrity;
+
+* TG2 inhibitors block gluten peptide deamidation;
+
+* Anti-IL-15 monoclonal antibodies (mAbs) suppress IL-15–driven inflammation;
+
+* CD4⁺ T cell–targeted therapies seek to inhibit the expansion of pathogenic gluten-specific T cells;
+
+* Tolerance-inducing strategies aim to delete or anergize gluten-specific CD4⁺ T cells or promote their differentiation into regulatory T cells (Tregs).</Comment>
+  <BiopaxRef>f4c</BiopaxRef>
+  <Graphics BoardWidth="992.0" BoardHeight="741.0" />
+  <DataNode TextLabel="Inflammation" GraphId="a4ed0">
+    <Graphics CenterX="834.0" CenterY="328.0" Width="100.0" Height="30.0" ZOrder="32768" FillColor="ffdddd" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="TGM2" GraphId="b64e6" Type="GeneProduct">
+    <Comment>"TG2" in source</Comment>
+    <Graphics CenterX="356.0" CenterY="378.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="TGM2" />
+  </DataNode>
+  <DataNode TextLabel="TAK-101" GraphId="f8f55" Type="Metabolite">
+    <Graphics CenterX="275.0" CenterY="688.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Gluten" GraphId="fef5f" Type="Metabolite">
+    <Graphics CenterX="296.0" CenterY="75.0" Width="90.0" Height="25.0" ZOrder="32769" FontWeight="Bold" FontSize="14" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:192208" />
+  </DataNode>
+  <DataNode TextLabel="Gluten&#xA;peptide" GraphId="ff313" Type="Metabolite">
+    <Graphics CenterX="296.0" CenterY="309.0" Width="60.0" Height="35.0" ZOrder="32819" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:192208" />
+  </DataNode>
+  <DataNode TextLabel="Deaminated&#xA;gluten&#xA;peptide" GraphId="f20be" Type="Metabolite">
+    <Graphics CenterX="296.0" CenterY="433.0" Width="80.0" Height="50.0" ZOrder="32820" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:192208" />
+  </DataNode>
+  <DataNode TextLabel="HLA-DQA1" GraphId="c20b6" Type="GeneProduct" GroupRef="d9890">
+    <Graphics CenterX="450.0" CenterY="479.0" Width="70.0" Height="20.0" ZOrder="32821" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="IL2" GraphId="e3401" Type="GeneProduct" GroupRef="e5c87">
+    <Graphics CenterX="718.0" CenterY="365.0" Width="60.0" Height="20.0" ZOrder="32824" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000109471" />
+  </DataNode>
+  <DataNode TextLabel="IL21" GraphId="b3552" Type="GeneProduct" GroupRef="e5c87">
+    <Graphics CenterX="718.0" CenterY="325.0" Width="60.0" Height="20.0" ZOrder="32825" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138684" />
+  </DataNode>
+  <DataNode TextLabel="TNFA" GraphId="b83ad" Type="GeneProduct" GroupRef="e5c87">
+    <Graphics CenterX="718.0" CenterY="385.0" Width="60.0" Height="20.0" ZOrder="32826" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000232810" />
+  </DataNode>
+  <DataNode TextLabel="IFNG" GraphId="b1793" Type="GeneProduct" GroupRef="e5c87">
+    <Graphics CenterX="718.0" CenterY="345.0" Width="60.0" Height="20.0" ZOrder="32829" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000111537" />
+  </DataNode>
+  <DataNode TextLabel="CD4" GraphId="f3224" Type="GeneProduct">
+    <Graphics CenterX="567.0" CenterY="567.0" Width="60.0" Height="20.0" ZOrder="32840" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000010610" />
+  </DataNode>
+  <DataNode TextLabel="IFNG" GraphId="c0e4e" Type="GeneProduct" GroupRef="b186b">
+    <Graphics CenterX="667.0" CenterY="116.0" Width="60.0" Height="20.0" ZOrder="32863" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000111537" />
+  </DataNode>
+  <DataNode TextLabel="GZMB" GraphId="a65f8" Type="GeneProduct" GroupRef="b186b">
+    <Graphics CenterX="667.0" CenterY="96.0" Width="60.0" Height="20.0" ZOrder="32864" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000100453" />
+  </DataNode>
+  <DataNode TextLabel="IL15" GraphId="b4602" Type="GeneProduct">
+    <Graphics CenterX="641.0" CenterY="293.0" Width="60.0" Height="20.0" ZOrder="32865" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000164136" />
+  </DataNode>
+  <DataNode TextLabel="KAN-101" GraphId="f36f8" Type="Metabolite">
+    <Graphics CenterX="335.0" CenterY="688.0" Width="60.0" Height="20.0" ZOrder="32866" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="ZED1227" GraphId="ef393" Type="Metabolite" GroupRef="c5a69">
+    <Graphics CenterX="464.0" CenterY="367.6666666666667" Width="90.0" Height="20.0" ZOrder="32868" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="GSK3915393" GraphId="a71ad" Type="Metabolite" GroupRef="c5a69">
+    <Graphics CenterX="464.0" CenterY="387.6666666666667" Width="90.0" Height="20.0" ZOrder="32869" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="AGY" GraphId="e7442" Type="Metabolite">
+    <Graphics CenterX="194.0" CenterY="85.0" Width="40.0" Height="20.0" ZOrder="32870" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="PTG-100" GraphId="bfc82" Type="Metabolite">
+    <Graphics CenterX="158.0" CenterY="371.0" Width="60.0" Height="20.0" ZOrder="32871" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Larazotide" GraphId="ea0c9" Type="Metabolite">
+    <Graphics CenterX="230.0" CenterY="371.0" Width="70.0" Height="20.0" ZOrder="32872" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="DrugBank" ID="DB05645" />
+  </DataNode>
+  <DataNode TextLabel="Tolerase G" GraphId="c17b2" Type="Metabolite" GroupRef="a04d9">
+    <Graphics CenterX="110.0" CenterY="30.0" Width="70.0" Height="20.0" ZOrder="32875" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="TAK-062" GraphId="ac239" Type="Metabolite" GroupRef="a04d9">
+    <Graphics CenterX="175.0" CenterY="30.0" Width="60.0" Height="20.0" ZOrder="32876" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Latiglutenase" GraphId="fec8e" Type="Metabolite" GroupRef="a04d9">
+    <Graphics CenterX="144.0" CenterY="50.0" Width="90.0" Height="20.0" ZOrder="32877" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="DrugBank" ID="DB06326" />
+  </DataNode>
+  <DataNode TextLabel="TRA" GraphId="cf29f" Type="GeneProduct">
+    <Graphics CenterX="569.0" CenterY="497.0" Width="60.0" Height="20.0" ZOrder="32883" FontSize="12" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6955" />
+  </DataNode>
+  <DataNode TextLabel="Teriflunomide" GraphId="f2f21" Type="Metabolite">
+    <Graphics CenterX="862.0" CenterY="512.0" Width="90.0" Height="20.0" ZOrder="32889" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="DB08880" />
+  </DataNode>
+  <DataNode TextLabel="Pyrimidine&#xA;synthesis" GraphId="c3669" Type="Pathway" GroupRef="c9aca">
+    <Graphics CenterX="680.0" CenterY="485.0" Width="70.0" Height="40.0" ZOrder="32892" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="DHODH" GraphId="f95f6" Type="GeneProduct" GroupRef="c9aca">
+    <Graphics CenterX="680.0" CenterY="515.0" Width="60.0" Height="20.0" ZOrder="32893" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000102967" />
+  </DataNode>
+  <DataNode TextLabel="PRV-015" GraphId="a7454" Type="Metabolite" GroupRef="b1581">
+    <Graphics CenterX="604.0" CenterY="343.0" Width="70.0" Height="20.0" ZOrder="32896" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="CALY-002" GraphId="b62e1" Type="Metabolite" GroupRef="b1581">
+    <Graphics CenterX="604.0" CenterY="363.0" Width="70.0" Height="20.0" ZOrder="32897" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Loss of &#xA;tolerance" GraphId="b7803">
+    <Graphics CenterX="203.0" CenterY="315.0" Width="70.0" Height="40.0" ZOrder="32900" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="EGFR" GraphId="e8bb4" Type="GeneProduct" GroupRef="b9634">
+    <Graphics CenterX="247.0" CenterY="270.0" Width="50.0" Height="20.0" ZOrder="32902" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000146648" />
+  </DataNode>
+  <DataNode TextLabel="F2RL1" GraphId="e83c4" Type="GeneProduct" GroupRef="b9634">
+    <Comment>"PAR2" in source</Comment>
+    <Graphics CenterX="247.0" CenterY="250.0" Width="50.0" Height="20.0" ZOrder="32903" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000164251" />
+  </DataNode>
+  <DataNode TextLabel="ITGB7" GraphId="ff516" Type="GeneProduct" GroupRef="e0634">
+    <Graphics CenterX="158.0" CenterY="269.0" Width="50.0" Height="20.0" ZOrder="32909" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000139626" />
+  </DataNode>
+  <DataNode TextLabel="ITGA4" GraphId="b649f" Type="GeneProduct" GroupRef="e0634">
+    <Graphics CenterX="158.0" CenterY="249.0" Width="50.0" Height="20.0" ZOrder="32910" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000115232" />
+  </DataNode>
+  <DataNode TextLabel="HLA-DQB1" GraphId="dac01" Type="GeneProduct" GroupRef="d9890">
+    <Graphics CenterX="450.0" CenterY="499.0" Width="70.0" Height="20.0" ZOrder="32911" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="HLA-DQA1" GraphId="e18ed" Type="GeneProduct" GroupRef="a3cf6">
+    <Graphics CenterX="450.0" CenterY="542.0" Width="70.0" Height="20.0" ZOrder="32912" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="HLA-DQB1" GraphId="bdfd3" Type="GeneProduct" GroupRef="a3cf6">
+    <Graphics CenterX="450.0" CenterY="562.0" Width="70.0" Height="20.0" ZOrder="32913" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Interaction GraphId="id3b2fcaef">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="718.25" Y="437.0" GraphRef="c81ab" RelX="0.5" RelY="-1.0" />
+      <Point X="718.0" Y="403.0" GraphRef="ba249" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4cebfc2c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="411.0" Y="377.6666666666667" GraphRef="fb31d" RelX="-1.0" RelY="0.0" />
+      <Point X="386.0" Y="378.0" GraphRef="b64e6" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id73f7f57d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="326.0" Y="378.0" GraphRef="b64e6" RelX="-1.0" RelY="0.0" />
+      <Point X="296.0" Y="378.0" GraphRef="baee2" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id848ddd79">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="296.0" Y="326.5" GraphRef="ff313" RelX="0.0" RelY="1.0" />
+      <Point X="296.0" Y="408.0" GraphRef="f20be" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.6319018404907976" Shape="None" GraphId="baee2" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id87e4dbd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="213.0" Y="54.0" GraphRef="d3e00" RelX="1.0" RelY="0.5" />
+      <Point X="251.0" Y="68.75" GraphRef="fef5f" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8efb17e8">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="336.0" Y="433.0" GraphRef="f20be" RelX="1.0" RelY="0.0" />
+      <Point X="473.5" Y="457.0" GraphRef="aa864" RelX="0.5" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd0d0b582">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="230.0" Y="361.0" GraphRef="ea0c9" RelX="0.0" RelY="-1.0" />
+      <Point X="220.5" Y="335.0" GraphRef="b7803" RelX="0.5" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a5760">
+    <Graphics ZOrder="32830" LineThickness="1.0">
+      <Point X="296.0" Y="87.5" GraphRef="fef5f" RelX="0.0" RelY="1.0" />
+      <Point X="296.0" Y="291.5" GraphRef="ff313" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b5b37">
+    <Graphics ConnectorType="Elbow" ZOrder="32832" LineThickness="1.0">
+      <Point X="696.0" Y="260.0" GraphRef="dc8f2" RelX="-0.5" RelY="1.0" />
+      <Point X="671.0" Y="293.0" GraphRef="b4602" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d0f3e">
+    <Graphics ConnectorType="Elbow" ZOrder="32833" LineThickness="1.0">
+      <Point X="593.0" Y="155.0" GraphRef="f1ad7" RelX="-0.5" RelY="-1.0" />
+      <Point X="629.0" Y="106.0" GraphRef="d4e52" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ef4ce">
+    <Graphics ZOrder="32844" LineThickness="1.0">
+      <Point X="537.0" Y="567.0" GraphRef="f3224" RelX="-1.0" RelY="0.0" />
+      <Point X="497.0" Y="568.0" GraphRef="bfcd2" RelX="1.0" RelY="0.5" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="af541">
+    <Graphics ZOrder="32849" LineThickness="1.0">
+      <Point X="497.0" Y="489.0" GraphRef="aa864" RelX="1.0" RelY="0.0" />
+      <Point X="539.0" Y="497.0" GraphRef="cf29f" RelX="-1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fd550">
+    <Graphics ConnectorType="Elbow" ZOrder="32850" LineThickness="1.0">
+      <Point X="552.0" Y="577.0" GraphRef="f3224" RelX="-0.5" RelY="1.0" />
+      <Point X="437.0" Y="597.0" />
+      <Point X="322.0" Y="543.0" />
+      <Point X="403.0" Y="489.0" GraphRef="aa864" RelX="-1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida1690a8a">
+    <Graphics ZOrder="32867" LineThickness="1.0">
+      <Point X="305.0" Y="670.0" />
+      <Point X="195.0" Y="539.5" GraphRef="b5eed" RelX="1.0" RelY="0.5" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c4891">
+    <Graphics ConnectorType="Elbow" ZOrder="32885" LineThickness="1.0">
+      <Point X="611.0" Y="293.0" GraphRef="b4602" RelX="-1.0" RelY="0.0" />
+      <Point X="593.0" Y="265.0" GraphRef="f1ad7" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bf07c">
+    <Graphics ConnectorType="Elbow" ZOrder="32886" LineThickness="1.0">
+      <Point X="705.0" Y="106.0" GraphRef="d4e52" RelX="1.0" RelY="0.0" />
+      <Point X="739.0" Y="160.0" GraphRef="dc8f2" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b2cf2">
+    <Graphics ZOrder="32887" LineThickness="1.0">
+      <Point X="739.0" Y="260.0" GraphRef="dc8f2" RelX="0.5" RelY="1.0" />
+      <Point X="784.0" Y="320.5" GraphRef="a4ed0" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a9b82">
+    <Graphics ZOrder="32888" LineThickness="1.0">
+      <Point X="718.0" Y="307.0" GraphRef="ba249" RelX="0.0" RelY="-1.0" />
+      <Point X="717.5" Y="260.0" GraphRef="dc8f2" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide2f03422">
+    <Graphics ZOrder="32894" LineThickness="1.0">
+      <Point X="817.0" Y="512.0" GraphRef="f2f21" RelX="-1.0" RelY="0.0" />
+      <Point X="710.0" Y="515.0" GraphRef="f95f6" RelX="1.0" RelY="0.0" ArrowHead="TBar" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f4cda">
+    <Graphics ZOrder="32895" LineThickness="1.0">
+      <Point X="214.0" Y="85.0" GraphRef="e7442" RelX="1.0" RelY="0.0" />
+      <Point X="251.0" Y="81.25" GraphRef="fef5f" RelX="-1.0" RelY="0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c47cb">
+    <Graphics ZOrder="32898" LineThickness="1.0">
+      <Point X="625.5" Y="325.0" GraphRef="c713b" RelX="0.5" RelY="-1.0" />
+      <Point X="626.0" Y="303.0" GraphRef="b4602" RelX="-0.5" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e1f26">
+    <Graphics ZOrder="32904" LineThickness="1.0">
+      <Point X="247.5" Y="361.0" GraphRef="ea0c9" RelX="0.5" RelY="-1.0" />
+      <Point X="247.0" Y="288.0" GraphRef="e7e67" RelX="0.0" RelY="1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b5418">
+    <Graphics ZOrder="32907" LineThickness="1.0">
+      <Point X="173.0" Y="361.0" GraphRef="bfc82" RelX="0.5" RelY="-1.0" />
+      <Point X="185.5" Y="335.0" GraphRef="b7803" RelX="-0.5" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d38b2">
+    <Graphics ZOrder="32908" LineThickness="1.0">
+      <Point X="158.0" Y="361.0" GraphRef="bfc82" RelX="0.0" RelY="-1.0" />
+      <Point X="158.0" Y="291.0" GraphRef="e500a" RelX="0.0" RelY="1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b26d6">
+    <Graphics ZOrder="32915" LineThickness="1.0">
+      <Point X="497.0" Y="536.0" GraphRef="bfcd2" RelX="1.0" RelY="-0.5" />
+      <Point X="539.0" Y="497.0" GraphRef="cf29f" RelX="-1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="Antigen&#xA;presenting &#xA;cell" GraphId="a5793">
+    <Graphics CenterX="279.0" CenterY="511.0" Width="90.0" Height="50.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Label" GraphId="b0505">
+    <Graphics CenterX="717.0" CenterY="218.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Tolerance induction" GraphId="e4b62">
+    <Graphics CenterX="424.0" CenterY="690.0" Width="120.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="HLA-DQ2" GraphId="ee8dc">
+    <Graphics CenterX="371.0" CenterY="504.0" Width="70.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Mucus layer" GraphId="f9199">
+    <Graphics CenterX="59.0" CenterY="125.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Intestinal&#xA;epithelial&#xA;cell" GraphId="f855c">
+    <Graphics CenterX="717.5" CenterY="211.0" Width="85.0" Height="60.0" ZOrder="28692" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="ffdc14" />
+  </Label>
+  <Label TextLabel="Intestinal &#xA;epithelial&#xA;cell" GraphId="b6f8f">
+    <Graphics CenterX="59.5" CenterY="211.0" Width="85.0" Height="60.0" ZOrder="32771" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Gluten-specific&#xA;CD4 T cell" GraphId="e128b">
+    <Graphics CenterX="666.0" CenterY="562.0" Width="100.0" Height="35.0" ZOrder="32775" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Gluten-specific&#xA;CD4 Treg" GraphId="c5eae">
+    <Graphics CenterX="135.0" CenterY="527.0" Width="100.0" Height="50.0" ZOrder="32777" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="CD8 T cell" GraphId="f63fd">
+    <Graphics CenterX="615.5" CenterY="210.0" Width="80.0" Height="25.0" ZOrder="32831" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Lumen" GraphId="eb54d">
+    <Graphics CenterX="46.0" CenterY="86.0" Width="60.0" Height="25.0" ZOrder="32834" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Lamina propria" GraphId="e25fb">
+    <Graphics CenterX="76.0" CenterY="574.0" Width="100.0" Height="25.0" ZOrder="32835" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Blood stream" GraphId="bf682">
+    <Graphics CenterX="80.0" CenterY="684.0" Width="100.0" Height="25.0" ZOrder="32836" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Gluten&#xA;neutralization" GraphId="b903f">
+    <Graphics CenterX="121.0" CenterY="86.0" Width="90.0" Height="25.0" ZOrder="32874" FillColor="ffffff" FontSize="12" Valign="Middle" Align="Right" />
+  </Label>
+  <Label TextLabel="Glutenases" GraphId="b118a">
+    <Graphics CenterX="58.0" CenterY="51.0" Width="80.0" Height="25.0" ZOrder="32878" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="CD4 T cell targeting" GraphId="b46af">
+    <Graphics CenterX="861.0" CenterY="488.0" Width="120.0" Height="25.0" ZOrder="32890" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Anti-IL15 mAb" GraphId="d68c5">
+    <Graphics CenterX="604.0" CenterY="385.6666666666667" Width="120.0" Height="25.0" ZOrder="32899" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="HLA-DQ8" GraphId="e720e">
+    <Graphics CenterX="371.0" CenterY="548.0" Width="70.0" Height="20.0" ZOrder="32914" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Shape GraphId="e8dbc">
+    <Graphics CenterX="485.875" CenterY="385.5" Width="950.25" Height="465.0" ZOrder="-85" FillColor="f6e9e2" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="f6e9e2" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="eaf73">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="344.0" CenterY="526.0" Width="216.0" Height="110.0" ZOrder="-83" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f67e5">
+    <Graphics CenterX="485.875" CenterY="82.5" Width="946.25" Height="153.0" ZOrder="-82" FillColor="eeffdd" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="eeffcc" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ed5aa">
+    <Graphics CenterX="865.5" CenterY="136.9999999999999" Width="181.0" Height="55.0" ZOrder="-78" FillColor="ccdd99" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="556600" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a15e9">
+    <Graphics CenterX="60.0" CenterY="138.9999999999999" Width="90.0" Height="55.0" ZOrder="-75" FillColor="ccdd99" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="556600" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c52e3">
+    <Graphics CenterX="465.75" CenterY="136.9999999999999" Width="188.5" Height="55.0" ZOrder="-73" FillColor="ccdd99" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="556600" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="adce3">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="928.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-71" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="dd5bd">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="878.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-68" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a9dee">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="888.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-66" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b82b0">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="898.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-64" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="fe601">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="908.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-62" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a85ad">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="918.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-60" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b2ec1">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="938.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-58" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c2b03">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="948.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-56" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f2e5b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="836.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-54" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d9194">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="786.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-52" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="fd24c">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="796.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-50" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e4db4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="806.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-48" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b287f">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="816.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-46" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c334f">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="826.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-44" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a835c">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="846.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-42" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a8ea3">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="856.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-40" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="cced1">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="74.0" CenterY="163.0" Width="10.0" Height="50.0" ZOrder="-38" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a9bc4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="24.0" CenterY="163.0" Width="10.0" Height="50.0" ZOrder="-36" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d383e">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="34.0" CenterY="163.0" Width="10.0" Height="50.0" ZOrder="-34" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ecca5">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="44.0" CenterY="163.0" Width="10.0" Height="50.0" ZOrder="-32" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="dbf11">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="54.0" CenterY="163.0" Width="10.0" Height="50.0" ZOrder="-30" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d802e">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="64.0" CenterY="163.0" Width="10.0" Height="50.0" ZOrder="-28" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="aee1b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="84.0" CenterY="163.0" Width="10.0" Height="50.0" ZOrder="-26" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d3d89">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="94.0" CenterY="163.0" Width="10.0" Height="50.0" ZOrder="-24" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="cd4f4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="433.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-6" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e56cf">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="383.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-4" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ea5a8">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="393.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="-2" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="cfc0b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="403.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="0" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c7ea8">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="413.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="2" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b3f23">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="423.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="4" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bb73b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="443.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="6" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d1fc1">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="453.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="8" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="db7ee">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="419.5" CenterY="210.0" Width="90.0" Height="110.0" ZOrder="16385" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c81ab">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="668.5" CenterY="513.5" Width="199.0" Height="153.0" ZOrder="16387" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f8ed3">
+    <Graphics CenterX="487.375" CenterY="667.25" Width="949.25" Height="87.5" ZOrder="16389" FillColor="f6dedf" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="f6dedf" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c8097">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="247.5" CenterY="210.0" Width="75.0" Height="100.0" ZOrder="28674" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="fbc84">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="333.0" CenterY="211.0" Width="55.0" Height="100.0" ZOrder="28676" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b9983">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="59.5" CenterY="212.0" Width="90.0" Height="110.0" ZOrder="28680" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f1ad7">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="615.5" CenterY="210.0" Width="90.0" Height="110.0" ZOrder="28682" FillColor="ffd9d2" FontSize="12" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="cdd09">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="821.5" CenterY="210.0" Width="90.0" Height="110.0" ZOrder="28684" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="dc8f2">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="717.5" CenterY="210.0" Width="86.0" Height="100.0" ZOrder="28688" FillColor="a69992" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="665952" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ef196">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="911.5" CenterY="210.0" Width="90.0" Height="110.0" ZOrder="28690" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b5eed">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="135.0" CenterY="527.0" Width="120.0" Height="50.0" ZOrder="32773" FillColor="ffffff" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e6d3d">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="528.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="32780" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a45cc">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="478.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="32782" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d0bfc">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="488.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="32784" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="de5bd">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="498.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="32786" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ef233">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="508.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="32788" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="cdae0">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="518.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="32790" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a677b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="538.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="32792" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="edd03">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="548.0" CenterY="161.0" Width="10.0" Height="50.0" ZOrder="32794" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="2.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="db005">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="511.5" CenterY="210.0" Width="90.0" Height="110.0" ZOrder="32796" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="fb926">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="63.5" CenterY="631.0" Width="90.0" Height="35.0" ZOrder="32798" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f87d1">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="153.5" CenterY="631.0" Width="90.0" Height="35.0" ZOrder="32800" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e9954">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="243.5" CenterY="631.0" Width="90.0" Height="35.0" ZOrder="32802" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="fdbd1">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="333.5" CenterY="631.0" Width="90.0" Height="35.0" ZOrder="32804" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e3b13">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="423.5" CenterY="631.0" Width="90.0" Height="35.0" ZOrder="32806" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d39dc">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="513.5" CenterY="631.0" Width="90.0" Height="35.0" ZOrder="32808" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ce523">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="603.5" CenterY="631.0" Width="90.0" Height="35.0" ZOrder="32810" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e16d3">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="693.5" CenterY="631.0" Width="90.0" Height="35.0" ZOrder="32812" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e7b5e">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="783.5" CenterY="631.0" Width="90.0" Height="35.0" ZOrder="32814" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c3479">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="863.25" CenterY="631.0" Width="69.5" Height="35.0" ZOrder="32816" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c4847">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="928.0" CenterY="631.0" Width="60.0" Height="35.0" ZOrder="32818" FillColor="f6aeaf" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a63e5f" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ee18d">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Mitochondria" />
+    <Graphics CenterX="682.0" CenterY="494.5" Width="130.0" Height="90.0" ZOrder="32891" FontSize="12" Valign="Middle" ShapeType="Mitochondria" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ce4ba">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="157.5" CenterY="210.0" Width="75.0" Height="100.0" ZOrder="32901" FillColor="e6d9d2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="a69992" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="c9aca" Style="Group" />
+  <Group GroupId="d9890" GraphId="aa864" Style="Complex" />
+  <Group GroupId="e5c87" GraphId="ba249" Style="Group" />
+  <Group GroupId="a3cf6" GraphId="bfcd2" Style="Complex" />
+  <Group GroupId="b1581" GraphId="c713b" Style="Group" />
+  <Group GroupId="a04d9" GraphId="d3e00" Style="Group" />
+  <Group GroupId="b186b" GraphId="d4e52" Style="Group" />
+  <Group GroupId="e0634" GraphId="e500a" Style="Complex" />
+  <Group GroupId="b9634" GraphId="e7e67" Style="Group" />
+  <Group GroupId="c5a69" GraphId="fb31d" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">professional antigen presenting cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000145</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">celiac disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10608</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intestinal epithelial cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002563</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD4-positive, alpha-beta T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000624</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f4c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35921776</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celiac disease: New therapies on the horizon.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curr Opin Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dieckman T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koning F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bouma G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD8-positive, alpha-beta T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000625</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000754</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>
+
