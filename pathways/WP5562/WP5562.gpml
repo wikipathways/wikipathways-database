@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Celiac disease mechanism and therapies" Data-Source="WikiPathways" Version="WP5562_r139728" Author="[Eweitz]" Last-Modified="20250701114610" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Celiac disease mechanism and therapies" Data-Source="WikiPathways" Version="WP5562_r139786" Author="[Eweitz, Egonw]" Last-Modified="20250706063529" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">In celiac disease, gluten peptides breach the intestinal epithelial barrier and are deamidated by tissue transglutaminase 2 (TG2). These modified peptides are presented on HLA-DQ2 or HLA-DQ8 molecules by antigen-presenting cells (APCs), leading to the activation of gluten-specific CD4⁺ T cells. Once activated, these T cells produce inflammatory cytokines such as IFN-γ, IL-2, IL-21, and TNF-α, which contribute to small-intestinal mucosal damage, in part by acting alongside IL-15 secreted by inflamed epithelial cells.
 
 Intraepithelial cytotoxic CD8⁺ T cells are also activated, releasing granzyme B (GZMB) and IFN-γ, amplifying the cycle of inflammation. In the periphery, gluten-specific memory CD4⁺ T cells remain vigilant and rapidly respond to gluten exposure—within 6 hours—by releasing inflammatory mediators like IL-2.
@@ -26,7 +26,7 @@ Emerging evidence suggests that bacterial or viral infections may disrupt oral t
   <DataNode TextLabel="TGM2" GraphId="b64e6" Type="GeneProduct">
     <Comment>"TG2" in source</Comment>
     <Graphics CenterX="356.0" CenterY="378.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Ensembl" ID="TGM2" />
+    <Xref Database="HGNC" ID="TGM2" />
   </DataNode>
   <DataNode TextLabel="TAK-101" GraphId="f8f55" Type="Metabolite">
     <Graphics CenterX="275.0" CenterY="688.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -82,15 +82,15 @@ Emerging evidence suggests that bacterial or viral infections may disrupt oral t
   </DataNode>
   <DataNode TextLabel="KAN-101" GraphId="f36f8" Type="Metabolite">
     <Graphics CenterX="335.0" CenterY="688.0" Width="60.0" Height="20.0" ZOrder="32866" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="Wikidata" ID="Q135221497" />
   </DataNode>
   <DataNode TextLabel="ZED1227" GraphId="ef393" Type="Metabolite" GroupRef="c5a69">
     <Graphics CenterX="464.0" CenterY="367.6666666666667" Width="90.0" Height="20.0" ZOrder="32868" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="Wikidata" ID="Q123913950" />
   </DataNode>
   <DataNode TextLabel="GSK3915393" GraphId="a71ad" Type="Metabolite" GroupRef="c5a69">
     <Graphics CenterX="464.0" CenterY="387.6666666666667" Width="90.0" Height="20.0" ZOrder="32869" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="Wikidata" ID="Q135214847" />
   </DataNode>
   <DataNode TextLabel="AGY" GraphId="e7442" Type="Metabolite">
     <Graphics CenterX="194.0" CenterY="85.0" Width="40.0" Height="20.0" ZOrder="32870" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -137,8 +137,9 @@ Emerging evidence suggests that bacterial or viral infections may disrupt oral t
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="CALY-002" GraphId="b62e1" Type="Metabolite" GroupRef="b1581">
+    <BiopaxRef>d09</BiopaxRef>
     <Graphics CenterX="604.0" CenterY="363.0" Width="70.0" Height="20.0" ZOrder="32897" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="Wikidata" ID="Q135221490" />
   </DataNode>
   <DataNode TextLabel="Loss of &#xA;tolerance" GraphId="b7803">
     <Graphics CenterX="203.0" CenterY="315.0" Width="70.0" Height="40.0" ZOrder="32900" FillColor="ffdddd" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
@@ -720,14 +721,24 @@ Emerging evidence suggests that bacterial or viral infections may disrupt oral t
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">celiac disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10608</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">professional antigen presenting cell</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000145</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">celiac disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10608</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000754</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD4-positive, alpha-beta T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000624</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intestinal epithelial cell</bp:TERM>
@@ -735,8 +746,8 @@ Emerging evidence suggests that bacterial or viral infections may disrupt oral t
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD4-positive, alpha-beta T cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000624</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD8-positive, alpha-beta T cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000625</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f4c">
@@ -749,16 +760,25 @@ Emerging evidence suggests that bacterial or viral infections may disrupt oral t
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koning F</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bouma G</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD8-positive, alpha-beta T cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000625</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000754</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d09">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28581883</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discovery and characterization of a novel humanized anti-IL-15 antibody and its relevance for the treatment of refractory celiac disease and eosinophilic esophagitis.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAbs</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vicari AP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schoepfer AM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meresse B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goffin L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Léger O</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josserand S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guégan N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yousefi S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Straumann A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cerf-Bensussan N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon HU</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chvatchko Y</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
 
