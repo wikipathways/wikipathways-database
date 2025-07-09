@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Kinin-Kallikrein pathway" Data-Source="WikiPathways" Version="WP5089_r129063" Author="[Ariajadhav, Marvin M2, Eweitz]" Last-Modified="20240310021415" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">Kinin-Kallikrein pathway that leads to bradykinin receptor 1 (BDKRB1) and receptor 2 (BDKRB2) activation in Homo sapiens starting from FXII.</Comment>
-  <Comment Source="WikiPathways-description">Kinin Kallikrein Pathway for Bradykinin formation</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Kinin-Kallikrein pathway" Data-Source="WikiPathways" Version="WP5089_r139850" Author="[Ariajadhav, Marvin M2, Eweitz, Ddigles]" Last-Modified="20250708084749" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Kinin-Kallikrein pathway for bradykinin formation that leads to bradykinin receptor 1 (BDKRB1) and receptor 2 (BDKRB2) activation in Homo sapiens starting from FXII.</Comment>
   <BiopaxRef>d42</BiopaxRef>
   <BiopaxRef>d7e</BiopaxRef>
   <Graphics BoardWidth="364.0" BoardHeight="577.0" />
@@ -13,9 +12,9 @@
     <Graphics CenterX="179.00037536284623" CenterY="256.9561742006614" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000164344" />
   </DataNode>
-  <DataNode TextLabel="Coagulation factor XII" GraphId="f8635" Type="Protein">
-    <Graphics CenterX="179.00037536284623" CenterY="137.25" Width="140.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Uniprot-TrEMBL" ID="P00748" />
+  <DataNode TextLabel="F12" GraphId="f8635" Type="GeneProduct">
+    <Graphics CenterX="179.00037536284623" CenterY="137.25" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000131187" />
   </DataNode>
   <DataNode TextLabel="Bradykinin" GraphId="d3094" Type="Protein">
     <Graphics CenterX="179.00037536284623" CenterY="317.83054818188543" Width="100.0" Height="20.0" ZOrder="32777" FontSize="12" Valign="Middle" />
@@ -25,7 +24,7 @@
     <Graphics CenterX="86.80935682238118" CenterY="354.0931071573682" Width="60.0" Height="20.0" ZOrder="32778" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000120054" />
   </DataNode>
-  <DataNode TextLabel="des-arg(9) bradykinin" GraphId="fef22" Type="Metabolite">
+  <DataNode TextLabel="Des-arg(9)-bradykinin" GraphId="fef22" Type="Metabolite">
     <Graphics CenterX="114.0711353340173" CenterY="404.92519778933126" Width="150.0" Height="20.0" ZOrder="32779" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="133068" />
   </DataNode>
@@ -37,9 +36,9 @@
     <Graphics CenterX="259.8606090182268" CenterY="467.1114437910759" Width="60.0" Height="20.0" ZOrder="32788" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="624" />
   </DataNode>
-  <DataNode TextLabel="Kininogen-1" GraphId="adebb" Type="Protein">
-    <Graphics CenterX="179.00037536284623" CenterY="197.25" Width="100.0" Height="20.0" ZOrder="32791" FontSize="12" Valign="Middle" />
-    <Xref Database="Uniprot-TrEMBL" ID="P01042" />
+  <DataNode TextLabel="KNG1" GraphId="adebb" Type="GeneProduct">
+    <Graphics CenterX="179.00037536284623" CenterY="197.25" Width="60.0" Height="20.0" ZOrder="32791" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000113889" />
   </DataNode>
   <Interaction GraphId="idd1bf26b3">
     <Graphics ZOrder="12288" LineThickness="1.0">
@@ -108,11 +107,6 @@
   </Shape>
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kallikrein-kinin cascade pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000526</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d42">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19689262</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -122,6 +116,11 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bryant JW</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shariat-Madar Z</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kallikrein-kinin cascade pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000526</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d7e">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32633718</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
