@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glycine metabolism" Data-Source="WikiPathways" Version="WP1495_r139663" Author="[Essam Sharaf, Khanspers, AlexanderPico, MaintBot, Egonw, Mkutmon, Eweitz]" Last-Modified="20250628070810" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">Glycine is degraded via three pathways. The predominant pathway in animals and plants is the reverse of the glycine synthase pathway. In this context, the enzyme system involved is usually called the glycine cleavage system.
-In the second pathway, glycine is degraded in two steps. The first step is the reverse of glycine biosynthesis from serine with serine hydroxymethyl transferase. Serine is then converted to pyruvate by serine dehydratase.
-In the third pathway of glycine degradation, glycine is converted to glyoxylate by D-amino acid oxidase. Glyoxylate is then oxidized by hepatic lactate dehydrogenase to oxalate in an NAD+-dependent reaction.
-Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism).</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glycine metabolism" Data-Source="WikiPathways" Version="WP1495_r139879" Author="[Essam Sharaf, Khanspers, AlexanderPico, MaintBot, Egonw, Mkutmon, Eweitz]" Last-Modified="20250709174357" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Glycine is degraded through three pathways: The glycine cleavage system (GCS); by serine hydroxymethyltransferase, and conversion to glyoxylate. In animals, the main pathway is GCS, which is essentially the reverse of the glycine synthase pathway.
+Degradation of by serine hydroxymethyltransferase happens in two steps. First, glycine is converted to serine by serine hydroxymethyl transferase. Serine is then converted to pyruvate by serine dehydratase. 
+Glycine can also be converted to glyoxylate by D-amino acid oxidase. Glyoxylate is then oxidized by hepatic lactate dehydrogenase to oxalate.
+Description adapted from [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism).</Comment>
+  <BiopaxRef>e21</BiopaxRef>
   <Graphics BoardWidth="684.0" BoardHeight="447.0" />
   <DataNode TextLabel="H₂O₂" GraphId="a7732" Type="Metabolite">
     <Graphics CenterX="461.5" CenterY="256.0" Width="39.0" Height="20.0" ZOrder="28672" FontSize="10" Valign="Middle" Color="0000ff" />
@@ -303,6 +304,24 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
   <Group GroupId="d24b2" GraphId="a2fe0" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e21">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23615880</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glycine metabolism in animals and humans: implications for nutrition and health.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amino Acids</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dai Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycine metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000440</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d5f">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9829614</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -311,11 +330,6 @@ Description source: [Wikipedia](https://en.wikipedia.org/wiki/Glycine#Metabolism
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hall JC</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycine metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000440</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
