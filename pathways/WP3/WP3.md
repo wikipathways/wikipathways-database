@@ -22,7 +22,10 @@ authors:
 - Nsalomonis
 - Zari
 - Eweitz
-citedin: ''
+citedin:
+- link: PMC12223304
+  title: 'Causal role of immunophenotypes in HIV-1 acquisition: insights from Mendelian
+    randomization analysis (2025)'
 communities:
 - CPTAC
 - ONTOX
