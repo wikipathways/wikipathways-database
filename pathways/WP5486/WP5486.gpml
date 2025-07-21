@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Rotenone metabolism" Data-Source="WikiPathways" Version="WP5486_r135319" Author="[Egonw]" Last-Modified="20240820070603" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Human metabolism of rotenone is mostly happening because of the CYP3A4 and CYP2C19 enzymes, resulting in two 12a-hydroxyrotenone isomers (rotenolone I and rotenolone II) and 8′-hydroxyrotenone.</Comment>
+  <BiopaxRef>d80</BiopaxRef>
+  <BiopaxRef>a72</BiopaxRef>
+  <BiopaxRef>b9c</BiopaxRef>
+  <BiopaxRef>f2a</BiopaxRef>
+  <Graphics BoardWidth="444.0" BoardHeight="267.5" />
+  <DataNode TextLabel="rotenone" GraphId="af445" Type="Metabolite">
+    <Graphics CenterX="124.0" CenterY="114.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q412388" />
+  </DataNode>
+  <DataNode TextLabel="CYP3A4" GraphId="d896b" Type="GeneProduct">
+    <Graphics CenterX="279.0" CenterY="45.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000160868" />
+  </DataNode>
+  <DataNode TextLabel="rotenolone I" GraphId="e7ca0" Type="Metabolite" GroupRef="a7b42">
+    <Graphics CenterX="333.0" CenterY="102.0" Width="150.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="68184" />
+  </DataNode>
+  <DataNode TextLabel="8′-hydroxyrotenone" GraphId="f67a7" Type="Metabolite">
+    <Graphics CenterX="124.0" CenterY="225.0" Width="140.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="92207" />
+  </DataNode>
+  <DataNode TextLabel="CYP2C19" GraphId="fa6a1" Type="GeneProduct">
+    <Graphics CenterX="369.0" CenterY="45.0" Width="90.0" Height="25.0" ZOrder="32769" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000165841" />
+  </DataNode>
+  <DataNode TextLabel="rotenolone II" GraphId="bd16d" Type="Metabolite" GroupRef="a7b42">
+    <Graphics CenterX="333.0" CenterY="127.0" Width="150.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="99189" />
+  </DataNode>
+  <Interaction GraphId="iddbe073e4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="169.0" Y="114.0" GraphRef="af445" RelX="1.0" RelY="0.0" />
+      <Point X="250.0" Y="114.5" GraphRef="ffcc7" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="dc664">
+    <Graphics ZOrder="32770" LineThickness="1.0">
+      <Point X="124.0" Y="126.5" GraphRef="af445" RelX="0.0" RelY="1.0" />
+      <Point X="124.0" Y="212.5" GraphRef="f67a7" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Group GroupId="a7b42" GraphId="ffcc7" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b9c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4381128</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metabolism of rotenone in vitro by tissue homogenates from mammals and insects.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1967</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fukami JI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yamamoto I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casida JE</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xenobiotic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001229</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f2a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1021/jf60166a048</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxidative metabolism of rotenone in mammals, fish, and insects and its relation to selective toxicity</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Journal of Agricultural and Food Chemistry</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1969</bp:YEAR>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a72">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33961406</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using Rotenone to Model Parkinson's Disease in Mice: A Review of the Role of Pharmacokinetics.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chem Res Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innos J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hickey MA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d80">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15540952</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rotenone, deguelin, their metabolites, and the rat model of Parkinson's disease.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chem Res Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caboni P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sherer TB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taylor G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Na HM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greenamyre JT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casida JE</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+
