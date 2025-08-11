@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Isoleucine degradation" Data-Source="WikiPathways" Version="WP178_r135519" Author="[J.Heckman, MaintBot, Ddigles, Egonw, Eweitz, Khanspers]" Last-Modified="20240921000613" Organism="Saccharomyces cerevisiae">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Isoleucine degradation" Data-Source="WikiPathways" Version="WP178_r140283" Author="[J.Heckman, MaintBot, Ddigles, Egonw, Eweitz, Khanspers]" Last-Modified="20250810153848" Organism="Saccharomyces cerevisiae">
   <Comment Source="WikiPathways-description">While Saccharomyces cerevisiae can use most amino acids as their sole nitrogen source, they can only use a few amino acids as a carbon source to support growth.  This is in contrast to most eukaryotes and some fungi, which can metabolize amino acids completely, utilizing them as sole sources of carbon and nitrogen. S. cerevisiae degrade the branched-chain amino acids (iso-leucine, leucine, and valine) and the aromatic amino acids (tryptophan, phenylalanine, and tyrosine) via the Ehrlich pathway.  This pathway is comprised of the following steps:  1) deamination of the amino acid to the corresponding alpha-keto acid; 2) decarboxylation of the resulting alpha-keto acid to the respective aldehyde; and, 3) reduction of the aldehyde to form the corresponding long chain or complex alcohol, known as a fusel alcohol or fusel oil.  Fusel alcohols are important flavor and aroma compounds in yeast-fermented food products and beverages  Each of the three steps in branched-chain amino acid degradation can be catalyzed by more than one isozyme; which enzyme is used appears to depend on the amino acid, the carbon source and the stage of growth of the culture. The initial transamination step in iso-leucine degradation can be catalyzed by either of the branched-chain amino acid transaminases BAT1 (mitochondrial) or BAT2 (cytosolic). The subsequent decarboxylation step can be catalyzed by any one of the five decarboxylases (Pdc1p, Pdc5p, Pdc6p, Thi3p, and Aro10p) and the final step can be catalyzed by any one of six alcohol dehydrogenases (Adh1p, Adh2p, Adh3p, Adh4p, Adh5p, and Sfa1p). 
-SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
+Source: [SGD pathways](http://pathway.yeastgenome.org/server.html).</Comment>
   <BiopaxRef>n6r</BiopaxRef>
   <BiopaxRef>nf1</BiopaxRef>
   <BiopaxRef>f1r</BiopaxRef>
@@ -58,7 +58,7 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
     <Graphics CenterX="572.7314814814833" CenterY="94.02777777777781" Width="40.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="SGD" ID="S000003319" />
   </DataNode>
-  <DataNode TextLabel="H+" GraphId="e284e" Type="Metabolite">
+  <DataNode TextLabel="H⁺" GraphId="e284e" Type="Metabolite">
     <Graphics CenterX="530.6018518518517" CenterY="249.99999999999991" Width="49.62962962962956" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="15378" />
   </DataNode>
@@ -79,7 +79,7 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
     <Graphics CenterX="807.2222222222229" CenterY="77.54629629629615" Width="56.57407407407413" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="YDL168W" />
   </DataNode>
-  <DataNode TextLabel="CO2" GraphId="f1acf" Type="Metabolite">
+  <DataNode TextLabel="CO₂" GraphId="f1acf" Type="Metabolite">
     <Graphics CenterX="613.935185185185" CenterY="249.9999999999999" Width="49.62962962962956" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="16526" />
   </DataNode>
@@ -187,6 +187,11 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
   <Group GroupId="e5666" GraphId="ff046" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isoleucine degradation pathway </bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001269</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f1r">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10989445</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -197,11 +202,16 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kispal G</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lill R</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="pvk">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8702755</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two yeast homologs of ECA39, a target for c-Myc regulation, code for cytosolic and mitochondrial branched-chain amino acid aminotransferases.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eden A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simchen G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benvenisty N</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="n6r">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10753893</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -220,16 +230,6 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
       <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yeast Pathways</bp:SOURCE>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="pvk">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8702755</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two yeast homologs of ECA39, a target for c-Myc regulation, code for cytosolic and mitochondrial branched-chain amino acid aminotransferases.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eden A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simchen G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benvenisty N</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="nf1">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8798704</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -243,8 +243,8 @@ SOURCE: SGD pathways, http://pathway.yeastgenome.org/server.html</Comment>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lill R</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isoleucine degradation pathway </bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001269</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
