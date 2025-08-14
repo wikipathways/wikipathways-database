@@ -26,6 +26,9 @@ citedin:
 - link: PMC12223304
   title: 'Causal role of immunophenotypes in HIV-1 acquisition: insights from Mendelian
     randomization analysis (2025)'
+- link: PMC4599789
+  title: The impact of PPARα activation on whole genome gene expression in human precision
+    cut liver slices (2015)
 communities:
 - CPTAC
 - ONTOX
