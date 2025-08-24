@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Photosynthetic carbon reduction" Data-Source="WikiPathways" Version="WP1461_r126352" Author="[MartijnVanIersel, Khanspers, MaintBot, Egonw, Mkutmon, Fehrhart, Eweitz]" Last-Modified="20230423093352" Organism="Arabidopsis thaliana">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Photosynthetic carbon reduction" Data-Source="WikiPathways" Version="WP1461_r140436" Author="[MartijnVanIersel, Khanspers, MaintBot, Egonw, Mkutmon, Fehrhart, Eweitz]" Last-Modified="20250823124953" Organism="Arabidopsis thaliana">
+  <Comment Source="WikiPathways-description">Process where light activates the photosystems I and II, affecting the downstream Calvin Cycle.</Comment>
   <BiopaxRef>b0d</BiopaxRef>
   <BiopaxRef>fe6</BiopaxRef>
   <Graphics BoardWidth="966.0" BoardHeight="730.0" />
-  <DataNode TextLabel="CO2" GraphId="a0b05" Type="Metabolite">
+  <DataNode TextLabel="CO₂" GraphId="a0b05" Type="Metabolite">
     <Graphics CenterX="78.0" CenterY="360.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="HMDB" ID="HMDB0001967" />
   </DataNode>
@@ -15,7 +16,7 @@
     <Graphics CenterX="790.0" CenterY="278.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="H+" GraphId="b1946" Type="Metabolite">
+  <DataNode TextLabel="H⁺" GraphId="b1946" Type="Metabolite">
     <Graphics CenterX="579.5" CenterY="181.0" Width="29.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="Chemspider" ID="1010" />
   </DataNode>
@@ -47,7 +48,7 @@
     <Graphics CenterX="553.0" CenterY="96.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Gramene Arabidopsis" ID="AT1G29920-TAIR-G" />
   </DataNode>
-  <DataNode TextLabel="O2" GraphId="cbd38" Type="Metabolite">
+  <DataNode TextLabel="O₂" GraphId="cbd38" Type="Metabolite">
     <Graphics CenterX="79.0" CenterY="383.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" LineStyle="Broken" Color="0000ff" />
     <Xref Database="HMDB" ID="HMDB0001377" />
   </DataNode>
@@ -445,6 +446,11 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barber J</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boekema EJ</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">photosynthesis pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000056</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b0d">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9780716736875</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN</bp:DB>
@@ -453,11 +459,6 @@
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lubert Stryer</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">photosynthesis pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000056</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
