@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="PKC-gamma calcium signaling in ataxia" Data-Source="WikiPathways" Version="WP4760_r140101" Author="[Khanspers, Egonw, Eweitz]" Last-Modified="20250727065017" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="PKC-gamma calcium signaling in ataxia" Data-Source="WikiPathways" Version="WP4760_r140525" Author="[Khanspers, Egonw, Eweitz]" Last-Modified="20250907133537" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">PKC-gamma calcium-signaling pathway in Ataxia. 
 Upon ligand binding, the mGluR1 receptor is followed by activation of Gq causing PLC-mediated hydrolysis of PIP2 into IP3 and DAG. Binding of IP3 to the IP3R1 induces Ca²⁺ release from the endoplasmic reticulum to the cytoplasm. This step is controlled by CAR8, which can inhibit binding of IP3 to the IP3R1. Simultaneous binding of Ca²⁺ to PKC-gamma C2 domain and of DAG to the C1 domain of PKC-gamma  induce translocation of PKC-gamma to the plasma membrane. There, the pseudosubstrate is released from the kinase domain, allowing phosphorylation of downstream target proteins, including GRIA1. PKC exerts an inhibitory effect on TRPC3 channel either directly through phosphorylation or indirectly. 
 A rise of the intracellular calcium concentration can also be mediated by the voltage-gated Ca²⁺ channel Cav2.1 or TRPC3. Conversely, PMCA2 can efficiently remove Ca²⁺ from the cytoplasm.
@@ -20,7 +20,11 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
     <Graphics CenterX="159.5" CenterY="180.0" Width="57.0" Height="25.0" ZOrder="-2" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000120251" />
   </DataNode>
-  <DataNode TextLabel="Na+" GraphId="a25ca" Type="Metabolite">
+  <DataNode TextLabel="Ligands" GraphId="be739" Type="Metabolite">
+    <Graphics CenterX="608.0" CenterY="77.0" Width="90.0" Height="25.0" ZOrder="28672" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:52214" />
+  </DataNode>
+  <DataNode TextLabel="Na⁺" GraphId="a25ca" Type="Metabolite">
     <Graphics CenterX="188.5" CenterY="76.0" Width="47.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29101" />
   </DataNode>
@@ -176,7 +180,7 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
     <Graphics CenterX="747.5" CenterY="477.0" Width="51.0" Height="25.0" ZOrder="32794" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
-  <DataNode TextLabel="Na+" GraphId="a0dc5" Type="Metabolite">
+  <DataNode TextLabel="Na⁺" GraphId="a0dc5" Type="Metabolite">
     <Graphics CenterX="188.5" CenterY="242.0" Width="47.0" Height="25.0" ZOrder="32795" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29101" />
   </DataNode>
@@ -267,7 +271,7 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
   <Interaction GraphId="id429faaf0">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="566.5" Y="466.5" GraphRef="a0082" RelX="0.0" RelY="-1.0" />
-      <Point X="566.5" Y="382.5" GraphRef="f0daa" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point X="566.5" Y="382.5" GraphRef="f0daa" RelX="0.0" RelY="1.0" />
       <Anchor Position="0.5416666666666666" Shape="None" GraphId="d96b8" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -282,7 +286,7 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
   <Interaction GraphId="id623da65f">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="188.5" Y="88.5" GraphRef="a25ca" RelX="0.0" RelY="1.0" />
-      <Point X="188.5" Y="229.5" GraphRef="a0dc5" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point X="188.5" Y="229.5" GraphRef="a0dc5" RelX="0.0" RelY="-1.0" />
       <Anchor Position="0.4929078014184397" Shape="None" GraphId="d6d04" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -318,7 +322,7 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
   <Interaction GraphId="id85267e47">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="896.5" Y="118.5" GraphRef="a6d3e" RelX="0.0" RelY="1.0" />
-      <Point X="896.5" Y="211.5" GraphRef="c2920" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="896.5" Y="211.5" GraphRef="c2920" RelX="0.0" RelY="-1.0" />
       <Anchor Position="0.4" Shape="None" GraphId="d1267" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -332,7 +336,7 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
   </Interaction>
   <Interaction GraphId="id9e106184">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="608.0" Y="89.5" GraphRef="ee795" RelX="0.0" RelY="1.0" />
+      <Point X="608.0" Y="89.5" GraphRef="be739" RelX="0.0" RelY="1.0" />
       <Point X="608.0" Y="147.5" GraphRef="e086b" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -361,7 +365,7 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
   <Interaction GraphId="idea6ec642">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="1024.5" Y="220.5" GraphRef="c2b4e" RelX="0.0" RelY="-1.0" />
-      <Point X="1024.5" Y="104.5" GraphRef="e50db" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point X="1024.5" Y="104.5" GraphRef="e50db" RelX="0.0" RelY="1.0" />
       <Anchor Position="0.5129310344827587" Shape="None" GraphId="f7fe9" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -384,7 +388,7 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
   <Interaction GraphId="idf041b7be">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="747.5" Y="464.5" GraphRef="cfc2d" RelX="0.0" RelY="-1.0" />
-      <Point X="747.5" Y="380.5" GraphRef="ac242" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point X="747.5" Y="380.5" GraphRef="ac242" RelX="0.0" RelY="1.0" />
       <Anchor Position="0.4" Shape="None" GraphId="dca4e" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -392,7 +396,7 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
   <Interaction GraphId="idf24b07ad">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="787.5" Y="116.5" GraphRef="c91c9" RelX="0.0" RelY="1.0" />
-      <Point X="787.5" Y="220.5" GraphRef="d01a5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="787.5" Y="220.5" GraphRef="d01a5" RelX="0.0" RelY="-1.0" />
       <Anchor Position="0.4" Shape="None" GraphId="f4ca0" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -413,9 +417,6 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
   </Interaction>
   <Label TextLabel="Activating mutation" GraphId="e5208" GroupRef="ef362">
     <Graphics CenterX="1220.0" CenterY="69.0" Width="106.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="Ligands" GraphId="ee795">
-    <Graphics CenterX="608.0" CenterY="77.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Inactivating mutation" GraphId="fadd5" GroupRef="ef362">
     <Graphics CenterX="1226.0" CenterY="103.0" Width="114.0" Height="25.0" ZOrder="32797" FillColor="ffffff" FontSize="12" Valign="Middle" />
@@ -446,21 +447,6 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neurodegenerative disease</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1289</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purkinje cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000121</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered calcium homeostasis pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000372</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pyramidal neuron</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000598</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
@@ -475,9 +461,24 @@ This pathway is based on fig 1B from [Shimobayashi and Kapfhammer](https://www.n
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kapfhammer JP</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered calcium homeostasis pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000372</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neurodegenerative disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1289</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hereditary ataxia</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050951</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purkinje cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000121</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
