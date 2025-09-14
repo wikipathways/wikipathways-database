@@ -36,17 +36,16 @@ description: 'Phospholipids are amphipathic molecules that consist of a glycerol
   can be sequentially converted to phosphatidylglycerol (PG), which can be further
   converted to cardiolipin. Synthesis of PI, PG, and cardiolipin occurs through similar
   mechanisms in mammalian cells; however, unlike yeast, mammals primarily synthesize
-  PS from other phospholipids and not from CDP-DAG.  Description adapted from YeastPathways
-  https://pathway.yeastgenome.org/.'
-last-edited: 2025-06-20
+  PS from other phospholipids and not from CDP-DAG.  Description adapted from [YeastPathways](https://pathway.yeastgenome.org/).'
+last-edited: 2025-09-14
 ndex: null
 organisms:
 - Saccharomyces cerevisiae
 redirect_from:
 - /index.php/Pathway:WP9
 - /instance/WP9
-- /instance/WP9_r139464
-revision: r139464
+- /instance/WP9_r140564
+revision: r140564
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP9.html
@@ -73,7 +72,7 @@ schema-jsonld:
     be further converted to cardiolipin. Synthesis of PI, PG, and cardiolipin occurs
     through similar mechanisms in mammalian cells; however, unlike yeast, mammals
     primarily synthesize PS from other phospholipids and not from CDP-DAG.  Description
-    adapted from YeastPathways https://pathway.yeastgenome.org/.'
+    adapted from [YeastPathways](https://pathway.yeastgenome.org/).'
   keywords:
   - 3.1.3.27
   - CDP-diacylglycerol
@@ -83,7 +82,7 @@ schema-jsonld:
   - CMP
   - CO₂
   - CRD1
-  - H+
+  - H⁺
   - H₂O
   - L-1-phosphatidylethanolamine
   - L-serine
