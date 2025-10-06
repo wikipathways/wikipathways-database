@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Homocysteine and cysteine interconversion" Data-Source="WikiPathways" Version="WP128_r139538" Author="[M.Braymer, MaintBot, Christine Chichester, Egonw, DeSl, AlexanderPico, Eweitz, Khanspers]" Last-Modified="20250621062458" Organism="Saccharomyces cerevisiae">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Homocysteine and cysteine interconversion" Data-Source="WikiPathways" Version="WP128_r140681" Author="[M.Braymer, MaintBot, Christine Chichester, Egonw, DeSl, AlexanderPico, Eweitz, Khanspers]" Last-Modified="20251005111447" Organism="Saccharomyces cerevisiae">
   <Comment>Based on http://pathway.yeastgenome.org/biocyc/</Comment>
   <Comment Source="WikiPathways-description">The metabolic interconversion of cysteine and homocysteine via formation of a cystathionine intermediate is known as the transsulfuration pathway. While the transsulfuration pathway proceeds in only one direction in many bacteria and fungi, S. cerevisiae encodes for both a forward and reverse version of the pathway and is able to convert cysteine and homocysteine to one or the other reversibly. In the forward pathway, cysteine reacts with O-acetylhomoserine in a reaction catalyzed by cystathionine -synthase to form cystathionine. Cystathionine is then cleaved by cystathionine -lyase, yielding pyruvate, ammonia, and homocysteine. In S. cerevisiae, cystathionine -synthase and -lyase are thought to be encoded by STR2 and STR3 respectively, due to their similarity to the aforementioned enzymes in other organisms and the inability of str2 or str3 null mutants to utilize cysteine as a sole sulfur source. In the reverse pathway, cystathionine -synthase (Cys4p) catalyzes the condensation of homocysteine and serine to form cystathionine. Cystathionine -lyase (Cys3p) then catalyzes hydrolysis of cystathionine to produce cysteine, -ketobutyrate, and ammonia.
 
@@ -25,7 +25,7 @@ Source: [yeastgenome.org](https://pathway.yeastgenome.org/)</Comment>
     <Graphics CenterX="356.3333333333333" CenterY="133.66666666666669" Width="86.66666666666663" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="CAS" ID="6027-13-0" />
   </DataNode>
-  <DataNode TextLabel="NH3" GraphId="c7c62" Type="Metabolite" GroupRef="b78e1">
+  <DataNode TextLabel="NH₃" GraphId="c7c62" Type="Metabolite" GroupRef="b78e1">
     <Graphics CenterX="384.5" CenterY="483.0" Width="47.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="16134" />
   </DataNode>
@@ -65,7 +65,7 @@ Source: [yeastgenome.org](https://pathway.yeastgenome.org/)</Comment>
     <Graphics CenterX="422.83333333333417" CenterY="259.33333333333326" Width="41.0" Height="20.0" ZOrder="32770" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="15377" />
   </DataNode>
-  <DataNode TextLabel="NH3" GraphId="a6c4b" Type="Metabolite" GroupRef="f931a">
+  <DataNode TextLabel="NH₃" GraphId="a6c4b" Type="Metabolite" GroupRef="f931a">
     <Graphics CenterX="168.5" CenterY="191.0" Width="47.0" Height="20.0" ZOrder="32771" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="16134" />
   </DataNode>
@@ -216,9 +216,21 @@ Source: [yeastgenome.org](https://pathway.yeastgenome.org/)</Comment>
   <Group GroupId="b78e1" GraphId="af57c" Style="Group" />
   <InfoBox CenterX="15.0" CenterY="45.0" />
   <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=NIL&amp;object=HOMOCYS-CYS-CONVERT</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homocysteine and cysteine interconversion</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YeastPathways</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cysteine metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000049</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="lqi">
@@ -229,18 +241,6 @@ Source: [yeastgenome.org](https://pathway.yeastgenome.org/)</Comment>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas D</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surdin-Kerjan Y</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cysteine metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000049</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab7">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=NIL&amp;object=HOMOCYS-CYS-CONVERT</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homocysteine and cysteine interconversion</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YeastPathways</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
     </bp:PublicationXref>
   </Biopax>
 </Pathway>
