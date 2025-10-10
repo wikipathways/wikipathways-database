@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Biochemical pathway of glycinebetaine" Data-Source="WikiPathways" Version="WP5597_r140704" Author="[Kotaro470, Egonw]" Last-Modified="20251009122327" Organism="Arabidopsis thaliana">
+  <Comment Source="WikiPathways-description">Biochemical pathway of glycinebetaine from choline via CMO (choline dehydrogenase) and BADH (betaine aldehyde dehydrogenase) in higher plants
+[Glycinebetaine Biosynthesis in Response to Osmotic Stress Depends on Jasmonate Signaling in Watermelon Suspension Cells](https://doi.org/10.3389/fpls.2018.01469)</Comment>
+  <Graphics BoardWidth="450.0" BoardHeight="445.25" />
+  <DataNode TextLabel="Betaine aldehyde" GraphId="c1c75" Type="Metabolite">
+    <Graphics CenterX="357.0" CenterY="274.0" Width="126.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01252" />
+  </DataNode>
+  <DataNode TextLabel="Choline monooxygenase" GraphId="c4a0b" Type="GeneProduct">
+    <Graphics CenterX="193.375" CenterY="219.09101932553835" Width="156.75" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q9SZR0" />
+  </DataNode>
+  <DataNode TextLabel="choline" GraphId="d12a7" Type="Metabolite">
+    <Graphics CenterX="357.0" CenterY="175.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15354" />
+  </DataNode>
+  <DataNode TextLabel="betaine aldehyde dehydrogenases" GraphId="d4dce" Type="GeneProduct">
+    <Graphics CenterX="129.375" CenterY="334.6411526271546" Width="202.75" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="glycine betaine" GraphId="e1a95" Type="Metabolite">
+    <Graphics CenterX="357.0" CenterY="402.75" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:17750" />
+  </DataNode>
+  <Interaction GraphId="id8104fec9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="357.0" Y="286.5" GraphRef="c1c75" RelX="0.0" RelY="1.0" />
+      <Point X="357.0" Y="390.25" GraphRef="e1a95" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="c185b" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb9f9f319">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="271.75" Y="219.09101932553835" GraphRef="c4a0b" RelX="1.0" RelY="0.0" />
+      <Point X="357.0" Y="217.1" GraphRef="fb54b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide410fd6a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="357.0" Y="187.5" GraphRef="d12a7" RelX="0.0" RelY="1.0" />
+      <Point X="357.0" Y="261.5" GraphRef="c1c75" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="fb54b" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide70c3ed4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="230.75" Y="334.6411526271546" GraphRef="d4dce" RelX="1.0" RelY="0.0" />
+      <Point X="357.0" Y="328.0" GraphRef="c185b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax />
+</Pathway>
+
