@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Paullinia cupana caffeine synthesis" Data-Source="WikiPathways" Version="WP5590_r140743" Author="[Hayashi, MaintBot, Egonw]" Last-Modified="20251018102550" Organism="Paullinia cupana">
+  <Comment Source="WikiPathways-description">Paullinia cupana caffeine synthesis pathway.</Comment>
+  <BiopaxRef>b3e</BiopaxRef>
+  <BiopaxRef>daf</BiopaxRef>
+  <Graphics BoardWidth="552.0" BoardHeight="412.5" />
+  <DataNode TextLabel="Xanthine" GraphId="c48b0" Type="Metabolite">
+    <BiopaxRef>daf</BiopaxRef>
+    <BiopaxRef>b3e</BiopaxRef>
+    <Graphics CenterX="310.75" CenterY="66.75" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15318" />
+  </DataNode>
+  <DataNode TextLabel="PcCS" GraphId="c4bb2" Type="GeneProduct">
+    <BiopaxRef>daf</BiopaxRef>
+    <BiopaxRef>b3e</BiopaxRef>
+    <Graphics CenterX="477.0" CenterY="321.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="3-methylxanthine" GraphId="ce038" Type="Metabolite">
+    <BiopaxRef>daf</BiopaxRef>
+    <BiopaxRef>b3e</BiopaxRef>
+    <Graphics CenterX="310.75" CenterY="155.0" Width="145.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:62208" />
+  </DataNode>
+  <DataNode TextLabel="caffeine" GraphId="efb38" Type="Metabolite">
+    <BiopaxRef>daf</BiopaxRef>
+    <BiopaxRef>b3e</BiopaxRef>
+    <Graphics CenterX="310.75" CenterY="370.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:27732" />
+  </DataNode>
+  <DataNode TextLabel="Theobromine" GraphId="faccf" Type="Metabolite">
+    <BiopaxRef>daf</BiopaxRef>
+    <BiopaxRef>b3e</BiopaxRef>
+    <Graphics CenterX="310.75" CenterY="284.75" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:28946" />
+  </DataNode>
+  <DataNode TextLabel="PcCS1" GraphId="fb21b" Type="GeneProduct">
+    <BiopaxRef>daf</BiopaxRef>
+    <BiopaxRef>b3e</BiopaxRef>
+    <Graphics CenterX="477.0" CenterY="103.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="PcCS2" GraphId="a0119" Type="GeneProduct">
+    <BiopaxRef>daf</BiopaxRef>
+    <BiopaxRef>b3e</BiopaxRef>
+    <Graphics CenterX="477.0" CenterY="209.0" Width="90.0" Height="25.0" ZOrder="32771" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <Interaction GraphId="id442e76f9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="432.0" Y="103.0" GraphRef="fb21b" RelX="-1.0" RelY="0.0" />
+      <Point X="310.75" Y="104.55" GraphRef="aad58" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbe5d78a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="432.0" Y="321.0" GraphRef="c4bb2" RelX="-1.0" RelY="0.0" />
+      <Point X="310.75" Y="321.35" GraphRef="de9bd" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idccd7845f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="310.75" Y="79.25" GraphRef="c48b0" RelX="0.0" RelY="1.0" />
+      <Point X="310.75" Y="142.5" GraphRef="ce038" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="aad58" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd4cd33bf">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="310.75" Y="297.25" GraphRef="faccf" RelX="0.0" RelY="1.0" />
+      <Point X="310.75" Y="357.5" GraphRef="efb38" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="de9bd" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide0068afa">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="432.0" Y="209.0" GraphRef="a0119" RelX="-1.0" RelY="0.0" />
+      <Point X="310.75" Y="209.4" GraphRef="f3a71" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ideab09c55">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="310.75" Y="167.5" GraphRef="ce038" RelX="0.0" RelY="1.0" />
+      <Point X="310.75" Y="272.25" GraphRef="faccf" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="f3a71" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b3e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33662138</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Convergent Biochemical Pathways for Xanthine Alkaloid Production in Plants Evolved from Ancestral Enzymes with Different Catalytic Properties.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Biol Evol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Donnell AJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barboline JJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barkman TJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="daf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27638206</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Convergent evolution of caffeine in plants by co-option of exapted ancestral enzymes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Donnell AJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barboline JJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barkman TJ</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+

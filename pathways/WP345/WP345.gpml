@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glycine cleavage" Data-Source="WikiPathways" Version="WP345_r140495" Author="[J.Heckman, MaintBot, Christine Chichester, Egonw, Eweitz, Khanspers]" Last-Modified="20250901123751" Organism="Saccharomyces cerevisiae">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Glycine cleavage" Data-Source="WikiPathways" Version="WP345_r140728" Author="[J.Heckman, MaintBot, Christine Chichester, Egonw, Eweitz, Khanspers]" Last-Modified="20251018084702" Organism="Saccharomyces cerevisiae">
   <Comment Source="WikiPathways-description">In eukaryotes the mitochondrial glycine cleavage complex (glycine decarboxylase complex) is a loosely-associated multienzyme complex that catalyzes the oxidative cleavage of glycine to carbon dioxide, ammonia, and a methylene group, in a multistep reaction (in [Nakai05]). The methylene group, carried by 5,10-methylenetetrahydropteroyl mono-L-glutamate, enters cellular one-carbon metabolism. In mammals, it is the primary pathway for glycine catabolism [Hampson83].
 
 The glycine cleavage complex is composed of four different proteins: the P-protein ( EC 1.4.4.2, glycine dehydrogenase (aminomethyl-transferring)); the T-protein ( EC 2.1.2.10, aminomethyltransferase); the L-protein ( EC 1.8.1.4, dihydrolipoyl dehydrogenase); and the H-protein (lipoyl-carrier protein, a non-enzyme that contains a lipoyl group that interacts successively with the three other components of the complex during the enzymatic reactions. The L-protein (also known as the E3 component) also participates in the pyruvate decarboxylation to acetyl CoA, the 2-oxoglutarate decarboxylation to succinyl-CoA, and the 2-oxoisovalerate decarboxylation to isobutanoyl-CoA multienzyme systems.
 
 Description from [YeastPathways](https://pathway.yeastgenome.org/).</Comment>
   <BiopaxRef>ccf</BiopaxRef>
+  <BiopaxRef>b4b</BiopaxRef>
   <Graphics BoardWidth="716.0" BoardHeight="398.0" />
   <DataNode TextLabel="L-glycine" GraphId="a73" Type="Metabolite" GroupRef="e74b1">
     <Graphics CenterX="292.50000000000006" CenterY="151.65826330532207" Width="75.33333333333333" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -40,7 +41,7 @@ Description from [YeastPathways](https://pathway.yeastgenome.org/).</Comment>
     <Graphics CenterX="374.0" CenterY="152.0" Width="42.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:16526" />
   </DataNode>
-  <DataNode TextLabel="NH4+" GraphId="d93ec" Type="Metabolite" GroupRef="e193a">
+  <DataNode TextLabel="NH₄⁺" GraphId="d93ec" Type="Metabolite" GroupRef="e193a">
     <Graphics CenterX="477.16666666666663" CenterY="206.0" Width="38.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="28938" />
   </DataNode>
@@ -162,6 +163,20 @@ Description from [YeastPathways](https://pathway.yeastgenome.org/).</Comment>
   <Group GroupId="f6f2a" GraphId="ec10b" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ccf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=PATHWAY&amp;object=GLYCLEAV-PWY</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycine cleavage</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YeastPathways</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b4b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1016/S0021-9258(17)43585-X</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulation of the glycine cleavage system in the isolated perfused rat liver</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J. Biol. Chem.</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1983</bp:YEAR>
+    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycine degradation pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001265</bp:ID>
@@ -172,13 +187,6 @@ Description from [YeastPathways](https://pathway.yeastgenome.org/).</Comment>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ccf">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=PATHWAY&amp;object=GLYCLEAV-PWY</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycine cleavage</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YeastPathways</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
-    </bp:PublicationXref>
   </Biopax>
 </Pathway>
 
