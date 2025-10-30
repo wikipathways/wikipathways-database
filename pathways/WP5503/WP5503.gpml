@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Albuterol and budesonide therapy for asthma" Data-Source="WikiPathways" Version="WP5503_r136625" Author="[Eweitz]" Last-Modified="20250218114215" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Albuterol and budesonide therapy for asthma" Data-Source="WikiPathways" Version="WP5503_r140862" Author="[Eweitz]" Last-Modified="20251030001628" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">"A model for the molecular synergy between β2-agonists and GCs in modulating airway inflammation and bronchoconstriction in asthma. Glucocorticoids mediate their cellular responses by activating cytosolic GRα or mGR. The genomic effects of GCs modulate gene expression, which can typically take hours to occur. In contrast, GCs can also have nongenomic effects, which occur immediately or within minutes. GCs can also enhance cAMP generation induced by β2-agonists that can then inhibit a variety of procontractile signaling events to reverse bronchoconstriction."  From Figure 1 in https://www.sciencedirect.com/science/article/pii/S2213219824001454.</Comment>
   <BiopaxRef>b47</BiopaxRef>
   <Graphics BoardWidth="945.0" BoardHeight="574.0" />
@@ -442,7 +442,7 @@
     <Graphics CenterX="858.0" CenterY="484.0" Width="60.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="a0a0a0" />
   </Label>
   <Label TextLabel="Membrane-associated&#xA;glucocorticoid receptor&#xA;(mGR)" GraphId="a0374">
-    <Graphics CenterX="809.0" CenterY="87.0" Width="125.0" Height="45.0" ZOrder="32799" FillColor="ffffff" FontSize="12" Valign="Middle" Align="Left" />
+    <Graphics CenterX="809.0" CenterY="86.99999999999999" Width="125.0" Height="45.0" ZOrder="32799" FillColor="ffffff" FontSize="12" Valign="Middle" Align="Left" />
   </Label>
   <Label TextLabel="Glucocorticoid&#xA;receptor alpha&#xA;(Gra)" GraphId="ba360">
     <Graphics CenterX="703.0" CenterY="265.0" Width="90.0" Height="40.0" ZOrder="32801" FillColor="ffffff" FontSize="12" Valign="Middle" Align="Left" />
@@ -496,14 +496,19 @@
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asthma pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001022</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bronchial smooth muscle cell</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0002598</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asthma pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001022</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asthma</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2841</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b47">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38316182</bp:ID>
@@ -522,11 +527,6 @@
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000754</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asthma</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:2841</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
