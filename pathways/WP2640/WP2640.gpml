@@ -1,76 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Aripiprazole metabolic pathway" Data-Source="WikiPathways" Version="WP2640_r117652" Author="[Egonw, MaintBot, Eweitz]" Last-Modified="20210522114557" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">The CYP P450 metabolism of aripiprazole has been studied and described in several papers (like the one in the bibliography), except for the original primary literature describing the experiments and the exact metabolite structures. The two CYPs are said to be involved in N-dealkylation and dehydrogenation.</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Aripiprazole metabolic pathway" Data-Source="WikiPathways" Version="WP2640_r140961" Author="[Egonw, MaintBot, Eweitz]" Last-Modified="20251030225807" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">The CYP P450 metabolism of aripiprazole has been studied and described in several papers (like the one in the bibliography), except for the original primary literature describing the experiments and the exact metabolite structures. The two CYPs are said to be involved in N-dealkylation and dehydrogenation. </Comment>
   <BiopaxRef>bcf</BiopaxRef>
   <BiopaxRef>f29</BiopaxRef>
   <BiopaxRef>e76</BiopaxRef>
   <BiopaxRef>ba3</BiopaxRef>
   <BiopaxRef>f97</BiopaxRef>
-  <Graphics BoardWidth="512.0" BoardHeight="233.0" />
+  <Graphics BoardWidth="472.0" BoardHeight="233.0" />
   <DataNode TextLabel="CYP2D6" GraphId="c1ed5" Type="GeneProduct">
-    <Graphics CenterX="311.0" CenterY="38.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="271.0" CenterY="38.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000100197" />
   </DataNode>
   <DataNode TextLabel="aripiprazole" GraphId="cf694" Type="Metabolite">
-    <Graphics CenterX="211.0" CenterY="86.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="171.0" CenterY="86.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="HMDB" ID="HMDB0005042" />
   </DataNode>
   <DataNode TextLabel="dehydroaripiprazole" GraphId="d02eb" Type="Metabolite">
     <Comment>Also known as OPC14857.</Comment>
     <BiopaxRef>e76</BiopaxRef>
-    <Graphics CenterX="427.0" CenterY="86.0" Width="110.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="387.0" CenterY="86.0" Width="110.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="PubChem-compound" ID="10114519" />
   </DataNode>
   <DataNode TextLabel="Product" GraphId="dd805" Type="Metabolite">
-    <Graphics CenterX="211.0" CenterY="193.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="171.0" CenterY="193.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:25212" />
   </DataNode>
   <DataNode TextLabel="CYP3A43" GraphId="ef6ee" Type="GeneProduct">
-    <Graphics CenterX="121.0" CenterY="139.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Graphics CenterX="81.0" CenterY="139.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000021461" />
   </DataNode>
   <Interaction GraphId="id403afc34">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="b8a3b" X="311.0" Y="48.0" GraphRef="c1ed5" RelX="0.0" RelY="1.0" />
-      <Point GraphId="b19cb" X="311.5" Y="86.0" GraphRef="e20cc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="271.0" Y="48.0" GraphRef="c1ed5" RelX="0.0" RelY="1.0" />
+      <Point X="271.5" Y="86.0" GraphRef="e20cc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6b0af018">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="e6811" X="161.0" Y="139.0" GraphRef="ef6ee" RelX="1.0" RelY="0.0" />
-      <Point GraphId="c72c5" X="211.0" Y="139.5" GraphRef="baa08" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="121.0" Y="139.0" GraphRef="ef6ee" RelX="1.0" RelY="0.0" />
+      <Point X="171.0" Y="139.5" GraphRef="baa08" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id7653b8d8">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="b8e2e" X="211.0" Y="96.0" GraphRef="cf694" RelX="0.0" RelY="1.0" />
-      <Point GraphId="bfc42" X="211.0" Y="183.0" GraphRef="dd805" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="171.0" Y="96.0" GraphRef="cf694" RelX="0.0" RelY="1.0" />
+      <Point X="171.0" Y="183.0" GraphRef="dd805" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
       <Anchor Position="0.5" Shape="None" GraphId="baa08" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf965780e">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="e2543" X="251.0" Y="86.0" GraphRef="cf694" RelX="1.0" RelY="0.0" />
-      <Point GraphId="f2b32" X="372.0" Y="86.0" GraphRef="d02eb" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Point X="211.0" Y="86.0" GraphRef="cf694" RelX="1.0" RelY="0.0" />
+      <Point X="332.0" Y="86.0" GraphRef="d02eb" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.5" Shape="None" GraphId="e20cc" />
     </Graphics>
     <Xref Database="XMetDB" ID="XMETDB172" />
   </Interaction>
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xenobiotic metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001229</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phase I biotransformation pathway via cytochrome P450</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000375</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ba3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17164689</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pharmacokinetic variability of aripiprazole and the active metabolite dehydroaripiprazole in psychiatric patients.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ther Drug Monit</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molden E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lunde H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lunder N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refsum H</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bcf">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14998222</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -81,15 +82,11 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carnahan RM</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perry PJ</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f29">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15257633</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aripiprazole: a review of its use in schizophrenia and schizoaffective disorder.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drugs</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swainston Harrison T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perry CM</bp:AUTHORS>
-    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phase I biotransformation pathway via cytochrome P450</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000375</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e76">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15770075</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -104,17 +101,20 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fukuda T</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Azuma J</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ba3">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17164689</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f29">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15257633</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pharmacokinetic variability of aripiprazole and the active metabolite dehydroaripiprazole in psychiatric patients.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ther Drug Monit</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molden E</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lunde H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lunder N</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refsum H</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aripiprazole: a review of its use in schizophrenia and schizoaffective disorder.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drugs</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swainston Harrison T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perry CM</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xenobiotic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001229</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f97">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17214606</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -126,3 +126,4 @@
     </bp:PublicationXref>
   </Biopax>
 </Pathway>
+

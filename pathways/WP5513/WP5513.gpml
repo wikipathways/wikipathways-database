@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="NSAIDs mechanism of action" Data-Source="WikiPathways" Version="WP5513_r136464" Author="[Eweitz]" Last-Modified="20250203130915" Organism="Homo sapiens">
-  <Comment Source="WikiPathways-description">"Nonsteroidal anti-inflammatory drugs (NSAIDs) inhibit the cyclooxygenase isoenzymes COX1 and COX2 with varying degrees of specificity for the COX2 isoform. As a result, the conversion of arachidonic acid to prostaglandins (PGs) is inhibited. The main effects of PGs throughout the body are listed."  Inspired by Figure 1 in PMID:32322101.</Comment>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="NSAIDs mechanism of action" Data-Source="WikiPathways" Version="WP5513_r140914" Author="[Eweitz]" Last-Modified="20251030111727" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Nonsteroidal anti-inflammatory drugs (NSAIDs) work by inhibiting the cyclooxygenase enzymes PTGS1 (COX-1) and PTGS2 (COX-2), with different NSAIDs showing varying selectivity for the COX-2 isoform.  This inhibition blocks the conversion of arachidonic acid into prostaglandins (PGs).  Inspired by Figure 1 in PMID:32322101.</Comment>
   <BiopaxRef>a7f</BiopaxRef>
   <Graphics BoardWidth="599.0" BoardHeight="463.75" />
-  <DataNode TextLabel="COX1" GraphId="b708c" Type="GeneProduct" GroupRef="b5a21">
+  <DataNode TextLabel="PTGS1" GraphId="b708c" Type="GeneProduct" GroupRef="b5a21">
+    <Comment>"COX1" in source</Comment>
     <Graphics CenterX="238.0" CenterY="173.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
-    <Xref Database="Ensembl" ID="" />
+    <Xref Database="Ensembl" ID="ENSG00000095303" />
   </DataNode>
   <DataNode TextLabel="Diclofenac" GraphId="c3ac7" Type="Metabolite" GroupRef="b38e6">
     <Graphics CenterX="117.5" CenterY="172.75" Width="70.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -23,13 +24,15 @@
     <Graphics CenterX="296.75" CenterY="102.0" Width="100.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="" ID="" />
   </DataNode>
-  <DataNode TextLabel="COX2" GraphId="a37ff" Type="GeneProduct" GroupRef="b5a21">
+  <DataNode TextLabel="PTGS2" GraphId="a37ff" Type="GeneProduct" GroupRef="b5a21">
+    <Comment>"COX2" in source</Comment>
     <Graphics CenterX="238.0" CenterY="193.0" Width="60.0" Height="20.0" ZOrder="32769" FontSize="12" Valign="Middle" />
-    <Xref Database="Ensembl" ID="" />
+    <Xref Database="Ensembl" ID="ENSG00000073756" />
   </DataNode>
-  <DataNode TextLabel="COX2" GraphId="c751d" Type="GeneProduct">
+  <DataNode TextLabel="PTGS2" GraphId="c751d" Type="GeneProduct">
+    <Comment>"COX2" in source</Comment>
     <Graphics CenterX="357.0" CenterY="183.0" Width="60.0" Height="20.0" ZOrder="32770" FontSize="12" Valign="Middle" />
-    <Xref Database="Ensembl" ID="" />
+    <Xref Database="Ensembl" ID="ENSG00000073756" />
   </DataNode>
   <DataNode TextLabel="PGD2" GraphId="db720" Type="Metabolite" GroupRef="dc3b2">
     <Graphics CenterX="79.0" CenterY="300.0" Width="60.0" Height="20.0" ZOrder="32771" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -211,7 +214,7 @@
     <Graphics CenterX="82.0" CenterY="142.0" Width="130.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="COX2-selective NSAIDs" GraphId="ef786">
-    <Graphics CenterX="479.0" CenterY="142.0" Width="140.0" Height="25.0" ZOrder="32798" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="479.0" CenterY="142.00000000000003" Width="140.0" Height="25.0" ZOrder="32798" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Group GroupId="c1eae" GraphId="a7de7" Style="Group" />
   <Group GroupId="b5a21" GraphId="ab6d2" Style="Group" />
@@ -223,6 +226,11 @@
   <Group GroupId="d75ca" GraphId="faefe" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000754</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a7f">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32322101</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -233,11 +241,6 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McGettigan P</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gislason G</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000754</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
