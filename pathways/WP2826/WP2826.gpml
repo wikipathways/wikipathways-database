@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cocaine metabolism" Data-Source="WikiPathways" Version="WP2826_r141111" Author="[Andra, Egonw, Mkutmon, Ariutta, DeSl, AlexanderPico, MaintBot, Eweitz]" Last-Modified="20251103123228" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cocaine metabolism" Data-Source="WikiPathways" Version="WP2826_r141204" Author="[Andra, Egonw, Mkutmon, Ariutta, DeSl, AlexanderPico, MaintBot, Eweitz]" Last-Modified="20251106174233" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Cocaine is rapidly metabolized to major metabolites, benzoylecgonine and ecgonine methyl ester and minor metabolites, norcocaine, p-hydroxycocaine, m-hydroxycocaine, p-hydroxybenzoylecgonine (pOHBE),and rn-hydroxybenzoylecgonine. (http://jat.oxfordjournals.org/content/30/8/501.long)</Comment>
   <BiopaxRef>a56</BiopaxRef>
   <BiopaxRef>c3b</BiopaxRef>
@@ -8,7 +8,7 @@
   <DataNode TextLabel="Crack cocaine" GraphId="a076b" Type="Metabolite">
     <Comment>frecrack is the free base form of cocaine</Comment>
     <Graphics CenterX="539.1428571428573" CenterY="232.48979591836735" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="Wikidata" ID="Q330694" />
   </DataNode>
   <DataNode TextLabel="Cocaine-N-oxide" GraphId="a2572" Type="Metabolite">
     <Graphics CenterX="157.10309200933926" CenterY="334.28149288367155" Width="170.35220857310293" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -102,12 +102,14 @@
   </DataNode>
   <DataNode TextLabel="Norcocaethylene" GraphId="d9d34" Type="Metabolite">
     <Graphics CenterX="794.515076275251" CenterY="876.9614581262741" Width="170.3522085731031" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Xref Database="PubChem-compound" ID="126246" />
   </DataNode>
   <DataNode TextLabel="Nor-ecgonidine" GraphId="e3c8e" Type="Metabolite">
-    <Comment>noranhydroecgonine</Comment>
-    <Graphics CenterX="432.933022263418" CenterY="32.128822114230374" Width="105.37024048096177" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
+    <Comment>noranhydroecgonine ; chemical annotation based on structural drawing in PMID:8570014 . Using CDK-depict (based on WikiPedia entry https://en.wikipedia.org/wiki/Ecgonidine). SMILES: CN1C2CCC1C(=CC2)C(=O)OC . Corresponding Inchi (with ChemAI) : InChI=1S/C10H15NO2/c1-11-7-3-5-8(10(12)13-2)9(11)6-4-7/h5,7,9H,3-4,6H2,1-2H3
+Corresponding InChIKey (from CACTUS): MPSNEAHFGOEKBI-UHFFFAOYSA-N
+Through Scholia, landed at stable ID (was missing name): https://www.wikidata.org/wiki/Q82115307</Comment>
+    <Graphics CenterX="434.09581296109246" CenterY="30.966031416555957" Width="105.37024048096177" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="Wikidata" ID="Q82115307" />
   </DataNode>
   <DataNode TextLabel="CYP-450" GraphId="f2b27" Type="Protein">
     <Comment>cytochrome P450</Comment>
@@ -148,7 +150,7 @@
     <BiopaxRef>ab9</BiopaxRef>
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="496.8484727123239" Y="166.99807970921336" GraphRef="aff1f" RelX="-0.5" RelY="-1.0" />
-      <Point X="432.933022263418" Y="44.628822114230374" GraphRef="e3c8e" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point X="434.09581296109246" Y="43.46603141655596" GraphRef="e3c8e" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -454,6 +456,11 @@
   <Group GroupId="ed1d4" GraphId="afbb0" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a56">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17132243</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -481,21 +488,6 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schneider KJ</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DeCaprio AP</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bd0">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6835204</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N-demethylation of cocaine to norcocaine. Evidence for participation by cytochrome P-450 and FAD-containing monooxygenase.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Pharmacol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1983</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kloss MW</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosen GM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rauckman EJ</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cocaine drug pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0002533</bp:ID>
@@ -512,6 +504,16 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matsunaga T</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yamamoto I</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yoshimura H</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bd0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6835204</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N-demethylation of cocaine to norcocaine. Evidence for participation by cytochrome P-450 and FAD-containing monooxygenase.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1983</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kloss MW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosen GM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rauckman EJ</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab9">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16778732</bp:ID>
