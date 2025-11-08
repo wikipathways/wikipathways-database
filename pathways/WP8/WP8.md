@@ -10,19 +10,28 @@ authors:
 - Christine Chichester
 - Mkutmon
 - Eweitz
+- Egonw
 citedin:
 - link: PMC7645421
   title: Unraveling the blood transcriptome after real-life exposure of Wistar-rats
     to PM2.5, PM1 and water-soluble metals in the ambient air (2020)
-description: ''
-last-edited: 2021-05-16
+communities: []
+description: IL-9 is a multifunctional cytokine, belonging to a family of cytokines.
+  IL-9 was initially reported as a T cell growth factor in mice. It is now known to
+  target multiple cell types. It plays an important role in the expansion and recruitment
+  of mast cells in response to intestinal nematode infection or during autoimmune
+  encephalomyelitis. It is also known to act on various cell types known to be involved
+  in asthma including T cells, B cells, mast cells, eosinophils, neutrophils, and
+  epithelial cells.
+last-edited: 2025-11-08
+ndex: null
 organisms:
 - Rattus norvegicus
 redirect_from:
 - /index.php/Pathway:WP8
 - /instance/WP8
-- /instance/WP8_r116988
-revision: r116988
+- /instance/WP8_r141252
+revision: r141252
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP8.html
@@ -30,7 +39,13 @@ schema-jsonld:
   creator:
     '@type': Organization
     name: WikiPathways
-  description: ''
+  description: IL-9 is a multifunctional cytokine, belonging to a family of cytokines.
+    IL-9 was initially reported as a T cell growth factor in mice. It is now known
+    to target multiple cell types. It plays an important role in the expansion and
+    recruitment of mast cells in response to intestinal nematode infection or during
+    autoimmune encephalomyelitis. It is also known to act on various cell types known
+    to be involved in asthma including T cells, B cells, mast cells, eosinophils,
+    neutrophils, and epithelial cells.
   keywords:
   - Akt1
   - Grb2
