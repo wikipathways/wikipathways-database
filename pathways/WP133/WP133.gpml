@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Fatty acid omega-oxidation" Data-Source="WikiPathways" Version="WP133_r116963" Author="[Evelo, MaintBot, Thomas, Cizar, Christine Chichester, Youssefwalid, Eweitz]" Last-Modified="20210516101336" Organism="Rattus norvegicus">
-  <Comment Source="WikiPathways-description" />
-  <Comment Source="GenMAPP notes">Created by Magali Jaillard, Marijke Vermeer, Michiel Adrieans, Ron Schormans and Chris Evelo, see website.</Comment>
-  <Comment Source="GenMAPP remarks">http://www.bigcat.unimaas.nl/mapps/</Comment>
-  <Graphics BoardWidth="630.0" BoardHeight="869.5" />
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Fatty acid omega-oxidation" Data-Source="WikiPathways" Version="WP133_r141322" Author="[Evelo, MaintBot, Thomas, Cizar, Christine Chichester, Youssefwalid, Eweitz, Egonw]" Last-Modified="20251109160944" Organism="Rattus norvegicus">
+  <Comment Source="WikiPathways-description">Dodecanoate, or lauric acid, is found in the fats and oils of both plants and animals, especially coconut and palm kernel oil. This pathway shows the degradation of dodecanoate leading to beta oxidation.</Comment>
+  <Graphics BoardWidth="431.83333333333337" BoardHeight="869.5" />
+  <DataNode TextLabel="HO-CH-(CH2)10-COO-" GraphId="b21d7" Type="Metabolite">
+    <Graphics CenterX="316.6666666666667" CenterY="413.3333333333333" Width="170.33333333333334" Height="19.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:39567" />
+  </DataNode>
+  <DataNode TextLabel="HOC-(CH2)10-COO-" GraphId="b85f7" Type="Protein">
+    <Graphics CenterX="316.6666666666667" CenterY="616.6666666666666" Width="153.33333333333334" Height="19.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="3084276" />
+  </DataNode>
+  <DataNode TextLabel="CH3-(CH2)10-COO-" GraphId="dffc8" Type="Metabolite">
+    <Graphics CenterX="316.6666666666667" CenterY="160.0" Width="150.33333333333334" Height="19.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:30805" />
+  </DataNode>
+  <DataNode TextLabel="-OOC-(CH2)10-COO-" GraphId="f2f5d" Type="Metabolite">
+    <Graphics CenterX="316.6666666666667" CenterY="746.6666666666666" Width="158.33333333333334" Height="19.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:76273" />
+  </DataNode>
   <DataNode TextLabel="Cyp2e1" GraphId="ad6" Type="GeneProduct">
     <Attribute Key="org.pathvisio.model.BackpageHead" Value="CYP2E1 | cytochrome P450 family 2 subfamily E..." />
     <Graphics CenterX="316.6666666666667" CenterY="350.0" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
@@ -81,49 +95,36 @@
   </DataNode>
   <Interaction GraphId="c922c">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="d39cd" X="316.6666666666667" Y="422.8333333333333" GraphRef="bc9" RelX="0.0" RelY="1.0" />
-      <Point GraphId="eb51e" X="316.6666666666667" Y="607.1666666666666" GraphRef="ccd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="316.6666666666667" Y="422.8333333333333" GraphRef="b21d7" RelX="0.0" RelY="1.0" />
+      <Point X="316.6666666666667" Y="607.1666666666666" GraphRef="b85f7" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="cba5d">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="bbe62" X="316.6666666666667" Y="169.5" GraphRef="dfb" RelX="0.0" RelY="1.0" />
-      <Point GraphId="f2c48" X="316.6666666666667" Y="403.8333333333333" GraphRef="bc9" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="316.6666666666667" Y="169.5" GraphRef="dffc8" RelX="0.0" RelY="1.0" />
+      <Point X="316.6666666666667" Y="403.8333333333333" GraphRef="b21d7" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="e0735">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="fc54a" X="316.6666666666667" Y="626.1666666666666" GraphRef="ccd" RelX="0.0" RelY="1.0" />
-      <Point GraphId="ca4ee" X="316.6666666666667" Y="737.1666666666666" GraphRef="f53" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="316.6666666666667" Y="626.1666666666666" GraphRef="b85f7" RelX="0.0" RelY="1.0" />
+      <Point X="316.6666666666667" Y="737.1666666666666" GraphRef="f2f5d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f6476">
     <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point GraphId="f8964" X="316.6666666666667" Y="756.1666666666666" GraphRef="f53" RelX="0.0" RelY="1.0" />
-      <Point GraphId="fdb10" X="316.66666666666663" Y="820.5" GraphRef="f28" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="316.6666666666667" Y="756.1666666666666" GraphRef="f2f5d" RelX="0.0" RelY="1.0" />
+      <Point X="316.66666666666663" Y="820.5" GraphRef="f28" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Label TextLabel="HO-CH-(CH2)10-COO-" GraphId="bc9">
-    <Graphics CenterX="316.6666666666667" CenterY="413.3333333333333" Width="170.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="HOC-(CH2)10-COO-" GraphId="ccd">
-    <Graphics CenterX="316.6666666666667" CenterY="616.6666666666666" Width="153.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
-  <Label TextLabel="CH3-(CH2)10-COO-" GraphId="dfb">
-    <Graphics CenterX="316.6666666666667" CenterY="160.0" Width="150.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
   <Label TextLabel="Beta Oxidation" GraphId="f28">
     <Graphics CenterX="316.6666666666667" CenterY="830.0" Width="117.33333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
   </Label>
-  <Label TextLabel="-OOC-(CH2)10-COO-" GraphId="f53">
-    <Graphics CenterX="316.6666666666667" CenterY="746.6666666666666" Width="158.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
-  </Label>
   <InfoBox CenterX="5.0" CenterY="78.33333333333333" />
-  <Legend CenterX="600.0" CenterY="113.33333333333333" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid degradation pathway</bp:TERM>
@@ -137,3 +138,4 @@
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
+
