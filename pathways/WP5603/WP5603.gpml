@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Caffeine in myocytes" Data-Source="WikiPathways" Version="WP5603_r141316" Author="[Eweitz]" Last-Modified="20251109130454" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Caffeine in myocytes" Data-Source="WikiPathways" Version="WP5603_r141389" Author="[Eweitz]" Last-Modified="20251111150444" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Caffeine promotes intracellular calcium release by activating ryanodine receptors on the sarcoplasmic reticulum of skeletal and smooth muscle, enhancing muscle contraction.  Inspired by [Figure 1 in Kumar and Lipshultz, 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC6915633).</Comment>
   <BiopaxRef>e63</BiopaxRef>
   <Graphics BoardWidth="1048.4285714285716" BoardHeight="688.0" />
@@ -9,10 +9,10 @@
   </DataNode>
   <DataNode TextLabel="RYR1" GraphId="c9b35" Type="GeneProduct" GroupRef="ddcfe">
     <Comment>"RyR" in source</Comment>
-    <Graphics CenterX="134.0" CenterY="194.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="134.0" CenterY="193.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000196218" />
   </DataNode>
-  <DataNode TextLabel="Diaphragmatic&#xA;contractility" GraphId="fe460">
+  <DataNode TextLabel="Diaphragmatic&#xA;contractility" GraphId="fe460" Type="BiologicalProcess">
     <Graphics CenterX="102.0" CenterY="493.0" Width="90.0" Height="35.0" ZOrder="32772" FontSize="12" Valign="Middle" Color="008888" />
     <Xref Database="" ID="" />
   </DataNode>
@@ -34,12 +34,12 @@
   </DataNode>
   <DataNode TextLabel="RYR2" GraphId="a3d71" Type="GeneProduct" GroupRef="ddcfe">
     <Comment>"RyR" in source</Comment>
-    <Graphics CenterX="194.0" CenterY="194.0" Width="60.0" Height="20.0" ZOrder="32908" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="194.0" CenterY="193.0" Width="60.0" Height="20.0" ZOrder="32908" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000198626" />
   </DataNode>
   <DataNode TextLabel="RYR3" GraphId="d4b53" Type="GeneProduct" GroupRef="ddcfe">
     <Comment>"RyR" in source</Comment>
-    <Graphics CenterX="254.0" CenterY="194.0" Width="60.0" Height="20.0" ZOrder="32910" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="254.0" CenterY="193.0" Width="60.0" Height="20.0" ZOrder="32910" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000198838" />
   </DataNode>
   <DataNode TextLabel="TPM1" GraphId="f1c1e" Type="GeneProduct" GroupRef="a52df">
@@ -200,15 +200,15 @@
     <Graphics CenterX="193.99999999999997" CenterY="153.66666666666666" Width="40.0" Height="20.0" ZOrder="33010" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
-  <DataNode TextLabel="Inotropy" GraphId="d4d31">
+  <DataNode TextLabel="Inotropy" GraphId="d4d31" Type="BiologicalProcess">
     <Graphics CenterX="102.0" CenterY="520.5" Width="90.0" Height="20.0" ZOrder="33014" FontSize="12" Valign="Middle" Color="008888" />
     <Xref Database="Wikidata" ID="Q14865584" />
   </DataNode>
-  <DataNode TextLabel="Chronotropy" GraphId="b1b98">
+  <DataNode TextLabel="Chronotropy" GraphId="b1b98" Type="BiologicalProcess">
     <Graphics CenterX="102.0" CenterY="540.5" Width="90.0" Height="20.0" ZOrder="33016" FontSize="12" Valign="Middle" Color="008888" />
     <Xref Database="Wikidata" ID="Q14820871" />
   </DataNode>
-  <DataNode TextLabel="Excitation contraction coupling" GraphId="eafed">
+  <DataNode TextLabel="Excitation contraction coupling" GraphId="eafed" Type="BiologicalProcess">
     <Graphics CenterX="145.66666666666657" CenterY="367.8333333333334" Width="180.0" Height="20.0" ZOrder="33018" FontSize="12" Valign="Middle" Color="008888" />
     <Xref Database="Wikidata" ID="Q70691864" />
   </DataNode>
@@ -256,18 +256,18 @@
     <Graphics CenterX="194.99999999999997" CenterY="251.99999999999997" Width="40.0" Height="20.0" ZOrder="33080" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
-  <Interaction GraphId="ida21feecc">
-    <Graphics ZOrder="4104" LineThickness="1.0">
-      <Point X="193.99999999999997" Y="163.66666666666666" GraphRef="c2ac0" RelX="0.0" RelY="1.0" />
-      <Point X="194.99999999999997" Y="242.0" GraphRef="d649d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
-      <Anchor Position="0.4" Shape="None" GraphId="e8f76" />
+  <Interaction GraphId="ida532c903">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="194.0" Y="175.0" GraphRef="a79ce" RelX="0.0" RelY="-1.0" />
+      <Point X="194.39999999999998" Y="195.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="ida532c903">
+  <Interaction GraphId="idb5c23149">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="194.0" Y="176.0" GraphRef="a79ce" RelX="0.0" RelY="-1.0" />
-      <Point X="194.39999999999998" Y="195.0" GraphRef="e8f76" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="193.99999999999997" Y="163.66666666666666" GraphRef="c2ac0" RelX="0.0" RelY="1.0" />
+      <Point X="194.99999999999997" Y="242.0" GraphRef="d649d" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -288,15 +288,7 @@
   <Interaction GraphId="iddd3e133">
     <Graphics ZOrder="12294" LineThickness="1.0">
       <Point X="371.33333333333326" Y="194.0" GraphRef="b1be0" RelX="-1.0" RelY="0.0" />
-      <Point X="292.0" Y="194.0" GraphRef="a79ce" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id87effc6d">
-    <Graphics ZOrder="16392" LineStyle="Broken" LineThickness="1.0" Color="888888">
-      <Point X="422.5" Y="534.0" GraphRef="f4f24" RelX="1.0" RelY="0.0" />
-      <Point X="631.0" Y="533.5" />
-      <Anchor Position="1.0" Shape="None" GraphId="f72f3" />
+      <Point X="292.0" Y="193.0" GraphRef="a79ce" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -307,20 +299,6 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="e8a64">
-    <Graphics ZOrder="33056" LineStyle="Broken" LineThickness="1.0" Color="888888">
-      <Point X="694.4285714285711" Y="56.0" />
-      <Point X="631.0" Y="533.5" GraphRef="f72f3" RelX="0.0" RelY="0.0" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="d101b">
-    <Graphics ZOrder="33058" LineStyle="Broken" LineThickness="1.0" Color="888888">
-      <Point X="693.4285714285711" Y="653.0" />
-      <Point X="631.0" Y="533.5" GraphRef="f72f3" RelX="0.0" RelY="0.0" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
   <Interaction GraphId="df907">
     <Graphics ConnectorType="Elbow" ZOrder="33084" LineThickness="1.0">
       <Point X="214.99999999999997" Y="252.0" GraphRef="d649d" RelX="1.0" RelY="0.0" />
@@ -328,6 +306,25 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <GraphicalLine GraphId="id19492e3b">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="422.5" Y="534.0" GraphRef="f4f24" RelX="1.0" RelY="0.0" />
+      <Point X="640.0" Y="534.0" />
+      <Anchor Position="1.0" Shape="None" GraphId="bd98c" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="id4610aa8">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="640.0" Y="534.0" GraphRef="bd98c" RelX="0.0" RelY="0.0" />
+      <Point X="693.0" Y="53.0" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="aef29">
+    <Graphics ZOrder="33086" LineStyle="Broken" LineThickness="1.0">
+      <Point X="640.0" Y="534.0" GraphRef="bd98c" RelX="0.0" RelY="0.0" />
+      <Point X="692.0" Y="653.0" />
+    </Graphics>
+  </GraphicalLine>
   <Label TextLabel="Skeletal muscle cell" GraphId="a905b">
     <Graphics CenterX="864.4285714285714" CenterY="66.0" Width="130.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="888888" />
   </Label>
@@ -382,6 +379,11 @@
   <Label TextLabel="SR" GraphId="afb93">
     <Graphics CenterX="153.33333333333343" CenterY="112.33333333333317" Width="40.0" Height="20.0" ZOrder="33085" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
+  <Shape GraphId="daa3e">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="319.82142857142856" CenterY="360.25" Width="574.5" Height="587.5" ZOrder="-21" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
   <Shape GraphId="fe1b3">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Endoplasmic Reticulum" />
     <Graphics CenterX="199.5" CenterY="148.0" Width="132.0" Height="223.0" ZOrder="-17" FontSize="12" Valign="Middle" ShapeType="Endoplasmic Reticulum" LineThickness="3.0" Color="c0c0c0" Rotation="1.5707963267948966" />
@@ -394,11 +396,6 @@
   </Shape>
   <Shape GraphId="ca9fb">
     <Graphics CenterX="370.0" CenterY="427.625" Width="420.0" Height="32.75" ZOrder="16388" FillColor="ffeeee" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="ff0000" Rotation="0.0" />
-  </Shape>
-  <Shape GraphId="daa3e">
-    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
-    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="319.82142857142856" CenterY="361.25" Width="574.5" Height="587.5" ZOrder="16390" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape GraphId="e7a70">
     <Graphics CenterX="853.9285714285714" CenterY="167.5" Width="282.0" Height="139.0" ZOrder="16394" FillColor="ffdda6" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="a47700" Rotation="0.0" />
@@ -477,21 +474,6 @@
   <Group GroupId="bbfe4" GraphId="dce93" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell of skeletal muscle</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000188</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">smooth muscle cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000192</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiac muscle cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000746</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e63">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31653108</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -509,6 +491,21 @@
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">muscle cell</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000187</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiac muscle cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000746</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">smooth muscle cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000192</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell of skeletal muscle</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000188</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
