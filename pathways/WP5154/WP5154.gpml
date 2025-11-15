@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Docosahexaenoic acid oxylipin metabolism" Data-Source="WikiPathways" Version="WP5154_r141381" Author="[Lcayer, AlexanderPico, Egonw, Eweitz]" Last-Modified="20251111133952" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Docosahexaenoic acid oxylipin metabolism" Data-Source="WikiPathways" Version="WP5154_r141431" Author="[Lcayer, AlexanderPico, Egonw, Eweitz, DeSl]" Last-Modified="20251114114705" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Docosahexaenoic acid (DHA) oxylipin metabolism</Comment>
   <Graphics BoardWidth="1340.0" BoardHeight="1120.5" />
   <DataNode TextLabel="4(5)-EpDPE" GraphId="a1471" Type="Metabolite">
@@ -19,7 +19,7 @@
     <Xref Database="Entrez Gene" ID="2053" />
   </DataNode>
   <DataNode TextLabel="CYP epoxygenase" GraphId="bc336" Type="GeneProduct">
-    <Graphics CenterX="922.5606337848806" CenterY="799.0693358279034" Width="120.25510204081593" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="923.1186694991662" CenterY="799.0693358279034" Width="120.25510204081593" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Aspirin-triggered resolvin D1" GraphId="bfc73" Type="Metabolite">
@@ -260,7 +260,7 @@
   <Interaction GraphId="id24a9f63">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="210.0" Y="378.0" GraphRef="e3c70" RelX="-1.0" RelY="0.0" />
-      <Point X="115.0" Y="378.0" ArrowHead="mim-conversion" />
+      <Point X="110.0" Y="378.0" GraphRef="e2899" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -333,7 +333,7 @@
   </Interaction>
   <Interaction GraphId="id94c8d6d2">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="922.5606337848806" Y="786.5693358279034" />
+      <Point X="923.1186694991662" Y="786.5693358279034" GraphRef="bc336" RelX="0.0" RelY="-1.0" />
       <Point X="947.2916099492867" Y="473.2816444850456" GraphRef="f9b17" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -518,35 +518,35 @@
   </Interaction>
   <Interaction GraphId="bc0eb">
     <Graphics ZOrder="32804" LineThickness="1.0">
-      <Point X="922.5606337848806" Y="786.5693358279034" GraphRef="bc336" RelX="0.0" RelY="-1.0" />
+      <Point X="923.1186694991662" Y="786.5693358279034" GraphRef="bc336" RelX="0.0" RelY="-1.0" />
       <Point X="981.8007355817138" Y="724.8592908831613" GraphRef="a7d54" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="f7f60">
     <Graphics ZOrder="32805" LineThickness="1.0">
-      <Point X="922.5606337848806" Y="786.5693358279034" />
+      <Point X="923.1186694991662" Y="786.5693358279034" GraphRef="bc336" RelX="0.0" RelY="-1.0" />
       <Point X="980.8908004663775" Y="675.0834611509422" GraphRef="d872a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ae48a">
     <Graphics ZOrder="32806" LineThickness="1.0">
-      <Point X="922.5606337848806" Y="786.5693358279034" GraphRef="bc336" RelX="0.0" RelY="-1.0" />
+      <Point X="923.1186694991662" Y="786.5693358279034" GraphRef="bc336" RelX="0.0" RelY="-1.0" />
       <Point X="975.654371018332" Y="624.6693649976781" GraphRef="a330d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="be25c">
     <Graphics ZOrder="32807" LineThickness="1.0">
-      <Point X="922.5606337848806" Y="786.5693358279034" />
+      <Point X="923.1186694991662" Y="786.5693358279034" GraphRef="bc336" RelX="0.0" RelY="-1.0" />
       <Point X="968.7125789988403" Y="574.2213476088571" GraphRef="b34aa" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d2ca1">
     <Graphics ZOrder="32808" LineThickness="1.0">
-      <Point X="922.5606337848806" Y="786.5693358279034" GraphRef="bc336" RelX="0.0" RelY="-1.0" />
+      <Point X="923.1186694991662" Y="786.5693358279034" GraphRef="bc336" RelX="0.0" RelY="-1.0" />
       <Point X="959.1677941493231" Y="523.6929193468127" GraphRef="e9a6d" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -817,6 +817,16 @@
   </Interaction>
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000058</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lipid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000010</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ae4">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26667839</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -833,16 +843,6 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Van Dyke TE</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Serhan CN</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lipid metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000010</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000058</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
