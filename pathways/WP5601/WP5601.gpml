@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Caffeine in blood vessels" Data-Source="WikiPathways" Version="WP5601_r141405" Author="[Eweitz]" Last-Modified="20251112020357" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Caffeine in blood vessels" Data-Source="WikiPathways" Version="WP5601_r141489" Author="[Eweitz]" Last-Modified="20251116003444" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">In vascular smooth muscle, caffeine promotes relaxation by inhibiting myosin light-chain kinase (MLCK) through cAMP elevation and activating myosin light-chain phosphatase (MLCP), reducing myosin–actin interaction.  As a nonselective adenosine receptor antagonist, caffeine blocks A₁/A₃ receptors (which normally lower cAMP) and A₂A/A₂B receptors (which normally raise cAMP), thereby altering adenylate cyclase activity.  In endothelial cells, caffeine increases intracellular Ca²⁺, activating eNOS to produce nitric oxide (NO), which diffuses to smooth muscle and stimulates cGMP signaling, further promoting vasodilation.  Inspired by [Figure 1 in Kumar and Lipshultz, 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC6915633).</Comment>
   <BiopaxRef>c8c</BiopaxRef>
   <Graphics BoardWidth="922.0" BoardHeight="624.0" />
-  <DataNode TextLabel="Myosin-actin&#xA;interaction" GraphId="c66d4" Type="Pathway">
-    <Graphics CenterX="117.0" CenterY="538.0" Width="90.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
-    <Xref Database="" ID="" />
+  <DataNode TextLabel="Myosin-actin interaction" GraphId="c66d4" Type="Pathway">
+    <Graphics CenterX="117.0" CenterY="538.0" Width="150.0" Height="25.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP4962" />
   </DataNode>
   <DataNode TextLabel="ADRA1A" GraphId="d27d1" Type="GeneProduct" GroupRef="cd6a0">
     <Comment>"A1" in source</Comment>
@@ -16,7 +16,7 @@
     <Graphics CenterX="730.0" CenterY="254.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000198626" />
   </DataNode>
-  <DataNode TextLabel="Vasodilation" GraphId="fa518">
+  <DataNode TextLabel="Vasodilation" GraphId="fa518" Type="BiologicalProcess">
     <Graphics CenterX="330.0" CenterY="538.0" Width="110.0" Height="30.0" ZOrder="32768" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="RoundedRectangle" Color="008888" />
     <Xref Database="Wikidata" ID="Q14859627" />
   </DataNode>
@@ -168,7 +168,7 @@
   </DataNode>
   <DataNode TextLabel="Arginine" GraphId="bc486" Type="Metabolite">
     <Graphics CenterX="734.0" CenterY="403.0" Width="60.0" Height="20.0" ZOrder="32873" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEBI" ID="CHEBI:29016" />
+    <Xref Database="ChEBI" ID="CHEBI:16467" />
   </DataNode>
   <DataNode TextLabel="NOS3" GraphId="a2eb4" Type="GeneProduct">
     <Comment>"eNOS" in source</Comment>
@@ -251,7 +251,7 @@
   </DataNode>
   <Interaction GraphId="id20866781">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="162.0" Y="538.0" GraphRef="c66d4" RelX="1.0" RelY="0.0" />
+      <Point X="192.0" Y="538.0" GraphRef="c66d4" RelX="1.0" RelY="0.0" />
       <Point X="275.0" Y="538.0" GraphRef="fa518" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -289,13 +289,6 @@
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="117.0" Y="368.0" GraphRef="d30da" RelX="0.0" RelY="1.0" />
       <Point X="117.0" Y="408.0" GraphRef="a2755" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id81ccc18f">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="730.0" Y="229.0" GraphRef="ee50f" RelX="0.0" RelY="1.0" />
-      <Point X="730.0" Y="308.0" GraphRef="c3209" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -421,13 +414,6 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="b9688">
-    <Graphics ZOrder="32895" LineThickness="1.0">
-      <Point X="714.0" Y="469.0" GraphRef="aff26" RelX="-1.0" RelY="0.0" />
-      <Point X="613.0" Y="469.0" GraphRef="c2d93" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
   <Interaction GraphId="fb72e">
     <Graphics ZOrder="32896" LineThickness="1.0">
       <Point X="198.0" Y="112.0" GraphRef="f2f4a" RelX="0.0" RelY="1.0" />
@@ -449,6 +435,18 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <GraphicalLine GraphId="ide5c6ab3b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="730.0" Y="229.0" GraphRef="ee50f" RelX="0.0" RelY="1.0" />
+      <Point X="730.0" Y="308.0" GraphRef="c3209" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e2e67">
+    <Graphics ZOrder="32905" LineThickness="1.0">
+      <Point X="714.0" Y="469.0" GraphRef="aff26" RelX="-1.0" RelY="0.0" />
+      <Point X="613.0" Y="469.0" GraphRef="c2d93" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
   <Label TextLabel="MLCP" GraphId="b046b">
     <Graphics CenterX="64.66666666666652" CenterY="402.66666666666674" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
@@ -515,14 +513,14 @@
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caffeine drug pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0002317</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vascular associated smooth muscle cell</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000359</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caffeine metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001153</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c8c">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31653108</bp:ID>
@@ -534,8 +532,8 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lipshultz SE</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caffeine metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001153</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caffeine drug pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0002317</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">

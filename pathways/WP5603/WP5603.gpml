@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Caffeine in myocytes" Data-Source="WikiPathways" Version="WP5603_r141409" Author="[Eweitz]" Last-Modified="20251112120156" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Caffeine in myocytes" Data-Source="WikiPathways" Version="WP5603_r141485" Author="[Eweitz]" Last-Modified="20251116001311" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Caffeine promotes intracellular calcium release by activating ryanodine receptors on the sarcoplasmic reticulum of skeletal and smooth muscle, enhancing muscle contraction.  Inspired by [Figure 1 in Kumar and Lipshultz, 2019](https://pmc.ncbi.nlm.nih.gov/articles/PMC6915633).</Comment>
   <BiopaxRef>e63</BiopaxRef>
   <Graphics BoardWidth="1048.4285714285716" BoardHeight="688.0" />
-  <DataNode TextLabel="" GraphId="f556d">
-    <Graphics CenterX="318.75" CenterY="452.5" Width="544.5" Height="298.0" ZOrder="-19" FillColor="fafafa" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
-  </DataNode>
   <DataNode TextLabel="RYR1" GraphId="c9b35" Type="GeneProduct" GroupRef="ddcfe">
     <Comment>"RyR" in source</Comment>
     <Graphics CenterX="134.0" CenterY="193.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
@@ -14,7 +10,7 @@
   </DataNode>
   <DataNode TextLabel="Diaphragmatic&#xA;contractility" GraphId="fe460" Type="BiologicalProcess">
     <Graphics CenterX="102.0" CenterY="493.0" Width="90.0" Height="35.0" ZOrder="32772" FontSize="12" Valign="Middle" Color="008888" />
-    <Xref Database="" ID="" />
+    <Xref Database="Wikidata" ID="Q9654" />
   </DataNode>
   <DataNode TextLabel="Myosin" GraphId="f4f24">
     <Graphics CenterX="392.5" CenterY="534.0" Width="60.0" Height="20.0" ZOrder="32774" FontSize="12" Valign="Middle" />
@@ -256,37 +252,37 @@
     <Graphics CenterX="194.99999999999997" CenterY="251.99999999999997" Width="40.0" Height="20.0" ZOrder="33080" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="ChEBI" ID="CHEBI:29108" />
   </DataNode>
-  <Interaction GraphId="ida532c903">
+  <Interaction GraphId="idb5c23149">
     <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="193.99999999999997" Y="163.66666666666666" GraphRef="c2ac0" RelX="0.0" RelY="1.0" />
+      <Point X="194.99999999999997" Y="242.0" GraphRef="d649d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida532c903">
+    <Graphics ZOrder="12292" LineThickness="1.0">
       <Point X="194.0" Y="175.0" GraphRef="a79ce" RelX="0.0" RelY="-1.0" />
       <Point X="194.39999999999998" Y="195.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="idb5c23149">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="193.99999999999997" Y="163.66666666666666" GraphRef="c2ac0" RelX="0.0" RelY="1.0" />
-      <Point X="194.99999999999997" Y="242.0" GraphRef="d649d" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.4" Shape="None" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
   <Interaction GraphId="id56d77ab6">
-    <Graphics ZOrder="12290" LineThickness="1.0">
+    <Graphics ZOrder="12298" LineThickness="1.0">
       <Point X="392.0" Y="388.0" GraphRef="dcb53" RelX="0.0" RelY="1.0" />
       <Point X="392.0" Y="409.0" GraphRef="ae9ec" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idc1ff8f8d">
-    <Graphics ZOrder="12292" LineThickness="1.0">
+    <Graphics ZOrder="12300" LineThickness="1.0">
       <Point X="392.0" Y="445.0" GraphRef="ae9ec" RelX="0.0" RelY="1.0" />
       <Point X="392.0" Y="463.0" GraphRef="dce93" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="iddd3e133">
-    <Graphics ZOrder="12294" LineThickness="1.0">
+    <Graphics ZOrder="12302" LineThickness="1.0">
       <Point X="371.33333333333326" Y="194.0" GraphRef="b1be0" RelX="-1.0" RelY="0.0" />
       <Point X="292.0" Y="193.0" GraphRef="a79ce" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
@@ -306,30 +302,30 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <GraphicalLine GraphId="id4610aa8">
+    <Graphics ZOrder="12290" LineStyle="Broken" LineThickness="1.0">
+      <Point X="640.0" Y="534.0" GraphRef="bd98c" RelX="0.0" RelY="0.0" />
+      <Point X="693.0" Y="53.0" />
+    </Graphics>
+  </GraphicalLine>
   <GraphicalLine GraphId="id19492e3b">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+    <Graphics ZOrder="12296" LineStyle="Broken" LineThickness="1.0">
       <Point X="422.5" Y="534.0" GraphRef="f4f24" RelX="1.0" RelY="0.0" />
       <Point X="640.0" Y="534.0" />
       <Anchor Position="1.0" Shape="None" GraphId="bd98c" />
     </Graphics>
   </GraphicalLine>
-  <GraphicalLine GraphId="id4610aa8">
-    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
-      <Point X="640.0" Y="534.0" GraphRef="bd98c" RelX="0.0" RelY="0.0" />
-      <Point X="693.0" Y="53.0" />
-    </Graphics>
-  </GraphicalLine>
   <GraphicalLine GraphId="aef29">
-    <Graphics ZOrder="33086" LineStyle="Broken" LineThickness="1.0">
+    <Graphics ZOrder="33088" LineStyle="Broken" LineThickness="1.0">
       <Point X="640.0" Y="534.0" GraphRef="bd98c" RelX="0.0" RelY="0.0" />
       <Point X="692.0" Y="653.0" />
     </Graphics>
   </GraphicalLine>
-  <Label TextLabel="Skeletal muscle cell" GraphId="a905b">
-    <Graphics CenterX="864.4285714285714" CenterY="66.0" Width="130.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="888888" />
-  </Label>
   <Label TextLabel="Caffeine boosts muscle contraction &#xA;by increasing calcium release &#xA;from the sarcoplasmic reticulum." GraphId="cfc5a">
     <Graphics CenterX="436.00000000000017" CenterY="124.66666666666657" Width="200.0" Height="50.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Skeletal muscle cell" GraphId="a905b">
+    <Graphics CenterX="864.4285714285714" CenterY="66.0" Width="130.0" Height="20.0" ZOrder="28674" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="888888" />
   </Label>
   <Label TextLabel="Mechanism of action of caffeine on:" GraphId="ae423">
     <Graphics CenterX="165.0" CenterY="31.0" Width="200.0" Height="25.0" ZOrder="32896" FillColor="ffffff" FontSize="12" Valign="Middle" />
@@ -377,22 +373,25 @@
     <Graphics CenterX="260.3333333333335" CenterY="344.33333333333354" Width="60.0" Height="20.0" ZOrder="33078" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="SR" GraphId="afb93">
-    <Graphics CenterX="153.33333333333343" CenterY="112.33333333333317" Width="40.0" Height="20.0" ZOrder="33085" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="153.33333333333343" CenterY="112.33333333333317" Width="40.0" Height="20.0" ZOrder="33086" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
+  <Shape GraphId="cefe0">
+    <Graphics CenterX="319.5" CenterY="451.5" Width="545.0" Height="295.0" ZOrder="-30" FillColor="fafafa" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
   <Shape GraphId="daa3e">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="319.82142857142856" CenterY="360.25" Width="574.5" Height="587.5" ZOrder="-21" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+    <Graphics CenterX="319.82142857142856" CenterY="360.25" Width="574.5" Height="587.5" ZOrder="-20" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
   <Shape GraphId="fe1b3">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Endoplasmic Reticulum" />
     <Graphics CenterX="199.5" CenterY="148.0" Width="132.0" Height="223.0" ZOrder="-17" FontSize="12" Valign="Middle" ShapeType="Endoplasmic Reticulum" LineThickness="3.0" Color="c0c0c0" Rotation="1.5707963267948966" />
   </Shape>
   <Shape GraphId="f37ed">
-    <Graphics CenterX="370.5" CenterY="532.625" Width="420.0" Height="45.0" ZOrder="-3" FillColor="ffdda6" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="a47700" Rotation="0.0" />
+    <Graphics CenterX="370.5" CenterY="532.625" Width="420.0" Height="45.0" ZOrder="-2" FillColor="ffdda6" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="a47700" Rotation="0.0" />
   </Shape>
   <Shape GraphId="dd487">
-    <Graphics CenterX="370.5" CenterY="477.5" Width="420.0" Height="59.0" ZOrder="0" FillColor="eeeeff" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="0000ff" Rotation="0.0" />
+    <Graphics CenterX="370.5" CenterY="477.5" Width="420.0" Height="59.0" ZOrder="4" FillColor="eeeeff" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="0000ff" Rotation="0.0" />
   </Shape>
   <Shape GraphId="ca9fb">
     <Graphics CenterX="370.0" CenterY="427.625" Width="420.0" Height="32.75" ZOrder="16388" FillColor="ffeeee" FontSize="12" Valign="Middle" ShapeType="Rectangle" Color="ff0000" Rotation="0.0" />
@@ -466,8 +465,8 @@
   <Shape GraphId="dd78a">
     <Graphics CenterX="855.4285714285714" CenterY="634.625" Width="282.0" Height="5.0" ZOrder="33052" FillColor="ffeeee" FontSize="12" Valign="Middle" ShapeType="Rectangle" LineThickness="0.5" Color="ff0000" Rotation="0.0" />
   </Shape>
-  <Group GroupId="e27da" Style="Group" />
   <Group GroupId="e24c7" Style="Group" />
+  <Group GroupId="e27da" Style="Group" />
   <Group GroupId="ddcfe" GraphId="a79ce" Style="Group" />
   <Group GroupId="a52df" GraphId="ae9ec" Style="Group" />
   <Group GroupId="d7018" GraphId="dcb53" Style="Complex" />
@@ -484,15 +483,6 @@
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000188</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e63">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31653108</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caffeine and Clinical Outcomes in Premature Neonates.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Children (Basel)</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kumar VHS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lipshultz SE</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">smooth muscle cell</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000192</bp:ID>
@@ -503,6 +493,15 @@
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000746</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e63">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31653108</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caffeine and Clinical Outcomes in Premature Neonates.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Children (Basel)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kumar VHS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lipshultz SE</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
 
