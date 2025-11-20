@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Effects of nitric oxide" Data-Source="WikiPathways" Version="WP1995_r137889" Author="[MartijnVanIersel, MaintBot, AlexanderPico, Mkutmon, Eweitz]" Last-Modified="20250309211302" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Effects of nitric oxide" Data-Source="WikiPathways" Version="WP1995_r141597" Author="[MartijnVanIersel, MaintBot, AlexanderPico, Mkutmon, Eweitz]" Last-Modified="20251120020410" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Nitric oxide (NO) is an important signaling molecule with vasodilatory and anti-inflammatory effects, indicating a positive role in reducing hypertension and cardiovascular disease. At the same time, NO is also associated with health risks such as increased risk in carcinogenesis, and hypoxia in infants. It has been suggested that NO can also increase mitochondrial efficiency. NO can be formed from L-Arginine through the classic arginine-NO-synthase pathway, or it can be formed directly from dietary nitrite by deoxygenated globins.</Comment>
   <BiopaxRef>be3</BiopaxRef>
   <BiopaxRef>bb9</BiopaxRef>
@@ -16,12 +16,8 @@
     <Graphics CenterX="728.6451612903226" CenterY="229.4277894478414" Width="80.0" Height="20.0" ZOrder="32808" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000138356" />
   </DataNode>
-  <DataNode TextLabel="Deoxy-hemoglobin" GraphId="c8bca" Type="GeneProduct">
-    <Graphics CenterX="620.4394917218366" CenterY="68.61514257834338" Width="116.0" Height="20.0" ZOrder="32809" FontSize="12" Valign="Middle" />
-    <Xref Database="Ensembl" ID="ENSG00000206172" />
-  </DataNode>
-  <DataNode TextLabel="Deoxy-myoglobin" GraphId="d2ad2" Type="GeneProduct">
-    <Graphics CenterX="515.5322580645161" CenterY="98.06451612903224" Width="109.0" Height="20.0" ZOrder="32810" FontSize="12" Valign="Middle" />
+  <DataNode TextLabel="MB" GraphId="d2ad2" Type="GeneProduct">
+    <Graphics CenterX="515.5322580645161" CenterY="98.06451612903224" Width="50.0" Height="20.0" ZOrder="32810" FontSize="12" Valign="Middle" />
     <Xref Database="Entrez Gene" ID="4151" />
   </DataNode>
   <DataNode TextLabel="Nitrate" GraphId="e6a6f" Type="Metabolite">
@@ -68,6 +64,22 @@
     <Graphics CenterX="417.9583333333326" CenterY="56.84190952590171" Width="60.0" Height="25.0" ZOrder="34858" FillColor="ffdddd" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q105688" />
   </DataNode>
+  <DataNode TextLabel="HBA2" GraphId="e4902" Type="GeneProduct" GroupRef="a933f">
+    <Graphics CenterX="608.0" CenterY="73.99999999999949" Width="50.0" Height="20.0" ZOrder="34863" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000188536" />
+  </DataNode>
+  <DataNode TextLabel="HBA1" GraphId="f885d" Type="GeneProduct" GroupRef="a933f">
+    <Graphics CenterX="608.0" CenterY="53.9999999999996" Width="50.0" Height="20.0" ZOrder="34864" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000206172" />
+  </DataNode>
+  <DataNode TextLabel="HBB" GraphId="f224b" Type="GeneProduct" GroupRef="a933f">
+    <Graphics CenterX="658.0" CenterY="73.99999999999949" Width="50.0" Height="20.0" ZOrder="34865" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000244734" />
+  </DataNode>
+  <DataNode TextLabel="HBB" GraphId="a70e1" Type="GeneProduct" GroupRef="a933f">
+    <Graphics CenterX="658.0" CenterY="53.9999999999996" Width="50.0" Height="20.0" ZOrder="34866" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000244734" />
+  </DataNode>
   <Interaction GraphId="d7db9">
     <Graphics ZOrder="32773" LineThickness="1.0">
       <Point X="735.0" Y="68.0" GraphRef="fd200" RelX="0.0" RelY="1.0" />
@@ -105,7 +117,7 @@
   </Interaction>
   <Interaction GraphId="f1164">
     <Graphics ZOrder="32778" LineThickness="1.0">
-      <Point X="620.4394917218366" Y="78.61514257834338" GraphRef="c8bca" RelX="0.0" RelY="1.0" />
+      <Point X="633.0" Y="95.99999999999949" GraphRef="f1764" RelX="0.0" RelY="1.0" />
       <Point X="529.4" Y="162.0" GraphRef="bbe24" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -119,7 +131,7 @@
   </Interaction>
   <Interaction GraphId="de7f9">
     <Graphics ZOrder="32780" LineThickness="1.0">
-      <Point X="424.0" Y="326.0" GraphRef="b51a2" RelX="0.0" RelY="1.0" />
+      <Point X="424.0" Y="332.0" GraphRef="b51a2" RelX="0.0" RelY="1.0" />
       <Point X="494.43556451612903" Y="403.77201612903224" GraphRef="c5e9c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -134,7 +146,7 @@
   <Interaction GraphId="c0355">
     <Graphics ZOrder="32782" LineThickness="1.0">
       <Point X="424.0" Y="172.0" GraphRef="ba00a" RelX="0.0" RelY="1.0" />
-      <Point X="424.0" Y="303.0" GraphRef="b51a2" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="424.0" Y="297.0" GraphRef="b51a2" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -199,7 +211,7 @@
   </Interaction>
   <Interaction GraphId="c62d6">
     <Graphics ZOrder="32791" LineThickness="1.0">
-      <Point X="424.0" Y="326.0" GraphRef="b51a2" RelX="0.0" RelY="1.0" />
+      <Point X="424.0" Y="332.0" GraphRef="b51a2" RelX="0.0" RelY="1.0" />
       <Point X="423.99999999999994" Y="459.0" GraphRef="d1bc8" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -255,7 +267,7 @@
     <Graphics CenterX="423.99999999999994" CenterY="549.5" Width="133.0" Height="39.0" ZOrder="32798" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="cGMP&#xA;signaling" GraphId="b51a2">
-    <Graphics CenterX="424.0" CenterY="314.5" Width="72.0" Height="23.0" ZOrder="32799" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="424.0" CenterY="314.5" Width="72.0" Height="35.0" ZOrder="32799" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Vasodilation" GraphId="d1bc8">
     <Graphics CenterX="423.99999999999994" CenterY="469.0" Width="77.0" Height="20.0" ZOrder="32800" FillColor="ffffff" FontSize="12" Valign="Middle" />
@@ -284,24 +296,22 @@
   <Label TextLabel="NOS family" GraphId="e8ef1">
     <Graphics CenterX="205.42857142857088" CenterY="53.14285714285716" Width="90.0" Height="25.0" ZOrder="34861" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
+  <Label TextLabel="Deoxy-hemoglobin" GraphId="e1aca">
+    <Graphics CenterX="632.0" CenterY="19.0" Width="120.0" Height="25.0" ZOrder="34867" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Deoxy-myoglobin" GraphId="f9479">
+    <Graphics CenterX="512.0" CenterY="75.0" Width="120.0" Height="25.0" ZOrder="34868" FillColor="ffffff" FontSize="12" Valign="Middle" />
+  </Label>
   <Shape GraphId="b4d1a">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Mitochondria" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="178.583387096774" CenterY="387.85064516129023" Width="264.5" Height="182.5" ZOrder="-2" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
   </Shape>
+  <Group GroupId="cc625" Style="Complex" />
   <Group GroupId="c7733" GraphId="c7014" />
+  <Group GroupId="a933f" GraphId="f1764" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="be3">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19439460</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food sources of nitrates and nitrites: the physiologic context for potential health benefits.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Clin Nutr</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hord NG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tang Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bryan NS</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bb9">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19915529</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -343,6 +353,21 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zweier JL</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weitzberg E</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="be3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19439460</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food sources of nitrates and nitrites: the physiologic context for potential health benefits.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Clin Nutr</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hord NG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tang Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bryan NS</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiovascular system homeostasis pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000476</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="be5">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21284982</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -357,11 +382,6 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lundberg JO</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weitzberg E</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiovascular system homeostasis pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000476</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
