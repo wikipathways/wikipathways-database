@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Frustrated phagocytosis leading to malignant pleural mesothelioma" Data-Source="WikiPathways" Version="WP5091_r141728" Author="[Marvin M2, Eweitz, Alexandrabosch, Mkutmon, PhilipErnst]" Last-Modified="20251122163857" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Frustrated phagocytosis leading to malignant pleural mesothelioma" Data-Source="WikiPathways" Version="WP5091_r141816" Author="[Marvin M2, Eweitz, Alexandrabosch, Mkutmon, PhilipErnst, Jmillanacosta]" Last-Modified="20251123191304" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Adverse Outcome Pathway for malignant pleural mesothelioma, known to be initiated by asbestos and carbon nanotubes. This molecular AOP is based on https://aopwiki.org/aops/409 </Comment>
   <BiopaxRef>d85</BiopaxRef>
   <BiopaxRef>b76</BiopaxRef>
@@ -113,7 +113,7 @@
     <Xref Database="WikiPathways" ID="WP5469" />
   </DataNode>
   <DataNode TextLabel="Deregulating cellular energetics" GraphId="f8ebd">
-    <Graphics CenterX="2077.717731306774" CenterY="809.5168527453656" Width="244.81217671210078" Height="33.34146772915492" ZOrder="32798" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="2079.1242010676747" CenterY="809.5168527453651" Width="244.81217671210078" Height="33.34146772915492" ZOrder="32798" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="TCA Cycle Nutrient use in cancer" GraphId="f2c9c" Type="Pathway">
@@ -150,7 +150,7 @@
   <Interaction GraphId="id1e5e6f41">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
       <Point X="1375.5627244014213" Y="617.8009691663099" GraphRef="e9f1c" RelX="0.0" RelY="1.0" />
-      <Point X="2077.717731306774" Y="792.8461188807883" GraphRef="f8ebd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="2079.1242010676747" Y="792.8461188807878" GraphRef="f8ebd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -276,6 +276,13 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <Interaction GraphId="id902c8a5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="2074.5428973277076" Y="772.1518987341773" />
+      <Point X="2077.717731306774" Y="826.5273445326668" GraphRef="f2c9c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Interaction GraphId="id9ca1710f">
     <Graphics ZOrder="12288" LineThickness="1.0">
       <Point X="1375.5627244014254" Y="478.2885902684249" GraphRef="a1070" RelX="0.0" RelY="1.0" />
@@ -307,8 +314,8 @@
   </Interaction>
   <Interaction GraphId="id9f7e2068">
     <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
-      <Point X="2077.717731306774" Y="826.1875866099431" GraphRef="f8ebd" RelX="0.0" RelY="1.0" />
-      <Point X="1726.6402278540963" Y="938.5497876007165" />
+      <Point X="2077.717731306774" Y="859.8688122618216" GraphRef="f2c9c" RelX="0.0" RelY="1.0" />
+      <Point X="1726.6402278540963" Y="938.1153305203939" />
       <Point X="1375.5627244014183" Y="960.3779243964409" GraphRef="a6b44" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -436,6 +443,11 @@
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:7474</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mesothelial cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000077</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d85">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34641979</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -449,6 +461,11 @@
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akio Kuroda</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000013</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b76">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35630938</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -461,16 +478,6 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dusinska M</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rahman Q</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mesothelial cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000077</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000013</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
