@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Induction of autophagy and toll-like receptor signaling by graphene oxide " Data-Source="WikiPathways" Version="WP5336_r129743" Author="[Egonw, Eweitz]" Last-Modified="20240522015443" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Induction of autophagy and toll-like receptor signaling by graphene oxide " Data-Source="WikiPathways" Version="WP5336_r142096" Author="[Egonw, Eweitz]" Last-Modified="20251201114719" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Graphene oxide has been found in the RAW264.7 to trigger a cytokine response and resulting autophagy. It was found to be mediated by  activation of TLR4 and TLR9, signalling MyD88, TRAF6, and NF-κB, resulting in cytokine expression. However, TLR signaling did not cause IFN-β expression nor IRF3 activation. The process also shows activation of Beclin 1 and LC3.</Comment>
   <BiopaxRef>a9b</BiopaxRef>
   <Graphics BoardWidth="889.2592592592591" BoardHeight="592.1399176954728" />
-  <DataNode TextLabel="GO" GraphId="b9621" Type="Metabolite">
+  <DataNode TextLabel="Graphene oxide" GraphId="b9621" Type="Metabolite">
     <Comment>graphene oxide</Comment>
-    <Graphics CenterX="208.80349794238973" CenterY="57.48662551440316" Width="76.22016460905348" Height="21.899176954732525" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="208.80349794238973" CenterY="57.48662551440316" Width="100.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q95981922" />
   </DataNode>
   <DataNode TextLabel="IFN-beta" GraphId="daadc" Type="GeneProduct">
@@ -16,9 +16,9 @@
     <Graphics CenterX="231.43724279835487" CenterY="340.49074074074133" Width="111.61111111111109" Height="33.42181069958854" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="WikiPathways" ID="WP4923" />
   </DataNode>
-  <DataNode TextLabel="GO" GraphId="bfcd1" Type="Metabolite">
+  <DataNode TextLabel="Graphene oxide" GraphId="bfcd1" Type="Metabolite">
     <Comment>graphene oxide</Comment>
-    <Graphics CenterX="623.7417695473273" CenterY="63.24794238683135" Width="76.22016460905348" Height="21.899176954732525" ZOrder="32769" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="623.7417695473273" CenterY="63.24794238683135" Width="100.0" Height="20.0" ZOrder="32769" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q95981922" />
   </DataNode>
   <DataNode TextLabel="IFN-gamma" GraphId="c33fa" Type="GeneProduct">
@@ -121,7 +121,7 @@
   </State>
   <Interaction GraphId="id262c0d77">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point X="208.80349794238973" Y="68.43621399176942" GraphRef="b9621" RelX="0.0" RelY="1.0" />
+      <Point X="208.80349794238975" Y="67.48662551440316" GraphRef="b9621" RelX="0.0" RelY="1.0" />
       <Point X="208.80349794238975" Y="134.61934156378425" GraphRef="a769b" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -135,7 +135,7 @@
   </Interaction>
   <Interaction GraphId="b2b19">
     <Graphics ZOrder="32792" LineThickness="1.0">
-      <Point X="623.7417695473273" Y="74.1975308641976" GraphRef="bfcd1" RelX="0.0" RelY="1.0" />
+      <Point X="623.7417695473273" Y="73.24794238683134" GraphRef="bfcd1" RelX="0.0" RelY="1.0" />
       <Point X="623.7417695473273" Y="180.66563786008248" GraphRef="d8385" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -236,6 +236,11 @@
   <Group GroupId="db7b8" GraphId="dd1fe" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cytokine mediated signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000828</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a9b">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22704844</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -257,11 +262,6 @@
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cytokine mediated signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000828</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>

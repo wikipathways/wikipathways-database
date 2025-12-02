@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Inhibition of GNAQ-regulated signaling in uveal melanoma" Data-Source="WikiPathways" Version="WP5490_r137747" Author="[Khanspers, Eweitz, Egonw]" Last-Modified="20250307181758" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Inhibition of GNAQ-regulated signaling in uveal melanoma" Data-Source="WikiPathways" Version="WP5490_r142101" Author="[Khanspers, Eweitz, Egonw]" Last-Modified="20251201115925" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">This pathway describes parallel and converging signaling pathways driven by GNAQ (Gαq) in uveal melanoma, and the inhibitory effects of darovasertib and FAKi (FAK inhibitor). Key points from [Arang et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10694608/): Darovasertib is a dual inhibitor of PKC and PRK/PKN; downstream of mutant GNAQ darovasertib blocks ERK and diminishes FAK activity; Darovasertib and FAKi act synergistically in preclinical uveal melanoma models.
 
 This pathway model was developed based on Figure 7 in [Arang et al](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10694608/).</Comment>
@@ -350,6 +350,9 @@ This pathway model was developed based on Figure 7 in [Arang et al](https://www.
   <Label TextLabel="Cell death&#xA;Tumor regression" GraphId="a86a3">
     <Graphics CenterX="598.2929717384471" CenterY="436.42297826380445" Width="134.12037037037067" Height="47.22222222222217" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle" />
   </Label>
+  <Label TextLabel="Melanocyte" GraphId="e0168">
+    <Graphics CenterX="164.0" CenterY="82.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="a0a0a0" />
+  </Label>
   <Label TextLabel="Activating mutation" GraphId="e1c2e" GroupRef="a316e">
     <Graphics CenterX="1049.5918556770605" CenterY="128.94193555645563" Width="134.12037037037" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
   </Label>
@@ -368,7 +371,7 @@ This pathway model was developed based on Figure 7 in [Arang et al](https://www.
   <Shape GraphId="dbdcd" GroupRef="a316e">
     <Graphics CenterX="1047.786300121504" CenterY="110.4234170379374" Width="188.65740740740785" Height="76.38888888888874" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
-  <Shape TextLabel="Melanocyte" GraphId="eadea">
+  <Shape GraphId="eadea">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
     <Graphics CenterX="517.618469015796" CenterY="407.0753341433779" Width="816.5249088699879" Height="695.8493317132442" ZOrder="16384" FontSize="12" Align="Left" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
@@ -393,16 +396,6 @@ This pathway model was developed based on Figure 7 in [Arang et al](https://www.
   <Group GroupId="a6473" GraphId="fdbd0" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">melanocyte</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000148</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G protein mediated signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000125</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ec2">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37858338</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -434,9 +427,19 @@ This pathway model was developed based on Figure 7 in [Arang et al](https://www.
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gutkind JS</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G protein mediated signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000125</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uveal cancer</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3479</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">melanocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000148</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
