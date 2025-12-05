@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Sulindac metabolic pathway" Data-Source="WikiPathways" Version="WP3150_r117617" Author="[Mkutmon, MirellaKalafati, Mick Eikelhof, Eweitz]" Last-Modified="20210521114107" Organism="Bos taurus">
-  <Comment Source="WikiPathways-description" />
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Sulindac metabolic pathway" Data-Source="WikiPathways" Version="WP3150_r142123" Author="[Mkutmon, MirellaKalafati, Mick Eikelhof, Eweitz, Khanspers]" Last-Modified="20251204070407" Organism="Bos taurus">
+  <Comment Source="WikiPathways-description">Metabolism of sulindac sulfide is catalyzed by MsrA, MsrB2, and MsrB3.
+</Comment>
   <Comment Source="HomologyConvert">This pathway was inferred from Homo sapiens pathway [http://wikipathways.org/instance/WP2542_r70621 WP2542(70621)]  with a 85.0% conversion rate.</Comment>
   <BiopaxRef>b1d</BiopaxRef>
   <Graphics BoardWidth="635.0" BoardHeight="325.0" />
-  <DataNode TextLabel="Sulindac-S" GraphId="c89b3" Type="Metabolite">
-    <Graphics CenterX="390.0" CenterY="285.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
-    <Xref Database="PubChem-compound" ID="11245227" />
-  </DataNode>
   <DataNode TextLabel="Sulfindac sulfide" GraphId="a1f9f" Type="Metabolite">
     <Graphics CenterX="550.5" CenterY="199.0" Width="109.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
     <Xref Database="Chemspider" ID="4509492" />
+  </DataNode>
+  <DataNode TextLabel="CYP1B1" GraphId="adfbb" Type="GeneProduct" GroupRef="f8012">
+    <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000138061</Comment>
+    <Graphics CenterX="236.0" CenterY="79.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSBTAG00000010531" />
+  </DataNode>
+  <DataNode TextLabel="MSRB2" GraphId="c2ce3" Type="GeneProduct" GroupRef="cbaa1">
+    <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000148450</Comment>
+    <Graphics CenterX="547.5" CenterY="90.0" Width="53.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSBTAG00000044112" />
+  </DataNode>
+  <DataNode TextLabel="Sulindac-S" GraphId="c89b3" Type="Metabolite">
+    <Graphics CenterX="390.0" CenterY="285.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="11245227" />
   </DataNode>
   <DataNode TextLabel="MSRA" GraphId="e495e" Type="GeneProduct">
     <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000175806</Comment>
@@ -20,16 +31,6 @@
   <DataNode TextLabel="FMO" GraphId="ed228" Type="GeneProduct">
     <Graphics CenterX="416.0" CenterY="193.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
     <Xref Database="" ID="" />
-  </DataNode>
-  <DataNode TextLabel="MSRB2" GraphId="c2ce3" Type="GeneProduct" GroupRef="cbaa1">
-    <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000148450</Comment>
-    <Graphics CenterX="547.5" CenterY="90.0" Width="53.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="Ensembl" ID="ENSBTAG00000044112" />
-  </DataNode>
-  <DataNode TextLabel="CYP1B1" GraphId="adfbb" Type="GeneProduct" GroupRef="f8012">
-    <Comment Source="HomologyConvert">HomologyConvert: Homo sapiens to Bos taurus: Original ID = En:ENSG00000138061</Comment>
-    <Graphics CenterX="236.0" CenterY="79.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
-    <Xref Database="Ensembl" ID="ENSBTAG00000010531" />
   </DataNode>
   <DataNode TextLabel="Sulindac-R" GraphId="facbe" Type="Metabolite">
     <Graphics CenterX="390.0" CenterY="96.0" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" Color="0000ff" />
@@ -55,83 +56,83 @@
     <Graphics CenterX="238.0" CenterY="271.0" Width="80.0" Height="20.0" ZOrder="32774" FontSize="10" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSBTAG00000000085" />
   </DataNode>
-  <Interaction GraphId="id88e36fe3">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="c9563" X="410.0" Y="275.0" GraphRef="c89b3" RelX="0.5" RelY="-1.0" />
-      <Point GraphId="fd274" X="523.25" Y="209.0" GraphRef="a1f9f" RelX="-0.5" RelY="1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.49532620808234745" Shape="None" GraphId="a601e" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
   <Interaction GraphId="id1bc04a73">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="cc344" X="518.0" Y="277.0" GraphRef="e495e" RelX="-1.0" RelY="0.0" />
-      <Point GraphId="ccf1c" X="466.09569306532586" Y="242.30847026656505" GraphRef="a601e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="518.0" Y="277.0" GraphRef="e495e" RelX="-1.0" RelY="0.0" />
+      <Point X="466.09569306532586" Y="242.30847026656505" GraphRef="a601e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id1d00538b">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="b06b1" X="523.25" Y="189.0" GraphRef="a1f9f" RelX="-0.5" RelY="-1.0" />
-      <Point GraphId="e7ffe" X="390.0" Y="106.0" GraphRef="facbe" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point X="523.25" Y="189.0" GraphRef="a1f9f" RelX="-0.5" RelY="-1.0" />
+      <Point X="390.0" Y="106.0" GraphRef="facbe" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4" Shape="None" GraphId="d387f" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id31bb6c8a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="278.0" Y="271.0" GraphRef="d8d1c" RelX="1.0" RelY="0.0" />
+      <Point X="320.2" Y="248.6" GraphRef="d90a8" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4bb9df15">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="370.0" Y="106.0" GraphRef="facbe" RelX="-0.5" RelY="1.0" />
+      <Point X="245.5" Y="189.0" GraphRef="b80d4" RelX="0.5" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="aed5b" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6412c6f1">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="ae810" X="410.0" Y="106.0" GraphRef="facbe" RelX="0.5" RelY="1.0" />
-      <Point GraphId="bad50" X="550.5" Y="189.0" GraphRef="a1f9f" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Point X="410.0" Y="106.0" GraphRef="facbe" RelX="0.5" RelY="1.0" />
+      <Point X="550.5" Y="189.0" GraphRef="a1f9f" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4" Shape="None" GraphId="d93cc" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id6897b5e0">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="cb754" X="513.0" Y="114.0" GraphRef="cbaa1" RelX="-1.0" RelY="0.5" />
-      <Point GraphId="d1272" X="466.2" Y="139.2" GraphRef="d93cc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="idd5b178a2">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="ab1fe" X="436.0" Y="183.0" GraphRef="ed228" RelX="0.5" RelY="-1.0" />
-      <Point GraphId="ceba3" X="469.95" Y="155.8" GraphRef="d387f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Interaction GraphId="id4bb9df15">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="c1003" X="370.0" Y="106.0" GraphRef="facbe" RelX="-0.5" RelY="1.0" />
-      <Point GraphId="a63bd" X="245.5" Y="189.0" GraphRef="b80d4" RelX="0.5" RelY="-1.0" ArrowHead="mim-conversion" />
-      <Anchor Position="0.4" Shape="None" GraphId="aed5b" />
+      <Point X="513.0" Y="114.0" GraphRef="da567" RelX="-1.0" RelY="0.5" />
+      <Point X="466.2" Y="139.2" GraphRef="d93cc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id76eea139">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="c140f" X="370.0" Y="275.0" GraphRef="c89b3" RelX="-0.5" RelY="-1.0" />
-      <Point GraphId="d2a16" X="245.5" Y="209.0" GraphRef="b80d4" RelX="0.5" RelY="1.0" ArrowHead="mim-conversion" />
+      <Point X="370.0" Y="275.0" GraphRef="c89b3" RelX="-0.5" RelY="-1.0" />
+      <Point X="245.5" Y="209.0" GraphRef="b80d4" RelX="0.5" RelY="1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4" Shape="None" GraphId="d90a8" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id88e36fe3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="410.0" Y="275.0" GraphRef="c89b3" RelX="0.5" RelY="-1.0" />
+      <Point X="523.25" Y="209.0" GraphRef="a1f9f" RelX="-0.5" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.49532620808234745" Shape="None" GraphId="a601e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd5b178a2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="436.0" Y="183.0" GraphRef="ed228" RelX="0.5" RelY="-1.0" />
+      <Point X="469.95" Y="155.8" GraphRef="d387f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf9bbca95">
     <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="c71f8" X="284.0" Y="99.0" />
-      <Point GraphId="d8eb6" X="320.2" Y="139.2" GraphRef="aed5b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Point X="284.0" Y="99.0" />
+      <Point X="320.2" Y="139.2" GraphRef="aed5b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="id31bb6c8a">
-    <Graphics ZOrder="12288" LineThickness="1.0">
-      <Point GraphId="cc58e" X="278.0" Y="271.0" GraphRef="d8d1c" RelX="1.0" RelY="0.0" />
-      <Point GraphId="a1f82" X="320.2" Y="248.6" GraphRef="d90a8" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
-  <Group GroupId="cbaa1" GraphId="cbaa1" Style="Group" />
-  <Group GroupId="f8012" GraphId="f8012" Style="Group" />
+  <Group GroupId="f8012" GraphId="bf268" Style="Group" />
+  <Group GroupId="cbaa1" GraphId="da567" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
@@ -153,3 +154,4 @@
     </bp:PublicationXref>
   </Biopax>
 </Pathway>
+
