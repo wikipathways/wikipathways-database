@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: wikipathways-database
           submodules: true
@@ -20,7 +20,7 @@ jobs:
           ref: main
           
       - name: Checkout jekyll repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: wikipathways/wikipathways.github.io
           path: wikipathways.github.io

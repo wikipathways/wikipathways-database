@@ -25,7 +25,7 @@ jobs:
     steps:
         # Make sure we have some code to diff.
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: main
@@ -70,13 +70,13 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
       - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 1
           ref: main
                 
       - name: Checkout jekyll repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: wikipathways/wikipathways.github.io
           path: wikipathways.github.io
@@ -173,7 +173,7 @@ jobs:
     steps:
         
       - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 1
           ref: main
@@ -305,7 +305,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: true
           fetch-depth: 1
@@ -337,7 +337,7 @@ jobs:
     needs: [changed-gpmls, metadata, pubmed]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: true
           fetch-depth: 1
@@ -387,14 +387,14 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.added-modified}}
     steps:
       - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: wikipathways-database
           fetch-depth: 1
           ref: main
 
       - name: Checkout homology repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: wikipathways/wikipathways-homology
           path: wikipathways-homology
@@ -490,7 +490,7 @@ jobs:
     runs-on: ubuntu-22.04 # do not upgrade as it breaks the puppeteer https://github.com/puppeteer/puppeteer/issues/12818
     steps:
       - name: Checkout wikipathways-database repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: wikipathways-database
           submodules: true
@@ -498,7 +498,7 @@ jobs:
           ref: main
 
       - name: Checkout assets repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: wikipathways/wikipathways-assets
           path: wikipathways-assets
@@ -605,7 +605,7 @@ jobs:
     needs: [changed-gpmls, metadata, pubmed, frontmatter, json-svg]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: wikipathways-database
           submodules: true
@@ -613,7 +613,7 @@ jobs:
           ref: main
           
       - name: Checkout jekyll repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: wikipathways/wikipathways.github.io
           path: wikipathways.github.io
@@ -656,7 +656,7 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.deleted}}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: wikipathways-database
           submodules: true
@@ -664,7 +664,7 @@ jobs:
           ref: main
           
       - name: Checkout assets repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: wikipathways/wikipathways-assets
           path: wikipathways-assets
@@ -703,7 +703,7 @@ jobs:
     if: ${{needs.changed-gpmls.outputs.deleted}}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: wikipathways-database
           submodules: true
@@ -711,7 +711,7 @@ jobs:
           ref: main
 
       - name: Checkout jekyll repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: wikipathways/wikipathways.github.io
           path: wikipathways.github.io
