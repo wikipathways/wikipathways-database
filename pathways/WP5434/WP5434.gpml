@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cancer pathways" Data-Source="WikiPathways" Version="WP5434_r139932" Author="[Khanspers, Egonw, Eweitz]" Last-Modified="20250712052720" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Cancer pathways" Data-Source="WikiPathways" Version="WP5434_r142317" Author="[Khanspers, Egonw, Eweitz]" Last-Modified="20260101125116" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">This pathway is based on [Pathways in Cancer](https://www.genome.jp/pathway/hsa05200) from KEGG. It represents a combination of pathways affected in various cancers. Interactions depicted in orange are interrupted or disturbed by mutations in related genes. </Comment>
   <BiopaxRef>b91</BiopaxRef>
   <Graphics BoardWidth="2774.0" BoardHeight="2226.57482993197" />
@@ -471,9 +471,9 @@
     <Graphics CenterX="2204.0" CenterY="737.0" Width="56.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="HGNC" ID="MDM2" />
   </DataNode>
-  <DataNode TextLabel="Hydroperoxyl &#xA;radical" GraphId="a85c3" Type="Metabolite" GroupRef="c2695">
+  <DataNode TextLabel="Hydroperoxyl&#xA;radical" GraphId="a85c3" Type="Metabolite" GroupRef="c2695">
     <Graphics CenterX="1801.375" CenterY="158.625" Width="76.75" Height="35.25" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="ChEMBL compound" ID="C21641" />
+    <Xref Database="KEGG Compound" ID="C21641" />
   </DataNode>
   <DataNode TextLabel="TGF-beta signaling&#xA;pathway" GraphId="a8f47" Type="Pathway">
     <Graphics CenterX="2451.0" CenterY="271.75" Width="120.0" Height="32.5" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
@@ -4261,7 +4261,7 @@
   </Interaction>
   <Interaction GraphId="f7b81">
     <Graphics ZOrder="32784" LineThickness="1.0">
-      <Point X="617.8857931726907" Y="115.21218206157954" GraphRef="ca5a1" RelX="-0.5" RelY="1.0" />
+      <Point X="617.8857931726907" Y="115.21218206157957" GraphRef="ca5a1" RelX="-0.5" RelY="1.0" />
       <Point X="515.0" Y="162.0" GraphRef="b4d43" RelX="0.5" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -4916,8 +4916,13 @@
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000264</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:162</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b91">
@@ -4928,13 +4933,8 @@
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:162</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000605</bp:ID>
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000264</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
