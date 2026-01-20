@@ -39,11 +39,11 @@ const DATABASE_LINKS = {
     'Pubmed': [
         ['PubMed', id => `http://www.ncbi.nlm.nih.gov/pubmed/${id}`],
         ['Europe PMC', id => `https://europepmc.org/abstract/MED/${id}`],
-        ['Scholia', id => `https://scholia.toolforge.org/pubmed/${id}`]
+        ['Scholia', id => `https://qlever.scholia.wiki/pubmed/${id}`]
     ],
     'DOI': [
         ['DOI', id => id.replace(/^\s*((https?:\/\/)?(dx\.)?doi\.org\/)?/, 'https://doi.org/')],
-        ['Scholia', id => `https://scholia.toolforge.org/doi/${id}`]
+        ['Scholia', id => `https://qlever.scholia.wiki/doi/${id}`]
     ],
     'ISBN': [
         ['OpenLibrary', id => `https://openlibrary.org/search?isbn=${id}`],
