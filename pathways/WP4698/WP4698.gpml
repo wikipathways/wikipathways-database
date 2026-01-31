@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Vitamin D-sensitive calcium signaling in depression" Data-Source="WikiPathways" Version="WP4698_r140518" Author="[Leonievdven, Marvin M2, MaintBot, Egonw, Fehrhart, Finterly, Eweitz]" Last-Modified="20250906055613" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Vitamin D-sensitive calcium signaling in depression" Data-Source="WikiPathways" Version="WP4698_r142384" Author="[Leonievdven, Marvin M2, MaintBot, Egonw, Fehrhart, Finterly, Eweitz, DeSl]" Last-Modified="20260130163918" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Depression has been linked to (lack of) sunlight exposure and raised intracellular calcium levels. In this pathway, the role of the vitamin D pathway in calcium signaling in depression is shown. Active 1,25-dihydroxy-vitamin D3 is formed from 7-dehydrocholesterol by multiple conversion steps. It associates with RXR and VDR in the nucleus, which stimulates transcription of VDR target genes, resulting in lower intracellular calcium levels. Less sunlight exposure results in lower 1,25-dihydroxyvitamin D3 levels and therefore higher calcium levels.</Comment>
   <BiopaxRef>ef6</BiopaxRef>
   <Graphics BoardWidth="1026.0009389661072" BoardHeight="998.25" />
@@ -11,6 +11,11 @@
     <Graphics CenterX="225.0" CenterY="22.75" Width="70.0" Height="25.0" ZOrder="32768" FillColor="fffc51" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
     <Xref Database="Wikidata" ID="Q193788" />
   </DataNode>
+  <DataNode TextLabel="Inflammatory cytokines&#xA;" GraphId="d33f7" Type="GeneProduct" GroupRef="d5e3b">
+    <Comment>See https://en.wikipedia.org/wiki/Inflammatory_cytokine</Comment>
+    <Graphics CenterX="775.0" CenterY="513.6524477792623" Width="130.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
   <DataNode TextLabel="RXRA" GraphId="d9b98" Type="GeneProduct">
     <Graphics CenterX="750.205321121465" CenterY="400.9280122118656" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000186350" />
@@ -18,10 +23,6 @@
   <DataNode TextLabel="ATP2B4" GraphId="f2433" Type="GeneProduct" GroupRef="ee8ae">
     <Graphics CenterX="943.372500000004" CenterY="292.6458333333331" Width="60.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000058668" />
-  </DataNode>
-  <DataNode TextLabel="Inflammatory cytokines&#xA;" GraphId="fe896" Type="Metabolite" GroupRef="d5e3b">
-    <Graphics CenterX="775.0" CenterY="513.6524477792623" Width="130.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
-    <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="ATP2B3" GraphId="a5aed" Type="GeneProduct" GroupRef="ee8ae">
     <Graphics CenterX="943.372500000004" CenterY="272.6458333333331" Width="60.0" Height="20.0" ZOrder="32772" FontSize="12" Valign="Middle" />
@@ -148,8 +149,9 @@
     <Xref Database="ChEBI" ID="CHEBI:14321" />
   </DataNode>
   <DataNode TextLabel="PLC" GraphId="df863" Type="GeneProduct">
+    <Comment>Assumed to be Phospholipase C</Comment>
     <Graphics CenterX="317.9637814610189" CenterY="300.09523809523813" Width="60.0" Height="20.0" ZOrder="32842" FontSize="12" Valign="Middle" />
-    <Xref Database="" ID="" />
+    <Xref Database="Enzyme Nomenclature" ID="3.1.4.3" />
   </DataNode>
   <DataNode TextLabel="Acetylcholine" GraphId="d604b" Type="Metabolite">
     <Graphics CenterX="278.12904058336903" CenterY="222.2374018262213" Width="90.0" Height="20.0" ZOrder="32844" FontSize="12" Valign="Middle" Color="0000ff" />
@@ -240,6 +242,8 @@
     <Xref Database="Ensembl" ID="ENSG00000151067" />
   </DataNode>
   <DataNode TextLabel="PMCA" GraphId="fa1b3" Type="Complex" GroupRef="f059a">
+    <Comment>Plasma membrane Ca2+-ATPases (PMCAs)</Comment>
+    <BiopaxRef>a06</BiopaxRef>
     <Graphics CenterX="924.1166666666666" CenterY="701.299999999999" Width="60.0" Height="20.0" ZOrder="32896" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
@@ -637,14 +641,14 @@
   </Interaction>
   <Interaction GraphId="id352e9318">
     <Graphics ZOrder="12378" LineThickness="1.0">
-      <Point X="647.0761886408026" Y="699.1369562499999" />
+      <Point X="631.4455184534278" Y="699.1233157586396" GraphRef="b7f52" RelX="0.0" RelY="1.0" />
       <Point X="705.4166666666664" Y="702.3571428571429" GraphRef="e182c" RelX="-0.5" RelY="1.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idef44e850">
     <Graphics ZOrder="12382" LineThickness="1.0">
-      <Point X="730.3017399252193" Y="781.4969285714265" />
+      <Point X="737.7225757817863" Y="781.4482989853736" GraphRef="f6742" RelX="-0.5" RelY="-1.0" />
       <Point X="659.8372500000035" Y="775.0635952380926" GraphRef="a7e89" RelX="0.0" RelY="-1.0" ArrowHead="mim-transcription-translation" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -830,8 +834,47 @@
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered calcium/calcium-mediated signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001169</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a06">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30190470</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structure of the human plasma membrane Ca(2+)-ATPase 1 in complex with its obligatory subunit neuroplastin.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Commun</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gong D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chi X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ren K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yan N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lei J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou Q</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c03">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31867158</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of vitamin D receptor in the regulation of CYP3A gene expression</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acta Pharmaceutica Sinica B</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xuan Qin</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xin Wang</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neuron</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000540</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000182</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">epidermal cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000362</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ef6">
@@ -843,33 +886,9 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berridge MJ</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatocyte</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000182</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c03">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31867158</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of vitamin D receptor in the regulation of CYP3A gene expression</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acta Pharmaceutica Sinica B</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xuan Qin</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xin Wang</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mental depression</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1596</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered calcium/calcium-mediated signaling pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001169</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">epidermal cell</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000362</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
     </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
