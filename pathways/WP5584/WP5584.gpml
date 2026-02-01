@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Signaling lipids" Data-Source="WikiPathways" Version="WP5584_r140390" Author="[Lu, Egonw]" Last-Modified="20250816111729" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Signaling lipids" Data-Source="WikiPathways" Version="WP5584_r142387" Author="[Lu, Egonw]" Last-Modified="20260131124001" Organism="Homo sapiens">
   <Comment Source="WikiPathways-description">Signaling lipids (SLs) play a crucial role in various signaling pathways, featuring diverse lipid backbone structures. Emerging evidence showing the biological significance and biomedical values of SLs has strongly spurred the advancement of analytical approaches aimed at profiling SLs.The platform enables analyses of 260 metabolites covering oxylipins (isoprostanes, prostaglandins and other oxidized lipids), free fatty acids, lysophospholipids, sphingoid bases (C16, C18), platelet activating factors (C16, C18), endocannabinoids and bile acids</Comment>
   <BiopaxRef>cb0</BiopaxRef>
   <Graphics BoardWidth="2759.7006129516653" BoardHeight="2096.5280665280666" />
@@ -101,7 +101,7 @@
   </DataNode>
   <DataNode TextLabel="PC C18:2" GraphId="f534c" Type="Metabolite">
     <Graphics CenterX="503.5760817109716" CenterY="1034.0876628612718" Width="90.0" Height="25.0" ZOrder="32868" FontSize="12" Valign="Middle" Color="3300cc" />
-    <Xref Database="LIPID MAPS" ID="LMGP01050034；LMGP01050035" />
+    <Xref Database="LIPID MAPS" ID="LMGP01050034" />
   </DataNode>
   <DataNode TextLabel="PE" GraphId="f6db7" Type="Metabolite">
     <Graphics CenterX="119.9323272386371" CenterY="1034.0524720472563" Width="99.75867416165889" Height="84.63949843260204" ZOrder="32889" FillColor="e0d7ff" FontSize="24" Valign="Middle" ShapeType="RoundedRectangle" Color="0000ff" />
@@ -1402,6 +1402,10 @@
   <DataNode TextLabel="Endocannabinoids" GraphId="d3f8b" Type="Pathway">
     <Graphics CenterX="2004.2576317970922" CenterY="1300.4473289547998" Width="241.86264555795105" Height="25.0" ZOrder="33780" FontWeight="Bold" FontSize="24" Valign="Middle" Align="Left" ShapeType="None" />
     <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="PC C18:2" GraphId="c725b" Type="Metabolite">
+    <Graphics CenterX="504.3168224517125" CenterY="1066.0784036020123" Width="90.0" Height="25.0" ZOrder="33781" FontSize="12" Valign="Middle" Color="3300cc" />
+    <Xref Database="LIPID MAPS" ID="LMGP01050035" />
   </DataNode>
   <Interaction GraphId="id399a2c1e">
     <Graphics ZOrder="12288" LineThickness="0.5">
@@ -4456,6 +4460,14 @@
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <Interaction GraphId="c2f5f">
+    <Graphics ZOrder="33782" LineThickness="0.5">
+      <Point X="549.3168224517125" Y="1066.0784036020123" GraphRef="c725b" RelX="1.0" RelY="0.0" />
+      <Point X="669.2765456341111" Y="1040.3376628612718" GraphRef="eda92" RelX="-1.0" RelY="0.5" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="aa02f" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Label TextLabel="Non-enzymatic" GraphId="c5845">
     <Graphics CenterX="1150.5852496076395" CenterY="559.8030173545691" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
@@ -4515,6 +4527,33 @@
   <Group GroupId="bf336" GraphId="f2a2a" Style="Complex" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eicosanoid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000485</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycerophospholipid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000354</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b86">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1016/j.bbalip.2012.07.017</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A comparison of the substrate specificities of endo-beta-N-acetylglucosaminidases from Streptomyces griseus and Diplococcus Pneumoniae.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Biophys Res Commun</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schmoldt A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benthe HF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haberland G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tarentino AL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maley F</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000058</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d0c">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1016/j.tem.2009.08.003</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -4540,33 +4579,6 @@
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harms AC</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hankemeier T</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glycerophospholipid metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000354</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000058</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b86">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1016/j.bbalip.2012.07.017</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A comparison of the substrate specificities of endo-beta-N-acetylglucosaminidases from Streptomyces griseus and Diplococcus Pneumoniae.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Biophys Res Commun</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schmoldt A</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benthe HF</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haberland G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tarentino AL</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maley F</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eicosanoid metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000485</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
   </Biopax>
 </Pathway>
 
