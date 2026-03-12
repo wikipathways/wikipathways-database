@@ -17,7 +17,7 @@ jobs:
   classic-sync:
     runs-on: ubuntu-latest
     steps:
-        
+
       - name: Checkout wikipathways-database repo
         uses: actions/checkout@v6
         with:
@@ -25,15 +25,15 @@ jobs:
           token: ${{ secrets.PICOPAT }}
           fetch-depth: 0
           ref: main
-          
+
       - name: Setup Java
         uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: '8'
-            
+
       - name: Cache gpml-sync-action
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: cacheSyncJar
         with:
           path: ./$SYNC_ACTION_JAR

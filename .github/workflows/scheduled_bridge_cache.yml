@@ -15,7 +15,7 @@ jobs:
   refresh-cache:
     runs-on: ubuntu-latest
     steps:
-    
+
       - name: Checkout wikipathways-database repo
         uses: actions/checkout@v6
         with:
@@ -27,9 +27,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '11'
-            
+
       - name: Cache meta-data-action with dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: cacheMetaJar
         with:
           path: ./meta-data-action-1.1.4-jar-with-dependencies.jar
@@ -37,7 +37,7 @@ jobs:
           restore-keys: |
             cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.4-jar-with-dependencies.jar') }}
             cached-meta-data-action-
-    
+
       - name: Install deps
         run: |
           echo "Refreshing cached-meta-data-action"
@@ -45,9 +45,9 @@ jobs:
             wget -O meta-data-action-1.1.4-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.4/meta-data-action-1.1.4-jar-with-dependencies.jar
           fi
 
-                
+
       - name: Cache and install dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: cache
         with:
           path: ${{ github.workspace }}/wikipathways-database/Hs_Derby_Ensembl_111.bridge
@@ -72,7 +72,7 @@ jobs:
           done
           
       - name: Cache all bridge files
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: cacheAllBridge
         with:
           path: |
