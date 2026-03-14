@@ -12,7 +12,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
-jobs:      
+jobs:
   frontmatter:
     runs-on: ubuntu-latest
     steps:
@@ -24,14 +24,14 @@ jobs:
           ref: main
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
-          
+
       - name: Install deps
         run: |
           pip install python-frontmatter
-          
+
       - name: Update citedin in frontmatter .md files
         run: |
           python ./scripts/update_frontmatter_citedin.py

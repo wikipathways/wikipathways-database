@@ -12,7 +12,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
-jobs:      
+jobs:
   frontmatter:
     runs-on: ubuntu-latest
     steps:
@@ -29,14 +29,14 @@ jobs:
           ssh-private-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}   ## for push into cookbook-dev
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
-          
+
       - name: Install deps
         run: |
           pip install python-frontmatter
-          
+
       - name: Update communities in frontmatter .md files
         run: |
           python ./scripts/update_frontmatter_communities.py
