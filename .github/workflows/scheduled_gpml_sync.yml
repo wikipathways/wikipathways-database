@@ -53,7 +53,7 @@ jobs:
       - name: Run SyncAction
         run: |
           chmod 777 $SYNC_ACTION_JAR
-          SyncDate=$(date --utc +%Y%m%d%H%M%S -d "4 day ago")
+          SyncDate=$(date --utc +%Y%m%d%H%M%S -d "1 day ago")
           echo $SyncDate
           java -jar $SYNC_ACTION_JAR $SyncDate
       
