@@ -29,6 +29,13 @@ citedin:
 - link: PMC4599789
   title: The impact of PPARα activation on whole genome gene expression in human precision
     cut liver slices (2015)
+- link: PMC10341685
+  title: 'Comparative Analysis of Water Extracts from Roselle (Hibiscus sabdariffa
+    L.) Plants and Callus Cells: Constituents, Effects on Human Skin Cells, and Transcriptome
+    Profiles (2023)'
+- link: PMC11191590
+  title: 'The Known and Unknown: Investigating the Carcinogenic Potential of Plastic
+    Additives (2024)'
 communities:
 - CPTAC
 - ONTOX
