@@ -224,5 +224,4 @@ post['schema-jsonld'] = [{
     'keywords': sorted(datanode_labels),
 }]
 
-with open(frontmatter_f, 'wb') as f:
-    frontmatter.dump(post, f)
+frontmatter.dump(post, frontmatter_f)
