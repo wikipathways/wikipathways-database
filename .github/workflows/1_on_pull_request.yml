@@ -1,0 +1,1134 @@
+name: 1. On Pull Request
+# This is the primary workflow to process pathway edits coming in as GPML files from 
+# PathVisio. A new pull request should be create per pathway. Subsequent edits to the
+# same GPML can accumulate in the same pull request while in review. 
+#
+# The outputs of this workflow will be temporarily stored as PR artifacts to allow access
+# by subsequent jobs and to allow parallelization. At the end of the worflow, the outputs
+# will be pushed to the main website (wikipathways.github.io repo) for transparent review.
+#
+# The acceptance/merge of a processed pull request will trigger a secondary workflow to
+# migrate output files to published folders in main website repo, as well as the assets
+# and homology repos.
+#
+# Inputs: Each pull request should have one and only one GPML file attached.
+#
+# Outputs: 
+#  - info.json
+#  - datanodes.tsv
+#  - bibliography.tsv (via refs.tsv)
+#  - .json .svg and .png files
+#  - .md file
+#  - TODO: test results?
+#
+on:
+  workflow_dispatch: 
+    inputs:
+      manual-pr-number:
+        description: 'PR Number'
+        required: true
+        default: '10'
+  pull_request_target:
+    paths:
+     - '**/*.gpml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: false # to allow multiple runs to queue up rather than clobber
+
+jobs:
+  get-pr:
+    # This job determines the PR number and stores it as a GITHUB_OUTPUT environment variable 
+    # that can accessed by subsequent jobs.
+    runs-on: ubuntu-22.04
+    outputs:
+      pr-number:  ${{ steps.get-pr.outputs.pr-number }}
+    steps:
+      - name: Get PR
+        id: get-pr
+        # Get PR from triggering event, unless provided via manual workflow run
+        run: | 
+          if [ -z "${{ inputs.manual-pr-number }}" ]; then
+            echo "pr-number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
+          else
+            echo "pr-number=${{ inputs.manual-pr-number }}" >> $GITHUB_OUTPUT
+          fi
+  
+  get-gpml:
+    # This job gets the GPML file, renames it (if new), and uploads it as an artifact 
+    # that can accessed by subsequent jobs. The GPML filename is also stored as a 
+    # GITHUB_OUTPUT environment variable. The job also extracts key information from
+    # the GPML file and starts a new PR description to let reviewers know the processing status.
+    #
+    # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
+    #
+    # The branch name from the submitter's fork is also extracted and stored (if needed).
+    needs: [get-pr]
+    #if: ${{ needs.get-pr.outputs.pr-number }}
+    runs-on: ubuntu-latest
+    outputs:
+      gpml-filepath: ${{ steps.get-gpml.outputs.gpml-filepath }}
+      gpml-file: ${{ steps.get-gpml.outputs.gpml-file }}
+      status: ${{ steps.get-gpml.outputs.status }}
+      pr-desc: ${{ steps.get-gpml.outputs.pr-desc }}
+      branch-name: ${{ steps.get-branch.outputs.branch-name }}
+      gpml-name: ${{ steps.get-gpml.outputs.gpml-name }}
+      gpml-desc: ${{ steps.get-gpml.outputs.gpml-desc }}
+    env:
+      PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
+          
+      - name: Install XML processing tools
+        # Used to parse XML values from GPML
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxml2-utils
+
+      - name: Get GPML
+        id: get-gpml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        run: |
+          GPML_FILEPATH=$(gh pr view $PR_NUMBER --json files --jq '.files.[].path' | grep '.gpml$')
+          echo "Found GPML file at: $GPML_FILEPATH"
+          GPML_FILE="$(basename ""$GPML_FILEPATH"")"
+          
+          # TEMPORARY: Rename previously processed test GPMLs
+          if [[ $GPML_FILE == *__* ]]; then
+            # Split on '__' and take the first part, then append '.gpml'
+            GPML_FILE="${GPML_FILE%%__*}.gpml"
+          fi
+
+          # Rename GPMLs with unique PR number
+          STATUS="New"
+          if [[ $GPML_FILE =~ ^WP[1-9][0-9]{0,4}\.gpml$ ]]; then
+            echo "Appending PR number to existing WPID."
+            STATUS="Edit"
+            #TODO: add label to PR
+            wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
+            echo "$wpid"
+            GPML_FILE="${wpid}__PR${PR_NUMBER}.gpml"
+            echo "$GPML_FILE"
+          else
+            echo "Assigning temporary WPID and appending PR number."
+            #TODO: add label to PR
+            GPML_FILE="WP0__PR${PR_NUMBER}.gpml"
+          fi
+
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
+          
+          cp "$GPML_FILEPATH" ./"$GPML_FILE"
+          GPML_FILEPATH="./${GPML_FILE}"
+
+          echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT
+          echo "gpml-filepath=$GPML_FILEPATH" >> $GITHUB_OUTPUT #for subsequent jobs
+
+          # Extract information from GPML
+          wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
+          org="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Organism)' "$GPML_FILEPATH")"  
+          name="$(xmllint --xpath 'string(//*[local-name()="Pathway"]/@Name)' "$GPML_FILEPATH")" 
+          desc="$(xmllint --xpath 'string(//*[local-name()="Comment" and @Source="WikiPathways-description"])' "$GPML_FILEPATH" | tr '\n' ' ')"
+
+          echo "gpml-name=$name"
+          echo "gpml-name=$name" >> $GITHUB_OUTPUT #for subsequent jobs
+          echo "gpml-desc=$desc"
+          echo "gpml-desc=$desc" >> $GITHUB_OUTPUT #for subsequent jobs
+
+          # Start PR description (newlines are important in NEW_DESCRIPTION string)
+          NEW_DESCRIPTION="
+          ## Pathway Information
+          
+          **WPID**: $wpid
+          **TITLE**: $name
+          **ORGANISM**: $org
+          **DESCRIPTION**: $desc
+          "
+
+          if [ "$STATUS" = "Edit" ]; then
+            wpid_root="${wpid%%__*}"
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            *Note: This is an edit to an existing pathway.* 
+            "
+          else
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            *Note: This is a new pathway submission.* 
+            "
+          fi
+
+          NEW_DESCRIPTION="$NEW_DESCRIPTION
+          
+          ---
+          "
+
+          # Store PR description for compilation in final job
+          # EOF base64 needed for storing multi-line strings as output variables
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+          echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
+
+          # Temporarily append PR description
+          NEW_DESCRIPTION="$NEW_DESCRIPTION
+          
+          Processing...
+          "
+          
+          # Edit PR description
+          gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
+        
+      - name: Upload GPML file as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gpml-file
+          path: ${{ steps.get-gpml.outputs.gpml-filepath }}
+          retention-days: 1
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+          
+      - name: Get branch name
+        id: get-branch
+        # Determine PR branch from submitter's fork, if needed #TODO: prune if not needed
+        run: |
+          BRANCH_NAME=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/pulls/${{needs.get-pr.outputs.pr-number}} \
+            | jq -r .head.ref)
+          echo "branch-name=$BRANCH_NAME"
+          echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+          if ! git ls-remote --heads origin $BRANCH_NAME; then
+            git push origin HEAD:refs/heads/$BRANCH_NAME
+          fi
+
+  metadata:
+    # This job generates files dervied from the GPML, including info.json, datanodes.tsv and refs.tsv.
+    # The meta-data-action Java application performs the bulk of the work: 
+    # https://github.com/wikipathways/meta-data-action
+    #
+    # The generated files are uploaded as artifacts to be downloaded and pushed together with other files 
+    # to another repo in a final sync job. This strategy allows for parallel job processing!
+    #
+    # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
+    needs: [get-pr,get-gpml]
+    runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+    steps:
+    - name: Checkout repository for scripts
+      # TODO: impl more efficient way to get scripts
+      uses: actions/checkout@v4
+        
+    - name: Download GPML artifact
+      # Downloads gpml-file artifact to working dir
+      # Note: Automatically unzips as folders containing files with original filenames
+      uses: actions/download-artifact@v4
+      with:
+        name: gpml-file
+        
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+
+    - name: Cache meta-data-action with dependencies
+      uses: actions/cache@v4
+      id: cacheMetaJar
+      with:
+        path: ./meta-data-action-1.1.2-jar-with-dependencies.jar
+        key: cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.2-jar-with-dependencies.jar') }}
+        restore-keys: |
+          cached-meta-data-action-${{ hashFiles('meta-data-action-1.1.2-jar-with-dependencies.jar') }}
+          cached-meta-data-action-
+    
+    - name: Install deps
+      run: |
+          echo "Refreshing cached-meta-data-action"
+          if [ ! -e ./meta-data-action-1.1.2-jar-with-dependencies.jar ]; then
+            wget -O meta-data-action-1.1.2-jar-with-dependencies.jar https://github.com/wikipathways/meta-data-action/releases/download/v1.1.2/meta-data-action-1.1.2-jar-with-dependencies.jar
+          fi
+
+    - name: Cache and install dependencies
+      uses: actions/cache@v4
+      id: cache
+      with:
+        path: ${{ github.workspace }}/Hs_Derby_Ensembl_111.bridge
+        key: ${{ runner.os }}-java-Hs_Derby_Ensembl_111
+        restore-keys: |
+          ${{ runner.os }}-java-Hs_Derby_Ensembl_111
+          ${{ runner.os }}-java-Hs_Derby_Ensembl_
+                
+    - if: steps.cache.outputs.cache-hit != 'true'
+      name: Install deps
+      run: |
+          cd "${{ github.workspace }}"
+          if [ ! -e ./Hs_Derby_Ensembl_111.bridge ]; then
+            wget -O Hs_Derby_Ensembl_111.bridge https://zenodo.org/record/14779056/files/Hs_Derby_Ensembl_111.bridge?download=1
+          fi
+
+    - name: Generate gdb.config, fileNames.config, and fileDownloads.config
+      run: scripts/meta-data-action/configGenerator.sh ./$GPML_FILE
+          
+    - name: Cache all bridge files
+      uses: actions/cache@v4
+      id: cacheAllBridge
+      with:
+        path: |
+            ./metabolites*.bridge
+            ./Ag*.bridge
+            ./An*.bridge
+            ./At*.bridge
+            ./Bs*.bridge
+            ./Bt*.bridge
+            ./Ce*.bridge
+            ./Cf*.bridge
+            ./Ci*.bridge
+            ./Dr*.bridge
+            ./Da*.bridge
+            ./Dp*.bridge
+            ./Dm*.bridge
+            ./Ec*.bridge
+            ./Gg*.bridge
+            ./Fg*.bridge
+            ./Gm*.bridge
+            ./Hs*.bridge
+            ./Hv*.bridge
+            ./Ml*.bridge
+            ./Mm*.bridge
+            ./Mx*.bridge
+            ./Oa*.bridge
+            ./Ova*.bridge
+            ./Oi*.bridge
+            ./Oj*.bridge
+            ./Pi*.bridge
+            ./Pt*.bridge
+            ./Qc*.bridge
+            ./Rn*.bridge
+            ./Sc*.bridge
+            ./Sl*.bridge
+            ./Ss*.bridge
+            ./Vv*.bridge
+            ./Xt*.bridge
+            ./Zm*.bridge
+        key: cached-bridge-files
+        restore-keys: |
+          cached-bridge-files
+            
+    - if: steps.cacheAllBridge.outputs.cache-hit != 'true'
+      name: Install all bridge files
+      run: |
+          echo "Cache not found: cached-bridge-files"
+          declare -a OrganismNames=("Metabolites" "Anopheles gambiae" "Aspergillus niger" "Arabidopsis thaliana" "Bacillus subtilis" "Bos taurus" "Caenorhabditis elegans" "Canis familiaris" "Ciona intestinalis" "Danio rerio" "Daphnia magna" "Daphnia pulex" "Drosophila melanogaster" "Escherichia coli" "Gallus gallus" "Fusarium graminearum"  "Glycine max" "Homo sapiens" "Hordeum vulgare" "Macaca mulatta" "Mus musculus" "Mycobacterium tuberculosis" "Ornithorhynchus anatinus" "Ovis aries" "Oryza indica" "Oryza japonica" "Populus trichocarpa" "Pan troglodytes" "Equus caballus" "Rattus norvegicus" "Saccharomyces cerevisiae" "Solanum lycopersicum" "Sus scrofa" "Vitis vinifera" "Xenopus tropicalis" "Zea mays")
+          for org in "${OrganismNames[@]}"; do
+            echo "generating configuration files for "$org""
+            scripts/meta-data-action/configGenerator.sh "$org"
+            echo "installing bridgedb files for "$org""
+            scripts/meta-data-action/installDependencies.sh "$org"
+          done
+
+    - name: Generate configs, install bridgeDb, generate info and tsv files
+      run: |
+          chmod 777 meta-data-action-1.1.2-jar-with-dependencies.jar
+          f=./$GPML_FILE
+          org="$(sed -n '/<Pathway /s/.*Organism=\(.*\)[^\n]*/\1/p' $f | tr -d '"' | tr -d '>' | tr -d '\r')"  
+          echo "generating configuration files for "$org""
+          scripts/meta-data-action/configGenerator.sh "$org"
+          wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
+          cat gdb.config
+          echo "generating info and datanode files for $wpid, organism "$org""
+          java -jar meta-data-action-1.1.2-jar-with-dependencies.jar local "$f" $(date --utc +%F) gdb.config "$org"
+          # generated files are placed in "pathways" dir
+          #ls -R 
+          mkdir ./metadata
+          mv pathways/"$wpid"-info.json metadata/.
+          mv pathways/"$wpid"*.tsv metadata/.
+      
+    - name: Upload metadata files as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: metadata
+        path: metadata/
+        retention-days: 1
+        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+          
+    - name: Report on meta-data-action
+      id: report
+      run: |
+          # Verify generated files 
+          infojson=$(find . -path "./metadata/WP*info.json" -print -quit)
+          dntsv=$(find . -path "./metadata/WP*datanodes.tsv" -print -quit)
+          refstsv=$(find . -path "./metadata/WP*refs.tsv" -print -quit)
+
+          # Update PR description
+          NEW_DESCRIPTION="
+          ## Generate Metadata Files
+          "
+          if [[ -n $infojson ]]; then
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            - [x] info.json generated"
+          else
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            - [] info.json generated"          
+          fi
+          if [[ -n $dntsv ]]; then
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            - [x] datanodes.tsv generated"
+          else
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            - [] datanodes.tsv generated"          
+          fi
+          if [[ -n $refstsv ]]; then
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            - [x] refs.tsv generated"
+          else
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+            - [] refs.tsv generated"          
+          fi
+
+          # Store PR description for compilation in final job
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+          echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
+
+  authors:
+    # This job generates new author profiles if needed. It checks the list of authors from the GPML file
+    # against the list of prior authors in scripts/authors-list.csv and updates the list accordingly.
+    #
+    # An artifact is created and uploaded only if new author profiles are generated. A later job will
+    # check to see if an "authors" artifact is present and commit files at that time. 
+    #
+    # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
+    if: true
+    needs: [get-pr,get-gpml,metadata]
+    runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+    steps:
+    - name: Checkout repository for scripts
+      uses: actions/checkout@v4
+        
+    - name: Download GPML artifact
+      # Downloads gpml-file artifact to working dir
+      # Note: Automatically unzips file with original filename
+      uses: actions/download-artifact@v4
+      with:
+        name: gpml-file
+    
+    - name: Update author list and create md profiles
+      run: |
+          # Read list of previous authors
+          authorList=() 
+          {
+            read #skip header line
+            while IFS=, read -r username realname orcid wikidata github; do
+              authorList+=("$username") 
+            done 
+          }< scripts/author_list.csv
+          echo ${#authorList[@]}
+
+          # Generate unique list of authors from this GPML
+          uniqueAuthors=()
+          auth="$(sed -n '/<Pathway /s/.*Author=\"\[\(.*\)\]\".*/\1/p' $GPML_FILE )"
+          IFS=',' read -r -a curAuthors <<< "$auth"
+          echo $curAuthors
+          echo ${#curAuthors[@]}
+          for i in "${curAuthors[@]}"; do
+            skip=
+            for j in "${uniqueAuthors[@]}"; do
+              [[ $i == $j ]] && { skip=1; break; }
+            done
+            [[ -n $skip ]] || uniqueAuthors+=("$i")
+          done
+          echo ${uniqueAuthors[@]}
+          echo ${#uniqueAuthors[@]}
+
+          # For any new authors, generate a profile and add them to the list
+          mkdir ./authors
+          k=0
+          for a in "${uniqueAuthors[@]}"; do
+            a=$(echo "$a" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+            a1=${a//AAR&Co/AARandCo}
+            a1=${a//Önder/Onder}
+            a2=$(echo "$a" | tr ' ' '_')
+            if [[ ! " ${authorList[*]} " =~ " ${a} " ]]; then
+              echo "Adding $a"
+              echo $a","$a",,," >> scripts/author_list.csv
+              echo "---" > "authors/$a1.md"
+              echo "username: $a1" >> "authors/$a1.md"
+              echo "realname: $a" >> "authors/$a1.md"
+              echo "website: " >> "authors/$a1.md"
+              echo "affiliation: " >> "authors/$a1.md"
+              echo "bio: " >> "authors/$a1.md"
+              echo "github: " >> "authors/$a1.md"
+              echo "orcid: " >> "authors/$a1.md"
+              echo "linkedin: " >> "authors/$a1.md"
+              echo "googlescholar: " >> "authors/$a1.md"
+              echo "wikidata: " >> "authors/$a1.md"
+              echo "twitter: " >> "authors/$a1.md"
+              echo "mastodon-url: " >> "authors/$a1.md"
+              echo "meta:" >> "authors/$a1.md"
+              echo "instagram:" >> "authors/$a1.md"
+              echo "email:" >> "authors/$a1.md"
+              echo "redirect_from:" >> "authors/$a1.md"
+              echo "- /index.php/User:$a2" >> "authors/$a1.md"
+              echo "- /index.php/Special:Contributions/$a2" >> "authors/$a1.md"
+              echo "---" >> "authors/$a1.md"
+              $k=$k + 1
+            fi
+          done
+          if [ $k -gt 0 ]; then
+            mv scripts/author_list.csv authors/.
+          fi
+          echo "NEW_AUTHORS=$k" >> $GITHUB_ENV
+
+    - name: Upload author files as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: authors
+        path: authors/
+        retention-days: 1
+        if-no-files-found: ignore # 'warn' or 'ignore' are also available, defaults to `warn`
+        
+    - name: Report on authors
+      id: report
+      run: |
+        # Update PR description
+        if [ ${{ env.NEW_AUTHORS }} -eq 0 ]; then
+          NEW_DESCRIPTION="- [x] No new author profiles needed"
+        elif [ ${{ env.NEW_AUTHORS }} -eq 1 ]; then
+          NEW_DESCRIPTION="- [x] 1 author profile generated"
+        else
+          NEW_DESCRIPTION="- [x] ${{ env.NEW_AUTHORS }} author profiles generated"
+        fi
+        
+        # Store PR description for compilation in final job
+        EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+        echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+        echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+        echo "$EOF" >> $GITHUB_OUTPUT
+
+  pubmed:
+    # This job generates a bibliography.tsv file based on the refs.tsv generated by the metadata job.
+    #
+    # A "pubmed" artifact is created and uploaded containing this new tsv file. A later job will
+    # commit the file to appropriate draft folders in the website repo. 
+    #
+    # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
+    if: true
+    needs: [get-pr,get-gpml,metadata]
+    runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+    steps:
+    - name: Checkout repository for scripts
+      uses: actions/checkout@v4
+          
+    - name: Download Metadata artifact
+      # Downloads metadata artifact to working dir
+      # Note: Automatically unzips as a folder containing files with original filenames
+      uses: actions/download-artifact@v4
+      with:
+        name: metadata
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Cache dependencies
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+            ${{ runner.os }}-node-
+
+    - name: Install dependencies
+      working-directory: scripts/generate-references
+      run: npm install
+
+    - name: Generate references
+      working-directory: scripts/generate-references
+      run: |
+          mkdir -p ../../pubmed
+          cp ../../*-refs.tsv ../../pubmed/.
+          node index.js
+          # where are generated files placed
+          rm ../../*-refs.tsv
+
+      
+    - name: Upload pubmed file as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: pubmed
+        path: pubmed/
+        retention-days: 1
+        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+        
+    - name: Report on pubmed
+      id: report
+      run: |
+          # Update PR description
+          NEW_DESCRIPTION="- [x] bibliography.tsv generated"
+
+          # Store PR description for compilation in final job
+            EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+            echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+            echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+            echo "$EOF" >> $GITHUB_OUTPUT
+
+  frontmatter:
+    # This job generates a wpid.md file based on the wpid-info.json file generated by the metadata job.
+    #
+    # A "frontmatter" artifact is created and uploaded containing this .md file. A later job will
+    # commit the file to the appropriate draft folder in the website repo. 
+    #
+    # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
+    if: true
+    needs: [get-pr,get-gpml,metadata]
+    runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+    steps:
+    - name: Checkout repository for scripts
+      uses: actions/checkout@v4
+        
+    - name: Download Metadata artifact
+      # Downloads metadata artifacts to working dir
+      # Note: Automatically unzips as folders containing files with original filenames
+      uses: actions/download-artifact@v4
+      with:
+        name: metadata
+
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+          
+    - name: Install deps
+      run: |
+        pip install python-frontmatter
+    
+    - name: Run create_pathway_frontmatter.py
+      run: |        
+        wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
+        echo "generating frontmatter file for $wpid"
+        json_info_f=./"$wpid"-info.json
+        echo "*****input for python script : $json_info_f"
+        if [ -e "$json_info_f" ]; then
+          python scripts/create_pathway_frontmatter.py "$json_info_f"
+          sed -i 's/&amp;/and/g' ./"$wpid".md
+          sed -i 's/AAR&amp;Co/AARandCo/g' ./"$wpid".md
+          sed -i 's/&Ouml;nder/Onder/g' ./"$wpid".md
+        else
+          echo "info.json file missing for $wpid" >2
+        fi
+        #move the generated file to the frontmatter folder
+        mkdir ./frontmatter
+        mv ./"$wpid".md frontmatter/.
+
+    - name: Upload frontmatter file as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: frontmatter
+        path: frontmatter/
+        retention-days: 1
+        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+
+    - name: Report on frontmatter
+      id: report
+      run: |
+        # Update PR description
+        NEW_DESCRIPTION="- [x] .md generated"
+        
+        # Store PR description for compilation in final job
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+          echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
+
+  json-svg:
+    # This job generates json, svg and png files based on the GPML file.
+    #
+    # A "json-svg" artifact is created and uploaded containing the JSON, SVG and PNG files. A later job will
+    # commit the file to the appropriate draft folder in the website repo. 
+    #
+    # A markdown text report is stored as pr-desc to be compiled and written to the PR description.
+    #if: false
+    needs: [get-pr,get-gpml,metadata]
+    runs-on: ubuntu-22.04 # do not upgrade as it breaks the puppeteer https://github.com/puppeteer/puppeteer/issues/12818
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+    steps:
+    - name: Checkout repository for scripts
+      uses: actions/checkout@v4
+        
+    - name: Download GPML and Metadata artifacts
+      # Downloads gpml-file and metadata artifacts to working dir
+      # Note: Automatically unzips as folders containing files with original filenames
+      uses: actions/download-artifact@v4
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Cache NPM dependencies
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Install deps
+      working-directory: scripts/generate-svgs
+      run: |
+        npm install
+        sudo apt-get update
+        sudo apt-get install -y xmlstarlet
+    
+    - name: Run generate-svgs to convert GPML to JSON and SVG
+      run: |
+        echo "SANDBOX: Adapted to produce JSON and SVG files in sandbox-wp-db repo only"
+        DB_PATH="${{ github.workspace }}"
+        wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
+        echo "generating JSON and SVG files for $wpid"
+        cd "$DB_PATH"
+        mkdir -p pathways/"$wpid"
+          
+        for old_f in pathways/"$wpid"/"$wpid".{json,svg}; do 
+          if [ -e "$old_f" ]; then
+            rm "$old_f"
+          fi
+        done
+          
+        cd "scripts/generate-svgs"
+        ./gpmlconverter --id "$wpid" -i $DB_PATH/gpml-file/"$wpid".gpml -o $DB_PATH/pathways/"$wpid"/"$wpid".svg
+          
+        # delete intermediate JSON files
+        rm $DB_PATH/pathways/"$wpid"/"$wpid".json.b4bridgedb.json || true
+        rm $DB_PATH/pathways/"$wpid"/"$wpid".b4wd.json || true
+        rm $DB_PATH/pathways/"$wpid"/"$wpid".b4hgnc.json || true
+          
+        # pretty print the JSON
+        for json_f in $DB_PATH/pathways/"$wpid"/"$wpid".json; do
+          mv "$json_f" "$json_f".tmp.json 
+          jq -S . "$json_f".tmp.json >"$json_f"
+          rm "$json_f".tmp.json
+        done
+
+        #move the generated files to the json-svg folder
+        mkdir ../../json-svg
+        mv $DB_PATH/pathways/"$wpid"/"$wpid".json ../../json-svg/. 
+        mv $DB_PATH/pathways/"$wpid"/"$wpid".png ../../json-svg/. 
+        mv $DB_PATH/pathways/"$wpid"/"$wpid".svg ../../json-svg/. 
+        mv $DB_PATH/pathways/"$wpid"/"$wpid"-thumb.png ../../json-svg/.  
+
+    - name: Upload json-svg file as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: json-svg
+        path: json-svg/
+        retention-days: 1
+        if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+
+    - name: Report on json-svg
+      id: report
+      run: |
+        # Update PR description
+        NEW_DESCRIPTION="- [x] .json generated
+        - [x] .svg generated
+        - [x] .png generated
+
+        "
+        
+        # Store PR description for compilation in final job
+        EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+        echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+        echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+        echo "$EOF" >> $GITHUB_OUTPUT
+
+
+  testing:
+    if: true
+    needs: [get-pr, get-gpml, metadata]
+    runs-on: ubuntu-latest
+    outputs:
+      pr-desc: ${{ steps.report.outputs.pr-desc }}
+    env:
+      GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+      GPML_NAME: ${{ needs.get-gpml.outputs.gpml-name }}
+      GPML_DESC: ${{ needs.get-gpml.outputs.gpml-desc }}
+      STATUS: ${{ needs.get-gpml.outputs.status }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+    - name: Checkout repository for scripts
+      uses: actions/checkout@v4
+        
+    - name: Download GPML and Metadata artifacts
+      # Downloads gpml-file and metadata artifacts to working dir
+      # Note: Automatically unzips as folders containing files with original filenames
+      uses: actions/download-artifact@v4
+
+    - name: Install tools
+      run: sudo apt-get install -y jq
+
+    - name: Fetch PR Diff
+      id: fetch_diff
+      run: |
+        PR_NUMBER="${{ needs.get-pr.outputs.pr-number }}"
+
+        # Fetch the entire diff for the PR
+        diff_output=$(gh pr diff "$PR_NUMBER")
+        echo "$diff_output" > diff_output.txt  # Save the diff to a file for processing later
+        echo "Diff fetched successfully"
+    
+    - name: Test for characters in title
+      run: |
+        title=$GPML_NAME
+        echo "The length of the title is ${#title}"
+
+        title_length=${#title}
+        if [ "$title_length" -ge 10 ]; then
+          echo "Title has at least 10 characters."
+          echo "note_test_title=Title has at least 10 characters." >> $GITHUB_ENV
+          echo "status_test_title=PASS" >> $GITHUB_ENV
+          echo "color_test_title=green" >> $GITHUB_ENV
+        else
+          echo "Title has less than 10 characters."
+          echo "note_test_title=Title has less than 10 characters." >> $GITHUB_ENV
+          echo "status_test_title=REVIEW REQUIRED" >> $GITHUB_ENV
+          echo "color_test_title=red" >> $GITHUB_ENV
+        fi
+
+    - name: Test for number of words in description
+      run: |
+        # Read the diff output from the file
+        diff_output=$(cat diff_output.txt)
+
+        # Extract relevant changes (for example, only looking for Comment changes)
+        old_desc=$(echo "$diff_output" | grep -E '^[-]' | grep 'WikiPathways-description' | sed 's/^-//')
+        new_desc=$(echo "$diff_output" | grep -E '^[+]' | grep 'WikiPathways-description' | sed 's/^+//')
+
+        # Function to count words and characters in a string
+        word_count() {
+          echo "$1" | wc -w
+        }
+        char_count() {
+          echo "$1" | wc -c
+        }
+
+        # Calculate word and character differences
+        old_word_count=$(word_count "$old_desc")
+        new_word_count=$(word_count "$new_desc")
+        word_diff=$((new_word_count - old_word_count))
+
+        old_char_count=$(char_count "$old_desc")
+        new_char_count=$(char_count "$new_desc")
+        char_diff=$((new_char_count - old_char_count))
+
+        echo "Old description word count: $old_word_count"
+        echo "New description word count: $new_word_count"
+        echo "Word difference: $word_diff"
+        echo "Character difference: $char_diff"
+
+        # Check if description change is significant
+        status="${{ env.STATUS }}"
+        if [ "$status" = "New" ]; then
+          if [ "$new_word_count" -ge 15 ]; then
+            echo "Description for new pathway has at least 15 words."
+            echo "note_test_desc=Description has at least 15 words." >> $GITHUB_ENV
+            echo "status_test_desc=PASS" >> $GITHUB_ENV
+            echo "color_test_desc=green" >> $GITHUB_ENV
+          else
+            echo "Description for new pathway has fewer than 15 words."
+            echo "note_test_desc=Description has fewer than 15 words." >> $GITHUB_ENV
+            echo "status_test_desc=REVIEW REQUIRED" >> $GITHUB_ENV
+            echo "color_test_desc=red" >> $GITHUB_ENV
+          fi
+        else
+          if [ "$word_diff" -gt 3 ] || [ "$char_diff" -gt 10 ]; then
+            echo "Description changed significantly. Review required."
+            echo "note_test_desc=Description change exceeds 3 words or 10 characters." >> $GITHUB_ENV
+            echo "status_test_desc=REVIEW REQUIRED" >> $GITHUB_ENV
+            echo "color_test_desc=red" >> $GITHUB_ENV
+          else
+            echo "Description change is minor."
+            echo "note_test_desc=Minor description change." >> $GITHUB_ENV
+            echo "status_test_desc=PASS" >> $GITHUB_ENV
+            echo "color_test_desc=green" >> $GITHUB_ENV
+          fi
+        fi
+
+    - name: Check for deleted, added, and modified nodes
+      run: |
+        # Read the diff output from the file
+        diff_output=$(cat diff_output.txt)
+
+        # Check if the GPML file is new
+        status="${{ env.STATUS }}"
+        
+        if [ "$status" = "New" ]; then
+          # For new GPML files, treat all nodes as added nodes
+          added_nodes=$(echo "$diff_output" | grep "^+" | grep '<DataNode' | sed 's/^+//')
+          num_added_nodes=$(echo "$added_nodes" | sed '/^$/d' | wc -l)
+
+          # Output the results for a new GPML file
+          echo "New GPML submission detected."
+          echo "All nodes are considered as added nodes."
+          echo "Added nodes: $num_added_nodes"
+
+          # Set the environment variables for new GPML files
+          echo "note_test_nodes=All nodes are new, as this is a new GPML file." >> $GITHUB_ENV
+          echo "status_test_nodes=REVIEW REQUIRED" >> $GITHUB_ENV
+          echo "color_test_nodes=red" >> $GITHUB_ENV
+          
+        else
+          # For modified GPML files, proceed with checking deleted, added, and modified nodes
+          # Extract nodes that were removed from the GPML file (lines starting with '-')
+          deleted_nodes=$(echo "$diff_output" | grep "^-" | grep '<DataNode' | sed 's/^-//')
+
+          # Extract nodes that were added or changed in the GPML file (lines starting with '+')
+          added_or_modified_nodes=$(echo "$diff_output" | grep "^+" | grep '<DataNode' | sed 's/^+//')
+
+          modified_nodes=""
+          
+          # Use while loop to iterate through deleted nodes safely
+          while IFS= read -r deleted_node; do
+            if [ -n "$deleted_node" ]; then
+              graph_id=$(echo "$deleted_node" | grep -o 'GraphId="[^"]*"' | sed 's/GraphId="//;s/"//')
+              
+              # Check if the same GraphId exists in the added/modified nodes
+              matching_added_node=$(echo "$added_or_modified_nodes" | grep "GraphId=\"$graph_id\"")
+              
+              if [ -n "$matching_added_node" ]; then
+                modified_nodes="$modified_nodes\n$deleted_node"
+              fi
+            fi
+          done <<< "$deleted_nodes"
+          
+          # Safely remove modified nodes from deleted nodes
+          if [ -n "$modified_nodes" ]; then
+            safe_modified_nodes=$(echo "$modified_nodes" | sed '/^$/d' | sed 's/[\/&]/\\&/g')
+            actual_deleted_nodes=$(echo "$deleted_nodes" | grep -vF "$safe_modified_nodes")
+          else
+            actual_deleted_nodes="$deleted_nodes"
+          fi
+          
+          # Count the number of nodes
+          num_deleted_nodes=$(echo "$actual_deleted_nodes" | sed '/^$/d' | wc -l)
+          num_modified_nodes=$(echo "$modified_nodes" | sed '/^$/d' | wc -l)
+          num_added_nodes=$(echo "$added_or_modified_nodes" | grep -vF "$modified_nodes" | sed '/^$/d' | wc -l)
+
+          # Output the results for modified GPML file
+          echo "Summary:"
+          echo "Deleted nodes: $num_deleted_nodes"
+          echo "Modified nodes: $num_modified_nodes"
+          echo "Added nodes: $num_added_nodes"
+
+          # Determine pass or review required and report
+          if [ "$num_deleted_nodes" -eq 0 ] && [ "$num_modified_nodes" -eq 0 ] && [ "$num_added_nodes" -eq 0 ]; then
+            # No changes, pass
+            echo "No nodes were deleted, modified, or added."
+            echo "note_test_nodes=No nodes were deleted, modified, or added." >> $GITHUB_ENV
+            echo "status_test_nodes=PASS" >> $GITHUB_ENV
+            echo "color_test_nodes=green" >> $GITHUB_ENV
+          else
+            # Nodes were changed, review required
+            echo "Review required."
+            [ "$num_deleted_nodes" -gt 0 ] && echo "Deleted nodes: $num_deleted_nodes"
+            [ "$num_modified_nodes" -gt 0 ] && echo "Modified nodes: $num_modified_nodes"
+            [ "$num_added_nodes" -gt 0 ] && echo "Added nodes: $num_added_nodes"
+      
+            review_note=""
+            [ "$num_deleted_nodes" -gt 0 ] && review_note+="Deleted nodes: $num_deleted_nodes\n"
+            [ "$num_modified_nodes" -gt 0 ] && review_note+="Modified nodes: $num_modified_nodes\n"
+            [ "$num_added_nodes" -gt 0 ] && review_note+="Added nodes: $num_added_nodes\n"
+      
+            echo "note_test_nodes=$review_note" >> $GITHUB_ENV
+            echo "status_test_nodes=REVIEW REQUIRED" >> $GITHUB_ENV
+            echo "color_test_nodes=red" >> $GITHUB_ENV
+          fi
+        fi
+
+        
+        # Store the deleted, modified, and added nodes as environment variables for later use
+        echo "deleted_nodes=${deleted_nodes}" >> $GITHUB_ENV
+        echo "modified_nodes=${modified_nodes}" >> $GITHUB_ENV
+        echo "added_nodes=${added_or_modified_nodes}" >> $GITHUB_ENV                 
+
+    - name: Report on testing
+      id: report
+      run: |    
+        # Fixing newline characters for the Data nodes notes
+        # note_test_nodes_formatted=$(echo "${{ env.note_test_nodes }}" | tr '\n' '<br>')
+
+        # Initialize the review tasks based on the automated test results
+        review_tasks=""
+        
+        if [ "${{ env.status_test_title }}" = "REVIEW REQUIRED" ]; then
+          review_tasks="${review_tasks}- [ ] Title length review required\n"
+        fi
+        
+        if [ "${{ env.status_test_desc }}" = "REVIEW REQUIRED" ]; then
+          review_tasks="${review_tasks}- [ ] Description review required\n"
+        fi
+        
+        if [ "${{ env.status_test_nodes }}" = "REVIEW REQUIRED" ]; then
+          review_tasks="${review_tasks}- [ ] Data nodes review required\n"
+        fi
+
+        # Remove trailing newlines by piping through `sed`
+        review_tasks=$(echo -e "$review_tasks" | sed '/^$/d')
+        
+        # Update PR description
+        NEW_DESCRIPTION='
+        ---
+        ## Automated Testing
+        | # | Test name | Notes | Result |
+        |---|---|---|---|
+        | 1 | Title Length | ${{ env.note_test_title }} | \$\${\color{${{ env.color_test_title }}}${{ env.status_test_title }}}\$\$ |
+        | 2 | Description Length | ${{ env.note_test_desc }} | \$\${\color{${{ env.color_test_desc }}}${{ env.status_test_desc }}}\$\$ |
+        | 3 | Data nodes | ${{ env.note_test_nodes }} | \$\${\color{${{ env.color_test_nodes }}}${{ env.status_test_nodes }}}\$\$ |
+
+        ---
+        ## Reviewer Checklist
+        '"$review_tasks"'
+        - [ ] Interactions are connected
+        - [ ] Datanodes are annotated with database references
+        - [ ] A description, consisting of a 2-3 sentence overview of processes described in the pathway, is included
+        - [ ] At least one literature reference is provided
+        - [ ] At least one pathway ontology term is included
+        - [ ] Pathway title conforms to the [guidelines](https://github.com/wikipathways/wikipathways-faq/discussions/24)
+        - [ ] Additional tests and checks are available in the [review checklist spreadsheet](https://docs.google.com/spreadsheets/d/1Pew5bxLRjjjDKFtqs2OIib-OOAPY23c1TrshoNOqfoI/edit?usp=sharing).
+        ---
+        '
+        
+        # Store PR description for compilation in final job
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "pr-desc<<$EOF" >> $GITHUB_OUTPUT
+          echo "$NEW_DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
+
+  commit-outputs:
+    needs: [get-pr,get-gpml,metadata,authors,pubmed,frontmatter,json-svg,testing]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download all output files from artifacts
+      uses: actions/download-artifact@v4
+
+    - name: Checkout jekyll repo
+      # TESTING: change repo and ssh-key from sandbox to real
+      uses: actions/checkout@v4
+      with:
+        repository: wikipathways/sandbox-wp.gh.io
+        path: wikipathways.github.io
+        fetch-depth: 1
+        ref: main
+        ssh-key: ${{ secrets.ACTIONS_SANDBOX_DEPLOY_KEY }}
+
+    - name: Commit report
+      env:
+        GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+        PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
+      run: |
+          wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"
+          
+          ## Copy to draft_assets
+          mkdir -p wikipathways.github.io/draft_assets/"$wpid"
+          cp gpml-file/"$wpid".gpml wikipathways.github.io/draft_assets/"$wpid"/.
+          cp metadata/"$wpid"*.* wikipathways.github.io/draft_assets/"$wpid"/.
+          cp pubmed/"$wpid"-bibliography.tsv wikipathways.github.io/draft_assets/"$wpid"/.
+          cp json-svg/"$wpid".json wikipathways.github.io/draft_assets/"$wpid"/.
+          cp json-svg/"$wpid".png wikipathways.github.io/draft_assets/"$wpid"/.
+          cp json-svg/"$wpid".svg wikipathways.github.io/draft_assets/"$wpid"/.
+          cp json-svg/"$wpid"-thumb.png wikipathways.github.io/draft_assets/"$wpid"/.
+          
+          ## Copy to _data/drafts
+          cp metadata/"$wpid"-datanodes.tsv wikipathways.github.io/_data/drafts/.
+          cp pubmed/"$wpid"-bibliography.tsv wikipathways.github.io/_data/drafts/.
+          
+          ## Copy to _drafts
+          cp frontmatter/"$wpid".md wikipathways.github.io/_drafts/.
+
+          ## Copy to _authors
+          if [ -d "authors" ]; then
+            cp authors/*.md wikipathways.github.io/_authors/.
+            cp author_list.csv wikipathways.github.io/scripts/.
+          fi
+
+          ## Commit, pull and push
+          cd "${{ github.workspace }}/wikipathways.github.io"
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add .
+          if git diff --exit-code --staged; then
+              echo "No changes"
+          else
+              git commit -m 'Adds outputs from PR processing'
+              git pull --rebase
+              git push
+          fi
+  
+  update-pr-desc:
+    needs: [get-pr,get-gpml,metadata,authors,pubmed,frontmatter,testing] #json-svg add once that step is resolved
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+      with:
+        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
+        
+    - name: Compile and update PR description
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
+        GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
+        STATUS: ${{ needs.get-gpml.outputs.status }}
+      run: |       
+        wpid="$(echo "$GPML_FILE" | sed 's/.gpml//')"   
+
+        NEW_DESCRIPTION="${{ needs.get-gpml.outputs.pr-desc }}
+
+        ## Pathway Page Links
+          * [Pending pathway page](https://sandbox.wikipathways.org/drafts/$wpid)
+          "
+          
+          if [ "$STATUS" = "Edit" ]; then
+            wpid_root="${wpid%%__*}"
+            NEW_DESCRIPTION="$NEW_DESCRIPTION
+          * [Current pathway page](https://sandbox.wikipathways.org/pathways/$wpid_root)
+          "
+          fi
+
+        NEW_DESCRIPTION="$NEW_DESCRIPTION
+        *Note: The above URLs will activate after ~5 min.*
+
+        ---
+        "
+
+        NEW_DESCRIPTION="$NEW_DESCRIPTION
+        ${{ needs.metadata.outputs.pr-desc }}
+        ${{ needs.authors.outputs.pr-desc }}
+        ${{ needs.pubmed.outputs.pr-desc }}
+        ${{ needs.frontmatter.outputs.pr-desc }}
+        ${{ needs.json-svg.outputs.pr-desc }}
+        ${{ needs.testing.outputs.pr-desc }}
+        "
+        
+        # Edit PR description
+        gh pr edit $PR_NUMBER --body "$NEW_DESCRIPTION"
