@@ -19,14 +19,13 @@ for wpid in wpids:
     p = repo_dir.joinpath(var_path(wpid))
     if p.is_file():
         post = frontmatter.load(str(p), handler=YAMLHandler())
-        
+
         old_citedin = post.get('citedin', str())
         new_citedin = citedin.get(wpid, str())
-        
+
         if new_citedin:
             print(f"updating {wpid} citedin from {old_citedin} to {new_citedin}")
             post['citedin'] = new_citedin
-            with Path(p).open('wb') as f:
-                frontmatter.dump(post, f)
+            frontmatter.dump(post, Path(p))
     else:
         print(f'The file {p} does not exist, possibly deleted')
