@@ -11,6 +11,11 @@ on:
         description: "Deleted pathways (space-separated WPIDs)"
       renamed:
         description: "Renamed pathways (space-separated WPIDs)"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - pathways/**/*.gpml
   push:
     branches:
       - main
