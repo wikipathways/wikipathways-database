@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="TGF-β1/SMAD2/3 signalling in decidual NK cells at the fetal-maternal interface" Version="WP5637_r20260629141856" Author="[MariaChahni, DeSl]" Last-Modified="20260629141856" Organism="Homo sapiens">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="TGF-β1/SMAD2/3 signalling in decidual NK cells at the fetal-maternal interface" Version="WP5637_r20260630124856" Author="[MariaChahni, DeSl]" Last-Modified="20260630124856" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway provides an overview of TGFB1 signalling on dNK cells with downstream effects of phenotypic conversion, suppressed cytotoxicity, and stimulation of processes such as trophoblast invasion and spiral artery remodeling as a result of the signalling. Within the dNK cells an inhibitory feedback loop of the TGF-B signalling is also occurring as a result of the protein SMAD7 binding to TGFBR1 preventing its phosphorylation, and SMURF2 which catalyses the ubiquitination of TGFBR1. Following activation of TGFBR2, TGFBR1 is phosphorylated and triggers the phosphorylation of SMAD2 and SMAD3 which bind to SMAD4 forming a complex following the phosphorylation. The SMAD2/3:4 complex then translocates to the nucleus where work is done to suppress the activation of proteins FCGR3A (aka CD16), IFNG, and NKG2D which usually give NK cells their cytotoxic phenotype. 
+The complex also works to activate transcription of genes translating CD103, CD49A, KIR2DL4, and CD9 which work to promote a tolerogenic phenotypic conversion/differentiation of NK cells within the decidua from CD16+ to CD16-. The suppressed cytotoxicity triggered by the complex allows for the activation of cytokines  such as IL8, CXCL10 which stimulate trophoblast invasion and factors such as VEGFC, PLGF, ANGPT1, and ANGPT2 which stimulate the spiral artery remodelling. </Comment>
   <BiopaxRef>d14</BiopaxRef>
-  <Graphics BoardWidth="2403.9863945578236" BoardHeight="1212.4871794871804" />
+  <Graphics BoardWidth="1685.217163788592" BoardHeight="1104.0384615384617" />
+  <DataNode TextLabel="SMAD2" GraphId="e1dd2" Type="Protein" GroupRef="d9997">
+    <Graphics CenterX="576.4450992235255" CenterY="653.0354046678546" Width="90.0" Height="25.00611374121422" ZOrder="-8" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q15796" />
+  </DataNode>
+  <DataNode TextLabel="SMAD2" GraphId="e812c" Type="Protein" GroupRef="a2e13">
+    <Graphics CenterX="178.62721150872022" CenterY="563.4696418822498" Width="90.0" Height="25.0" ZOrder="-6" FontSize="12" Valign="Middle" />
+    <Xref Database="Uniprot-TrEMBL" ID="Q15796" />
+  </DataNode>
   <DataNode TextLabel="CD9" GraphId="b8698" Type="Protein" GroupRef="ea974">
     <Graphics CenterX="835.8018619145201" CenterY="753.8071284962317" Width="52.49840933191672" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P21926" />
   </DataNode>
   <DataNode TextLabel="Available State" GraphId="d87c5" Type="Protein">
-    <Graphics CenterX="1419.2188781367631" CenterY="237.43667846013258" Width="104.70149253731398" Height="25.0" ZOrder="32770" FillColor="00cc00" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="912.2881850674577" CenterY="271.1000447967661" Width="104.70149253731398" Height="25.0" ZOrder="32770" FillColor="00cc00" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Unavailable State" GraphId="af8e4" Type="Protein">
-    <Graphics CenterX="1419.2188781367627" CenterY="284.2028476143618" Width="104.70149253731363" Height="25.0" ZOrder="32772" FillColor="ff0000" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="912.2881850674561" CenterY="317.866213950996" Width="104.70149253731363" Height="25.0" ZOrder="32772" FillColor="ff0000" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Cytotoxicity" GraphId="c57b6" Type="Pathway">
@@ -36,7 +46,7 @@
 "leukocyte" http://purl.obolibrary.org/obo/CL_0000738; 
 "eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255</Comment>
     <BiopaxRef>b38</BiopaxRef>
-    <Graphics CenterX="216.5488447803354" CenterY="285.3242943914242" Width="160.71428571428575" Height="42.59183673469374" ZOrder="32782" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Graphics CenterX="113.33783560602367" CenterY="285.3242943914242" Width="160.71428571428575" Height="42.59183673469374" ZOrder="32782" FontSize="12" Valign="Middle" ShapeType="Oval" />
     <Xref Database="" ID="4033088" />
   </DataNode>
   <DataNode TextLabel="CD56bright tolerogenic dNK phenotype" GraphId="a68a6" Type="Pathway">
@@ -51,20 +61,20 @@
     <Graphics CenterX="719.2051282051247" CenterY="923.5384615384617" Width="90.0" Height="25.0" ZOrder="32789" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="Q15389" />
   </DataNode>
-  <DataNode TextLabel="Interleukin 8" GraphId="be428" Type="Metabolite">
+  <DataNode TextLabel="Interleukin 8" GraphId="be428" Type="Protein">
     <Graphics CenterX="309.6316254828036" CenterY="923.538461538462" Width="90.0" Height="25.0" ZOrder="32791" FontSize="12" Valign="Middle" />
-    <Xref Database="ChEBI" ID="CHEBI:138181" />
+    <Xref Database="Uniprot-TrEMBL" ID="P10145" />
   </DataNode>
   <DataNode TextLabel="DSCs" GraphId="f41da">
     <Comment>"decidual cell" 
 http://purl.obolibrary.org/obo/CL_2000002 ;
 "stromal cell" http://purl.obolibrary.org/obo/CL_0000499 ; "eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255</Comment>
     <BiopaxRef>bbf</BiopaxRef>
-    <Graphics CenterX="301.21325012443947" CenterY="229.80611455253828" Width="97.43877551020401" Height="40.81632653061223" ZOrder="32793" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Graphics CenterX="198.0022409501285" CenterY="229.80611455253828" Width="97.43877551020401" Height="40.81632653061223" ZOrder="32793" FontSize="12" Valign="Middle" ShapeType="Oval" />
     <Xref Database="" ID="2000002" />
   </DataNode>
   <DataNode TextLabel="TGFB1" GraphId="abbaa" Type="GeneProduct">
-    <Graphics CenterX="523.1832579185561" CenterY="357.3861159848556" Width="90.0" Height="30.357142857142815" ZOrder="32795" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="260.77344842893945" CenterY="348.8092874080272" Width="90.0" Height="30.357142857142815" ZOrder="32795" FontSize="12" Valign="Middle" />
     <Xref Database="Ensembl" ID="ENSG00000105329" />
   </DataNode>
   <DataNode TextLabel="SMAD3" GraphId="aa699" Type="Protein" GroupRef="e1e92">
@@ -82,7 +92,7 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     <Xref Database="Uniprot-TrEMBL" ID="P02778" />
   </DataNode>
   <DataNode TextLabel="IFNG" GraphId="b4f2a" Type="GeneProduct" GroupRef="ef0db">
-    <Graphics CenterX="440.75984756122483" CenterY="719.0954235637781" Width="90.0" Height="25.0" ZOrder="32804" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="450.75984756122483" CenterY="719.0954235637781" Width="90.0" Height="25.0" ZOrder="32804" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P01579" />
   </DataNode>
   <DataNode TextLabel="SMURF2" GraphId="b35a5" Type="Protein">
@@ -90,7 +100,7 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     <Xref Database="Uniprot-TrEMBL" ID="Q9HAU4" />
   </DataNode>
   <DataNode TextLabel="FCGR3A&#xA;(CD16)" GraphId="de3ea" Type="Protein" GroupRef="ef0db">
-    <Graphics CenterX="440.75984756122483" CenterY="690.8001358284304" Width="90.0" Height="31.590575470695462" ZOrder="32808" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="450.75984756122483" CenterY="690.8001358284304" Width="90.0" Height="31.590575470695462" ZOrder="32808" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P08637" />
   </DataNode>
   <DataNode TextLabel="CD103" GraphId="d38c0" Type="Protein" GroupRef="ea974">
@@ -103,11 +113,11 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
 "trophoblast cell" http://purl.obolibrary.org/obo/CL_0000351;
 "eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255</Comment>
     <BiopaxRef>c28</BiopaxRef>
-    <Graphics CenterX="871.7345249962494" CenterY="309.7577215833322" Width="135.5612244897954" Height="40.561224489795904" ZOrder="32812" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Graphics CenterX="531.6866590209796" CenterY="288.75937409914513" Width="135.5612244897954" Height="40.561224489795904" ZOrder="32812" FontSize="12" Valign="Middle" ShapeType="Oval" />
     <Xref Database="" ID="4033063" />
   </DataNode>
   <DataNode TextLabel="CD4" GraphId="fca45" Type="Protein">
-    <Graphics CenterX="407.4420020432373" CenterY="225.8757976184494" Width="31.66666666665521" Height="18.333333333333346" ZOrder="32814" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="152.05707982544797" CenterY="182.39753674888436" Width="31.66666666665521" Height="18.333333333333346" ZOrder="32814" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P01730" />
   </DataNode>
   <DataNode TextLabel="Tregs" GraphId="b1c82">
@@ -117,16 +127,16 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
 
 </Comment>
     <BiopaxRef>cd7</BiopaxRef>
-    <Graphics CenterX="511.7130698433243" CenterY="209.71684827777267" Width="90.0" Height="43.11224489795911" ZOrder="32816" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Graphics CenterX="259.4337376876472" CenterY="172.44976753243125" Width="90.0" Height="43.11224489795911" ZOrder="32816" FontSize="12" Valign="Middle" ShapeType="Oval" />
     <Xref Database="" ID="0000255" />
   </DataNode>
   <DataNode TextLabel="NKG2D" GraphId="e1b8e" Type="Protein" GroupRef="ef0db">
-    <Graphics CenterX="440.75984756122483" CenterY="744.0954235637781" Width="90.0" Height="25.0" ZOrder="32819" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="450.75984756122483" CenterY="744.0954235637781" Width="90.0" Height="25.0" ZOrder="32819" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P26718" />
   </DataNode>
   <DataNode TextLabel="CD56&#xA;(CD56 bright)" GraphId="b5f1f" Type="Protein">
     <Comment>AKA NCAM1</Comment>
-    <Graphics CenterX="792.5174825174824" CenterY="196.748251748251" Width="80.00000000000011" Height="39.09090909090909" ZOrder="32821" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="516.1342128155077" CenterY="200.5946247609582" Width="80.00000000000011" Height="39.09090909090909" ZOrder="32821" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P13591" />
   </DataNode>
   <DataNode TextLabel="Spiral Artery Remodeling" GraphId="fcab3" Type="Pathway">
@@ -134,7 +144,7 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="CD14" GraphId="c8ac6" Type="Protein">
-    <Graphics CenterX="165.59541600962586" CenterY="224.94231027837938" Width="35.20248203788378" Height="25.0" ZOrder="32825" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="62.384406835313904" CenterY="224.94231027837938" Width="35.20248203788378" Height="25.0" ZOrder="32825" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P08571" />
   </DataNode>
   <DataNode TextLabel="TGFBR2" GraphId="dcf18" Type="GeneProduct">
@@ -159,11 +169,11 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     <Xref Database="Uniprot-TrEMBL" ID="P49767" />
   </DataNode>
   <DataNode TextLabel="CD25 &#xA;(IL2RA)" GraphId="e3634" Type="Protein">
-    <Graphics CenterX="401.2229367020102" CenterY="185.8090456964945" Width="48.333333333333265" Height="33.57613335103123" ZOrder="32838" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="144.285219453165" CenterY="142.33078482692946" Width="48.333333333333265" Height="33.57613335103123" ZOrder="32838" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P01589" />
   </DataNode>
   <DataNode TextLabel="CD16 dim&#xA;(FCGR3A)" GraphId="a93a5" Type="Protein">
-    <Graphics CenterX="682.517482517482" CenterY="252.5750405642338" Width="61.81818181818197" Height="32.562668541055245" ZOrder="32840" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="403.84063483385205" CenterY="251.02224553317785" Width="61.81818181818197" Height="32.562668541055245" ZOrder="32840" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P08637" />
   </DataNode>
   <DataNode TextLabel="proteinogenic &#xA;amino-acid residues" GraphId="d7c31" Type="Metabolite">
@@ -180,12 +190,12 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
 "eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255
 </Comment>
     <BiopaxRef>a39</BiopaxRef>
-    <Graphics CenterX="669.7050815733867" CenterY="189.59079785760437" Width="114.89752916091811" Height="45.738295318127186" ZOrder="32846" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Graphics CenterX="393.32181187140816" CenterY="193.43717087031158" Width="114.89752916091811" Height="45.738295318127186" ZOrder="32846" FontSize="12" Valign="Middle" ShapeType="Oval" />
     <Xref Database="" ID="0002343" />
   </DataNode>
   <DataNode TextLabel="FOXP3+&#xA;(FoxP3 bright)" GraphId="fe708" Type="Protein">
     <BiopaxRef>baa</BiopaxRef>
-    <Graphics CenterX="532.5174825174817" CenterY="145.2074921213282" Width="83.63636363636331" Height="34.19120801887951" ZOrder="32849" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="368.04573385502636" CenterY="151.21614224652734" Width="83.63636363636331" Height="34.19120801887951" ZOrder="32849" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="Q9BZS1" />
   </DataNode>
   <DataNode TextLabel="TGFBR1&#xA;" GraphId="a875b" Type="GeneProduct">
@@ -217,10 +227,6 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     <Graphics CenterX="178.89833066043212" CenterY="486.23956331883784" Width="90.0" Height="25.0" ZOrder="32873" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P84022" />
   </DataNode>
-  <DataNode TextLabel="SMAD2" GraphId="e812c" Type="Protein" GroupRef="a2e13">
-    <Graphics CenterX="178.62721150872022" CenterY="563.4696418822498" Width="90.0" Height="25.0" ZOrder="32879" FontSize="12" Valign="Middle" />
-    <Xref Database="Uniprot-TrEMBL" ID="Q15796" />
-  </DataNode>
   <DataNode TextLabel="SMAD4" GraphId="a9105" Type="Protein" GroupRef="d9997">
     <Graphics CenterX="576.4450992235255" CenterY="702.4568569373968" Width="90.0" Height="25.0" ZOrder="32885" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="Q13485" />
@@ -241,59 +247,65 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
 "uterine natural killer cell" http://purl.obolibrary.org/obo/CL_4052028;
 "eukaryotic cell" http://purl.obolibrary.org/obo/CL_0000255</Comment>
     <BiopaxRef>a39</BiopaxRef>
-    <Graphics CenterX="1197.7482269503537" CenterY="927.7634510221397" Width="106.99999999999926" Height="45.738295318127186" ZOrder="34514" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Graphics CenterX="1197.7482269503537" CenterY="927.7634510221397" Width="106.99999999999926" Height="45.738295318127186" ZOrder="34515" FontSize="12" Valign="Middle" ShapeType="Oval" />
     <Xref Database="" ID="0002343" />
   </DataNode>
   <DataNode TextLabel="CD56&#xA;(CD56 dim)" GraphId="a12e8" Type="Protein">
     <Comment>AKA NCAM1</Comment>
-    <Graphics CenterX="1232.160522954382" CenterY="728.6397686351586" Width="61.50874132527588" Height="37.61996280223184" ZOrder="34519" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="1232.160522954382" CenterY="728.6397686351586" Width="61.50874132527588" Height="37.61996280223184" ZOrder="34522" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P13591" />
   </DataNode>
   <DataNode TextLabel="CD16 bright&#xA;(FCGR3A)" GraphId="ce00d" Type="Protein">
-    <Graphics CenterX="1165.1067991159805" CenterY="724.9689147284638" Width="66.38381099792105" Height="34.278254988842264" ZOrder="34523" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="1165.1067991159805" CenterY="724.9689147284638" Width="66.38381099792105" Height="34.278254988842264" ZOrder="34526" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P08637" />
   </DataNode>
-  <DataNode TextLabel="SMAD2" GraphId="e1dd2" Type="Protein" GroupRef="d9997">
-    <Graphics CenterX="576.4450992235255" CenterY="653.0354046678546" Width="90.0" Height="25.00611374121422" ZOrder="34527" FontSize="12" Valign="Middle" />
-    <Xref Database="Uniprot-TrEMBL" ID="Q15796" />
-  </DataNode>
   <DataNode TextLabel="SMAD2" GraphId="a7553" Type="Protein" GroupRef="e1e92">
-    <Graphics CenterX="454.3902872635003" CenterY="576.1441648901068" Width="90.0" Height="25.0" ZOrder="34530" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="454.3902872635003" CenterY="576.1441648901068" Width="90.0" Height="25.0" ZOrder="34533" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="Q15796" />
   </DataNode>
   <DataNode TextLabel="CD16 dim&#xA;(FCGR3A)" GraphId="a6617" Type="Protein">
-    <Graphics CenterX="1155.2218081573421" CenterY="985.8297872340427" Width="64.61382908064434" Height="36.0" ZOrder="34533" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="1155.2218081573421" CenterY="985.8297872340427" Width="64.61382908064434" Height="36.0" ZOrder="34536" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P08637" />
   </DataNode>
   <DataNode TextLabel="CD56&#xA;(CD56 bright)" GraphId="eea2a" Type="Protein">
     <Comment>AKA NCAM1</Comment>
-    <Graphics CenterX="1236.91489361702" CenterY="981.3297872340427" Width="72.0" Height="31.0" ZOrder="34537" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="1236.91489361702" CenterY="981.3297872340427" Width="72.0" Height="31.0" ZOrder="34540" FontSize="12" Valign="Middle" />
     <Xref Database="Uniprot-TrEMBL" ID="P13591" />
   </DataNode>
   <DataNode TextLabel="Protein" GraphId="ef4fc" Type="Protein">
-    <Graphics CenterX="1239.0347985348" CenterY="125.27498691784264" Width="90.0" Height="25.0" ZOrder="34551" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="732.1041054654944" CenterY="158.9383532544762" Width="90.0" Height="25.0" ZOrder="34554" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Metabolite" GraphId="b391a" Type="Metabolite">
-    <Graphics CenterX="1237.0347985348" CenterY="173.2749869178429" Width="90.0" Height="25.0" ZOrder="34553" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Graphics CenterX="730.1041054654944" CenterY="206.93835325447648" Width="90.0" Height="25.0" ZOrder="34556" FontSize="12" Valign="Middle" Color="0000ff" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Protein" GraphId="a14b8" Type="Protein">
-    <Graphics CenterX="1236.0347985348" CenterY="305.2749869178434" Width="90.0" Height="25.0" ZOrder="34555" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="729.1041054654944" CenterY="338.9383532544776" Width="90.0" Height="25.0" ZOrder="34558" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Protein" GraphId="a5108" Type="Protein">
-    <Graphics CenterX="1236.0347985348" CenterY="280.27498691784365" Width="90.0" Height="25.0" ZOrder="34557" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="729.1041054654944" CenterY="313.93835325447776" Width="90.0" Height="25.0" ZOrder="34560" FontSize="12" Valign="Middle" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Functional Outcome" GraphId="f866b" Type="Pathway">
-    <Graphics CenterX="1242.5347985348003" CenterY="214.2749869178431" Width="147.0" Height="25.0" ZOrder="34559" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
+    <Graphics CenterX="735.6041054654944" CenterY="247.9383532544766" Width="147.0" Height="25.0" ZOrder="34562" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e" />
     <Xref Database="" ID="" />
   </DataNode>
   <DataNode TextLabel="Cell type" GraphId="a207a">
-    <Graphics CenterX="1239.0347985348" CenterY="80.27498691784247" Width="90.0" Height="25.0" ZOrder="34561" FontSize="12" Valign="Middle" ShapeType="Oval" />
+    <Graphics CenterX="732.1041054654944" CenterY="113.93835325447598" Width="90.0" Height="25.0" ZOrder="34564" FontSize="12" Valign="Middle" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </DataNode>
+  <State GraphRef="e1dd2" TextLabel="P" GraphId="a6ffb">
+    <Comment>parentid= Q15796 ; parentsymbol=SMAD2  ; site=sPsVRCssMs  ; position=Ser465  ; sitegrpid=447494  ; ptm=p; direction=u</Comment>
+    <Comment>parentid= Q15796 ; parentsymbol=SMAD2  ; site=sVRCssMs   ; position=Ser467  ; sitegrpid=447495   ; ptm=p; direction=u</Comment>
+    <Graphics RelX="-0.5897435897435849" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <State GraphRef="e812c" TextLabel="P" GraphId="bc66e">
+    <Graphics RelX="-0.58974358974359" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
   <State GraphRef="b73a0" TextLabel="CD14+" GraphId="ece48">
     <Comment>CD14+ macrophages</Comment>
     <BiopaxRef>ad5</BiopaxRef>
@@ -342,10 +354,6 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     <Graphics RelX="-0.5897435897435912" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="e812c" TextLabel="P" GraphId="bc66e">
-    <Graphics RelX="-0.58974358974359" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
   <State GraphRef="e8d1d" TextLabel="P" GraphId="bed6f">
     <Comment>parentid= P84022; parentsymbol=SMAD3   ; site=sPsIRCssVs ; position=Ser423   ; sitegrpid= 448335  ; ptm=p; direction=u</Comment>
     <Comment>parentid= P84022; parentsymbol=SMAD3   ; site=sIRCssVs ; position=Ser425   ; sitegrpid= 448336  ; ptm=p; direction=u</Comment>
@@ -368,12 +376,6 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     <Graphics RelX="0.7850071410516061" RelY="0.8332986969006076" Width="35.58602150537946" Height="22.632672423805445" FillColor="00cc00" />
     <Xref Database="" ID="" />
   </State>
-  <State GraphRef="e1dd2" TextLabel="P" GraphId="a6ffb">
-    <Comment>parentid= Q15796 ; parentsymbol=SMAD2  ; site=sPsVRCssMs  ; position=Ser465  ; sitegrpid=447494  ; ptm=p; direction=u</Comment>
-    <Comment>parentid= Q15796 ; parentsymbol=SMAD2  ; site=sVRCssMs   ; position=Ser467  ; sitegrpid=447495   ; ptm=p; direction=u</Comment>
-    <Graphics RelX="-0.5897435897435849" RelY="-1.0" Width="15.0" Height="15.0" ShapeType="Oval" />
-    <Xref Database="" ID="" />
-  </State>
   <State GraphRef="a7553" TextLabel="P" GraphId="e7bde">
     <Comment>parentid= Q15796 ; parentsymbol=SMAD2  ; site=sPsVRCssMs  ; position=Ser465  ; sitegrpid=447494  ; ptm=p; direction=u </Comment>
     <Comment>parentid= Q15796 ; parentsymbol=SMAD2  ; site=sVRCssMs   ; position=Ser467  ; sitegrpid=447495   ; ptm=p; direction=u </Comment>
@@ -389,7 +391,8 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
   </Interaction>
   <Interaction GraphId="id29aab053">
     <Graphics ConnectorType="Elbow" ZOrder="12290" LineThickness="1.0">
-      <Point X="440.75984756122483" Y="764.5954235637781" GraphRef="e23e3" RelX="0.0" RelY="1.0" />
+      <Point X="450.75984756122483" Y="764.5954235637781" GraphRef="e23e3" RelX="0.0" RelY="1.0" />
+      <Point X="395.6491545498431" Y="779.0" />
       <Point X="340.5384615384614" Y="850.0384615384617" GraphRef="c57b6" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
       <Anchor Position="0.5108504126759839" Shape="None" GraphId="b2d41" />
     </Graphics>
@@ -419,15 +422,15 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
   </Interaction>
   <Interaction GraphId="id7b9ac39a">
     <Graphics ZOrder="12298" LineThickness="1.0">
-      <Point X="423.27533537656484" Y="225.87579761844938" GraphRef="fca45" RelX="1.0" RelY="0.0" />
-      <Point X="454.02105124721857" Y="225.42697934512495" GraphRef="cdbae" RelX="-1.0" RelY="0.0" />
+      <Point X="167.89041315877557" Y="182.39753674888436" GraphRef="fca45" RelX="1.0" RelY="0.0" />
+      <Point X="201.7417190915414" Y="188.15989859978353" GraphRef="cdbae" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idf4d3c68">
     <Graphics ZOrder="12300" LineThickness="1.0">
-      <Point X="425.38960336867683" Y="185.80904569649454" GraphRef="e3634" RelX="1.0" RelY="0.0" />
-      <Point X="456.55704679835213" Y="189.4819259506327" GraphRef="cfa20" RelX="-1.0" RelY="0.0" />
+      <Point X="168.45188611983164" Y="142.33078482692946" GraphRef="e3634" RelX="1.0" RelY="0.0" />
+      <Point X="204.277714642675" Y="152.21484520529128" GraphRef="cfa20" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -442,12 +445,13 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
   <Interaction GraphId="id1208554c">
     <BiopaxRef>b38</BiopaxRef>
     <Graphics ZOrder="12304" LineThickness="1.0">
-      <Point X="523.1832579185561" Y="372.5646874134271" GraphRef="abbaa" RelX="0.0" RelY="1.0" />
+      <Point X="260.77344842893945" Y="363.98785883659866" GraphRef="abbaa" RelX="0.0" RelY="1.0" />
       <Point X="260.77344842893945" Y="417.5635616491329" GraphRef="dcf18" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="ida61e95e8">
+    <BiopaxRef>b38</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12306" LineThickness="1.0">
       <Point X="549.4736873201126" Y="444.24423391804055" GraphRef="ed8ac" RelX="-0.5" RelY="1.0" />
       <Point X="178.79381973553012" Y="520.7055225512507" GraphRef="c72e2" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
@@ -456,12 +460,13 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
   </Interaction>
   <Interaction GraphId="id2dab3af6">
     <Graphics ZOrder="12308" LineThickness="1.0">
-      <Point X="511.7130698433243" Y="231.27297072675222" GraphRef="b1c82" RelX="0.0" RelY="1.0" />
-      <Point X="523.1832579185561" Y="342.20754455628423" GraphRef="abbaa" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="259.4337376876472" Y="194.0058899814108" GraphRef="b1c82" RelX="0.0" RelY="1.0" />
+      <Point X="260.77344842893945" Y="333.6307159794558" GraphRef="abbaa" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id99910dce">
+    <BiopaxRef>d75</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12310" LineThickness="1.0">
       <Point X="908.0384615384612" Y="475.03846153846143" GraphRef="ff2bb" RelX="0.5" RelY="1.0" />
       <Point X="691.3902872635" Y="576.1441648901068" GraphRef="f67ab" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
@@ -471,8 +476,8 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
   <Interaction GraphId="id48a21cfa">
     <BiopaxRef>c28</BiopaxRef>
     <Graphics ZOrder="12314" LineThickness="1.0">
-      <Point X="871.7345249962494" Y="330.0383338282302" GraphRef="e3723" RelX="0.0" RelY="1.0" />
-      <Point X="568.1832579185561" Y="357.3861159848557" GraphRef="abbaa" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="531.6866590209796" Y="309.0399863440431" GraphRef="e3723" RelX="0.0" RelY="1.0" />
+      <Point X="305.77344842893945" Y="348.8092874080272" GraphRef="abbaa" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -519,6 +524,9 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     <BiopaxRef>b38</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12326" LineThickness="1.0">
       <Point X="260.77344842893945" Y="443.71902383400686" GraphRef="dcf18" RelX="0.0" RelY="1.0" />
+      <Point X="315.8299693572685" Y="463.71902383400686" />
+      <Point X="370.8864902855976" Y="463.903710812031" />
+      <Point X="425.94301121392664" Y="464.08839779005524" />
       <Point X="480.9995321422557" Y="437.4427633298052" GraphRef="b59f2" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
     </Graphics>
     <Xref Database="" ID="" />
@@ -549,38 +557,38 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
   </Interaction>
   <Interaction GraphId="id19aceae2">
     <Graphics ZOrder="12334" LineThickness="1.0">
-      <Point X="739.3631255915332" Y="197.7529980834474" GraphRef="a4364" RelX="1.0" RelY="0.0" />
-      <Point X="752.5174825174824" Y="196.748251748251" GraphRef="b5f1f" RelX="-1.0" RelY="0.0" />
+      <Point X="462.97985588955476" Y="201.5993710961546" GraphRef="a4364" RelX="1.0" RelY="0.0" />
+      <Point X="476.1342128155077" Y="200.5946247609582" GraphRef="b5f1f" RelX="-1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="iddf681644">
     <BiopaxRef>a39</BiopaxRef>
     <Graphics ZOrder="12338" LineThickness="1.0">
-      <Point X="669.7050815733867" Y="212.45994551666797" GraphRef="facba" RelX="0.0" RelY="1.0" />
-      <Point X="545.6832579185561" Y="342.20754455628423" GraphRef="abbaa" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="393.32181187140816" Y="216.30631852937518" GraphRef="facba" RelX="0.0" RelY="1.0" />
+      <Point X="283.27344842893945" Y="333.6307159794558" GraphRef="abbaa" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id22871cf9">
     <BiopaxRef>bbf</BiopaxRef>
     <Graphics ZOrder="12340" LineThickness="1.0">
-      <Point X="301.21325012443947" Y="250.2142778178444" GraphRef="f41da" RelX="0.0" RelY="1.0" />
-      <Point X="500.68325791855614" Y="342.20754455628423" GraphRef="abbaa" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+      <Point X="198.0022409501285" Y="250.2142778178444" GraphRef="f41da" RelX="0.0" RelY="1.0" />
+      <Point X="238.27344842893945" Y="333.6307159794558" GraphRef="abbaa" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idb30e4513">
     <Graphics ZOrder="12344" LineThickness="1.0">
-      <Point X="165.59541600962586" Y="237.44231027837938" GraphRef="c8ac6" RelX="0.0" RelY="1.0" />
-      <Point X="165.88588103180638" Y="258.9795284968232" GraphRef="ece48" RelX="0.0" RelY="-1.0" />
+      <Point X="62.38440683531391" Y="237.44231027837938" GraphRef="c8ac6" RelX="0.0" RelY="1.0" />
+      <Point X="62.67487185749466" Y="258.9795284968232" GraphRef="ece48" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id90bfab9d">
     <Graphics ZOrder="12346" LineThickness="1.0">
-      <Point X="682.9005961268813" Y="221.27546402124958" GraphRef="eb552" RelX="0.0" RelY="1.0" />
-      <Point X="682.517482517482" Y="236.29370629370618" GraphRef="a93a5" RelX="0.0" RelY="-1.0" />
+      <Point X="406.51732642490276" Y="225.12183703395678" GraphRef="eb552" RelX="0.0" RelY="1.0" />
+      <Point X="403.84063483385205" Y="234.74091126265023" GraphRef="a93a5" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -604,7 +612,7 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     <BiopaxRef>d14</BiopaxRef>
     <Graphics ConnectorType="Elbow" ZOrder="12352" LineThickness="1.0">
       <Point X="547.9450992235256" Y="726.9568569373969" GraphRef="d6d0f" RelX="-0.5" RelY="1.0" />
-      <Point X="365.9130999428802" Y="784.5954235637781" GraphRef="b2d41" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+      <Point X="365.2091722523422" Y="779.0" GraphRef="b2d41" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -650,15 +658,15 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
   <Interaction GraphId="iddf4103d3">
     <BiopaxRef>b38</BiopaxRef>
     <Graphics ZOrder="12366" LineThickness="1.0">
-      <Point X="216.54884478033537" Y="306.62021275877106" GraphRef="b73a0" RelX="0.0" RelY="1.0" />
-      <Point X="478.18325791855614" Y="357.3861159848557" GraphRef="abbaa" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Point X="113.33783560602366" Y="306.62021275877106" GraphRef="b73a0" RelX="0.0" RelY="1.0" />
+      <Point X="215.77344842893945" Y="348.8092874080272" GraphRef="abbaa" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="d72f1">
     <Graphics ZOrder="32851" LineThickness="1.0">
-      <Point X="532.5174825174817" Y="162.30309613076793" GraphRef="fe708" RelX="0.0" RelY="1.0" />
-      <Point X="532.9375431446865" Y="180.99593959848534" GraphRef="d5dcb" RelX="0.0" RelY="-1.0" />
+      <Point X="326.2275520368447" Y="151.21614224652734" GraphRef="fe708" RelX="-1.0" RelY="0.0" />
+      <Point X="301.7613618350146" Y="151.79617215926396" GraphRef="d5dcb" RelX="1.0" RelY="0.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
@@ -710,44 +718,44 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
+  <Interaction GraphId="iddef269d">
+    <Graphics ZOrder="34518" LineThickness="1.0">
+      <Point X="1027.6862644560204" Y="854.7930241270177" GraphRef="a68a6" RelX="1.0" RelY="0.0" />
+      <Point X="1197.1482269503535" Y="856.2555936856556" GraphRef="a126a" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
   <Interaction GraphId="idd06fa87c">
-    <Graphics ZOrder="34517" LineThickness="1.0">
+    <Graphics ZOrder="34520" LineThickness="1.0">
       <Point X="1196.7482269503532" Y="823.8297872340421" GraphRef="cd7d5" RelX="0.0" RelY="1.0" />
       <Point X="1197.748226950354" Y="904.894303363076" GraphRef="b10de" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
       <Anchor Position="0.4" Shape="None" GraphId="a126a" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
-  <Interaction GraphId="iddef269d">
-    <Graphics ZOrder="34517" LineThickness="1.0">
-      <Point X="1027.6862644560204" Y="854.7930241270177" GraphRef="a68a6" RelX="1.0" RelY="0.0" />
-      <Point X="1197.1482269503535" Y="856.2555936856556" GraphRef="a126a" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
-    </Graphics>
-    <Xref Database="" ID="" />
-  </Interaction>
   <Interaction GraphId="id82f0ea53">
-    <Graphics ZOrder="34521" LineThickness="1.0">
+    <Graphics ZOrder="34524" LineThickness="1.0">
       <Point X="1232.160522954382" Y="747.4497500362745" GraphRef="a12e8" RelX="0.0" RelY="1.0" />
       <Point X="1232.6321940827734" Y="774.2610433887843" GraphRef="e822a" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idd5d6c53">
-    <Graphics ZOrder="34525" LineThickness="1.0">
+    <Graphics ZOrder="34528" LineThickness="1.0">
       <Point X="1165.1067991159805" Y="742.1080422228849" GraphRef="ce00d" RelX="0.0" RelY="1.0" />
       <Point X="1165.3197293268772" Y="774.4753235018658" GraphRef="c1474" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="idaf71d292">
-    <Graphics ZOrder="34535" LineThickness="1.0">
+    <Graphics ZOrder="34538" LineThickness="1.0">
       <Point X="1166.3997421018482" Y="955.4256374020708" GraphRef="c1750" RelX="0.0" RelY="1.0" />
       <Point X="1155.2218081573421" Y="967.8297872340427" GraphRef="a6617" RelX="0.0" RelY="-1.0" />
     </Graphics>
     <Xref Database="" ID="" />
   </Interaction>
   <Interaction GraphId="id5653f0a7">
-    <Graphics ZOrder="34539" LineThickness="1.0">
+    <Graphics ZOrder="34542" LineThickness="1.0">
       <Point X="1236.91489361702" Y="965.8297872340427" GraphRef="eea2a" RelX="0.0" RelY="-1.0" />
       <Point X="1239.7461089966143" Y="958.1366181775677" GraphRef="e6eb6" RelX="0.0" RelY="1.0" />
     </Graphics>
@@ -760,59 +768,59 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="c0253">
-    <Graphics ZOrder="34541" LineThickness="1.0">
-      <Point X="1362.4261675824155" Y="81.27498691784253" />
-      <Point X="1436.8881157955302" Y="81.27498691784253" ArrowHead="mim-binding" />
+    <Graphics ZOrder="34544" LineThickness="1.0">
+      <Point X="855.4954745131095" Y="114.9383532544761" />
+      <Point X="929.9574227262244" Y="114.9383532544761" ArrowHead="mim-binding" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="d027b">
-    <Graphics ZOrder="34563" LineThickness="1.0">
-      <Point X="1365.244755244753" Y="114.68531468531468" />
-      <Point X="1436.8881310543193" Y="115.27498691784261" ArrowHead="mim-conversion" />
+    <Graphics ZOrder="34566" LineThickness="1.0">
+      <Point X="858.3140621754469" Y="148.34868102194824" />
+      <Point X="929.9574379850135" Y="148.93835325447617" ArrowHead="mim-conversion" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="ebc7a">
-    <Graphics ZOrder="34565" LineThickness="1.0">
-      <Point X="1361.0292909937016" Y="155.84998631261973" />
-      <Point X="1436.8881310543193" Y="156.27498691784285" ArrowHead="mim-stimulation" />
+    <Graphics ZOrder="34568" LineThickness="1.0">
+      <Point X="854.0985979243956" Y="189.5133526492533" />
+      <Point X="929.9574379850135" Y="189.93835325447643" ArrowHead="mim-stimulation" />
     </Graphics>
   </GraphicalLine>
   <GraphicalLine GraphId="d7fb6">
-    <Graphics ZOrder="34567" LineThickness="1.0">
-      <Point X="1360.8881310543193" Y="190.27498691784305" />
-      <Point X="1437.1858746235953" Y="190.01368738023538" ArrowHead="mim-catalysis" />
+    <Graphics ZOrder="34570" LineThickness="1.0">
+      <Point X="853.9574379850133" Y="223.93835325447662" />
+      <Point X="930.2551815542895" Y="223.67705371686895" ArrowHead="mim-catalysis" />
     </Graphics>
   </GraphicalLine>
   <Label TextLabel="EVT cells" GraphId="e7ecf" GroupRef="be2c4">
     <Graphics CenterX="1338.7312393604943" CenterY="576.4628449386711" Width="90.0" Height="25.0" ZOrder="34416" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Binding " GraphId="abe9b">
-    <Graphics CenterX="1492.5347985347885" CenterY="84.27498691784241" Width="123.0" Height="25.0" ZOrder="34545" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="985.6041054654823" CenterY="117.93835325447594" Width="123.0" Height="25.0" ZOrder="34548" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Legend" GraphId="f6e47">
-    <Graphics CenterX="1339.0347985347994" CenterY="36.274986917842625" Width="90.0" Height="25.0" ZOrder="34547" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="832.1041054654934" CenterY="69.93835325447628" Width="90.0" Height="25.0" ZOrder="34550" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Protein Complex " GraphId="cf450">
-    <Graphics CenterX="1237.0347985348" CenterY="243.27498691784334" Width="90.0" Height="25.0" ZOrder="34549" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="730.1041054654944" CenterY="276.93835325447697" Width="90.0" Height="25.0" ZOrder="34552" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Conversion " GraphId="e8e8a">
-    <Graphics CenterX="1500.5347985347883" CenterY="124.77498691784265" Width="135.0" Height="25.0" ZOrder="34569" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="985.6041054654822" CenterY="158.4383532544762" Width="135.0" Height="25.0" ZOrder="34572" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Stimulation" GraphId="b198f">
-    <Graphics CenterX="1500.5347985347883" CenterY="156.77498691784254" Width="136.0" Height="25.0" ZOrder="34571" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="985.6041054654822" CenterY="190.4383532544761" Width="136.0" Height="25.0" ZOrder="34574" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Label TextLabel="Catalysis" GraphId="a676b">
-    <Graphics CenterX="1497.534798534788" CenterY="192.77498691784294" Width="105.0" Height="25.0" ZOrder="34573" FillColor="ffffff" FontSize="12" Valign="Middle" />
+    <Graphics CenterX="985.6041054654823" CenterY="226.4383532544765" Width="105.0" Height="25.0" ZOrder="34576" FillColor="ffffff" FontSize="12" Valign="Middle" />
   </Label>
   <Shape TextLabel="dNK cell" GraphId="b419a">
     <BiopaxRef>d24</BiopaxRef>
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="531.7277619499837" CenterY="699.943923723335" Width="1027.621399176955" Height="540.4159663865552" ZOrder="-4" FontSize="12" Valign="Bottom" ShapeType="RoundedRectangle" LineThickness="3.0" Color="cc6600" Rotation="0.0" />
+    <Graphics CenterX="531.7277619499837" CenterY="699.943923723335" Width="1027.621399176955" Height="540.4159663865552" ZOrder="-3" FontSize="12" Valign="Bottom" ShapeType="RoundedRectangle" LineThickness="3.0" Color="cc6600" Rotation="0.0" />
   </Shape>
   <Shape TextLabel="Decidual Microenvironment" GraphId="b7a2a">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
-    <Graphics CenterX="529.3645731905226" CenterY="245.06767283349552" Width="1035.5" Height="315.0" ZOrder="-2" FillColor="ffff99" FontSize="12" ShapeType="RoundedRectangle" LineStyle="Broken" Color="ff33ff" Rotation="0.0" />
+    <Graphics CenterX="318.6808363432982" CenterY="236.49168559775603" Width="607.9213461813281" Height="315.0" ZOrder="-1" FillColor="ffff99" FontSize="12" ShapeType="RoundedRectangle" LineStyle="Broken" Color="ff33ff" Rotation="0.0" />
   </Shape>
   <Shape TextLabel="Nucleus" GraphId="baf2d">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
@@ -1098,185 +1106,59 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
     <Graphics CenterX="1480.8145726938346" CenterY="671.2128449386679" Width="36.5" Height="42.5" ZOrder="34506" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
   </Shape>
   <Shape GraphId="ea28e">
-    <Graphics CenterX="1368.8171114599736" CenterY="189.7528780743059" Width="442.5646258503276" Height="272.9557823129267" ZOrder="34543" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+    <Graphics CenterX="833.2667454284355" CenterY="233.66336633663363" Width="396.8328457767923" Height="312.87128712871294" ZOrder="34546" FontSize="12" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
   </Shape>
   <Shape GraphId="c50b4" GroupRef="be2c4">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="1606.9351424676584" CenterY="1025.6639911362008" Width="14.898945833926462" Height="51.49253054811197" ZOrder="34575" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="990000" Rotation="0.0" />
+    <Graphics CenterX="1606.9351424676584" CenterY="1025.6639911362008" Width="14.898945833926462" Height="51.49253054811197" ZOrder="34578" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="990000" Rotation="0.0" />
   </Shape>
   <Shape GraphId="adfe0" GroupRef="be2c4">
-    <Graphics CenterX="1609.6991218107432" CenterY="977.5703040759176" Width="38.5" Height="55.23213684821366" ZOrder="34577" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="4.719268343724812" />
+    <Graphics CenterX="1609.6991218107432" CenterY="977.5703040759176" Width="38.5" Height="55.23213684821366" ZOrder="34580" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="4.719268343724812" />
   </Shape>
   <Shape GraphId="b2f43" GroupRef="be2c4">
-    <Graphics CenterX="1604.5686870281475" CenterY="937.3467015914482" Width="38.5" Height="55.23213684821366" ZOrder="34579" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="1.3228990072278832" />
+    <Graphics CenterX="1604.5686870281475" CenterY="937.3467015914482" Width="38.5" Height="55.23213684821366" ZOrder="34582" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="1.3228990072278832" />
   </Shape>
   <Shape GraphId="fc69a" GroupRef="be2c4">
-    <Graphics CenterX="1585.4062326016287" CenterY="949.8629773249145" Width="68.57733063510435" Height="55.23213684821366" ZOrder="34581" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="5.180045934309635" />
+    <Graphics CenterX="1585.4062326016287" CenterY="949.8629773249145" Width="68.57733063510435" Height="55.23213684821366" ZOrder="34584" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="5.180045934309635" />
   </Shape>
   <Shape GraphId="e4f19" GroupRef="be2c4">
-    <Graphics CenterX="1580.0495926000135" CenterY="917.2332800829965" Width="129.57982403979804" Height="64.87162011414293" ZOrder="34583" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="1.4924511896872754" />
+    <Graphics CenterX="1580.0495926000135" CenterY="917.2332800829965" Width="129.57982403979804" Height="64.87162011414293" ZOrder="34586" FillColor="ff9999" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="1.4924511896872754" />
   </Shape>
   <Shape GraphId="e9784" GroupRef="be2c4">
-    <Graphics CenterX="1574.032455144078" CenterY="834.2369707425903" Width="38.5" Height="55.23213684821366" ZOrder="34585" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="4.719268343724812" />
+    <Graphics CenterX="1574.032455144078" CenterY="834.2369707425903" Width="38.5" Height="55.23213684821366" ZOrder="34588" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="4.719268343724812" />
   </Shape>
   <Shape GraphId="fd28b" GroupRef="be2c4">
-    <Graphics CenterX="1580.2353536948021" CenterY="795.9077781960077" Width="38.5" Height="55.23213684821366" ZOrder="34587" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="2.585161166577994" />
+    <Graphics CenterX="1580.2353536948021" CenterY="795.9077781960077" Width="38.5" Height="55.23213684821366" ZOrder="34590" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="2.585161166577994" />
   </Shape>
   <Shape GraphId="f1c7c" GroupRef="be2c4">
-    <Graphics CenterX="1551.3754094953915" CenterY="790.5639336105434" Width="89.49975698710762" Height="52.073708319636815" ZOrder="34589" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="0.013671678380317576" />
+    <Graphics CenterX="1551.3754094953915" CenterY="790.5639336105434" Width="89.49975698710762" Height="52.073708319636815" ZOrder="34592" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="0.013671678380317576" />
   </Shape>
   <Shape GraphId="cf8bb" GroupRef="be2c4">
-    <Graphics CenterX="1532.3136603423964" CenterY="773.1072879183032" Width="73.38810971334784" Height="47.09448987860767" ZOrder="34591" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="2.02722031552484" />
+    <Graphics CenterX="1532.3136603423964" CenterY="773.1072879183032" Width="73.38810971334784" Height="47.09448987860767" ZOrder="34594" FontSize="12" Valign="Middle" ShapeType="Arc" LineThickness="10.0" Color="ff0f0f" Rotation="2.02722031552484" />
   </Shape>
   <Shape GraphId="fbd9b" GroupRef="be2c4">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="1548.5440477947777" CenterY="735.1065192320724" Width="16.50000000000091" Height="42.5" ZOrder="34592" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+    <Graphics CenterX="1548.5440477947777" CenterY="735.1065192320724" Width="16.50000000000091" Height="42.5" ZOrder="34596" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
   </Shape>
   <Shape GraphId="dea0a" GroupRef="be2c4">
     <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
     <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
-    <Graphics CenterX="1524.8145726938355" CenterY="729.2128449386681" Width="16.50000000000091" Height="42.5" ZOrder="34593" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
+    <Graphics CenterX="1524.8145726938355" CenterY="729.2128449386681" Width="16.50000000000091" Height="42.5" ZOrder="34598" FillColor="ffbb7b" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="b66c08" Rotation="0.0" />
   </Shape>
-  <Group GroupId="e2ec3" Style="Complex" />
-  <Group GroupId="d8ce1" Style="Group" />
-  <Group GroupId="be2c4" Style="Group" />
-  <Group GroupId="ff450" GraphId="c71fd" Style="Complex" />
-  <Group GroupId="ea974" GraphId="ceae8" Style="Group" />
-  <Group GroupId="d9997" GraphId="d6d0f" Style="Complex" />
   <Group GroupId="e1db7" GraphId="d7e9b" Style="Group" />
+  <Group GroupId="e2ec3" Style="Complex" />
+  <Group GroupId="d9997" GraphId="d6d0f" Style="Complex" />
+  <Group GroupId="be2c4" Style="Group" />
   <Group GroupId="ef0db" GraphId="e23e3" Style="Group" />
+  <Group GroupId="ea974" GraphId="ceae8" Style="Group" />
   <Group GroupId="a2e13" GraphId="f23fe" Style="Group" />
   <Group GroupId="e1e92" GraphId="f67ab" Style="Complex" />
+  <Group GroupId="ff450" GraphId="c71fd" Style="Complex" />
+  <Group GroupId="d8ce1" Style="Group" />
   <InfoBox CenterX="0.0" CenterY="0.0" />
   <Biopax>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a38">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11163210</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smad7 binds to Smurf2 to form an E3 ubiquitin ligase that targets the TGF beta receptor for degradation.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kavsak P</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rasmussen RK</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Causing CG</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bonni S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhu H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomsen GH</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrana JL</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b28">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23973270</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decidual cell regulation of natural killer cell-recruiting chemokines: implications for the pathogenesis and prediction of preeclampsia.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Pathol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lockwood CJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang SJ</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen CP</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xu J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faramarzi S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kayisli O</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kayisli U</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koopman L</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smedts D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buchwalder LF</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schatz F</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a39">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31681264</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dynamic Function and Composition Changes of Immune Cells During Normal and Pathological Pregnancy at the Maternal-Fetal Interface.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Front Immunol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang F</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zheng Q</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin L</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd7">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural killer cell function is regulated by TGF-β signaling in pregnancy and tumor progression</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.biorxiv.org/content/10.1101/2024.09.18.613652v1</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2024</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adam Yalin</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shuang-Yin Wang</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomer Landsberger</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moriya Gamliel</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naama Elefant</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rebecca Kotzur</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debra Goldman-Wohl</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eyal David</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martina Molgora</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bishan Bhattarai</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marina Cella</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomer Meir-Salame</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ronit Gilad</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rana Abdelkader</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shveiky</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simcha Yagel</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or Zuk</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Colonna</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ofer Mandelboim</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ido Amit</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eb2">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20540115</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGF-β affects development and differentiation of human natural killer cell subsets.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eur J Immunol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allan DS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rybalov B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awong G</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zúñiga-Pflücker JC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kopcow HD</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlyle JR</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strominger JL</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d14">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18768831</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGF-beta utilizes SMAD3 to inhibit CD16-mediated IFN-gamma production and antibody-dependent cellular cytotoxicity in human NK cells.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Immunol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trotta R</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dal Col J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciarlariello D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allard J 2nd</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wei M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mao H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Byrd JC</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perrotti D</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caligiuri MA</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a5d">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17360654</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGFbeta promotes conversion of CD16+ peripheral blood NK cells into CD16- NK cells with similarities to decidual NK cells.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keskin DB</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allan DS</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rybalov B</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andzelm MM</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stern JN</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kopcow HD</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koopman LA</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strominger JL</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="baa">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25023688</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural killer cells and regulatory T cells in early pregnancy loss.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Int J Dev Biol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sharma S</bp:AUTHORS>
-    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d24">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16892062</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -1300,26 +1182,6 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keshet E</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yagel S</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandelboim O</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c28">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32291850</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Placental endovascular extravillous trophoblasts (enEVTs) educate maternal T-cell differentiation along the maternal-placental circulation.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Prolif</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ma Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang Q</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fan M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang L</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gu Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jia W</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li Z</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang F</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li YX</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang J</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li R</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shao X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang YL</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d70">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40119192</bp:ID>
@@ -1358,6 +1220,26 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">López-Botet M</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muntasell A</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c28">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32291850</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Placental endovascular extravillous trophoblasts (enEVTs) educate maternal T-cell differentiation along the maternal-placental circulation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Prolif</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ma Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang Q</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fan M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gu Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jia W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li YX</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shao X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang YL</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d75">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22992590</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -1365,6 +1247,16 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
       <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Mol Cell Biol</bp:SOURCE>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Massagué J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b38">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38009061</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endometrial TGFβ signaling fosters early pregnancy development by remodeling the fetomaternal interface.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Reprod Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parks SE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geng T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monsivais D</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d01">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16816146</bp:ID>
@@ -1381,29 +1273,19 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robson SC</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulmer JN</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ad5">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26907385</bp:ID>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eb2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20540115</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of decidual CD14(+) macrophages in the homeostasis of maternal-fetal interface and the differentiation capacity of the cells during pregnancy and parturition.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Placenta</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang H</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hou Y</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen S</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang X</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang M</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ji X</bp:AUTHORS>
-    </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b38">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38009061</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endometrial TGFβ signaling fosters early pregnancy development by remodeling the fetomaternal interface.</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Reprod Immunol</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023</bp:YEAR>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parks SE</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geng T</bp:AUTHORS>
-      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monsivais D</bp:AUTHORS>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGF-β affects development and differentiation of human natural killer cell subsets.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eur J Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allan DS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rybalov B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awong G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zúñiga-Pflücker JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kopcow HD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlyle JR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strominger JL</bp:AUTHORS>
     </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bbf">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34049032</bp:ID>
@@ -1422,6 +1304,53 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jenmalm MC</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ernerudh J</bp:AUTHORS>
     </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="baa">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25023688</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural killer cells and regulatory T cells in early pregnancy loss.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Int J Dev Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sharma S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a38">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11163210</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smad7 binds to Smurf2 to form an E3 ubiquitin ligase that targets the TGF beta receptor for degradation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kavsak P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rasmussen RK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Causing CG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bonni S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhu H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomsen GH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrana JL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a39">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31681264</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dynamic Function and Composition Changes of Immune Cells During Normal and Pathological Pregnancy at the Maternal-Fetal Interface.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Front Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zheng Q</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin L</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a5d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17360654</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGFbeta promotes conversion of CD16+ peripheral blood NK cells into CD16- NK cells with similarities to decidual NK cells.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keskin DB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allan DS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rybalov B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andzelm MM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stern JN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kopcow HD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koopman LA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strominger JL</bp:AUTHORS>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bc4">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23487420</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -1437,6 +1366,85 @@ http://purl.obolibrary.org/obo/CL_2000002 ;
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sukhatme VP</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karumanchi SA</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kopcow HD</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ad5">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26907385</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of decidual CD14(+) macrophages in the homeostasis of maternal-fetal interface and the differentiation capacity of the cells during pregnancy and parturition.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Placenta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hou Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ji X</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b28">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23973270</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decidual cell regulation of natural killer cell-recruiting chemokines: implications for the pathogenesis and prediction of preeclampsia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Pathol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lockwood CJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang SJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen CP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faramarzi S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kayisli O</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kayisli U</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koopman L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smedts D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buchwalder LF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schatz F</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d14">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18768831</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TGF-beta utilizes SMAD3 to inhibit CD16-mediated IFN-gamma production and antibody-dependent cellular cytotoxicity in human NK cells.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trotta R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dal Col J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciarlariello D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allard J 2nd</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wei M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mao H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Byrd JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perrotti D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caligiuri MA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural killer cell function is regulated by TGF-β signaling in pregnancy and tumor progression</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.biorxiv.org/content/10.1101/2024.09.18.613652v1</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2024</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adam Yalin</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shuang-Yin Wang</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomer Landsberger</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moriya Gamliel</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naama Elefant</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rebecca Kotzur</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debra Goldman-Wohl</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eyal David</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martina Molgora</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bishan Bhattarai</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marina Cella</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomer Meir-Salame</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ronit Gilad</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rana Abdelkader</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shveiky</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simcha Yagel</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or Zuk</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Colonna</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ofer Mandelboim</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ido Amit</bp:AUTHORS>
     </bp:PublicationXref>
   </Biopax>
 </Pathway>
