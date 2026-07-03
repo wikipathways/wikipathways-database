@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Fatty acid beta-oxidation" Version="WP5638_r20260624132145" Organism="Gadus morhua" Last-Modified="20260624132145" Author="[MadhushriMSV, Egonw]">
+<Comment Source="WikiPathways-description">partial fatty acid beta-oxidation pathway for fatty acids in Gadus morhua.
+Proteins on this pathway were identified in Gadus morhua using data from FairdomHub repository: [10.15490/fairdomhub.1.study.753.2](https://doi.org/10.15490/fairdomhub.1.study.753.2).</Comment>
+  <BiopaxRef>a69ff</BiopaxRef>
+  <Graphics BoardWidth="806.041877198069" BoardHeight="874.961240310077" />
+  <DataNode TextLabel="Crotonyl-CoA" GraphId="b1f95" Type="Metabolite">
+    <Graphics CenterX="238.16184369328403" CenterY="228.587872777199" Width="84.0" Height="35.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:36926" />
+  </DataNode>
+  <DataNode TextLabel="ACADS" GraphId="c37ba" Type="GeneProduct">
+    <BiopaxRef>c57</BiopaxRef>
+    <Graphics CenterX="42.51968503937009" CenterY="272.6909305404291" Width="67.71653543307087" Height="34.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSGMOG00000007282" />
+  </DataNode>
+  <DataNode TextLabel="GCDH" GraphId="c90dd" Type="GeneProduct">
+    <BiopaxRef>c57</BiopaxRef>
+    <BiopaxRef>a69</BiopaxRef>
+    <Graphics CenterX="363.0183013007073" CenterY="306.5448022894835" Width="84.0" Height="35.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSGMOG00000018332" />
+  </DataNode>
+  <DataNode TextLabel="DLD" GraphId="ccb7c" Type="GeneProduct">
+    <BiopaxRef>c57</BiopaxRef>
+    <Graphics CenterX="587.283535211868" CenterY="122.6862678807085" Width="84.0" Height="35.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSGMOG00000016861" />
+  </DataNode>
+  <DataNode TextLabel="Glutaryl-CoA" GraphId="d1f72" Type="Metabolite">
+    <Graphics CenterX="459.20740389178974" CenterY="228.65415547103717" Width="84.0" Height="35.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:15524" />
+  </DataNode>
+  <DataNode TextLabel="Butanoyl-CoA" GraphId="e1b11" Type="Metabolite">
+    <Graphics CenterX="104.14032591304593" CenterY="378.29725856374415" Width="84.0" Height="35.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB0304279" />
+  </DataNode>
+  <DataNode TextLabel="Glutarate" GraphId="f2444" Type="Metabolite">
+    <Graphics CenterX="458.09998417971815" CenterY="32.44730725279197" Width="84.0" Height="35.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:30921" />
+  </DataNode>
+  <DataNode TextLabel="ECHS1" GraphId="f49b5" Type="GeneProduct">
+    <BiopaxRef>c57</BiopaxRef>
+    <Graphics CenterX="387.0622929968955" CenterY="377.84067214629687" Width="84.0" Height="35.0" ZOrder="32768" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSGMOG00000003479" />
+  </DataNode>
+  <DataNode TextLabel="3-Hydroxybutanoyl-CoA" GraphId="f9ba7" Type="Metabolite">
+    <Graphics CenterX="239.97312138489457" CenterY="598.0312477240661" Width="196.86533518495975" Height="33.30119609228098" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:78611" />
+  </DataNode>
+  <Interaction GraphId="id68c5892f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="363.0183013007073" Y="289.0448022894835" GraphRef="c90dd" RelX="0.0" RelY="-1.0" />
+      <Point X="362.38917981238745" Y="228.6276423935019" GraphRef="ef57f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6f20159e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="458.09998417971815" Y="49.94730725279197" GraphRef="f2444" RelX="0.0" RelY="1.0" />
+      <Point X="459.20740389178974" Y="211.15415547103717" GraphRef="d1f72" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4181284760180339" Shape="None" GraphId="ed75e" />
+      <Anchor Position="0.4512123545326186" Shape="None" GraphId="c680e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id846f4be8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="238.16184369328403" Y="211.087872777199" GraphRef="b1f95" RelX="0.0" RelY="-1.0" />
+      <Point X="239.97312138489457" Y="581.3806496779257" GraphRef="f9ba7" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="df809" />
+      <Anchor Position="0.4433558427218268" Shape="None" GraphId="b4cfd" />
+      <Anchor Position="0.44364375298688047" Shape="None" GraphId="bf019" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id86d1d69d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="42.51968503937009" Y="289.6909305404291" GraphRef="c37ba" RelX="0.0" RelY="1.0" />
+      <Point X="104.14032591304593" Y="289.76377952755905" GraphRef="dea0e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbd960897">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="545.283535211868" Y="122.6862678807085" GraphRef="ccb7c" RelX="-1.0" RelY="0.0" />
+      <Point X="458.5996656354578" Y="122.68582880412886" GraphRef="c680e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd0dc39b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="417.20740389178974" Y="228.65415547103717" GraphRef="d1f72" RelX="-1.0" RelY="0.0" />
+      <Point X="280.161843693284" Y="228.587872777199" GraphRef="b1f95" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="ef57f" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd3d9f6a3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="429.0622929968955" Y="377.84067214629687" GraphRef="f49b5" RelX="1.0" RelY="0.0" />
+      <Point X="238.96488424065126" Y="375.25933893382614" GraphRef="b4cfd" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide508dada">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="104.14032591304593" Y="360.79725856374415" GraphRef="e1b11" RelX="0.0" RelY="-1.0" />
+      <Point X="196.16184369328403" Y="219.837872777199" GraphRef="b1f95" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion" />
+      <Anchor Position="0.3048897053308215" Shape="None" GraphId="dea0e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c57">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32891021</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proteomics and lipidomics analyses reveal modulation of lipid metabolism by perfluoroalkyl substances in liver of Atlantic cod (Gadus morhua).</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquat Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dale K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yadetie F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Müller MB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pampanin DM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gilabert A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tairova Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haarr A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lille-Langøy R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyche JL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Porte C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karlsen OA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goksøyr A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a69">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28183064</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a69ff">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.15490/fairdomhub.1.study.753.2</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>
+
