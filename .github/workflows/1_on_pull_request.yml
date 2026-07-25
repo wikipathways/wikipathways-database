@@ -78,7 +78,7 @@ jobs:
       PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
           
@@ -220,7 +220,7 @@ jobs:
     steps:
     - name: Checkout repository for scripts
       # TODO: impl more efficient way to get scripts
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
         
     - name: Download GPML artifact
       # Downloads gpml-file artifact to working dir
@@ -412,7 +412,7 @@ jobs:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
     - name: Checkout repository for scripts
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
         
     - name: Download GPML artifact
       # Downloads gpml-file artifact to working dir
@@ -530,7 +530,7 @@ jobs:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
     - name: Checkout repository for scripts
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
           
     - name: Download Metadata artifact
       # Downloads metadata artifact to working dir
@@ -602,7 +602,7 @@ jobs:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
     - name: Checkout repository for scripts
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
         
     - name: Download Metadata artifact
       # Downloads metadata artifacts to working dir
@@ -674,7 +674,7 @@ jobs:
       GPML_FILE: ${{ needs.get-gpml.outputs.gpml-file }}
     steps:
     - name: Checkout repository for scripts
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
         
     - name: Download GPML and Metadata artifacts
       # Downloads gpml-file and metadata artifacts to working dir
@@ -777,7 +777,7 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
     - name: Checkout repository for scripts
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
         
     - name: Download GPML and Metadata artifacts
       # Downloads gpml-file and metadata artifacts to working dir
@@ -1033,7 +1033,7 @@ jobs:
 
     - name: Checkout jekyll repo
       # TESTING: change repo and ssh-key from sandbox to real
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         repository: wikipathways/sandbox-wp.gh.io
         path: wikipathways.github.io
@@ -1089,7 +1089,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
         
