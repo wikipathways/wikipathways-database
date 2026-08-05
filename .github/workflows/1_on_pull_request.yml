@@ -77,11 +77,6 @@ jobs:
     env:
       PR_NUMBER: ${{ needs.get-pr.outputs.pr-number }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-        with:
-          ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
-          
       - name: Install XML processing tools
         # Used to parse XML values from GPML
         run: |
@@ -92,6 +87,7 @@ jobs:
         id: get-gpml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GH_REPO: ${{ github.repository }}
         run: |
           GPML_FILEPATH=$(gh pr view $PR_NUMBER --json files --jq '.files.[].path' | grep '.gpml$')
           echo "Found GPML file at: $GPML_FILEPATH"
@@ -121,7 +117,16 @@ jobs:
 
           echo "status=$STATUS" >> $GITHUB_OUTPUT
           
-          cp "$GPML_FILEPATH" ./"$GPML_FILE"
+          # Fetch the GPML from the pull request head over the API, as data.
+          HEAD_REPO=$(gh pr view $PR_NUMBER --json headRepositoryOwner,headRepository \
+            --jq '.headRepositoryOwner.login + "/" + .headRepository.name')
+          HEAD_SHA=$(gh pr view $PR_NUMBER --json headRefOid --jq '.headRefOid')
+          gh api "repos/$HEAD_REPO/contents/$GPML_FILEPATH?ref=$HEAD_SHA" \
+            -H "Accept: application/vnd.github.raw" > ./"$GPML_FILE"
+          if [ ! -s ./"$GPML_FILE" ]; then
+            echo "Could not fetch $GPML_FILEPATH from $HEAD_REPO at $HEAD_SHA"
+            exit 1
+          fi
           GPML_FILEPATH="./${GPML_FILE}"
 
           echo "gpml-file=$GPML_FILE" >> $GITHUB_OUTPUT
@@ -197,10 +202,6 @@ jobs:
             | jq -r .head.ref)
           echo "branch-name=$BRANCH_NAME"
           echo "branch-name=$BRANCH_NAME" >> $GITHUB_OUTPUT
-
-          if ! git ls-remote --heads origin $BRANCH_NAME; then
-            git push origin HEAD:refs/heads/$BRANCH_NAME
-          fi
 
   metadata:
     # This job generates files dervied from the GPML, including info.json, datanodes.tsv and refs.tsv.
@@ -1088,11 +1089,6 @@ jobs:
     needs: [get-pr,get-gpml,metadata,authors,pubmed,frontmatter,testing] #json-svg add once that step is resolved
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code
-      uses: actions/checkout@v6
-      with:
-        ref: refs/pull/${{ needs.get-pr.outputs.pr-number }}/head  
-        
     - name: Compile and update PR description
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
