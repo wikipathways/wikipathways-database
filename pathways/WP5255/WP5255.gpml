@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="SARS-CoV-2 envelope lipid composition and human cell binding" Version="WP5255_r20220717141800" Author="[Egonw]" Last-Modified="20220717141800" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway captures the finding of Saud et al. that it is the virion membrane that is an active participant in the cellular uptake of the SARS-CoV-2 virion. Results show the lipid composition of the virion membrane to resembled that of human cell organel membranes, rather than the cell membrane itself.</Comment>
+  <BiopaxRef>b00</BiopaxRef>
+  <Graphics BoardWidth="1751.0" BoardHeight="394.0"/>
+  <DataNode TextLabel="cholesterol" GraphId="a5d90" Type="Metabolite">
+    <Graphics CenterX="455.75" CenterY="286.75" Width="106.5" Height="34.5" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="16113"/>
+  </DataNode>
+  <DataNode TextLabel="AXL" GraphId="a6b42" Type="GeneProduct">
+    <Graphics CenterX="1099.0" CenterY="113.0" Width="90.0" Height="25.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000167601"/>
+  </DataNode>
+  <DataNode TextLabel="phosphatidyl-L-serine" GraphId="c5ecb" Type="Metabolite">
+    <Graphics CenterX="1099.0301286391364" CenterY="259.35663507109007" Width="149.94245091401484" Height="39.99999999999999" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="18303"/>
+  </DataNode>
+  <DataNode TextLabel="procoagulant&#10;aminophospholipid" GraphId="d08be" Type="Metabolite">
+    <Graphics CenterX="940.5" CenterY="260.0" Width="145.0" Height="40.0" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="60971"/>
+  </DataNode>
+  <DataNode TextLabel="Phospholipids" GraphId="dabb2" Type="Metabolite">
+    <Graphics CenterX="250.0" CenterY="286.75" Width="106.5" Height="34.5" ZOrder="32768" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="16247"/>
+  </DataNode>
+  <DataNode TextLabel="Blood&#10;clothing" GraphId="fa433" Type="Pathway">
+    <Graphics CenterX="940.0" CenterY="152.25" Width="90.0" Height="44.5" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="14961e"/>
+    <Xref Database="WikiPathways" ID="WP4927"/>
+  </DataNode>
+  <DataNode TextLabel="sphingolipids" GraphId="ed1e3" Type="Metabolite">
+    <Graphics CenterX="571.0" CenterY="286.75" Width="106.5" Height="34.5" ZOrder="32769" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="26739"/>
+  </DataNode>
+  <DataNode TextLabel="phosphatidyl-&#10;ethanolamine" GraphId="d0696" Type="Metabolite">
+    <Graphics CenterX="1227.2513540961438" CenterY="259.35663507109007" Width="106.50000000000004" Height="39.99999999999999" ZOrder="32775" FontSize="12" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="16038"/>
+  </DataNode>
+  <Interaction>
+    <BiopaxRef>c62</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1099.0301286391364" Y="239.35663507109007" GraphRef="c5ecb" RelX="0.0" RelY="-1.0"/>
+      <Point X="1099.0" Y="125.5" GraphRef="a6b42" RelX="0.0" RelY="1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc62c4a09">
+    <BiopaxRef>b00</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="940.5" Y="240.0" GraphRef="d08be" RelX="0.0" RelY="-1.0"/>
+      <Point X="940.0" Y="174.5" GraphRef="fa433" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <GraphicalLine GraphId="id620a82c1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="113.0" Y="230.0"/>
+      <Point X="1717.0" Y="230.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f6ba5">
+    <Graphics ZOrder="12289" LineThickness="1.0">
+      <Point X="114.0" Y="364.0"/>
+      <Point X="1718.0" Y="364.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f4ec3">
+    <Graphics ZOrder="32772" LineThickness="1.0">
+      <Point X="718.0" Y="294.0"/>
+      <Point X="1721.0" Y="294.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="human cell" GraphId="e0004">
+    <Graphics CenterX="1098.0" CenterY="65.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="mostly" GraphId="ebb34">
+    <Graphics CenterX="250.0" CenterY="332.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Virion&#10;Envelope&#10;Membrane" GraphId="ef21f">
+    <Graphics CenterX="52.0" CenterY="298.25" Width="74.0" Height="39.5" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Outer leaflet" GraphId="f9ba6">
+    <Graphics CenterX="785.0" CenterY="265.0" Width="90.0" Height="25.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="some" GraphId="a0d6c">
+    <Graphics CenterX="455.75" CenterY="332.0" Width="90.0" Height="25.0" ZOrder="32770" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="some" GraphId="ae25a">
+    <Graphics CenterX="571.0" CenterY="332.0" Width="90.0" Height="25.0" ZOrder="32771" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Inner leaflet" GraphId="e97e1">
+    <Graphics CenterX="785.0" CenterY="329.0" Width="90.0" Height="25.0" ZOrder="32773" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Abundance:" GraphId="bad64">
+    <Graphics CenterX="139.48544346648612" CenterY="332.0" Width="90.0" Height="25.0" ZOrder="32779" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="edbe0">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="1098.0" CenterY="74.0" Width="170.0" Height="78.0" ZOrder="16384" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b00">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35436499</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The SARS-CoV2 envelope differs from host cells, exposes procoagulant lipids, and is disrupted in vivo by oral rinses.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Lipid Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saud Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tyrrell VJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zaragkoulias A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protty MB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statkute E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rubina A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bentley K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White DA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodrigues PDS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murphy RC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Köfeler H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Griffiths WJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alvarez-Jarreta J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown RW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newcombe RG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heyman J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pritchard M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mcleod RW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arya A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lynch CA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Owens D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jenkins PV</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buurma NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Donnell VB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas DW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanton RJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c62">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34797899</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phosphatidylserine receptors enhance SARS-CoV-2 infection.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLoS Pathog</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bohan D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Van Ert H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruggio N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rogers KJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Badreddine M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aguilar Briseño JA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elliff JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rojas Chavez RA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gao B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stokowy T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christakou E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kursula P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Micklem D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gausdal G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haim H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minna J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorens JB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maury W</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>disease pathway</bp:TERM><bp:ID>PW:0000013</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>COVID-19</bp:TERM><bp:ID>DOID:0080600</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>
