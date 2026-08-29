@@ -96,7 +96,11 @@ dataNodes.forEach(function(entityById) {
       }
     }
   } else {  // for other nodes that are not in datanodes table
-    let compactIdentifier = entityById.xrefDataSource.toLowerCase() + ":" + entityById.xrefIdentifier;
+    xrefDataSource = entityById.xrefDataSource.toLowerCase()
+    if(xrefDataSource == "aop-wiki_ke") {
+      xrefDataSource = "aop.events";
+    }
+    let compactIdentifier = xrefDataSource + ":" + entityById.xrefIdentifier;
     // Add compact identifier
     entityById.type.push("CompactIdentifier:" + compactIdentifier);
   }
