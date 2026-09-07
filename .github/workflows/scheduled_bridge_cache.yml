@@ -29,7 +29,7 @@ jobs:
           java-version: '11'
 
       - name: Cache meta-data-action with dependencies
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: cacheMetaJar
         with:
           path: ./meta-data-action-1.1.4-jar-with-dependencies.jar
@@ -47,7 +47,7 @@ jobs:
 
 
       - name: Cache and install dependencies
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: cache
         with:
           path: ${{ github.workspace }}/wikipathways-database/Hs_Derby_Ensembl_111.bridge
@@ -72,7 +72,7 @@ jobs:
           done
           
       - name: Cache all bridge files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: cacheAllBridge
         with:
           path: |

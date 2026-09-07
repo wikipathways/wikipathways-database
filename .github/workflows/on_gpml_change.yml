@@ -220,7 +220,7 @@ jobs:
           java-version: '11'
             
       - name: Cache meta-data-action with dependencies
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: cacheMetaJar
         with:
           path: ./meta-data-action-1.1.4-jar-with-dependencies.jar
@@ -238,7 +238,7 @@ jobs:
           fi
 
       - name: Cache all bridge files
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: cacheAllBridge
         with:
           path: |
@@ -333,7 +333,7 @@ jobs:
           node-version: 20
 
       - name: Cache dependencies
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -449,7 +449,7 @@ jobs:
           java-version: '11'
           
       - name: Cache and install dependencies
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         id: cache
         with:
           path: ${{ github.workspace }}/wikipathways-database/Hs_Derby_Ensembl_111.bridge
@@ -553,7 +553,7 @@ jobs:
           node-version: 18
 
       - name: Cache NPM dependencies
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
