@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Homocysteine and cysteine interconversion" Data-Source="WikiPathways" Version="WP128_r140694" Author="[M.Braymer, MaintBot, Christine Chichester, Egonw, DeSl, AlexanderPico, Eweitz, Khanspers]" Last-Modified="20251007165344" Organism="Saccharomyces cerevisiae">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Homocysteine and cysteine interconversion" Data-Source="WikiPathways" Version="WP128_r20260908093948" Author="[M.Braymer, MaintBot, Christine Chichester, Egonw, DeSl, AlexanderPico, Eweitz, Khanspers]" Last-Modified="20260908093948" Organism="Saccharomyces cerevisiae">
   <Comment Source="WikiPathways-description">The metabolic interconversion of cysteine and homocysteine via formation of a cystathionine intermediate is known as the transsulfuration pathway. While the transsulfuration pathway proceeds in only one direction in many bacteria and fungi, S. cerevisiae encodes for both a forward and reverse version of the pathway and is able to convert cysteine and homocysteine to one or the other reversibly. In the forward pathway, cysteine reacts with O-acetylhomoserine in a reaction catalyzed by cystathionine -synthase to form cystathionine. Cystathionine is then cleaved by cystathionine -lyase, yielding pyruvate, ammonia, and homocysteine. In S. cerevisiae, cystathionine -synthase and -lyase are thought to be encoded by STR2 and STR3 respectively, due to their similarity to the aforementioned enzymes in other organisms and the inability of str2 or str3 null mutants to utilize cysteine as a sole sulfur source. In the reverse pathway, cystathionine -synthase (Cys4p) catalyzes the condensation of homocysteine and serine to form cystathionine. Cystathionine -lyase (Cys3p) then catalyzes hydrolysis of cystathionine to produce cysteine, -ketobutyrate, and ammonia.
 
 The presence of two transsulfuration pathways in *S. cerevisiae* enables the cell to acquire methionine from cysteine and vice-versa by using homocysteine as an intermediate. Homocysteine derived from cysteine in the forward transsulfuration pathway can be converted to methionine, while homocysteine derived from methionine can be converted to cysteine via the reverse transsulfuration pathway. This enables S. cerevisiae to utilize methionine or cysteine as a sole source of sulfur.
@@ -7,6 +7,9 @@ The presence of two transsulfuration pathways in *S. cerevisiae* enables the cel
 Source: [yeastgenome.org](https://pathway.yeastgenome.org/)</Comment>
   <BiopaxRef>lqi</BiopaxRef>
   <BiopaxRef>ab7</BiopaxRef>
+  <BiopaxRef>fec</BiopaxRef>
+  <BiopaxRef>e7c</BiopaxRef>
+  <BiopaxRef>af3</BiopaxRef>
   <Graphics BoardWidth="577.3333333333335" BoardHeight="595.0" />
   <DataNode TextLabel="L-homocysteine biosynthesis" GraphId="f2665" Type="Pathway">
     <Graphics CenterX="356.0" CenterY="71.0" Width="188.0" Height="20.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" Color="14961e" />
@@ -215,6 +218,18 @@ Source: [yeastgenome.org](https://pathway.yeastgenome.org/)</Comment>
   <Group GroupId="b78e1" GraphId="af57c" Style="Group" />
   <InfoBox CenterX="15.0" CenterY="45.0" />
   <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=NIL&amp;object=HOMOCYS-CYS-CONVERT</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homocysteine and cysteine interconversion</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YeastPathways</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
     <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="lqi">
       <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9409150</bp:ID>
       <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
@@ -224,23 +239,39 @@ Source: [yeastgenome.org](https://pathway.yeastgenome.org/)</Comment>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas D</bp:AUTHORS>
       <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surdin-Kerjan Y</bp:AUTHORS>
     </bp:PublicationXref>
-    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab7">
-      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://pathway.yeastgenome.org/YEAST/NEW-IMAGE?type=NIL&amp;object=HOMOCYS-CYS-CONVERT</bp:ID>
-      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL</bp:DB>
-      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homocysteine and cysteine interconversion</bp:TITLE>
-      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YeastPathways</bp:SOURCE>
-      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
-    </bp:PublicationXref>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cysteine metabolic pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000049</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fec">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10821189</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cysteine is essential for transcriptional regulation of the sulfur assimilation genes in Saccharomyces cerevisiae.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Gen Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hansen J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johannesen PF</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e7c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14967036</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of active-site residues Thr81, Ser82, Thr85, Gln157, and Tyr158 in yeast cystathionine beta-synthase catalysis and reaction specificity.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochemistry</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aitken SM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kirsch JF</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="af3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24291053</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A role for glutamate-333 of Saccharomyces cerevisiae cystathionine γ-lyase as a determinant of specificity.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hopwood EM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahmed D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aitken SM</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
 
