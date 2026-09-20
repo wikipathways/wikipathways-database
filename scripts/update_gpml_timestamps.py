@@ -96,6 +96,16 @@ def update_pathway_attributes(path, editors=None):
     if not sep or not prefix.startswith("WP") or not prefix[2:].isdigit() or not old_timestamp.isdigit():
         raise ValueError(f"Unexpected Version value in {path}: {old_version}")
 
+    expected_wpid = path.stem
+    if not (expected_wpid.startswith("WP") and expected_wpid[2:].isdigit()):
+        raise ValueError(f"Unexpected filename, expected a WPID (e.g. WP1234.gpml): {path}")
+    if prefix != expected_wpid:
+        print(
+            f"fixing {path}: Version WPID {prefix!r} does not match filename WPID "
+            f"{expected_wpid!r}"
+        )
+        prefix = expected_wpid
+
     if pathway_element.get("Last-Modified") is None:
         raise ValueError(f"No Last-Modified attribute found in {path}")
 
