@@ -76,7 +76,28 @@ def add_missing_editors(pathway_element, editors, path):
     return changed
 
 
-def update_pathway_attributes(path, editors=None):
+ATTRIBUTE_TIMESTAMP_FORMAT = "%Y%m%d%H%M%S"
+GIT_TIMESTAMP_FORMAT = "%a %b %d %H:%M:%S %Y %z"
+
+
+def timestamp_argument(value):
+    """Accept a git log date or a bare YYYYMMDDHHMMSS; return the attribute format.
+
+    The wall-clock time as written is kept; the UTC offset of a git log date is dropped.
+    """
+    value = value.strip()
+    for fmt in (GIT_TIMESTAMP_FORMAT, ATTRIBUTE_TIMESTAMP_FORMAT):
+        try:
+            return datetime.strptime(value, fmt).strftime(ATTRIBUTE_TIMESTAMP_FORMAT)
+        except ValueError:
+            pass
+    raise argparse.ArgumentTypeError(
+        f"expected a git log date like 'Mon Mar 16 06:18:57 2026 +0100' "
+        f"or YYYYMMDDHHMMSS, got {value!r}"
+    )
+
+
+def update_pathway_attributes(path, editors=None, timestamp=None):
     content = path.read_bytes().decode("utf-8")
     start, end = find_pathway_tag_span(content, path)
     pathway_tag = content[start:end]
@@ -113,7 +134,8 @@ def update_pathway_attributes(path, editors=None):
     if editors:
         editors_changed = add_missing_editors(pathway_element, editors, path)
 
-    timestamp = datetime.fromtimestamp(path.stat().st_mtime).strftime("%Y%m%d%H%M%S")
+    if timestamp is None:
+        timestamp = datetime.fromtimestamp(path.stat().st_mtime).strftime("%Y%m%d%H%M%S")
     version = f"{prefix}{sep}{timestamp}"
     if old_version == version and pathway_element.get("Last-Modified") == timestamp and not editors_changed:
         return
@@ -140,11 +162,19 @@ def main():
         metavar="NAME",
         help="editor name(s) to add to the Author attribute if not already present",
     )
+    parser.add_argument(
+        "--timestamp",
+        type=timestamp_argument,
+        metavar="TIMESTAMP",
+        help="timestamp to use for Last-Modified (and the Version suffix) instead of the "
+        "file modification time, as a git log date (e.g. 'Mon Mar 16 06:18:57 2026 +0100', "
+        "converted to 20260316061857) or directly as YYYYMMDDHHMMSS",
+    )
     args = parser.parse_args()
     repo_dir = Path.cwd()
 
     for path in locally_changed_gpml_files(repo_dir):
-        update_pathway_attributes(path, editors=args.editor)
+        update_pathway_attributes(path, editors=args.editor, timestamp=args.timestamp)
 
 
 if __name__ == "__main__":
