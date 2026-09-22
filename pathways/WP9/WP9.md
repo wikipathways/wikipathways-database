@@ -37,15 +37,15 @@ description: 'Phospholipids are amphipathic molecules that consist of a glycerol
   converted to cardiolipin. Synthesis of PI, PG, and cardiolipin occurs through similar
   mechanisms in mammalian cells; however, unlike yeast, mammals primarily synthesize
   PS from other phospholipids and not from CDP-DAG.  Description adapted from [YeastPathways](https://pathway.yeastgenome.org/).'
-last-edited: 2025-09-14
+last-edited: 2026-09-22
 ndex: null
 organisms:
 - Saccharomyces cerevisiae
 redirect_from:
 - /index.php/Pathway:WP9
 - /instance/WP9
-- /instance/WP9_r140564
-revision: r140564
+- /instance/WP9_r20260922080105
+revision: r20260922080105
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP9.html

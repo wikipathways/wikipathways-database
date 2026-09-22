@@ -32,15 +32,15 @@ description: 'The pathway of valine biosynthesis is a four-step pathway that sha
   threonine) summary. In this way, valine biosynthesis can be regulated independently
   of isoleucine biosynthesis, despite all four valine biosynthesis enzymes also participating
   in isoleucine biosynthesis.  SOURCE: SGD pathways, [yeastgenome.org](http://pathway.yeastgenome.org/server.html)'
-last-edited: 2025-08-18
+last-edited: 2026-09-22
 ndex: null
 organisms:
 - Saccharomyces cerevisiae
 redirect_from:
 - /index.php/Pathway:WP2
 - /instance/WP2
-- /instance/WP2_r140402
-revision: r140402
+- /instance/WP2_r20260922075429
+revision: r20260922075429
 schema-jsonld:
 - '@context': https://schema.org/
   '@id': https://wikipathways.github.io/pathways/WP2.html
