@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Threonine and methionine biosynthesis" Data-Source="WikiPathways" Version="WP423_r139491" Author="[J.Heckman, MaintBot, Ddigles, Egonw, Mkutmon, Eweitz, Khanspers]" Last-Modified="20250620062416" Organism="Saccharomyces cerevisiae">
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Threonine and methionine biosynthesis" Version="WP423_r20261004140021" Author="[J.Heckman, MaintBot, Ddigles, Egonw, Mkutmon, Eweitz, Khanspers]" Last-Modified="20261004140021" Organism="Saccharomyces cerevisiae">
   <Comment Source="WikiPathways-description">The biosynthesis of threonine and methionine in S. cerevisiae begins in a common three-step pathway that converts aspartate to homoserine. HOM3 and HOM2, which encode the enzymes responsible for the first and second steps of this pathway respectively, are regulated by Gcn4p under the general control of amino acid biosynthesis. Additionally, threonine represses HOM3 and competitively inhibits homoserine dehydrogenase (encoded by HOM6), lending that the flow of carbon into the common pathway is primarily regulated by threonine. The Hom3p, Hom2p, and Hom6p-catalyzed reactions yield homoserine, at which point the threonine and methionine pathways diverge. Phosphorylation of homoserine by homoserine kinase (encoded by THR1) directs homoserine towards the biosynthesis of threonine, whereas acetylation by homoserine O-transacetylase (encoded by MET2) commits homoserine to the biosynthesis of sulfur amino acids.
 
 Source: https://pathway.yeastgenome.org/</Comment>
   <BiopaxRef>a9d</BiopaxRef>
+  <BiopaxRef>e2f</BiopaxRef>
+  <BiopaxRef>aec</BiopaxRef>
+  <BiopaxRef>f9e</BiopaxRef>
   <Graphics BoardWidth="656.6666666666666" BoardHeight="864.8333333333334" />
   <DataNode TextLabel="NADPH" GraphId="a0a" Type="Metabolite" GroupRef="f8e9b">
     <Graphics CenterX="258.1666666666667" CenterY="437.6666666666667" Width="46.33333333333337" Height="19.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
@@ -460,6 +463,11 @@ Source: https://pathway.yeastgenome.org/</Comment>
       <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
     </bp:PublicationXref>
     <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
       <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">threonine biosynthetic pathway</bp:TERM>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001278</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
@@ -469,11 +477,34 @@ Source: https://pathway.yeastgenome.org/</Comment>
       <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001301</bp:ID>
       <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
     </bp:openControlledVocabulary>
-    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
-      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
-      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
-      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
-    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e2f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5764336</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genetic and regulatory aspects of methionine biosynthesis in Saccharomyces cerevisiae.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Bacteriol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1969</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cherest H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eichler F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robichon-Szulmajster H</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aec">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22419079</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulation of amino acid, nucleotide, and phosphate metabolism in Saccharomyces cerevisiae.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genetics</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ljungdahl PO</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daignan-Fornier B</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f9e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9409150</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metabolism of sulfur amino acids in Saccharomyces cerevisiae.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microbiol Mol Biol Rev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surdin-Kerjan Y</bp:AUTHORS>
+    </bp:PublicationXref>
   </Biopax>
 </Pathway>
 
