@@ -14,6 +14,26 @@ from pathlib import Path
 TAG_BOUNDARY_CHARS = (" ", "\t", "\n", "\r", ">", "/")
 
 
+def wpid_argument(value):
+    """Normalize a WPID argument (e.g. 'wp1234' or 'WP1234') to 'WP1234'."""
+    wpid = value.strip().upper()
+    if not (wpid.startswith("WP") and wpid[2:].isdigit()):
+        raise argparse.ArgumentTypeError(
+            f"expected a WPID like 'WP1234', got {value!r}"
+        )
+    return wpid
+
+
+def gpml_files_for_wpids(repo_dir, wpids):
+    files = []
+    for wpid in wpids:
+        path = repo_dir / "pathways" / wpid / f"{wpid}.gpml"
+        if not path.is_file():
+            raise ValueError(f"No GPML file found for {wpid}: {path}")
+        files.append(path)
+    return files
+
+
 def locally_changed_gpml_files(repo_dir):
     result = subprocess.run(
         ["git", "status", "--porcelain=v1", "--untracked-files=all", "--", "pathways"],
@@ -163,6 +183,14 @@ def main():
         help="editor name(s) to add to the Author attribute if not already present",
     )
     parser.add_argument(
+        "--wpid",
+        nargs="+",
+        type=wpid_argument,
+        metavar="WPID",
+        help="WikiPathways ID(s) (e.g. WP1234) to update, instead of the locally changed "
+        "GPML files under pathways/",
+    )
+    parser.add_argument(
         "--timestamp",
         type=timestamp_argument,
         metavar="TIMESTAMP",
@@ -173,7 +201,12 @@ def main():
     args = parser.parse_args()
     repo_dir = Path.cwd()
 
-    for path in locally_changed_gpml_files(repo_dir):
+    if args.wpid:
+        paths = gpml_files_for_wpids(repo_dir, args.wpid)
+    else:
+        paths = locally_changed_gpml_files(repo_dir)
+
+    for path in paths:
         update_pathway_attributes(path, editors=args.editor, timestamp=args.timestamp)
 
 
