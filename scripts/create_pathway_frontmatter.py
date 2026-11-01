@@ -215,7 +215,7 @@ post['seo'] = 'CreativeWork'
 
 post['schema-jsonld'] = [{
     '@context': 'https://schema.org/',
-    '@id': 'https://wikipathways.github.io/pathways/' + wpid + '.html',
+    '@id': 'https://www.wikipathways.org/pathways/' + wpid + '.html',
     '@type': 'Dataset',
     'name': post['title'],
     'description': post['description'],
