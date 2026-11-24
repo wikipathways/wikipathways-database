@@ -875,6 +875,36 @@ jobs:
           fi
         fi
 
+    - name: Setup Node for layout score
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Test layout score
+      # Scores the layout by the BioHackathon 2026 project 22 layout rules, after converting
+      # the GPML to SBGN-ML with MINERVA. Only pathways with more than 5 metabolites are scored.
+      # Edits are compared with the version on main, read from its stored WPxx-sbgn.xml when that
+      # was made from the same GPML (see on_gpml_change_minerva.yml), else converted again.
+      # Advisory: a failure here is reported as SKIPPED and never fails the job.
+      continue-on-error: true
+      working-directory: scripts/layout-score
+      run: |
+        npm install --no-audit --no-fund
+        PR_GPML="$GITHUB_WORKSPACE/gpml-file/$GPML_FILE"
+        WPID="${GPML_FILE%%__*}"
+        BASE_GPML="$GITHUB_WORKSPACE/pathways/$WPID/$WPID.gpml"
+        BASE_ARG=()
+        if [ "$STATUS" = "Edit" ] && [ -f "$BASE_GPML" ]; then
+          BASE_ARG=(--base "$BASE_GPML"
+            --base-sbgn "$GITHUB_WORKSPACE/pathways/$WPID/$WPID-sbgn.xml"
+            --base-minerva "$GITHUB_WORKSPACE/pathways/$WPID/$WPID-minerva.json")
+        fi
+        node cli.mjs --pr "$PR_GPML" "${BASE_ARG[@]}" \
+          --json "$GITHUB_WORKSPACE/layout-score.json" \
+          --markdown "$GITHUB_WORKSPACE/layout-score.md" \
+          --env "$GITHUB_ENV"
+        cat "$GITHUB_WORKSPACE/layout-score.md" >> "$GITHUB_STEP_SUMMARY"
+
     - name: Check for deleted, added, and modified nodes
       run: |
         # Read the diff output from the file
@@ -993,6 +1023,10 @@ jobs:
           review_tasks="${review_tasks}- [ ] Data nodes review required\n"
         fi
 
+        if [ "${{ env.status_test_layout }}" = "REVIEW REQUIRED" ]; then
+          review_tasks="${review_tasks}- [ ] Layout review required (see the layout score in the workflow run summary)\n"
+        fi
+
         # Remove trailing newlines by piping through `sed`
         review_tasks=$(echo -e "$review_tasks" | sed '/^$/d')
         
@@ -1005,6 +1039,7 @@ jobs:
         | 1 | Title Length | ${{ env.note_test_title }} | \$\${\color{${{ env.color_test_title }}}${{ env.status_test_title }}}\$\$ |
         | 2 | Description Length | ${{ env.note_test_desc }} | \$\${\color{${{ env.color_test_desc }}}${{ env.status_test_desc }}}\$\$ |
         | 3 | Data nodes | ${{ env.note_test_nodes }} | \$\${\color{${{ env.color_test_nodes }}}${{ env.status_test_nodes }}}\$\$ |
+        | 4 | Layout | ${{ env.note_test_layout || 'Layout score not run.' }} | \$\${\color{${{ env.color_test_layout || 'gray' }}}${{ env.status_test_layout || 'SKIPPED' }}}\$\$ |
 
         ---
         ## Reviewer Checklist

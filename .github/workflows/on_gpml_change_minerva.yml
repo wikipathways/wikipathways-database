@@ -1,0 +1,109 @@
+name: When GPML changed, update MINERVA conversions
+# Converts changed GPML pathways with MINERVA's converter API
+# (https://minerva.pages.uni.lu/api/19.0/converter.html) and commits static copies next to each GPML:
+#   pathways/WPxx/WPxx-sbgn.xml, WPxx-sbml.xml, WPxx-celldesigner.xml and WPxx-minerva.json (provenance).
+# Other tools (e.g. the layout score in "1. On Pull Request") read these files instead of calling MINERVA.
+#
+# Runs only after GPML files change on main, or by hand (workflow_dispatch) for given WPIDs or "all".
+# A failed conversion (e.g. MINERVA unavailable) keeps the previous files and never fails the run;
+# run it by hand later to catch up.
+
+on:
+  workflow_dispatch:
+    inputs:
+      wpids:
+        description: 'Pathways to convert: space-separated WPIDs, or "all"'
+        required: true
+  push:
+    branches:
+      - main
+    paths:
+      - pathways/**/*.gpml
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false # queue runs, so commits don't clobber each other
+
+permissions:
+  contents: write
+
+jobs:
+  minerva:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Install XML tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxml2-utils
+
+      - name: Get changed GPML files
+        id: changes
+        env:
+          INPUT_WPIDS: ${{ inputs.wpids }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.event.after }}
+        run: |
+          if [ -n "$INPUT_WPIDS" ]; then
+            if [ "$INPUT_WPIDS" = "all" ]; then
+              CHANGED=$(ls pathways/WP*/WP*.gpml | grep -E '/(WP[0-9]+)/\1\.gpml$' | xargs)
+            else
+              CHANGED=""
+              for wpid in $INPUT_WPIDS; do
+                if [[ "$wpid" =~ ^WP[0-9]+$ ]]; then
+                  CHANGED="$CHANGED pathways/$wpid/$wpid.gpml"
+                else
+                  echo "Ignoring '$wpid': not a WPID"
+                fi
+              done
+            fi
+            DELETED=""
+          else
+            CHANGED=$(git diff --name-only --diff-filter=AMR "$BEFORE" "$AFTER" -- 'pathways/*.gpml' | xargs)
+            DELETED=$(git diff --name-only --diff-filter=D "$BEFORE" "$AFTER" -- 'pathways/*.gpml' | xargs)
+          fi
+          echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
+          echo "deleted=$DELETED" >> "$GITHUB_OUTPUT"
+          echo "Changed: $CHANGED"
+          echo "Deleted: $DELETED"
+
+      - name: Convert with MINERVA
+        if: steps.changes.outputs.changed != ''
+        env:
+          CHANGED: ${{ steps.changes.outputs.changed }}
+        run: |
+          # Word splitting on purpose: one argument per file
+          bash scripts/minerva-convert/convert.sh $CHANGED
+
+      - name: Remove conversions of deleted pathways
+        if: steps.changes.outputs.deleted != ''
+        env:
+          DELETED: ${{ steps.changes.outputs.deleted }}
+        run: |
+          for gpml in $DELETED; do
+            dir=$(dirname "$gpml"); wpid=$(basename "$gpml" .gpml)
+            rm -f "$dir/$wpid-sbgn.xml" "$dir/$wpid-sbml.xml" "$dir/$wpid-celldesigner.xml" "$dir/$wpid-minerva.json"
+          done
+
+      - name: Commit conversions
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add -A -- 'pathways/*-sbgn.xml' 'pathways/*-sbml.xml' 'pathways/*-celldesigner.xml' 'pathways/*-minerva.json'
+          if git diff --exit-code --staged > /dev/null; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m 'Update MINERVA conversions (SBGN-ML, SBML, CellDesigner)'
+          # Other workflows push to main too: rebase and retry
+          for i in 1 2 3 4 5; do
+            git pull --rebase && git push && exit 0
+            sleep $((i * 15))
+          done
+          exit 1
