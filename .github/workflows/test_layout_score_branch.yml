@@ -1,0 +1,112 @@
+name: TEMPORARY - test layout score and MINERVA conversion
+# Temporary test of scripts/layout-score and scripts/minerva-convert on the layout-score-test branch.
+# Commits nothing, edits no PR: outputs go to the run summary and a run artifact.
+# DELETE THIS FILE before merging layout-score-test into main.
+
+on:
+  push:
+    branches:
+      - layout-score-test
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout (scripts and two test pathways only)
+        uses: actions/checkout@v7
+        with:
+          sparse-checkout: |
+            .github
+            scripts/layout-score
+            scripts/minerva-convert
+            pathways/WP534
+            pathways/WP4172
+          sparse-checkout-cone-mode: true
+
+      - name: Install XML tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxml2-utils jq
+
+      - name: Convert with MINERVA (no commit)
+        run: |
+          bash scripts/minerva-convert/convert.sh pathways/WP534/WP534.gpml pathways/WP4172/WP4172.gpml
+          for wpid in WP534 WP4172; do
+            d=pathways/$wpid
+            ls -la $d | grep -E 'sbgn|sbml|celldesigner|minerva'
+            for f in $d/$wpid-sbgn.xml $d/$wpid-sbml.xml $d/$wpid-celldesigner.xml; do
+              xmllint --noout "$f"
+              echo "well-formed: $f"
+            done
+            cat $d/$wpid-minerva.json
+            test "$(jq -r .gpml_sha256 $d/$wpid-minerva.json)" = "$(sha256sum $d/$wpid.gpml | cut -d' ' -f1)"
+            echo "provenance hash matches $wpid.gpml"
+            test "$(jq '.formats | length' $d/$wpid-minerva.json)" = 3
+          done
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install layout score dependencies
+        working-directory: scripts/layout-score
+        run: npm install --no-audit --no-fund
+
+      - name: Make test inputs
+        run: |
+          mkdir -p t
+          d=pathways/WP534
+          # An edit that makes the layout worse: Glucose and the line ends attached to it moved far away
+          sed -e 's/CenterX="271.0" CenterY="19.366666666666674"/CenterX="1400.0" CenterY="900.0"/' \
+              -e '/GraphRef="d9df3"/ s/X="[^"]*" Y="[^"]*"/X="1400.0" Y="890.0"/' \
+              $d/WP534.gpml > t/WP534__moved.gpml
+          ! cmp -s $d/WP534.gpml t/WP534__moved.gpml || { echo "test edit did not change the GPML"; exit 1; }
+          # Provenance that does not match the GPML: the stored SBGN-ML must not be used
+          jq '.gpml_sha256 = "0000"' $d/WP534-minerva.json > t/stale-minerva.json
+
+      - name: Run test cases
+        run: |
+          d=$GITHUB_WORKSPACE/pathways/WP534
+          s=$GITHUB_WORKSPACE/pathways/WP4172
+          cli=scripts/layout-score/cli.mjs
+          stored=(--base-sbgn $d/WP534-sbgn.xml --base-minerva $d/WP534-minerva.json)
+          fail=0
+          check() { # name, expected status, jq test on the JSON (or "true"), then cli arguments
+            local name=$1 expected=$2 test=$3; shift 3
+            : > t/$name.env
+            node $cli "$@" --json t/$name.json --markdown t/$name.md --env t/$name.env
+            local status=$(sed -n 's/^status_test_layout=//p' t/$name.env)
+            local note=$(sed -n 's/^note_test_layout=//p' t/$name.env)
+            local extra=$(jq -r "$test" t/$name.json)
+            if [ "$status" = "$expected" ] && [ "$extra" = "true" ]; then r=ok; else r=FAILED; fail=1; fi
+            echo "| $name | $expected | $status | $note | $r |" >> t/table.md
+            { echo "### $name"; cat t/$name.md; } >> t/details.md
+          }
+          echo "| Case | Expected | Got | Note | Result |" > t/table.md
+          echo "|---|---|---|---|---|" >> t/table.md
+          check new-WP534 PASS 'true' --pr $d/WP534.gpml
+          check edit-unchanged-stored-base PASS '.base.source == "stored"' --pr $d/WP534.gpml --base $d/WP534.gpml "${stored[@]}"
+          check edit-moved-node "REVIEW REQUIRED" '.base.source == "stored"' --pr t/WP534__moved.gpml --base $d/WP534.gpml "${stored[@]}"
+          check stale-stored-base PASS '.base.source == "minerva"' --pr $d/WP534.gpml --base $d/WP534.gpml --base-sbgn $d/WP534-sbgn.xml --base-minerva t/stale-minerva.json
+          check signalling-WP4172 SKIPPED '.pr.applicable == false' --pr $s/WP4172.gpml
+          { echo "## Layout score test cases"; cat t/table.md; echo; echo "## Reports"; cat t/details.md; } >> "$GITHUB_STEP_SUMMARY"
+          cat t/table.md
+          exit $fail
+
+      - name: Upload outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: layout-score-test
+          path: |
+            t/
+            pathways/WP534/WP534-*.xml
+            pathways/WP534/WP534-minerva.json
+            pathways/WP4172/WP4172-*.xml
+            pathways/WP4172/WP4172-minerva.json
+          retention-days: 7
